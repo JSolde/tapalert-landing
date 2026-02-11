@@ -275,6 +275,47 @@
             transform: scale(1.05);
         }
 
+        /* Comparison Table */
+        .comparison-table-wrapper {
+            margin-bottom: 40px;
+            overflow-x: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: #f8f9fa;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .comparison-table th:nth-child(2),
+        .comparison-table th:nth-child(3) {
+            width: 35%;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
         /* Android First Section */
         .android-first {
             padding: 80px 20px;
@@ -598,7 +639,8 @@
                 <div class="feature-card">
                     <div class="feature-icon">🆘</div>
                     <h3>SOS & OK Buttons</h3>
-                    <p>Send predefined emergency or "I'm okay" messages instantly with one tap. Messages include your
+                    <p>Send predefined SOS "I need help!" or "I'm okay" messages instantly with one tap. Messages
+                        include your
                         precise GPS location and address.</p>
                 </div>
 
@@ -645,7 +687,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📍</div>
+                    <div class="feature-icon">✉️</div>
                     <h3>E-mail redundancy</h3>
                     <p>Can send E-mail alerts/messages as a reinforcement messaging method or to provide alerts/messages
                         redundancy if Twilio is not available</p>
@@ -722,40 +764,88 @@
     <section class="android-first">
         <div class="container">
             <div class="android-content">
-                <h2 class="section-title">🤖 Built for Android but also iOS on mind</h2>
+                <h2 class="section-title">🤖 Android First</h2>
                 <p class="section-subtitle">While we support iOS for cross-platform families, our flagship features
                     leverage Android's capabilities for sending automated native SMS alerts.</p>
+                <div class="comparison-table-wrapper">
+                    <h3 style="margin-bottom: 20px; color: #2c3e50;">Summary: What Each Platform Can Do</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Capability</th>
+                                <th>Android</th>
+                                <th>iOS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Send SMS for free</strong></td>
+                                <td><span class="check">✅</span> Yes (Direct SMS, always)</td>
+                                <td><span class="check">✅</span> Yes (iOS Messages, requires user interaction)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Send SMS automatically</strong></td>
+                                <td><span class="check">✅</span> Yes (Direct SMS, always)</td>
+                                <td><span class="cross">❌</span> Only with Twilio (paid)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Works without internet</strong></td>
+                                <td><span class="check">✅</span> Yes (Direct SMS uses cell network)</td>
+                                <td><span class="check">✅</span> Yes (iOS Messages uses cell network)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fully automatic Dead Man Timer</strong></td>
+                                <td><span class="check">✅</span> Yes</td>
+                                <td><span class="cross">❌</span> Only with Twilio (paid). Without Twilio, Messages app
+                                    opens and user must tap Send</td>
+                            </tr>
+                            <tr>
+                                <td><strong>No user interaction needed</strong></td>
+                                <td><span class="check">✅</span> Yes</td>
+                                <td><span class="cross">❌</span> Only with Twilio. iOS Messages always requires tapping
+                                    Send</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email fallback</strong></td>
+                                <td><span class="check">✅</span> Yes (when internet available)</td>
+                                <td><span class="check">✅</span> Yes (when internet available)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="platform-comparison">
-                    <div class="platform-card android">
-                        <h3>Android (Full Power)</h3>
+                    <div class="platform-card ios">
+                        <h3>iOS Limitations</h3>
+                        <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(compared to Android)</p>
                         <ul class="feature-list">
-                            <li><span class="check">✅</span> Direct SMS (works offline)</li>
-                            <li><span class="check">✅</span> FREE native SMS</li>
-                            <li><span class="check">✅</span> Allows automatic native SMS</li>
-                            <li><span class="check">✅</span> No third-party required if not native SMS redundancy is
-                                needed</li>
-                            <li><span class="check">✅</span> Home screen widgets</li>
-                            <li><span class="check">✅</span> Smart Redundancy</li>
+                            <li><span class="cross">❌</span> Cannot send SMS programmatically (Apple restriction)</li>
+                            <li><span class="cross">❌</span> Fully automatic SMS requires Twilio (paid service)</li>
+                            <li><span class="cross">❌</span> Dead Man Timer cannot send SMS silently without Twilio</li>
+                            <li><span class="cross">⚠️</span> iOS Messages preference requires the user to physically
+                                tap Send</li>
                         </ul>
                     </div>
 
-                    <div class="platform-card ios">
-                        <h3>iOS (Limited)</h3>
+                    <div class="platform-card android">
+                        <h3>Android Advantages</h3>
                         <ul class="feature-list">
-                            <li><span class="cross">❌</span> No Direct SMS (Apple restriction)</li>
-                            <li><span class="cross">❌</span> Requires Twilio and internet for automatic SMS sending</li>
-                            <li><span class="cross">✅</span> If no internet then IOS native SMS composer is offered and
-                                prefilled</li>
+                            <li><span class="check">✅</span> Direct SMS is always free and automatic</li>
+                            <li><span class="check">✅</span> No Twilio needed for basic functionality</li>
+                            <li><span class="check">✅</span> Dead Man Timer is always fully automatic</li>
+                            <li><span class="check">✅</span> Twilio adds redundancy (second method), not a requirement
+                            </li>
                         </ul>
                     </div>
-                </div>
-                <div style="margin-top: 40px; padding: 30px; background: white; border-radius: 15px;">
-                    <h3 style="color: #3ddc84; margin-bottom: 15px;">💚 The Emergency App That Works When Nothing Else
-                        Does</h3>
-                    <p style="color: #666; font-size: 1.1rem;">When you're hiking in remote areas or in the street,
-                        in a basement with no signal, or abroad without data, internet-based solutions fail.
-                        TapAlert's Android Direct SMS works anywhere with cell signal – no internet (when wifi is
-                        available it will use it for redundancy).</p>
+
+                    <div class="platform-card" style="border-top: 4px solid #667eea;">
+                        <h3>When Both Platforms Behave the Same</h3>
+                        <ul class="feature-list">
+                            <li><span class="check">ℹ️</span> WiFi only (no cell): Both use Twilio or email - identical
+                                behavior</li>
+                            <li><span class="cross">🚫</span> No connectivity: Neither can send</li>
+                            <li><span class="check">✅</span> Email fallback: Works the same on both platforms</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
