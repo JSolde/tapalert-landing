@@ -642,8 +642,9 @@
                     tracking.
                 </p>
                 <p class="subtitle">
-                    <strong>In a world where the unexpected is the new normal—from sudden floods to power outages—ensure 
-                        you are never truly alone. With one tap, let your loved ones know you are safe or need a helping hand, 
+                    <strong>In a world where the unexpected is the new normal—from sudden floods to power outages—ensure
+                        you are never truly alone. With one tap, let your loved ones know you are safe or need a helping
+                        hand,
                         no matter what the day brings.</strong>
                 </p>
                 <p class="subtitle">
@@ -728,6 +729,18 @@
                 </div>
 
                 <div class="feature-card">
+                    <div class="feature-icon"><img src="media/twilio.png" alt="Twilio"
+                            style="height: 1em; vertical-align: bottom;"></div>
+                    <h3>Twilio as SMS failback (optional)</h3>
+                    <p><strong>On Android:</strong> the app sends SMS directly from your phone, no Twilio needed. Twilio
+                        is optional, only used as a Wi-Fi backup when cellular is unavailable or broken.</p>
+                    <p style="margin-top: 10px;"><strong>On iPhone:</strong> Apple blocks apps from sending SMS
+                        directly. This is an Apple restriction, not a TapAlert limitation. Twilio is the bridge that
+                        lets the app send SMS automatically on your behalf. Without it, the only option is manually
+                        tapping "Send" in the Messages app — not ideal in an emergency.</p>
+                </div>
+
+                <div class="feature-card">
                     <div class="feature-icon">🔄</div>
                     <h3>Two modes of operation Panic/Reporting</h3>
                     <p>Panic for quick and simple SOS or I'm OK alerts and Reporting to allow better message
@@ -755,6 +768,8 @@
                 <button class="carousel-button prev" onclick="moveCarousel(-1)">‹</button>
                 <div class="carousel-wrapper">
                     <div class="carousel-track" id="carouselTrack">
+                        <video src="media/video/Screen_recording_20260215_135719.webm" class="screenshot" autoplay muted
+                            loop playsinline></video>
                         <img src="media/screens/Screenshot_20260210_180700.png" alt="TapAlert Screenshot"
                             class="screenshot">
                         <img src="media/screens/Screenshot_20260210_180958.png" alt="TapAlert Screenshot"
@@ -910,7 +925,7 @@
 
                 <div class="pricing-card featured">
                     <h3>Premium</h3>
-                    <div class="price">$4.99</div>
+                    <div class="price">€3.99</div>
                     <p class="price-note">One-time purchase</p>
                     <ul class="features-list">
                         <li>✅ Up to 50 recipients</li>

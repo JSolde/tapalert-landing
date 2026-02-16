@@ -7,7 +7,12 @@
 
 **Why it matters:** By configuring Twilio credentials in the app, you enable a reliable fallback method for sending alerts. This is especially important during international travel, in buildings with poor cellular reception, or as a mandatory option for iPhone users who cannot send SMS directly from apps.
 
+**Why Twilio?**
+TapAlert uses Twilio because it's the most widely used SMS service in the world — trusted by companies like Uber and Airbnb. There are no monthly fees: you only pay a few cents per message actually sent. For an emergency app that sends alerts rarely, this means near-zero cost. Setup requires copying just three values into the app, and thousands of online tutorials exist if you need help.
+
 **What you need:** A Twilio account with authentication credentials (Account SID and Auth Token), and either an alphanumeric sender ID or a purchased Twilio phone number.
+
+- ✅ Trial account sends real SMS: A family member can test the entire setup with Twilio's free trial (sends to verified numbers) before spending any money. 
 
 ## 📖 About the Service
 
