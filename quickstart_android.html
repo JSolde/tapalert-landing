@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start (Android) - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            color: #c05621;
+        }
+
+        /* Step Card Styles */
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+
+        .step-card:hover {
+            transform: translateX(5px);
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .step-header h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .step-card p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+
+        .step-card ul {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> TapAlert
+            </a>
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+
+        <h1 class="guide-title">Quick Start (Android)</h1>
+
+        <section class="guide-section">
+            <div class="step-list">
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">✅</div>
+                        <h3>1. Grant Essential Permissions</h3>
+                    </div>
+                    <p>During the application onboarding, accept all permissions (SMS, Location, Contacts). If skipped,
+                        they will be requested when needed later, but we recommend accepting them now for a seamless
+                        experience.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">⚙️</div>
+                        <h3>2. Optimal Configuration</h3>
+                    </div>
+                    <p>In the onboarding configuration step, we highly recommend:</p>
+                    <ul>
+                        <li><strong>Add recipients</strong> to your emergency alert list.</li>
+                        <li><strong>Add the app widget</strong> to your home screen for instant access.</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><small><em>Note: These can also be managed in Settings after
+                                onboarding.</em></small></p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">📡</div>
+                        <h3>3. Connectivity & Failbacks</h3>
+                    </div>
+                    <p>Verify if <strong>Wifi calls</strong> are enabled on your phone. If your carrier doesn't support
+                        it, consider using a <strong>Twilio account</strong> as a fallback for Wifi-only situations.
+                        Twilio is free to start and provides reliable SMS delivery without a cell signal.</p>
+                    <p style="margin-top: 10px;">You can also enable <strong>Email redundancy</strong> in TapAlert to
+                        ensure your loved ones are notified via multiple channels.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">🧪</div>
+                        <h3>4. Perform a Test Alert</h3>
+                    </div>
+                    <p>Test your setup by sending an <strong>‘I’m OK’</strong> message. Tap the button once (or hold for
+                        5s if configured). A countdown will appear, giving you time to cancel or send immediately.
+                        Letting it expire sends the alert automatically!</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">↔️</div>
+                        <h3>5. Explore Navigation</h3>
+                    </div>
+                    <p>Swipe <strong>Left</strong> to access your preconfigured custom messages for specific situations.
+                        Swipe <strong>Right</strong> to activate the <strong>Check-in Timer</strong> (Dead Man's
+                        Switch), which auto-alerts if you don't check in by a certain time.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">🤝</div>
+                        <h3>6. Setup for Others</h3>
+                    </div>
+                    <p>If you’re setting this phone up for someone else (like a senior relative), take a moment to
+                        preconfigure their custom alerts (Swipe Left) so they have the most relevant messages ready at
+                        their fingertips.</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TapAlert</h3>
+                    <p>Simple emergency alerts for everyone. No subscriptions, no tracking, just safety.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides">TapAlert Step by Step Guides</a></li>
+                        <li><a href="twilio_guide.html">Twilio Setup Guide</a></li>
+                        <li><a href="user_guide.html">TapAlert Step by Step configuration</a></li>
+                        <li><a href="user_guide.html#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TapAlert. All rights reserved. | Made with ❤️ for your safety</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Tap Alert Guide - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box.tip {
+            background-color: #f0fdf4;
+            border-left-color: #22c55e;
+        }
+
+        .alert-box.warning {
+            background-color: #fffbeb;
+            border-left-color: #f59e0b;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> TapAlert
+            </a>
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+
+        <h1 class="guide-title">One-Tap Alert: All the Ways to Trigger TapAlert Instantly</h1>
+
+        <p>TapAlert can be configured for instant, one-tap emergency alerts using several different methods. This guide
+            covers every option, from home screen widgets to physical buttons and automated timers.</p>
+
+        <section class="guide-section">
+            <h2>1. 📱 Android Home Screen Widget</h2>
+            <p><strong>Platform:</strong> Android only</p>
+            <p>The fastest way to trigger an alert. A dedicated widget sits on your home screen — one tap and the
+                countdown starts immediately.</p>
+
+            <h3>How to Set Up</h3>
+            <ol>
+                <li>Open <strong>TapAlert</strong> → tap the <strong>⚙️ Settings</strong> icon.</li>
+                <li>Scroll to the <strong>Widget</strong> section.</li>
+                <li>Tap <strong>"Add"</strong> → the system will prompt you to place the widget on your home screen.
+                </li>
+                <li>Drag it to your preferred spot (ideally on your main screen for quick access).</li>
+            </ol>
+
+            <h3>How It Works</h3>
+            <ul>
+                <li><strong>Single tap</strong> on the widget → TapAlert opens and the <strong>countdown begins
+                        immediately</strong>.</li>
+                <li>You see the countdown dialog and can <strong>cancel</strong> if it was accidental.</li>
+                <li>After the countdown, the alert is sent and the app auto-closes.</li>
+            </ul>
+
+            <div class="alert-box tip">
+                <h4>💡 TIP</h4>
+                <p>Place the widget on your lock screen (if supported by your Android version) or on the very first home
+                    screen page for the quickest access.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
+            <p><strong>Platform:</strong> Android & iPhone</p>
+            <p>Map a <strong>physical button</strong> on your phone (power button, volume key, or back-tap gesture) to
+                launch TapAlert. Combined with <strong>Auto-Start on Launch</strong>, this creates a true one-tap panic
+                button.</p>
+
+            <h3>Step 1: Enable Auto-Start in TapAlert</h3>
+            <ol>
+                <li>Open <strong>TapAlert</strong> → <strong>⚙️ Settings</strong>.</li>
+                <li>Enable <strong>"Auto-Start on Launch"</strong>.</li>
+            </ol>
+
+            <div class="alert-box warning">
+                <h4>⚠️ WARNING</h4>
+                <p>When Auto-Start is enabled, the countdown will trigger <strong>every time</strong> you open the app —
+                    including when you open it normally from the app drawer. Only enable this if you primarily launch
+                    via a physical button shortcut.</p>
+            </div>
+
+            <h3>Step 2: Configure Your Phone's Button</h3>
+
+            <h4>Samsung Galaxy (Side Key)</h4>
+            <ol>
+                <li><strong>Settings</strong> → <strong>Advanced features</strong> → <strong>Side key</strong>.</li>
+                <li>Enable <strong>Double press</strong> → <strong>Open app</strong> → select <strong>TapAlert</strong>.
+                </li>
+                <li>Double-press the power button to trigger.</li>
+            </ol>
+
+            <h4>Google Pixel (Quick Tap)</h4>
+            <ol>
+                <li><strong>Settings</strong> → <strong>System</strong> → <strong>Gestures</strong> → <strong>Quick Tap
+                        to start actions</strong>.</li>
+                <li>Enable <strong>Use Quick Tap</strong> → <strong>Open app</strong> → select
+                    <strong>TapAlert</strong>.
+                </li>
+                <li>Double-tap the back of your phone to trigger.</li>
+            </ol>
+
+            <h4>iPhone 15 Pro+ (Action Button)</h4>
+            <ol>
+                <li><strong>Settings</strong> → <strong>Action Button</strong> → swipe to <strong>Shortcut</strong>.
+                </li>
+                <li>Tap selector → <strong>Open App</strong> → choose <strong>TapAlert</strong>.</li>
+                <li>Hold the Action Button to trigger.</li>
+            </ol>
+
+            <h4>iPhone — All Models (Back Tap)</h4>
+            <ol>
+                <li><strong>Settings</strong> → <strong>Accessibility</strong> → <strong>Touch</strong> → <strong>Back
+                        Tap</strong>.</li>
+                <li>Choose <strong>Double Tap</strong> or <strong>Triple Tap</strong>.</li>
+                <li>To link to TapAlert, first create a Shortcut:
+                    <ul>
+                        <li>Open <strong>Shortcuts</strong> app → <strong>+</strong> → <strong>Add Action</strong> →
+                            <strong>Open App</strong> → <strong>TapAlert</strong>.
+                        </li>
+                        <li>Name it "Open TapAlert".</li>
+                    </ul>
+                </li>
+                <li>Go back to <strong>Back Tap</strong> settings → select your "Open TapAlert" shortcut.</li>
+            </ol>
+
+            <h4>Any Android (Button Mapper Apps)</h4>
+            <p>If your device lacks built-in button remapping, install <strong>"Button Mapper"</strong> or
+                <strong>"MacroDroid"</strong> from the Play Store:
+            </p>
+            <ul>
+                <li>Remap any hardware key (volume buttons, etc.) to <strong>Open Application</strong> →
+                    <strong>TapAlert</strong>.
+                </li>
+            </ul>
+
+            <h3>How It Works</h3>
+            <ol>
+                <li>Press your configured button/gesture.</li>
+                <li>TapAlert opens → the countdown starts <strong>automatically</strong> (if Auto-Start is enabled).
+                </li>
+                <li>The alert is sent and the app auto-closes.</li>
+                <li>Works even from a locked screen (with proper battery optimization — see below).</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>3. 🆘 Panic Mode (SOS / OK)</h2>
+            <p><strong>Platform:</strong> Android & iOS</p>
+            <p>Panic Mode transforms the entire screen into two giant buttons — <strong>SOS</strong> and <strong>I'm
+                    OK</strong> — making it virtually impossible to miss.</p>
+
+            <h3>How to Enable</h3>
+            <ol>
+                <li>Open <strong>TapAlert</strong> and it will open by default in Panic Mode.</li>
+                <li>Remember: you can switch from Configured message Alerts to Panic mode swiping left/right on the home
+                    screen or tap the mode icon in the top bar.</li>
+            </ol>
+
+            <h3>How It Works</h3>
+            <ul>
+                <li><strong>Tap the large red SOS button</strong> → countdown starts for an emergency alert.</li>
+                <li><strong>Tap the green I'm OK button</strong> → sends a reassurance message.</li>
+                <li><strong>Emergency Call button</strong> at the bottom dials your local emergency number (112, 911,
+                    etc.).</li>
+            </ul>
+
+            <h3>Trigger Method: Tap vs. Hold</h3>
+            <p>For added safety, you can require a <strong>5-second press-and-hold</strong> instead of a single tap:</p>
+            <ul>
+                <li><strong>Settings</strong> → <strong>Trigger Method</strong> → <strong>Press & Hold (5s)</strong>.
+                </li>
+                <li>This prevents accidental triggers while still being fast enough in emergencies.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>4. 🎙️ Voice Quick Alert</h2>
+            <p><strong>Platform:</strong> Android & iOS</p>
+            <p>In Panic mode you can also send an alert with a <strong>voice-dictated message</strong> in one action —
+                ideal when you can't type.</p>
+            <ol>
+                <li>Tap the <strong>🎤 Microphone</strong> button next to SOS or I'm OK.</li>
+                <li>Speak your message.</li>
+                <li>After speaking the countdown starts automatically with your transcribed voice message attached.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>5. ⏳ Check-in Timer (Dead Man's Switch)</h2>
+            <p><strong>Platform:</strong> Android & iOS</p>
+            <p>The timer sends an alert <strong>automatically</strong> if you don't check in — no tap required at all.
+            </p>
+
+            <h3>How to Set Up</h3>
+            <ol>
+                <li>Tap the <strong>⏱️ Timer icon</strong> in the top bar.</li>
+                <li>Select a duration.</li>
+                <li>Optionally add a custom message.</li>
+                <li>Start the timer.</li>
+            </ol>
+
+            <h3>How It Works</h3>
+            <ul>
+                <li>A persistent notification counts down the remaining time.</li>
+                <li>If you check in (tap <strong>"I'm OK / Reset"</strong>) → timer resets, no alert sent.</li>
+                <li>If you don't check in → TapAlert automatically sends your alert with location to all recipients.
+                </li>
+            </ul>
+
+            <div class="alert-box tip">
+                <h4>💡 TIP</h4>
+                <p>Perfect for solo activities: hiking, walking home at night, meeting strangers, or traveling alone.
+                </p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
+            <p>For <strong>physical button</strong> and <strong>widget</strong> triggers to work reliably — especially
+                from a locked/sleeping screen — you must disable battery optimization for TapAlert.</p>
+
+            <h3>Why?</h3>
+            <p>Android manufacturers aggressively kill background apps to save battery. This can prevent TapAlert from
+                waking your phone when the screen is off.</p>
+
+            <h3>Quick Steps (All Devices)</h3>
+            <ol>
+                <li><strong>Settings</strong> → <strong>Apps</strong> → <strong>TapAlert</strong> →
+                    <strong>Battery</strong>.
+                </li>
+                <li>Select <strong>"Don't optimize"</strong> or <strong>"Unrestricted"</strong>.</li>
+                <li>Enable <strong>"Allow background activity"</strong>.</li>
+            </ol>
+
+            <h3>Test It</h3>
+            <ol>
+                <li>Lock your phone and wait 1–2 minutes (screen fully off).</li>
+                <li>Press your configured physical button or tap the widget.</li>
+                <li>TapAlert should open and start the countdown instantly.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>Quick Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Platform</th>
+                        <th>Taps to Alert</th>
+                        <th>Works From Lock Screen</th>
+                        <th>Requires Setup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Android Widget</td>
+                        <td>Android</td>
+                        <td>1</td>
+                        <td>Partial*</td>
+                        <td>Minimal</td>
+                    </tr>
+                    <tr>
+                        <td>Physical Button + Auto-Start</td>
+                        <td>Android & iOS</td>
+                        <td>1</td>
+                        <td>✅ Yes</td>
+                        <td>Moderate</td>
+                    </tr>
+                    <tr>
+                        <td>Panic Mode (SOS button)</td>
+                        <td>Android & iOS</td>
+                        <td>2 (open app + tap)</td>
+                        <td>—</td>
+                        <td>Minimal</td>
+                    </tr>
+                    <tr>
+                        <td>Voice Quick Alert</td>
+                        <td>Android & iOS</td>
+                        <td>2 (open app + tap mic)</td>
+                        <td>—</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>Check-in Timer</td>
+                        <td>Android & iOS</td>
+                        <td>0 (automatic)</td>
+                        <td>✅ Yes</td>
+                        <td>Minimal</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><small>*Widget lock screen support varies by Android version and manufacturer.</small></p>
+        </section>
+
+        <section class="guide-section">
+            <h2>Recommended Configurations</h2>
+
+            <h3>👴 For Senior Users</h3>
+            <ul>
+                <li>Enable <strong>Panic Mode</strong> (big SOS / I'm OK buttons).</li>
+                <li>Set <strong>Trigger Method</strong> to <strong>Tap</strong> (simplest interaction).</li>
+                <li>Add the <strong>Android widget</strong> to the home screen.</li>
+                <li>Set countdown to <strong>10 seconds</strong> (time to cancel mistakes).</li>
+            </ul>
+
+            <h3>🏃 For Active / Solo Users</h3>
+            <ul>
+                <li>Set up the <strong>Check-in Timer</strong> before activities.</li>
+                <li>Configure a <strong>physical button</strong> for instant SOS.</li>
+                <li>Enable <strong>Smart Redundancy</strong> (auto-fallback between SMS methods).</li>
+                <li>Enable <strong>Email Redundancy</strong> for areas with Wi-Fi only.</li>
+            </ul>
+
+            <h3>🔒 For Maximum Security</h3>
+            <ul>
+                <li>Configure <strong>physical button</strong> with <strong>Auto-Start</strong>.</li>
+                <li>Set <strong>Trigger Method</strong> to <strong>Press & Hold (5s)</strong> to prevent accidental
+                    triggers.</li>
+                <li>Enable <strong>both</strong> Smart Redundancy and Email Redundancy.</li>
+                <li>Disable battery optimization and test from locked screen.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TapAlert</h3>
+                    <p>Simple emergency alerts for everyone. No subscriptions, no tracking, just safety.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides">TapAlert Step by Step Guides</a></li>
+                        <li><a href="twilio_guide.html">Twilio Setup Guide</a></li>
+                        <li><a href="user_guide.html">TapAlert Step by Step configuration</a></li>
+                        <li><a href="user_guide.html#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TapAlert. All rights reserved. | Made with ❤️ for your safety</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
