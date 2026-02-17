@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Start (Android) - TapAlert</title>
+    <title>Troubleshooting - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -191,13 +191,8 @@
         }
 
         .step-card p {
-            margin-bottom: 0;
+            margin-bottom: 10px;
             font-size: 1.05rem;
-        }
-
-        .step-card ul {
-            margin-top: 10px;
-            margin-bottom: 0;
         }
 
         /* Footer Reuse */
@@ -249,6 +244,26 @@
             color: #999;
         }
 
+        .toc {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .toc h4 {
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
         /* Large phones */
         @media (max-width: 768px) {
             body {
@@ -292,22 +307,44 @@
                 font-size: 0.9rem;
             }
 
+            .toc {
+                padding: 15px;
+                margin-bottom: 30px;
+            }
+
+            .toc h4 {
+                font-size: 0.95rem;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .toc a {
+                font-size: 0.88rem;
+            }
+
             .step-card {
                 padding: 18px;
                 margin-bottom: 15px;
             }
 
-            .step-icon {
-                font-size: 1.5rem;
-                min-width: 32px;
-            }
-
-            .step-header h3 {
+            .step-card h3 {
                 font-size: 1.1rem;
             }
 
             .step-card p {
                 font-size: 0.92rem;
+            }
+
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
             }
 
             .guide-section {
@@ -377,27 +414,37 @@
                 font-size: 0.85rem;
             }
 
+            .toc {
+                padding: 12px;
+            }
+
+            .toc h4 {
+                font-size: 0.9rem;
+            }
+
+            .toc a {
+                font-size: 0.82rem;
+            }
+
             .step-card {
                 padding: 14px;
                 border-left-width: 4px;
             }
 
-            .step-icon {
-                font-size: 1.3rem;
-                min-width: 28px;
-            }
-
-            .step-header {
-                gap: 10px;
-                margin-bottom: 10px;
-            }
-
-            .step-header h3 {
+            .step-card h3 {
                 font-size: 1rem;
             }
 
             .step-card p {
                 font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
             }
 
             footer {
@@ -439,78 +486,128 @@
     <!-- Main Content -->
     <main class="guide-container">
 
-        <h1 class="guide-title">Quick Start (Android)</h1>
+        <h1 class="guide-title">Troubleshooting Guide</h1>
 
-        <section class="guide-section">
-            <div class="step-list">
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">✅</div>
-                        <h3>1. Grant Essential Permissions</h3>
-                    </div>
-                    <p>During the application onboarding, accept all permissions (SMS, Location, Contacts). If skipped,
-                        they will be requested when needed later, but we recommend accepting them now for a seamless
-                        experience.</p>
-                </div>
+        <p>This guide covers common issues and solutions for TapAlert on both Android and iOS.</p>
 
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">⚙️</div>
-                        <h3>2. Optimal Configuration</h3>
-                    </div>
-                    <p>In the onboarding configuration step, we highly recommend:</p>
-                    <ul>
-                        <li><strong>Add recipients</strong> to your emergency alert list.</li>
-                        <li><strong>Add the app widget</strong> to your home screen for instant access.</li>
-                    </ul>
-                    <p style="margin-top: 10px;"><small><em>Note: These can also be managed in Settings after
-                                onboarding.</em></small></p>
-                </div>
+        <nav class="toc">
+            <h4>Jump to Section:</h4>
+            <ul>
+                <li><a href="#sms">1. SMS Issues</a></li>
+                <li><a href="#email">2. Email Issues</a></li>
+                <li><a href="#location">3. Location Issues</a></li>
+                <li><a href="#connectivity">4. Connectivity</a></li>
+                <li><a href="#timer">5. Check-in Timer</a></li>
+                <li><a href="#voice">6. Voice-to-Text</a></li>
+                <li><a href="#contacts">7. Contacts</a></li>
+                <li><a href="#purchase">8. Purchases</a></li>
+                <li><a href="#widget">9. Widgets</a></li>
+                <li><a href="#notifications">10. Notifications</a></li>
+            </ul>
+        </nav>
 
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">📡</div>
-                        <h3>3. Connectivity & Failbacks</h3>
-                    </div>
-                    <p>Verify if <strong>Wifi calls</strong> are enabled on your phone. If your carrier doesn't support
-                        it, consider using a <strong>Twilio account</strong> as a fallback for Wifi-only situations.
-                        Twilio is free to start and provides reliable SMS delivery without a cell signal.</p>
-                    <p style="margin-top: 10px;">You can also enable <strong>Email redundancy</strong> in TapAlert to
-                        ensure your loved ones are notified via multiple channels.</p>
-                </div>
+        <section id="sms" class="guide-section">
+            <h2>1. SMS Sending Issues</h2>
 
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🧪</div>
-                        <h3>4. Perform a Test Alert</h3>
-                    </div>
-                    <p>Test your setup by sending an <strong>‘I’m OK’</strong> message. Tap the button once (or hold for
-                        5s if configured). A countdown will appear, giving you time to cancel or send immediately.
-                        Letting it expire sends the alert automatically!</p>
-                </div>
+            <div class="step-card">
+                <h3>1.1 Direct SMS Not Sending (Android)</h3>
+                <p><strong>Symptom:</strong> You tap "Send Alert" but the SMS fails. The alert history shows an error
+                    for one or more recipients.</p>
+                <ul>
+                    <li><strong>No cellular signal:</strong> Check the status bar. The Status page in the app shows your
+                        current cellular status.</li>
+                    <li><strong>No SIM card:</strong> Direct SMS requires a working SIM card. Check SIM status on the
+                        Status page.</li>
+                    <li><strong>Permissions:</strong> Ensure <strong>SMS</strong> permission is allowed in phone
+                        settings.</li>
+                    <li><strong>Invalid format:</strong> Use international format with country code (e.g.,
+                        +34600123456).</li>
+                </ul>
+            </div>
 
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">↔️</div>
-                        <h3>5. Explore Navigation</h3>
-                    </div>
-                    <p>Swipe <strong>Left</strong> to access your preconfigured custom messages for specific situations.
-                        Swipe <strong>Right</strong> to activate the <strong>Check-in Timer</strong> (Dead Man's
-                        Switch), which auto-alerts if you don't check in by a certain time.</p>
-                </div>
+            <div class="step-card">
+                <h3>1.2 Twilio SMS Not Sending</h3>
+                <p><strong>Symptom:</strong> Alert fails with a Twilio error message.</p>
+                <ul>
+                    <li><strong>Internet required:</strong> Twilio needs Wi-Fi or cellular data.</li>
+                    <li><strong>Credentials:</strong> Verify Account SID, Auth Token, and Twilio phone number in
+                        Settings.</li>
+                    <li><strong>Trial limitations:</strong> Trial accounts can only send to verified phone numbers.</li>
+                    <li><strong>Balance:</strong> Check your Twilio account balance.</li>
+                </ul>
+            </div>
 
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🤝</div>
-                        <h3>6. Setup for Others</h3>
-                    </div>
-                    <p>If you’re setting this phone up for someone else (like a senior relative), take a moment to
-                        preconfigure their custom alerts (Swipe Left) so they have the most relevant messages ready at
-                        their fingertips.</p>
-                </div>
+            <div class="step-card">
+                <h3>1.3 iOS SMS Composer Issues</h3>
+                <p><strong>Symptom:</strong> On iPhone, the SMS composer opens but the message doesn't get delivered.
+                </p>
+                <ul>
+                    <li><strong>Signal:</strong> The Messages app needs cellular signal (or WiFi Calling if active).
+                    </li>
+                    <li><strong>Cancellation:</strong> If you tap Cancel in the composer, the alert is cancelled.</li>
+                    <li><strong>Invalid number:</strong> iOS will queue the message and fail silently. Check the
+                        Messages app for red exclamation marks.</li>
+                </ul>
             </div>
         </section>
 
+        <section id="email" class="guide-section">
+            <h2>2. Email Redundancy Issues</h2>
+            <div class="step-card">
+                <h3>2.1 Email Test Fails</h3>
+                <ul>
+                    <li><strong>SMTP Settings:</strong> Verify host and port (Gmail/iCloud use 587).</li>
+                    <li><strong>App Password:</strong> Most providers require an <strong>App Password</strong> if 2FA is
+                        enabled.</li>
+                    <li><strong>Internet:</strong> Email requires an active data connection.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="location" class="guide-section">
+            <h2>3. Location Issues</h2>
+            <div class="step-card">
+                <h3>3.1 Location Missing in Alert</h3>
+                <ul>
+                    <li><strong>Permissions:</strong> Ensure Location permission is set to "While Using" or "Always".
+                    </li>
+                    <li><strong>GPS Disabled:</strong> Verify phone location services are turned on.</li>
+                    <li><strong>Reception:</strong> Indoors or dense areas may cause a GPS timeout.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="connectivity" class="guide-section">
+            <h2>4. Connectivity and Status</h2>
+            <div class="step-card">
+                <h3>4.2 Shield Icon Meanings</h3>
+                <ul>
+                    <li><strong>Green:</strong> Ready for reliable SMS/Twilio delivery.</li>
+                    <li><strong>Orange:</strong> Uncertain. WiFi only, no Twilio. WiFi Calling might work.</li>
+                    <li><strong>Red:</strong> Disconnected. Both cellular and WiFi are off.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="timer" class="guide-section">
+            <h2>5. Check-in Timer Issues</h2>
+            <div class="step-card">
+                <h3>5.1 Timer Doesn't Fire</h3>
+                <ul>
+                    <li><strong>App Closed:</strong> Avoid force-closing the app. On iOS, you must tap the notification
+                        to trigger.</li>
+                    <li><strong>Battery Optimization:</strong> Set TapAlert to "Unrestricted" in Android battery
+                        settings.</li>
+                    <li><strong>Notifications:</strong> Ensure notification permissions are granted.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="alert-box">
+            <h4>💡 General Tip</h4>
+            <p>Always send a <strong>test alert</strong> to yourself or a trusted contact before relying on TapAlert in
+                a real emergency.</p>
+        </div>
 
     </main>
 
@@ -546,8 +643,6 @@
                     <ul>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="index.html#guides">TapAlert Step by Step Guides</a></li>
-                        <li><a href="twilio_guide.html">Twilio Setup Guide</a></li>
-                        <li><a href="user_guide.html">TapAlert Step by Step configuration</a></li>
                         <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
                     </ul>

@@ -147,14 +147,109 @@
             color: #999;
         }
 
+        /* Large phones */
         @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
             .contact-container {
                 padding: 20px;
                 margin: 20px;
             }
 
             .contact-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .contact-text {
+                font-size: 1.05rem;
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .contact-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .contact-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            .contact-text {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -223,7 +318,7 @@
                     <ul>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="index.html#guides">TapAlert Step by Step Guides</a></li>
-                        <li><a href="user_guide.html#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
                     </ul>
                 </div>

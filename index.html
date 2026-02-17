@@ -577,18 +577,151 @@
             color: #999;
         }
 
-        /* Responsive */
+        /* Responsive — Large phones (up to 768px) */
         @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .hero {
+                padding: 50px 16px 60px;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .hero .tagline {
-                font-size: 1.2rem;
+                font-size: 1.05rem;
+                margin-bottom: 16px;
+            }
+
+            .hero .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .summary-box {
+                padding: 20px;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.7rem;
+                margin-bottom: 12px;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .features,
+            .screenshots,
+            .pricing,
+            .privacy,
+            .use-cases,
+            .guides,
+            .android-first {
+                padding: 50px 16px;
+            }
+
+            .feature-card {
+                padding: 24px;
+            }
+
+            .feature-icon {
+                font-size: 2.2rem;
+                margin-bottom: 12px;
+            }
+
+            .feature-card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .feature-card p {
+                font-size: 0.88rem;
+                line-height: 1.6;
+            }
+
+            .use-case {
+                padding: 22px;
+            }
+
+            .use-case h3 {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            .use-case p {
+                font-size: 0.88rem;
+            }
+
+            .platform-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .feature-list li {
+                font-size: 0.88rem;
+                padding: 8px 0;
+            }
+
+            .pricing-card {
+                padding: 28px;
+            }
+
+            .pricing-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .price {
+                font-size: 2.2rem;
+            }
+
+            .price-note {
+                font-size: 0.8rem;
+            }
+
+            .features-list li {
+                font-size: 0.88rem;
+                padding: 7px 0;
+            }
+
+            .privacy-item .icon {
+                font-size: 2.2rem;
+            }
+
+            .privacy-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .privacy-item p {
+                font-size: 0.88rem;
+            }
+
+            .notice-icon {
+                font-size: 2.5rem;
+            }
+
+            .notice h2 {
+                font-size: 1.3rem;
+            }
+
+            .notice p {
+                font-size: 0.92rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 8px;
+                font-size: 0.82rem;
+            }
+
+            .btn {
+                font-size: 0.95rem;
+                padding: 12px 28px;
+                width: 100%;
+                max-width: 300px;
             }
 
             .cta-buttons {
@@ -596,9 +729,169 @@
                 align-items: center;
             }
 
+            .footer-section h3 {
+                font-size: 1rem;
+            }
+
+            .footer-section p,
+            .footer-section a,
+            .footer-section li {
+                font-size: 0.85rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Responsive — Small phones (up to 430px) */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 36px 12px 44px;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero .tagline {
+                font-size: 0.92rem;
+                margin-bottom: 12px;
+            }
+
+            .hero .subtitle {
+                font-size: 0.82rem;
+            }
+
+            .summary-box {
+                padding: 14px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.88rem;
+                margin-bottom: 24px;
+            }
+
+            .features,
+            .screenshots,
+            .pricing,
+            .privacy,
+            .use-cases,
+            .guides,
+            .android-first {
+                padding: 36px 12px;
+            }
+
+            .features-grid,
+            .use-cases-grid {
+                gap: 16px;
+            }
+
+            .feature-card {
+                padding: 18px;
+            }
+
+            .feature-icon {
+                font-size: 1.8rem;
+                margin-bottom: 8px;
+            }
+
+            .feature-card h3 {
+                font-size: 1.05rem;
+            }
+
+            .feature-card p {
+                font-size: 0.82rem;
+            }
+
+            .use-case {
+                padding: 16px;
+            }
+
+            .use-case h3 {
+                font-size: 1rem;
+            }
+
+            .use-case p {
+                font-size: 0.82rem;
+            }
+
+            .platform-card {
+                padding: 20px;
+            }
+
+            .platform-card h3 {
+                font-size: 1.05rem;
+            }
+
+            .feature-list li {
+                font-size: 0.8rem;
+                padding: 6px 0;
+            }
+
+            .pricing-card {
+                padding: 22px;
+            }
+
+            .pricing-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .price {
+                font-size: 1.8rem;
+            }
+
+            .features-list li {
+                font-size: 0.82rem;
+            }
+
+            .privacy-item .icon {
+                font-size: 1.8rem;
+            }
+
+            .privacy-item h3 {
+                font-size: 1rem;
+            }
+
+            .privacy-item p {
+                font-size: 0.82rem;
+            }
+
+            .notice h2 {
+                font-size: 1.1rem;
+            }
+
+            .notice p {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px 6px;
+                font-size: 0.75rem;
+            }
+
             .btn {
-                width: 100%;
-                max-width: 300px;
+                font-size: 0.88rem;
+                padding: 10px 22px;
+            }
+
+            .footer-section p,
+            .footer-section a,
+            .footer-section li {
+                font-size: 0.8rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.75rem;
             }
         }
 
@@ -944,12 +1237,14 @@
                 <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
                     TapAlert does not charge for the messages sent. The only costs you may incur are those applied by
                     your own mobile carrier for standard SMS — just like any regular text message — and, if you choose
-                    to configure Twilio as a failback or alternative service, <a href="https://www.twilio.com/sms/pricing"
+                    to configure Twilio as a failback or alternative service, <a
+                        href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
+                        style="color: #667eea; text-decoration: underline;">the per-message fees set by Twilio</a>
+                    (Note: there's a
+                    <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
                         target="_blank" rel="noopener noreferrer"
-                        style="color: #667eea; text-decoration: underline;">the per-message fees set by Twilio</a> (Note: you could use a free Twilio 
-                        phone number with a <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
-                        target="_blank" rel="noopener noreferrer"
-                        style="color: #667eea; text-decoration: underline;">free trial account</a> instead). The app itself adds zero extra cost on top.
+                        style="color: #667eea; text-decoration: underline;">free Twilio
+                        trial account</a> but we do not recommend using it). The app itself adds zero extra cost on top.
                 </p>
             </div>
         </div>
@@ -1060,13 +1355,6 @@
                         <p>How your contacts can prioritize your notifications.</p>
                     </div>
                 </a>
-                <a href="user_guide.html" style="text-decoration: none; color: inherit;">
-                    <div class="feature-card" style="height: 100%;">
-                        <div class="feature-icon">🔘</div>
-                        <h3>Physical Button or Phone gesture</h3>
-                        <p>Configure hardware buttons or widgets for quick access.</p>
-                    </div>
-                </a>
                 <a href="twilio_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">💬</div>
@@ -1129,7 +1417,7 @@
                     <ul>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#guides">TapAlert Step by Step Guides</a></li>
-                        <li><a href="user_guide.html#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
                     </ul>
                 </div>
