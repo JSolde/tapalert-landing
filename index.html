@@ -999,9 +999,57 @@
 
         @media (max-width: 768px) {
             .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
                 display: none;
-                /* Can be enhanced with a hamburger menu later if needed */
+                align-items: center;
+                gap: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.05);
             }
+
+            .nav-links.mobile-active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block !important;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #667eea;
+            margin: 5px 0;
+            transition: 0.4s;
+            border-radius: 3px;
+        }
+
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
     </style>
 </head>
@@ -1022,6 +1070,11 @@
                 <li><a href="#guides" class="nav-link" data-section="guides">Guides</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
     <!-- Hero Section -->
     <section class="hero" id="download">
@@ -1549,6 +1602,23 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('mobile-active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('mobile-active');
             });
         });
 
