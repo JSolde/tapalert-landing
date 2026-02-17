@@ -911,10 +911,118 @@
         .fade-in-up {
             animation: fadeInUp 0.6s ease-out;
         }
+
+        /* Top Navigation Bar */
+        header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 10px 30px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+        }
+
+        .nav-link.active {
+            color: #667eea;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #667eea;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                width: 95%;
+                padding: 10px 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-link {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                /* Can be enhanced with a hamburger menu later if needed */
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Top Navigation -->
+    <header>
+        <a href="#download" class="nav-logo">
+            <img src="media/app_icon.png" alt="TapAlert"> TapAlert
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#download" class="nav-link" data-section="download">Top</a></li>
+                <li><a href="#features" class="nav-link" data-section="features">Features</a></li>
+                <li><a href="#screenshots" class="nav-link" data-section="screenshots">Screenshots</a></li>
+                <li><a href="#android-first" class="nav-link" data-section="android-first">Platform</a></li>
+                <li><a href="#pricing" class="nav-link" data-section="pricing">Pricing</a></li>
+                <li><a href="#guides" class="nav-link" data-section="guides">Guides</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Hero Section -->
     <section class="hero" id="download">
         <div class="hero-content fade-in-up">
@@ -1052,7 +1160,7 @@
     </section>
 
     <!-- Screenshots Section -->
-    <section class="screenshots">
+    <section class="screenshots" id="screenshots">
         <div class="container">
             <h2 class="section-title">See TapAlert in Action</h2>
             <p class="section-subtitle">Intuitive interface designed for speed and simplicity</p>
@@ -1460,6 +1568,30 @@
 
         document.querySelectorAll('.feature-card, .pricing-card, .use-case').forEach(el => {
             observer.observe(el);
+        });
+
+        // Lateral Nav Section Tracking
+        const navObserverOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+
+        const navObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('.nav-link').forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('data-section') === id) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, navObserverOptions);
+
+        document.querySelectorAll('section[id]').forEach(section => {
+            navObserver.observe(section);
         });
 
         // Carousel functionality
