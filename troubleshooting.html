@@ -303,7 +303,8 @@
                 margin-bottom: 10px;
             }
 
-            p, li {
+            p,
+            li {
                 font-size: 0.9rem;
             }
 
@@ -410,7 +411,8 @@
                 font-size: 1.05rem;
             }
 
-            p, li {
+            p,
+            li {
                 font-size: 0.85rem;
             }
 
@@ -503,6 +505,10 @@
                 <li><a href="#purchase">8. Purchases</a></li>
                 <li><a href="#widget">9. Widgets</a></li>
                 <li><a href="#notifications">10. Notifications</a></li>
+                <li><a href="#behavior">11. App Behavior</a></li>
+                <li><a href="#ios">12. iOS Specific</a></li>
+                <li><a href="#android">13. Android Specific</a></li>
+                <li><a href="#tips">14. General Tips</a></li>
             </ul>
         </nav>
 
@@ -603,11 +609,115 @@
             </div>
         </section>
 
-        <div class="alert-box">
-            <h4>💡 General Tip</h4>
-            <p>Always send a <strong>test alert</strong> to yourself or a trusted contact before relying on TapAlert in
-                a real emergency.</p>
-        </div>
+        <section id="voice" class="guide-section">
+            <h2>6. Voice-to-Text Issues</h2>
+            <div class="step-card">
+                <h3>6.1 Voice Recognition Not Working</h3>
+                <ul>
+                    <li><strong>Permissions:</strong> Ensure <strong>Microphone</strong> and <strong>Speech
+                            Recognition</strong> (iOS) permissions are granted.</li>
+                    <li><strong>Internet:</strong> Most recognition engines require an active connection for processing.
+                    </li>
+                    <li><strong>Wrong Language:</strong> The recognition uses the app's current language setting. Check
+                        **Settings > Language**.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contacts" class="guide-section">
+            <h2>7. Contacts and Recipients Issues</h2>
+            <div class="step-card">
+                <h3>7.1 Cannot See Contacts</h3>
+                <ul>
+                    <li><strong>iOS Limited Access:</strong> If you previously chose "Select Contacts...", go to
+                        **Settings > Privacy & Security > Contacts > TapAlert** and change to **"All Contacts"**.</li>
+                    <li><strong>Android Permissions:</strong> Ensure **Contacts** permission is set to "Allow" in system
+                        settings.</li>
+                    <li><strong>Format:</strong> Ensure numbers include the country code with a **+** prefix.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="purchase" class="guide-section">
+            <h2>8. In-App Purchase Issues</h2>
+            <div class="step-card">
+                <h3>8.2 Purchased But Still Shows Free</h3>
+                <ul>
+                    <li><strong>Restore Purchases:</strong> In the Upgrade screen, tap the **Restore** button to
+                        re-validate your purchase with the store.</li>
+                    <li><strong>Same Account:</strong> Ensure you're signed in with the same store account used for the
+                        original purchase.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="widget" class="guide-section">
+            <h2>9. Widget Issues (Android)</h2>
+            <div class="step-card">
+                <h3>9.1 Widget Not Appearing</h3>
+                <ul>
+                    <li><strong>Manual Add:</strong> Try adding the widget from **Settings > Widget > Add** within the
+                        app if it doesn't appear in the system widget picker.</li>
+                    <li><strong>Battery Optimization:</strong> Aggressive optimization may prevent the widget from
+                        launching the app correctly.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="notifications" class="guide-section">
+            <h2>10. Notification Issues</h2>
+            <div class="step-card">
+                <h3>10.2 Recipients Not Noticing Calls/SMS</h3>
+                <ul>
+                    <li><strong>iPhone:</strong> Have recipients enable **Emergency Bypass** for your contact number.
+                    </li>
+                    <li><strong>Android:</strong> Have recipients set notification priority to **"High"** or
+                        **"Urgent"** for your messages.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="behavior" class="guide-section">
+            <h2>11. App Behavior Issues</h2>
+            <div class="step-card">
+                <h3>11.1 Alert Fires Immediately on Open</h3>
+                <p>Go to **Settings** and disable **"Auto-Start on Launch"**. This feature is intended for physical
+                    panic buttons.</p>
+            </div>
+        </section>
+
+        <section id="ios" class="guide-section">
+            <h2>12. iOS-Specific Issues</h2>
+            <div class="step-card">
+                <h3>12.1 Twilio vs. iOS Messages</h3>
+                <ul>
+                    <li><strong>Twilio (Automatic):</strong> Silent background sending, requires internet.</li>
+                    <li><strong>iOS Messages (Manual):</strong> Requires you to tap Send in the composer, works via
+                        cellular.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="android" class="guide-section">
+            <h2>13. Android-Specific Issues</h2>
+            <div class="step-card">
+                <h3>13.1 Battery Optimization</h3>
+                <p>Some manufacturers (Xiaomi, Samsung, Huawei) require manual steps to prevent the app from being
+                    killed in the background. Check your phone's battery settings for **"No restrictions"**.</p>
+            </div>
+        </section>
+
+        <section id="tips" class="guide-section">
+            <h2>14. General Tips</h2>
+            <div class="alert-box">
+                <h4>✅ Before an Emergency</h4>
+                <ul>
+                    <li>Send a test alert to verify setup.</li>
+                    <li>Check the Status page for connectivity.</li>
+                    <li>Ensure all permissions are granted.</li>
+                </ul>
+            </div>
+        </section>
 
     </main>
 
