@@ -1228,8 +1228,12 @@
                 <button class="carousel-button prev" onclick="moveCarousel(-1)">‹</button>
                 <div class="carousel-wrapper">
                     <div class="carousel-track" id="carouselTrack">
-                        <video src="media/video/Screen_recording_20260215_135719.webm" class="screenshot" autoplay muted
-                            loop playsinline></video>
+                        <video src="media/video/onborading.webm" class="screenshot" autoplay muted loop
+                            playsinline></video>
+                        <video src="media/video/send_SOS_button.webm" class="screenshot" autoplay muted loop
+                            playsinline></video>
+                        <video src="media/video/send_ImOK_recording.webm" class="screenshot" autoplay muted loop
+                            playsinline></video>
                         <img src="media/screens/Screenshot_20260210_180700.png" alt="TapAlert Screenshot"
                             class="screenshot">
                         <img src="media/screens/Screenshot_20260210_180958.png" alt="TapAlert Screenshot"
@@ -1695,11 +1699,23 @@
 
         function updateCarousel() {
             // Remove center class from all
-            screenshots.forEach(img => img.classList.remove('center'));
+            screenshots.forEach(media => {
+                media.classList.remove('center');
+                // Pause if it's a video
+                if (media.tagName === 'VIDEO') {
+                    media.pause();
+                    media.currentTime = 0; // Optional: Reset to start
+                }
+            });
 
-            // Add center class to current
+            // Add center class to current and play if video
             if (screenshots[currentIndex]) {
-                screenshots[currentIndex].classList.add('center');
+                const currentMedia = screenshots[currentIndex];
+                currentMedia.classList.add('center');
+                if (currentMedia.tagName === 'VIDEO') {
+                    // Slight delay to ensure transition completes or just play
+                    currentMedia.play().catch(e => console.log("Auto-play prevented:", e));
+                }
             }
 
             // Calculate offset to center the current image
@@ -1726,6 +1742,14 @@
 
         // Initialize carousel
         updateCarousel();
+
+        // Add click event to each screenshot/video to center it
+        screenshots.forEach((media, index) => {
+            media.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
 
         // Update on window resize
         window.addEventListener('resize', updateCarousel);

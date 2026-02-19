@@ -83,7 +83,7 @@ This guide covers common issues and solutions for TapAlert on both Android and i
 
 - **Check spam/junk folder:** Alert emails may be filtered as spam, especially if sent from a new email address.
 - **No email address on recipient:** Email is only sent to recipients that have an email address saved. Go to **Recipients**, edit each contact, and add their email.
-- **Email is a backup channel:** Email redundancy runs in parallel with SMS. It's a "fire and forget" backup. Check the snackbar notification at the bottom of the screen to see if it succeeded or failed.
+- **Email is a redundancy channel:** Email redundancy runs in parallel with SMS. It's a "fire and forget" channel. Check the snackbar notification at the bottom of the screen to see if it succeeded or failed.
 
 ---
 
