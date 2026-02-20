@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.jsoldevila.sms_alert",
+    "sha256_cert_fingerprints": [
+      "BC:9B:C9:22:96:A7:28:90:54:19:95:97:DF:7B:AE:65:6A:CA:EA:4C:E6:B9:3F:8A:23:41:8C:97:1E:83:8A:28"
+    ]
+  }
+}]

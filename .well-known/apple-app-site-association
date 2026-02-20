@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.jsoldevila.sms_alert",
+        "paths": [ "/tapalert/*" ]
+      }
+    ]
+  }
+}
