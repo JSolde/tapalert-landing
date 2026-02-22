@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make Your SMS Alert Stand Out - TapAlert</title>
+    <title>Email Redundancy Guide - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -105,9 +105,27 @@
             padding-left: 15px;
         }
 
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
         p {
             margin-bottom: 15px;
             color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
         }
 
         a {
@@ -120,78 +138,17 @@
         }
 
         .alert-box {
-            background-color: #f3f4f6;
-            border-left: 4px solid #667eea;
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
             padding: 15px;
             margin: 20px 0;
             border-radius: 4px;
         }
 
-        .alert-box.note {
-            background-color: #ebf8ff;
-            border-left-color: #3182ce;
-        }
-
         .alert-box h4 {
             margin-top: 0;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Step Card Styles */
-        .step-list {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 30px;
-        }
-
-        .step-card {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 6px solid #667eea;
-            transition: transform 0.2s ease;
-        }
-
-        .step-card:hover {
-            transform: translateX(5px);
-            background: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .step-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .step-icon {
-            font-size: 1.8rem;
-            min-width: 40px;
-            text-align: center;
-        }
-
-        .step-header h3 {
-            margin: 0;
-            color: #2c3e50;
-        }
-
-        .step-card p {
+            color: #c05621;
             margin-bottom: 10px;
-            font-size: 1.05rem;
-        }
-
-        .step-card ol {
-            padding-left: 20px;
-            color: #4a5568;
-        }
-
-        .step-card ol li {
-            margin-bottom: 8px;
         }
 
         /* Footer Reuse */
@@ -276,28 +233,15 @@
                 padding-left: 12px;
             }
 
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
             p,
             li {
                 font-size: 0.9rem;
-            }
-
-            .step-card {
-                padding: 18px;
-                margin-bottom: 15px;
-            }
-
-            .step-icon {
-                font-size: 1.5rem;
-                min-width: 32px;
-            }
-
-            .step-header h3 {
-                font-size: 1.1rem;
-            }
-
-            .step-card p,
-            .step-card ol li {
-                font-size: 0.92rem;
             }
 
             .alert-box {
@@ -307,6 +251,10 @@
 
             .alert-box h4 {
                 font-size: 0.95rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
             }
 
             footer {
@@ -364,32 +312,12 @@
                 border-left-width: 4px;
             }
 
+            h3 {
+                font-size: 1.05rem;
+            }
+
             p,
             li {
-                font-size: 0.85rem;
-            }
-
-            .step-card {
-                padding: 14px;
-                border-left-width: 4px;
-            }
-
-            .step-icon {
-                font-size: 1.3rem;
-                min-width: 28px;
-            }
-
-            .step-header {
-                gap: 10px;
-                margin-bottom: 10px;
-            }
-
-            .step-header h3 {
-                font-size: 1rem;
-            }
-
-            .step-card p,
-            .step-card ol li {
                 font-size: 0.85rem;
             }
 
@@ -441,58 +369,137 @@
     <!-- Main Content -->
     <main class="guide-container">
 
-        <h1 class="guide-title">Making Alert SMS Stand Out</h1>
-
-        <p>To ensure your emergency contacts don't miss your alert message among other notifications, we recommend
-            configuring their phones to treat messages from your <span class="notranslate"
-                translate="no">TapAlert</span> number differently.</p>
+        <h1 class="guide-title">Email Redundancy Guide</h1>
 
         <section class="guide-section">
-            <div class="step-list">
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🍎</div>
-                        <h3>For iPhone Recipients</h3>
-                    </div>
-                    <ol>
-                        <li><strong>Open Contacts:</strong> Select your contact entry.</li>
-                        <li><strong>Assign Emergency Bypass:</strong> Tap <strong>Edit</strong> >
-                            <strong>Ringtone</strong> (or Text Tone) and toggle <strong>Emergency Bypass</strong> ON.
-                            This allows sounds/vibrations even if their phone is on Silent or Do Not Disturb.
-                        </li>
-                        <li><strong>Custom Tone:</strong> Choose a loud, distinct sound for your messages.</li>
-                    </ol>
-                </div>
+            <h2>💡 What is the Email Redundancy Feature?</h2>
+            <p>Email redundancy in <span class="notranslate" translate="no">TapAlert</span> allows the app to send
+                emergency alerts and reporting messages to your designated contacts via email, in addition to or instead
+                of SMS.</p>
 
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🤖</div>
-                        <h3>For Android Recipients</h3>
-                    </div>
-                    <ol>
-                        <li><strong>Open Messages:</strong> Select the conversation with you.</li>
-                        <li><strong>Notification Categories:</strong> Tap <strong>Details</strong> >
-                            <strong>Notifications</strong>.
-                        </li>
-                        <li><strong>Set as "Urgent":</strong> Change the priority to <strong>"High"</strong> or
-                            <strong>"Urgent"</strong>.
-                        </li>
-                        <li><strong>Override DND:</strong> Ensure <strong>"Ignore Do Not Disturb"</strong> is enabled
-                            for this conversation.</li>
-                        <li><strong>Custom Sound:</strong> Pick a high-priority alert sound.</li>
-                    </ol>
-                </div>
-            </div>
+            <h2>🎯 What is its Purpose?</h2>
+            <p>The primary purpose of email redundancy is to ensure your message gets delivered even if primary SMS
+                channels fail or are unavailable.</p>
+            <ul>
+                <li>✅ <strong>Secondary Delivery Path:</strong> If you are connected to Wi-Fi but have no cellular
+                    service (and Wi-Fi Calling is disabled or unsupported), email acts as a perfect <span
+                        class="notranslate" translate="no">fallback</span>.</li>
+                <li>✅ <strong>International Travel:</strong> When traveling abroad where SMS might be extremely
+                    expensive or unreliable, you can rely purely on Wi-Fi and send alerts via email for free.</li>
+                <li>✅ <strong>Additional Peace of Mind:</strong> Sending alerts via both SMS and Email simultaneously
+                    ensures that if an emergency contact misses a text, they might still see the email notification.
+                </li>
+            </ul>
+        </section>
 
-            <div class="alert-box note">
-                <h4>ℹ️ NOTE</h4>
-                <p><strong>Using <span class="notranslate" translate="no">Twilio</span>?</strong> If you send alerts via
-                    <span class="notranslate" translate="no">Twilio</span>, your contacts will receive the message
-                    from your <span class="notranslate" translate="no">Twilio</span> number or an Alphanumeric ID (e.g.,
-                    "<span class="notranslate" translate="no">TapAlert</span>"). They <strong>must</strong> add
-                    this number/ID to their contacts list for the settings above to work correctly. Otherwise, the
-                    message will still be delivered but as a standard SMS without any priority notifications.</p>
+        <section class="guide-section">
+            <h2>⚙️ How to Configure Email Redundancy</h2>
+            <ol>
+                <li>Open the <span class="notranslate" translate="no">TapAlert</span> app and go to
+                    <strong>Settings</strong>.
+                </li>
+                <li>Scroll to the <strong>Email Alerts</strong> section and toggle <strong>Enable Email Alerts</strong>
+                    ON.</li>
+                <li>Select your <strong>Email Provider</strong> from the preset buttons (Gmail, Outlook, Yahoo, iCloud)
+                    to auto-fill the SMTP Host and Port.</li>
+                <li>Enter your full <strong>Email Address</strong>.</li>
+                <li>Enter your <strong>App Password</strong> (See the section below on what this is and how to get one).
+                </li>
+                <li>Tap <strong>"Save Settings"</strong> and use the "Test Email" button to ensure it is configured
+                    correctly.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>🔑 What is an App Password?</h2>
+            <p>An <strong>App Password</strong> is a randomly generated passcode that gives a third-party app (like
+                <span class="notranslate" translate="no">TapAlert</span>) permission to access your email account to
+                send messages on your behalf.
+            </p>
+
+            <h3>Why do I need one instead of my real password?</h3>
+            <p>Modern email providers block basic password logins to protect your account from hackers. An App Password
+                bypasses Two-Factor Authentication (2FA) for that specific app <em>without</em> giving the app your
+                actual account password. If you ever want to revoke <span class="notranslate"
+                    translate="no">TapAlert</span>'s access, you simply delete the App Password in your email settings,
+                and your main account password remains safe and unchanged.</p>
+
+            <div class="alert-box">
+                <h4>⚠️ Important Note</h4>
+                <p>To generate an App Password, almost all email providers require you to have <strong>Two-Factor
+                        Authentication (2FA)</strong> enabled on your account first.</p>
             </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>📝 How to Create an App Password</h2>
+            <p>Here are clear, step-by-step instructions for the most common email providers.</p>
+
+            <h3>1. Gmail (Google Account)</h3>
+            <ol>
+                <li>Go to your <a href="https://myaccount.google.com/" target="_blank">Google Account management
+                        page</a> and log in.</li>
+                <li>On the left navigation panel, click <strong>Security</strong>.</li>
+                <li>Under the "How you sign in to Google" section, make sure <strong>2-Step Verification</strong> is
+                    turned <strong>On</strong>. (If it's Off, you must turn it on first).</li>
+                <li>Click on <strong>2-Step Verification</strong>. Scroll to the very bottom of the page and click on
+                    <strong>App passwords</strong>.
+                </li>
+                <li>In the "Select app" dropdown, choose <em>Other (Custom name)</em> and type <strong><span
+                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Click <strong>Generate</strong>.</li>
+                <li>A yellow box will appear with a 16-character code. Copy this code and paste it into the "App
+                    Password" field in the <span class="notranslate" translate="no">TapAlert</span> app (you do not need
+                    to include the spaces).</li>
+                <li>Click <strong>Done</strong>.</li>
+            </ol>
+
+            <h3>2. Hotmail / Outlook (Microsoft Account)</h3>
+            <ol>
+                <li>Go to the <a href="https://account.microsoft.com/security" target="_blank">Microsoft Account
+                        Security page</a> and log in.</li>
+                <li>Click on <strong>Advanced security options</strong>.</li>
+                <li>Under the "Additional security" section, ensure <strong>Two-step verification</strong> is turned
+                    <strong>On</strong>.
+                </li>
+                <li>Scroll down to the <strong>App passwords</strong> section.</li>
+                <li>Click <strong>Create a new app password</strong>.</li>
+                <li>A new screen will appear displaying your unique App Password.</li>
+                <li>Copy this password and paste it into <span class="notranslate" translate="no">TapAlert</span>, then
+                    click <strong>Done</strong>.</li>
+            </ol>
+
+            <h3>3. Yahoo Mail</h3>
+            <ol>
+                <li>Go to your <a href="https://login.yahoo.com/account/security" target="_blank">Yahoo Account Security
+                        page</a> and log in.</li>
+                <li>Scroll down to the bottom of the page and click on <strong>Generate and manage app
+                        passwords</strong>.</li>
+                <li>A modal window will appear. Enter <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong> as the app's name.</li>
+                <li>Click <strong>Generate password</strong>.</li>
+                <li>Copy the 16-character password displayed on the screen and paste it into <span class="notranslate"
+                        translate="no">TapAlert</span> (omitting any spaces).</li>
+                <li>Click <strong>Done</strong>.</li>
+            </ol>
+
+            <h3>4. iCloud (Apple ID)</h3>
+            <ol>
+                <li>Go to <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> and log in with
+                    your Apple ID.</li>
+                <li>In the <strong>Sign-In and Security</strong> section, click on <strong>App-Specific
+                        Passwords</strong>.</li>
+                <li>Click the <strong>Generate an app-specific password</strong> or the <strong>Add (+)</strong> button.
+                </li>
+                <li>Enter <strong><span class="notranslate" translate="no">TapAlert</span></strong> when prompted for an
+                    app name, and click Create.</li>
+                <li>You may be asked to enter your Apple ID password again to confirm.</li>
+                <li>A unique app-specific password will be generated and displayed (typically in the format
+                    <code>xxxx-xxxx-xxxx-xxxx</code>).
+                </li>
+                <li>Copy this entire password and paste it into <span class="notranslate"
+                        translate="no">TapAlert</span>, then click <strong>Done</strong>.</li>
+            </ol>
         </section>
 
     </main>
@@ -518,7 +525,7 @@
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>

@@ -293,7 +293,8 @@
                 font-size: 1rem;
             }
 
-            p, li {
+            p,
+            li {
                 font-size: 0.9rem;
             }
 
@@ -378,7 +379,8 @@
                 font-size: 0.95rem;
             }
 
-            p, li {
+            p,
+            li {
                 font-size: 0.85rem;
             }
 
@@ -420,7 +422,8 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span class="notranslate" translate="no">TapAlert</span>
+                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                    class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Back to Home</a>
         </div>
@@ -430,7 +433,8 @@
     <main class="guide-container">
 
         <h1 class="guide-title">User Guide: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">This guide explains how to configure and use <strong><span class="notranslate" translate="no">TapAlert</span></strong> on your Android or
+        <p class="guide-intro">This guide explains how to configure and use <strong><span class="notranslate"
+                    translate="no">TapAlert</span></strong> on your Android or
             iOS device.</p>
 
         <section class="guide-section">
@@ -444,26 +448,31 @@
                 <li><strong>Contacts:</strong> Needed to easily select recipients from your phone's address book.</li>
             </ul>
             <blockquote class="alert-note">
-                <strong>NOTE:</strong> On iOS, <span class="notranslate" translate="no">direct SMS</span> sending is not supported by the system for automated alerts.
+                <strong>NOTE:</strong> On iOS, <span class="notranslate" translate="no">direct SMS</span> sending is not
+                supported by the system for automated alerts.
                 You must use the <strong><span class="notranslate" translate="no">Twilio</span></strong> method.
             </blockquote>
         </section>
 
         <section class="guide-section">
             <h2>2. 📱 Interface Modes</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> offers two distinct interface modes to suit your needs. You can switch between them in
+            <p><span class="notranslate" translate="no">TapAlert</span> offers two distinct interface modes to suit your
+                needs. You can switch between them in
                 <strong>Settings > Interface Mode</strong>.
             </p>
 
-            <h3><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span> / OK)</h3>
+            <h3><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
+                    translate="no">SOS</span> / OK)</h3>
             <p>A streamlined interface designed for maximum simplicity and accessibility, ideal for elderly users or
                 high-stress situations.</p>
             <ul>
-                <li><strong>Large <span class="notranslate" translate="no">SOS</span> Button:</strong> Instantly starts the countdown for an "<span class="notranslate" translate="no">SOS</span>, I need help" alert.
+                <li><strong>Large <span class="notranslate" translate="no">SOS</span> Button:</strong> Instantly starts
+                    the countdown for an "<span class="notranslate" translate="no">SOS</span>, I need help" alert.
                 </li>
                 <li><strong>I'm OK Button:</strong> Quickly sends an "I'm OK" status update to reassure contacts.</li>
                 <li><strong>Voice Buttons:</strong> Each section has a dedicated voice button to record and send an
-                    audio transcript along with the <span class="notranslate" translate="no">SOS</span> or OK status.</li>
+                    audio transcript along with the <span class="notranslate" translate="no">SOS</span> or OK status.
+                </li>
                 <li><strong>Emergency Call Button:</strong> A dedicated button to immediately call local emergency
                     services (e.g., 112, 911) based on your location.</li>
             </ul>
@@ -480,7 +489,8 @@
 
         <section class="guide-section">
             <h2>3. 📝 Setup Predefined Messages (Report Mode)</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> comes with 4 predefined message slots (tabs) allowing you to quickly switch between different
+            <p><span class="notranslate" translate="no">TapAlert</span> comes with 4 predefined message slots (tabs)
+                allowing you to quickly switch between different
                 alert scenarios.</p>
 
             <h3>Editing Messages</h3>
@@ -533,7 +543,8 @@
                 <ul>
                     <li><strong>iOS:</strong> If you chose "Select Contacts..." (Limited Access), the app can only see
                         the few you picked. To fix this, go to <strong>iPhone Settings > Privacy & Security > Contacts >
-                            <span class="notranslate" translate="no">TapAlert</span></strong> and select <strong>"All Contacts"</strong>.</li>
+                            <span class="notranslate" translate="no">TapAlert</span></strong> and select <strong>"All
+                            Contacts"</strong>.</li>
                     <li><strong>Android:</strong> Permissions are "all-or-nothing". If you denied access, the picker
                         will be empty. Ensure the app has "Contacts" permission in your phone's App Settings.</li>
                 </ul>
@@ -548,30 +559,42 @@
             <h3>SMS Sending Methods</h3>
             <p>The app supports two ways to send messages:</p>
             <ul>
-                <li><strong><span class="notranslate" translate="no">Direct SMS</span> (Android):</strong> Uses your phone's SIM card. Cost depends on your mobile
+                <li><strong><span class="notranslate" translate="no">Direct SMS</span> (Android):</strong> Uses your
+                    phone's SIM card. Cost depends on your mobile
                     carrier plan.</li>
-                <li><strong><span class="notranslate" translate="no">Twilio</span> SMS (Android & iOS):</strong> Uses the <span class="notranslate" translate="no">Twilio</span> API over the internet (Wi-Fi/Data).
+                <li><strong><span class="notranslate" translate="no">Twilio</span> SMS (Android & iOS):</strong> Uses
+                    the <span class="notranslate" translate="no">Twilio</span> API over the internet (Wi-Fi/Data).
                     Reliable and required for iOS.</li>
             </ul>
 
             <h3><span class="notranslate" translate="no">Smart Redundancy</span> (Android Only)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> features a <strong><span class="notranslate" translate="no">Smart Redundancy</span></strong> system that automatically switches methods if the
+            <p><span class="notranslate" translate="no">TapAlert</span> features a <strong><span class="notranslate"
+                        translate="no">Smart Redundancy</span></strong> system that automatically switches methods if
+                the
                 primary one fails:</p>
             <ul>
-                <li><strong>No Signal?</strong> If you try to send a <span class="notranslate" translate="no">Direct SMS</span> but have no cellular coverage (e.g.,
-                    inside a building), the app will automatically attempt to send via <span class="notranslate" translate="no">Twilio</span> (Wi-Fi).</li>
-                <li><strong>No Data?</strong> If you use <span class="notranslate" translate="no">Twilio</span> as primary but are hiking without 4G/5G, the app will
-                    automatically <span class="notranslate" translate="no">fallback</span> to sending a <span class="notranslate" translate="no">Direct SMS</span>.</li>
+                <li><strong>No Signal?</strong> If you try to send a <span class="notranslate" translate="no">Direct
+                        SMS</span> but have no cellular coverage (e.g.,
+                    inside a building), the app will automatically attempt to send via <span class="notranslate"
+                        translate="no">Twilio</span> (Wi-Fi).</li>
+                <li><strong>No Data?</strong> If you use <span class="notranslate" translate="no">Twilio</span> as
+                    primary but are hiking without 4G/5G, the app will
+                    automatically <span class="notranslate" translate="no">fallback</span> to sending a <span
+                        class="notranslate" translate="no">Direct SMS</span>.</li>
             </ul>
-            <p><strong>To enable:</strong> Go to Settings and turn on <strong>"<span class="notranslate" translate="no">Smart Redundancy</span>"</strong>.</p>
+            <p><strong>To enable:</strong> Go to Settings and turn on <strong>"<span class="notranslate"
+                        translate="no">Smart Redundancy</span>"</strong>.</p>
 
             <h3>Email Redundancy (Wi-Fi <span class="notranslate" translate="no">Fallback</span>)</h3>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> can send your alert via email.</p>
+            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate"
+                    translate="no">TapAlert</span> can send your alert via email.</p>
             <ul>
                 <li><strong>Setup:</strong> Go to <strong>Settings > Email Redundancy</strong>. For detailed
                     instructions, see <strong>Chapter 6: Configuring Email Redundancy</strong>.</li>
-                <li><strong>Automatic <span class="notranslate" translate="no">Fallback</span>:</strong> When enabled, the app will attempt to send an email alert if
-                    both <span class="notranslate" translate="no">Direct SMS</span> and <span class="notranslate" translate="no">Twilio</span> (cellular) fail.</li>
+                <li><strong>Automatic <span class="notranslate" translate="no">Fallback</span>:</strong> When enabled,
+                    the app will attempt to send an email alert if
+                    both <span class="notranslate" translate="no">Direct SMS</span> and <span class="notranslate"
+                        translate="no">Twilio</span> (cellular) fail.</li>
             </ul>
 
             <h3>Trigger Method (Tap vs. Hold)</h3>
@@ -587,7 +610,8 @@
             <blockquote class="alert-important">
                 <strong>IMPORTANT: iOS Users</strong><br>
                 You must configure a <span class="notranslate" translate="no">Twilio</span> account.<br>
-                👉 <strong>For detailed <span class="notranslate" translate="no">Twilio</span> setup instructions, please see the separate "<span class="notranslate" translate="no">Twilio</span> Guide" in the Help
+                👉 <strong>For detailed <span class="notranslate" translate="no">Twilio</span> setup instructions,
+                    please see the separate "<span class="notranslate" translate="no">Twilio</span> Guide" in the Help
                     menu.</strong>
             </blockquote>
 
@@ -608,7 +632,8 @@
 
             <h3>Additional Settings</h3>
             <ul>
-                <li><strong>Sender Identity:</strong> (<span class="notranslate" translate="no">Twilio</span> Only) Choose the name or number that appears as the sender
+                <li><strong>Sender Identity:</strong> (<span class="notranslate" translate="no">Twilio</span> Only)
+                    Choose the name or number that appears as the sender
                     (e.g., "Alert" or your specific <span class="notranslate" translate="no">Twilio</span> number).</li>
                 <li><strong>Appearance:</strong> Toggle between Light Mode, Dark Mode, or follow System Settings.</li>
                 <li><strong>App Language:</strong> Manually override the app's language (default: System Language).</li>
@@ -621,7 +646,8 @@
 
         <section class="guide-section">
             <h2>6. 📧 Configuring Email Redundancy</h2>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> can send your alert via email.</p>
+            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate"
+                    translate="no">TapAlert</span> can send your alert via email.</p>
 
             <h3>Setup Instructions</h3>
             <ol>
@@ -642,7 +668,8 @@
             </ol>
 
             <h3>⚡ Quick Setup (Common Providers)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> includes preset buttons for popular email providers. Simply tap a preset button to auto-fill the
+            <p><span class="notranslate" translate="no">TapAlert</span> includes preset buttons for popular email
+                providers. Simply tap a preset button to auto-fill the
                 SMTP host and port settings:</p>
             <ul>
                 <li><strong>Gmail</strong> (smtp.gmail.com:587)</li>
@@ -671,8 +698,10 @@
                         href="https://myaccount.google.com/apppasswords"
                         target="_blank">https://myaccount.google.com/apppasswords</a></li>
                 <li>Search for <strong>"App passwords"</strong> (requires 2-step verification enabled).</li>
-                <li>Generate a new password for "Other" and call it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the 16-character code provided in <span class="notranslate" translate="no">TapAlert</span> (blanks included).</li>
+                <li>Generate a new password for "Other" and call it "<span class="notranslate"
+                        translate="no">TapAlert</span>".</li>
+                <li>Use the 16-character code provided in <span class="notranslate" translate="no">TapAlert</span>
+                    (blanks included).</li>
             </ol>
 
             <h4>Outlook / Hotmail / Live</h4>
@@ -757,9 +786,12 @@
                             message selected in the tabs (1-4) will be sent.</li>
                         <li><strong>In <span class="notranslate" translate="no">Panic Mode</span>:</strong>
                             <ul>
-                                <li>Tap the big red <strong><span class="notranslate" translate="no">SOS</span></strong> button to send a "Help needed" alert.</li>
-                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of <span class="notranslate" translate="no">SOS</span>) to record and send a
-                                    specific voice message with your <span class="notranslate" translate="no">SOS</span> alert.</li>
+                                <li>Tap the big red <strong><span class="notranslate" translate="no">SOS</span></strong>
+                                    button to send a "Help needed" alert.</li>
+                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of <span class="notranslate"
+                                        translate="no">SOS</span>) to record and send a
+                                    specific voice message with your <span class="notranslate" translate="no">SOS</span>
+                                    alert.</li>
                                 <li>Tap the green <strong>I'm OK</strong> button to send a reassuring "I'm OK" status.
                                 </li>
                                 <li>Tap the <strong>Microphone icon</strong> (bottom-right of I'm OK) to record and send
@@ -782,7 +814,8 @@
 
         <section class="guide-section">
             <h2>9. ⏱️ Countdown Dialog</h2>
-            <p>To prevent accidental alerts, <span class="notranslate" translate="no">TapAlert</span> shows a countdown before sending.</p>
+            <p>To prevent accidental alerts, <span class="notranslate" translate="no">TapAlert</span> shows a countdown
+                before sending.</p>
             <ul>
                 <li><strong>Countdown Duration:</strong> By default, the app waits <strong>10 seconds</strong>. You can
                     customize this in <strong>Settings</strong> (from <strong>0s</strong> for immediate sending up to
@@ -796,7 +829,8 @@
         <section class="guide-section">
             <h2>10. 🔔 Making Alert SMS Stand Out</h2>
             <p>To ensure your emergency contacts don't miss your alert message among other notifications, we recommend
-                configuring their phones to treat messages from your <span class="notranslate" translate="no">TapAlert</span> number differently.</p>
+                configuring their phones to treat messages from your <span class="notranslate"
+                    translate="no">TapAlert</span> number differently.</p>
 
             <h3>For iPhone Recipients</h3>
             <ol>
@@ -821,8 +855,10 @@
                 <li><strong>Custom Sound:</strong> Pick a high-priority alert sound.</li>
             </ol>
             <blockquote class="alert-note">
-                <strong>NOTE: Using <span class="notranslate" translate="no">Twilio</span>?</strong> If you send alerts via <span class="notranslate" translate="no">Twilio</span>, your contacts will receive the
-                message from your <span class="notranslate" translate="no">Twilio</span> number or an Alphanumeric ID (e.g., "<span class="notranslate" translate="no">TapAlert</span>"). They <strong>must</strong> add
+                <strong>NOTE: Using <span class="notranslate" translate="no">Twilio</span>?</strong> If you send alerts
+                via <span class="notranslate" translate="no">Twilio</span>, your contacts will receive the
+                message from your <span class="notranslate" translate="no">Twilio</span> number or an Alphanumeric ID
+                (e.g., "<span class="notranslate" translate="no">TapAlert</span>"). They <strong>must</strong> add
                 this number/ID to their contacts list for the settings above to work correctly. Otherwise, the message
                 will still be delivered but as a standard SMS without any priority notifications.
             </blockquote>
@@ -845,16 +881,20 @@
         <section class="guide-section" id="troubleshooting">
             <h2>12. ❓ Troubleshooting</h2>
             <ul>
-                <li><strong>Message not sending (<span class="notranslate" translate="no">Direct SMS</span>):</strong> Check your mobile signal and carrier credit
+                <li><strong>Message not sending (<span class="notranslate" translate="no">Direct SMS</span>):</strong>
+                    Check your mobile signal and carrier credit
                     (Android only).</li>
-                <li><strong>Message not sending (<span class="notranslate" translate="no">Twilio</span>):</strong> Verify your internet connection and double-check your
+                <li><strong>Message not sending (<span class="notranslate" translate="no">Twilio</span>):</strong>
+                    Verify your internet connection and double-check your
                     credentials in the settings.</li>
                 <li><strong>Location missing:</strong> Ensure GPS is enabled in your phone's system settings and the app
                     has Location permission.</li>
-                <li><strong>Contacts missing (iOS):</strong> Go to Settings > Privacy > Contacts > <span class="notranslate" translate="no">TapAlert</span> and ensure
+                <li><strong>Contacts missing (iOS):</strong> Go to Settings > Privacy > Contacts > <span
+                        class="notranslate" translate="no">TapAlert</span> and ensure
                     <strong>"All Contacts"</strong> is checked.
                 </li>
-                <li><strong>Contacts missing (Android):</strong> Go to Settings > Apps > <span class="notranslate" translate="no">TapAlert</span> > Permissions and
+                <li><strong>Contacts missing (Android):</strong> Go to Settings > Apps > <span class="notranslate"
+                        translate="no">TapAlert</span> > Permissions and
                     ensure <strong>"Contacts"</strong> is allowed.</li>
             </ul>
         </section>
@@ -870,7 +910,9 @@
                 <li><strong>The Check-in:</strong> You must return to the app and tap <strong>"I'm OK (Reset)"</strong>
                     before the timer expires.</li>
                 <li><strong>Automatic Alert:</strong> If you <em>don't</em> reset the timer before it hits zero,
-                    <span class="notranslate" translate="no">TapAlert</span> will automatically send your alert message and location to all recipients.</li>
+                    <span class="notranslate" translate="no">TapAlert</span> will automatically send your alert message
+                    and location to all recipients.
+                </li>
             </ol>
             <blockquote class="alert-tip">
                 <strong>TIP:</strong> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if
@@ -911,9 +953,13 @@
                     <h3>Support</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span> Step by Step Guides</a></li>
-                        <li><a href="twilio_guide.html"><span class="notranslate" translate="no">Twilio</span> Setup Guide</a></li>
-                        <li><a href="user_guide.html"><span class="notranslate" translate="no">TapAlert</span> Step by Step configuration</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span> Step by
+                                Step Guides</a></li>
+                        <li><a href="twilio_guide.html"><span class="notranslate" translate="no">Twilio</span> Setup
+                                Guide</a></li>
+                        <li><a href="email_redundancy_guide.html">Email Redundancy Guide</a></li>
+                        <li><a href="user_guide.html"><span class="notranslate" translate="no">TapAlert</span> Step by
+                                Step configuration</a></li>
                         <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
                     </ul>
@@ -921,7 +967,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made
+                    with ❤️ for your safety</p>
             </div>
         </div>
     </footer>
