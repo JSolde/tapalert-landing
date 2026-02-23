@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Start (Android) - TapAlert</title>
+    <title>Accessibility Guide - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -150,56 +150,6 @@
             color: #c05621;
         }
 
-        /* Step Card Styles */
-        .step-list {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 30px;
-        }
-
-        .step-card {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 6px solid #667eea;
-            transition: transform 0.2s ease;
-        }
-
-        .step-card:hover {
-            transform: translateX(5px);
-            background: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .step-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .step-icon {
-            font-size: 1.8rem;
-            min-width: 40px;
-            text-align: center;
-        }
-
-        .step-header h3 {
-            margin: 0;
-            color: #2c3e50;
-        }
-
-        .step-card p {
-            margin-bottom: 0;
-            font-size: 1.05rem;
-        }
-
-        .step-card ul {
-            margin-top: 10px;
-            margin-bottom: 0;
-        }
-
         /* Footer Reuse */
         footer {
             background: #1a1a1a;
@@ -293,22 +243,13 @@
                 font-size: 0.9rem;
             }
 
-            .step-card {
-                padding: 18px;
-                margin-bottom: 15px;
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
             }
 
-            .step-icon {
-                font-size: 1.5rem;
-                min-width: 32px;
-            }
-
-            .step-header h3 {
-                font-size: 1.1rem;
-            }
-
-            .step-card p {
-                font-size: 0.92rem;
+            .alert-box h4 {
+                font-size: 0.95rem;
             }
 
             .guide-section {
@@ -379,27 +320,12 @@
                 font-size: 0.85rem;
             }
 
-            .step-card {
-                padding: 14px;
-                border-left-width: 4px;
+            .alert-box {
+                padding: 10px;
             }
 
-            .step-icon {
-                font-size: 1.3rem;
-                min-width: 28px;
-            }
-
-            .step-header {
-                gap: 10px;
-                margin-bottom: 10px;
-            }
-
-            .step-header h3 {
-                font-size: 1rem;
-            }
-
-            .step-card p {
-                font-size: 0.85rem;
+            .alert-box h4 {
+                font-size: 0.9rem;
             }
 
             footer {
@@ -441,86 +367,148 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Back to Guides</a>
 
-        <h1 class="guide-title">Quick Start (Android)</h1>
+        <div class="guide-header">
+            <h1 class="guide-title">Accessibility Features for Seniors</h1>
+            <p class="guide-meta">TapAlert is designed to be usable by everyone, including people with hearing loss, low vision, tremors, or other age-related conditions. This guide explains each accessibility feature and how to get the most out of it.</p>
+        </div>
 
-        <section class="guide-section">
-            <div class="step-list">
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">✅</div>
-                        <h3>1. Grant Essential Permissions</h3>
-                    </div>
-                    <p>During the application onboarding, accept all permissions (SMS, Location, Contacts). If skipped,
-                        they will be requested when needed later, but we recommend accepting them now for a seamless
-                        experience.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">⚙️</div>
-                        <h3>2. Optimal Configuration</h3>
-                    </div>
-                    <p>In the onboarding configuration step, we highly recommend:</p>
-                    <ul>
-                        <li><strong>Add recipients</strong> to your emergency alert list.</li>
-                        <li><strong>Add the app widget</strong> to your home screen for instant access.</li>
-                    </ul>
-                    <p style="margin-top: 10px;"><small><em>Note: These can also be managed in Settings after
-                                onboarding.</em></small></p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">📡</div>
-                        <h3>3. Connectivity & Failbacks</h3>
-                    </div>
-                    <p>Verify if <strong>Wifi calls</strong> are enabled on your phone. If your carrier doesn't support
-                        it, consider using a <strong><span class="notranslate" translate="no">Twilio</span>
-                            account</strong> as a <span class="notranslate" translate="no">fallback</span> for Wifi-only
-                        situations.
-                        <span class="notranslate" translate="no">Twilio</span> is free to start and provides reliable
-                        SMS delivery without a cell signal.
-                    </p>
-                    <p style="margin-top: 10px;">You can also enable <strong>Email redundancy</strong> in <span
-                            class="notranslate" translate="no">TapAlert</span> to
-                        ensure your loved ones are notified via multiple channels.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🧪</div>
-                        <h3>4. Perform a Test Alert</h3>
-                    </div>
-                    <p>Test your setup by sending an <strong>‘I’m OK’</strong> message. Tap the button once (or hold for
-                        5s if configured). A countdown will appear, giving you time to cancel or send immediately.
-                        Letting it expire sends the alert automatically!</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">↔️</div>
-                        <h3>5. Explore Navigation</h3>
-                    </div>
-                    <p>Swipe <strong>Left</strong> to access your preconfigured custom messages for specific situations.
-                        Swipe <strong>Right</strong> to activate the <strong>Check-in Timer</strong> (Dead Man's
-                        Switch), which auto-alerts if you don't check in by a certain time.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🤝</div>
-                        <h3>6. Setup for Others</h3>
-                    </div>
-                    <p>If you’re setting this phone up for someone else (like a senior relative), take a moment to
-                        preconfigure their custom alerts (Swipe Left) so they have the most relevant messages ready at
-                        their fingertips.</p>
-                </div>
+        <section class="guide-section" id="step-1">
+            <h2>1. Large Text Support</h2>
+            <p><strong>Who it helps:</strong> People with low vision or difficulty reading small text.</p>
+            <p>TapAlert respects the font size you set in your phone's system settings. If you increase the text size in <strong>Settings > Display > Font Size</strong> (Android) or <strong>Settings > Accessibility > Display & Text Size > Larger Text</strong> (iOS), all text in TapAlert will grow accordingly — buttons, labels, menus, and messages.</p>
+            <div class="alert-box">
+                <h4>💡 No action needed inside the app</h4>
+                <p>Just set your preferred font size in your phone settings and TapAlert will follow it automatically.</p>
             </div>
         </section>
 
+        <section class="guide-section" id="step-2">
+            <h2>2. Screen Reader Support (TalkBack / VoiceOver)</h2>
+            <p><strong>Who it helps:</strong> People with severe vision impairment who use a screen reader.</p>
+            <p>TapAlert works natively with:</p>
+            <ul>
+                <li><strong>TalkBack</strong> on Android (Settings > Accessibility > TalkBack)</li>
+                <li><strong>VoiceOver</strong> on iPhone (Settings > Accessibility > VoiceOver)</li>
+            </ul>
+            <p>When a screen reader is active:</p>
+            <ul>
+                <li>The <strong><span class="notranslate" translate="no">SOS</span></strong> and <strong>I'm OK</strong> buttons are announced with their names and current state (enabled or disabled).</li>
+                <li>When you start a countdown before sending an alert, the screen reader counts down the remaining seconds aloud so you always know how long you have before the alert is sent.</li>
+                <li>After an alert is sent, the screen reader announces <strong>"Alert sent"</strong> or <strong>"Alert failed"</strong> so you know the outcome without needing to look at the screen.</li>
+            </ul>
+        </section>
 
-    </main>
+        <section class="guide-section" id="step-3">
+            <h2>3. Haptic Feedback (Phone Vibration)</h2>
+            <p><strong>Who it helps:</strong> People with hearing loss who cannot hear the countdown sound, or anyone who prefers tactile confirmation.</p>
+            <p>TapAlert uses your phone's vibration motor to give you physical feedback at key moments:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Moment</th>
+                        <th>Vibration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Countdown tick</td>
+                        <td>One firm pulse per second — you can feel the countdown in your hand</td>
+                    </tr>
+                    <tr>
+                        <td>Alert sent successfully</td>
+                        <td>Three strong pulses in quick succession</td>
+                    </tr>
+                    <tr>
+                        <td>Alert failed</td>
+                        <td>Two rapid buzzes</td>
+                    </tr>
+                    <tr>
+                        <td>Countdown cancelled</td>
+                        <td>Two medium pulses — confirms you cancelled, not sent</td>
+                    </tr>
+                    <tr>
+                        <td>No recipients configured</td>
+                        <td>One long vibration (error)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert-box">
+                <h4>💡 No action needed</h4>
+                <p>Haptic feedback works automatically as long as vibration is enabled on your phone (check your phone's silent/vibration switch).</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="step-4">
+            <h2>4. Sound Alerts</h2>
+            <p><strong>Who it helps:</strong> People who need to hear when an alert is sent, including those with moderate hearing loss.</p>
+            <p>When an alert is sent, TapAlert plays a sound on <strong>your own device</strong> to confirm the alert went out. You can customize the sound in <strong>Settings > Notification Sound</strong>:</p>
+            <ul>
+                <li><strong>None</strong> — no sound</li>
+                <li><strong>Plain Sounds</strong> — simple, clear tones (good for most users)</li>
+                <li><strong>Rich Sounds</strong> — fuller, more musical tones</li>
+            </ul>
+            <p>Within each sound style, you can also adjust:</p>
+            <ul>
+                <li><strong>Sound Pitch</strong> — slide left for a lower, deeper tone. Lower-pitched sounds (around 500 Hz) are easier to hear for people with age-related high-frequency hearing loss. The default is already set to a lower pitch for this reason.</li>
+                <li><strong>Volume</strong> — set how loud the confirmation sound plays.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section" id="step-5">
+            <h2>5. Screen Flash and Torch Flash</h2>
+            <p><strong>Who it helps:</strong> People with hearing loss who may miss the sound, or anyone in a loud environment. Also useful when the phone is face-down or in a pocket.</p>
+            <p>When an alert is sent successfully, TapAlert produces:</p>
+            <ol>
+                <li><strong>Screen flash</strong> — the entire screen lights up white three times in quick succession.</li>
+                <li><strong>Torch flash</strong> — the camera LED on the back of the phone flashes three times simultaneously, visible even when the screen faces down.</li>
+            </ol>
+            <p>Both flashes run at the same time and complete in under one second.</p>
+            <div class="alert-box warning">
+                <h4>⚠️ How to turn this off</h4>
+                <p>If you have a photosensitive condition, go to <strong>Settings → Notification Sound → Flash on Alert</strong> and switch it off.</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="step-6">
+            <h2>6. Swipe to Cancel the Countdown</h2>
+            <p><strong>Who it helps:</strong> Anyone who accidentally starts a countdown and needs to cancel it quickly.</p>
+            <p>When you tap the <span class="notranslate" translate="no">SOS</span> button, a countdown dialog appears before the alert is sent. You can cancel it in two ways:</p>
+            <ul>
+                <li>Tap the <strong>Cancel</strong> button at the bottom of the dialog.</li>
+                <li><strong>Swipe the dialog left or right</strong> — the dialog slides with your finger and dismisses when you release it far enough.</li>
+            </ul>
+            <p>Either way, you will feel two short vibrations confirming the alert was cancelled and nothing was sent.</p>
+        </section>
+
+        <section class="guide-section" id="step-7">
+            <h2>7. Voice Message Composition</h2>
+            <p><strong>Who it helps:</strong> People with tremors, arthritis, or other conditions that make typing difficult.</p>
+            <p>Instead of typing a custom message before sending an alert, you can speak it. Tap the <strong>microphone icon</strong> in the message field and speak your message. The app will transcribe your words automatically. Silence for 3 seconds stops recording.</p>
+            <p>This works on the home screen message input and in the dead man's timer dialog.</p>
+        </section>
+
+        <section class="guide-section" id="step-8">
+            <h2>8. Hold-to-Send Mode</h2>
+            <p><strong>Who it helps:</strong> People who are prone to accidentally tapping the <span class="notranslate" translate="no">SOS</span> button.</p>
+            <p>By default, the <span class="notranslate" translate="no">SOS</span> button requires only a single tap. If accidental presses are a concern, you can switch to <strong>Hold to Send</strong> mode:</p>
+            <p>Go to <strong>Settings → Trigger Method → Hold to Send</strong>.</p>
+            <p>In this mode, you must press and hold the button for the full hold duration before the alert is triggered, preventing accidental sends.</p>
+        </section>
+
+        <section class="guide-section" id="step-9">
+            <h2>9. Home Screen Widget (Android)</h2>
+            <p><strong>Who it helps:</strong> Anyone who finds it difficult to unlock their phone and open the app in an emergency.</p>
+            <p>On Android, you can add a TapAlert widget to your home screen so the <span class="notranslate" translate="no">SOS</span> button is always one tap away — without opening the app at all.</p>
+            <p>To add the widget: <strong>Settings → Home Screen Widget → Add Widget</strong>.</p>
+        </section>
+
+        <div class="next-steps">
+            <h3>Need more help?</h3>
+            <p>If you have any questions about configuring these features or need assistance, check our <a href="troubleshooting.html">Troubleshooting Guide</a> or <a href="contact.html">Contact Support</a>.</p>
+        </div>
+</main>
 
     <!-- Footer -->
     <footer>
