@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/one_tap_alert.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/one_tap_alert.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/one_tap_alert.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/one_tap_alert.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/one_tap_alert.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/one_tap_alert.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/one_tap_alert.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakatu bakarreko alerta-gida - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box.tip {
+            background-color: #f0fdf4;
+            border-left-color: #22c55e;
+        }
+
+        .alert-box.warning {
+            background-color: #fffbeb;
+            border-left-color: #f59e0b;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
+            }
+
+            table {
+                font-size: 0.78rem;
+            }
+
+            th,
+            td {
+                padding: 6px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                    class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">EU</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
+            <a href="../one_tap_alert.html" hreflang="en">EN</a>
+            <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
+            <a href="../eu/one_tap_alert.html" hreflang="eu" class="active">EU</a>
+            <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
+            <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Itzuli Gidetara</a>
+
+        <h1 class="guide-title">Kolpe bakarreko alerta: <span class="notranslate" translate="no">TapAlert</span> berehala abiarazteko modu guztiak</h1>
+
+        <p><span class="notranslate" translate="no">TapAlert</span> berehalako ukitu bakarreko larrialdi-alertak egiteko konfigura daiteke hainbat metodo erabiliz. Gida honek aukera guztiak biltzen ditu, hasierako pantailako widgetetatik hasi etabotoia fisikoetara eta tenporizadore automatizatuetara.</p>
+
+        <section class="guide-section">
+            <h2>1. 📱 Android Hasierako pantailaren widgeta</h2>
+            <p><strong>Plataforma:</strong> Android only</p>
+            <p>Alerta bat abiarazteko modurik azkarrena. Widget dedikatu bat zure hasierako pantailan dago: sakatu bat eta atzerako kontaketa berehala hasiko da.</p>
+
+            <h3>Nola Konfiguratu</h3>
+            <ol>
+                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> → sakatu <strong>⚙️ Ezarpenak</strong> ikonoa.</li>
+                <li>Joan <strong>Widget</strong> atalera.</li>
+                <li>Sakatu <strong>"Gehitu"</strong> → sistemak widget-a hasierako pantailan jartzeko eskatuko dizu.</li>
+                <li>Arrastatu nahi duzun tokira (egokiena zure pantaila nagusian sarbide azkarra izateko).</li>
+            </ol>
+
+            <h3>Nola Funtzionatzen Du</h3>
+            <ul>
+                <li><strong>Ukitu bakarra</strong> widget-ean → <span class="notranslate" translate="no">TapAlert</span> irekitzen da eta <strong>atzerako kontaketa berehala hasiko da</strong>.</li>
+                <li>Atzerako kontaketa elkarrizketa-koadroa ikusiko duzu eta <strong>bertan behera utzi</strong> dezakezu a gisahala bada.</li>
+                <li>Atzerako kontaketa egin ondoren, alerta bidaliko da eta aplikazioa automatikoki ixten da.</li>
+            </ul>
+
+            <div class="alert-box tip">
+                <h4>💡 TIP</h4>
+                <p>Jarri widget-a blokeo-pantailan (zure Android bertsioak onartzen badu) edo hasierako pantailako lehen orrialdean sarbide azkarrena izateko.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
+            <p><strong>Plataforma:</strong> Android & iPhone</p>
+            <p>Mapeatu <strong>fisikobotoia</strong> telefonoan (piztekobotoia, bolumen-tekla edo atzera ukitzeko keinua) <span class="notranslate" translate="no">TapAlert</span> abiarazteko. <strong>Abiaraztean abiarazte automatikoa</strong>rekin batera, kolpe bakarreko benetako izua sortzen du botoia.</p>
+
+            <h3>1. urratsa: gaitu abiarazte automatikoa <span class="notranslate" translate="no">TapAlert</span>-n</h3>
+            <ol>
+                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️ Ezarpenak</strong>.</li>
+                <li>Gaitu <strong>"Abiaraztean automatikoki abiarazi"</strong>.</li>
+            </ol>
+
+            <div class="alert-box warning">
+                <h4>⚠️ KONTUZ</h4>
+                <p>Hasiera automatikoa gaituta dagoenean, atzerako kontaketa aplikazioa irekitzen duzun <strong>aldiro</strong> abiaraziko da, baita aplikazioen tiraderatik normalean irekitzen duzunean ere. Gaitu hau batez erebotoia lasterbide fisiko baten bidez abiarazten baduzu.</p>
+            </div>
+
+            <h3>2. urratsa: Konfiguratu zure telefonoaren botoia</h3>
+
+            <h4>Samsung Galaxy (alboko tekla)</h4>
+            <ol>
+                <li><strong>Ezarpenak</strong> → <strong>ezaugarriak aurreratua</strong> → <strong>Alboko tekla</strong>.</li>
+                <li>Gaitu <strong>Sakatu bikoitza</strong> → <strong>Ireki aplikazioa</strong> → hautatu <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Sakatu birritan botereabotoia abiarazteko.</li>
+            </ol>
+
+            <h4>Google Pixel (sakatu azkarra)</h4>
+            <ol>
+                <li><strong>Ezarpenak</strong> → <strong>Sistema</strong> → <strong>Keinuak</strong> → <strong>Sakatu azkar ekintzak hasteko</strong>.</li>
+                <li>Gaitu <strong>Erabili Quick Tap</strong> → <strong>Ireki aplikazioa</strong> → hautatu <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Sakatu birritan telefonoaren atzealdea abiarazteko.</li>
+            </ol>
+
+            <h4>iPhone 15 Pro+ (Ekintza botoia)</h4>
+            <ol>
+                <li><strong>Ezarpenak</strong> → <strong>Ekintza botoia</strong> → irristatu hatza <strong>Lasterbidera</strong>ra.</li>
+                <li>Ukitu hautatzailea → <strong>Ireki aplikazioa</strong> → aukeratu <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Eduki sakatuta Ekintza botoia abiarazteko.</li>
+            </ol>
+
+            <h4>iPhone — Eredu guztiak (Itzuli sakatu)</h4>
+            <ol>
+                <li><strong>Ezarpenak</strong> → <strong>Irisgarritasuna</strong> → <strong>Ukitu</strong> → <strong>Atzeko sakatu</strong>.</li>
+                <li>Aukeratu <strong>Ukitu bikoitza</strong> edo <strong>Ukitu hirukoitza</strong>.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span>-rekin estekatzeko, lehenik eta behin sortu lasterbide bat:
+                    <ul>
+                        <li>Ireki <strong>Lasterbideak</strong> aplikazioa → <strong>+</strong> → <strong>Gehitu ekintza</strong> → <strong>Ireki aplikazioa</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                        <li>Izena "Ireki <span class="notranslate" translate="no">TapAlert</span>".</li>
+                    </ul>
+                </li>
+                <li>Itzuli <strong>Atzera Sakatu</strong> ezarpenetara → hautatu "Ireki <span class="notranslate" translate="no">TapAlert</span>" lasterbidea.</li>
+            </ol>
+
+            <h4>Edozein Android (Button Mapper aplikazioak)</h4>
+            <p>Zure gailuak barneratuabotoia birmapatzerik ez badu, instalatu <strong>"Button Mapper"</strong> edo <strong>"MacroDroid"</strong> Play Store-tik:</p>
+            <ul>
+                <li>Birsortu edozein hardware-gako (bolumenabotoias, etab.) <strong>Ireki aplikazioa</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+            </ul>
+
+            <h3>Nola Funtzionatzen Du</h3>
+            <ol>
+                <li>Sakatu konfiguratutakobotoia/keinua.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> irekitzen da → atzerako kontaketa <strong>automatikoki</strong> hasten da (Abiarazte automatikoa gaituta badago).</li>
+                <li>Alerta bidaliko da eta aplikazioa automatikoki ixten da.</li>
+                <li>Blokeatutako pantailatik ere funtzionatzen du (bateria optimizazio egokiarekin, ikusi behean).</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
+                    translate="no">SOS</span> / OK)</h2>
+            <p><strong>Plataforma:</strong> Android & iOS</p>
+            <p><span class="notranslate" translate="no">Panic Mode</span>-k pantaila osoa bi botoia erraldoi bihurtzen du — <strong><span class="notranslate" translate="no">SOS</span></strong> eta <strong>Ondo nago</strong> — galtzea ia ezinezkoa da.</p>
+
+            <h3>Nola gaitu</h3>
+            <ol>
+                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> eta lehenespenez irekiko da <span class="notranslate" translate="no">Panic Mode</span>.</li>
+                <li>Gogoratu: Konfiguratutako mezuen alertak <span class="notranslate" translate="no">Panic mode</span> hasierako pantailan ezkerrera/eskuinera pasa dezakezula edo ukitu goiko barrako moduaren ikonoa.</li>
+            </ol>
+
+            <h3>Nola Funtzionatzen Du</h3>
+            <ul>
+                <li><strong>Sakatu <span class="notranslate" translate="no">SOS</span>botoia gorri handia</strong> → atzerako kontaketa hasten da larrialdi-alertarako.</li>
+                <li><strong>Sakatu Ondo nagobotoia berdea</strong> → lasaitasun-mezu bat bidaltzen du.</li>
+                <li><strong>Larrialdi-deiakbotoia</strong> behealdean zure tokiko larrialdi-zenbakia markatzen du (112, 911, etab.).</li>
+            </ul>
+
+            <h3>Abiarazte metodoa: sakatu eta eutsi</h3>
+            <p>Segurtasun gehiago lortzeko, <strong>5 segundo sakatuta eduki</strong> eska dezakezu ukitu bakarra egin beharrean:</p>
+            <ul>
+                <li><strong>Ezarpenak</strong> → <strong>Abiarazte metodoa</strong> → <strong>Eutsi sakatuta (5 segundo)</strong>.</li>
+                <li>Horrek ustekabeko abiarazteak saihesten ditu larrialdietan nahikoa azkarra izanik ere.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>4. 🎙️ Voice Quick Alert</h2>
+            <p><strong>Plataforma:</strong> Android & iOS</p>
+            <p><span class="notranslate" translate="no">Panic mode</span>-n ere <strong>ahotsak agindutako mezua</strong> duen alerta bat bidal dezakezu ekintza bakarrean; ezin hobea idatzi ezin duzunean.</p>
+            <ol>
+                <li>Tap the <strong>🎤 Microphone</strong>botoia next to <span class="notranslate"
+                        translate="no">SOS</span> or I'm OK.</li>
+                <li>Esan zure mezua.</li>
+                <li>Hitz egin ondoren atzerako kontaketa automatikoki hasiko da transkribatutako ahots-mezua erantsita.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>5. ⏳ Check-in tenporizadorea (Dead Man's Switch)</h2>
+            <p><strong>Plataforma:</strong> Android & iOS</p>
+            <p>Tenporizadoreak alerta bat bidaltzen du <strong>automatikoki</strong> erregistratzen ez baduzu, ez da sakatu behar batere.</p>
+
+            <h3>Nola Konfiguratu</h3>
+            <ol>
+                <li>Sakatu goiko barran dagoen <strong>⏱️ Tenporizadorearen ikonoa</strong>.</li>
+                <li>Hautatu a duration.</li>
+                <li>Gehitu mezu pertsonalizatu bat aukeran.</li>
+                <li>Abiarazi tenporizadorea.</li>
+            </ol>
+
+            <h3>Nola Funtzionatzen Du</h3>
+            <ul>
+                <li>Jakinarazpen iraunkor batek geratzen den denbora atzerako zenbatzen du.</li>
+                <li>Egiaztatzen baduzu (sakatu <strong>"Ongi nago / Berrezarri"</strong>) → tenporizadorea berrezartzen da, ez da alertarik bidali.</li>
+                <li>Ez baduzu erregistratzen → <span class="notranslate" translate="no">TapAlert</span>-k automatikoki bidaltzen die zure alerta kokapenarekin hartzaile guztiei.</li>
+            </ul>
+
+            <div class="alert-box tip">
+                <h4>💡 TIP</h4>
+                <p>Bakarkako jardueretarako aproposa: mendi-ibilaldiak, gauez etxera ibiltzea, ezezagunekin elkartzea edo bakarrik bidaiatzea.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
+            <p><strong>botoia</strong> eta <strong>widget</strong> abiarazleek modu fidagarrian funtziona dezaten (batez ere pantaila blokeatuta edo lotan dagoenetik) behar desgaitu <span class="notranslate" translate="no">TapAlert</span> bateriaren optimizazioa.</p>
+
+            <h3>Zergatik?</h3>
+            <p>Android fabrikatzaileek modu oldarkorrean hiltzen dituzte atzeko planoko aplikazioak bateria aurrezteko. Honek <span class="notranslate" translate="no">TapAlert</span>-k telefonoa esnatzea eragotzi dezake pantaila itzalita dagoenean.</p>
+
+            <h3>Urrats azkarrak (gailu guztiak)</h3>
+            <ol>
+                <li><strong>Ezarpenak</strong> → <strong>Aplikazioak</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>Bateria</strong>.</li>
+                <li>Hautatu <strong>"Ez optimizatu"</strong> edo <strong>"Mugarik gabe"</strong>.</li>
+                <li>Gaitu <strong>"Baimendu atzeko planoko jarduerak"</strong>.</li>
+            </ol>
+
+            <h3>Probatu</h3>
+            <ol>
+                <li>Blokeatu telefonoa eta itxaron 1-2 minutu (pantaila guztiz itzalita).</li>
+                <li>Sakatu konfiguratutakobotoia fisikoa edo ukitu widgeta.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> ireki eta atzerako kontaketa berehala hasi beharko luke.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>Konparaketa azkarra</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metodoa</th>
+                        <th>Plataforma</th>
+                        <th>Sakatu alerta emateko</th>
+                        <th>Blokeatu pantailatik funtzionatzen du</th>
+                        <th>Konfigurazioa eskatzen du</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Android Widget-a</td>
+                        <td>Android</td>
+                        <td>1</td>
+                        <td>Partziala*</td>
+                        <td>Gutxienekoa</td>
+                    </tr>
+                    <tr>
+                        <td>Botoi fisikoa + Abiatze automatikoa</td>
+                        <td>Android & iOS</td>
+                        <td>1</td>
+                        <td>✅ Bai</td>
+                        <td>Moderatua</td>
+                    </tr>
+                    <tr>
+                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span>botoia)</td>
+                        <td>Android & iOS</td>
+                        <td>2 (ireki aplikazioa + sakatu)</td>
+                        <td>None</td>
+                        <td>Gutxienekoa</td>
+                    </tr>
+                    <tr>
+                        <td>Ahotsaren alerta azkarra</td>
+                        <td>Android & iOS</td>
+                        <td>2 (ireki aplikazioa + sakatu mikrofonoa)</td>
+                        <td>None</td>
+                        <td>Bat ere ez</td>
+                    </tr>
+                    <tr>
+                        <td>Check-in tenporizadorea</td>
+                        <td>Android & iOS</td>
+                        <td>0 (automatiko)</td>
+                        <td>✅ Bai</td>
+                        <td>Gutxienekoa</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><small>*Widget blokeatzeko pantailaren laguntza aldatu egiten da Android bertsioaren eta fabrikatzailearen arabera.</small></p>
+        </section>
+
+        <section class="guide-section">
+            <h2>Gomendatutako konfigurazioak</h2>
+
+            <h3>👴 For Senior Users</h3>
+            <ul>
+                <li>Erabili <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (<span class="notranslate" translate="no">SOS</span> handia / Ondo nagobotoias).</li>
+                <li>Ezarri <strong>Trigger metodoa</strong> <strong>Tap</strong> gisa (interakziorik errazena).</li>
+                <li>Gehitu <strong>Android widget</strong> hasierako pantailan.</li>
+                <li>Ezarri atzerako kontaketa <strong>10-15 segundo</strong>n (akatsak bertan behera uzteko denbora).</li>
+            </ul>
+
+            <h3>🏃 For Active / Solo Users</h3>
+            <ul>
+                <li>Konfiguratu <strong>Fakturatzeko tenporizadorea</strong> jardueren aurretik.</li>
+                <li>Konfiguratu <strong>fisikoabotoia</strong> berehalako <span class="notranslate" translate="no">SOS</span>.</li>
+                <li>Gaitu <strong><span class="notranslate" translate="no">Erredundantzia adimenduna</span></strong> (auto-<span class="notranslate" translate="no">fallback</span> SMS metodoen artean).</li>
+                <li>Gaitu <strong>Posta elektronikoaren erredundantzia</strong> wifia soilik duten eremuetarako.</li>
+            </ul>
+
+            <h3>🔒 For Maximum Security</h3>
+            <ul>
+                <li>Konfiguratu <strong>fisikoabotoia</strong> <strong>Abiarazte automatikoa</strong>rekin.</li>
+                <li>Ezarri <strong>Abiarazte metodoa</strong> <strong>Eutsi sakatuta (5 s)</strong> gisa, ustekabeko abiarazteak saihesteko.</li>
+                <li>Gaitu <strong>biak</strong> <span class="notranslate" translate="no">Erredundantzia adimenduna</span> eta posta elektronikoaren erredundantzia.</li>
+                <li>Desgaitu bateriaren optimizazioa eta proba blokeatutako pantailatik.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produktua</h3>
+                    <ul>
+                        <li><a href="index.html#features">Ezaugarriak</a></li>
+                        <li><a href="index.html#pricing">Prezioak</a></li>
+                        <li><a href="index.html#download">Deskargatu</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legezkoa</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Pribatutasun-politika</a></li>
+                        <li><a href="terms.html">Zerbitzu-baldintzak</a></li>
+                        <li><a href="contact.html">Kontaktua</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Laguntza</h3>
+                    <ul>
+                        <li><a href="#">Ohiko galderak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
+                        <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
+                        <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
+                        <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

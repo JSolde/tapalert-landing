@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/quickstart_android.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/quickstart_android.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/quickstart_android.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/quickstart_android.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/quickstart_android.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/quickstart_android.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/quickstart_android.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasiera azkarra (Android) - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            color: #c05621;
+        }
+
+        /* Step Card Styles */
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+
+        .step-card:hover {
+            transform: translateX(5px);
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .step-header h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .step-card p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+
+        .step-card ul {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .step-card {
+                padding: 18px;
+                margin-bottom: 15px;
+            }
+
+            .step-icon {
+                font-size: 1.5rem;
+                min-width: 32px;
+            }
+
+            .step-header h3 {
+                font-size: 1.1rem;
+            }
+
+            .step-card p {
+                font-size: 0.92rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            .step-card {
+                padding: 14px;
+                border-left-width: 4px;
+            }
+
+            .step-icon {
+                font-size: 1.3rem;
+                min-width: 28px;
+            }
+
+            .step-header {
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+
+            .step-header h3 {
+                font-size: 1rem;
+            }
+
+            .step-card p {
+                font-size: 0.85rem;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                    class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">EU</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/quickstart_android.html" hreflang="ca">CA</a>
+            <a href="../quickstart_android.html" hreflang="en">EN</a>
+            <a href="../es/quickstart_android.html" hreflang="es">ES</a>
+            <a href="../eu/quickstart_android.html" hreflang="eu" class="active">EU</a>
+            <a href="../fr/quickstart_android.html" hreflang="fr">FR</a>
+            <a href="../gl/quickstart_android.html" hreflang="gl">GL</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Itzuli Gidetara</a>
+
+        <h1 class="guide-title">Hasiera azkarra (Android)</h1>
+
+        <section class="guide-section">
+            <div class="step-list">
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">✅</div>
+                        <h3>1. Eman ezinbesteko baimenak</h3>
+                    </div>
+                    <p>Aplikazioa sartzean, onartu baimen guztiak (SMS, Kokapena, Kontaktuak). Saltatzen badira, geroago eskatuko dira beharrezkoak direnean, baina orain onartzea gomendatzen dugu esperientzia ezin hobea izateko.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">⚙️</div>
+                        <h3>2. Konfigurazio optimoa</h3>
+                    </div>
+                    <p>Sartzeko konfigurazio-urratsean, gomendatzen dugu:</p>
+                    <ul>
+                        <li><strong>Gehitu hartzaileak</strong> zure larrialdietako alerta zerrendara.</li>
+                        <li><strong>Gehitu aplikazioaren widgeta</strong> zure hasierako pantailara berehala sartzeko.</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><small><em>Oharra: Ezarpenak atalean ere kudea daitezke sartu ondoren.</em></small></p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">📡</div>
+                        <h3>3. Konektibitatea eta <span class="notranslate" translate="no">fallback</span>s</h3>
+                    </div>
+                    <p>Egiaztatu <strong>Wifi deiak</strong> gaituta dauden zure telefonoan. Zure operadoreak ez badu onartzen, kontuan hartu <strong><span class="notranslate" translate="no">Twilio</span> kontua</strong> erabiltzea <span class="notranslate" translate="no">fallback</span> Wifi soilik erabiltzeko. <span class="notranslate" translate="no">Twilio</span> abiarazte doakoa da eta telefono mugikorren seinalerik gabe SMS bidalketa fidagarria eskaintzen du.</p>
+                    <p style="margin-top: 10px;"><span class="notranslate" translate="no">TapAlert</span>-n <strong>Posta elektronikoaren erredundantzia</strong> ere gaitu dezakezu zure maiteei hainbat kanalen bidez jakinarazten zaiela ziurtatzeko.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">🧪</div>
+                        <h3>4. Egin probako alerta bat</h3>
+                    </div>
+                    <p>Probatu zure konfigurazioa <strong>‘Ongi nago’</strong> mezua bidalita. Sakatu botoia behin (edo eduki sakatuta 5 segundoz konfiguratuta badago). Atzerako kontaketa bat agertuko da, bertan behera uzteko edo berehala bidaltzeko denbora emango dizu. Iraungitzen uzteak alerta automatikoki bidaltzen du!</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">↔️</div>
+                        <h3>5. Arakatu Nabigazioa</h3>
+                    </div>
+                    <p>Irristatu <strong>ezkerrera</strong> egoera zehatzetarako aurrez konfiguratutako mezu pertsonalizatuak atzitzeko. Irristatu <strong>Eskuinera</strong> <strong>Check-in Timer</strong> (Dead Man's Switch) aktibatzeko, ordu jakin batean erregistratzen ez bazara automatikoki alerta ematen duena.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-icon">🤝</div>
+                        <h3>6. Besteentzako konfigurazioa</h3>
+                    </div>
+                    <p>Telefono hau beste norbaitentzat konfiguratzen ari bazara (adibidez, senide nagusi batentzat), hartu une bat bere alerta pertsonalizatuak aldez aurretik konfiguratzeko (pasatu hatza ezkerrera), mezu garrantzitsuenak eskura izan ditzan.</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produktua</h3>
+                    <ul>
+                        <li><a href="index.html#features">Ezaugarriak</a></li>
+                        <li><a href="index.html#pricing">Prezioak</a></li>
+                        <li><a href="index.html#download">Deskargatu</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legezkoa</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Pribatutasun-politika</a></li>
+                        <li><a href="terms.html">Zerbitzu-baldintzak</a></li>
+                        <li><a href="contact.html">Kontaktua</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Laguntza</h3>
+                    <ul>
+                        <li><a href="#">Ohiko galderak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
+                        <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
+                        <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
+                        <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

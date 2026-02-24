@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/troubleshooting.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/troubleshooting.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/troubleshooting.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/troubleshooting.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/troubleshooting.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/troubleshooting.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/troubleshooting.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolución de problemas - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            color: #c05621;
+        }
+
+        /* Step Card Styles */
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+
+        .step-card:hover {
+            transform: translateX(5px);
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .step-header h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .step-card p {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        .toc {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .toc h4 {
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .toc {
+                padding: 15px;
+                margin-bottom: 30px;
+            }
+
+            .toc h4 {
+                font-size: 0.95rem;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .toc a {
+                font-size: 0.88rem;
+            }
+
+            .step-card {
+                padding: 18px;
+                margin-bottom: 15px;
+            }
+
+            .step-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .step-card p {
+                font-size: 0.92rem;
+            }
+
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            .toc {
+                padding: 12px;
+            }
+
+            .toc h4 {
+                font-size: 0.9rem;
+            }
+
+            .toc a {
+                font-size: 0.82rem;
+            }
+
+            .step-card {
+                padding: 14px;
+                border-left-width: 4px;
+            }
+
+            .step-card h3 {
+                font-size: 1rem;
+            }
+
+            .step-card p {
+                font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Volver á casa</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">GL</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/troubleshooting.html" hreflang="ca">CA</a>
+            <a href="../troubleshooting.html" hreflang="en">EN</a>
+            <a href="../es/troubleshooting.html" hreflang="es">ES</a>
+            <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
+            <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
+            <a href="../gl/troubleshooting.html" hreflang="gl" class="active">GL</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Volver a Guías</a>
+
+        <h1 class="guide-title">Guía de solución de problemas</h1>
+
+        <p>Esta guía abarca problemas comúns e solucións para <span class="notranslate" translate="no">TapAlert</span> tanto en Android como en iOS.</p>
+
+        <nav class="toc">
+            <h4>Ir á sección:</h4>
+            <ul>
+                <li><a href="#sms">1. Problemas de SMS</a></li>
+                <li><a href="#email">2. Problemas de correo electrónico</a></li>
+                <li><a href="#location">3. Localización Problemas</a></li>
+                <li><a href="#connectivity">4. Conectividade</a></li>
+                <li><a href="#timer">5. Temporizador de rexistro</a></li>
+                <li><a href="#voice">6. Voz a texto</a></li>
+                <li><a href="#contacts">7. Contactos</a></li>
+                <li><a href="#purchase">8. Compras</a></li>
+                <li><a href="#widget">9. Widgets</a></li>
+                <li><a href="#notifications">10. Notificacións</a></li>
+                <li><a href="#behavior">11. Comportamento da aplicación</a></li>
+                <li><a href="#ios">12. iOS específico</a></li>
+                <li><a href="#android">13. Android Específico</a></li>
+                <li><a href="#tips">14. Consellos xerais</a></li>
+            </ul>
+        </nav>
+
+        <section id="sms" class="guide-section">
+            <h2>1. Problemas de envío de SMS</h2>
+
+            <div class="step-card">
+                <h3>1.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> Non se envía (Android)</h3>
+                <p><strong>Síntoma:</strong> toca "Enviar alerta" pero a SMS falla. O historial de alertas mostra un erro para un ou máis destinatarios.</p>
+                <ul>
+                    <li><strong>Sen sinal móbil:</strong> comproba a barra de estado. A páxina Estado da aplicación mostra o teu estado móbil actual.</li>
+                    <li><strong>Sen tarxeta SIM:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> require unha tarxeta SIM que funcione. Comprobe o estado da SIM na páxina Estado.</li>
+                    <li><strong>Permisos:</strong> Garantir o permiso <strong>SMS</strong> está permitido na configuración do teléfono.</li>
+                    <li><strong>Formato non válido:</strong> utiliza o formato internacional co código de país (por exemplo, +34600123456).</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Non se envía o SMS</h3>
+                <p><strong>Síntoma:</strong> a alerta produciuse un erro cunha mensaxe de erro <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</p>
+                <ul>
+                    <li><strong>Requírese Internet:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> precisa wifi ou datos móbiles.</li>
+                    <li><strong>Credenciais:</strong> verifica o SID da conta, o token de autenticación e o número de teléfono <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> en Configuración.</li>
+                    <li><strong>Limitacións da proba:</strong> as probas contas só poden enviar a verificado números de teléfono.</li>
+                    <li><strong>Saldo:</strong> comproba o teu saldo <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> conta.</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h3>1.3 Problemas con iOS SMS Composer</h3>
+                <p><strong>Síntoma:</strong> no iPhone, ábrese o redactor de SMS pero a mensaxe non se envía.</p>
+                <ul>
+                    <li><strong>Sinal:</strong> a aplicación Mensaxes necesita sinal móbil (ou chamadas por WiFi se está activada).</li>
+                    <li><strong>Cancelación:</strong> se tocas Cancelar no compositor, a alerta cancelarase.</li>
+                    <li><strong>Número non válido:</strong> iOS poñerá a mensaxe en cola e fallará en silencio. Comproba na aplicación Mensaxes se hai signos de admiración vermellos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="email" class="guide-section">
+            <h2>2. Problemas de redundancia de correo electrónico</h2>
+            <div class="step-card">
+                <h3>2.1 Falla a proba de correo electrónico</h3>
+                <ul>
+                    <li><strong>Configuración de SMTP:</strong> verifica o host e o porto (uso de Gmail/iCloud 587).</li>
+                    <li><strong>Contrasinal da aplicación:</strong> a maioría dos provedores requiren un <strong>contrasinal da aplicación</strong> se 2FA está activado.</li>
+                    <li><strong>Internet:</strong> o correo electrónico require unha conexión de datos activa.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="location" class="guide-section">
+            <h2>3. Localización Problemas</h2>
+            <div class="step-card">
+                <h3>3.1 Localización Falta na alerta</h3>
+                <ul>
+                    <li><strong>Permisos:</strong> Garantir Localización o permiso está definido como "Mentres o uso" ou "Sempre".</li>
+                    <li><strong>GPS desactivado:</strong> verifica que os servizos de localización do teléfono estean activados.</li>
+                    <li><strong>Recepción:</strong> as zonas interiores ou densas poden provocar un tempo de espera do GPS.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="connectivity" class="guide-section">
+            <h2>4. Conectividade e estado</h2>
+            <div class="step-card">
+                <h3>4.2 Significados da icona de escudo</h3>
+                <ul>
+                    <li><strong>Verde:</strong> listo para entrega fiable de SMS/<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</li>
+                    <li><strong>Laranxa:</strong> incerto. Só wifi, non <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. As chamadas WiFi poden funcionar.</li>
+                    <li><strong>Vermello:</strong> desconectado. Tanto o móbil como o wifi están desactivados.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="timer" class="guide-section">
+            <h2>5. Problemas do temporizador de check-in</h2>
+            <div class="step-card">
+                <h3>5.1 O temporizador non dispara</h3>
+                <ul>
+                    <li><strong>Aplicación pechada:</strong> evita o peche forzado da aplicación. En iOS, debe tocas a notificación para activala.</li>
+                    <li><strong>Optimización da batería:</strong> establece <span class="notranslate" translate="no">TapAlert</span> como "Sen restricións" na configuración da batería Android.</li>
+                    <li><strong>Notificacións:</strong> concédense permisos de notificación Garantir.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="voice" class="guide-section">
+            <h2>6. Problemas de voz a texto</h2>
+            <div class="step-card">
+                <h3>6.1 O recoñecemento de voz non funciona</h3>
+                <ul>
+                    <li><strong>Permisos:</strong> Garantir concédense permisos de <strong>Micrófono</strong> e <strong>Recoñecemento de voz</strong> (iOS).</li>
+                    <li><strong>Internet:</strong> a maioría dos motores de recoñecemento requiren unha conexión activa para o procesamento.</li>
+                    <li><strong>Incorrecto Linguaxe:</strong> o recoñecemento utiliza a configuración de idioma actual da aplicación. Comprobe **Configuración > Linguaxe**.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contacts" class="guide-section">
+            <h2>7. Contactos e Problemas dos destinatarios</h2>
+            <div class="step-card">
+                <h3>7.1 Non se pode ver Contactos</h3>
+                <ul>
+                    <li><strong>Acceso limitado a iOS:</strong> se escolleches previamente "Seleccione Contactos...", vai a **Configuración > Privacidade e seguridade > Contactos > <span class="notranslate" translate="no">TapAlert</span>** e cambia a **"Todo Contactos"**.</li>
+                    <li><strong>Android Permisos:</strong> Garantir **Contactos** o permiso está definido como "Permitir" na configuración do sistema.</li>
+                    <li><strong>Formato:</strong> os números Garantir inclúen o código do país cun prefixo **+**.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="purchase" class="guide-section">
+            <h2>8. Problemas de compra na aplicación</h2>
+            <div class="step-card">
+                <h3>8.2 Mercou pero aínda mostra Libre</h3>
+                <ul>
+                    <li><strong>Restaurar compras:</strong> na pantalla Actualizar, toca **Restaurar**botón para validar de novo a compra coa tenda.</li>
+                    <li><strong>A mesma conta:</strong> Garantir iniciaches sesión coa mesma tenda conta utilizada para a compra orixinal.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="widget" class="guide-section">
+            <h2>9. Problemas con widgets (Android)</h2>
+            <div class="step-card">
+                <h3>9.1 O widget non aparece</h3>
+                <ul>
+                    <li><strong>Engadir manual:</strong> tenta engadir o widget desde **Configuración > Widget > Engadir** na aplicación se non aparece no selector de widgets do sistema.</li>
+                    <li><strong>Optimización da batería:</strong> unha optimización agresiva pode impedir que o widget inicie a aplicación correctamente.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="notifications" class="guide-section">
+            <h2>10. Problemas de notificación</h2>
+            <div class="step-card">
+                <h3>10.2 Os destinatarios non perciben as chamadas/SMS</h3>
+                <ul>
+                    <li><strong>iPhone:</strong> fai que os destinatarios habiliten **Bypass de emerxencia** para o teu número de contacto.</li>
+                    <li><strong>Android:</strong> fai que os destinatarios establezan a prioridade de notificación en **"Alto"** ou **"Urxente"** para as túas mensaxes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="behavior" class="guide-section">
+            <h2>11. Problemas de comportamento da aplicación</h2>
+            <div class="step-card">
+                <h3>11.1 Alerta de incendios inmediatamente ao abrir</h3>
+                <p>Vaia a **Configuración** e desactiva **"Inicio automático ao iniciar"**. Esta función está pensada para o pánico físicobotóns.</p>
+            </div>
+        </section>
+
+        <section id="ios" class="guide-section">
+            <h2>12. Problemas específicos de iOS</h2>
+            <div class="step-card">
+                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> vs. Mensaxes iOS</h3>
+                <ul>
+                    <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (automático):</strong> envío silencioso en segundo plano, require internet.</li>
+                    <li><strong>Mensaxes iOS (Manual):</strong> require que toques Enviar no compositor, funciona a través do móbil.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="android" class="guide-section">
+            <h2>13. Android-Cuestións específicas</h2>
+            <div class="step-card">
+                <h3>13.1 Optimización da batería</h3>
+                <p>Algúns fabricantes (Xiaomi, Samsung, Huawei) requiren pasos manuais para evitar que a aplicación se mate en segundo plano. Comproba a configuración da batería do teu teléfono para ver **"Sen restricións"**.</p>
+            </div>
+        </section>
+
+        <section id="tips" class="guide-section">
+            <h2>14. Consellos xerais</h2>
+            <div class="alert-box">
+                <h4>✅ Antes dunha emerxencia</h4>
+                <ul>
+                    <li>Envía unha alerta de proba para verificar a configuración.</li>
+                    <li>Consulte a páxina de estado para ver a conectividade.</li>
+                    <li>Garantir concédense todos os permisos.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Alertas de emerxencia sinxelas para todos. Sen subscricións, sen seguimento, só con seguridade.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produto</h3>
+                    <ul>
+                        <li><a href="index.html#features">Características</a></li>
+                        <li><a href="index.html#pricing">Prezos</a></li>
+                        <li><a href="index.html#download">Descargar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Política de privacidade</a></li>
+                        <li><a href="terms.html">Condicións de servizo</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Apoio</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías paso a paso</a></li>
+                        <li><a href="accessibility_guide.html">Guía de accesibilidade</a></li>
+                        <li><a href="troubleshooting.html">Resolución de problemas</a></li>
+                        <li><a href="contact.html">Contacte con Soporte</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os dereitos reservados. | Feito con ❤️ para a túa seguridade</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
