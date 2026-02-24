@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/one_tap_alert.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/one_tap_alert.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/one_tap_alert.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/one_tap_alert.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/one_tap_alert.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/one_tap_alert.html">
+    <link rel="alternate" hreflang="it" href="https://tapalert.app/it/one_tap_alert.html">
+    <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/one_tap_alert.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/one_tap_alert.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de alerta com um toque - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box.tip {
+            background-color: #f0fdf4;
+            border-left-color: #22c55e;
+        }
+
+        .alert-box.warning {
+            background-color: #fffbeb;
+            border-left-color: #f59e0b;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
+            }
+
+            table {
+                font-size: 0.78rem;
+            }
+
+            th,
+            td {
+                padding: 6px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                    class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">De volta para casa</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">PT</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
+            <a href="../one_tap_alert.html" hreflang="en">EN</a>
+            <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
+            <a href="../eu/one_tap_alert.html" hreflang="eu">EU</a>
+            <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
+            <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
+            <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
+            <a href="../pt/one_tap_alert.html" hreflang="pt" class="active">PT</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Voltar para Guias</a>
+
+        <h1 class="guide-title">Alerta com um toque: todas as maneiras de acionar <span class="notranslate" translate="no">TapAlert</span> instantaneamente</h1>
+
+        <p><span class="notranslate" translate="no">TapAlert</span> pode ser configurado para alertas de emergência instantâneos com um toque usando vários métodos diferentes. Este guia cobre todas as opções, desde widgets da tela inicial até temporizadores físicosbotão e automáticos.</p>
+
+        <section class="guide-section">
+            <h2>1. 📱 Android Widget da tela inicial</h2>
+            <p><strong>Plataforma:</strong> Android only</p>
+            <p>A maneira mais rápida de acionar um alerta. Um widget dedicado fica na tela inicial – um toque e a contagem regressiva começa imediatamente.</p>
+
+            <h3>Como configurar</h3>
+            <ol>
+                <li>Abra <strong><span class="notranslate" translate="no">TapAlert</span></strong> → toque no ícone <strong>⚙️ Configurações</strong>.</li>
+                <li>Role até a seção <strong>Widget</strong>.</li>
+                <li>Toque em <strong>"Adicionar"</strong> → o sistema solicitará que você coloque o widget na tela inicial.</li>
+                <li>Arraste-o para o local de sua preferência (de preferência na tela principal para acesso rápido).</li>
+            </ol>
+
+            <h3>Como funciona</h3>
+            <ul>
+                <li><strong>Toque único</strong> no widget → <span class="notranslate" translate="no">TapAlert</span> abre e a <strong>contagem regressiva começa imediatamente</strong>.</li>
+                <li>Você verá a caixa de diálogo de contagem regressiva e poderá <strong>cancelar</strong> se forcomo umacidental.</li>
+                <li>Após a contagem regressiva, o alerta é enviado e o aplicativo fecha automaticamente.</li>
+            </ul>
+
+            <div class="alert-box tip">
+                <h4>💡 TIP</h4>
+                <p>Coloque o widget na tela de bloqueio (se compatível com a versão do Android) ou na primeira página da tela inicial para acesso mais rápido.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
+            <p><strong>Plataforma:</strong> Android & iPhone</p>
+            <p>Mapeie um <strong>físicobotão</strong> no seu telefone (liga/desligabotão, tecla de volume ou gesto de toque para trás) para iniciar o <span class="notranslate" translate="no">TapAlert</span>. Combinado com o <strong>Início automático no lançamento</strong>, isso cria um verdadeiro pânico com um toque botão.</p>
+
+            <h3>Etapa 1: ativar o início automático em <span class="notranslate" translate="no">TapAlert</span></h3>
+            <ol>
+                <li>Abra <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️ Configurações</strong>.</li>
+                <li>Ative <strong>"Início automático ao iniciar"</strong>.</li>
+            </ol>
+
+            <div class="alert-box warning">
+                <h4>⚠️ AVISO</h4>
+                <p>Quando o início automático estiver ativado, a contagem regressiva será acionada <strong>toda vez</strong> que você abrir o aplicativo, inclusive quando você o abrir normalmente na gaveta de aplicativos. Ative esta opção apenas se você iniciar principalmente por meio de um atalho físicobotão.</p>
+            </div>
+
+            <h3>Etapa 2: configure o botão do seu telefone</h3>
+
+            <h4>Samsung Galaxy (tecla lateral)</h4>
+            <ol>
+                <li><strong>Configurações</strong> → <strong>Avançado características</strong> → <strong>Tecla lateral</strong>.</li>
+                <li>Ative <strong>Pressionar duas vezes</strong> → <strong>Abrir aplicativo</strong> → selecione <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Pressione duas vezes o poderbotão para acionar.</li>
+            </ol>
+
+            <h4>Google Pixel (toque rápido)</h4>
+            <ol>
+                <li><strong>Configurações</strong> → <strong>Sistema</strong> → <strong>Gestos</strong> → <strong>Toque rápido para iniciar ações</strong>.</li>
+                <li>Ative <strong>Usar toque rápido</strong> → <strong>Abrir aplicativo</strong> → selecione <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Toque duas vezes na parte de trás do seu telefone para acionar.</li>
+            </ol>
+
+            <h4>iPhone 15 Pro+ (botão de ação)</h4>
+            <ol>
+                <li><strong>Configurações</strong> → <strong>Botão de ação</strong> → deslize para <strong>Atalho</strong>.</li>
+                <li>Seletor de toque → <strong>Abrir aplicativo</strong> → escolha <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Segure o botão de ação para acionar.</li>
+            </ol>
+
+            <h4>iPhone – Todos os modelos (toque traseiro)</h4>
+            <ol>
+                <li><strong>Configurações</strong> → <strong>Acessibilidade</strong> → <strong>Toque</strong> → <strong>Toque Voltar</strong>.</li>
+                <li>Escolha <strong>Toque Duplo</strong> ou <strong>Toque Triplo</strong>.</li>
+                <li>Para vincular ao <span class="notranslate" translate="no">TapAlert</span>, primeiro crie um atalho:
+                    <ul>
+                        <li>Abra o aplicativo <strong>Atalhos</strong> → <strong>+</strong> → <strong>Adicionar ação</strong> → <strong>Abrir aplicativo</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                        <li>Nomeie-o como "Abrir <span class="notranslate" translate="no">TapAlert</span>".</li>
+                    </ul>
+                </li>
+                <li>Volte para as configurações de <strong>Back Tap</strong> → selecione o atalho "Abrir <span class="notranslate" translate="no">TapAlert</span>".</li>
+            </ol>
+
+            <h4>Qualquer Android (aplicativos mapeadores de botão)</h4>
+            <p>Se o seu dispositivo não tiver remapeamento embutidobotão, instale <strong>"Button Mapper"</strong> ou <strong>"MacroDroid"</strong> na Play Store:</p>
+            <ul>
+                <li>Remapeie qualquer chave de hardware (volumebotãos, etc.) para <strong>Abrir Aplicativo</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+            </ul>
+
+            <h3>Como funciona</h3>
+            <ol>
+                <li>Pressione seubotão/gesto configurado.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> abre → a contagem regressiva começa <strong>automaticamente</strong> (se o início automático estiver ativado).</li>
+                <li>O alerta é enviado e o aplicativo fecha automaticamente.</li>
+                <li>Funciona mesmo em uma tela bloqueada (com otimização adequada da bateria – veja abaixo).</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
+                    translate="no">SOS</span> / OK)</h2>
+            <p><strong>Plataforma:</strong> Android & iOS</p>
+            <p>O <span class="notranslate" translate="no">Modo Pânico</span> transforma a tela inteira em dois botãos gigantes — <strong><span class="notranslate" translate="no">SOS</span></strong> e <strong>Estou bem</strong> — tornando-o praticamente impossível de perder.</p>
+
+            <h3>Como habilitar</h3>
+            <ol>
+                <li>Abra <strong><span class="notranslate" translate="no">TapAlert</span></strong> e ele será aberto por padrão no <span class="notranslate" translate="no">Modo Pânico</span>.</li>
+                <li>Lembre-se: você pode alternar dos Alertas de mensagens configuradas para o <span class="notranslate" translate="no">Modo pânico</span> deslizando para a esquerda/direita na tela inicial ou tocando no ícone do modo na barra superior.</li>
+            </ol>
+
+            <h3>Como funciona</h3>
+            <ul>
+                <li><strong>Toque no grande <span class="notranslate" translate="no">SOS</span>botão</strong> → a contagem regressiva começa para um alerta de emergência.</li>
+                <li><strong>Toque no botão verde Estou bembotão</strong> → envia uma mensagem tranquilizadora.</li>
+                <li><strong>Chamada de emergênciabotão</strong> na parte inferior, disca seu número de emergência local (112, 911, etc.).</li>
+            </ul>
+
+            <h3>Método de gatilho: tocar vs. segurar</h3>
+            <p>Para maior segurança, você pode exigir um <strong>mantimento pressionado por 5 segundos</strong> em vez de um único toque:</p>
+            <ul>
+                <li><strong>Configurações</strong> → <strong>Método de disparo</strong> → <strong>Pressione e segure (5s)</strong>.</li>
+                <li>Isso evita gatilhos acidentais e ainda é rápido o suficiente em emergências.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>4. 🎙️ Voice Quick Alert</h2>
+            <p><strong>Plataforma:</strong> Android & iOS</p>
+            <p>No <span class="notranslate" translate="no">modo pânico</span> você também pode enviar um alerta com uma <strong>mensagem ditada por voz</strong> em uma única ação — ideal quando você não consegue digitar.</p>
+            <ol>
+                <li>Tap the <strong>🎤 Microphone</strong>botão next to <span class="notranslate"
+                        translate="no">SOS</span> or I'm OK.</li>
+                <li>Fale sua mensagem.</li>
+                <li>Depois de falar, a contagem regressiva começa automaticamente com sua mensagem de voz transcrita anexada.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>5. ⏳ Temporizador de Check-in (Interruptor do Homem Morto)</h2>
+            <p><strong>Plataforma:</strong> Android & iOS</p>
+            <p>O cronômetro envia um alerta <strong>automaticamente</strong> se você não fizer check-in, sem precisar tocar.</p>
+
+            <h3>Como configurar</h3>
+            <ol>
+                <li>Toque no <strong>⏱️Ícone do cronômetro</strong> na barra superior.</li>
+                <li>Selecione a duration.</li>
+                <li>Opcionalmente, adicione uma mensagem personalizada.</li>
+                <li>Inicie o cronômetro.</li>
+            </ol>
+
+            <h3>Como funciona</h3>
+            <ul>
+                <li>Uma notificação persistente faz a contagem regressiva do tempo restante.</li>
+                <li>Se você fizer check-in (toque em <strong>"Estou bem / Redefinir"</strong>) → o cronômetro é redefinido, nenhum alerta é enviado.</li>
+                <li>Se você não fizer check-in → <span class="notranslate" translate="no">TapAlert</span> envia automaticamente seu alerta com localização para todos os destinatários.</li>
+            </ul>
+
+            <div class="alert-box tip">
+                <h4>💡 TIP</h4>
+                <p>Perfeito para atividades individuais: caminhadas, voltar para casa à noite, conhecer estranhos ou viajar sozinho.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
+            <p>Para que os acionadores <strong>físicosbotão</strong> e de <strong>widget</strong> funcionem de maneira confiável, especialmente em uma tela bloqueada/em repouso, você deve desativa a otimização da bateria para <span class="notranslate" translate="no">TapAlert</span>.</p>
+
+            <h3>Por que?</h3>
+            <p>Os fabricantes de Android eliminam agressivamente os aplicativos em segundo plano para economizar bateria. Isso pode impedir que <span class="notranslate" translate="no">TapAlert</span> desperte seu telefone quando a tela estiver desligada.</p>
+
+            <h3>Etapas rápidas (todos os dispositivos)</h3>
+            <ol>
+                <li><strong>Configurações</strong> → <strong>Aplicativos</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>Bateria</strong>.</li>
+                <li>Selecione <strong>"Não otimizar"</strong> ou <strong>"Irrestrito"</strong>.</li>
+                <li>Ative <strong>"Permitir atividade em segundo plano"</strong>.</li>
+            </ol>
+
+            <h3>Teste</h3>
+            <ol>
+                <li>Bloqueie seu telefone e aguarde 1–2 minutos (tela totalmente desligada).</li>
+                <li>Pressione seu físico configuradobotão ou toque no widget.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> deve abrir e iniciar a contagem regressiva instantaneamente.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>Comparação Rápida</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Plataforma</th>
+                        <th>Toques para alertar</th>
+                        <th>Funciona na tela de bloqueio</th>
+                        <th>Requer configuração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Android Widget</td>
+                        <td>Android</td>
+                        <td>1</td>
+                        <td>Parcial*</td>
+                        <td>Mínimo</td>
+                    </tr>
+                    <tr>
+                        <td>Botão físico + início automático</td>
+                        <td>Android & iOS</td>
+                        <td>1</td>
+                        <td>✅ Sim</td>
+                        <td>Moderado</td>
+                    </tr>
+                    <tr>
+                        <td><span class="notranslate" translate="no">Modo Pânico</span> (<span class="notranslate" translate="no">SOS</span>botão)</td>
+                        <td>Android & iOS</td>
+                        <td>2 (abrir aplicativo + tocar)</td>
+                        <td>-</td>
+                        <td>Mínimo</td>
+                    </tr>
+                    <tr>
+                        <td>Alerta rápido de voz</td>
+                        <td>Android & iOS</td>
+                        <td>2 (abrir aplicativo + tocar no microfone)</td>
+                        <td>-</td>
+                        <td>Nenhum</td>
+                    </tr>
+                    <tr>
+                        <td>Temporizador de check-in</td>
+                        <td>Android & iOS</td>
+                        <td>0 (automático)</td>
+                        <td>✅ Sim</td>
+                        <td>Mínimo</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><small>*O suporte à tela de bloqueio de widgets varia de acordo com a versão e o fabricante do Android.</small></p>
+        </section>
+
+        <section class="guide-section">
+            <h2>Configurações recomendadas</h2>
+
+            <h3>👴 For Senior Users</h3>
+            <ul>
+                <li>Use o <strong><span class="notranslate" translate="no">Modo Pânico</span></strong> (grandes <span class="notranslate" translate="no">SOS</span> / Estou bembotãos).</li>
+                <li>Defina o <strong>Trigger Method</strong> como <strong>Tap</strong> (interação mais simples).</li>
+                <li>Adicione o widget <strong>Android</strong> à tela inicial.</li>
+                <li>Defina a contagem regressiva para <strong>10 - 15 segundos</strong> (tempo para cancelar erros).</li>
+            </ul>
+
+            <h3>🏃 For Active / Solo Users</h3>
+            <ul>
+                <li>Configure o <strong>cronômetro de check-in</strong> antes das atividades.</li>
+                <li>Configure um <strong>físicobotão</strong> para <span class="notranslate" translate="no">SOS</span> instantâneo.</li>
+                <li>Ative <strong><span class="notranslate" translate="no">Redundância Inteligente</span></strong> (<span class="notranslate" translate="no">substituição</span> automática entre métodos de SMS).</li>
+                <li>Ative a <strong>Redundância de e-mail</strong> apenas para áreas com Wi-Fi.</li>
+            </ul>
+
+            <h3>🔒 For Maximum Security</h3>
+            <ul>
+                <li>Configure <strong>físicobotão</strong> com <strong>Auto-Start</strong>.</li>
+                <li>Defina o <strong>Método de disparo</strong> como <strong>Pressionar e segurar (5s)</strong> para evitar disparos acidentais.</li>
+                <li>Ative <strong>ambos</strong> <span class="notranslate" translate="no">Redundância Inteligente</span> e redundância de e-mail.</li>
+                <li>Desative a otimização da bateria e teste na tela bloqueada.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Alertas de emergência simples para todos. Sem assinaturas, sem rastreamento, apenas segurança.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produto</h3>
+                    <ul>
+                        <li><a href="index.html#features">Características</a></li>
+                        <li><a href="index.html#pricing">Preços</a></li>
+                        <li><a href="index.html#download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Jurídico</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">política de Privacidade</a></li>
+                        <li><a href="terms.html">Termos de Serviço</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Apoiar</h3>
+                    <ul>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guias passo a passo</a></li>
+                        <li><a href="accessibility_guide.html">Guia de acessibilidade</a></li>
+                        <li><a href="troubleshooting.html">Solução de problemas</a></li>
+                        <li><a href="contact.html">Contate o suporte</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os direitos reservados. | Feito com ❤️ para sua segurança</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

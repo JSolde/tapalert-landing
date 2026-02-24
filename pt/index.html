@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/index.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/index.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/index.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/index.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/index.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/index.html">
+    <link rel="alternate" hreflang="it" href="https://tapalert.app/it/index.html">
+    <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/index.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><span class="notranslate" translate="no">TapAlert</span> - Alertas de emergência simples. Sem taxas mensais.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 180px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .summary-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Recursos Section */
+        .features {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* App Screenshots */
+        .screenshots {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .screenshots-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 60px 20px;
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            overflow: visible;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 30px;
+            padding: 80px 0;
+            transition: transform 0.5s ease;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .screenshots-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .screenshots-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .screenshots-container::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+
+        .screenshot {
+            flex-shrink: 0;
+            width: 220px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+            opacity: 0.5;
+            transform: scale(0.85);
+        }
+
+        .screenshot.center {
+            opacity: 1;
+            transform: scale(1.2);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+            z-index: 10;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-button:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .carousel-button.prev {
+            left: 20px;
+        }
+
+        .carousel-button.next {
+            right: 20px;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        /* Comparison Table */
+        .comparison-table-wrapper {
+            margin-bottom: 40px;
+            overflow-x: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: #f8f9fa;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .comparison-table th:nth-child(2),
+        .comparison-table th:nth-child(3) {
+            width: 35%;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Android First Section */
+        .android-first {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        .android-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .platform-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .platform-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .platform-card.android {
+            border-top: 4px solid #3ddc84;
+        }
+
+        .platform-card.ios {
+            border-top: 4px solid #999;
+        }
+
+        .platform-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            color: #3ddc84;
+            margin-right: 10px;
+        }
+
+        .cross {
+            color: #dc3545;
+            margin-right: 10px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .pricing-card.featured {
+            border-color: #667eea;
+            border-width: 3px;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            color: #666;
+        }
+
+        /* Privacidade Section */
+        .privacy {
+            padding: 80px 20px;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .privacy-item {
+            text-align: center;
+        }
+
+        .privacy-item .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Casos de uso */
+        .use-cases {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .use-case {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .use-case h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        /* Important Notice */
+        .notice {
+            padding: 60px 20px;
+            background: #fff3cd;
+            border-top: 3px solid #ffc107;
+            border-bottom: 3px solid #ffc107;
+        }
+
+        .notice-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .notice-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .notice h2 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+
+        .notice p {
+            color: #856404;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsive — Large phones (up to 768px) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .hero {
+                padding: 110px 16px 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.15rem;
+                margin-bottom: 16px;
+            }
+
+            .hero .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .summary-box {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+                margin-bottom: 12px;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .features,
+            .screenshots,
+            .pricing,
+            .privacy,
+            .use-cases,
+            .guides,
+            .android-first {
+                padding: 50px 16px;
+            }
+
+            .feature-card {
+                padding: 24px;
+            }
+
+            .feature-icon {
+                font-size: 2.2rem;
+                margin-bottom: 12px;
+            }
+
+            .feature-card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .feature-card p {
+                font-size: 0.88rem;
+                line-height: 1.6;
+            }
+
+            .use-case {
+                padding: 22px;
+            }
+
+            .use-case h3 {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            .use-case p {
+                font-size: 0.88rem;
+            }
+
+            .platform-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .feature-list li {
+                font-size: 0.88rem;
+                padding: 8px 0;
+            }
+
+            .pricing-card {
+                padding: 28px;
+            }
+
+            .pricing-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .price {
+                font-size: 2.2rem;
+            }
+
+            .price-note {
+                font-size: 0.8rem;
+            }
+
+            .features-list li {
+                font-size: 0.88rem;
+                padding: 7px 0;
+            }
+
+            .privacy-item .icon {
+                font-size: 2.2rem;
+            }
+
+            .privacy-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .privacy-item p {
+                font-size: 0.88rem;
+            }
+
+            .notice-icon {
+                font-size: 2.5rem;
+            }
+
+            .notice h2 {
+                font-size: 1.3rem;
+            }
+
+            .notice p {
+                font-size: 0.92rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 8px;
+                font-size: 0.82rem;
+            }
+
+            .btn {
+                font-size: 0.95rem;
+                padding: 12px 28px;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+            }
+
+            .footer-section p,
+            .footer-section a,
+            .footer-section li {
+                font-size: 0.85rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Responsive — Small phones (up to 430px) */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 100px 12px 44px;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.05rem;
+                margin-bottom: 12px;
+            }
+
+            .hero .subtitle {
+                font-size: 0.82rem;
+            }
+
+            .summary-box {
+                padding: 14px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.88rem;
+                margin-bottom: 24px;
+            }
+
+            .features,
+            .screenshots,
+            .pricing,
+            .privacy,
+            .use-cases,
+            .guides,
+            .android-first {
+                padding: 36px 12px;
+            }
+
+            .features-grid,
+            .use-cases-grid {
+                gap: 16px;
+            }
+
+            .feature-card {
+                padding: 18px;
+            }
+
+            .feature-icon {
+                font-size: 1.8rem;
+                margin-bottom: 8px;
+            }
+
+            .feature-card h3 {
+                font-size: 1.05rem;
+            }
+
+            .feature-card p {
+                font-size: 0.82rem;
+            }
+
+            .use-case {
+                padding: 16px;
+            }
+
+            .use-case h3 {
+                font-size: 1rem;
+            }
+
+            .use-case p {
+                font-size: 0.82rem;
+            }
+
+            .platform-card {
+                padding: 20px;
+            }
+
+            .platform-card h3 {
+                font-size: 1.05rem;
+            }
+
+            .feature-list li {
+                font-size: 0.8rem;
+                padding: 6px 0;
+            }
+
+            .pricing-card {
+                padding: 22px;
+            }
+
+            .pricing-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .price {
+                font-size: 1.8rem;
+            }
+
+            /* Carousel adjustments for small phones */
+            .screenshot {
+                width: 160px;
+                border-radius: 15px;
+            }
+
+            .carousel-track {
+                gap: 15px;
+                padding: 40px 0;
+            }
+
+            .carousel-button {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .carousel-button.prev {
+                left: 10px;
+            }
+
+            .carousel-button.next {
+                right: 10px;
+            }
+
+            .features-list li {
+                font-size: 0.82rem;
+            }
+
+            .privacy-item .icon {
+                font-size: 1.8rem;
+            }
+
+            .privacy-item h3 {
+                font-size: 1rem;
+            }
+
+            .privacy-item p {
+                font-size: 0.82rem;
+            }
+
+            .notice h2 {
+                font-size: 1.1rem;
+            }
+
+            .notice p {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px 6px;
+                font-size: 0.75rem;
+            }
+
+            .btn {
+                font-size: 0.88rem;
+                padding: 10px 22px;
+            }
+
+            .footer-section p,
+            .footer-section a,
+            .footer-section li {
+                font-size: 0.8rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Top Navigation Bar */
+        header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 10px 30px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+        }
+
+        .nav-link.active {
+            color: #667eea;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #667eea;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                width: 95%;
+                padding: 10px 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-link {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                display: none;
+                align-items: center;
+                gap: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-links.mobile-active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block !important;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #667eea;
+            margin: 5px 0;
+            transition: 0.4s;
+            border-radius: 3px;
+        }
+
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <header>
+        <a href="#download" class="nav-logo">
+            <img src="../media/app_icon.png" alt="TapAlert"> <span class="notranslate" translate="no">TapAlert</span>
+        </a>
+        <nav style="display: flex; align-items: center;">
+            <ul class="nav-links">
+                <li><a href="#download" class="nav-link" data-section="download">Principal</a></li>
+                <li><a href="#philosophy" class="nav-link" data-section="philosophy">Filosofia</a></li>
+                <li><a href="#features" class="nav-link" data-section="features">Recursos</a></li>
+                <li><a href="#screenshots" class="nav-link" data-section="screenshots">Capturas de tela</a></li>
+                <li><a href="#android-first" class="nav-link" data-section="android-first">Plataforma</a></li>
+                <li><a href="#pricing" class="nav-link" data-section="pricing">Preços</a></li>
+                <li><a href="#guides" class="nav-link" data-section="guides">Guias</a></li>
+            </ul>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">PT</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/index.html" hreflang="ca">CA</a>
+            <a href="../index.html" hreflang="en">EN</a>
+            <a href="../es/index.html" hreflang="es">ES</a>
+            <a href="../eu/index.html" hreflang="eu">EU</a>
+            <a href="../fr/index.html" hreflang="fr">FR</a>
+            <a href="../gl/index.html" hreflang="gl">GL</a>
+            <a href="../it/index.html" hreflang="it">IT</a>
+            <a href="../pt/index.html" hreflang="pt" class="active">PT</a>
+        </div>
+    </div>
+</div>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="download">
+        <div class="hero-content fade-in-up">
+            <h1><img src="../media/app_icon.png" alt="TapAlert"
+                    style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
+                    translate="no">TapAlert</span></h1>
+            <p class="tagline">Alertas fáceis com um toque.  Privacidade-primeiro.<br> Projetado pensando nos idosos: simples, seguro e sem mensalidades.<br> Configuração inicial sem atrito (assistida remotamente) para idosos.<br></p>
+            <p class="tagline">Para seus pais, avós e idosos.</p>
+            <p class="tagline">Para sua tranquilidade.</p>
+            <div class="summary-box">
+                <p class="subtitle">Proteja seus idosos e entes queridos com um toque.</p>
+                <p class="subtitle">Nãoassinaturas, sem rastreamento, sem necessidade de contas, sem anúncios.</p>
+                <p class="subtitle">Ferramenta de alerta de segurança pessoal projetada para idosos, famílias, viajantes e qualquer pessoa que queira uma maneira rápida de notificar contatos confiáveis ​​quando algo não está certo, sem assinaturas, contas ou rastreamento.</p>
+                <p class="subtitle"><strong>Num mundo onde o inesperado é o novo normal – desde inundações repentinas a cortes de energia – certifique-se de que nunca está verdadeiramente sozinho. Com um toque, deixe seus entes queridos saberem que você está seguro ou precisa de ajuda, não importa o que o dia traga.</strong></p>
+                <p class="subtitle">
+                    Nosso aplicativo envia alertas por SMS, não por mensagens baseadas em dados – para que sua mensagem seja recebida quando aplicativos, Wi-Fi e notificações push não. Quer seus destinatários tenham smartphones, feature phones ou conectividade limitada, o SMS atende. Ignore os filtros Silencioso/Não perturbe para acordar seus contatos quando for necessário. Funciona mesmo sem acesso à Internet.
+                </p>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">📱 Em breve disponível no Google Play!</a>
+                <a href="#features" class="btn btn-secondary">Saber mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Filosofia Section -->
+    <section class="philosophy" id="philosophy" style="background-color: #f8fafc; padding: 80px 20px;">
+        <div class="container">
+            <h2 class="section-title">Nosso Filosofia & Princípios de Design</h2>
+            <div class="features-grid">
+
+                <div class="feature-card" style="text-align: left;">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 style="text-align: center; margin-bottom: 15px;">Privacidade-Primeiro</h3>
+                    <ul class="feature-list" style="list-style-type: none; padding: 0;">
+                        <li><span class="check">✅</span> <strong>Nãocontas necessárias</strong>
+                            — o aplicativo funciona inteiramente localmente, sem inscrição ou login</li>
+                        <li><span class="check">✅</span> <strong>Nãorastreamento ou análise</strong>
+                            — nenhum dado de comportamento do usuário é coletado ou transmitido</li>
+                        <li><span class="check">✅</span> <strong>Nãoanúncios</strong> — o aplicativo não contém anúncios e é monetizado apenas por meio de uma compra única no aplicativo para recursos premium</li>
+                        <li><span class="check">✅</span> <strong>Nãoassinaturas</strong> — os usuários pagam uma vez (ou não pagam pelo nível gratuito), sem taxas recorrentes</li>
+                        <li><span class="check">✅</span> <strong>A localização só é acessada ao enviar um alerta</strong> — nunca em segundo plano</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" style="text-align: left;">
+                    <div class="feature-icon">📡</div>
+                    <h3 style="text-align: center; margin-bottom: 15px;">Arquitetura SMS-Primeiro</h3>
+                    <p style="font-size: 0.9em; margin-bottom: 15px;">O aplicativo prioriza SMS em vez de mensagens baseadas em dados (notificações push, WhatsApp, etc.) porque:</p>
+                    <ul class="feature-list" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
+                        <li><span class="check">✅</span> O SMS funciona quando a Internet/Wi-Fi está desligada (as torres de celular têm bateria reserva)</li>
+                        <li><span class="check">✅</span> Os destinatários não precisam de smartphones – feature phones e telefones básicos recebem SMS</li>
+                        <li><span class="check">✅</span> Nãoinstalação do aplicativo necessária por parte do destinatário</li>
+                        <li><span class="check">✅</span> SMS é entrega em nível de operadora, não depende de servidores de terceiros estarem online</li>
+                    </ul>
+                    <p style="font-size: 0.9em;"><strong><span class="notranslate" translate="no">Smart
+                                Redundancy</span>:</strong> Quando nenhum serviço de celular está disponível, o aplicativo volta a enviar SMS primeiro via chamada Wi-Fi (se disponível, depende do telefone/provedor) ou, se não, via <span class="notranslate" translate="no">Twilio</span> (se configurado). Isso fornece um caminho de entrega secundário quando o canal SMS principal não está disponível. Da mesma forma, em uma situação com apenas serviço de celular (sem Wi-Fi e sem internet), se o <span class="notranslate" translate="no">Direct SMS</span> falhar por algum motivo (com defeito ou sem SIM,...), o <span class="notranslate" translate="no">Twilio</span> (se configurado) atuará como failback, pois também pode usar a rede celular (via 4G/5G) para enviar a mensagem como último recurso.</p>
+                </div>
+
+                <div class="feature-card" style="text-align: left;">
+                    <div class="feature-icon">👴</div>
+                    <h3 style="text-align: center; margin-bottom: 15px;">Design amigável para idosos</h3>
+                    <ul class="feature-list" style="list-style-type: none; padding: 0;">
+                        <li><span class="check">✅</span> Botões grandes e de alto contraste (único <span class="notranslate" translate="no">SOS</span> e estou bem)</li>
+                        <li><span class="check">✅</span> Navegação mínima e carga cognitiva</li>
+                        <li><span class="check">✅</span> Voz para texto para que os usuários não precisem digitar</li>
+                        <li><span class="check">✅</span> Temporizador de contagem regressiva configurável ou confirmação de espera para envio evita alertas acidentais</li>
+                        <li><span class="check">✅</span> Integração guiada com configuração passo a passo</li>
+                        <li><span class="check">✅</span> Todas as decisões de UI priorizam a clareza e a simplicidade em detrimento da densidade de recursos</li>
+                        <li><span class="check">✅</span> Configuração zero atrito com link mágico que pode ser enviado via WhatsApp, SMS, Email, etc. Com um único clique seu idoso pode configurar o aplicativo e começar a utilizá-lo.</li>
+                        <li><span class="check">✅</span> Flash na tela — 3 flashes brilhantes confirmam cada alerta, para que os usuários com perda auditiva nunca percam</li>
+                        <li><span class="check">✅</span> Tons de frequência mais baixa — sons de alerta padrão de 500 a 600 Hz, mais fáceis de ouvir para perda auditiva relacionada à idade</li>
+                        <li><span class="check">✅</span> Contagem regressiva tátil – o telefone pulsa uma vez por segundo durante a contagem regressiva, sem necessidade de olhar para a tela</li>
+                        <li><span class="check">✅</span> Suporte para leitor de tela — totalmente compatível com TalkBack (Android) e narração (iOS); os botões são rotulados e os resultados são anunciados em voz alta</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Recursos poderosos para sua segurança</h2>
+            <p class="section-subtitle">Tudo o que você precisa para ficar conectado com seus contatos de emergência, projetado para oferecer simplicidade e confiabilidade.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🆘</div>
+                    <h3>Botões <span class="notranslate" translate="no">SOS</span> e OK</h3>
+                    <p>Envie <span class="notranslate" translate="no">SOS</span> predefinido “Preciso de ajuda!” ou mensagens “Estou bem” instantaneamente com um toque. As mensagens incluem sua localização e endereço GPS precisos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📶</div>
+                    <h3>Entrega de mensagens inteligentes</h3>
+                    <p>Funciona off-line com <span class="notranslate" translate="no">SMS direto</span>. <span class="notranslate" translate="no">fallback</span> automático entre celular e Wi-Fi para garantir que sua mensagem seja transmitida.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Temporizador de check-in</h3>
+                    <p>Defina um cronômetro de contagem regressiva. Caso você não faça o check-in a tempo, um alerta automático será enviado aos seus contatos. Perfeito para atividades individuais.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Alertas de voz para texto</h3>
+                    <p>Crie mensagens com as mãos livres usando entrada de voz. Útil em situações estressantes ou de mobilidade limitada, quando não é possível digitar.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👴</div>
+                    <h3>Design adequado para idosos</h3>
+                    <p>Texto grande, alto contraste, tom de som ajustável para deficientes auditivos e uma interface clara e sem distrações. Fácil para idosos e usuários não técnicos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Configuração assistida por família</h3>
+                    <p>Os familiares podem ajudar os idosos a configurar o aplicativo e os contatos remotamente usando um link de configuração. Configure o aplicativo em seu próprio dispositivo e envie o link para instalar e configurar o aplicativo com apenas um clique.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Vários idiomas</h3>
+                    <p>Suporta vários idiomas para acessibilidade mais ampla. Usar <span class="notranslate" translate="no">TapAlert</span> no seu idioma preferido.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Contexto de localização inteligente</h3>
+                    <p>Inclui coordenadas GPS precisas e endereço legível por humanos. Funciona mesmo se os destinatários estiverem offline ou usando telefones básicos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✉️</div>
+                    <h3>Redundância de e-mail</h3>
+                    <p>Pode enviar alertas por e-mail como um método de mensagens de reforço ou para fornecer redundância de alertas se <span class="notranslate" translate="no">Twilio</span> não estiver disponível.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><img src="../media/twilio.png" alt="Twilio"
+                            style="height: 1em; vertical-align: bottom;"></div>
+                    <h3><span class="notranslate" translate="no">Twilio</span> como failback de SMS</h3>
+                    <p><strong>Android:</strong> o aplicativo envia SMS diretamente do seu telefone, não é necessário <span class="notranslate" translate="no">Twilio</span>, mas é recomendado. <span class="notranslate" translate="no">Twilio</span> é opcional, usado como backup de Wi-Fi quando o celular está indisponível ou quebrado — mas também pode ser usado como failback em situações somente de celular se seu <span class="notranslate" translate="no">SMS direto</span> não funcionar ou não estiver disponível.</p>
+                    <p style="margin-top: 10px;"><strong>iOS:</strong> A Apple impede que aplicativos enviem SMS diretamente. Esta é uma restrição da Apple, não uma limitação do <span class="notranslate" translate="no">TapAlert</span>. <span class="notranslate" translate="no">Twilio</span> é a ponte que permite ao aplicativo enviar SMS automaticamente em seu nome. Sem ele, a única opção é tocar manualmente em “Enviar” novamente no aplicativo Mensagens – o que não é ideal em caso de emergência.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Dois modos de operação Pânico/Relatório</h3>
+                    <p>Pânico (tela principal) para alertas e relatórios <span class="notranslate" translate="no">SOS</span> ou Estou OK de forma rápida e simples (deslize para a esquerda) para permitir uma melhor personalização de alertas com mensagens pré-configuradas para situações não emergenciais.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Widget da tela inicial</h3>
+                    <p><strong>Android apenas:</strong> Adicione um widget de emergência de um toque à sua tela inicial para acesso instantâneo sem abrir o aplicativo. Instruções para usá-lo com um botão físico ou gesto também são fornecidas no aplicativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <h2 class="section-title">Veja <span class="notranslate" translate="no">TapAlert</span> em ação</h2>
+            <p class="section-subtitle">Interface intuitiva projetada para velocidade e simplicidade</p>
+
+            <div class="screenshots-container">
+                <button class="carousel-button prev" onclick="moveCarousel(-1)">‹</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <video src="../media/video/onborading.webm" class="screenshot" autoplay muted loop
+                            playsinline></video>
+                        <video src="../media/video/send_SOS_button.webm" class="screenshot" autoplay muted loop
+                            playsinline></video>
+                        <video src="../media/video/send_ImOK_recording.webm" class="screenshot" autoplay muted loop
+                            playsinline></video>
+                        <img src="../media/screens/Screenshot_20260210_180700.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_180958.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260211_233521.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_180960.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_180961.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_181534.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_181450.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_180964.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_181644.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_180962.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_180963.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_181746.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_181800.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_181836.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_231812.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                        <img src="../media/screens/Screenshot_20260210_231854.png" alt="TapAlert Screenshot"
+                            class="screenshot">
+                    </div>
+                </div>
+                <button class="carousel-button next" onclick="moveCarousel(1)">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Android First Section -->
+    <section class="android-first" id="android-first">
+        <div class="container">
+            <div class="android-content">
+                <h2 class="section-title">🤖 Android Primeiro</h2>
+                <p class="section-subtitle">Enquanto apoiamos iOS para famílias multiplataforma, nossos principais recursos aproveitam Android recursos para enviar alertas SMS nativos automatizados.</p>
+                <div class="comparison-table-wrapper">
+                    <h3 style="margin-bottom: 20px; color: #2c3e50;">Resumo: O que cada plataforma pode fazer</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Capacidade</th>
+                                <th>Android</th>
+                                <th>iOS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Envie SMS gratuitamente</strong></td>
+                                <td><span class="check">✅</span> Sim (<span class="notranslate"
+                                        translate="no"><span class="notranslate" translate="no">SMS direto</span></span>, sempre)</td>
+                                <td><span class="check">✅</span> Sim (iOS Messages, requer interação do usuário)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Envie SMS automaticamente</strong></td>
+                                <td><span class="check">✅</span> Sim (<span class="notranslate"
+                                        translate="no"><span class="notranslate" translate="no">SMS direto</span></span>, sempre)</td>
+                                <td><span class="cross">❌</span> Somente com <span class="notranslate" translate="no">Twilio</span> (pago)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Funciona sem internet</strong></td>
+                                <td><span class="check">✅</span> Sim (<span class="notranslate"
+                                        translate="no"><span class="notranslate" translate="no">SMS direto</span></span> usa rede celular)</td>
+                                <td><span class="check">✅</span> Sim (iOS Messages usa rede celular)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temporizador de homem morto totalmente automático</strong></td>
+                                <td><span class="check">✅</span> Sim</td>
+                                <td><span class="cross">❌</span> Somente com <span class="notranslate" translate="no">Twilio</span> (pago). Sem <span class="notranslate" translate="no">Twilio</span>, o aplicativo Mensagens é aberto e o usuário deve tocar em Enviar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nãointeração do usuário necessária</strong></td>
+                                <td><span class="check">✅</span> Sim</td>
+                                <td><span class="cross">❌</span> Somente com <span class="notranslate" translate="no">Twilio</span>. As mensagens do iOS sempre exigem tocar em Enviar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>E-mail <span class="notranslate" translate="no">substituto</span></strong></td>
+                                <td><span class="check">✅</span> Sim (quando a internet estiver disponível)</td>
+                                <td><span class="check">✅</span> Sim (quando a internet estiver disponível)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="platform-comparison">
+                    <div class="platform-card ios">
+                        <h3>iOS Limitações</h3>
+                        <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(comparado com Android)</p>
+                        <ul class="feature-list">
+                            <li><span class="cross">❌</span> Não é possível enviar SMS programaticamente (restrição da Apple)</li>
+                            <li><span class="cross">❌</span> SMS totalmente automático requer <span class="notranslate" translate="no">Twilio</span></li>
+                            <li><span class="cross">❌</span> Dead Man Timer não pode enviar SMS silenciosamente sem <span class="notranslate" translate="no">Twilio</span></li>
+                            <li><span class="cross">⚠️</span> iOS Messages preferência exige que o usuário toque fisicamente em Enviar
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="platform-card android">
+                        <h3>Android Vantagens</h3>
+                        <ul class="feature-list">
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span class="notranslate" translate="no">SMS direto</span></span> é sempre gratuito e automático</li>
+                            <li><span class="check">✅</span> Não<span class="notranslate"
+                                    translate="no">Twilio</span> necessário para funcionalidade básica</li>
+                            <li><span class="check">✅</span> Dead Man Timer é sempre totalmente automático</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> adiciona redundância (segundo método), não um requisito (desde que seu telefone/operadora permita chamadas Wifi)</li>
+                        </ul>
+                    </div>
+
+                    <div class="platform-card" style="border-top: 4px solid #667eea;">
+                        <h3>Quando ambas as plataformas se comportam da mesma forma</h3>
+                        <ul class="feature-list">
+                            <li><span class="check">ℹ️</span> Somente WiFi (sem celular): ambos usam Wifi Call, se disponível, <span class="notranslate" translate="no">Twilio</span> ou e-mail — comportamento idêntico</li>
+                            <li><span class="check">✅</span> Redundância de e-mail: funciona da mesma forma em ambas as plataformas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Preço simples e honesto</h2>
+            <p class="section-subtitle">Sem assinaturas. Sem taxas ocultas. Pague uma vez e use para sempre.</p>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Livre</h3>
+                    <div class="price">$0</div>
+                    <p class="price-note">Para sempre</p>
+                    <ul class="features-list">
+                        <li>✅ Até 1 destinatário</li>
+                        <li>✅ Botões <span class="notranslate" translate="no">SOS</span> e OK</li>
+                        <li>✅ <span class="notranslate" translate="no">Modo de relatório</span> com mensagens predefinidas</li>
+                        <li>✅ Histórico de alertas: últimas 50 mensagens</li>
+                        <li>✅ Redundância inteligente (SMS + Wifi)</li>
+                        <li>✅ E-mail como <span class="notranslate" translate="no">substituição</span> ou redundância</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Comece gratuitamente</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3><span class="notranslate" translate="no">Premium</span></h3>
+                    <div class="price">€3.99</div>
+                    <p class="price-note">Compra única</p>
+                    <ul class="features-list">
+                        <li>✅ Até 50 destinatários</li>
+                        <li>✅ Todos os recursos gratuitos</li>
+                        <li>✅ Histórico de alertas: últimas 200 mensagens</li>
+                        <li>✅ Temporizador de check-in</li>
+                        <li>✅ Ainda sem mensalidades!</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Desbloquear <span class="notranslate" translate="no">Premium</span></a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS tem um preço, mas sua tranquilidade não</h3>
+                <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
+                    <span class="notranslate" translate="no">TapAlert</span> não cobra pelas mensagens enviadas. Os únicos custos que você pode incorrer são aqueles aplicados pela sua própria operadora de celular para SMS padrão - assim como qualquer mensagem de texto normal - e, se você optar por configurar
+                    <span class="notranslate" translate="no">Twilio</span> como failback ou serviço alternativo,
+                    <a href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
+                        style="color: #667eea; text-decoration: underline;">as taxas por mensagem definidas por <span
+                            class="notranslate" translate="no">Twilio</span></a>
+                    (Nota: há um
+                    <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
+                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;">conta de teste <span class="notranslate" translate="no">Twilio</span> gratuita</a>
+                    mas não recomendamos usá-lo). O próprio aplicativo adiciona nenhum custo extra.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacidade Section -->
+    <section class="privacy">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">🔒 Privacidade por Design</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Seus dados de segurança permanecem seus. Sem contas, sem rastreamento, sem vigilância.</p>
+
+            <div class="privacy-grid">
+                <div class="privacy-item">
+                    <div class="icon">🙅</div>
+                    <h3>NãoConta necessária</h3>
+                    <p>Comece a usar imediatamente. Sem e-mail, sem registro, sem perfil.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="icon">📵</div>
+                    <h3>NãoAnúncios ou rastreamento</h3>
+                    <p>Zero análises, zero rastreamento comportamental, zero identificadores de publicidade.</p>
+                </div>
+
+                <div class="privacy-item">
+                    <div class="icon">📱</div>
+                    <h3>Armazenamento local</h3>
+                    <p>Contatos e configurações armazenados apenas no seu dispositivo. Você está no controle.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de uso Section -->
+    <section class="use-cases">
+        <div class="container">
+            <h2 class="section-title">Para quem se destina o <span class="notranslate" translate="no">TapAlert</span>?</h2>
+            <p class="section-subtitle">Projetado para quem valoriza segurança e tranquilidade</p>
+
+            <div class="use-case-highlight" style="max-width: 600px; margin: 0 auto 40px auto; transform: scale(1.05);">
+                <div class="use-case" style="border: 2px solid #667eea; background: white;">
+                    <h3 style="font-size: 1.4rem;">👴 Idosos e cuidadores</h3>
+                    <p style="font-size: 1.1rem;">Um botão de pânico para idosos que moram sozinhos ou viajam de forma independente. Um toque notifica todos os membros da família com a localização exata.</p>
+                </div>
+            </div>
+
+            <div class="section-divider" style="text-align: center; margin-bottom: 40px; position: relative;">
+                <span
+                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">mas também para...</span>
+                <div
+                    style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #e2e8f0; z-index: 0;">
+                </div>
+            </div>
+
+            <div class="use-cases-grid">
+
+                <div class="use-case">
+                    <h3>🥾 Aventureiros Solo</h3>
+                    <p>Caminhantes ou ciclistas que desejam uma forma confiável de enviar sua localização para a família no início/fim de uma trilha ou em caso de emergência.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>🌙 Segurança Pessoal</h3>
+                    <p>Caminhando para casa tarde da noite ou usando caronas compartilhadas? Envie um alerta discreto "Cuidado" para amigos e familiares.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>💼 Pequenas empresas</h3>
+                    <p>Trabalhadores de campo ou funcionários solitários (agentes imobiliários, motoristas de entrega) que precisam de um simples check-in ou sinal de socorro.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>✈️ Viajantes Internacionais</h3>
+                    <p>Usando mensagens Wi-Fi para contornar tarifas caras de roaming de SMS e, ao mesmo tempo, manter a família atualizada sobre seu paradeiro.</p>
+                </div>
+
+                <div class="use-case">
+                    <h3>👨‍👩‍👧‍👦 Famílias permanecendo conectadas</h3>
+                    <p>Fique de olho nos membros da família com verificações rápidas de "Estou bem", sem a necessidade de telefonemas ou mensagens de texto constantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Section -->
+    <section class="guides" id="guides" style="padding: 80px 20px; background: white;">
+        <div class="container">
+            <h2 class="section-title">Guias passo a passo</h2>
+            <p class="section-subtitle">Domine <span class="notranslate" translate="no">TapAlert</span> com nossos guias fáceis de seguir</p>
+
+            <div class="features-grid">
+                <a href="quickstart_android.html" style="text-decoration: none; color: inherit;">
+                    <div class="feature-card" style="height: 100%;">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Início rápido</h3>
+                        <p>Comece a trabalhar em segundos. O essencial que você precisa saber.</p>
+                    </div>
+                </a>
+
+                <a href="one_tap_alert.html" style="text-decoration: none; color: inherit;">
+                    <div class="feature-card" style="height: 100%;">
+                        <div class="feature-icon">👆</div>
+                        <h3>Alerta de um toque</h3>
+                        <p>Como enviar alertas instantaneamente com um único toque.</p>
+                    </div>
+                </a>
+                <a href="sms_stand_out.html" style="text-decoration: none; color: inherit;">
+                    <div class="feature-card" style="height: 100%;">
+                        <div class="feature-icon">✨</div>
+                        <h3>Faça seu alerta SMS se destacar</h3>
+                        <p>Como seus contatos podem priorizar suas notificações.</p>
+                    </div>
+                </a>
+                <a href="twilio_guide.html" style="text-decoration: none; color: inherit;">
+                    <div class="feature-card" style="height: 100%;">
+                        <div class="feature-icon">💬</div>
+                        <h3>Configurando o <span class="notranslate" translate="no">Twilio</span></h3>
+                        <p>Configure SMS na nuvem para redundância e viagens internacionais.</p>
+                    </div>
+                </a>
+                <a href="email_redundancy_guide.html" style="text-decoration: none; color: inherit;">
+                    <div class="feature-card" style="height: 100%;">
+                        <div class="feature-icon">📧</div>
+                        <h3>Configurando redundância de e-mail</h3>
+                        <p>Configure o e-mail como <span class="notranslate" translate="no">fallback</span> ou mensagens de alerta de redundância.</p>
+                    </div>
+                </a>
+                <a href="accessibility_guide.html" style="text-decoration: none; color: inherit;">
+                    <div class="feature-card" style="height: 100%;">
+                        <div class="feature-icon">🦻</div>
+                        <h3>Recursos de acessibilidade</h3>
+                        <p>Saiba mais sobre os recursos projetados para assistência visual, auditiva e motora.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notice Section -->
+    <section class="notice">
+        <div class="notice-content">
+            <div class="notice-icon">⚠️</div>
+            <h2>Aviso importante de segurança</h2>
+            <p><strong><span class="notranslate" translate="no">TapAlert</span> NÃO substitui serviços de emergência como 911 ou 112.</strong></p>
+            <p style="margin-top: 15px;">A entrega de mensagens depende da disponibilidade da rede e da ação do destinatário. Este aplicativo não fornece monitoramento, resposta a emergências ou entrega garantida. Em emergências reais, contacte sempre diretamente os serviços de emergência.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Alertas de emergência simples para todos. Sem assinaturas, sem rastreamento, apenas segurança.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produto</h3>
+                    <ul>
+                        <li><a href="#features">Recursos</a></li>
+                        <li><a href="#pricing">Preços</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Jurídico</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">política de Privacidade</a></li>
+                        <li><a href="terms.html">Termos de Serviço</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Apoiar</h3>
+                    <ul>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Guias passo a passo</a></li>
+                        <li><a href="accessibility_guide.html">Guia de acessibilidade</a></li>
+                        <li><a href="troubleshooting.html">Solução de problemas</a></li>
+                        <li><a href="contact.html">Contate o suporte</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os direitos reservados. | Feito com ❤️ para sua segurança</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('mobile-active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('mobile-active');
+            });
+        });
+
+        // Add fade-in animation to elements as they scroll into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .pricing-card, .use-case').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Lateral Nav Section Tracking
+        const navObserverOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+
+        const navObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('.nav-link').forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('data-section') === id) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, navObserverOptions);
+
+        document.querySelectorAll('section[id]').forEach(section => {
+            navObserver.observe(section);
+        });
+
+        // Carousel functionality
+        let currentIndex = 0;
+        const screenshots = document.querySelectorAll('.screenshot');
+        const track = document.getElementById('carouselTrack');
+
+        function updateCarousel() {
+            // Remove center class from all
+            screenshots.forEach(media => {
+                media.classList.remove('center');
+                // Pause if it's a video
+                if (media.tagName === 'VIDEO') {
+                    media.pause();
+                    media.currentTime = 0; // Optional: Reset to start
+                }
+            });
+
+            // Add center class to current and play if video
+            if (screenshots[currentIndex]) {
+                const currentMedia = screenshots[currentIndex];
+                currentMedia.classList.add('center');
+                if (currentMedia.tagName === 'VIDEO') {
+                    // Slight delay to ensure transition completes or just play
+                    currentMedia.play().catch(e => console.log("Auto-play prevented:", e));
+                }
+            }
+
+            // Calculate offset to center the current image
+            const containerWidth = track.parentElement.offsetWidth;
+            const screenshotStyle = window.getComputedStyle(screenshots[0]);
+            const imageWidth = parseFloat(screenshotStyle.width);
+            const trackStyle = window.getComputedStyle(track);
+            const gap = parseFloat(trackStyle.gap) || 0;
+
+            const offset = (containerWidth / 2) - (imageWidth / 2) - (currentIndex * (imageWidth + gap));
+
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
+        function moveCarousel(direction) {
+            currentIndex += direction;
+
+            // Loop around
+            if (currentIndex < 0) {
+                currentIndex = screenshots.length - 1;
+            } else if (currentIndex >= screenshots.length) {
+                currentIndex = 0;
+            }
+
+            updateCarousel();
+        }
+
+        // Initialize carousel
+        updateCarousel();
+
+        // Add click event to each screenshot/video to center it
+        screenshots.forEach((media, index) => {
+            media.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        // Update on window resize
+        window.addEventListener('resize', updateCarousel);
+
+    </script>
+</body>
+
+</html>
