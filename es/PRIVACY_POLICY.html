@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link rel="alternate" hreflang="es" href="https://tapalert.app/es/PRIVACY_POLICY.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/PRIVACY_POLICY.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - TapAlert</title>
+    <title>Política de Privacidad - TapAlert</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -209,10 +209,10 @@
 
 <body>
     <div class="content-box">
-        <h1>Privacy Policy</h1>
+        <h1>Política de Privacidad</h1>
         <p><strong>Last Updated: February 11, 2026</strong></p>
 
-        <p>This Privacy Policy describes how <strong><span class="notranslate" translate="no">TapAlert</span></strong>
+        <p>This Política de Privacidad describes how <strong><span class="notranslate" translate="no">TapAlert</span></strong>
             (the "App") handles your information. Your
             privacy is a priority, and the App is designed to minimize data collection and maximize user control. The
             App operates on a <strong>local-first</strong> principle: all personal data stays on your device.</p>
@@ -221,11 +221,11 @@
         <p>To provide its core functionality (sending emergency alerts via SMS and/or email), the App processes the
             following information:</p>
         <ul>
-            <li><strong>Location Data:</strong> When you trigger an alert, the App accesses your device's GPS
+            <li><strong>Ubicación Data:</strong> When you trigger an alert, the App accesses your device's GPS
                 coordinates and may resolve them into a physical address. This information is included in the alert
-                message sent to your chosen recipients via a Google Maps link. Location is only fetched at the moment of
+                message sent to your chosen recipients via a Google Maps link. Ubicación is only fetched at the moment of
                 sending and is not tracked continuously.</li>
-            <li><strong>Recipient Contact Information:</strong> You provide the phone numbers and optionally email
+            <li><strong>Recipient Contacto Information:</strong> You provide the phone numbers and optionally email
                 addresses of your trusted contacts. These are stored locally on your device.</li>
             <li><strong>Alert Messages:</strong> You may create and customise predefined alert messages. These are
                 stored locally on your device.</li>
@@ -238,22 +238,22 @@
 
         <h2>2. Permissions</h2>
         <p>The App requests specific system permissions to function. Each permission is requested at runtime with a
-            clear explanation, and you may deny any permission (though some features will be unavailable).</p>
+            clear explanation, and you may deny any permission (though some  will be unavailable).</p>
 
         <h3>Android Permissions</h3>
         <ul>
-            <li><strong>Fine &amp; Coarse Location (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</strong> To determine
+            <li><strong>Fine &amp; Coarse Ubicación (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</strong> To determine
                 your geographic coordinates when sending an emergency alert.</li>
-            <li><strong>Send SMS (SEND_SMS):</strong> To send alert messages directly via your device's SIM card without
+            <li><strong>Send SMS (SEND_SMS):</strong> To send alert messages directly via your device's SIM card sin
                 requiring a third-party service.</li>
             <li><strong>Read Phone State (READ_PHONE_STATE):</strong> To check SIM card availability and cellular
                 network registration status, ensuring the App can accurately report whether SMS sending is possible.
             </li>
             <li><strong>Record Audio (RECORD_AUDIO):</strong> To capture voice input for speech-to-text transcription of
                 alert messages.</li>
-            <li><strong>Read Contacts (READ_CONTACTS):</strong> To allow you to select emergency recipients from your
+            <li><strong>Read Contactos (READ_CONTACTS):</strong> To allow you to select emergency recipients from your
                 existing contacts.</li>
-            <li><strong>Post Notifications (POST_NOTIFICATIONS):</strong> To display notifications about alert delivery
+            <li><strong>Post Notificaciones (POST_NOTIFICATIONS):</strong> To display notifications about alert delivery
                 status and dead man's switch timer events.</li>
             <li><strong>Internet &amp; Network State (INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE):</strong> To
                 communicate with the <span class="notranslate" translate="no">Twilio</span> SMS API (if configured),
@@ -262,7 +262,7 @@
             <li><strong>Wake Lock (WAKE_LOCK):</strong> To prevent the device from sleeping during the alert sending
                 process, ensuring delivery completes.</li>
             <li><strong>Disable Keyguard (DISABLE_KEYGUARD):</strong> To allow alerts triggered from home screen widgets
-                or external automation (e.g., Bluetooth buttons) to proceed without requiring the device to be unlocked.
+                or external automation (e.g., Bluetooths) to proceed sin requiring the device to be unlocked.
             </li>
             <li><strong>Battery Optimisation Exemption (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS):</strong> To ensure the
                 dead man's switch timer and widget-triggered alerts work reliably in the background.</li>
@@ -272,28 +272,28 @@
 
         <h3>iOS Permissions</h3>
         <ul>
-            <li><strong>Location (When In Use / Always):</strong> To determine your geographic coordinates when sending
+            <li><strong>Ubicación (When In Use / Always):</strong> To determine your geographic coordinates when sending
                 an emergency alert.</li>
             <li><strong>Microphone:</strong> To capture voice input for speech-to-text transcription.</li>
             <li><strong>Speech Recognition:</strong> To transcribe recorded voice into text for alert messages.</li>
-            <li><strong>Contacts:</strong> To allow you to select emergency recipients from your existing contacts.</li>
-            <li><strong>Notifications:</strong> To display delivery status and timer notifications.</li>
+            <li><strong>Contactos:</strong> To allow you to select emergency recipients from your existing contacts.</li>
+            <li><strong>Notificaciones:</strong> To display delivery status and timer notifications.</li>
         </ul>
 
         <h2>3. SMS and Email Delivery Methods</h2>
         <p>The App supports multiple methods for sending alerts:</p>
         <ul>
-            <li><strong><span class="notranslate" translate="no">Direct SMS</span> (Android only):</strong> Messages are
+            <li><strong><span class="notranslate" translate="no">SMS Directo</span> (Android only):</strong> Messages are
                 sent directly through your device's SIM card
                 and carrier. The App uses the Android SMS Manager API. Standard carrier messaging rates may apply.</li>
             <li><strong><span class="notranslate" translate="no">Twilio</span> API (iOS &amp; Android):</strong> If you
                 choose to configure <span class="notranslate" translate="no">Twilio</span>, the App uses your
-                personal <span class="notranslate" translate="no">Twilio</span> account credentials to send SMS via the
+                personal <span class="notranslate" translate="no">Twilio</span> cuenta credentials to send SMS via the
                 <span class="notranslate" translate="no">Twilio</span> REST API. Your credentials are stored
                 locally on your device using encrypted storage (flutter_secure_storage). <span class="notranslate"
                     translate="no">Twilio</span> processes the message
                 according to <a href="https://www.twilio.com/legal/privacy" target="_blank"><span class="notranslate"
-                        translate="no">Twilio</span>'s Privacy Policy</a>.
+                        translate="no">Twilio</span>'s Política de Privacidad</a>.
             </li>
             <li><strong>iOS SMS Composer:</strong> On iOS, the App may present the native SMS composer interface, which
                 requires manual confirmation before sending.</li>
@@ -321,9 +321,9 @@
         <h2>5. Data Sharing</h2>
         <p>The App <strong>does not sell, trade, or share</strong> your personal data with any third parties. Data is
             only transmitted in the following circumstances, all initiated by your explicit action of pressing the alert
-            button:</p>
+           :</p>
         <ul>
-            <li>To the <strong>recipients you explicitly configured</strong> when you trigger an alert (via SMS and/or
+            <li>To the <strong>recipients you explicitly configured</strong> when you trigger an alert (vía SMS and/or
                 email).</li>
             <li>To your <strong>mobile carrier</strong> when sending <span class="notranslate" translate="no">Direct
                     SMS</span> on Android.</li>
@@ -344,7 +344,7 @@
             entirely through the Apple App Store or Google Play Store. The Developer does not receive or store any
             payment information. Purchase status is cached locally on your device.</p>
 
-        <h2>7. Home Screen Widgets (Android)</h2>
+        <h2>7. Widget de Pantalla de Inicios (Android)</h2>
         <p>The App provides optional home screen widgets for quick alert access. Widget configuration (custom message)
             is stored locally via SharedPreferences. Tapping a widget launches the App to send an alert and does not
             transmit any data independently.</p>
@@ -362,7 +362,7 @@
             <li>The Developer has no access to your data and therefore cannot delete it on your behalf.</li>
         </ul>
 
-        <h2>10. Children's Privacy</h2>
+        <h2>10. Children's Privacidad</h2>
         <p>The App is not directed at children under 13. It does not knowingly collect any personal information from
             children. Since all data remains on the user's device and is never transmitted to the Developer, no child
             data is collected or processed by the Developer.</p>
@@ -379,12 +379,12 @@
         </ul>
 
         <h2>12. Changes to This Policy</h2>
-        <p>The Developer may update this Privacy Policy from time to time. Any changes will be reflected by a new "Last
+        <p>The Developer may update this Política de Privacidad from time to time. Any changes will be reflected by a new "Last
             Updated" date at the top of this document. Continued use of the App after changes constitutes acceptance of
             the updated policy.</p>
 
-        <h2>13. Contact</h2>
-        <p>If you have any questions about this Privacy Policy, please contact the developer through the official App
+        <h2>13. Contacto</h2>
+        <p>If you have any questions about this Política de Privacidad, please contact the developer through the official App
             Store or Google Play support channels.</p>
 
     </div>
@@ -394,41 +394,41 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                <p>Simple emergency alerts for everyone. No subscriptions, no tracking, just safety.</p>
+                <p>Alertas de emergencia simples para todos. Sin suscripciones, sin rastreo, solo seguridad.</p>
             </div>
 
             <div class="footer-section">
-                <h3>Product</h3>
+                <h3>Producto</h3>
                 <ul>
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="../index.html#features">Características</a></li>
+                    <li><a href="../index.html#pricing">Precios</a></li>
+                    <li><a href="../index.html#download">Descargar</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h3>Legal</h3>
                 <ul>
-                    <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../PRIVACY_POLICY.html">Política de Privacidad</a></li>
+                    <li><a href="../terms.html">Términos de Servicio</a></li>
+                    <li><a href="../contact.html">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h3>Support</h3>
+                <h3>Soporte</h3>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by Step Guides</a></li>
-                    <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
-                    <li><a href="troubleshooting.html">Troubleshooting</a></li>
-                    <li><a href="contact.html">Contact Support</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="../index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
+                    <li><a href="../accessibility_guide.html">Guía de Accesibilidad</a></li>
+                    <li><a href="../troubleshooting.html">Solución de problemas</a></li>
+                    <li><a href="../contact.html">Soporte de Contacto</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+            <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos los derechos reservados. | Hecho con ❤️ para tu seguridad</p>
         </div>
     </footer>
 

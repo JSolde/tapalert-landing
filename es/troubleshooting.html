@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link rel="alternate" hreflang="es" href="https://tapalert.app/es/troubleshooting.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/troubleshooting.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting - TapAlert</title>
+    <title>Solución de problemas - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -481,15 +481,15 @@
     <!-- Header -->
     <header class="guide-header">
         <div class="container guide-nav">
-            <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span class="notranslate" translate="no">TapAlert</span>
+            <a href="../index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span class="notranslate" translate="no">TapAlert</span>
             </a>
-            <a href="index.html" class="btn btn-primary">Back to Home</a>
+            <a href="../index.html" class="btn btn-primary">Volver al Inicio</a>
         <div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
+    <button class="lang-dropbtn">ES</button>
     <div class="lang-dropdown-content">
-        <a href="troubleshooting.html" hreflang="en" class="active">EN</a>
-        <a href="es/troubleshooting.html" hreflang="es">ES</a>
+        <a href="../troubleshooting.html" hreflang="en">EN</a>
+        <a href="../es/troubleshooting.html" hreflang="es" class="active">ES</a>
     </div>
 </div>
         </div>
@@ -498,7 +498,7 @@
     <!-- Main Content -->
     <main class="guide-container">
 
-        <h1 class="guide-title">Troubleshooting Guide</h1>
+        <h1 class="guide-title">Guía de Solución de Problemas</h1>
 
         <p>This guide covers common issues and solutions for <span class="notranslate" translate="no">TapAlert</span> on both Android and iOS.</p>
 
@@ -507,14 +507,14 @@
             <ul>
                 <li><a href="#sms">1. SMS Issues</a></li>
                 <li><a href="#email">2. Email Issues</a></li>
-                <li><a href="#location">3. Location Issues</a></li>
+                <li><a href="#location">3. Ubicación Issues</a></li>
                 <li><a href="#connectivity">4. Connectivity</a></li>
                 <li><a href="#timer">5. Check-in Timer</a></li>
                 <li><a href="#voice">6. Voice-to-Text</a></li>
-                <li><a href="#contacts">7. Contacts</a></li>
+                <li><a href="#contacts">7. Contactos</a></li>
                 <li><a href="#purchase">8. Purchases</a></li>
                 <li><a href="#widget">9. Widgets</a></li>
-                <li><a href="#notifications">10. Notifications</a></li>
+                <li><a href="#notifications">10. Notificaciones</a></li>
                 <li><a href="#behavior">11. App Behavior</a></li>
                 <li><a href="#ios">12. iOS Specific</a></li>
                 <li><a href="#android">13. Android Specific</a></li>
@@ -526,15 +526,15 @@
             <h2>1. SMS Sending Issues</h2>
 
             <div class="step-card">
-                <h3>1.1 <span class="notranslate" translate="no">Direct SMS</span> Not Sending (Android)</h3>
+                <h3>1.1 <span class="notranslate" translate="no">SMS Directo</span> Not Sending (Android)</h3>
                 <p><strong>Symptom:</strong> You tap "Send Alert" but the SMS fails. The alert history shows an error
                     for one or more recipients.</p>
                 <ul>
                     <li><strong>No cellular signal:</strong> Check the status bar. The Status page in the app shows your
                         current cellular status.</li>
-                    <li><strong>No SIM card:</strong> <span class="notranslate" translate="no">Direct SMS</span> requires a working SIM card. Check SIM status on the
+                    <li><strong>No SIM card:</strong> <span class="notranslate" translate="no">SMS Directo</span> requires a working SIM card. Check SIM status on the
                         Status page.</li>
-                    <li><strong>Permissions:</strong> Ensure <strong>SMS</strong> permission is allowed in phone
+                    <li><strong>Permissions:</strong> Asegúrate de que <strong>SMS</strong> permission is allowed in phone
                         settings.</li>
                     <li><strong>Invalid format:</strong> Use international format with country code (e.g.,
                         +34600123456).</li>
@@ -548,8 +548,8 @@
                     <li><strong>Internet required:</strong> <span class="notranslate" translate="no">Twilio</span> needs Wi-Fi or cellular data.</li>
                     <li><strong>Credentials:</strong> Verify Account SID, Auth Token, and <span class="notranslate" translate="no">Twilio</span> phone number in
                         Settings.</li>
-                    <li><strong>Trial limitations:</strong> Trial accounts can only send to verified phone numbers.</li>
-                    <li><strong>Balance:</strong> Check your <span class="notranslate" translate="no">Twilio</span> account balance.</li>
+                    <li><strong>Trial limitations:</strong> Trial cuentas can only send to verificados phone numbers.</li>
+                    <li><strong>Balance:</strong> Check your <span class="notranslate" translate="no">Twilio</span> cuenta balance.</li>
                 </ul>
             </div>
 
@@ -581,11 +581,11 @@
         </section>
 
         <section id="location" class="guide-section">
-            <h2>3. Location Issues</h2>
+            <h2>3. Ubicación Issues</h2>
             <div class="step-card">
-                <h3>3.1 Location Missing in Alert</h3>
+                <h3>3.1 Ubicación Missing in Alert</h3>
                 <ul>
-                    <li><strong>Permissions:</strong> Ensure Location permission is set to "While Using" or "Always".
+                    <li><strong>Permissions:</strong> Asegúrate de que Ubicación permission is set to "While Using" or "Always".
                     </li>
                     <li><strong>GPS Disabled:</strong> Verify phone location services are turned on.</li>
                     <li><strong>Reception:</strong> Indoors or dense areas may cause a GPS timeout.</li>
@@ -610,11 +610,11 @@
             <div class="step-card">
                 <h3>5.1 Timer Doesn't Fire</h3>
                 <ul>
-                    <li><strong>App Closed:</strong> Avoid force-closing the app. On iOS, you must tap the notification
+                    <li><strong>App Closed:</strong> Avoid force-closing the app. On iOS, you Debes tap the notification
                         to trigger.</li>
                     <li><strong>Battery Optimization:</strong> Set <span class="notranslate" translate="no">TapAlert</span> to "Unrestricted" in Android battery
                         settings.</li>
-                    <li><strong>Notifications:</strong> Ensure notification permissions are granted.</li>
+                    <li><strong>Notificaciones:</strong> Asegúrate de que notification permissions are granted.</li>
                 </ul>
             </div>
         </section>
@@ -624,26 +624,26 @@
             <div class="step-card">
                 <h3>6.1 Voice Recognition Not Working</h3>
                 <ul>
-                    <li><strong>Permissions:</strong> Ensure <strong>Microphone</strong> and <strong>Speech
+                    <li><strong>Permissions:</strong> Asegúrate de que <strong>Microphone</strong> and <strong>Speech
                             Recognition</strong> (iOS) permissions are granted.</li>
                     <li><strong>Internet:</strong> Most recognition engines require an active connection for processing.
                     </li>
-                    <li><strong>Wrong Language:</strong> The recognition uses the app's current language setting. Check
-                        **Settings > Language**.</li>
+                    <li><strong>Wrong Idioma:</strong> The recognition uses the app's current language setting. Check
+                        **Settings > Idioma**.</li>
                 </ul>
             </div>
         </section>
 
         <section id="contacts" class="guide-section">
-            <h2>7. Contacts and Recipients Issues</h2>
+            <h2>7. Contactos and Recipients Issues</h2>
             <div class="step-card">
-                <h3>7.1 Cannot See Contacts</h3>
+                <h3>7.1 Cannot See Contactos</h3>
                 <ul>
-                    <li><strong>iOS Limited Access:</strong> If you previously chose "Select Contacts...", go to
-                        **Settings > Privacy & Security > Contacts > <span class="notranslate" translate="no">TapAlert</span>** and change to **"All Contacts"**.</li>
-                    <li><strong>Android Permissions:</strong> Ensure **Contacts** permission is set to "Allow" in system
+                    <li><strong>iOS Limited Access:</strong> If you previously chose "Selecciona Contactos...", go to
+                        **Settings > Privacidad & Security > Contactos > <span class="notranslate" translate="no">TapAlert</span>** and change to **"All Contactos"**.</li>
+                    <li><strong>Android Permissions:</strong> Asegúrate de que **Contactos** permission is set to "Allow" in system
                         settings.</li>
-                    <li><strong>Format:</strong> Ensure numbers include the country code with a **+** prefix.</li>
+                    <li><strong>Format:</strong> Asegúrate de que numbers include the country code with a **+** prefix.</li>
                 </ul>
             </div>
         </section>
@@ -651,11 +651,11 @@
         <section id="purchase" class="guide-section">
             <h2>8. In-App Purchase Issues</h2>
             <div class="step-card">
-                <h3>8.2 Purchased But Still Shows Free</h3>
+                <h3>8.2 Purchased But Still Shows Gratis</h3>
                 <ul>
-                    <li><strong>Restore Purchases:</strong> In the Upgrade screen, tap the **Restore** button to
+                    <li><strong>Restore Purchases:</strong> In the Upgrade screen, tap the **Restore** to
                         re-validate your purchase with the store.</li>
-                    <li><strong>Same Account:</strong> Ensure you're signed in with the same store account used for the
+                    <li><strong>Same Account:</strong> Asegúrate de que you're signed in with the same store cuenta used for the
                         original purchase.</li>
                 </ul>
             </div>
@@ -679,10 +679,10 @@
             <div class="step-card">
                 <h3>10.2 Recipients Not Noticing Calls/SMS</h3>
                 <ul>
-                    <li><strong>iPhone:</strong> Have recipients enable **Emergency Bypass** for your contact number.
+                    <li><strong>iPhone:</strong> Have recipients enable **Excepción por Emergencia** for your contact number.
                     </li>
-                    <li><strong>Android:</strong> Have recipients set notification priority to **"High"** or
-                        **"Urgent"** for your messages.</li>
+                    <li><strong>Android:</strong> Have recipients set notification priority to **"Alta"** or
+                        **"Urgente"** for your messages.</li>
                 </ul>
             </div>
         </section>
@@ -692,17 +692,17 @@
             <div class="step-card">
                 <h3>11.1 Alert Fires Immediately on Open</h3>
                 <p>Go to **Settings** and disable **"Auto-Start on Launch"**. This feature is intended for physical
-                    panic buttons.</p>
+                    panics.</p>
             </div>
         </section>
 
         <section id="ios" class="guide-section">
             <h2>12. iOS-Specific Issues</h2>
             <div class="step-card">
-                <h3>12.1 <span class="notranslate" translate="no">Twilio</span> vs. iOS Messages</h3>
+                <h3>12.1 <span class="notranslate" translate="no">Twilio</span> vs. Mensajes iOS</h3>
                 <ul>
                     <li><strong><span class="notranslate" translate="no">Twilio</span> (Automatic):</strong> Silent background sending, requires internet.</li>
-                    <li><strong>iOS Messages (Manual):</strong> Requires you to tap Send in the composer, works via
+                    <li><strong>Mensajes iOS (Manual):</strong> Requires you to tap Send in the composer, works via
                         cellular.</li>
                 </ul>
             </div>
@@ -724,7 +724,7 @@
                 <ul>
                     <li>Send a test alert to verify setup.</li>
                     <li>Check the Status page for connectivity.</li>
-                    <li>Ensure all permissions are granted.</li>
+                    <li>Asegúrate de que all permissions are granted.</li>
                 </ul>
             </div>
         </section>
@@ -737,41 +737,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Simple emergency alerts for everyone. No subscriptions, no tracking, just safety.</p>
+                    <p>Alertas de emergencia simples para todos. Sin suscripciones, sin rastreo, solo seguridad.</p>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Product</h3>
+                    <h3>Producto</h3>
                     <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="../index.html#features">Características</a></li>
+                        <li><a href="../index.html#pricing">Precios</a></li>
+                        <li><a href="../index.html#download">Descargar</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../PRIVACY_POLICY.html">Política de Privacidad</a></li>
+                        <li><a href="../terms.html">Términos de Servicio</a></li>
+                        <li><a href="../contact.html">Contacto</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h3>Soporte</h3>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by Step Guides</a></li>
-                        <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
-                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
-                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="../index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
+                        <li><a href="../accessibility_guide.html">Guía de Accesibilidad</a></li>
+                        <li><a href="../troubleshooting.html">Solución de problemas</a></li>
+                        <li><a href="../contact.html">Soporte de Contacto</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos los derechos reservados. | Hecho con ❤️ para tu seguridad</p>
             </div>
         </div>
     </footer>

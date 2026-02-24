@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ html_lang }}">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="alternate" hreflang="en" href="https://tapalert.app/index.html">
-    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/index.html">
+    {{ hreflang_tags }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TapAlert - Simple Emergency Alerts. No Monthly Fees.</title>
+    <title>{{ page_title }}</title>
     <style>
         * {
             margin: 0;
@@ -123,7 +121,7 @@
             color: #667eea;
         }
 
-        /* Features Section */
+        /* {{ android_table_th1 }}s Section */
         .features {
             padding: 80px 20px;
             background: #f8f9fa;
@@ -329,7 +327,7 @@
             background-color: #f8f9fa;
         }
 
-        /* Android First Section */
+        /* {{ android_table_th2 }} First Section */
         .android-first {
             padding: 80px 20px;
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
@@ -456,7 +454,7 @@
             color: #666;
         }
 
-        /* Privacy Section */
+        /* {{ table_r2c1 }} Section */
         .privacy {
             padding: 80px 20px;
             background: #2c3e50;
@@ -479,7 +477,7 @@
             margin-bottom: 20px;
         }
 
-        /* Use Cases */
+        /* {{ uc_title }} */
         .use-cases {
             padding: 80px 20px;
             background: #f8f9fa;
@@ -1216,21 +1214,15 @@
         </a>
         <nav style="display: flex; align-items: center;">
             <ul class="nav-links">
-                <li><a href="#download" class="nav-link" data-section="download">Top</a></li>
-                <li><a href="#philosophy" class="nav-link" data-section="philosophy">Philosophy</a></li>
-                <li><a href="#features" class="nav-link" data-section="features">Features</a></li>
-                <li><a href="#screenshots" class="nav-link" data-section="screenshots">Screenshots</a></li>
-                <li><a href="#android-first" class="nav-link" data-section="android-first">Platform</a></li>
-                <li><a href="#pricing" class="nav-link" data-section="pricing">Pricing</a></li>
-                <li><a href="#guides" class="nav-link" data-section="guides">Guides</a></li>
+                <li><a href="#download" class="nav-link" data-section="download">{{ nav_top }}</a></li>
+                <li><a href="#philosophy" class="nav-link" data-section="philosophy">{{ nav_philosophy }}</a></li>
+                <li><a href="#features" class="nav-link" data-section="features">{{ android_table_th1 }}s</a></li>
+                <li><a href="#screenshots" class="nav-link" data-section="screenshots">{{ nav_screenshots }}</a></li>
+                <li><a href="#android-first" class="nav-link" data-section="android-first">{{ nav_platform }}</a></li>
+                <li><a href="#pricing" class="nav-link" data-section="pricing">{{ footer_price }}</a></li>
+                <li><a href="#guides" class="nav-link" data-section="guides">{{ nav_guides }}</a></li>
             </ul>
-            <div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
-    <div class="lang-dropdown-content">
-        <a href="index.html" hreflang="en" class="active">EN</a>
-        <a href="es/index.html" hreflang="es">ES</a>
-    </div>
-</div>
+            {{ lang_switcher }}
         </nav>
         <div class="menu-toggle" id="mobile-menu">
             <div class="bar"></div>
@@ -1244,74 +1236,79 @@
             <h1><img src="media/app_icon.png" alt="TapAlert"
                     style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                     translate="no">TapAlert</span></h1>
-            <p class="tagline">Easy, One-tap Alerts, Privacy-first.<br> Designed with seniors in mind: simple, secure, no monthly fees.<br> Friction-less (remotely assisted) initial configuration for seniors.<br></p>
-            <p class="tagline">For your parents, grandparents, and older adults.</p>
-            <p class="tagline">For your peace of mind.</p>
+            <p class="tagline">{{ hero_tagline_1 }}{{ table_r2c1 }}{{ hero_tagline_2 }}<br> {{ hero_designed_for_1
+                }}<br> {{ hero_designed_for_2 }}<br></p>
+            <p class="tagline">{{ hero_for_family }}</p>
+            <p class="tagline">{{ hero_for_peace }}</p>
             <div class="summary-box">
-                <p class="subtitle">Protect your older adults and loved ones with one tap.</p>
-                <p class="subtitle">No subscriptions, no tracking, no accounts required, no ads.</p>
-                <p class="subtitle">Personal safety alert tool designed for seniors, families, travelers, and anyone who wants a fast way to notify trusted contacts when something isn’t right — without subscriptions, accounts, or tracking.</p>
-                <p class="subtitle"><strong>In a world where the unexpected is the new normal—from sudden floods to power outages—ensure you are never truly alone. With one tap, let your loved ones know you are safe or need a helping hand, no matter what the day brings.</strong></p>
+                <p class="subtitle">{{ hero_protect }}</p>
+                <p class="subtitle">{{ android_adv2 }}{{ hero_no_subs }}</p>
+                <p class="subtitle">{{ hero_personal_safety }}</p>
+                <p class="subtitle"><strong>{{ hero_world_quote }}</strong></p>
                 <p class="subtitle">
-                    Our app sends alerts via SMS, not data-based messaging — so your message gets through when apps, Wi-Fi, and push notifications don’t. Whether your recipients have smartphones, feature phones, or limited connectivity, SMS delivers. Bypass Silent / Do Not Disturb filters to wake your contacts up, when it matters. Works even without Internet Access.
+                    {{ hero_sms_text }} {{ hero_sub_text }}
                 </p>
             </div>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">📱 Soon available on Google Play!</a>
-                <a href="#features" class="btn btn-secondary">Learn More</a>
+                <a href="#" class="btn btn-primary">{{ btn_play_soon }}</a>
+                <a href="#features" class="btn btn-secondary">{{ btn_learn_more }}</a>
             </div>
         </div>
     </section>
 
-    <!-- Product Philosophy Section -->
+    <!-- Product {{ nav_philosophy }} Section -->
     <section class="philosophy" id="philosophy" style="background-color: #f8fafc; padding: 80px 20px;">
         <div class="container">
-            <h2 class="section-title">Our Philosophy & Design Principles</h2>
+            <h2 class="section-title">{{ phil_h2 }} {{ nav_philosophy }} {{ phil_h2_suffix }}</h2>
             <div class="features-grid">
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">🛡️</div>
-                    <h3 style="text-align: center; margin-bottom: 15px;">Privacy-First</h3>
+                    <h3 style="text-align: center; margin-bottom: 15px;">{{ table_r2c1 }}-{{ phil_priv_first }}</h3>
                     <ul class="feature-list" style="list-style-type: none; padding: 0;">
-                        <li><span class="check">✅</span> <strong>No accounts required</strong>
-                            — the app works entirely locally, no sign-up or login</li>
-                        <li><span class="check">✅</span> <strong>No tracking or analytics</strong>
-                            — no user behavior data is collected or transmitted</li>
-                        <li><span class="check">✅</span> <strong>No ads</strong> — the app is ad-free, monetized only through a one-time in-app purchase for premium features</li>
-                        <li><span class="check">✅</span> <strong>No subscriptions</strong> — users pay once (or not at all for the free tier), no recurring fees</li>
-                        <li><span class="check">✅</span> <strong>Location is only accessed when sending an alert</strong> — never in the background</li>
+                        <li><span class="check">✅</span> <strong>{{ android_adv2 }}{{ phil_priv_no_accounts }}</strong>
+                            — {{ phil_priv_no_accounts_desc }}</li>
+                        <li><span class="check">✅</span> <strong>{{ android_adv2 }}{{ phil_priv_no_tracking }}</strong>
+                            — {{ phil_priv_no_tracking_desc }}</li>
+                        <li><span class="check">✅</span> <strong>{{ android_adv2 }}{{ phil_priv_no_ads }}</strong> — {{
+                            phil_priv_no_ads_desc }}</li>
+                        <li><span class="check">✅</span> <strong>{{ android_adv2 }}{{ phil_priv_no_subs }}</strong> — {{
+                            phil_priv_no_subs_desc }}</li>
+                        <li><span class="check">✅</span> <strong>{{ phil_location_access }}</strong> — {{
+                            phil_location_bg }}</li>
                     </ul>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">📡</div>
-                    <h3 style="text-align: center; margin-bottom: 15px;">SMS-First Architecture</h3>
-                    <p style="font-size: 0.9em; margin-bottom: 15px;">The app prioritizes SMS over data-based messaging (push notifications, WhatsApp, etc.) because:</p>
+                    <h3 style="text-align: center; margin-bottom: 15px;">{{ phil_sms_title }}</h3>
+                    <p style="font-size: 0.9em; margin-bottom: 15px;">{{ phil_sms_over_data }}</p>
                     <ul class="feature-list" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
-                        <li><span class="check">✅</span> SMS works when internet/Wi-Fi is down (cell towers have battery backup)</li>
-                        <li><span class="check">✅</span> Recipients don't need smartphones — feature phones and basic phones receive SMS</li>
-                        <li><span class="check">✅</span> No app installation required on the recipient's end</li>
-                        <li><span class="check">✅</span> SMS is carrier-level delivery, not dependent on third-party servers being online</li>
+                        <li><span class="check">✅</span> {{ phil_sms_li_wifi }}</li>
+                        <li><span class="check">✅</span> {{ phil_sms_li_nosmartphone }}</li>
+                        <li><span class="check">✅</span> {{ android_adv2 }}{{ phil_no_install }}</li>
+                        <li><span class="check">✅</span> {{ phil_sms_li_carrier }}</li>
                     </ul>
                     <p style="font-size: 0.9em;"><strong><span class="notranslate" translate="no">Smart
-                                Redundancy</span>:</strong> When no cellular service is available, the app falls back to sending SMS first via Wi-Fi Calling (if available, phone/provider dependent) or, if not, via Twilio (if configured). This provides a secondary delivery path when the primary SMS channel is unavailable. Likewise, in a situation with only cellular service (no Wi-Fi and no internet), if the Direct SMS fails for some reason (defective or no SIM,...), Twilio (if configured) will act as failback, as it can also use the cellular network (via 4G/5G) to send the message as a last resort.</p>
+                                Redundancy</span>:</strong> {{ phil_red_full }}</p>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">👴</div>
-                    <h3 style="text-align: center; margin-bottom: 15px;">Senior-Friendly Design</h3>
+                    <h3 style="text-align: center; margin-bottom: 15px;">{{ feat_senior_title }}</h3>
                     <ul class="feature-list" style="list-style-type: none; padding: 0;">
-                        <li><span class="check">✅</span> Large, high-contrast buttons (Single SOS and I'm OK)</li>
-                        <li><span class="check">✅</span> Minimal navigation and cognitive load</li>
-                        <li><span class="check">✅</span> Voice-to-text so users don’t need to type</li>
-                        <li><span class="check">✅</span> Configurable Countdown timer or Hold-to-send confirmation prevents accidental alerts</li>
-                        <li><span class="check">✅</span> Guided onboarding with step-by-step setup</li>
-                        <li><span class="check">✅</span> All UI decisions prioritize clarity and simplicity over feature density</li>
-                        <li><span class="check">✅</span> Zero friction configuration with magic link that can be sent via WhatsApp, SMS, Email, etc. With a single click your senior can configure the app and start using it.</li>
-                        <li><span class="check">✅</span> Screen flash — 3 bright flashes confirm every alert, so users with hearing loss never miss it</li>
-                        <li><span class="check">✅</span> Lower-frequency tones — default alert sounds at 500–600 Hz, easier to hear for age-related hearing loss</li>
-                        <li><span class="check">✅</span> Haptic countdown — phone pulses once per second during the countdown, no need to look at the screen</li>
-                        <li><span class="check">✅</span> Screen reader support — fully compatible with TalkBack (Android) and VoiceOver (iOS); buttons are labelled and outcomes are announced aloud</li>
+                        <li><span class="check">✅</span> {{ phil_sos_ok_buttons }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_min_nav }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_voice }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_countdown }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_onboard }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_clarity }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_magic }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_flash }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_tone }}</li>
+                        <li><span class="check">✅</span> {{ feat_senior_haptic }}</li>
+                        <li><span class="check">✅</span> {{ phil_screen_reader }} ({{ android_table_th2 }}) {{
+                            phil_screen_reader2 }} ({{ android_table_th3 }}){{ phil_screen_reader3 }}</li>
                     </ul>
                 </div>
 
@@ -1319,85 +1316,85 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- {{ android_table_th1 }}s Section -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Powerful Features for Your Safety</h2>
-            <p class="section-subtitle">Everything you need to stay connected with your emergency contacts, designed for simplicity and reliability.</p>
+            <h2 class="section-title">{{ section_features_title }}</h2>
+            <p class="section-subtitle">{{ section_features_subtitle }}</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🆘</div>
-                    <h3>SOS & OK Buttons</h3>
-                    <p>Send predefined SOS “I need help!” or “I’m okay” messages instantly with one tap. Messages include your precise GPS location and address.</p>
+                    <h3>{{ feat_sos_title }}</h3>
+                    <p>{{ feat_sos_desc }}</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📶</div>
-                    <h3>Smart Message Delivery</h3>
-                    <p>Works offline with Direct SMS. Automatic fallback between cellular and Wi-Fi to ensure your message gets through.</p>
+                    <h3>{{ feat_delivery_title }}</h3>
+                    <p>{{ feat_delivery_desc }}</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
-                    <h3>Check-In Timer</h3>
-                    <p>Set a countdown timer. If you don’t check in on time, an automatic alert is sent to your contacts. Perfect for solo activities.</p>
+                    <h3>{{ feat_timer_title }}</h3>
+                    <p>{{ feat_timer_desc }}</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
-                    <h3>Voice-to-Text Alerts</h3>
-                    <p>Create messages hands-free using voice input. Helpful in stressful or limited-mobility situations when typing isn’t possible.</p>
+                    <h3>{{ feat_voice_title }}</h3>
+                    <p>{{ feat_voice_desc }}</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">👴</div>
-                    <h3>Seniors-Friendly Design</h3>
-                    <p>Large text, high contrast, tunable sound pitch for hearing impaired, and a clear, distraction-free interface. Easy for seniors and non-technical users.</p>
+                    <h3>{{ feat_seniors_title }}</h3>
+                    <p>{{ feat_seniors_desc }}</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
-                    <h3>Family assisted setup</h3>
-                    <p>Family members can help seniors set up the app and contacts remotely using a configuration link. Configure the app on your own device and send them the link to install and configure the app with just one click.</p>
+                    <h3>{{ feat_family_title }}</h3>
+                    <p>{{ feat_family_desc }}</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
-                    <h3>Multiple Languages</h3>
-                    <p>Supports multiple languages for broader accessibility. Use <span class="notranslate" translate="no">TapAlert</span> in your preferred language.
+                    <h3>{{ feat_multi_lang_title }}</h3>
+                    <p>{{ feat_lang_p }} <span class="notranslate" translate="no">TapAlert</span> {{ feat_lang_suffix }}
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📍</div>
-                    <h3>Smart Location Context</h3>
-                    <p>Includes both precise GPS coordinates and human-readable street address. Works even if recipients are offline or using basic phones.</p>
+                    <h3>{{ feat_location_ctx_title }}</h3>
+                    <p>{{ feat_location_ctx_desc }}</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">✉️</div>
-                    <h3>E-mail redundancy</h3>
-                    <p>Can send E-mail alerts as a reinforcement messaging method or to provide alerts redundancy if Twilio is not available.</p>
+                    <h3>{{ feat_email_title }}</h3>
+                    <p>{{ feat_email_desc }}</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon"><img src="media/twilio.png" alt="Twilio"
                             style="height: 1em; vertical-align: bottom;"></div>
-                    <h3>Twilio as SMS failback</h3>
-                    <p><strong>Android:</strong> the app sends SMS directly from your phone, no Twilio needed but is recommended. Twilio is optional, used as Wi-Fi backup when cellular is unavailable or broken — but it can also be used as failback in cellular-only situations if your Direct SMS does not work or is not available.</p>
-                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple blocks apps from sending SMS directly. This is an Apple restriction, not a TapAlert limitation. Twilio is the bridge that lets the app send SMS automatically on your behalf. Without it, the only option is manually tapping "Send" again in the Messages app — not ideal in an emergency.
+                    <h3>{{ feat_twilio_title }}</h3>
+                    <p><strong>{{ android_table_th2 }}:</strong> {{ feat_twilio_android_p }}</p>
+                    <p style="margin-top: 10px;"><strong>{{ android_table_th3 }}:</strong> {{ feat_twilio_iphone_p }}
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
-                    <h3>Two modes of operation Panic/Reporting</h3>
-                    <p>Panic (main screen) for quick and simple SOS or I’m OK alerts and Reporting (swipe left) to allow better alert customization with pre-configured messages for non emergency situations.</p>
+                    <h3>{{ feat_modes_title }}</h3>
+                    <p>{{ feat_modes_desc }}</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3>Home Screen Widget</h3>
-                    <p><strong>Android only:</strong> Add a one-tap emergency widget to your home screen for instant access without opening the app. Instructions for using it with a physical button or gesture are also provided in the app.</p>
+                    <h3>{{ feat_widget_title }}</h3>
+                    <p><strong>{{ android_table_th2 }} {{ feat_android_only }}:</strong> {{ feat_widget_desc }}</p>
                 </div>
             </div>
         </div>
@@ -1406,8 +1403,8 @@
     <!-- Screenshots Section -->
     <section class="screenshots" id="screenshots">
         <div class="container">
-            <h2 class="section-title">See TapAlert in Action</h2>
-            <p class="section-subtitle">Intuitive interface designed for speed and simplicity</p>
+            <h2 class="section-title">{{ section_screenshots_title }}</h2>
+            <p class="section-subtitle">{{ section_screenshots_subtitle }}</p>
 
             <div class="screenshots-container">
                 <button class="carousel-button prev" onclick="moveCarousel(-1)">‹</button>
@@ -1458,88 +1455,94 @@
         </div>
     </section>
 
-    <!-- Android First Section -->
+    <!-- {{ android_table_th2 }} First Section -->
     <section class="android-first" id="android-first">
         <div class="container">
             <div class="android-content">
-                <h2 class="section-title">🤖 Android First</h2>
-                <p class="section-subtitle">While we support iOS for cross-platform families, our flagship features leverage Android capabilities for sending automated native SMS alerts.</p>
+                <h2 class="section-title">🤖 {{ android_table_th2 }} {{ android_first_suffix }}</h2>
+                <p class="section-subtitle">{{ android_first_p1 }} {{ android_table_th3 }} {{ android_first_p2 }} {{
+                    android_table_th2 }} {{ android_first_p3 }}</p>
                 <div class="comparison-table-wrapper">
-                    <h3 style="margin-bottom: 20px; color: #2c3e50;">Summary: What Each Platform Can Do</h3>
+                    <h3 style="margin-bottom: 20px; color: #2c3e50;">{{ section_platform_summary }}</h3>
                     <table class="comparison-table">
                         <thead>
                             <tr>
-                                <th>Capability</th>
-                                <th>Android</th>
-                                <th>iOS</th>
+                                <th>{{ section_plat_cap }}</th>
+                                <th>{{ android_table_th2 }}</th>
+                                <th>{{ android_table_th3 }}</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Send SMS for free</strong></td>
-                                <td><span class="check">✅</span> Yes (<span class="notranslate"
-                                        translate="no">Direct SMS</span>, always)</td>
-                                <td><span class="check">✅</span> Yes (iOS Messages, requires user interaction)</td>
+                                <td><strong>{{ plat_cap_send_free }}</strong></td>
+                                <td><span class="check">✅</span> {{ plat_yes }} (<span class="notranslate"
+                                        translate="no">{{ term_direct_sms }}</span>, {{ plat_always }})</td>
+                                <td><span class="check">✅</span> {{ plat_yes }} ({{ android_table_th3 }} Messages, {{
+                                    plat_requires_interaction }}</td>
                             </tr>
                             <tr>
-                                <td><strong>Send SMS automatically</strong></td>
-                                <td><span class="check">✅</span> Yes (<span class="notranslate"
-                                        translate="no">Direct SMS</span>, always)</td>
-                                <td><span class="cross">❌</span> Only with Twilio (paid)</td>
+                                <td><strong>{{ plat_cap_send_auto }}</strong></td>
+                                <td><span class="check">✅</span> {{ plat_yes }} (<span class="notranslate"
+                                        translate="no">{{ term_direct_sms }}</span>, {{ plat_always }})</td>
+                                <td><span class="cross">❌</span> {{ plat_only_with_twilio }}</td>
                             </tr>
                             <tr>
-                                <td><strong>Works without internet</strong></td>
-                                <td><span class="check">✅</span> Yes (<span class="notranslate"
-                                        translate="no">Direct SMS</span> uses cell network)</td>
-                                <td><span class="check">✅</span> Yes (iOS Messages uses cell network)</td>
+                                <td><strong>{{ plat_cap_no_internet }}</strong></td>
+                                <td><span class="check">✅</span> {{ plat_yes }} (<span class="notranslate"
+                                        translate="no">{{ term_direct_sms }}</span> {{ plat_uses_cell }})</td>
+                                <td><span class="check">✅</span> {{ plat_yes }} ({{ android_table_th3 }} Messages {{
+                                    plat_uses_cell }})</td>
                             </tr>
                             <tr>
-                                <td><strong>Fully automatic Dead Man Timer</strong></td>
-                                <td><span class="check">✅</span> Yes</td>
-                                <td><span class="cross">❌</span> Only with Twilio (paid). Without Twilio, the Messages app opens and the user must tap Send</td>
+                                <td><strong>{{ plat_cap_dead_man }}</strong></td>
+                                <td><span class="check">✅</span> {{ plat_yes }}</td>
+                                <td><span class="cross">❌</span> {{ plat_dead_man_ios_msg }}</td>
                             </tr>
                             <tr>
-                                <td><strong>No user interaction needed</strong></td>
-                                <td><span class="check">✅</span> Yes</td>
-                                <td><span class="cross">❌</span> Only with Twilio. iOS Messages always requires tapping Send</td>
+                                <td><strong>{{ android_adv2 }}{{ plat_no_interaction }}</strong></td>
+                                <td><span class="check">✅</span> {{ plat_yes }}</td>
+                                <td><span class="cross">❌</span> {{ plat_no_user_ios_msg }}</td>
                             </tr>
                             <tr>
-                                <td><strong>Email fallback</strong></td>
-                                <td><span class="check">✅</span> Yes (when internet available)</td>
-                                <td><span class="check">✅</span> Yes (when internet available)</td>
+                                <td><strong>{{ plat_email_fallback }}</strong></td>
+                                <td><span class="check">✅</span> {{ plat_yes }} ({{ plat_when_internet }}</td>
+                                <td><span class="check">✅</span> {{ plat_yes }} ({{ plat_when_internet }}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="platform-comparison">
                     <div class="platform-card ios">
-                        <h3>iOS Limitations</h3>
-                        <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(compared to Android)</p>
+                        <h3>{{ android_table_th3 }} {{ plat_limitations }}</h3>
+                        <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">{{ plat_compared_to }} {{
+                            android_table_th2 }})</p>
                         <ul class="feature-list">
-                            <li><span class="cross">❌</span> Cannot send SMS programmatically (Apple restriction)</li>
-                            <li><span class="cross">❌</span> Fully automatic SMS requires Twilio</li>
-                            <li><span class="cross">❌</span> Dead Man Timer cannot send SMS silently without Twilio</li>
-                            <li><span class="cross">⚠️</span> iOS Messages preference requires the user to physically tap Send
+                            <li><span class="cross">❌</span> {{ ios_cant_sms }}</li>
+                            <li><span class="cross">❌</span> {{ ios_auto_sms_twilio }}</li>
+                            <li><span class="cross">❌</span> {{ ios_dead_man_twilio }}</li>
+                            <li><span class="cross">⚠️</span> {{ android_table_th3 }} Messages {{ plat_ios_tap_send }}
                             </li>
                         </ul>
                     </div>
 
                     <div class="platform-card android">
-                        <h3>Android Advantages</h3>
+                        <h3>{{ android_table_th2 }} {{ plat_advantages }}</h3>
                         <ul class="feature-list">
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Direct SMS</span> is always free and automatic</li>
-                            <li><span class="check">✅</span> No <span class="notranslate"
-                                    translate="no">Twilio</span> needed for basic functionality</li>
-                            <li><span class="check">✅</span> Dead Man Timer is always fully automatic</li>
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> adds redundancy (second method), not a requirement (as long as your phone/carrier allows Wifi calls)</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">{{ term_direct_sms
+                                    }}</span> {{ android_direct_free }}</li>
+                            <li><span class="check">✅</span> {{ android_adv2 }}<span class="notranslate"
+                                    translate="no">Twilio</span> {{ android_no_twilio_needed }}</li>
+                            <li><span class="check">✅</span> {{ android_dead_man_auto }}</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> {{
+                                android_twilio_redundancy }}</li>
                         </ul>
                     </div>
 
                     <div class="platform-card" style="border-top: 4px solid #667eea;">
-                        <h3>When Both Platforms Behave the Same</h3>
+                        <h3>{{ both_plat_same_title }}</h3>
                         <ul class="feature-list">
-                            <li><span class="check">ℹ️</span> WiFi only (no cell): Both use Wifi Call if available, Twilio or email — identical behavior</li>
-                            <li><span class="check">✅</span> Email redundancy: Works the same on both platforms</li>
+                            <li><span class="check">ℹ️</span> {{ both_wifi_only }}</li>
+                            <li><span class="check">✅</span> {{ both_email_same }}</li>
                         </ul>
                     </div>
                 </div>
@@ -1550,102 +1553,104 @@
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title">Simple, Honest Pricing</h2>
-            <p class="section-subtitle">No subscriptions. No hidden fees. Pay once, use forever.</p>
+            <h2 class="section-title">{{ pricing_h2 }} {{ footer_price }}</h2>
+            <p class="section-subtitle">{{ pricing_subtitle }}</p>
 
             <div class="pricing-cards">
                 <div class="pricing-card">
-                    <h3>Free</h3>
+                    <h3>{{ price_free_title }}</h3>
                     <div class="price">$0</div>
-                    <p class="price-note">Forever</p>
+                    <p class="price-note">{{ price_free_note }}</p>
                     <ul class="features-list">
-                        <li>✅ Up to 1 recipient</li>
-                        <li>✅ SOS & OK buttons</li>
-                        <li>✅ Reporting mode with preset messages</li>
-                        <li>✅ Alert history: last 50 messages</li>
-                        <li>✅ Smart redundancy (SMS + Wifi)</li>
-                        <li>✅ E-mail as fallback or redundancy</li>
+                        <li>✅ {{ price_free_r1 }}</li>
+                        <li>✅ {{ price_free_r2 }}</li>
+                        <li>✅ {{ price_free_r3 }}</li>
+                        <li>✅ {{ price_free_r4 }}</li>
+                        <li>✅ {{ price_free_r5 }}</li>
+                        <li>✅ {{ price_free_r6 }}</li>
                     </ul>
-                    <a href="#" class="btn btn-secondary">Get Started Free</a>
+                    <a href="#" class="btn btn-secondary">{{ price_free_cta }}</a>
                 </div>
 
                 <div class="pricing-card featured">
                     <h3><span class="notranslate" translate="no">Premium</span></h3>
                     <div class="price">€3.99</div>
-                    <p class="price-note">One-time purchase</p>
+                    <p class="price-note">{{ price_one_time_purchase }}</p>
                     <ul class="features-list">
-                        <li>✅ Up to 50 recipients</li>
-                        <li>✅ All Free features</li>
-                        <li>✅ Alert history: last 200 messages</li>
-                        <li>✅ Check-in timer</li>
-                        <li>✅ Still no monthly fees!</li>
+                        <li>✅ {{ price_pro_r1 }}</li>
+                        <li>✅ {{ price_pro_r2 }}</li>
+                        <li>✅ {{ price_pro_r3 }}</li>
+                        <li>✅ {{ price_pro_r4 }}</li>
+                        <li>✅ {{ price_pro_r5 }}</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Unlock Premium</a>
+                    <a href="#" class="btn btn-primary">{{ price_pro_cta }}</a>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS have a price, but your peace of mind doesn't</h3>
+                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 {{ sms_pricing_title }}</h3>
                 <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
-                    <span class="notranslate" translate="no">TapAlert</span> does not charge for the messages sent. The only costs you may incur are those applied by your own mobile carrier for standard SMS — just like any regular text message — and, if you choose to configure
-                    <span class="notranslate" translate="no">Twilio</span> as failback or alternative service,
+                    <span class="notranslate" translate="no">TapAlert</span> {{ sms_pricing_p1 }}
+                    <span class="notranslate" translate="no">Twilio</span> {{ sms_pricing_p2 }}
                     <a href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
-                        style="color: #667eea; text-decoration: underline;">the per-message fees set by <span
+                        style="color: #667eea; text-decoration: underline;">{{ sms_pricing_p3 }} <span
                             class="notranslate" translate="no">Twilio</span></a>
-                    (Note: there's a
+                    {{ sms_pricing_p4 }}
                     <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
-                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;">free Twilio trial account</a>
-                    but we do not recommend using it). The app itself adds zero extra cost on top.
+                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;">{{
+                        sms_pricing_p5 }}</a>
+                    {{ sms_pricing_p6 }}
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Privacy Section -->
+    <!-- {{ table_r2c1 }} Section -->
     <section class="privacy">
         <div class="container">
-            <h2 class="section-title" style="color: white;">🔒 Privacy by Design</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Your safety data stays yours. No accounts, no tracking, no surveillance.</p>
+            <h2 class="section-title" style="color: white;">🔒 {{ table_r2c1 }} {{ priv_by_design }}</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">{{ priv_subtitle }}</p>
 
             <div class="privacy-grid">
                 <div class="privacy-item">
                     <div class="icon">🙅</div>
-                    <h3>No Account Required</h3>
-                    <p>Start using immediately. No email, no registration, no profile.</p>
+                    <h3>{{ android_adv2 }}{{ priv_no_account_title }}</h3>
+                    <p>{{ priv_no_account_desc }}</p>
                 </div>
 
                 <div class="privacy-item">
                     <div class="icon">📵</div>
-                    <h3>No Ads or Tracking</h3>
-                    <p>Zero analytics, zero behavioral tracking, zero advertising identifiers.</p>
+                    <h3>{{ android_adv2 }}{{ priv_no_ads_title }}</h3>
+                    <p>{{ priv_no_ads_desc }}</p>
                 </div>
 
                 <div class="privacy-item">
                     <div class="icon">📱</div>
-                    <h3>Local Storage</h3>
-                    <p>Contacts and settings stored only on your device. You're in control.</p>
+                    <h3>{{ priv_local_title }}</h3>
+                    <p>{{ priv_local_desc }}</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Use Cases Section -->
+    <!-- {{ uc_title }} Section -->
     <section class="use-cases">
         <div class="container">
-            <h2 class="section-title">Who Is TapAlert For?</h2>
-            <p class="section-subtitle">Designed for anyone who values safety and peace of mind</p>
+            <h2 class="section-title">{{ uc_section_title }}</h2>
+            <p class="section-subtitle">{{ uc_section_subtitle }}</p>
 
             <div class="use-case-highlight" style="max-width: 600px; margin: 0 auto 40px auto; transform: scale(1.05);">
                 <div class="use-case" style="border: 2px solid #667eea; background: white;">
-                    <h3 style="font-size: 1.4rem;">👴 Older Adults & Caregivers</h3>
-                    <p style="font-size: 1.1rem;">A panic button for seniors living alone or traveling independently. One tap notifies all family members with exact location.</p>
+                    <h3 style="font-size: 1.4rem;">👴 {{ uc_1_title }} {{ uc_caregivers }}</h3>
+                    <p style="font-size: 1.1rem;">{{ uc_seniors_desc }}</p>
                 </div>
             </div>
 
             <div class="section-divider" style="text-align: center; margin-bottom: 40px; position: relative;">
                 <span
-                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">but also for...</span>
+                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">{{
+                    uc_but_also }}</span>
                 <div
                     style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #e2e8f0; z-index: 0;">
                 </div>
@@ -1654,28 +1659,28 @@
             <div class="use-cases-grid">
 
                 <div class="use-case">
-                    <h3>🥾 Solo Adventurers</h3>
-                    <p>Hikers or cyclists who want a reliable way to send their location to family at the start/end of a trail or in case of emergency.</p>
+                    <h3>🥾 {{ uc_adventurers_title }}</h3>
+                    <p>{{ uc_adventurers_desc }}</p>
                 </div>
 
                 <div class="use-case">
-                    <h3>🌙 Personal Safety</h3>
-                    <p>Walking home late at night or using ride-shares? Send a discreet "Watch my back" alert to friends and family.</p>
+                    <h3>🌙 {{ uc_personal_title }}</h3>
+                    <p>{{ uc_personal_desc }}</p>
                 </div>
 
                 <div class="use-case">
-                    <h3>💼 Small Businesses</h3>
-                    <p>Field workers or lone employees (real estate agents, delivery drivers) who need a simple check-in or distress signal.</p>
+                    <h3>💼 {{ uc_business_title }}</h3>
+                    <p>{{ uc_business_desc }}</p>
                 </div>
 
                 <div class="use-case">
-                    <h3>✈️ International Travelers</h3>
-                    <p>Using Wi-Fi messaging to bypass expensive roaming SMS fees while keeping family updated on your whereabouts.</p>
+                    <h3>✈️ {{ uc_travelers_title }}</h3>
+                    <p>{{ uc_travelers_desc }}</p>
                 </div>
 
                 <div class="use-case">
-                    <h3>👨‍👩‍👧‍👦 Families Staying Connected</h3>
-                    <p>Keep tabs on family members with quick "I'm OK" check-ins without the need for constant phone calls or texts.</p>
+                    <h3>👨‍👩‍👧‍👦 {{ uc_families_title }}</h3>
+                    <p>{{ uc_families_desc }}</p>
                 </div>
             </div>
         </div>
@@ -1684,51 +1689,51 @@
     <!-- Guides Section -->
     <section class="guides" id="guides" style="padding: 80px 20px; background: white;">
         <div class="container">
-            <h2 class="section-title">Step by Step Guides</h2>
-            <p class="section-subtitle">Master TapAlert with our easy-to-follow guides</p>
+            <h2 class="section-title">{{ section_guides_title }}</h2>
+            <p class="section-subtitle">{{ guides_subtitle }}</p>
 
             <div class="features-grid">
                 <a href="quickstart_android.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">🚀</div>
-                        <h3>Quick Start</h3>
-                        <p>Get up and running in seconds. The essentials you need to know.</p>
+                        <h3>{{ guide_qs_title }}</h3>
+                        <p>{{ guide_qs_desc }}</p>
                     </div>
                 </a>
 
                 <a href="one_tap_alert.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">👆</div>
-                        <h3>One Tap Alert</h3>
-                        <p>How to send alerts instantly with a single tap.</p>
+                        <h3>{{ guide_ota_title }}</h3>
+                        <p>{{ guide_ota_desc }}</p>
                     </div>
                 </a>
                 <a href="sms_stand_out.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">✨</div>
-                        <h3>Make your SMS Alert stand out</h3>
-                        <p>How your contacts can prioritize your notifications.</p>
+                        <h3>{{ guide_sms_title }}</h3>
+                        <p>{{ guide_sms_desc }}</p>
                     </div>
                 </a>
                 <a href="twilio_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">💬</div>
-                        <h3>Configuring Twilio</h3>
-                        <p>Configure cloud SMS for redundancy and international travel.</p>
+                        <h3>{{ guide_twilio_title }}</h3>
+                        <p>{{ guide_twilio_desc }}</p>
                     </div>
                 </a>
                 <a href="email_redundancy_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📧</div>
-                        <h3>Configuring e-mail redundancy</h3>
-                        <p>Configure e-mail as fallback or redundancy alert messaging.</p>
+                        <h3>{{ guide_email_title }}</h3>
+                        <p>{{ guide_email_desc }}</p>
                     </div>
                 </a>
                 <a href="accessibility_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">🦻</div>
-                        <h3>Accessibility Features</h3>
-                        <p>Learn about features designed for vision, hearing, and motor assistance.</p>
+                        <h3>{{ guide_a11y_title }}</h3>
+                        <p>{{ guide_a11y_desc }}</p>
                     </div>
                 </a>
             </div>
@@ -1739,9 +1744,9 @@
     <section class="notice">
         <div class="notice-content">
             <div class="notice-icon">⚠️</div>
-            <h2>Important Safety Notice</h2>
-            <p><strong>TapAlert is NOT a replacement for emergency services like 911 or 112.</strong></p>
-            <p style="margin-top: 15px;">Message delivery depends on network availability and recipient action. This app does not provide monitoring, emergency response, or guaranteed delivery. In real emergencies, always contact emergency services directly.</p>
+            <h2>{{ notice_title }}</h2>
+            <p><strong>{{ notice_not_911 }}</strong></p>
+            <p style="margin-top: 15px;">{{ notice_disclaimer }}</p>
         </div>
     </section>
 
@@ -1751,41 +1756,42 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Simple emergency alerts for everyone. No subscriptions, no tracking, just safety.</p>
+                    <p>{{ footer_tagline }}</p>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Product</h3>
+                    <h3>{{ footer_product }}</h3>
                     <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#download">Download</a></li>
+                        <li><a href="#features">{{ android_table_th1 }}s</a></li>
+                        <li><a href="#pricing">{{ footer_price }}</a></li>
+                        <li><a href="#download">{{ footer_download_h }}</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>{{ footer_legal }}</h3>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="PRIVACY_POLICY.html">{{ footer_privacy }}</a></li>
+                        <li><a href="terms.html">{{ footer_terms }}</a></li>
+                        <li><a href="contact.html">{{ nav_contact }}</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h3>{{ footer_support }}</h3>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Step by Step Guides</a></li>
-                        <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
-                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
-                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="#">{{ footer_faq }}</a></li>
+                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> {{ footer_guides
+                                }}</a></li>
+                        <li><a href="accessibility_guide.html">{{ footer_a11y }}</a></li>
+                        <li><a href="troubleshooting.html">{{ nav_troubleshooting }}</a></li>
+                        <li><a href="contact.html">{{ footer_contact_support }}</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. {{ footer_copyright }}</p>
             </div>
         </div>
     </footer>

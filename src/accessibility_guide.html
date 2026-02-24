@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ html_lang }}">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="alternate" hreflang="en" href="https://tapalert.app/accessibility_guide.html">
-    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/accessibility_guide.html">
-    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/accessibility_guide.html">
+    {{ hreflang_tags }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Guide - TapAlert</title>
+    <title>{{ footer_a11y }} - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -364,20 +362,14 @@
                 <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
                     class="notranslate" translate="no">TapAlert</span>
             </a>
-            <a href="index.html" class="btn btn-primary">Back to Home</a>
-        <div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
-    <div class="lang-dropdown-content">
-        <a href="accessibility_guide.html" hreflang="en" class="active">EN</a>
-        <a href="es/accessibility_guide.html" hreflang="es">ES</a>
-    </div>
-</div>
+            <a href="index.html" class="btn btn-primary">{{ guide_back }}</a>
+        {{ lang_switcher }}
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="guide-container">
-        <a href="index.html#guides" class="back-link">← Back to Guides</a>
+        <a href="index.html#guides" class="back-link">{{ guide_back_guides }}</a>
 
         <div class="guide-header">
             <h1 class="guide-title">Accessibility Features for Seniors</h1>
@@ -387,7 +379,7 @@
         <section class="guide-section" id="step-1">
             <h2>1. Large Text Support</h2>
             <p><strong>Who it helps:</strong> People with low vision or difficulty reading small text.</p>
-            <p>TapAlert respects the font size you set in your phone's system settings. If you increase the text size in <strong>Settings > Display > Font Size</strong> (Android) or <strong>Settings > Accessibility > Display & Text Size > Larger Text</strong> (iOS), all text in TapAlert will grow accordingly — buttons, labels, menus, and messages.</p>
+            <p>TapAlert respects the font size you set in your phone's system settings. If you increase the text size in <strong>Settings > Display > Font Size</strong> ({{ android_table_th2 }}) or <strong>Settings > Accessibility > Display & Text Size > Larger Text</strong> (iOS), all text in TapAlert will grow accordingly —{{ phil_sen_li2 }}s, labels, menus, and messages.</p>
             <div class="alert-box">
                 <h4>💡 No action needed inside the app</h4>
                 <p>Just set your preferred font size in your phone settings and TapAlert will follow it automatically.</p>
@@ -399,14 +391,14 @@
             <p><strong>Who it helps:</strong> People with severe vision impairment who use a screen reader.</p>
             <p>TapAlert works natively with:</p>
             <ul>
-                <li><strong>TalkBack</strong> on Android (Settings > Accessibility > TalkBack)</li>
+                <li><strong>TalkBack</strong> on {{ android_table_th2 }} (Settings > Accessibility > TalkBack)</li>
                 <li><strong>VoiceOver</strong> on iPhone (Settings > Accessibility > VoiceOver)</li>
             </ul>
             <p>When a screen reader is active:</p>
             <ul>
-                <li>The <strong><span class="notranslate" translate="no">SOS</span></strong> and <strong>I'm OK</strong> buttons are announced with their names and current state (enabled or disabled).</li>
+                <li>The <strong><span class="notranslate" translate="no">SOS</span></strong> and <strong>I'm OK</strong>{{ phil_sen_li2 }}s are announced with their names and current state (enabled or disabled).</li>
                 <li>When you start a countdown before sending an alert, the screen reader counts down the remaining seconds aloud so you always know how long you have before the alert is sent.</li>
-                <li>After an alert is sent, the screen reader announces <strong>"Alert sent"</strong> or <strong>"Alert failed"</strong> so you know the outcome without needing to look at the screen.</li>
+                <li>After an alert is sent, the screen reader announces <strong>"Alert sent"</strong> or <strong>"Alert failed"</strong> so you know the outcome {{ ts_loc_li7 }} needing to look at the screen.</li>
             </ul>
         </section>
 
@@ -484,9 +476,9 @@
         <section class="guide-section" id="step-6">
             <h2>6. Swipe to Cancel the Countdown</h2>
             <p><strong>Who it helps:</strong> Anyone who accidentally starts a countdown and needs to cancel it quickly.</p>
-            <p>When you tap the <span class="notranslate" translate="no">SOS</span> button, a countdown dialog appears before the alert is sent. You can cancel it in two ways:</p>
+            <p>When you tap the <span class="notranslate" translate="no">SOS</span>{{ phil_sen_li2 }}, a countdown dialog appears before the alert is sent. You can cancel it in two ways:</p>
             <ul>
-                <li>Tap the <strong>Cancel</strong> button at the bottom of the dialog.</li>
+                <li>Tap the <strong>Cancel</strong>{{ phil_sen_li2 }} at the bottom of the dialog.</li>
                 <li><strong>Swipe the dialog left or right</strong> — the dialog slides with your finger and dismisses when you release it far enough.</li>
             </ul>
             <p>Either way, you will feel two short vibrations confirming the alert was cancelled and nothing was sent.</p>
@@ -501,22 +493,22 @@
 
         <section class="guide-section" id="step-8">
             <h2>8. Hold-to-Send Mode</h2>
-            <p><strong>Who it helps:</strong> People who are prone to accidentally tapping the <span class="notranslate" translate="no">SOS</span> button.</p>
-            <p>By default, the <span class="notranslate" translate="no">SOS</span> button requires only a single tap. If accidental presses are a concern, you can switch to <strong>Hold to Send</strong> mode:</p>
+            <p><strong>Who it helps:</strong> People who are prone to accidentally tapping the <span class="notranslate" translate="no">SOS</span>{{ phil_sen_li2 }}.</p>
+            <p>By default, the <span class="notranslate" translate="no">SOS</span>{{ phil_sen_li2 }} requires only a single tap. If accidental presses are a concern, you can switch to <strong>Hold to Send</strong> mode:</p>
             <p>Go to <strong>Settings → Trigger Method → Hold to Send</strong>.</p>
-            <p>In this mode, you must press and hold the button for the full hold duration before the alert is triggered, preventing accidental sends.</p>
+            <p>In this mode, you {{ ts_em_li5 }} press and hold the{{ phil_sen_li2 }} for the full hold duration before the alert is triggered, preventing accidental sends.</p>
         </section>
 
         <section class="guide-section" id="step-9">
-            <h2>9. Home Screen Widget (Android)</h2>
+            <h2>9. {{ feat_widget_title }} ({{ android_table_th2 }})</h2>
             <p><strong>Who it helps:</strong> Anyone who finds it difficult to unlock their phone and open the app in an emergency.</p>
-            <p>On Android, you can add a TapAlert widget to your home screen so the <span class="notranslate" translate="no">SOS</span> button is always one tap away — without opening the app at all.</p>
-            <p>To add the widget: <strong>Settings → Home Screen Widget → Add Widget</strong>.</p>
+            <p>On {{ android_table_th2 }}, you can add a TapAlert widget to your home screen so the <span class="notranslate" translate="no">SOS</span>{{ phil_sen_li2 }} is always one tap away — {{ ts_loc_li7 }} opening the app at all.</p>
+            <p>To add the widget: <strong>Settings → {{ feat_widget_title }} → Add Widget</strong>.</p>
         </section>
 
         <div class="next-steps">
-            <h3>Need more help?</h3>
-            <p>If you have any questions about configuring these features or need assistance, check our <a href="troubleshooting.html">Troubleshooting Guide</a> or <a href="contact.html">Contact Support</a>.</p>
+            <h3>{{ ts_need_more }}</h3>
+            <p>If you have any questions about configuring these {{ price_features }} or need assistance, check our <a href="troubleshooting.html">{{ ts_h1 }}</a> or <a href="contact.html">{{ footer_contact_support }}</a>.</p>
         </div>
 </main>
 
@@ -526,41 +518,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Simple emergency alerts for everyone. No subscriptions, no tracking, just safety.</p>
+                    <p>{{ footer_tagline }}</p>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Product</h3>
+                    <h3>{{ footer_product }}</h3>
                     <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="index.html#features">{{ footer_features }}</a></li>
+                        <li><a href="index.html#pricing">{{ footer_price }}</a></li>
+                        <li><a href="index.html#download">{{ footer_download_h }}</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>{{ footer_legal }}</h3>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="PRIVACY_POLICY.html">{{ footer_privacy }}</a></li>
+                        <li><a href="terms.html">{{ footer_terms }}</a></li>
+                        <li><a href="contact.html">{{ nav_contact }}</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h3>{{ footer_support }}</h3>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by Step Guides</a></li>
-                        <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
-                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
-                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="#">{{ footer_faq }}</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>{{ footer_guides }}</a></li>
+                        <li><a href="accessibility_guide.html">{{ footer_a11y }}</a></li>
+                        <li><a href="troubleshooting.html">{{ nav_troubleshooting }}</a></li>
+                        <li><a href="contact.html">{{ footer_contact_support }}</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. {{ footer_copyright }}</p>
             </div>
         </div>
     </footer>
