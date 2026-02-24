@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/accessibility_guide.html">
+    <link rel="alternate" hreflang="de" href="https://tapalert.app/de/accessibility_guide.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/accessibility_guide.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/accessibility_guide.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/accessibility_guide.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/accessibility_guide.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/accessibility_guide.html">
+    <link rel="alternate" hreflang="it" href="https://tapalert.app/it/accessibility_guide.html">
+    <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/accessibility_guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/accessibility_guide.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitfaden zur Barrierefreiheit - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            color: #c05621;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                    class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Zurück nach Hause</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">DE</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
+            <a href="../de/accessibility_guide.html" hreflang="de" class="active">DE</a>
+            <a href="../accessibility_guide.html" hreflang="en">EN</a>
+            <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
+            <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
+            <a href="../it/accessibility_guide.html" hreflang="it">IT</a>
+            <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Zurück zu Anleitungen</a>
+
+        <div class="guide-header">
+            <h1 class="guide-title">Barrierefreiheitsfunktionen für Senioren</h1>
+            <p class="guide-meta"><span class="notranslate" translator="no">TapAlert</span> ist so konzipiert, dass es von jedem genutzt werden kann, auch von Menschen mit Hörverlust, Sehbehinderung, Zittern oder anderen altersbedingten Erkrankungen. In diesem Handbuch werden die einzelnen Barrierefreiheitsfunktionen erläutert und erläutert, wie Sie diese optimal nutzen können.</p>
+        </div>
+
+        <section class="guide-section" id="step-1">
+            <h2>1. Unterstützung für großen Text</h2>
+            <p><strong>Wem es hilft:</strong> Menschen mit Sehbehinderung oder Schwierigkeiten beim Lesen kleiner Texte.</p>
+            <p><span class="notranslate" translator="no">TapAlert</span> berücksichtigt die Schriftgröße, die Sie in den Systemeinstellungen Ihres Telefons festgelegt haben. Wenn Sie die Textgröße in <strong>Einstellungen > Anzeige > Schriftgröße</strong> (Android) oder <strong>Einstellungen > Barrierefreiheit > Anzeige & Textgröße > Größerer Text</strong> (iOS) erhöhen, wird der gesamte Text in <span class="notranslate" translator="no">TapAlert</span> entsprechend vergrößert – Schaltflächen, Beschriftungen, Menüs und Nachrichten.</p>
+            <div class="alert-box">
+                <h4>💡 Innerhalb der App ist keine Aktion erforderlich</h4>
+                <p>Legen Sie einfach Ihre bevorzugte Schriftgröße in Ihren Telefoneinstellungen fest und <span class="notranslate" translator="no">TapAlert</span> folgt dieser automatisch.</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="step-2">
+            <h2>2. Screenreader-Unterstützung (TalkBack / VoiceOver)</h2>
+            <p><strong>Wem es hilft:</strong> Menschen mit schwerer Sehbehinderung, die einen Screenreader verwenden.</p>
+            <p><span class="notranslate" translator="no">TapAlert</span> funktioniert nativ mit:</p>
+            <ul>
+                <li><strong>TalkBack</strong> auf Android (Einstellungen > Barrierefreiheit > TalkBack)</li>
+                <li><strong>VoiceOver</strong> auf dem iPhone (Einstellungen > Eingabehilfen > VoiceOver)</li>
+            </ul>
+            <p>Wenn ein Screenreader aktiv ist:</p>
+            <ul>
+                <li>Die Schaltflächen <strong><span class="notranslate" translator="no">SOS</span></strong> und <strong>I'm OK</strong> werden mit ihrem Namen und ihrem aktuellen Status (aktiviert oder deaktiviert) angesagt.</li>
+                <li>Wenn Sie einen Countdown starten, bevor Sie eine Benachrichtigung senden, zählt der Bildschirmleser die verbleibenden Sekunden laut herunter, sodass Sie immer wissen, wie lange es noch dauert, bis die Benachrichtigung gesendet wird.</li>
+                <li>Nachdem eine Warnung gesendet wurde, meldet der Bildschirmleser <strong>„Benachrichtigung gesendet“</strong> oder <strong>„Benachrichtigung fehlgeschlagen“</strong>, sodass Sie das Ergebnis erfahren, ohne auf den Bildschirm schauen zu müssen.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section" id="step-3">
+            <h2>3. Haptisches Feedback (Telefonvibration)</h2>
+            <p><strong>Wem es hilft:</strong> Menschen mit Hörverlust, die den Countdown-Ton nicht hören können, oder alle, die eine taktile Bestätigung bevorzugen.</p>
+            <p><span class="notranslate" translator="no">TapAlert</span> nutzt den Vibrationsmotor Ihres Telefons, um Ihnen in wichtigen Momenten körperliches Feedback zu geben:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Moment</th>
+                        <th>Vibration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Countdown-Tick</td>
+                        <td>Ein fester Puls pro Sekunde – Sie können den Countdown in Ihrer Hand spüren</td>
+                    </tr>
+                    <tr>
+                        <td>Warnung erfolgreich gesendet</td>
+                        <td>Drei starke Impulse schnell hintereinander</td>
+                    </tr>
+                    <tr>
+                        <td>Warnung fehlgeschlagen</td>
+                        <td>Zwei schnelle Summen</td>
+                    </tr>
+                    <tr>
+                        <td>Countdown abgebrochen</td>
+                        <td>Zwei mittlere Impulse – bestätigt, dass Sie abgebrochen und nicht gesendet haben</td>
+                    </tr>
+                    <tr>
+                        <td>Keine Empfänger konfiguriert</td>
+                        <td>Eine lange Vibration (Fehler)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert-box">
+                <h4>💡 Es sind keine Maßnahmen erforderlich</h4>
+                <p>Das haptische Feedback funktioniert automatisch, solange die Vibration auf Ihrem Telefon aktiviert ist (überprüfen Sie den Stumm-/Vibrationsschalter Ihres Telefons).</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="step-4">
+            <h2>4. Akustische Warnungen</h2>
+            <p><strong>Wem es hilft:</strong> Personen, die hören müssen, wenn eine Warnung gesendet wird, einschließlich Personen mit mittelschwerem Hörverlust.</p>
+            <p>Wenn eine Warnung gesendet wird, spielt <span class="notranslate" translator="no">TapAlert</span> einen Ton auf <strong>Ihrem eigenen Gerät</strong> ab, um zu bestätigen, dass die Warnung ausgegeben wurde. Sie können den Ton unter <strong>Einstellungen > Benachrichtigungston</strong> anpassen:</p>
+            <ul>
+                <li><strong>Keine</strong> – kein Ton</li>
+                <li><strong>Plain Sounds</strong> – einfache, klare Töne (gut für die meisten Benutzer)</li>
+                <li><strong>Rich Sounds</strong> – vollere, musikalischere Töne</li>
+            </ul>
+            <p>Innerhalb jedes Soundstils können Sie außerdem Folgendes anpassen:</p>
+            <ul>
+                <li><strong>Tonhöhe</strong> – nach links schieben für einen tieferen, tieferen Ton. Tiefere Töne (ca. 500 Hz) sind für Menschen mit altersbedingtem Hochfrequenz-Schwerhörigkeit besser zu hören. Aus diesem Grund ist die Tonhöhe standardmäßig bereits auf eine niedrigere Tonhöhe eingestellt.</li>
+                <li><strong>Lautstärke</strong>: Legen Sie fest, wie laut der Bestätigungston abgespielt wird.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section" id="step-5">
+            <h2>5. Bildschirmblitz und Taschenlampenblitz</h2>
+            <p><strong>Wem es hilft:</strong> Menschen mit Hörverlust, denen der Ton möglicherweise entgeht, oder Personen in einer lauten Umgebung. Auch nützlich, wenn das Telefon verdeckt oder in einer Tasche liegt.</p>
+            <p>Wenn eine Warnung erfolgreich gesendet wurde, erzeugt <span class="notranslate" translator="no">TapAlert</span> Folgendes:</p>
+            <ol>
+                <li><strong>Bildschirmblitz</strong> – der gesamte Bildschirm leuchtet dreimal schnell hintereinander weiß auf.</li>
+                <li><strong>Taschenlampenblitz</strong> – die Kamera-LED auf der Rückseite des Telefons blinkt dreimal gleichzeitig und ist auch sichtbar, wenn der Bildschirm nach unten zeigt.</li>
+            </ol>
+            <p>Beide Blitze laufen gleichzeitig und sind in weniger als einer Sekunde abgeschlossen.</p>
+            <div class="alert-box warning">
+                <h4>⚠️ So schalten Sie das aus</h4>
+                <p>Wenn Sie lichtempfindlich sind, gehen Sie zu <strong>Einstellungen → Benachrichtigungston → Blitz bei Alarm</strong> und schalten Sie es aus.</p>
+            </div>
+        </section>
+
+        <section class="guide-section" id="step-6">
+            <h2>6. Wischen Sie, um den Countdown abzubrechen</h2>
+            <p><strong>Wem es hilft:</strong> Jeder, der versehentlich einen Countdown startet und ihn schnell abbrechen muss.</p>
+            <p>Wenn Sie auf die Schaltfläche <span class="notranslate" translator="no">SOS</span> tippen, wird ein Countdown-Dialogfeld angezeigt, bevor die Warnung gesendet wird. Sie können es auf zwei Arten kündigen:</p>
+            <ul>
+                <li>Tippen Sie unten im Dialog auf die Schaltfläche <strong>Abbrechen</strong>.</li>
+                <li><strong>Wischen Sie den Dialog nach links oder rechts</strong> – der Dialog wird mit Ihrem Finger verschoben und ausgeblendet, wenn Sie ihn weit genug loslassen.</li>
+            </ul>
+            <p>In beiden Fällen werden Sie zwei kurze Vibrationen spüren, die bestätigen, dass der Alarm abgebrochen wurde und nichts gesendet wurde.</p>
+        </section>
+
+        <section class="guide-section" id="step-7">
+            <h2>7. Verfassen von Sprachnachrichten</h2>
+            <p><strong>Wem es hilft:</strong> Menschen mit Zittern, Arthritis oder anderen Erkrankungen, die das Tippen erschweren.</p>
+            <p>Anstatt vor dem Senden einer Benachrichtigung eine benutzerdefinierte Nachricht einzugeben, können Sie diese auch sprechen. Tippen Sie im Nachrichtenfeld auf das <strong>Mikrofonsymbol</strong> und sprechen Sie Ihre Nachricht. Die App transkribiert Ihre Wörter automatisch. Stille für 3 Sekunden stoppt die Aufnahme.</p>
+            <p>Dies funktioniert bei der Nachrichteneingabe auf dem Startbildschirm und im Totmann-Timer-Dialog.</p>
+        </section>
+
+        <section class="guide-section" id="step-8">
+            <h2>8. Hold-to-Send-Modus</h2>
+            <p><strong>Wem es hilft:</strong> Personen, die dazu neigen, versehentlich auf die <span class="notranslate" translator="no">SOS</span>-Schaltfläche zu tippen.</p>
+            <p>Standardmäßig ist für die Schaltfläche <span class="notranslate" translator="no">SOS</span> nur ein einziges Tippen erforderlich. Wenn versehentliches Drücken ein Problem darstellt, können Sie in den Modus <strong>Gedrückt halten, um zu senden</strong> wechseln:</p>
+            <p>Gehen Sie zu <strong>Einstellungen → Auslösemethode → Zum Senden gedrückt halten</strong>.</p>
+            <p>In diesem Modus müssen Sie die Taste für die gesamte Haltedauer gedrückt halten, bevor der Alarm ausgelöst wird, um versehentliches Senden zu verhindern.</p>
+        </section>
+
+        <section class="guide-section" id="step-9">
+            <h2>9. Startbildschirm-Widget (Android)</h2>
+            <p><strong>Wem es hilft:</strong> Jeder, dem es im Notfall schwerfällt, sein Telefon zu entsperren und die App zu öffnen.</p>
+            <p>Auf Android können Sie ein <span class="notranslate" translator="no">TapAlert</span>-Widget zu Ihrem Startbildschirm hinzufügen, sodass die <span class="notranslate" translator="no">SOS</span>-Schaltfläche immer nur einen Fingertipp entfernt ist – ohne die App überhaupt öffnen zu müssen.</p>
+            <p>So fügen Sie das Widget hinzu: <strong>Einstellungen → Startbildschirm-Widget → Widget hinzufügen</strong>.</p>
+        </section>
+
+        <div class="next-steps">
+            <h3>Benötigen Sie weitere Hilfe?</h3>
+            <p>If you have any questions about configuring these Merkmale or need assistance, check our <a
+                    href="troubleshooting.html">Leitfaden zur Fehlerbehebung</a> or <a href="contact.html">Kontaktieren Sie den Support</a>.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Einfache Notfallwarnungen für alle. Keine Abonnements, kein Tracking, nur Sicherheit.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produkt</h3>
+                    <ul>
+                        <li><a href="index.html#features">Merkmale</a></li>
+                        <li><a href="index.html#pricing">Preise</a></li>
+                        <li><a href="index.html#download">Herunterladen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Datenschutzrichtlinie</a></li>
+                        <li><a href="terms.html">Nutzungsbedingungen</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Unterstützung</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
+                        <li><a href="accessibility_guide.html">Leitfaden zur Barrierefreiheit</a></li>
+                        <li><a href="troubleshooting.html">Fehlerbehebung</a></li>
+                        <li><a href="contact.html">Kontaktieren Sie den Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. | Hergestellt mit ❤️ für Ihre Sicherheit</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

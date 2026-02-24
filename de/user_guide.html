@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/user_guide.html">
+    <link rel="alternate" hreflang="de" href="https://tapalert.app/de/user_guide.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/user_guide.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/user_guide.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/user_guide.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/user_guide.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/user_guide.html">
+    <link rel="alternate" hreflang="it" href="https://tapalert.app/it/user_guide.html">
+    <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/user_guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/user_guide.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapAlert - Benutzerhandbuch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles from index.html */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-intro {
+            font-size: 1.2rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        blockquote {
+            padding: 20px;
+            background: #f8fafc;
+            border-left: 5px solid #cbd5e0;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+        }
+
+        /* Alert Styles based on Blockquotes */
+        .alert-note {
+            background-color: #ebf8ff;
+            border-left-color: #4299e1;
+            color: #2b6cb0;
+        }
+
+        .alert-tip {
+            background-color: #f0fff4;
+            border-left-color: #48bb78;
+            color: #2f855a;
+        }
+
+        .alert-important {
+            background-color: #fff5f5;
+            border-left-color: #f56565;
+            color: #c53030;
+        }
+
+        .alert-warning {
+            background-color: #fffff0;
+            border-left-color: #ecc94b;
+            color: #744210;
+        }
+
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e53e3e;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .guide-intro {
+                font-size: 1.05rem;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            blockquote {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            code {
+                font-size: 0.85rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            .guide-intro {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            h4 {
+                font-size: 0.95rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            blockquote {
+                padding: 12px;
+            }
+
+            code {
+                font-size: 0.8rem;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                    class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Zurück nach Hause</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">DE</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/user_guide.html" hreflang="ca">CA</a>
+            <a href="../de/user_guide.html" hreflang="de" class="active">DE</a>
+            <a href="../user_guide.html" hreflang="en">EN</a>
+            <a href="../es/user_guide.html" hreflang="es">ES</a>
+            <a href="../eu/user_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/user_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/user_guide.html" hreflang="gl">GL</a>
+            <a href="../it/user_guide.html" hreflang="it">IT</a>
+            <a href="../pt/user_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Zurück zu Anleitungen</a>
+
+        <h1 class="guide-title">Benutzerhandbuch: <span class="notranslate" translate="no">TapAlert</span></h1>
+        <p class="guide-intro">In dieser Anleitung wird erklärt, wie Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> auf Ihrem Android oder iOS-Gerät konfigurieren und verwenden.</p>
+
+        <section class="guide-section">
+            <h2>1. 🛡️ Erforderliche Berechtigungen</h2>
+            <p>Beim ersten Start fordert die App die folgenden Berechtigungen an:</p>
+            <ul>
+                <li><strong>SMS (nur Android):</strong> Wird zum Senden von Direktnachrichten von der SIM-Karte Ihres Telefons benötigt.</li>
+                <li><strong>Standort:</strong> Erforderlich, um Ihre GPS-Koordinaten in die Warnmeldung aufzunehmen.</li>
+                <li><strong>Mikrofon:</strong> Erforderlich, wenn Sie die Sprachaufzeichnungsfunktion zum Transkribieren Ihrer Warnmeldung verwenden.</li>
+                <li><strong>Kontakte:</strong> Wird benötigt, um Empfänger einfach aus dem Adressbuch Ihres Telefons auszuwählen.</li>
+            </ul>
+            <blockquote class="alert-note">
+                <strong>HINWEIS:</strong> Unter iOS wird der <span class="notranslate" translator="no">direkte SMS-Versand</span> vom System für automatische Benachrichtigungen nicht unterstützt. Sie muss verwenden die Methode <strong><span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span></strong>.
+            </blockquote>
+        </section>
+
+        <section class="guide-section">
+            <h2>2. 📱 Schnittstellenmodi</h2>
+            <p><span class="notranslate" translator="no">TapAlert</span> bietet zwei unterschiedliche Schnittstellenmodi, um Ihren Anforderungen gerecht zu werden. Sie können unter <strong>Einstellungen > Schnittstellenmodus</strong> zwischen ihnen wechseln.</p>
+
+            <h3><span class="notranslate" Translate="no">Panikmodus</span> (<span class="notranslate" Translate="no">SOS</span> / OK)</h3>
+            <p>Eine optimierte Benutzeroberfläche, die auf maximale Einfachheit und Zugänglichkeit ausgelegt ist und sich ideal für ältere Benutzer oder Situationen mit hohem Stress eignet.</p>
+            <ul>
+                <li><strong>Große <span class="notranslate" translator="no">SOS</span>-Schaltfläche:</strong> Startet sofort den Countdown für eine „<span class="notranslate" translator="no">SOS</span>-Benachrichtigung, ich brauche Hilfe.</li>
+                <li><strong>Mir geht es gut-Schaltfläche:</strong> Sendet schnell eine „Mir geht es gut“-Statusaktualisierung, um Kontakte zu beruhigen.</li>
+                <li><strong>Sprachschaltflächen:</strong> Jeder Abschnitt verfügt über eine als eigene StimmeTaste zum Aufzeichnen und Senden eines Audiotranskripts zusammen mit dem <span class="notranslate" translator="no">SOS</span>- oder OK-Status.</li>
+                <li><strong>Notruftaste:</strong> Eine dedizierteTaste, um basierend auf Ihrem Standort sofort örtliche Notrufdienste (z. B. 112, 911) anzurufen.</li>
+            </ul>
+
+            <h3>Berichtsmodus (Registerkarten)</h3>
+            <p>Der Standardmodus bietet Flexibilität mit mehreren Nachrichtentypen.</p>
+            <ul>
+                <li><strong>4 Nachrichtenregisterkarten:</strong> Konfigurieren Sie verschiedene Warnungen vorab (z. B. „Medizinisch“, „Autoproblem“, „Allgemein“).</li>
+                <li><strong>Anpassbarer Text:</strong> Tippen Sie in das Nachrichtenfeld, um Inhalte im Handumdrehen zu bearbeiten.</li>
+                <li><strong>Sprachtranskription:</strong> Verwenden Sie das Mikrofon, um eine benutzerdefinierte Nachricht zu diktieren.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>3. 📝 Vordefinierte Nachrichten einrichten (Berichtsmodus)</h2>
+            <p><span class="notranslate" translator="no">TapAlert</span> verfügt über vier vordefinierte Nachrichtenslots (Registerkarten), mit denen Sie schnell zwischen verschiedenen Alarmszenarien wechseln können.</p>
+
+            <h3>BearbeitenNachrichten senden</h3>
+            <ol>
+                <li><strong>Wählen ein Tab:</strong> Tippen Sie oben auf einen der nummerierten Tabs (1-3).</li>
+                <li><strong>Bearbeiten Text:</strong> Tippen Sie in das Nachrichtenfeld, um Ihre benutzerdefinierte Warnmeldung einzugeben (z. B. „Medizinischer Notfall“, „Problem im Auto“).</li>
+                <li><strong>Automatisch speichern:</strong> Ihre Änderungen werden während der Eingabe automatisch gespeichert.</li>
+                <li><strong>Diktieren:</strong> Sie können Ihre Nachricht auch über das Diktatsymbol diktieren.</li>
+            </ol>
+
+            <h3>🎙️ Sprachschnelle Warnmeldung</h3>
+            <p>Sie können den Warntext mit Ihrer Stimme in Echtzeit generieren. Dies ist nützlich, um eine bestimmte Situation schnell zu beschreiben. Die Nachricht wird auf der 4. Registerkarte gespeichert.</p>
+            <ol>
+                <li><strong>Tippen Sie rot auf das MikrofonTaste:</strong> Es beginnt zu <strong>pulsieren</strong>, wenn es aktiv ist.</li>
+                <li><strong>Sprechen Sie Ihre Nachricht:</strong> Die Statusleiste unten wird <strong>hellorange</strong> und zeigt beim Zuhören ein Schallwellensymbol an.</li>
+                <li><strong>Automatische Aktualisierung und sofortiges Senden:</strong> Nach erneutem Sprechen oder Tippen auf das MikrofonTaste wird der Nachrichtentext aktualisiert und der <strong>ALARM SENDEN</strong> wird sofort ausgelöst. Sie können auch direkt während der Aufnahme auf <strong>ALARM SENDEN</strong>Taste drücken. Die App stoppt die Aufnahme automatisch und speichert und sendet die transkribierte Nachricht sofort.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>4. 👥 Empfänger einrichten/verwalten</h2>
+            <p>Dies erfolgt im speziellen <strong>Empfängerbildschirm</strong>, auf den Sie über die obere Leiste des Startbildschirms zugreifen können:</p>
+            <ol>
+                <li><strong>Empfänger öffnen:</strong> Tippen Sie auf das <strong>Personen-/Gruppensymbol</strong> (👥) in der oberen rechten Symbolleiste.</li>
+                <li><strong>Nummer hinzufügen:</strong>
+                    <ul>
+                        <li>Tippen Sie auf <strong>„Hinzufügen“</strong>Taste, um manuell eine Telefonnummer einzugeben.</li>
+                        <li>Tippen Sie auf das Symbol <strong>Kontakt</strong>, um eine Nummer direkt aus dem Adressbuch Ihres Telefons auszuwählen.</li>
+                    </ul>
+                </li>
+                <li><strong>Format:</strong> Verwenden Sie für beste Ergebnisse das <strong>internationale E.164-Format</strong> (z. B. <code>+34600000000</code>).</li>
+                <li><strong>Entfernen:</strong> Tippen Sie auf das Löschsymbol neben einer beliebigen Nummer in der Liste, um sie zu entfernen. Sie können auch „Alle löschen“ verwenden, indem Sie oben auf das Papierkorbsymbol klicken.</li>
+            </ol>
+            <blockquote class="alert-tip">
+                <strong>TIPP: Sie können nicht alle Ihre Kontakte sehen?</strong>
+                <ul>
+                    <li><strong>iOS:</strong> Wenn Sie „Wählen Kontakte...“ (eingeschränkter Zugriff) ausgewählt haben, kann die App nur die wenigen von Ihnen ausgewählten sehen. Um dies zu beheben, gehen Sie zu <strong>iPhone-Einstellungen > Privatsphäre & Sicherheit > Kontakte > <span class="notranslate" translator="no">TapAlert</span></strong> und wählen Sie <strong>"Alle Kontakte"</strong>.</li>
+                    <li><strong>Android:</strong> Berechtigungen sind „Alles oder Nichts“. Wenn Sie den Zugriff verweigert haben, ist die Auswahl leer. Sicherstellen Die App verfügt über die Berechtigung „Kontakte“ in den App-Einstellungen Ihres Telefons.</li>
+                </ul>
+            </blockquote>
+        </section>
+
+        <section class="guide-section">
+            <h2>5. ⚙️ Konfigurationsoptionen</h2>
+            <p>Greifen Sie über das Zahnradsymbol ⚙️ auf das Einstellungsmenü zu, um den Text der Warnmeldung und die SMS-Versandmethode weiter anzupassen.</p>
+
+            <h3>SMS-Versandmethoden</h3>
+            <p>Die App unterstützt zwei Möglichkeiten zum Senden von Nachrichten:</p>
+            <ul>
+                <li><strong><span class="notranslate" translator="no"><span class="notranslate" translator="no">Direkte SMS</span></span> (Android):</strong> Verwendet die SIM-Karte Ihres Telefons. Die Kosten hängen von Ihrem Mobilfunkanbieterplan ab.</li>
+                <li><strong><span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> SMS (Android & iOS):</strong> Verwendet die <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> API über das Internet (WLAN/Daten). Zuverlässig und für iOS erforderlich.</li>
+            </ul>
+
+            <h3><span class="notranslate" translator="no">Intelligente Redundanz</span> (nur Android)</h3>
+            <p><span class="notranslate" translator="no">TapAlert</span> Merkmale ein <strong><span class="notranslate" translator="no">Intelligente Redundanz</span></strong>-System, das automatisch Methoden wechselt, wenn die primäre Methode ausfällt:</p>
+            <ul>
+                <li><strong>Kein Signal?</strong> Wenn Sie versuchen, eine <span class="notranslate" translator="no">Direkt-SMS</span> zu senden, aber keine Mobilfunkabdeckung haben (z. B. innerhalb eines Gebäudes), versucht die App automatisch, über <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> (Wi-Fi) zu senden.</li>
+                <li><strong>Keine Daten?</strong> Wenn Sie <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> als primäre Verbindung verwenden, aber auf ohne 4G/5G umstellen, <span class="notranslate" translator="no">Fallback</span> geht die App automatisch zum Senden eines <span class="notranslate" translator="no"><span class="notranslate" translator="no">Direkte SMS</span></span> über.</li>
+            </ul>
+            <p><strong>So aktivieren Sie:</strong> Gehen Sie zu Einstellungen und aktivieren Sie <strong>"<span class="notranslate" translator="no">Intelligente Redundanz</span>"</strong>.</p>
+
+            <h3>E-Mail-Redundanz (Wi-Fi <span class="notranslate" translator="no">Zurückgreifen</span>)</h3>
+            <p>Wenn Sie kein Mobilfunksignal haben, aber mit WLAN verbunden sind, kann <span class="notranslate" translator="no">TapAlert</span> Ihre Benachrichtigung per E-Mail senden.</p>
+            <ul>
+                <li><strong>Einrichtung:</strong> Gehen Sie zu <strong>Einstellungen > E-Mail-Redundanz</strong>. Ausführliche Anweisungen finden Sie in <strong>Kapitel 6: Konfigurieren der E-Mail-Redundanz</strong>.</li>
+                <li><strong>Automatisch <span class="notranslate" translator="no">Zurückgreifen</span>:</strong> Wenn diese Option aktiviert ist, versucht die App, eine E-Mail-Benachrichtigung zu senden, wenn sowohl <span class="notranslate" translator="no"><span class="notranslate" translator="no">Direkte SMS</span></span> als auch <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> (Mobilfunk) fehlschlagen.</li>
+            </ul>
+
+            <h3>Trigger-Methode (Tippen vs. Halten)</h3>
+            <p>Verhindern Sie versehentliche Auslöser, indem Sie unter <strong>Einstellungen > Auslösemethode</strong> ändern, wie die Warnung aktiviert wird:</p>
+            <ul>
+                <li><strong>Zum Senden tippen (Standard):</strong> Ein einziges Tippen auf die BenachrichtigungTaste löst den Countdown aus.</li>
+                <li><strong>Drücken und Halten (5 Sekunden):</strong> Sie musshalten den AlarmTaste 5 Sekunden lang gedrückt, um den Countdown auszulösen. Dies wird empfohlen, um Fehlalarme zu vermeiden.</li>
+            </ul>
+
+            <blockquote class="alert-important">
+                <strong>WICHTIG: iOS-Benutzer</strong><br> Sie muss konfigurieren einen <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> Konto.<br> 👉 <strong>Detaillierte <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> Einrichtungsanweisungen finden Sie in der separaten Anleitung „<span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> Guide“ im Hilfemenü.</strong>
+            </blockquote>
+
+            <h3>Automatischer Start beim Start</h3>
+            <p>Starten Sie den Alarm-Countdown automatisch sofort, wenn die App geöffnet wird.</p>
+            <ul>
+                <li><strong>Nützlich für:</strong> Erstellen einer physischen PanikTaste (mithilfe der Hardware-Tasten-Neuzuordnung) oder einer Schnellstart-Verknüpfung.</li>
+                <li><strong>Warnung:</strong> Wenn diese Option aktiviert ist, wird beim Öffnen der App immer der Countdown ausgelöst. Sie können es während des Verzögerungszeitraums stornieren.</li>
+            </ul>
+
+            <h3>Nachricht Standort</h3>
+            <ul>
+                <li><strong>Include Standort:</strong> GPS-Koordinaten an die Nachricht anhängen.</li>
+                <li><strong>Adresse einbeziehen:</strong> Versuchen Sie, Koordinaten in eine für Menschen lesbare Adresse umzuwandeln.</li>
+            </ul>
+
+            <h3>Zusätzliche Einstellungen</h3>
+            <ul>
+                <li><strong>Absenderidentität:</strong> (Nur <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span>) Wählen Sie den Namen oder die Nummer aus, die als Absender angezeigt wird (z. B. „Alert“ oder Ihre spezifische <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> Nummer).</li>
+                <li><strong>Erscheinungsbild:</strong> Wechseln Sie zwischen hellem Modus und dunklem Modus oder folgen Sie den Systemeinstellungen.</li>
+                <li><strong>App Sprache:</strong> Überschreiben Sie die Sprache der App manuell (Standard: System Sprache).</li>
+                <li><strong>Region und Formatierung:</strong> Legen Sie Ihre Region fest, um sicherzustellen, dass Telefonnummern korrekt formatiert sind (z. B. automatisches Hinzufügen von Ländervorwahlen).</li>
+                <li><strong>Benachrichtigungston:</strong> Wählen Sie den Benachrichtigungston aus, der nach einer erfolgreichen Nachrichtenübermittlung abgespielt wird.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>6. 📧 E-Mail-Redundanz konfigurieren</h2>
+            <p>Wenn Sie kein Mobilfunksignal haben, aber mit WLAN verbunden sind, kann <span class="notranslate" translator="no">TapAlert</span> Ihre Benachrichtigung per E-Mail senden.</p>
+
+            <h3>Einrichtungsanweisungen</h3>
+            <ol>
+                <li><strong>Öffnen Sie die Einstellungen:</strong> Tippen Sie auf das Zahnradsymbol ⚙️ und wählen Sie <strong>E-Mail-Redundanz</strong>.</li>
+                <li><strong>Aktivieren Sie die Funktion:</strong> Schalten Sie <strong>E-Mail-Redundanz aktivieren</strong> auf EIN.</li>
+                <li><strong>SMTP-Konfiguration:</strong> Geben Sie die SMTP-Details Ihres E-Mail-Anbieters ein:
+                    <ul>
+                        <li><strong>SMTP-Host:</strong> (z. B. <code>smtp.gmail.com</code> für Gmail, <code>smtp-mail.outlook.com</code> für Outlook).</li>
+                        <li><strong>SMTP-Port:</strong> (z. B. <code>587</code> oder <code>465</code>).</li>
+                        <li><strong>Benutzername/E-Mail:</strong> Ihre vollständige E-Mail-Adresse.</li>
+                        <li><strong>Passwort/App-Passwort:</strong> Ihr E-Mail-Passwort oder ein spezielles App-Passwort.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>⚡ Schnelle Einrichtung (gängige Anbieter)</h3>
+            <p><span class="notranslate" translator="no">TapAlert</span> enthält voreingestellteTastes für beliebte E-Mail-Anbieter. Tippen Sie einfach auf eine VoreinstellungTaste, um die SMTP-Host- und Porteinstellungen automatisch auszufüllen:</p>
+            <ul>
+                <li><strong>Gmail</strong> (smtp.gmail.com:587)</li>
+                <li><strong>Outlook</strong> (smtp-mail.outlook.com:587)</li>
+                <li><strong>Yahoo</strong> (smtp.mail.yahoo.com:587)</li>
+                <li><strong>iCloud</strong> (smtp.mail.me.com:587)</li>
+            </ul>
+            <p>Nachdem Sie auf eine Voreinstellung getippt haben, müssen Sie nur noch Ihre E-Mail-Adresse und Ihr App-Passwort eingeben (siehe unten).</p>
+
+            <blockquote class="alert-important">
+                <strong>WICHTIG: App-Passwörter sind anbieterspezifisch</strong><br> Jeder E-Mail-Anbieter verfügt über sein eigenes App-Passwortsystem. Sie können kein Gmail-App-Passwort mit Outlook verwenden und umgekehrt. Sie muss generieren ein App-Passwort speziell für den von Ihnen verwendeten Anbieter.
+            </blockquote>
+
+            <h3>🔒 Verwendung von App-Passwörtern (empfohlen)</h3>
+            <p>Aus Sicherheits- und Zuverlässigkeitsgründen empfehlen wir dringend, ein <strong>App-Passwort</strong> anstelle Ihres primären Passworts zu verwenden.</p>
+            <ul>
+                <li><strong>Warum?</strong> Es umgeht die 2-Faktor-Authentifizierung und sorgt dafür, dass Ihr Haupt-Konto sicher ist.</li>
+            </ul>
+
+            <h4>Google Mail</h4>
+            <ol>
+                <li>Gehen Sie zu Ihrem <strong>Google-Konto > Sicherheit</strong> oder <a href="https://myKonto.google.com/apppasswords" target="_blank">https://myKonto.google.com/apppasswords</a></li>
+                <li>Suchen Sie nach <strong>„App-Passwörtern“</strong> (erfordert die Aktivierung der Bestätigung in zwei Schritten).</li>
+                <li>Generieren Sie ein neues Passwort für „Andere“ und nennen Sie es „<span class="notranslate" translator="no">TapAlert</span>“.</li>
+                <li>Verwenden Sie den 16-stelligen Code aus <span class="notranslate" translator="no">TapAlert</span> (einschließlich Leerzeichen).</li>
+            </ol>
+
+            <h4>Outlook / Hotmail / Live</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Microsoft-Konto > Sicherheit > Erweiterte Sicherheitsoptionen</strong> oder <a href="https://Konto.live.com/names/manage" target="_blank">https://Konto.live.com/names/manage</a>.</li>
+                <li>Erstellen Sie unter <strong>„App-Passwörter“</strong> ein neues App-Passwort.</li>
+                <li>Wählen „Andere“ und nennen Sie es „<span class="notranslate" translator="no">TapAlert</span>“.</li>
+                <li>Verwenden Sie das generierte Passwort in <span class="notranslate" translator="no">TapAlert</span>.</li>
+            </ol>
+
+            <h4>Yahoo</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>Yahoo Account Security</strong> oder <a href="https://login.yahoo.com/Konto/security" target="_blank">https://login.yahoo.com/Konto/security</a>.</li>
+                <li>Wählen <strong>"App-Passwort generieren"</strong>.</li>
+                <li>Wählen Sie „Andere App“ und nennen Sie sie „<span class="notranslate" translator="no">TapAlert</span>“.</li>
+                <li>Verwenden Sie das generierte Passwort in <span class="notranslate" translator="no">TapAlert</span>.</li>
+            </ol>
+
+            <h4>iCloud</h4>
+            <ol>
+                <li>Gehen Sie zu <strong>appleid.apple.com > Anmeldung und Sicherheit > App-spezifische Passwörter</strong> oder <a href="https://appleid.apple.com/Konto/manage" target="_blank">https://appleid.apple.com/Konto/manage</a>.</li>
+                <li>Klicken Sie auf das <strong>+</strong>Taste, um ein neues Passwort zu generieren.</li>
+                <li>Nennen Sie es „<span class="notranslate" translator="no">TapAlert</span>“.</li>
+                <li>Verwenden Sie das generierte Passwort in <span class="notranslate" translator="no">TapAlert</span>.</li>
+            </ol>
+
+            <h3>Empfänger</h3>
+            <p>E-Mails werden an alle Kontakte in Ihrer <strong>Empfängerliste</strong> gesendet, für die eine E-Mail-Adresse gespeichert ist. So fügen Sie einem Kontakt eine E-Mail hinzu:</p>
+            <ol>
+                <li>Gehen Sie zum Bildschirm <strong>Empfänger</strong>.</li>
+                <li>Bearbeiten einen Kontakt und stellen Sie sicher, dass das E-Mail-Feld ausgefüllt ist.</li>
+            </ol>
+
+            <h3>🧪 Testen</h3>
+            <p>Bevor Sie sich darauf verlassen, tippen Sie auf <strong>Verbindung testen</strong>. Geben Sie eine E-Mail-Adresse ein, um eine Testnachricht zu erhalten. Bei Erfolg ist Ihr Setup korrekt.</p>
+        </section>
+
+        <section class="guide-section">
+            <h2>7. 📱 Startbildschirm-Widget (nur Android)</h2>
+            <p>Für noch schnellere Notfallwarnungen können Sie Ihrem Android-Startbildschirm ein Widget hinzufügen:</p>
+
+            <h3>Hinzufügen des Widgets</h3>
+            <ol>
+                <li><strong>Einstellungen öffnen:</strong> Tippen Sie in der App auf das Zahnradsymbol ⚙️.</li>
+                <li><strong>Widget-Bereich suchen:</strong> Scrollen Sie nach unten zum Abschnitt „Widget“.</li>
+                <li><strong>Tippen Sie auf „Hinzufügen“:</strong> Das System fordert Sie auf, das Widget auf Ihrem Startbildschirm zu platzieren.</li>
+                <li><strong>Positionieren Sie das Widget:</strong> Ziehen Sie es an die gewünschte Position und lassen Sie es los.</li>
+            </ol>
+            <blockquote class="alert-note">
+                <strong>HINWEIS:</strong> Wenn Sie bereits ein Widget auf Ihrem Startbildschirm haben, müssen Sie das alte entfernen, bevor Sie ein neues hinzufügen können.
+            </blockquote>
+
+            <h3>Verwenden des Widgets</h3>
+            <ul>
+                <li><strong>Tippen Sie auf das Widget:</strong> Öffnet die App und startet sofort den <strong>Countdown</strong>.</li>
+                <li><strong>App-Erlebnis:</strong> Sie sehen den Countdown-Dialog, um sicherzustellen, dass die Warnung beabsichtigt ist. Sie können es abbrechen, wenn Sie versehentlich gedrückt haben.</li>
+                <li><strong>Ton:</strong> Die App spielt beim Countdown einen akustischen Alarmton ab.</li>
+            </ul>
+            <blockquote class="alert-tip">
+                <strong>TIPP:</strong> Das Widget eignet sich perfekt für echte Notfälle, wenn Sie mit einem einzigen Tastendruck eine Benachrichtigung senden müssen, ohne indem Sie die App in Ihrer Schublade finden.
+            </blockquote>
+        </section>
+
+        <section class="guide-section">
+            <h2>8. 🚀 Senden einer Benachrichtigung</h2>
+            <ol>
+                <li><strong>Öffnen Sie die App.</strong></li>
+                <li><strong>Alarm auslösen:</strong>
+                    <ul>
+                        <li><strong>Im Berichtsmodus:</strong> Tippen Sie auf das große rote Symbol <strong>ALARM SENDEN</strong>Taste. Die in den Reitern (1-4) ausgewählte Nachricht wird versendet.</li>
+                        <li><strong>Im <span class="notranslate" translator="no">Panikmodus</span>:</strong>
+                            <ul>
+                                <li>Tippen Sie auf das große rote <strong><span class="notranslate" translator="no">SOS</span></strong> Taste, um eine „Hilfe benötigt“-Benachrichtigung zu senden.</li>
+                                <li>Tippen Sie auf das <strong>Mikrofonsymbol</strong> (unten rechts neben <span class="notranslate" translator="no">SOS</span>), um eine bestimmte Sprachnachricht mit Ihrer <span class="notranslate" translator="no">SOS</span>-Benachrichtigung aufzuzeichnen und zu senden.</li>
+                                <li>Tippen Sie auf das grüne <strong>Mir geht es gut</strong>Taste, um einen beruhigenden „Mir geht es gut“-Status zu senden.</li>
+                                <li>Tippen Sie auf das <strong>Mikrofonsymbol</strong> (unten rechts neben „Ich bin in Ordnung“), um eine Sprachnachricht mit Ihrem OK-Status aufzunehmen und zu senden.</li>
+                                <li>Tippen Sie auf den <strong>Notruf</strong>Taste, um sofort den örtlichen Notruf anzurufen.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Die App wird:</strong>
+                    <ul>
+                        <li>Rufen Sie Ihren aktuellen Standort ab (falls konfiguriert).</li>
+                        <li>Zeigen Sie einen <strong>Countdown-Dialog</strong> an (siehe „Countdown-Dialog“ unten).</li>
+                        <li>Senden Sie die Warnmeldung an alle Empfänger.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>9. ⏱️ Countdown-Dialog</h2>
+            <p>Um versehentliche Benachrichtigungen zu verhindern, zeigt <span class="notranslate" translator="no">TapAlert</span> vor dem Senden einen Countdown an.</p>
+            <ul>
+                <li><strong>Countdown-Dauer:</strong> Standardmäßig wartet die App <strong>10 Sekunden</strong>. Sie können dies in den <strong>Einstellungen</strong> anpassen (von <strong>0s</strong> für den sofortigen Versand bis zu <strong>30s</strong>).</li>
+                <li><strong>Abbrechen:</strong> Sie können während des Countdowns auf <strong>ABBRECHEN</strong> tippen, um die Warnung zu stoppen.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>10. 🔔 Warn-SMS hervorheben</h2>
+            <p>Um sicherzustellen, dass Ihre Notfallkontakte neben anderen Benachrichtigungen auch Ihre Warnmeldung nicht verpassen, empfehlen wir, ihre Telefone so zu konfigurieren, dass Nachrichten von Ihrer <span class="notranslate" translator="no">TapAlert</span>-Nummer unterschiedlich behandelt werden.</p>
+
+            <h3>Für iPhone-Empfänger</h3>
+            <ol>
+                <li><strong>Öffnen Sie Kontakte:</strong> Wählen Sie Ihren Kontakteintrag aus.</li>
+                <li><strong>Notumgehung zuweisen:</strong> Tippen Sie auf <strong>Bearbeiten</strong> > <strong>Klingelton</strong> (oder Text Tone) und schalten Sie <strong>Notfall-Bypass</strong> EIN. Dadurch sind Töne/Vibrationen auch dann möglich, wenn das Telefon auf „Stumm“ oder „Bitte nicht stören“ geschaltet ist.</li>
+                <li><strong>Benutzerdefinierter Ton:</strong> Wählen Sie einen lauten, deutlichen Ton für Ihre Nachrichten.</li>
+            </ol>
+
+            <h3>Für Android Empfänger</h3>
+            <ol>
+                <li><strong>Offene Nachrichten:</strong> Wählen Sie das Gespräch mit Ihnen aus.</li>
+                <li><strong>Benachrichtigungskategorien:</strong> Tippen Sie auf <strong>Einzelheiten</strong> > <strong>Benachrichtigungen</strong>.</li>
+                <li><strong>Eingestellt als "Dringend":</strong> Ändern Sie die Priorität auf <strong>"Hoch"</strong> oder <strong>"Dringend"</strong>.</li>
+                <li><strong>DND überschreiben:</strong> Sicherstellen <strong>„Ignorieren, nicht stören“</strong> ist für diese Konversation aktiviert.</li>
+                <li><strong>Benutzerdefinierter Sound:</strong> Wählen Sie einen Alarmton mit hoher Priorität.</li>
+            </ol>
+            <blockquote class="alert-note">
+                <strong>HINWEIS: Verwenden Sie <span class="notranslate" Translate="no"><span class="notranslate" translator="no">Twilio</span></span>?</strong> Wenn Sie Benachrichtigungen über <span class="notranslate" Translate="no"><span class="notranslate" translator="no">Twilio</span></span> senden, erhalten Ihre Kontakte die Nachricht von Ihrer <span class="notranslate" Translate="no"><span class="notranslate" translator="no">Twilio</span></span>-Nummer oder einer alphanumerischen ID (z. B. „<span class="notranslate" translator="no">TapAlert</span>"). Sie <strong>muss</strong> fügen Sie diese Nummer/ID zu ihrer Kontaktliste hinzu, damit die oben genannten Einstellungen korrekt funktionieren. Andernfalls wird die Nachricht weiterhin zugestellt, aber alsStandard-SMS ohne alle Prioritätsbenachrichtigungen.
+            </blockquote>
+        </section>
+
+        <section class="guide-section">
+            <h2>11. 🕰️ Alarmverlauf</h2>
+            <p>So behalten Sie den Überblick über Ihre gesendeten Notfallbenachrichtigungen:</p>
+            <ol>
+                <li><strong>Tippen Sie auf das Verlaufssymbol:</strong> Das Uhrensymbol 🕰️ befindet sich in der oberen Leiste.</li>
+                <li><strong>Letzte Benachrichtigungen anzeigen:</strong> Die App führt ein Protokoll der letzten <strong>50 gesendeten Benachrichtigungen</strong>.</li>
+                <li><strong>Status prüfen:</strong> Tippen Sie auf einen beliebigen Eintrag, um genau zu sehen, welche Empfänger die Nachricht erfolgreich erhalten haben und welche fehlgeschlagen sind (mit Fehlerdetails).</li>
+                <li><strong>Verlauf löschen:</strong> Sie können alle Protokolle löschen, indem Sie im Verlaufsbildschirm auf das Papierkorbsymbol 🗑️ tippen.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section" id="troubleshooting">
+            <h2>12. ❓ Fehlerbehebung</h2>
+            <ul>
+                <li><strong>Nachricht wird nicht gesendet (<span class="notranslate" translator="no"><span class="notranslate" translator="no">Direkte SMS</span></span>):</strong> Überprüfen Sie Ihr Mobilfunksignal und Ihr Mobilfunkanbieter-Guthaben (nur Android).</li>
+                <li><strong>Nachricht wird nicht gesendet (<span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span>):</strong> Überprüfen Sie Ihre Internetverbindung und überprüfen Sie Ihre Anmeldeinformationen in den Einstellungen noch einmal.</li>
+                <li><strong>Standort fehlt:</strong> Sicherstellen GPS ist in den Systemeinstellungen Ihres Telefons aktiviert und die App verfügt über die Berechtigung Standort.</li>
+                <li><strong>Kontakte fehlt (iOS):</strong> Gehen Sie zu Einstellungen > Privatsphäre > Kontakte > <span class="notranslate" translator="no">TapAlert</span> und stellen Sie sicher, dass <strong>"Alle Kontakte"</strong> aktiviert ist.</li>
+                <li><strong>Kontakte fehlt (Android):</strong> Gehen Sie zu Einstellungen > Apps > <span class="notranslate" translator="no">TapAlert</span> > Berechtigungen und stellen Sie sicher, dass <strong>"Kontakte"</strong> zulässig ist.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>13. ⏳ Check-in-Timer</h2>
+            <p>Der <strong>Check-in-Timer</strong> ist eine „inaktive“ Sicherheitsfunktion. Sie können damit einen Timer einstellen, wenn Sie eine potenziell riskante Aktivität beginnen (z. B. alleine nach Hause gehen, eine Wanderung unternehmen).</p>
+            <ol>
+                <li><strong>Starten Sie den Timer:</strong> Wählen eine Dauer (von 5 Minuten bis zu 24 Stunden) und eine optionale Nachricht.</li>
+                <li><strong>Der Countdown:</strong> Eine dauerhafte Benachrichtigung zeigt Ihnen die verbleibende Zeit an.</li>
+                <li><strong>Der Check-in:</strong> Sie muss kehren zur App zurück und tippen auf <strong>„Mir geht es gut (Zurücksetzen)“</strong>, bevor der Timer abläuft.</li>
+                <li><strong>Automatische Benachrichtigung:</strong> Wenn Sie den Timer <em>nicht</em> zurücksetzen, bevor er Null erreicht, sendet <span class="notranslate" translator="no">TapAlert</span> automatisch Ihre Benachrichtigung und Ihren Standort an alle Empfänger.</li>
+            </ol>
+            <blockquote class="alert-tip">
+                <strong>TIP:</strong> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if
+                you become incapacitated or lose access to your phone.
+            </blockquote>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Einfache Notfallwarnungen für alle. Keine Abonnements, kein Tracking, nur Sicherheit.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produkt</h3>
+                    <ul>
+                        <li><a href="index.html#features">Merkmale</a></li>
+                        <li><a href="index.html#pricing">Preise</a></li>
+                        <li><a href="index.html#download">Herunterladen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Datenschutzrichtlinie</a></li>
+                        <li><a href="terms.html">Nutzungsbedingungen</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Unterstützung</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
+                        <li><a href="accessibility_guide.html">Leitfaden zur Barrierefreiheit</a></li>
+                        <li><a href="troubleshooting.html">Fehlerbehebung</a></li>
+                        <li><a href="contact.html">Kontaktieren Sie den Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. | Hergestellt mit ❤️ für Ihre Sicherheit</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
