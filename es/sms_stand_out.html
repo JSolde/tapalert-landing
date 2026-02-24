@@ -433,12 +433,34 @@
     <!-- Header -->
     <header class="guide-header">
         <div class="container guide-nav">
-            <a href="../index.html" class="brand-logo">
+            <a href="index.html" class="brand-logo">
                 <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
                     class="notranslate" translate="no">TapAlert</span>
             </a>
-            <a href="../index.html" class="btn btn-primary">Volver al Inicio</a>
-        <div class="lang-dropdown">
+            <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { display: none; position: absolute; right: 0; top: calc(100% + 10px); background-color: white; min-width: 120px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; z-index: 1001; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); animation: fadeInDown 0.3s ease-out; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.lang-dropdown:hover .lang-dropdown-content { display: block; }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin: 15px 0 0 0; }
+    .lang-dropdown-content { position: static; display: flex; flex-direction: row; background: none; box-shadow: none; border: none; justify-content: center; gap: 10px; }
+    .lang-dropbtn { display: none; }
+    .lang-dropdown-content { display: flex; }
+    .lang-dropdown-content a { padding: 6px 12px; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; background: white; }
+}
+</style>
+
+<div class="lang-dropdown">
     <button class="lang-dropbtn">ES</button>
     <div class="lang-dropdown-content">
         <a href="../sms_stand_out.html" hreflang="en">EN</a>
@@ -519,18 +541,18 @@
                 <div class="footer-section">
                     <h3>Producto</h3>
                     <ul>
-                        <li><a href="../index.html#features">Características</a></li>
-                        <li><a href="../index.html#pricing">Precios</a></li>
-                        <li><a href="../index.html#download">Descargar</a></li>
+                        <li><a href="index.html#features">Características</a></li>
+                        <li><a href="index.html#pricing">Precios</a></li>
+                        <li><a href="index.html#download">Descargar</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul>
-                        <li><a href="../PRIVACY_POLICY.html">Política de Privacidad</a></li>
-                        <li><a href="../terms.html">Términos de Servicio</a></li>
-                        <li><a href="../contact.html">Contacto</a></li>
+                        <li><a href="PRIVACY_POLICY.html">Política de Privacidad</a></li>
+                        <li><a href="terms.html">Términos de Servicio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
 
@@ -538,10 +560,10 @@
                     <h3>Soporte</h3>
                     <ul>
                         <li><a href="#">Preguntas Frecuentes</a></li>
-                        <li><a href="../index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
-                        <li><a href="../accessibility_guide.html">Guía de Accesibilidad</a></li>
-                        <li><a href="../troubleshooting.html">Solución de problemas</a></li>
-                        <li><a href="../contact.html">Soporte de Contacto</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
+                        <li><a href="accessibility_guide.html">Guía de Accesibilidad</a></li>
+                        <li><a href="troubleshooting.html">Solución de problemas</a></li>
+                        <li><a href="contact.html">Soporte de Contacto</a></li>
                     </ul>
                 </div>
             </div>

@@ -434,12 +434,34 @@
     <!-- Header -->
     <header class="guide-header">
         <div class="container guide-nav">
-            <a href="../index.html" class="brand-logo">
+            <a href="index.html" class="brand-logo">
                 <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
                     class="notranslate" translate="no">TapAlert</span>
             </a>
-            <a href="../index.html" class="btn btn-primary">Volver al Inicio</a>
-        <div class="lang-dropdown">
+            <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { display: none; position: absolute; right: 0; top: calc(100% + 10px); background-color: white; min-width: 120px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; z-index: 1001; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); animation: fadeInDown 0.3s ease-out; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.lang-dropdown:hover .lang-dropdown-content { display: block; }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin: 15px 0 0 0; }
+    .lang-dropdown-content { position: static; display: flex; flex-direction: row; background: none; box-shadow: none; border: none; justify-content: center; gap: 10px; }
+    .lang-dropbtn { display: none; }
+    .lang-dropdown-content { display: flex; }
+    .lang-dropdown-content a { padding: 6px 12px; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; background: white; }
+}
+</style>
+
+<div class="lang-dropdown">
     <button class="lang-dropbtn">ES</button>
     <div class="lang-dropdown-content">
         <a href="../quickstart_android.html" hreflang="en">EN</a>
@@ -461,9 +483,7 @@
                         <div class="step-icon">✅</div>
                         <h3>1. Otorgar Permisos Esenciales</h3>
                     </div>
-                    <p>During the application onboarding, accept all permissions (SMS, Ubicación, Contactos). If skipped,
-                        they will be requested when needed later, but we recommend accepting them now for a seamless
-                        experience.</p>
+                    <p>Durante la configuración inicial de la aplicación, acepta todos los permisos (SMS, Ubicación, Contactos). Si los omites, se solicitarán cuando sean necesarios más adelante, pero recomendamos aceptarlos ahora para una experiencia fluida.</p>
                 </div>
 
                 <div class="step-card">
@@ -476,55 +496,40 @@
                         <li><strong>Añadir destinatarios</strong> a tu lista de alertas de emergencia.</li>
                         <li><strong>Añadir el widget de la app</strong> a tu pantalla de inicio para acceso instantáneo.</li>
                     </ul>
-                    <p style="margin-top: 10px;"><small><em>Note: These can also be managed in Settings after
-                                onboarding.</em></small></p>
+                    <p style="margin-top: 10px;"><small><em>Nota: Estos también se pueden gestionar en Ajustes después de la configuración inicial.</em></small></p>
                 </div>
 
                 <div class="step-card">
                     <div class="step-header">
                         <div class="step-icon">📡</div>
-                        <h3>3. Connectivity & Respaldos</h3>
+                        <h3>3. Conectividad y <span class="notranslate" translate="no">fallback</span>s</h3>
                     </div>
-                    <p>Verifica si las <strong>Llamadas Wi-Fi</strong> are enabled on your phone. If your carrier doesn't support
-                        it, consider using a <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                            cuenta</strong> como un <span class="notranslate" translate="no">fallback</span> for Wifi-only
-                        situations.
-                        <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> is free to start and provides reliable
-                        SMS delivery sin a cell signal.
-                    </p>
-                    <p style="margin-top: 10px;">También puedes habilitar la <strong>Redundancia de correo electrónico</strong> in <span
-                            class="notranslate" translate="no">TapAlert</span> to
-                        ensure your loved ones are notified via multiple channels.</p>
+                    <p>Verifica si las <strong>Llamadas Wi-Fi</strong> están habilitadas en tu teléfono. Si tu operador no lo soporta, considera usar una cuenta de <strong><span class="notranslate" translate="no">Twilio</span></strong> como <span class="notranslate" translate="no">fallback</span> para situaciones de solo Wi-Fi. <span class="notranslate" translate="no">Twilio</span> es gratis para empezar y proporciona una entrega de SMS confiable sin señal celular.</p>
+                    <p style="margin-top: 10px;">También puedes habilitar la <strong>Redundancia por correo electrónico</strong> en <span class="notranslate" translate="no">TapAlert</span> para garantizar que tus seres queridos sean notificados a través de múltiples canales.</p>
                 </div>
 
                 <div class="step-card">
                     <div class="step-header">
                         <div class="step-icon">🧪</div>
-                        <h3>4. Perform a Test Alert</h3>
+                        <h3>4. Realiza una Alerta de Prueba</h3>
                     </div>
-                    <p>Test your setup by sending an <strong>‘I’m OK’</strong> message. Tap the once (or hold for
-                        5s if configured). A countdown will appear, giving you time to cancel or send immediately.
-                        Letting it expire sends the alert automatically!</p>
+                    <p>Prueba tu configuración enviando un mensaje de <strong>‘Estoy OK’</strong>. Toca el botón una vez (o mantenlo presionado 5s si así lo configuraste). Aparecerá una cuenta regresiva dándote tiempo para cancelar o enviar inmediatamente. ¡Dejar que termine envía la alerta automáticamente!</p>
                 </div>
 
                 <div class="step-card">
                     <div class="step-header">
                         <div class="step-icon">↔️</div>
-                        <h3>5. Explore Navigation</h3>
+                        <h3>5. Explora la Navegación</h3>
                     </div>
-                    <p>Swipe <strong>Left</strong> to access your preconfigured custom messages for specific situations.
-                        Swipe <strong>Right</strong> to activate the <strong>Check-in Timer</strong> (Dead Man's
-                        Switch), which auto-alerts if you don't check in by a certain time.</p>
+                    <p>Desliza a la <strong>Izquierda</strong> para acceder a tus mensajes personalizados para situaciones específicas. Desliza a la <strong>Derecha</strong> para activar el <strong>Temporizador de Control</strong>, que envía automáticamente una alerta si no te reportas a una hora establecida.</p>
                 </div>
 
                 <div class="step-card">
                     <div class="step-header">
                         <div class="step-icon">🤝</div>
-                        <h3>6. Setup for Others</h3>
+                        <h3>6. Configuración para Otros</h3>
                     </div>
-                    <p>If you’re setting this phone up for someone else (like a senior relative), take a moment to
-                        preconfigure their custom alerts (Swipe Left) so they have the most relevant messages ready at
-                        their fingertips.</p>
+                    <p>Si configuras este teléfono para otra persona (como un familiar mayor), tómate un momento para preconfigurar sus alertas personalizadas (Desliza a la Izquierda) y tener listos los mensajes más relevantes.</p>
                 </div>
             </div>
         </section>
@@ -544,18 +549,18 @@
                 <div class="footer-section">
                     <h3>Producto</h3>
                     <ul>
-                        <li><a href="../index.html#features">Características</a></li>
-                        <li><a href="../index.html#pricing">Precios</a></li>
-                        <li><a href="../index.html#download">Descargar</a></li>
+                        <li><a href="index.html#features">Características</a></li>
+                        <li><a href="index.html#pricing">Precios</a></li>
+                        <li><a href="index.html#download">Descargar</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul>
-                        <li><a href="../PRIVACY_POLICY.html">Política de Privacidad</a></li>
-                        <li><a href="../terms.html">Términos de Servicio</a></li>
-                        <li><a href="../contact.html">Contacto</a></li>
+                        <li><a href="PRIVACY_POLICY.html">Política de Privacidad</a></li>
+                        <li><a href="terms.html">Términos de Servicio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
 
@@ -563,10 +568,10 @@
                     <h3>Soporte</h3>
                     <ul>
                         <li><a href="#">Preguntas Frecuentes</a></li>
-                        <li><a href="../index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
-                        <li><a href="../accessibility_guide.html">Guía de Accesibilidad</a></li>
-                        <li><a href="../troubleshooting.html">Solución de problemas</a></li>
-                        <li><a href="../contact.html">Soporte de Contacto</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
+                        <li><a href="accessibility_guide.html">Guía de Accesibilidad</a></li>
+                        <li><a href="troubleshooting.html">Solución de problemas</a></li>
+                        <li><a href="contact.html">Soporte de Contacto</a></li>
                     </ul>
                 </div>
             </div>
