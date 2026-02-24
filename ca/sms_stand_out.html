@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/quickstart_android.html">
-    <link rel="alternate" hreflang="en" href="https://tapalert.app/quickstart_android.html">
-    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/quickstart_android.html">
-    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/quickstart_android.html">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/sms_stand_out.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/sms_stand_out.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/sms_stand_out.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/sms_stand_out.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Start (Android) - TapAlert</title>
+    <title>Feu que la vostra alerta per SMS destaqui - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -109,27 +109,9 @@
             padding-left: 15px;
         }
 
-        h3 {
-            font-size: 1.4rem;
-            color: #4a5568;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
         p {
             margin-bottom: 15px;
             color: #4a5568;
-        }
-
-        ul,
-        ol {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            color: #4a5568;
-        }
-
-        li {
-            margin-bottom: 8px;
         }
 
         a {
@@ -142,16 +124,24 @@
         }
 
         .alert-box {
-            background-color: #fffaf0;
-            border-left: 4px solid #ed8936;
+            background-color: #f3f4f6;
+            border-left: 4px solid #667eea;
             padding: 15px;
             margin: 20px 0;
             border-radius: 4px;
         }
 
+        .alert-box.note {
+            background-color: #ebf8ff;
+            border-left-color: #3182ce;
+        }
+
         .alert-box h4 {
             margin-top: 0;
-            color: #c05621;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         /* Step Card Styles */
@@ -195,13 +185,17 @@
         }
 
         .step-card p {
-            margin-bottom: 0;
+            margin-bottom: 10px;
             font-size: 1.05rem;
         }
 
-        .step-card ul {
-            margin-top: 10px;
-            margin-bottom: 0;
+        .step-card ol {
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        .step-card ol li {
+            margin-bottom: 8px;
         }
 
         /* Footer Reuse */
@@ -286,12 +280,6 @@
                 padding-left: 12px;
             }
 
-            h3 {
-                font-size: 1.2rem;
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-
             p,
             li {
                 font-size: 0.9rem;
@@ -311,12 +299,18 @@
                 font-size: 1.1rem;
             }
 
-            .step-card p {
+            .step-card p,
+            .step-card ol li {
                 font-size: 0.92rem;
             }
 
-            .guide-section {
-                margin-bottom: 30px;
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
             }
 
             footer {
@@ -374,10 +368,6 @@
                 border-left-width: 4px;
             }
 
-            h3 {
-                font-size: 1.05rem;
-            }
-
             p,
             li {
                 font-size: 0.85rem;
@@ -402,8 +392,17 @@
                 font-size: 1rem;
             }
 
-            .step-card p {
+            .step-card p,
+            .step-card ol li {
                 font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
             }
 
             footer {
@@ -436,11 +435,11 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
                     class="notranslate" translate="no">TapAlert</span>
             </a>
-            <a href="index.html" class="btn btn-primary">Back to Home</a>
-            
+            <a href="index.html" class="btn btn-primary">Tornar a casa</a>
+        
 <style>
 .lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
 .lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
@@ -463,11 +462,11 @@
 </style>
 
 <div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
+    <button class="lang-dropbtn">CA</button>
     <div class="lang-dropdown-content">
-        <a href="ca/quickstart_android.html" hreflang="ca">CA</a>
-        <a href="quickstart_android.html" hreflang="en" class="active">EN</a>
-        <a href="es/quickstart_android.html" hreflang="es">ES</a>
+        <a href="../ca/sms_stand_out.html" hreflang="ca" class="active">CA</a>
+        <a href="../sms_stand_out.html" hreflang="en">EN</a>
+        <a href="../es/sms_stand_out.html" hreflang="es">ES</a>
     </div>
 </div>
         </div>
@@ -475,68 +474,59 @@
 
     <!-- Main Content -->
     <main class="guide-container">
-        <a href="index.html#guides" class="back-link">← Back to Guides</a>
+        <a href="index.html#guides" class="back-link">← Torna a Guies</a>
 
-        <h1 class="guide-title">Quick Start (Android)</h1>
+        <h1 class="guide-title">Destacar els SMS d'alerta</h1>
+
+        <p>Per assegurar-vos que els vostres contactes d'emergència no es perdin el vostre missatge d'alerta entre altres notificacions, us recomanem que configureu els seus telèfons per tractar els missatges del vostre número <span class="notranslate" translate="no">TapAlert</span> de manera diferent.</p>
 
         <section class="guide-section">
             <div class="step-list">
                 <div class="step-card">
                     <div class="step-header">
-                        <div class="step-icon">✅</div>
-                        <h3>1. Grant Essential Permissions</h3>
+                        <div class="step-icon">🍎</div>
+                        <h3>Per a destinataris d'iPhone</h3>
                     </div>
-                    <p>During the application onboarding, accept all permissions (SMS, Location, Contacts). If skipped, they will be requested when needed later, but we recommend accepting them now for a seamless experience.</p>
+                    <ol>
+                        <li><strong>Open Contactes:</strong> Seleccioneu la vostra entrada de contacte.</li>
+                        <li><strong>Assigna una derivació d'emergència:</strong> Tap <strong>Edita</strong> >
+                            <strong>To de trucada</strong> (o To de text) i alterna <strong>Bypass d'emergència</strong> ON.
+                            Això permet sons/vibracions fins i tot si el seu telèfon està en silenci o No molestar.
+                        </li>
+                        <li><strong>To personalitzat:</strong> Choose a loud, distinct sound for your messages.</li>
+                    </ol>
                 </div>
 
                 <div class="step-card">
                     <div class="step-header">
-                        <div class="step-icon">⚙️</div>
-                        <h3>2. Optimal Configuration</h3>
+                        <div class="step-icon">🤖</div>
+                        <h3>Per a Android Destinataris</h3>
                     </div>
-                    <p>In the onboarding configuration step, we highly recommend:</p>
-                    <ul>
-                        <li><strong>Add recipients</strong> to your emergency alert list.</li>
-                        <li><strong>Add the app widget</strong> to your home screen for instant access.</li>
-                    </ul>
-                    <p style="margin-top: 10px;"><small><em>Note: These can also be managed in Settings after onboarding.</em></small></p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">📡</div>
-                        <h3>3. Connectivity & <span class="notranslate" translate="no">fallback</span>s</h3>
-                    </div>
-                    <p>Verify if <strong>Wifi calls</strong> are enabled on your phone. If your carrier doesn't support it, consider using a <strong><span class="notranslate" translate="no">Twilio</span> account</strong> as a <span class="notranslate" translate="no">fallback</span> for Wifi-only situations. <span class="notranslate" translate="no">Twilio</span> is free to start and provides reliable SMS delivery without a cell signal.</p>
-                    <p style="margin-top: 10px;">You can also enable <strong>Email redundancy</strong> in <span class="notranslate" translate="no">TapAlert</span> to ensure your loved ones are notified via multiple channels.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🧪</div>
-                        <h3>4. Perform a Test Alert</h3>
-                    </div>
-                    <p>Test your setup by sending an <strong>‘I’m OK’</strong> message. Tap the button once (or hold for 5s if configured). A countdown will appear, giving you time to cancel or send immediately. Letting it expire sends the alert automatically!</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">↔️</div>
-                        <h3>5. Explore Navigation</h3>
-                    </div>
-                    <p>Swipe <strong>Left</strong> to access your preconfigured custom messages for specific situations. Swipe <strong>Right</strong> to activate the <strong>Check-in Timer</strong> (Dead Man's Switch), which auto-alerts if you don't check in by a certain time.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🤝</div>
-                        <h3>6. Setup for Others</h3>
-                    </div>
-                    <p>If you’re setting this phone up for someone else (like a senior relative), take a moment to preconfigure their custom alerts (Swipe Left) so they have the most relevant messages ready at their fingertips.</p>
+                    <ol>
+                        <li><strong>Missatges oberts:</strong> Seleccioneu la conversa amb vosaltres.</li>
+                        <li><strong>Categories de notificació:</strong> Tap <strong>Detalls</strong> >
+                            <strong>Notificacions</strong>.
+                        </li>
+                        <li><strong>Set as "Urgent":</strong> Canvia la prioritat a <strong>"Alt"</strong> or
+                            <strong>"Urgent"</strong>.
+                        </li>
+                        <li><strong>Anul·lar DND:</strong> Assegureu-vos <strong>"Ignora No molestis"</strong> is enabled
+                            for this conversation.</li>
+                        <li><strong>So personalitzat:</strong> Trieu un so d'alerta d'alta prioritat.</li>
+                    </ol>
                 </div>
             </div>
-        </section>
 
+            <div class="alert-box note">
+                <h4>ℹ️ NOTA</h4>
+                <p><strong>Using <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong> Si envieu alertes mitjançant
+                    <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, your contacts will receive the message
+                    from your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> number or an Alphanumeric ID (e.g.,
+                    "<span class="notranslate" translate="no">TapAlert</span>"). Ells <strong>deu</strong> add
+                    this number/ID to their contacts list for the settings above to work correctly. Otherwise, the
+                    message will still be delivered butcom astandard SMS sense any priority notifications.</p>
+            </div>
+        </section>
 
     </main>
 
@@ -546,41 +536,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Simple emergency alerts for everyone. No subscriptions, no tracking, just safety.</p>
+                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només seguretat.</p>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Product</h3>
+                    <h3>Producte</h3>
                     <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="index.html#download">Download</a></li>
+                        <li><a href="index.html#features">Característiques</a></li>
+                        <li><a href="index.html#pricing">Preus</a></li>
+                        <li><a href="index.html#download">Descarregar</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="PRIVACY_POLICY.html">Política de privadesa</a></li>
+                        <li><a href="terms.html">Condicions del servei</a></li>
+                        <li><a href="contact.html">Contacte</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h3>Suport</h3>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by Step Guides</a></li>
-                        <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
-                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
-                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="#">Preguntes freqüents</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies pas a pas</a></li>
+                        <li><a href="accessibility_guide.html">Guia d'accessibilitat</a></li>
+                        <li><a href="troubleshooting.html">Resolució de problemes</a></li>
+                        <li><a href="contact.html">Contacta amb l'assistència</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet amb ❤️ per la teva seguretat</p>
             </div>
         </div>
     </footer>
