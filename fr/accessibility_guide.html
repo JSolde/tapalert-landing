@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/accessibility_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/accessibility_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Accesibilidad - TapAlert</title>
+    <title>Guide d'accessibilité - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -366,7 +366,7 @@
                 <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
                     class="notranslate" translate="no">TapAlert</span>
             </a>
-            <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+            <a href="index.html" class="btn btn-primary">Retour à la maison</a>
             
 <style>
 .lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
@@ -389,13 +389,13 @@
 </style>
 
 <div class="lang-dropdown">
-    <button class="lang-dropbtn">ES</button>
+    <button class="lang-dropbtn">FR</button>
     <div class="lang-dropdown-content">
         <div class="lang-dropdown-inner">
             <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
             <a href="../accessibility_guide.html" hreflang="en">EN</a>
-            <a href="../es/accessibility_guide.html" hreflang="es" class="active">ES</a>
-            <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
+            <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
+            <a href="../fr/accessibility_guide.html" hreflang="fr" class="active">FR</a>
         </div>
     </div>
 </div>
@@ -404,147 +404,147 @@
 
     <!-- Main Content -->
     <main class="guide-container">
-        <a href="index.html#guides" class="back-link">← Volver a las Guías</a>
+        <a href="index.html#guides" class="back-link">← Retour aux Guides</a>
 
         <div class="guide-header">
-            <h1 class="guide-title">Funciones de accesibilidad para personas mayores</h1>
-            <p class="guide-meta"><span class="notranslate" translate="no">TapAlert</span> está diseñado para ser utilizable por todos, incluyendo personas con pérdida de audición, baja visión, temblores u otras afecciones relacionadas con la edad. Esta guía explica cada función de accesibilidad y cómo sacarle el máximo provecho.</p>
+            <h1 class="guide-title">Fonctionnalités d'accessibilité pour les personnes âgées</h1>
+            <p class="guide-meta"><span class="notranslate" translate="no">TapAlert</span> est conçu pour être utilisable par tout le monde, y compris les personnes souffrant de perte auditive, de basse vision, de tremblements ou d'autres problèmes liés à l'âge. Ce guide explique chaque fonctionnalité d'accessibilité et comment en tirer le meilleur parti.</p>
         </div>
 
         <section class="guide-section" id="step-1">
-            <h2>1. Soporte de texto grande</h2>
-            <p><strong>A quién ayuda:</strong> Personas con baja visión o dificultad para leer texto pequeño.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> respeta el tamaño de fuente que configure en la configuración del sistema de su teléfono. Si aumenta el tamaño del texto en <strong>Configuración > Pantalla > Tamaño de fuente</strong> (Android) o <strong>Configuración > Accesibilidad > Pantalla y tamaño de texto > Texto más grande</strong> (iOS), todo el texto en <span class="notranslate" translate="no">TapAlert</span> crecerá en consecuencia: botones, etiquetas, menús y mensajes.</p>
+            <h2>1. Prise en charge des textes volumineux</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Personnes malvoyantes ou ayant des difficultés à lire de petits textes.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> respecte la taille de police que vous avez définie dans les paramètres système de votre téléphone. Si vous augmentez la taille du texte dans <strong>Paramètres > Affichage > Taille de police</strong> (Android) ou <strong>Paramètres > Accessibilité > Affichage et taille du texte > Texte plus grand</strong> (iOS), tout le texte dans <span class="notranslate" translate="no">TapAlert</span> s'agrandira en conséquence : boutons, étiquettes, menus et messages.</p>
             <div class="alert-box">
-                <h4>💡 No es necesaria ninguna acción dentro de la aplicación</h4>
-                <p>Simplemente configure su tamaño de fuente preferido en la configuración de su teléfono y <span class="notranslate" translate="no">TapAlert</span> lo seguirá automáticamente.</p>
+                <h4>💡 Aucune action requise dans l'application</h4>
+                <p>Définissez simplement votre taille de police préférée dans les paramètres de votre téléphone et <span class="notranslate" translate="no">TapAlert</span> la suivra automatiquement.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-2">
-            <h2>2. Compatibilidad con el lector de pantalla (TalkBack / VoiceOver)</h2>
-            <p><strong>A quién ayuda:</strong> Personas con discapacidad visual severa que utilizan un lector de pantalla.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> funciona de forma nativa con:</p>
+            <h2>2. Prise en charge des lecteurs d'écran (TalkBack / VoiceOver)</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Les personnes ayant une déficience visuelle sévère qui utilisent un lecteur d'écran.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> fonctionne nativement avec :</p>
             <ul>
-                <li><strong>TalkBack</strong> en Android (Configuración > Accesibilidad > TalkBack)</li>
-                <li><strong>VoiceOver</strong> en iPhone (Ajustes > Accesibilidad > VoiceOver)</li>
+                <li><strong>TalkBack</strong> sur Android (Paramètres > Accessibilité > TalkBack)</li>
+                <li><strong>VoiceOver</strong> sur iPhone (Paramètres > Accessibilité > VoiceOver)</li>
             </ul>
-            <p>Cuando un lector de pantalla está activo:</p>
+            <p>Lorsqu'un lecteur d'écran est actif :</p>
             <ul>
-                <li>Los botones <strong><span class="notranslate" translate="no">SOS</span></strong> y <strong>Estoy bien</strong> se anuncian con sus nombres y estado actual (activado o desactivado).</li>
-                <li>Cuando inicia una cuenta regresiva antes de enviar una alerta, el lector de pantalla cuenta los segundos restantes en voz alta para que siempre sepa cuánto tiempo le queda antes de que se envíe la alerta.</li>
-                <li>Después de que se envía una alerta, el lector de pantalla anuncia <strong>"Alerta enviada"</strong> o <strong>"Alerta fallida"</strong> para que conozca el resultado sin necesidad de mirar la pantalla.</li>
+                <li>Les boutons <strong><span class="notranslate" translate="no">SOS</span></strong> et <strong>Je vais bien</strong> sont annoncés avec leurs noms et leur état actuel (activé ou désactivé).</li>
+                <li>Lorsque vous démarrez un compte à rebours avant d'envoyer une alerte, le lecteur d'écran compte à rebours les secondes restantes à voix haute afin que vous sachiez toujours combien de temps il vous reste avant l'envoi de l'alerte.</li>
+                <li>Après l'envoi d'une alerte, le lecteur d'écran annonce <strong>« Alerte envoyée »</strong> ou <strong>« Échec de l'alerte »</strong> afin que vous connaissiez le résultat sans avoir besoin de regarder l'écran.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-3">
-            <h2>3. Retroalimentación háptica (Vibración del teléfono)</h2>
-            <p><strong>A quién ayuda:</strong> Personas con pérdida auditiva que no pueden escuchar el sonido de la cuenta regresiva, o cualquiera que prefiera la confirmación táctil.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> utiliza el motor de vibración de su teléfono para brindarle retroalimentación física en momentos clave:</p>
+            <h2>3. Retour haptique (vibration du téléphone)</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Les personnes malentendantes qui n’entendent pas le son du compte à rebours ou toute personne préférant une confirmation tactile.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> utilise le moteur de vibration de votre téléphone pour vous donner un retour physique à des moments clés :</p>
             <table>
                 <thead>
                     <tr>
-                        <th>Momento</th>
-                        <th>Vibración</th>
+                        <th>Moment</th>
+                        <th>Vibration</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Tic de cuenta regresiva</td>
-                        <td>Un pulso firme por segundo: puede sentir la cuenta regresiva en su mano</td>
+                        <td>Compte à rebours</td>
+                        <td>Une impulsion ferme par seconde – vous pouvez sentir le compte à rebours dans votre main</td>
                     </tr>
                     <tr>
-                        <td>Alerta enviada con éxito</td>
-                        <td>Tres pulsos fuertes en rápida sucesión</td>
+                        <td>Alerte envoyée avec succès</td>
+                        <td>Trois impulsions fortes en succession rapide</td>
                     </tr>
                     <tr>
-                        <td>Alerta fallida</td>
-                        <td>Dos zumbidos rápidos</td>
+                        <td>L'alerte a échoué</td>
+                        <td>Deux bourdonnements rapides</td>
                     </tr>
                     <tr>
-                        <td>Cuenta regresiva cancelada</td>
-                        <td>Dos pulsos medios: confirma que canceló, no envió</td>
+                        <td>Compte à rebours annulé</td>
+                        <td>Deux impulsions moyennes : confirme que vous avez annulé et que vous n'avez pas envoyé</td>
                     </tr>
                     <tr>
-                        <td>No hay destinatarios configurados</td>
-                        <td>Una vibración larga (error)</td>
+                        <td>Aucun destinataire configuré</td>
+                        <td>Une longue vibration (erreur)</td>
                     </tr>
                 </tbody>
             </table>
             <div class="alert-box">
-                <h4>💡 No se requiere acción</h4>
-                <p>La retroalimentación háptica funciona automáticamente siempre que la vibración esté activada en su teléfono (verifique el interruptor de silencio/vibración de su teléfono).</p>
+                <h4>💡 Aucune action nécessaire</h4>
+                <p>Le retour haptique fonctionne automatiquement tant que la vibration est activée sur votre téléphone (vérifiez le commutateur silencieux/vibration de votre téléphone).</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-4">
-            <h2>4. Alertas de sonido</h2>
-            <p><strong>A quién ayuda:</strong> Personas que necesitan escuchar cuando se envía una alerta, incluidas aquellas con pérdida auditiva moderada.</p>
-            <p>Cuando se envía una alerta, <span class="notranslate" translate="no">TapAlert</span> reproduce un sonido en <strong>su propio dispositivo</strong> para confirmar que se emitió la alerta. Puede personalizar el sonido en <strong>Configuración > Sonido de notificación</strong>:</p>
+            <h2>4. Alertes sonores</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Les personnes qui ont besoin d’entendre lorsqu’une alerte est envoyée, y compris celles souffrant d’une perte auditive modérée.</p>
+            <p>Lorsqu'une alerte est envoyée, <span class="notranslate" translate="no">TapAlert</span> émet un son sur <strong>votre propre appareil</strong> pour confirmer que l'alerte a été envoyée. Vous pouvez personnaliser le son dans <strong>Paramètres > Son de notification</strong> :</p>
             <ul>
-                <li><strong>Ninguno</strong>: sin sonido</li>
-                <li><strong>Sonidos simples</strong>: tonos simples y claros (buenos para la mayoría de los usuarios)</li>
-                <li><strong>Sonidos Ricos</strong>: tonos más completos y musicales</li>
+                <li><strong>Aucun</strong> : pas de son</li>
+                <li><strong>Plain Sounds</strong> – des sons simples et clairs (bon pour la plupart des utilisateurs)</li>
+                <li><strong>Rich Sounds</strong> : des sons plus amples et plus musicaux</li>
             </ul>
-            <p>Dentro de cada estilo de sonido, también puede ajustar:</p>
+            <p>Au sein de chaque style sonore, vous pouvez également ajuster :</p>
             <ul>
-                <li><strong>Tono de sonido</strong>: deslice el dedo hacia la izquierda para obtener un tono más bajo y profundo. Los sonidos de tono más grave (alrededor de 500 Hz) son más fáciles de escuchar para las personas con pérdida de audición de alta frecuencia relacionada con la edad. El valor predeterminado ya está configurado en un tono más bajo por este motivo.</li>
-                <li><strong>Volumen</strong>: establezca el volumen con el que se reproduce el sonido de confirmación.</li>
+                <li><strong>Tonalité sonore</strong> : faites glisser vers la gauche pour obtenir un ton plus grave et plus profond. Les sons graves (environ 500 Hz) sont plus faciles à entendre pour les personnes souffrant d’une perte auditive des hautes fréquences liée à l’âge. La valeur par défaut est déjà réglée sur une tonalité plus basse pour cette raison.</li>
+                <li><strong>Volume</strong> : définissez le volume du son de confirmation.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-5">
-            <h2>5. Flash de pantalla y flash de linterna</h2>
-            <p><strong>A quién ayuda:</strong> Personas con pérdida de la audición que pueden omitir el sonido o cualquier persona en un entorno ruidoso. También es útil cuando el teléfono está boca abajo o en un bolsillo.</p>
-            <p>Cuando se envía una alerta con éxito, <span class="notranslate" translate="no">TapAlert</span> produce:</p>
+            <h2>5. Flash d'écran et flash de torche</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Les personnes malentendantes qui pourraient ne pas entendre le son, ou toute personne se trouvant dans un environnement bruyant. Également utile lorsque le téléphone est face vers le bas ou dans une poche.</p>
+            <p>Lorsqu'une alerte est envoyée avec succès, <span class="notranslate" translate="no">TapAlert</span> produit :</p>
             <ol>
-                <li><strong>Destello de la pantalla</strong>: toda la pantalla se ilumina de blanco tres veces en rápida sucesión.</li>
-                <li><strong>Destellos de linterna</strong>: el LED de la cámara en la parte posterior del teléfono parpadea tres veces simultáneamente, visible incluso cuando la pantalla está boca abajo.</li>
+                <li><strong>Flash d'écran</strong> : l'ensemble de l'écran s'allume en blanc trois fois de suite.</li>
+                <li><strong>Flash torche</strong> : le voyant de l'appareil photo situé à l'arrière du téléphone clignote trois fois simultanément, visible même lorsque l'écran est orienté vers le bas.</li>
             </ol>
-            <p>Ambos destellos se ejecutan al mismo tiempo y se completan en menos de un segundo.</p>
+            <p>Les deux flashs fonctionnent en même temps et se terminent en moins d’une seconde.</p>
             <div class="alert-box warning">
-                <h4>⚠️ Como apagar esto</h4>
-                <p>Si tiene una condición fotosensible, vaya a <strong>Configuración → Sonido de notificación → Flash al recibir alerta</strong> y apáguelo.</p>
+                <h4>⚠️ Comment désactiver cela</h4>
+                <p>Si vous souffrez d'une condition photosensible, accédez à <strong>Paramètres → Son de notification → Flash d'alerte</strong> et éteignez-le.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-6">
-            <h2>6. Desliza para cancelar la cuenta regresiva</h2>
-            <p><strong>A quién ayuda:</strong> Cualquier persona que inicie accidentalmente una cuenta regresiva y necesite cancelarla rápidamente.</p>
-            <p>Cuando toca el botón <span class="notranslate" translate="no">SOS</span>, aparece un cuadro de diálogo de cuenta regresiva antes de enviar la alerta. Puedes cancelarlo de dos maneras:</p>
+            <h2>6. Faites glisser pour annuler le compte à rebours</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Toute personne qui démarre accidentellement un compte à rebours et doit l’annuler rapidement.</p>
+            <p>Lorsque vous appuyez sur le bouton <span class="notranslate" translate="no">SOS</span>, une boîte de dialogue de compte à rebours apparaît avant l'envoi de l'alerte. Vous pouvez l'annuler de deux manières :</p>
             <ul>
-                <li>Pulse el botón <strong>Cancelar</strong> en la parte inferior del cuadro de diálogo.</li>
-                <li><strong>Desliza el dedo por el cuadro de diálogo hacia la izquierda o hacia la derecha</strong>: el cuadro de diálogo se desliza con el dedo y se descarta cuando lo sueltas lo suficiente.</li>
+                <li>Appuyez sur le bouton <strong>Annuler</strong> en bas de la boîte de dialogue.</li>
+                <li><strong>Faites glisser la boîte de dialogue vers la gauche ou la droite</strong> : la boîte de dialogue glisse avec votre doigt et se ferme lorsque vous la relâchez suffisamment.</li>
             </ul>
-            <p>De cualquier manera, sentirá dos pequeñas vibraciones confirmando que la alerta fue cancelada y no se envió nada.</p>
+            <p>Dans tous les cas, vous ressentirez deux courtes vibrations confirmant que l'alerte a été annulée et que rien n'a été envoyé.</p>
         </section>
 
         <section class="guide-section" id="step-7">
-            <h2>7. Composición de mensajes de voz</h2>
-            <p><strong>A quién ayuda:</strong> Personas con temblores, artritis u otras afecciones que dificultan la escritura.</p>
-            <p>En lugar de escribir un mensaje personalizado antes de enviar una alerta, puede hablarlo. Toque el <strong>icono del micrófono</strong> en el campo del mensaje y pronuncie su mensaje. La aplicación transcribirá sus palabras automáticamente. El silencio durante 3 segundos detiene la grabación.</p>
-            <p>Esto funciona en la entrada de mensajes de la pantalla de inicio y en el cuadro de diálogo del temporizador de control.</p>
+            <h2>7. Composition du message vocal</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Les personnes souffrant de tremblements, d’arthrite ou d’autres conditions rendant la saisie difficile.</p>
+            <p>Au lieu de taper un message personnalisé avant d'envoyer une alerte, vous pouvez le prononcer. Appuyez sur l'<strong>icône du microphone</strong> dans le champ du message et prononcez votre message. L'application transcrira automatiquement vos mots. Un silence de 3 secondes arrête l'enregistrement.</p>
+            <p>Cela fonctionne sur la saisie du message de l'écran d'accueil et dans la boîte de dialogue du minuteur homme mort.</p>
         </section>
 
         <section class="guide-section" id="step-8">
-            <h2>8. Modo mantener presionado para enviar</h2>
-            <p><strong>A quién ayuda:</strong> Personas propensas a pulsar accidentalmente el botón <span class="notranslate" translate="no">SOS</span>.</p>
-            <p>De forma predeterminada, el botón <span class="notranslate" translate="no">SOS</span> requiere un solo toque. Si los toques accidentales son una preocupación, puede cambiar al modo de <strong>Mantener pulsado para enviar</strong>:</p>
-            <p>Vaya a <strong>Configuración → Método de activación → Mantener presionado para enviar</strong>.</p>
-            <p>En este modo, debe presionar y mantener presionado el botón durante todo el tiempo de espera antes de que se active la alerta, lo que evita envíos accidentales.</p>
+            <h2>8. Mode attente pour envoyer</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Les personnes susceptibles d'appuyer accidentellement sur le bouton <span class="notranslate" translate="no">SOS</span>.</p>
+            <p>Par défaut, le bouton <span class="notranslate" translate="no">SOS</span> ne nécessite qu'une seule pression. Si des pressions accidentelles posent problème, vous pouvez passer en mode <strong>Maintenir pour envoyer</strong> :</p>
+            <p>Accédez à <strong>Paramètres → Méthode de déclenchement → Maintenir pour envoyer</strong>.</p>
+            <p>Dans ce mode, vous devez appuyer et maintenir le bouton enfoncé pendant toute la durée de maintien avant que l'alerte ne soit déclenchée, évitant ainsi les envois accidentels.</p>
         </section>
 
         <section class="guide-section" id="step-9">
-            <h2>9. Widget de pantalla de inicio (Android)</h2>
-            <p><strong>A quién ayuda:</strong> Cualquiera a quien le resulte difícil desbloquear su teléfono y abrir la aplicación en caso de emergencia.</p>
-            <p>En Android, puede agregar un widget de <span class="notranslate" translate="no">TapAlert</span> a su pantalla de inicio para que el botón <span class="notranslate" translate="no">SOS</span> esté siempre a un toque de distancia, sin abrir la aplicación en absoluto.</p>
-            <p>Para agregar el widget: <strong>Configuración → Widget de la pantalla de inicio → Agregar widget</strong>.</p>
+            <h2>9. Widget de l'écran d'accueil (Android)</h2>
+            <p><strong>À qui cela aide-t-il :</strong> Toute personne ayant du mal à déverrouiller son téléphone et à ouvrir l'application en cas d'urgence.</p>
+            <p>Sur Android, vous pouvez ajouter un widget <span class="notranslate" translate="no">TapAlert</span> à votre écran d'accueil afin que le bouton <span class="notranslate" translate="no">SOS</span> soit toujours à portée de main, sans ouvrir l'application du tout.</p>
+            <p>Pour ajouter le widget : <strong>Paramètres → Widget de l'écran d'accueil → Ajouter un widget</strong>.</p>
         </section>
 
         <div class="next-steps">
-            <h3>¿Necesitas más ayuda?</h3>
-            <p>If you have any questions about configuring these  or need assistance, check our <a
-                    href="troubleshooting.html">Guía de Solución de Problemas</a> or <a href="contact.html">Soporte de Contacto</a>.</p>
+            <h3>Besoin d'aide supplémentaire ?</h3>
+            <p>If you have any questions about configuring these caractéristiques or need assistance, check our <a
+                    href="troubleshooting.html">Guide de dépannage</a> or <a href="contact.html">Contacter l'assistance</a>.</p>
         </div>
     </main>
 
@@ -554,41 +554,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertas de emergencia simples para todos. Sin suscripciones, sin rastreo, solo seguridad.</p>
+                    <p>Des alertes d'urgence simples pour tout le monde. Pas d'abonnement, pas de suivi, juste de la sécurité.</p>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Producto</h3>
+                    <h3>Produit</h3>
                     <ul>
-                        <li><a href="index.html#features">Características</a></li>
-                        <li><a href="index.html#pricing">Precios</a></li>
-                        <li><a href="index.html#download">Descargar</a></li>
+                        <li><a href="index.html#features">Caractéristiques</a></li>
+                        <li><a href="index.html#pricing">Tarifs</a></li>
+                        <li><a href="index.html#download">Télécharger</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Légal</h3>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.html">Política de Privacidad</a></li>
-                        <li><a href="terms.html">Términos de Servicio</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="PRIVACY_POLICY.html">politique de confidentialité</a></li>
+                        <li><a href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Soporte</h3>
+                    <h3>Soutien</h3>
                     <ul>
-                        <li><a href="#">Preguntas Frecuentes</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
-                        <li><a href="accessibility_guide.html">Guía de Accesibilidad</a></li>
-                        <li><a href="troubleshooting.html">Solución de problemas</a></li>
-                        <li><a href="contact.html">Soporte de Contacto</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guides étape par étape</a></li>
+                        <li><a href="accessibility_guide.html">Guide d'accessibilité</a></li>
+                        <li><a href="troubleshooting.html">Dépannage</a></li>
+                        <li><a href="contact.html">Contacter l'assistance</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos los derechos reservados. | Hecho con ❤️ para tu seguridad</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tous droits réservés. | Fabriqué avec ❤️ pour votre sécurité</p>
             </div>
         </div>
     </footer>

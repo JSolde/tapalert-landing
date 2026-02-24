@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/twilio_guide.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/twilio_guide.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/twilio_guide.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/twilio_guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/twilio_guide.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Guide de configuration - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            color: #c05621;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
+                    class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Retour à la maison</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">FR</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/twilio_guide.html" hreflang="ca">CA</a>
+            <a href="../twilio_guide.html" hreflang="en">EN</a>
+            <a href="../es/twilio_guide.html" hreflang="es">ES</a>
+            <a href="../fr/twilio_guide.html" hreflang="fr" class="active">FR</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Retour aux Guides</a>
+
+        <h1 class="guide-title"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Guide de configuration</h1>
+
+        <section class="guide-section">
+            <h2>💡 Qu'est-ce que la configuration <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> ?</h2>
+
+            <p><strong>Ce que vous allez configurer :</strong> la configuration <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> connecte <span class="notranslate" translate="no">TapAlert</span> au service SMS cloud de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, permettant à l'application d'envoyer des messages SMS même lorsque le service cellulaire de votre téléphone n'est pas disponible (mais que vous disposez du Wi-Fi).</p>
+
+            <p><strong>Pourquoi c'est important</strong> : en configurant les informations d'identification <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> dans l'application, vous activez une méthode <span class="notranslate" translate="no">fallback</span> fiable pour l'envoi d'alertes. Ceci est particulièrement important lors des voyages internationaux, dans les bâtiments avec une mauvaise réception cellulaire, ou option comme unobligatoire pour les utilisateurs d'iPhone qui ne peuvent pas envoyer de SMS directement depuis les applications.</p>
+
+            <p><strong>Pourquoi <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> ?</strong><br> <span class="notranslate" translate="no">TapAlert</span> utilise <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> car il s'agit du service SMS le plus utilisé au monde, auquel des entreprises comme Uber et Airbnb font confiance. Il n’y a pas de frais mensuels : vous ne payez que quelques centimes par message réellement envoyé. Pour une application d’urgence qui envoie rarement des alertes, cela signifie un coût quasi nul. La configuration nécessite de copier seulement trois valeurs dans l'application, et des milliers de didacticiels en ligne existent si vous avez besoin d'aide.</p>
+
+            <p><strong>Ce dont vous avez besoin</strong> : un <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> compte avec les informations d'authentification (SID du compte et jeton d'authentification), ainsi qu'un identifiant d'expéditeur alphanumérique ou un numéro de téléphone <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> acheté.</p>
+            <ul>
+                <li>✅ <strong>L'essai compte envoie de vrais SMS :</strong> Un membre de la famille peut tester l'ensemble de la configuration avec l'essai gratuit de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (envoie aux numéros vérifié) avant de dépenser de l'argent.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>📖 À propos du service</h2>
+            <p>L'option fournie dans <span class="notranslate" translate="no">TapAlert</span> d'utiliser le mécanisme <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (cloud)comme un pour envoyer des SMS offre une fiabilité ultime, en particulier lors des voyages internationaux où les SMS en itinérance échouent souvent. <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> peut envoyer des SMS vers plus de 180 pays. Cependant, la méthode que vous pouvez utiliser varie selon les pays. Certains pays prennent en charge les numéros de téléphone <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, d'autres ne prennent en charge que les identifiants d'expéditeur alphanumériques et certains exigent le respect de réglementations locales spécifiques.</p>
+
+            <h3>Pourquoi utiliser <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> sur Androïde ? (<span class="notranslate" translate="no">Redondance intelligente</span>)</h3>
+            <p>Même si vous disposez d'une carte SIM, la configuration de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> est fortement recommandée pour la <strong>Redondance</strong> :</p>
+            <ul>
+                <li><strong>Scénario :</strong> Vous êtes dans un bâtiment avec Wi-Fi mais <strong>aucun signal cellulaire</strong>.</li>
+                <li><strong>Résultat :</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> échoue.</li>
+                <li><strong>Solution :</strong> <span class="notranslate" translate="no">TapAlert</span> passera automatiquement à <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> et enverra l'alerte via Wi-Fi.</li>
+            </ul>
+            <p>Veuillez noter que pour utiliser cette fonctionnalité, obligatoire pour les utilisateurs d'iPhone, vous devrez disposer d'un identifiant <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> compte. Le coût d'envoi des messages sera le même que si vous le faisiez manuellement depuis <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. Aucun frais supplémentaire ne sera ajouté par l'application.</p>
+
+            <h3><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Options de l'expéditeur</h3>
+            <p>Vous pouvez choisir entre 2 options pour envoyer des SMS avec <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> :</p>
+
+            <p><strong>OPTION A : Utiliser l'ID d'expéditeur alphanumérique (recommandé pour l'Europe)</strong></p>
+            <ul>
+                <li>✅ <strong>Avantage :</strong> Pas besoin d'acheter un numéro de téléphone (économisez des coûts mensuels ! En fonction du nombre de messages que vous envoyez).</li>
+                <li>✅ <strong>Avantage</strong> : les destinataires voient un nom (par exemple, "<span class="notranslate" translate="no">TapAlert</span>" ou votre nom) au lieu d'un nombre aléatoire.</li>
+                <li>⚠️ <strong>Remarque :</strong> Uniquement (pas de réponse) et non pris en charge dans certains pays (comme les États-Unis).</li>
+                <li><a href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-<span class="notranslate" translate="no">Twilio</span>-Programmable-SMS" target="_blank">En savoir plus sur l'ID d'expéditeur alphanumérique</a></li>
+            </ul>
+
+            <p><strong>OPTION B : Acheter un numéro de téléphone <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong></p>
+            <ul>
+                <li>✅ <strong>Avantage :</strong> Fonctionne dans le monde entier (y compris aux États-Unis).</li>
+                <li>⚠️ <strong>Coût :</strong> Nécessite l'achat d'un numéro (environ 1 $/mois).</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>💰 Coûts cachés potentiels et facteurs Tarifs</h2>
+            <p>Bien que <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> propose généralement des messages à faible coût, le prix final par SMS peut être supérieur au tarif de base en raison de plusieurs facteurs. Il est important de les examiner pour éviter des frais inattendus.</p>
+
+            <h3>1. Pays de destination Tarifs</h3>
+            <p>Les tarifs <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> varient considérablement en fonction du <strong>pays de destination</strong> du message.</p>
+            <ul>
+                <li>Les tarifs annoncés les plus bas (par exemple, environ 0,0075 $) s'appliquent souvent aux messages envoyés aux <strong>États-Unis</strong>.</li>
+                <li>L'envoi vers d'autres pays (par exemple en Europe ou en Asie) peut être beaucoup plus coûteux.</li>
+                <li><strong>Action</strong> : vérifiez toujours les tarifs spécifiques au pays vers lequel vous souhaitez envoyer des alertes.</li>
+            </ul>
+
+            <h3>2. Frais de transporteur et de réglementation</h3>
+            <p>En plus du prix de base de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, de nombreux pays et opérateurs locaux imposent des <strong>surcharges</strong> ou des « frais répercutés ».</p>
+            <ul>
+                <li>Il s'agit de frais inévitables ajoutés par les fournisseurs de télécommunications, et non de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</li>
+                <li>Ils peut parfois doubler le coût effectif par message dans certaines régions.</li>
+            </ul>
+
+            <h3>3. Segmentation des messages (messages longs)</h3>
+            <p>La facturation des SMS est basée sur des « segments ».</p>
+            <ul>
+                <li>Un segment SMS standard comporte <strong>160 caractères</strong>.</li>
+                <li>Si votre message dépasse cette limite, il est divisé en plusieurs parties et vous êtes facturé pour <strong>chaque segment</strong>. <span class="notranslate" translate="no">TapAlert</span> messages SMS contenant des informations <strong>Emplacement</strong> dépassent cette limite. Pour minimiser les coûts <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, évitez d'activer les <strong>Paramètres Emplacement</strong> (ou désactivez simplement l'option <strong>Inclure l'adresse</strong> dans les paramètres). Vous pouvez vérifier la longueur réelle de chaque message envoyé dans l'écran <strong>Historique des alertes</strong>.</li>
+                <li><strong>Important</strong> : L'utilisation d'émojis ou de caractères spéciaux non latins (Unicode) réduit la limite de segment à seulement <strong>70 caractères</strong>, ce qui peut potentiellement tripler le coût d'une seule alerte.</li>
+            </ul>
+
+            <h3>4. Frais de location de numéro de téléphone</h3>
+            <p>Si vous choisissez d'acheter un numéro de téléphone (option B ci-dessus) :</p>
+            <ul>
+                <li>Vous payez des <strong>frais de location mensuels</strong> pour le numéro lui-même (généralement entre 1,00 $ et 4,00 $ USD/mois selon le pays).</li>
+                <li>Il s’agit d’un coût fixe récurrent, que vous envoyiez ou non des messages.</li>
+                <li>Certains numéros spécifiques (comme les numéros de mobile espagnols capables d'envoyer des SMS) sont « exclusifs » et nécessitent un processus de demande manuelle et des frais plus élevés.</li>
+            </ul>
+
+            <h3>5. Conversion de devises et taxes</h3>
+            <p>Votre facture finale peut inclure les taxes locales (comme la TVA).</p>
+            <p>Si votre carte est dans une devise différente de celle de votre <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> compte, votre banque ou <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> peut appliquer des frais de conversion de devise.</p>
+
+            <div class="alert-box">
+                <h4>💡 Recommandation</h4>
+                <p>Nous vous conseillons fortement de consulter la <a href="https://www.twilio.com/sms/pricing" target="_blank">Page officielle <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Tarifs</a> et de sélectionner votre pays cible pour voir la répartition complète des coûts.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>⚙️ Étapes de configuration</h2>
+            <p>Pour configurer <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> dans l'application, procédez comme suit :</p>
+
+            <h3>1️⃣ Étape 1 : Obtenez vos informations d'identification <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></h3>
+            <ol>
+                <li>Créez un compte sur <a href="https://www.twilio.com/" target="_blank"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.com</a>.</li>
+                <li>Accédez à la <a href="https://console.twilio.com/" target="_blank"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Console</a> pour trouver votre <strong>SID de compte</strong> et votre <strong>jeton d'authentification</strong>.</li>
+                <li><strong>Choisissez votre méthode d'envoi</strong> (option A ou B ci-dessus).</li>
+            </ol>
+
+            <h3>2️⃣ Étape 2 : Saisissez les informations d'identification dans l'application</h3>
+            <ol>
+                <li>Ouvrez le <strong>Paramètres</strong> de l'application.</li>
+                <li>Activez le commutateur <strong>"Utiliser <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>"</strong>.</li>
+                <li>Saisissez votre <strong>SID de compte</strong> et votre <strong>Jeton d'authentification</strong>.</li>
+                <li><strong>Configurer l'expéditeur :</strong>
+                    <ul>
+                        <li><strong>Si vous utilisez l'option A (Nom) :</strong> Activez <strong>"Utiliser l'ID de l'expéditeur alphanumérique"</strong>, puis saisissez le nom souhaité (11 caractères maximum) dans le champ <strong>Nom de l'expéditeur</strong>.</li>
+                        <li><strong>Si vous utilisez l'option B (Numéro) :</strong> Laissez « Utiliser l'ID d'expéditeur alphanumérique » <strong>OFF</strong> et saisissez le numéro <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> que vous avez acheté dans le champ <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Numéro de téléphone</strong>.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>3️⃣ Étape 3 : Récapitulatif de l'identifiant alphanumérique de l'expéditeur</h3>
+            <ul>
+                <li><strong>Qu'est-ce que c'est ?</strong> Il vous permet d'utiliser un nom (comme "MyHomeAlert") au lieu d'un numéro.</li>
+                <li><strong>Confiance</strong> : les destinataires voient votre nom immédiatement, ce qui garantit que votre alerte se démarque.</li>
+                <li><strong>Aucune réponse :</strong> Notez que les destinataires ne peuvent pas répondre à un nom.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Des alertes d'urgence simples pour tout le monde. Pas d'abonnement, pas de suivi, juste de la sécurité.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Produit</h3>
+                    <ul>
+                        <li><a href="index.html#features">Caractéristiques</a></li>
+                        <li><a href="index.html#pricing">Tarifs</a></li>
+                        <li><a href="index.html#download">Télécharger</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Légal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">politique de confidentialité</a></li>
+                        <li><a href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Soutien</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guides étape par étape</a></li>
+                        <li><a href="accessibility_guide.html">Guide d'accessibilité</a></li>
+                        <li><a href="troubleshooting.html">Dépannage</a></li>
+                        <li><a href="contact.html">Contacter l'assistance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tous droits réservés. | Fabriqué avec ❤️ pour votre sécurité</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

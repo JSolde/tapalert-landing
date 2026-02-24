@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/email_redundancy_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/email_redundancy_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de redundància de correu electrònic - TapAlert</title>
+    <title>Guide de redondance des e-mails - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -367,7 +367,7 @@
                 <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
                     class="notranslate" translate="no">TapAlert</span>
             </a>
-            <a href="index.html" class="btn btn-primary">Tornar a casa</a>
+            <a href="index.html" class="btn btn-primary">Retour à la maison</a>
         
 <style>
 .lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
@@ -390,13 +390,13 @@
 </style>
 
 <div class="lang-dropdown">
-    <button class="lang-dropbtn">CA</button>
+    <button class="lang-dropbtn">FR</button>
     <div class="lang-dropdown-content">
         <div class="lang-dropdown-inner">
-            <a href="../ca/email_redundancy_guide.html" hreflang="ca" class="active">CA</a>
+            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
             <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
             <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-            <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
+            <a href="../fr/email_redundancy_guide.html" hreflang="fr" class="active">FR</a>
         </div>
     </div>
 </div>
@@ -405,94 +405,94 @@
 
     <!-- Main Content -->
     <main class="guide-container">
-        <a href="index.html#guides" class="back-link">← Torna a Guies</a>
+        <a href="index.html#guides" class="back-link">← Retour aux Guides</a>
 
-        <h1 class="guide-title">Configuració de la redundància del correu electrònic</h1>
+        <h1 class="guide-title">Configuration de la redondance des e-mails</h1>
 
         <section class="guide-section">
-            <h2>💡 Què és la redundància de correu electrònic Característica?</h2>
-            <p>Redundància de correu electrònic a <span class="notranslate" translate="no">TapAlert</span> permet que l'aplicació enviï alertes d'emergència i missatges d'informes als vostres contactes designats per correu electrònic, a més o en lloc d'un SMS.</p>
+            <h2>💡 Qu'est-ce que la redondance des e-mails Fonctionnalité ?</h2>
+            <p>Redondance des e-mails dans <span class="notranslate" translate="no">TapAlert</span> permet à l'application d'envoyer des alertes d'urgence et des messages de rapport à vos contacts désignés par e-mail, en plus ou à la place des SMS.</p>
 
-            <h2>🎯 Quin és el seu objectiu?</h2>
-            <p>L'objectiu principal de la redundància del correu electrònic és assegurar-se que el vostre missatge s'entrega encara que els canals d'SMS principals fallin o no estiguin disponibles.</p>
+            <h2>🎯 Quel est son objectif ?</h2>
+            <p>L'objectif principal de la redondance des e-mails est de garantir que votre message soit livré même si les canaux SMS principaux échouent ou sont indisponibles.</p>
             <ul>
-                <li>✅ <strong>Ruta de lliurament secundària:</strong> si esteu connectat a una Wi-Fi però no teniu cap servei mòbil (i les trucades per Wi-Fi estan desactivades o no són compatibles), el correu electrònic actuacom aperfecte <span class="notranslate" translate="no">fallback</span>.</li>
-                <li>✅ <strong>Viatges internacionals:</strong> quan viatgeu a l'estranger on els SMS poden ser extremadament cars o poc fiables, podeu confiar exclusivament en la Wi-Fi i enviar alertes per correu electrònic de manera gratuïta.</li>
-                <li>✅ <strong>Tranquil·litat addicional:</strong> l'enviament d'alertes tant per SMS com per correu electrònic simultàniament garanteix que si un contacte d'emergència s'ha perdut un missatge de text, és possible que encara vegi la notificació per correu electrònic.</li>
+                <li>✅ <strong>Chemin de livraison secondaire :</strong> Si vous êtes connecté au Wi-Fi mais que vous n'avez pas de service cellulaire (et que les appels Wi-Fi sont désactivés ou non pris en charge), l'e-mail agit comme unperfect <span class="notranslate" translate="no">fallback</span>.</li>
+                <li>✅ <strong>Voyages internationaux</strong> : lorsque vous voyagez à l'étranger où les SMS peuvent être extrêmement coûteux ou peu fiables, vous pouvez compter uniquement sur le Wi-Fi et envoyer des alertes par e-mail gratuitement.</li>
+                <li>✅ <strong>Tranquillité d'esprit supplémentaire :</strong> L'envoi simultané d'alertes par SMS et par e-mail garantit que si un contact d'urgence manque un SMS, il pourra toujours voir la notification par e-mail.</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>⚙️ Com configurar la redundància de correu electrònic</h2>
+            <h2>⚙️ Comment configurer la redondance des e-mails</h2>
             <ol>
-                <li>Obriu el <span class="notranslate" translate="no">TapAlert</span> i vés a <strong>Configuració</strong>.</li>
-                <li>Desplaceu-vos a la secció <strong>Alertes per correu electrònic</strong> i activeu <strong>Activa les alertes per correu electrònic</strong>.</li>
-                <li>Seleccioneu el vostre <strong>proveïdor de correu electrònic</strong> des dels predefinitsbotós (Gmail, Outlook, Yahoo, iCloud) per omplir automàticament l'amfitrió i el port SMTP.</li>
-                <li>Introduïu la vostra <strong>adreça electrònica</strong> completa.</li>
-                <li>Introduïu la vostra <strong>contrasenya d'aplicació</strong> (consulteu la secció següent sobre què és això i com obtenir-ne una).</li>
-                <li>Toqueu <strong>"Desa la configuració"</strong> i utilitzeu el "Correu electrònic de prova"botó per assegurar-vos que està configurat correctament.</li>
+                <li>Ouvrez le <span class="notranslate" translate="no">TapAlert</span> et accédez à <strong>Paramètres</strong>.</li>
+                <li>Faites défiler jusqu'à la section <strong>Alertes par e-mail</strong> et activez <strong>Activer les alertes par e-mail</strong>.</li>
+                <li>Sélectionner votre <strong>fournisseur de messagerie</strong> à partir des bouton prédéfinis (Gmail, Outlook, Yahoo, iCloud) pour remplir automatiquement l'hôte et le port SMTP.</li>
+                <li>Saisissez votre <strong>adresse e-mail</strong> complète.</li>
+                <li>Entrez votre <strong>Mot de passe d'application</strong> (voir la section ci-dessous pour savoir de quoi il s'agit et comment en obtenir un).</li>
+                <li>Appuyez sur <strong>"Enregistrer les paramètres"</strong> et utilisez le "Test Email" bouton pour vous assurer qu'il est correctement configuré.</li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>🔑 Què és una contrasenya d'aplicació?</h2>
-            <p>Una <strong>contrasenya d'aplicació</strong> és una contrasenya generada aleatòriament que dóna permís a una aplicació de tercers (com ara <span class="notranslate" translate="no">TapAlert</span>) per accedir al vostre correu electrònic compte per enviar missatges en nom vostre.</p>
+            <h2>🔑 Qu'est-ce qu'un mot de passe d'application ?</h2>
+            <p>Un <strong>Mot de passe d'application</strong> est un code d'authentification généré aléatoirement qui autorise une application tierce (telle que <span class="notranslate" translate="no">TapAlert</span>) à accéder à votre messagerie compte pour envoyer des messages en votre nom.</p>
 
-            <h3>Per què en necessito una en lloc de la meva contrasenya real?</h3>
-            <p>Els proveïdors de correu electrònic moderns bloquegen els inicis de sessió bàsics de contrasenya per protegir el vostre compte dels pirates informàtics. Una contrasenya d'aplicació passa per alt l'autenticació de dos factors (2FA) per a aquesta aplicació específica <em>sense</em>, donant a l'aplicació la vostra compte contrasenya real. Si mai voleu revocar l'accés de <span class="notranslate" translate="no">TapAlert</span>, simplement suprimiu la contrasenya de l'aplicació a la configuració del vostre correu electrònic i la vostra contrasenya principal compte romandrà segura i sense canvis.</p>
+            <h3>Pourquoi ai-je besoin d'un mot de passe plutôt que de mon vrai mot de passe ?</h3>
+            <p>Les fournisseurs de messagerie modernes bloquent les connexions par mot de passe de base pour protéger votre compte des pirates. Un mot de passe d'application contourne l'authentification à deux facteurs (2FA) pour cette application spécifique <em>sans</em> en donnant à l'application votre mot de passe compte réel. Si jamais vous souhaitez révoquer l'accès de <span class="notranslate" translate="no">TapAlert</span>, supprimez simplement le mot de passe de l'application dans vos paramètres de messagerie et votre mot de passe principal compte reste sûr et inchangé.</p>
 
             <div class="alert-box">
-                <h4>⚠️ Nota important</h4>
-                <p>Per generar una contrasenya d'aplicació, gairebé tots els proveïdors de correu electrònic requereixen que primer hàgiu activat l'<strong>Autenticació de dos factors (2FA)</strong> al vostre compte.</p>
+                <h4>⚠️ Remarque importante</h4>
+                <p>Pour générer un mot de passe d'application, presque tous les fournisseurs de messagerie exigent que vous ayez d'abord activé l'<strong>Authentification à deux facteurs (2FA)</strong> sur votre compte.</p>
             </div>
         </section>
 
         <section class="guide-section">
-            <h2>📝 Com crear una contrasenya d'aplicació</h2>
-            <p>Aquí teniu instruccions clares i pas a pas per als proveïdors de correu electrònic més habituals.</p>
+            <h2>📝 Comment créer un mot de passe d'application</h2>
+            <p>Voici des instructions claires, étape par étape, pour les fournisseurs de messagerie les plus courants.</p>
 
-            <h3>1. Gmail (compte de Google)</h3>
+            <h3>1. Gmail (compte Google)</h3>
             <ol>
-                <li>Aneu a la <a href="https://mycompte.google.com/" target="_blank">pàgina de gestió del compte de Google</a> i inicieu la sessió.</li>
-                <li>Al tauler de navegació esquerre, feu clic a <strong>Seguretat</strong>.</li>
-                <li>A la secció "Com inicieu la sessió a Google", assegureu-vos que la <strong>verificació en dos passos</strong> estigui <strong>activada</strong>. (Si està desactivat, primer l'enceneu deu).</li>
-                <li>Feu clic a <strong>Verificació en dos passos</strong>. Desplaceu-vos fins a la part inferior de la pàgina i feu clic a <strong>Contrasenyes de l'aplicació</strong>.</li>
-                <li>Al menú desplegable "Seleccioneu app", trieu <em>Altre (nom personalitzat)</em> i escriviu <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
-                <li>Feu clic a <strong>Genera</strong>.</li>
-                <li>Apareixerà un quadre groc amb un codi de 16 caràcters. Copieu aquest codi i enganxeu-lo al camp "Contrasenya de l'aplicació" de l'aplicació <span class="notranslate" translate="no">TapAlert</span> (no cal que inclogueu els espais).</li>
-                <li>Feu clic a <strong>Fet</strong>.</li>
+                <li>Accédez à votre <a href="https://mycompte.google.com/" target="_blank">page de gestion de compte Google</a> et connectez-vous.</li>
+                <li>Dans le panneau de navigation de gauche, cliquez sur <strong>Sécurité</strong>.</li>
+                <li>Dans la section "Comment vous connecter à Google", assurez-vous que la <strong>vérification en deux étapes</strong> est <strong>activée</strong>. (S'il est éteint, vous doit l'allumez en premier).</li>
+                <li>Cliquez sur <strong>Vérification en deux étapes</strong>. Faites défiler la page jusqu'en bas et cliquez sur <strong>Mots de passe d'application</strong>.</li>
+                <li>Dans la liste déroulante « Sélectionner app », choisissez <em>Autre (nom personnalisé)</em> et saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Cliquez sur <strong>Générer</strong>.</li>
+                <li>Une boîte jaune apparaîtra avec un code à 16 caractères. Copiez ce code et collez-le dans le champ « Mot de passe de l'application » de l'application <span class="notranslate" translate="no">TapAlert</span> (vous n'avez pas besoin d'inclure les espaces).</li>
+                <li>Cliquez sur <strong>Terminé</strong>.</li>
             </ol>
 
-            <h3>2. Hotmail/Outlook (compte de Microsoft)</h3>
+            <h3>2. Hotmail/Outlook (compte Microsoft)</h3>
             <ol>
-                <li>Aneu a la <a href="https://compte.microsoft.com/security" target="_blank">pàgina de seguretat del compte de Microsoft</a> i inicieu la sessió.</li>
-                <li>Feu clic a <strong>Opcions de seguretat avançades</strong>.</li>
-                <li>A la secció "Seguretat addicional", assegureu-vos que la <strong>verificació en dos passos</strong> estigui <strong>activada</strong>.</li>
-                <li>Desplaceu-vos cap avall fins a la secció <strong>Contrasenyes de l'aplicació</strong>.</li>
-                <li>Feu clic a <strong>Crea una contrasenya d'aplicació nova</strong>.</li>
-                <li>Apareixerà una pantalla nova que mostra la vostra contrasenya d'aplicació única.</li>
-                <li>Copieu aquesta contrasenya i enganxeu-la a <span class="notranslate" translate="no">TapAlert</span> i, a continuació, feu clic a <strong>Fet</strong>.</li>
+                <li>Accédez à la <a href="https://compte.microsoft.com/security" target="_blank">page Sécurité du compte Microsoft</a> et connectez-vous.</li>
+                <li>Cliquez sur <strong>Options de sécurité avancées</strong>.</li>
+                <li>Dans la section "Sécurité supplémentaire", assurez-vous que la <strong>Vérification en deux étapes</strong> est <strong>Activée</strong>.</li>
+                <li>Faites défiler jusqu'à la section <strong>Mots de passe d'application</strong>.</li>
+                <li>Cliquez sur <strong>Créer un nouveau mot de passe d'application</strong>.</li>
+                <li>Un nouvel écran apparaîtra affichant votre mot de passe d'application unique.</li>
+                <li>Copiez ce mot de passe et collez-le dans <span class="notranslate" translate="no">TapAlert</span>, puis cliquez sur <strong>Terminé</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Aneu a la vostra <a href="https://login.yahoo.com/compte/security" target="_blank">pàgina de seguretat del compte de Yahoo</a> i inicieu la sessió.</li>
-                <li>Desplaceu-vos cap avall fins a la part inferior de la pàgina i feu clic a <strong>Genera i gestiona les contrasenyes d'aplicacions</strong>.</li>
-                <li>Apareixerà una finestra modal. Introduïu <strong><span class="notranslate" translate="no">TapAlert</span></strong> com a nom de l'aplicació.</li>
-                <li>Feu clic a <strong>Genera contrasenya</strong>.</li>
-                <li>Copieu la contrasenya de 16 caràcters que es mostra a la pantalla i enganxeu-la a <span class="notranslate" translate="no">TapAlert</span> (ometint els espais).</li>
-                <li>Feu clic a <strong>Fet</strong>.</li>
+                <li>Accédez à votre <a href="https://login.yahoo.com/compte/security" target="_blank">page de sécurité du compte Yahoo</a> et connectez-vous.</li>
+                <li>Faites défiler la page vers le bas et cliquez sur <strong>Générer et gérer les mots de passe des applications</strong>.</li>
+                <li>Une fenêtre modale apparaîtra. Saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong> comme nom de l'application.</li>
+                <li>Cliquez sur <strong>Générer un mot de passe</strong>.</li>
+                <li>Copiez le mot de passe à 16 caractères affiché à l'écran et collez-le dans <span class="notranslate" translate="no">TapAlert</span> (en omettant les espaces).</li>
+                <li>Cliquez sur <strong>Terminé</strong>.</li>
             </ol>
 
-            <h3>4. iCloud (ID d'Apple)</h3>
+            <h3>4. iCloud (identifiant Apple)</h3>
             <ol>
-                <li>Aneu a <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> i inicieu la sessió amb el vostre ID d'Apple.</li>
-                <li>A la secció <strong>Inici de sessió i seguretat</strong>, feu clic a <strong>Contrasenyes específiques de l'aplicació</strong>.</li>
-                <li>Feu clic a <strong>Genera una contrasenya específica de l'aplicació</strong> o a <strong>Afegeix (+)</strong>botó.</li>
-                <li>Introduïu <strong><span class="notranslate" translate="no">TapAlert</span></strong> quan se us demani el nom d'una aplicació i feu clic a Crea.</li>
-                <li>És possible que se us demani que torneu a introduir la contrasenya de l'identificador d'Apple per confirmar.</li>
-                <li>Es generarà i es mostrarà una contrasenya específica de l'aplicació (normalment en el format <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
-                <li>Copieu tota aquesta contrasenya i enganxeu-la a <span class="notranslate" translate="no">TapAlert</span> i, a continuació, feu clic a <strong>Fet</strong>.</li>
+                <li>Accédez à <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> et connectez-vous avec votre identifiant Apple.</li>
+                <li>Dans la section <strong>Connexion et sécurité</strong>, cliquez sur <strong>Mots de passe spécifiques à l'application</strong>.</li>
+                <li>Cliquez sur <strong>Générer un mot de passe spécifique à l'application</strong> ou sur <strong>Ajouter (+)</strong>bouton.</li>
+                <li>Saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong> lorsque vous êtes invité à saisir un nom d'application, puis cliquez sur Créer.</li>
+                <li>Il vous sera peut-être demandé de saisir à nouveau le mot de passe de votre identifiant Apple pour confirmer.</li>
+                <li>Un mot de passe unique spécifique à l'application sera généré et affiché (généralement au format <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
+                <li>Copiez l'intégralité de ce mot de passe et collez-le dans <span class="notranslate" translate="no">TapAlert</span>, puis cliquez sur <strong>Terminé</strong>.</li>
             </ol>
         </section>
 
@@ -504,41 +504,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només seguretat.</p>
+                    <p>Des alertes d'urgence simples pour tout le monde. Pas d'abonnement, pas de suivi, juste de la sécurité.</p>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Producte</h3>
+                    <h3>Produit</h3>
                     <ul>
-                        <li><a href="index.html#features">Característiques</a></li>
-                        <li><a href="index.html#pricing">Preus</a></li>
-                        <li><a href="index.html#download">Descarregar</a></li>
+                        <li><a href="index.html#features">Caractéristiques</a></li>
+                        <li><a href="index.html#pricing">Tarifs</a></li>
+                        <li><a href="index.html#download">Télécharger</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h3>Légal</h3>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.html">Política de privadesa</a></li>
-                        <li><a href="terms.html">Condicions del servei</a></li>
-                        <li><a href="contact.html">Contacte</a></li>
+                        <li><a href="PRIVACY_POLICY.html">politique de confidentialité</a></li>
+                        <li><a href="terms.html">Conditions d'utilisation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>Suport</h3>
+                    <h3>Soutien</h3>
                     <ul>
-                        <li><a href="#">Preguntes freqüents</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies pas a pas</a></li>
-                        <li><a href="accessibility_guide.html">Guia d'accessibilitat</a></li>
-                        <li><a href="troubleshooting.html">Resolució de problemes</a></li>
-                        <li><a href="contact.html">Contacta amb l'assistència</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guides étape par étape</a></li>
+                        <li><a href="accessibility_guide.html">Guide d'accessibilité</a></li>
+                        <li><a href="troubleshooting.html">Dépannage</a></li>
+                        <li><a href="contact.html">Contacter l'assistance</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet amb ❤️ per la teva seguretat</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tous droits réservés. | Fabriqué avec ❤️ pour votre sécurité</p>
             </div>
         </div>
     </footer>
