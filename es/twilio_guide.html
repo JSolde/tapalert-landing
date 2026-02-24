@@ -7,7 +7,7 @@
     <link rel="alternate" hreflang="es" href="https://tapalert.app/es/twilio_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/twilio_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Setup Guide - TapAlert</title>
+    <title>Guía de Configuración de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -399,215 +399,130 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Volver a las Guías</a>
 
-        <h1 class="guide-title"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Setup Guide</h1>
+        <h1 class="guide-title">Guía de Configuración de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></h1>
 
         <section class="guide-section">
-            <h2>💡 What is <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Configuration?</h2>
+            <h2>💡 ¿Qué es la Configuración de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</h2>
 
-            <p><strong>What you'll be setting up:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                configuration connects <span class="notranslate" translate="no">TapAlert</span> to <span
-                    class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>'s cloud SMS
-                service, allowing the app to send SMS messages even when your phone's cellular service is unavailable
-                (but you have Wi-Fi).</p>
+            <p><strong>Qué estarás configurando:</strong> La configuración de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> conecta <span class="notranslate" translate="no">TapAlert</span> al servicio de SMS en la nube de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, permitiendo que la app envíe mensajes SMS incluso cuando el servicio celular de tu teléfono no esté disponible (pero tengas Wi-Fi).</p>
 
-            <p><strong>Why it matters:</strong> By configuring <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                credentials in the app, you enable a reliable
-                <span class="notranslate" translate="no">fallback</span> method for sending alerts. This is especially
-                important during international travel, in
-                buildings with poor cellular reception, or como un mandatory option for iPhone users who cannot send SMS
-                directly from apps.
-            </p>
+            <p><strong>Por qué es importante:</strong> Al configurar las credenciales de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> en la app, habilitas un método de <span class="notranslate" translate="no">respaldo</span> confiable para enviar alertas. Esto es especialmente importante durante viajes internacionales, en edificios con mala recepción celular, o como un una opción obligatoria para usuarios de iPhone que no pueden enviar SMS directamente desde las aplicaciones.</p>
 
-            <p><strong>Why <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong><br>
-                <span class="notranslate" translate="no">TapAlert</span> uses <span class="notranslate"
-                    translate="no"><span class="notranslate" translate="no">Twilio</span></span> because it's the most widely used SMS service in the world — trusted by
-                companies
-                like Uber and Airbnb. There are no monthly fees: you only pay a few cents per message actually sent. For
-                an emergency app that sends alerts rarely, this means near-zero cost. Setup requires copying just three
-                values into the app, and thousands of online tutorials exist if you need help.
-            </p>
+            <p><strong>¿Por qué <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong><br> <span class="notranslate" translate="no">TapAlert</span> utiliza <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> porque es el servicio de SMS más utilizado en el mundo — confiado por empresas como Uber y Airbnb. No hay tarifas mensuales: solo pagas unos centavos por mensaje realmente enviado. Para una app de emergencia que envía alertas raramente, esto significa un costo casi cero. La configuración solo requiere copiar tres valores en la app, y existen miles de tutoriales en línea si necesitas ayuda.</p>
 
-            <p><strong>What you need:</strong> A <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> cuenta with
-                authentication credentials (Account SID and Auth
-                Token), and either an alphanumeric sender ID or a purchased <span class="notranslate"
-                    translate="no"><span class="notranslate" translate="no">Twilio</span></span> phone number.</p>
+            <p><strong>Qué necesitas:</strong> Una cuenta de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> con credenciales de autenticación (Account SID y Auth Token), y ya sea un ID de remitente alfanumérico o un número de teléfono de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> comprado.</p>
             <ul>
-                <li>✅ <strong>Trial cuenta sends real SMS:</strong> A family member can test the entire setup with
-                    <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>'s free trial (sends to verificados numbers)
-                    before spending any money.
-                </li>
+                <li>✅ <strong>La cuenta de prueba envía SMS reales:</strong> Un familiar puede probar toda la configuración con la prueba gratuita de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (envía a números verificados) antes de gastar dinero.</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>📖 About the Service</h2>
-            <p>The option provided in <span class="notranslate" translate="no">TapAlert</span> of using <span
-                    class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (cloud) como un mechanism to send SMS provides
-                ultimate
-                reliability in particular in international travel where roaming SMS often fails. <span
-                    class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> can send SMS to
-                over 180 countries. However, the method you can use varies by country. Some countries support <span
-                    class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                phone numbers, others only support Alphanumeric Sender IDs, and some require specific local regulations
-                to be met.</p>
+            <h2>📖 Acerca del Servicio</h2>
+            <p>La opción proporcionada en <span class="notranslate" translate="no">TapAlert</span> de usar el mecanismo de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (en la nube) como un para enviar SMS proporciona la máxima confiabilidad, en particular en viajes internacionales donde los SMS en roaming a menudo fallan. <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> puede enviar SMS a más de 180 países. Sin embargo, el método que puedes usar varía según el país. Algunos países admiten números de teléfono de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, otros solo ID de remitente alfanumérico, y algunos requieren cumplir con regulaciones locales específicas.</p>
 
-            <h3>Why use <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> on Android? (<span class="notranslate"
-                    translate="no">Redundancia Inteligente</span>)</h3>
-            <p>Even if you have a SIM card, setting up <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> is highly
-                recommended for <strong>Redundancy</strong>:</p>
+            <h3>¿Por qué usar <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> en Android? (<span class="notranslate" translate="no">Redundancia Inteligente</span>)</h3>
+            <p>Incluso si tienes una tarjeta SIM, configurar <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> es muy recomendable por <strong>Redundancia</strong>:</p>
             <ul>
-                <li><strong>Scenario:</strong> You are in a building with Wi-Fi but <strong>zero cellular
-                        signal</strong>.</li>
-                <li><strong>Result:</strong> <span class="notranslate" translate="no">SMS Directo</span> fails.</li>
-                <li><strong>Solution:</strong> <span class="notranslate" translate="no">TapAlert</span> will
-                    automatically switch to <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> and send the alert
-                    via
-                    Wi-Fi.</li>
+                <li><strong>Escenario:</strong> Estás en un edificio con Wi-Fi pero <strong>cero señal celular</strong>.</li>
+                <li><strong>Resultado:</strong> <span class="notranslate" translate="no">SMS Directo</span> falla.</li>
+                <li><strong>Solución:</strong> <span class="notranslate" translate="no">TapAlert</span> cambiará automáticamente a <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> y enviará la alerta a través de Wi-Fi.</li>
             </ul>
-            <p>Please note that to use this feature, which is mandatory for iPhone users, you'll need to have a <span
-                    class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                cuenta ID. The cost of sending messages will be the same as if you were doing it manually from <span
-                    class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.
-                No extra costs will be added by the app.</p>
+            <p>Ten en cuenta que para usar esta función, que es obligatoria para usuarios de iPhone, necesitarás tener un ID de cuenta de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. El costo de enviar mensajes será el mismo que si lo hicieras manualmente desde <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. La app no añadirá costos adicionales.</p>
 
-            <h3><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Sender Options</h3>
-            <p>You can choose between 2 options to send SMS's with <span class="notranslate"
-                    translate="no"><span class="notranslate" translate="no">Twilio</span></span>:</p>
+            <h3>Opciones de Remitente de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></h3>
+            <p>Puedes elegir entre 2 opciones para enviar SMS con <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>:</p>
 
-            <p><strong>OPTION A: Use Alphanumeric Sender ID (Recommended for Europe)</strong></p>
+            <p><strong>OPCIÓN A: Usar ID de Remitente Alfanumérico (Recomendado para Europa)</strong></p>
             <ul>
-                <li>✅ <strong>Benefit:</strong> No need to buy a phone number (Save monthly costs! depending on the
-                    number of messages you send).</li>
-                <li>✅ <strong>Benefit:</strong> Recipients see a name (e.g., "<span class="notranslate"
-                        translate="no">TapAlert</span>" or your name) instead of a
-                    random number.</li>
-                <li>⚠️ <strong>Note:</strong> One-way only (no replies) and not supported in some countries (like USA).
-                </li>
-                <li><a href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-<span class="notranslate" translate="no">Twilio</span>-Programmable-SMS"
-                        target="_blank">Learn more about Alphanumeric Sender ID</a></li>
+                <li>✅ <strong>Beneficio:</strong> No es necesario comprar un número de teléfono (¡Ahorra costos mensuales! dependiendo de la cantidad de mensajes que envíes).</li>
+                <li>✅ <strong>Beneficio:</strong> Los destinatarios ven un nombre (ej., "<span class="notranslate" translate="no">TapAlert</span>" o tu nombre) en lugar de un número aleatorio.</li>
+                <li>⚠️ <strong>Nota:</strong> Solo unidireccional (sin respuestas) y no compatible en algunos países (como EE. UU.).</li>
+                <li><a href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-<span class="notranslate" translate="no">Twilio</span>-Programmable-SMS" target="_blank">Aprende más sobre el ID de Remitente Alfanumérico</a></li>
             </ul>
 
-            <p><strong>OPTION B: Buy a <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Phone Number</strong></p>
+            <p><strong>OPCIÓN B: Comprar un Número de Teléfono de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong></p>
             <ul>
-                <li>✅ <strong>Benefit:</strong> Works worldwide (including USA).</li>
-                <li>⚠️ <strong>Cost:</strong> Requires purchasing a number (approx. $1/mo).</li>
+                <li>✅ <strong>Beneficio:</strong> Funciona en todo el mundo (incluyendo EE. UU.).</li>
+                <li>⚠️ <strong>Costo:</strong> Requiere la compra de un número (aprox. $1/mes).</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>💰 Potential Hidden Costs & Precios Factors</h2>
-            <p>While <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> generally offers low-cost messaging, the
-                final price per SMS can be higher than the base
-                rate due to several factors. It is important to review these to avoid unexpected charges.</p>
+            <h2>💰 Posibles Costos Ocultos y Factores de Precios</h2>
+            <p>Aunque <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> generalmente ofrece mensajería de bajo costo, el precio final por SMS puede ser más alto que la tarifa base debido a varios factores. Es importante revisarlos para evitar cargos inesperados.</p>
 
-            <h3>1. Destination Country Precios</h3>
-            <p><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> pricing varies significantly depending on the
-                <strong>destination country</strong> of the message.
-            </p>
+            <h3>1. Precios en el País de Destino</h3>
+            <p>El precio de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> varía significativamente dependiendo del <strong>país de destino</strong> del mensaje.</p>
             <ul>
-                <li>The lowest advertised rates (e.g., around $0.0075) often apply to messages sent to the
-                    <strong>USA</strong>.
-                </li>
-                <li>Sending to other countries (e.g., in Europe or Asia) can be significantly more expensive.</li>
-                <li><strong>Action:</strong> Always check the specific pricing for the country you intend to send alerts
-                    to.</li>
+                <li>Las tarifas anunciadas más bajas (por ejemplo, alrededor de $0.0075) a menudo se aplican a los mensajes enviados a <strong>EE. UU.</strong>.</li>
+                <li>Enviar a otros países (por ejemplo, en Europa o Asia) puede ser significativamente más caro.</li>
+                <li><strong>Acción:</strong> Siempre verifica el precio específico para el país al que intentas enviar alertas.</li>
             </ul>
 
-            <h3>2. Carrier & Regulatory Fees</h3>
-            <p>In addition to <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>'s base price, many countries and
-                local carriers impose <strong>surcharges</strong>
-                or "pass-through fees."</p>
+            <h3>2. Tarifas del Operador y Regulatorias</h3>
+            <p>Además del precio base de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, muchos países y operadores locales imponen <strong>recargos</strong> o "tarifas de transferencia".</p>
             <ul>
-                <li>These are unavoidable fees added by the telecom providers, not <span class="notranslate"
-                        translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</li>
-                <li>Ellos can sometimes double the effective cost per message in certain regions.</li>
+                <li>Estos son cargos inevitables agregados por los proveedores de telecomunicaciones, no por <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</li>
+                <li>Ellos a veces puede duplicar el costo efectivo por mensaje en ciertas regiones.</li>
             </ul>
 
-            <h3>3. Message Segmentation (Long Messages)</h3>
-            <p>SMS billing is based on "segments."</p>
+            <h3>3. Segmentación de Mensajes (Mensajes Largos)</h3>
+            <p>La facturación de SMS se basa en "segmentos".</p>
             <ul>
-                <li>A standard SMS segment is <strong>160 characters</strong>.</li>
-                <li>If your message exceeds this limit, it is split into multiple parts, and you are charged for
-                    <strong>each segment</strong>. <span class="notranslate" translate="no">TapAlert</span> SMS messages
-                    with <strong>Ubicación info</strong> exceed this
-                    limit. To minimize <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> costs, avoid enabling
-                    <strong>Ubicación Settings</strong> (or just disable
-                    the <strong>Include Address</strong> option in the settings). You can check the actual message
-                    length of each sent message in the <strong>Alert History</strong> screen.
-                </li>
-                <li><strong>Important:</strong> Using emojis or special non-Latin characters (Unicode) reduces the
-                    segment limit to just <strong>70 characters</strong>, potentially tripling the cost of a single
-                    alert.</li>
+                <li>Un segmento de SMS estándar es de <strong>160 caracteres</strong>.</li>
+                <li>Si tu mensaje excede este límite, se divide en varias partes, y se te cobra por <strong>cada segmento</strong>. Los mensajes SMS de <span class="notranslate" translate="no">TapAlert</span> con <strong>información de Ubicación</strong> exceden este límite. Para minimizar los costos de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, evita habilitar la <strong>Configuración de Ubicación</strong> (o simplemente desactiva la opción <strong>Incluir Dirección</strong> en la configuración). Puedes verificar la longitud real del mensaje de cada mensaje enviado en la pantalla de <strong>Historial de Alertas</strong>.</li>
+                <li><strong>Importante:</strong> El uso de emojis o caracteres especiales no latinos (Unicode) reduce el límite del segmento a solo <strong>70 caracteres</strong>, triplicando potencialmente el costo de una sola alerta.</li>
             </ul>
 
-            <h3>4. Phone Number Rental Fees</h3>
-            <p>If you choose to buy a phone number (Option B above):</p>
+            <h3>4. Tarifas de Alquiler de Números de Teléfono</h3>
+            <p>Si eliges comprar un número de teléfono (Opción B arriba):</p>
             <ul>
-                <li>You pay a <strong>monthly rental fee</strong> for the number itself (typically $1.00 - $4.00
-                    USD/month depending on the country).</li>
-                <li>This is a recurring fixed cost, regardless of whether you send any messages.</li>
-                <li>Some specific numbers (like Spanish mobile numbers capable of SMS) are "Exclusive" and require a
-                    manual request process and higher fees.</li>
+                <li>Pagas una <strong>tarifa de alquiler mensual</strong> por el número en sí (típicamente $1.00 - $4.00 USD/mes dependiendo del país).</li>
+                <li>Este es un costo fijo recurrente, independientemente de si envías algún mensaje.</li>
+                <li>Algunos números específicos (como los números móviles españoles capaces de SMS) son "Exclusivos" y requieren un proceso de solicitud manual y tarifas más altas.</li>
             </ul>
 
-            <h3>5. Currency Conversion & Taxes</h3>
-            <p>Your final bill may include local taxes (like VAT).</p>
-            <p>If your card is in a different currency than your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                cuenta, your bank or <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> may apply currency
-                conversion fees.</p>
+            <h3>5. Conversión de Moneda y Ajustes</h3>
+            <p>Tu factura final puede incluir impuestos locales (como el IVA).</p>
+            <p>Si tu tarjeta está en una moneda diferente a tu cuenta de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, tu banco o <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> puede aplicar tarifas de conversión de moneda.</p>
 
             <div class="alert-box">
-                <h4>💡 Recommendation</h4>
-                <p>We strongly advise checking the <a href="https://www.twilio.com/sms/pricing" target="_blank">Official
-                        <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Precios Page</a> and selecting your
-                    target country to see the full breakdown of costs.
-                </p>
+                <h4>💡 Recomendación</h4>
+                <p>Aconsejamos encarecidamente revisar la <a href="https://www.twilio.com/sms/pricing" target="_blank">Página Oficial de Precios de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></a> y seleccionar tu país de destino para ver el desglose completo de los costos.</p>
             </div>
         </section>
 
         <section class="guide-section">
-            <h2>⚙️ Configuration Steps</h2>
-            <p>To set up <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> in the app, follow these steps:</p>
+            <h2>⚙️ Pasos de Configuración</h2>
+            <p>Para configurar <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> en la app, sigue estos pasos:</p>
 
-            <h3>1️⃣ Step 1: Get your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Credentials</h3>
+            <h3>1️⃣ Paso 1: Obtén tus Credenciales de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></h3>
             <ol>
-                <li>Create an cuenta at <a href="https://www.twilio.com/" target="_blank"><span class="notranslate"
-                            translate="no"><span class="notranslate" translate="no">Twilio</span></span>.com</a>.</li>
-                <li>Go to the <a href="https://console.twilio.com/" target="_blank"><span class="notranslate"
-                            translate="no"><span class="notranslate" translate="no">Twilio</span></span> Console</a> to find your
-                    <strong>Account SID</strong> and <strong>Auth Token</strong>.
-                </li>
-                <li><strong>Choose your sender method</strong> (Option A or B above).</li>
+                <li>Crea una cuenta en <a href="https://www.twilio.com/" target="_blank"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.com</a>.</li>
+                <li>Ve a la <a href="https://console.twilio.com/" target="_blank">Consola de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></a> para encontrar tu <strong>Account SID</strong> y <strong>Auth Token</strong>.</li>
+                <li><strong>Elige tu método de remitente</strong> (Opción A o B arriba).</li>
             </ol>
 
-            <h3>2️⃣ Step 2: Enter Credentials in the App</h3>
+            <h3>2️⃣ Paso 2: Ingresa las Credenciales en la App</h3>
             <ol>
-                <li>Abre la app de App <strong>Settings</strong>.</li>
-                <li>Enable the <strong>"Use <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>"</strong> switch.
-                </li>
-                <li>Enter your <strong>Account SID</strong> and <strong>Auth Token</strong>.</li>
-                <li><strong>Configure the sender:</strong>
+                <li>Abre la app de <strong>Configuración</strong> de la app.</li>
+                <li>Habilita el interruptor <strong>"Usar <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>"</strong>.</li>
+                <li>Ingresa tu <strong>Account SID</strong> y <strong>Auth Token</strong>.</li>
+                <li><strong>Configura el remitente:</strong>
                     <ul>
-                        <li><strong>If using Option A (Name):</strong> Enable <strong>"Use Alphanumeric Sender
-                                ID"</strong>, then type your desired name (max 11 chars) in the <strong>Sender
-                                Name</strong> field.</li>
-                        <li><strong>If using Option B (Number):</strong> Leave "Use Alphanumeric Sender ID"
-                            <strong>OFF</strong> and enter your purchased <span class="notranslate"
-                                translate="no"><span class="notranslate" translate="no">Twilio</span></span> number in the <strong><span class="notranslate"
-                                    translate="no"><span class="notranslate" translate="no">Twilio</span></span> Phone
-                                Number</strong> field.
-                        </li>
+                        <li><strong>Si usas la Opción A (Nombre):</strong> Habilita <strong>"Usar ID de Remitente Alfanumérico"</strong>, luego escribe tu nombre deseado (máx. 11 caracteres) en el campo <strong>Nombre del Remitente</strong>.</li>
+                        <li><strong>Si usas la Opción B (Número):</strong> Deja "Usar ID de Remitente Alfanumérico" <strong>APAGADO</strong> e ingresa el número de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> comprado en el campo <strong>Número de Teléfono de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong>.</li>
                     </ul>
                 </li>
             </ol>
 
-            <h3>3️⃣ Step 3: Summary of Alphanumeric Sender ID</h3>
+            <h3>3️⃣ Paso 3: Resumen del ID de Remitente Alfanumérico</h3>
             <ul>
-                <li><strong>What is it?</strong> It lets you use a name (like "MyHomeAlert") instead of a number.</li>
-                <li><strong>Trust:</strong> Recipients see your name immediately, which ensures your alert stands out.
-                </li>
-                <li><strong>No Replies:</strong> Note that recipients cannot reply to a name.</li>
+                <li><strong>¿Qué es?</strong> Te permite usar un nombre (como "MiAlertaHogar") en lugar de un número.</li>
+                <li><strong>Confianza:</strong> Los destinatarios ven tu nombre inmediatamente, lo que asegura que tu alerta resalte.</li>
+                <li><strong>Sin Respuestas:</strong> Ten en cuenta que los destinatarios no pueden responder a un nombre.</li>
             </ul>
         </section>
 

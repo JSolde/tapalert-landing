@@ -127,8 +127,10 @@ def build_page(template_html, html_file, lang, translations):
         html = fix_paths_for_subdir(html, lang)
 
     # Apply locale substitutions
-    for key, value in translations.items():
-        html = re.sub(r'\{\{\s*' + re.escape(key) + r'\s*\}\}', str(value), html)
+    # Loop twice to resolve nested translation keys (e.g. {{ android_table_th2 }} inside another key)
+    for _ in range(2):
+        for key, value in translations.items():
+            html = re.sub(r'\{\{\s*' + re.escape(key) + r'\s*\}\}', str(value), html)
 
     return html
 

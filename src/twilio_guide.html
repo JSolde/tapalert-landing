@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     {{ hreflang_tags }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" translate="no">{{ term_twilio }}</span> Setup Guide - TapAlert</title>
+    <title>{{ tw_guide_title }} - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -369,215 +369,130 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">{{ guide_back_guides }}</a>
 
-        <h1 class="guide-title"><span class="notranslate" translate="no">{{ term_twilio }}</span> Setup Guide</h1>
+        <h1 class="guide-title">{{ tw_guide_title }}</h1>
 
         <section class="guide-section">
-            <h2>💡 What is <span class="notranslate" translate="no">{{ term_twilio }}</span> Configuration?</h2>
+            <h2>{{ tw_h2_1 }}</h2>
 
-            <p><strong>What you'll be setting up:</strong> <span class="notranslate" translate="no">{{ term_twilio }}</span>
-                configuration connects <span class="notranslate" translate="no">TapAlert</span> to <span
-                    class="notranslate" translate="no">{{ term_twilio }}</span>'s cloud SMS
-                service, allowing the app to send SMS messages even when your phone's cellular service is unavailable
-                (but you have Wi-Fi).</p>
+            <p>{{ tw_p1 }}</p>
 
-            <p><strong>Why it matters:</strong> By configuring <span class="notranslate" translate="no">{{ term_twilio }}</span>
-                credentials in the app, you enable a reliable
-                <span class="notranslate" translate="no">fallback</span> method for sending alerts. This is especially
-                important during international travel, in
-                buildings with poor cellular reception, or{{ price_disclaimer3 }}mandatory option for iPhone users who cannot send SMS
-                directly from apps.
-            </p>
+            <p>{{ tw_p2 }}</p>
 
-            <p><strong>Why <span class="notranslate" translate="no">{{ term_twilio }}</span>?</strong><br>
-                <span class="notranslate" translate="no">TapAlert</span> uses <span class="notranslate"
-                    translate="no">{{ term_twilio }}</span> because it's the most widely used SMS service in the world — trusted by
-                companies
-                like Uber and Airbnb. There are no monthly fees: you only pay a few cents per message actually sent. For
-                an emergency app that sends alerts rarely, this means near-zero cost. Setup requires copying just three
-                values into the app, and thousands of online tutorials exist if you need help.
-            </p>
+            <p>{{ tw_p3 }}</p>
 
-            <p><strong>What you need:</strong> A <span class="notranslate" translate="no">{{ term_twilio }}</span> {{ qa_step3_p4 }} with
-                authentication credentials (Account SID and Auth
-                Token), and either an alphanumeric sender ID or a purchased <span class="notranslate"
-                    translate="no">{{ term_twilio }}</span> phone number.</p>
+            <p>{{ tw_p4 }}</p>
             <ul>
-                <li>✅ <strong>Trial {{ qa_step3_p4 }} sends real SMS:</strong> A family member can test the entire setup with
-                    <span class="notranslate" translate="no">{{ term_twilio }}</span>'s free trial (sends to {{ ts_tw_li7 }} numbers)
-                    before spending any money.
-                </li>
+                <li>{{ tw_li1 }}</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>📖 About the Service</h2>
-            <p>The option provided in <span class="notranslate" translate="no">TapAlert</span> of using <span
-                    class="notranslate" translate="no">{{ term_twilio }}</span> (cloud){{ price_disclaimer3 }}mechanism to send SMS provides
-                ultimate
-                reliability in particular in international travel where roaming SMS often fails. <span
-                    class="notranslate" translate="no">{{ term_twilio }}</span> can send SMS to
-                over 180 countries. However, the method you can use varies by country. Some countries support <span
-                    class="notranslate" translate="no">{{ term_twilio }}</span>
-                phone numbers, others only support Alphanumeric Sender IDs, and some require specific local regulations
-                to be met.</p>
+            <h2>{{ tw_h2_2 }}</h2>
+            <p>{{ tw_p5 }}</p>
 
-            <h3>Why use <span class="notranslate" translate="no">{{ term_twilio }}</span> on {{ android_table_th2 }}? (<span class="notranslate"
-                    translate="no">{{ phil_red_title }}</span>)</h3>
-            <p>Even if you have a SIM card, setting up <span class="notranslate" translate="no">{{ term_twilio }}</span> is highly
-                recommended for <strong>Redundancy</strong>:</p>
+            <h3>{{ tw_h3_1 }}</h3>
+            <p>{{ tw_p6 }}</p>
             <ul>
-                <li><strong>Scenario:</strong> You are in a building with Wi-Fi but <strong>zero cellular
-                        signal</strong>.</li>
-                <li><strong>Result:</strong> <span class="notranslate" translate="no">{{ term_direct_sms }}</span> fails.</li>
-                <li><strong>Solution:</strong> <span class="notranslate" translate="no">TapAlert</span> will
-                    automatically switch to <span class="notranslate" translate="no">{{ term_twilio }}</span> and send the alert
-                    via
-                    Wi-Fi.</li>
+                <li>{{ tw_li2 }}</li>
+                <li>{{ tw_li3 }}</li>
+                <li>{{ tw_li4 }}</li>
             </ul>
-            <p>Please note that to use this feature, which is mandatory for iPhone users, you'll need to have a <span
-                    class="notranslate" translate="no">{{ term_twilio }}</span>
-                {{ qa_step3_p4 }} ID. The cost of sending messages will be the same as if you were doing it manually from <span
-                    class="notranslate" translate="no">{{ term_twilio }}</span>.
-                No extra costs will be added by the app.</p>
+            <p>{{ tw_p7 }}</p>
 
-            <h3><span class="notranslate" translate="no">{{ term_twilio }}</span> Sender Options</h3>
-            <p>You can choose between 2 options to send SMS's with <span class="notranslate"
-                    translate="no">{{ term_twilio }}</span>:</p>
+            <h3>{{ tw_h3_2 }}</h3>
+            <p>{{ tw_p8 }}</p>
 
-            <p><strong>OPTION A: Use Alphanumeric Sender ID (Recommended for Europe)</strong></p>
+            <p>{{ tw_p9 }}</p>
             <ul>
-                <li>✅ <strong>Benefit:</strong> No need to buy a phone number (Save monthly costs! depending on the
-                    number of messages you send).</li>
-                <li>✅ <strong>Benefit:</strong> Recipients see a name (e.g., "<span class="notranslate"
-                        translate="no">TapAlert</span>" or your name) instead of a
-                    random number.</li>
-                <li>⚠️ <strong>Note:</strong> One-way only (no replies) and not supported in some countries (like USA).
-                </li>
-                <li><a href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-{{ term_twilio }}-Programmable-SMS"
-                        target="_blank">Learn more about Alphanumeric Sender ID</a></li>
+                <li>{{ tw_li5 }}</li>
+                <li>{{ tw_li6 }}</li>
+                <li>{{ tw_li7 }}</li>
+                <li>{{ tw_li8 }}</li>
             </ul>
 
-            <p><strong>OPTION B: Buy a <span class="notranslate" translate="no">{{ term_twilio }}</span> Phone Number</strong></p>
+            <p>{{ tw_p10 }}</p>
             <ul>
-                <li>✅ <strong>Benefit:</strong> Works worldwide (including USA).</li>
-                <li>⚠️ <strong>Cost:</strong> Requires purchasing a number (approx. $1/mo).</li>
+                <li>{{ tw_li9 }}</li>
+                <li>{{ tw_li10 }}</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>💰 Potential Hidden Costs & {{ footer_price }} Factors</h2>
-            <p>While <span class="notranslate" translate="no">{{ term_twilio }}</span> generally offers low-cost messaging, the
-                final price per SMS can be higher than the base
-                rate due to several factors. It is important to review these to avoid unexpected charges.</p>
+            <h2>{{ tw_h2_3 }}</h2>
+            <p>{{ tw_p11 }}</p>
 
-            <h3>1. Destination Country {{ footer_price }}</h3>
-            <p><span class="notranslate" translate="no">{{ term_twilio }}</span> pricing varies significantly depending on the
-                <strong>destination country</strong> of the message.
-            </p>
+            <h3>{{ tw_h3_3 }}</h3>
+            <p>{{ tw_p12 }}</p>
             <ul>
-                <li>The lowest advertised rates (e.g., around $0.0075) often apply to messages sent to the
-                    <strong>USA</strong>.
-                </li>
-                <li>Sending to other countries (e.g., in Europe or Asia) can be significantly more expensive.</li>
-                <li><strong>Action:</strong> Always check the specific pricing for the country you intend to send alerts
-                    to.</li>
+                <li>{{ tw_li11 }}</li>
+                <li>{{ tw_li12 }}</li>
+                <li>{{ tw_li13 }}</li>
             </ul>
 
-            <h3>2. Carrier & Regulatory Fees</h3>
-            <p>In addition to <span class="notranslate" translate="no">{{ term_twilio }}</span>'s base price, many countries and
-                local carriers impose <strong>surcharges</strong>
-                or "pass-through fees."</p>
+            <h3>{{ tw_h3_4 }}</h3>
+            <p>{{ tw_p13 }}</p>
             <ul>
-                <li>These are unavoidable fees added by the telecom providers, not <span class="notranslate"
-                        translate="no">{{ term_twilio }}</span>.</li>
-                <li>{{ sms_twilio_p3 }} can sometimes double the effective cost per message in certain regions.</li>
+                <li>{{ tw_li14 }}</li>
+                <li>{{ tw_li15 }}</li>
             </ul>
 
-            <h3>3. Message Segmentation (Long Messages)</h3>
-            <p>SMS billing is based on "segments."</p>
+            <h3>{{ tw_h3_5 }}</h3>
+            <p>{{ tw_p14 }}</p>
             <ul>
-                <li>A standard SMS segment is <strong>160 characters</strong>.</li>
-                <li>If your message exceeds this limit, it is split into multiple parts, and you are charged for
-                    <strong>each segment</strong>. <span class="notranslate" translate="no">TapAlert</span> SMS messages
-                    with <strong>{{ ts_li1_5 }} info</strong> exceed this
-                    limit. To minimize <span class="notranslate" translate="no">{{ term_twilio }}</span> costs, avoid enabling
-                    <strong>{{ ts_li1_5 }} Settings</strong> (or just disable
-                    the <strong>Include Address</strong> option in the settings). You can check the actual message
-                    length of each sent message in the <strong>Alert History</strong> screen.
-                </li>
-                <li><strong>Important:</strong> Using emojis or special non-Latin characters (Unicode) reduces the
-                    segment limit to just <strong>70 characters</strong>, potentially tripling the cost of a single
-                    alert.</li>
+                <li>{{ tw_li16 }}</li>
+                <li>{{ tw_li17 }}</li>
+                <li>{{ tw_li18 }}</li>
             </ul>
 
-            <h3>4. Phone Number Rental Fees</h3>
-            <p>If you choose to buy a phone number (Option B above):</p>
+            <h3>{{ tw_h3_6 }}</h3>
+            <p>{{ tw_p15 }}</p>
             <ul>
-                <li>You pay a <strong>monthly rental fee</strong> for the number itself (typically $1.00 - $4.00
-                    USD/month depending on the country).</li>
-                <li>This is a recurring fixed cost, regardless of whether you send any messages.</li>
-                <li>Some specific numbers (like Spanish mobile numbers capable of SMS) are "Exclusive" and require a
-                    manual request process and higher fees.</li>
+                <li>{{ tw_li19 }}</li>
+                <li>{{ tw_li20 }}</li>
+                <li>{{ tw_li21 }}</li>
             </ul>
 
-            <h3>5. Currency Conversion & Taxes</h3>
-            <p>Your final bill may include local taxes (like VAT).</p>
-            <p>If your card is in a different currency than your <span class="notranslate" translate="no">{{ term_twilio }}</span>
-                {{ qa_step3_p4 }}, your bank or <span class="notranslate" translate="no">{{ term_twilio }}</span> may apply currency
-                conversion fees.</p>
+            <h3>{{ tw_h3_7 }}</h3>
+            <p>{{ tw_p16 }}</p>
+            <p>{{ tw_p17 }}</p>
 
             <div class="alert-box">
-                <h4>💡 Recommendation</h4>
-                <p>We strongly advise checking the <a href="https://www.twilio.com/sms/pricing" target="_blank">Official
-                        <span class="notranslate" translate="no">{{ term_twilio }}</span> {{ footer_price }} Page</a> and selecting your
-                    target country to see the full breakdown of costs.
-                </p>
+                <h4>{{ tw_h4_1 }}</h4>
+                <p>{{ tw_p18 }}</p>
             </div>
         </section>
 
         <section class="guide-section">
-            <h2>⚙️ Configuration Steps</h2>
-            <p>To set up <span class="notranslate" translate="no">{{ term_twilio }}</span> in the app, follow these steps:</p>
+            <h2>{{ tw_h2_4 }}</h2>
+            <p>{{ tw_p19 }}</p>
 
-            <h3>1️⃣ Step 1: Get your <span class="notranslate" translate="no">{{ term_twilio }}</span> Credentials</h3>
+            <h3>{{ tw_h3_8 }}</h3>
             <ol>
-                <li>Create an {{ qa_step3_p4 }} at <a href="https://www.twilio.com/" target="_blank"><span class="notranslate"
-                            translate="no">{{ term_twilio }}</span>.com</a>.</li>
-                <li>Go to the <a href="https://console.twilio.com/" target="_blank"><span class="notranslate"
-                            translate="no">{{ term_twilio }}</span> Console</a> to find your
-                    <strong>Account SID</strong> and <strong>Auth Token</strong>.
-                </li>
-                <li><strong>Choose your sender method</strong> (Option A or B above).</li>
+                <li>{{ tw_li22 }}</li>
+                <li>{{ tw_li23 }}</li>
+                <li>{{ tw_li24 }}</li>
             </ol>
 
-            <h3>2️⃣ Step 2: Enter Credentials in the App</h3>
+            <h3>{{ tw_h3_9 }}</h3>
             <ol>
-                <li>{{ sms_so_li1_1 }} App <strong>Settings</strong>.</li>
-                <li>Enable the <strong>"Use <span class="notranslate" translate="no">{{ term_twilio }}</span>"</strong> switch.
-                </li>
-                <li>Enter your <strong>Account SID</strong> and <strong>Auth Token</strong>.</li>
-                <li><strong>Configure the sender:</strong>
+                <li>{{ tw_li25 }}</li>
+                <li>{{ tw_li26 }}</li>
+                <li>{{ tw_li27 }}</li>
+                <li>{{ tw_li28_1 }}
                     <ul>
-                        <li><strong>If using Option A (Name):</strong> Enable <strong>"Use Alphanumeric Sender
-                                ID"</strong>, then type your desired name (max 11 chars) in the <strong>Sender
-                                Name</strong> field.</li>
-                        <li><strong>If using Option B (Number):</strong> Leave "Use Alphanumeric Sender ID"
-                            <strong>OFF</strong> and enter your purchased <span class="notranslate"
-                                translate="no">{{ term_twilio }}</span> number in the <strong><span class="notranslate"
-                                    translate="no">{{ term_twilio }}</span> Phone
-                                Number</strong> field.
-                        </li>
+                        <li>{{ tw_li28_a }}</li>
+                        <li>{{ tw_li28_b }}</li>
                     </ul>
                 </li>
             </ol>
 
-            <h3>3️⃣ Step 3: Summary of Alphanumeric Sender ID</h3>
+            <h3>{{ tw_h3_10 }}</h3>
             <ul>
-                <li><strong>What is it?</strong> It lets you use a name (like "MyHomeAlert") instead of a number.</li>
-                <li><strong>Trust:</strong> Recipients see your name immediately, which ensures your alert stands out.
-                </li>
-                <li><strong>No Replies:</strong> Note that recipients cannot reply to a name.</li>
+                <li>{{ tw_li29 }}</li>
+                <li>{{ tw_li30 }}</li>
+                <li>{{ tw_li31 }}</li>
             </ul>
         </section>
 

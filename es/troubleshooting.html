@@ -519,234 +519,208 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Volver a las Guías</a>
 
         <h1 class="guide-title">Guía de Solución de Problemas</h1>
 
-        <p>This guide covers common issues and solutions for <span class="notranslate" translate="no">TapAlert</span> on both Android and iOS.</p>
+        <p>Esta gu&iacute;a cubre problemas comunes y soluciones para <span class="notranslate" translate="no">TapAlert</span> tanto en Android como en iOS.</p>
 
         <nav class="toc">
-            <h4>Jump to Section:</h4>
+            <h4>Saltar a la Secci&oacute;n:</h4>
             <ul>
-                <li><a href="#sms">1. SMS Issues</a></li>
-                <li><a href="#email">2. Email Issues</a></li>
-                <li><a href="#location">3. Ubicación Issues</a></li>
-                <li><a href="#connectivity">4. Connectivity</a></li>
-                <li><a href="#timer">5. Check-in Timer</a></li>
-                <li><a href="#voice">6. Voice-to-Text</a></li>
+                <li><a href="#sms">1. Problemas de SMS</a></li>
+                <li><a href="#email">2. Problemas de Email</a></li>
+                <li><a href="#location">3. Problemas de Ubicación</a></li>
+                <li><a href="#connectivity">4. Conectividad</a></li>
+                <li><a href="#timer">5. Temporizador</a></li>
+                <li><a href="#voice">6. Voz a Texto</a></li>
                 <li><a href="#contacts">7. Contactos</a></li>
-                <li><a href="#purchase">8. Purchases</a></li>
+                <li><a href="#purchase">8. Compras</a></li>
                 <li><a href="#widget">9. Widgets</a></li>
                 <li><a href="#notifications">10. Notificaciones</a></li>
-                <li><a href="#behavior">11. App Behavior</a></li>
-                <li><a href="#ios">12. iOS Specific</a></li>
-                <li><a href="#android">13. Android Specific</a></li>
-                <li><a href="#tips">14. General Tips</a></li>
+                <li><a href="#behavior">11. Comportamiento de App</a></li>
+                <li><a href="#ios">12. Espec&iacute;fico de iOS</a></li>
+                <li><a href="#android">13. Espec&iacute;fico de Android</a></li>
+                <li><a href="#tips">14. Consejos Generales</a></li>
             </ul>
         </nav>
 
         <section id="sms" class="guide-section">
-            <h2>1. SMS Sending Issues</h2>
+            <h2>1. Problemas al Enviar SMS</h2>
 
             <div class="step-card">
-                <h3>1.1 <span class="notranslate" translate="no">SMS Directo</span> Not Sending (Android)</h3>
-                <p><strong>Symptom:</strong> You tap "Send Alert" but the SMS fails. The alert history shows an error
-                    for one or more recipients.</p>
+                <h3>1.1 <span class="notranslate" translate="no">SMS Directo</span> No Env&iacute;a (Android)</h3>
+                <p><strong>S&iacute;ntoma:</strong> Tocas "Enviar Alerta" pero el SMS falla. El historial de alertas muestra un error para uno o m&aacute;s destinatarios.</p>
                 <ul>
-                    <li><strong>No cellular signal:</strong> Check the status bar. The Status page in the app shows your
-                        current cellular status.</li>
-                    <li><strong>No SIM card:</strong> <span class="notranslate" translate="no">SMS Directo</span> requires a working SIM card. Check SIM status on the
-                        Status page.</li>
-                    <li><strong>Permissions:</strong> Asegúrate de que <strong>SMS</strong> permission is allowed in phone
-                        settings.</li>
-                    <li><strong>Invalid format:</strong> Use international format with country code (e.g.,
-                        +34600123456).</li>
+                    <li><strong>Sin se&ntilde;al celular:</strong> Revisa la barra de estado. La p&aacute;gina de Estado en la app muestra tu estado celular actual.</li>
+                    <li><strong>Sin tarjeta SIM:</strong> <span class="notranslate" translate="no">SMS Directo</span> requiere una tarjeta SIM funcional. Revisa el estado de la SIM en la p&aacute;gina de Estado.</li>
+                    <li><strong>Permisos:</strong> Asegúrate de que que el permiso de <strong>SMS</strong> est&eacute; permitido en los ajustes del tel&eacute;fono.</li>
+                    <li><strong>Formato inv&aacute;lido:</strong> Usa el formato internacional con c&oacute;digo de pa&iacute;s (ej. +34600123456).</li>
                 </ul>
             </div>
 
             <div class="step-card">
-                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS Not Sending</h3>
-                <p><strong>Symptom:</strong> Alert fails with a <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> error message.</p>
+                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS No Env&iacute;a</h3>
+                <p><strong>S&iacute;ntoma:</strong> La alerta falla con un mensaje de error de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</p>
                 <ul>
-                    <li><strong>Internet required:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> needs Wi-Fi or cellular data.</li>
-                    <li><strong>Credentials:</strong> Verify Account SID, Auth Token, and <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> phone number in
-                        Settings.</li>
-                    <li><strong>Trial limitations:</strong> Trial cuentas can only send to verificados phone numbers.</li>
-                    <li><strong>Balance:</strong> Check your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> cuenta balance.</li>
+                    <li><strong>Internet requerido:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> necesita Wi-Fi o datos celulares.</li>
+                    <li><strong>Credenciales:</strong> Verifica el Account SID, el Auth Token y el n&uacute;mero de tel&eacute;fono de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> en los Ajustes.</li>
+                    <li><strong>Limitaciones de prueba:</strong> Las cuentas de prueba s&oacute;lo pueden enviar a n&uacute;meros verificados.</li>
+                    <li><strong>Saldo:</strong> Revisa el saldo de tu cuenta de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</li>
                 </ul>
             </div>
 
             <div class="step-card">
-                <h3>1.3 iOS SMS Composer Issues</h3>
-                <p><strong>Symptom:</strong> On iPhone, the SMS composer opens but the message doesn't get delivered.
-                </p>
+                <h3>1.3 Problemas con el Redactor SMS en iOS</h3>
+                <p><strong>S&iacute;ntoma:</strong> En iPhone, el redactor de SMS se abre pero el mensaje no se entrega.</p>
                 <ul>
-                    <li><strong>Signal:</strong> The Messages app needs cellular signal (or WiFi Calling if active).
-                    </li>
-                    <li><strong>Cancellation:</strong> If you tap Cancel in the composer, the alert is cancelled.</li>
-                    <li><strong>Invalid number:</strong> iOS will queue the message and fail silently. Check the
-                        Messages app for red exclamation marks.</li>
+                    <li><strong>Se&ntilde;al:</strong> La aplicaci&oacute;n de Mensajes necesita se&ntilde;al celular (o llamadas por WiFi si est&aacute; activo).</li>
+                    <li><strong>Cancelaci&oacute;n:</strong> Si tocas Cancelar en el redactor, la alerta se cancela.</li>
+                    <li><strong>N&uacute;mero inv&aacute;lido:</strong> iOS pondr&aacute; el mensaje en cola y fallar&aacute; silenciosamente. Revisa la aplicaci&oacute;n de Mensajes en busca de marcas de exclamaci&oacute;n rojas.</li>
                 </ul>
             </div>
         </section>
 
         <section id="email" class="guide-section">
-            <h2>2. Email Redundancy Issues</h2>
+            <h2>2. Problemas con Email como Respaldo</h2>
             <div class="step-card">
-                <h3>2.1 Email Test Fails</h3>
+                <h3>2.1 Falla la Prueba de Email</h3>
                 <ul>
-                    <li><strong>SMTP Settings:</strong> Verify host and port (Gmail/iCloud use 587).</li>
-                    <li><strong>App Password:</strong> Most providers require an <strong>App Password</strong> if 2FA is
-                        enabled.</li>
-                    <li><strong>Internet:</strong> Email requires an active data connection.</li>
+                    <li><strong>Ajustes SMTP:</strong> Verifica el host y puerto (Gmail/iCloud usan 587).</li>
+                    <li><strong>Contrase&ntilde;a de App:</strong> La mayor&iacute;a de proveedores requieren una <strong>Contrase&ntilde;a de App</strong> si la verificaci&oacute;n en dos pasos est&aacute; habilitada.</li>
+                    <li><strong>Internet:</strong> El correo electr&oacute;nico requiere una conexi&oacute;n de datos activa.</li>
                 </ul>
             </div>
         </section>
 
         <section id="location" class="guide-section">
-            <h2>3. Ubicación Issues</h2>
+            <h2>3. Problemas con la Ubicación</h2>
             <div class="step-card">
-                <h3>3.1 Ubicación Missing in Alert</h3>
+                <h3>3.1 La Ubicación Falta en la Alerta</h3>
                 <ul>
-                    <li><strong>Permissions:</strong> Asegúrate de que Ubicación permission is set to "While Using" or "Always".
-                    </li>
-                    <li><strong>GPS Disabled:</strong> Verify phone location services are turned on.</li>
-                    <li><strong>Reception:</strong> Indoors or dense areas may cause a GPS timeout.</li>
+                    <li><strong>Permisos:</strong> Asegúrate de que el permiso de Ubicación a "Mientras la usas" o "Siempre".</li>
+                    <li><strong>GPS Desactivado:</strong> Verifica que los servicios de ubicaci&oacute;n de tu tel&eacute;fono est&eacute;n encendidos.</li>
+                    <li><strong>Recepci&oacute;n:</strong> En interiores o &aacute;reas densas podr&iacute;an causar un tiempo de espera excedido en el GPS.</li>
                 </ul>
             </div>
         </section>
 
         <section id="connectivity" class="guide-section">
-            <h2>4. Connectivity and Status</h2>
+            <h2>4. Conectividad y Estado</h2>
             <div class="step-card">
-                <h3>4.2 Shield Icon Meanings</h3>
+                <h3>4.2 Significado del Icono de Escudo</h3>
                 <ul>
-                    <li><strong>Green:</strong> Ready for reliable SMS/<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> delivery.</li>
-                    <li><strong>Orange:</strong> Uncertain. WiFi only, no <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. WiFi Calling might work.</li>
-                    <li><strong>Red:</strong> Disconnected. Both cellular and WiFi are off.</li>
+                    <li><strong>Verde:</strong> Listo para un env&iacute;o confiable v&iacute;a SMS/<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</li>
+                    <li><strong>Naranja:</strong> Incierto. S&oacute;lo Wi-Fi, sin <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. Llamadas v&iacute;a Wi-Fi podr&iacute;a funcionar.</li>
+                    <li><strong>Rojo:</strong> Desconectado. Tanto celular como Wi-Fi est&aacute;n apagados.</li>
                 </ul>
             </div>
         </section>
 
         <section id="timer" class="guide-section">
-            <h2>5. Check-in Timer Issues</h2>
+            <h2>5. Problemas con el Temporizador</h2>
             <div class="step-card">
-                <h3>5.1 Timer Doesn't Fire</h3>
+                <h3>5.1 El Temporizador no se Activa</h3>
                 <ul>
-                    <li><strong>App Closed:</strong> Avoid force-closing the app. On iOS, you Debes tap the notification
-                        to trigger.</li>
-                    <li><strong>Battery Optimization:</strong> Set <span class="notranslate" translate="no">TapAlert</span> to "Unrestricted" in Android battery
-                        settings.</li>
-                    <li><strong>Notificaciones:</strong> Asegúrate de que notification permissions are granted.</li>
+                    <li><strong>Aplicaci&oacute;n Cerrada:</strong> Evita forzar el cierre de la aplicaci&oacute;n. En iOS, t&uacute; Debes tocar la notificaci&oacute;n para activarla.</li>
+                    <li><strong>Optimizaci&oacute;n de Bater&iacute;a:</strong> Pon <span class="notranslate" translate="no">TapAlert</span> en modo "Sin restricciones" en los ajustes de la bater&iacute;a de Android.</li>
+                    <li><strong>Notificaciones:</strong> Asegúrate de que que los permisos est&eacute;n concedidos.</li>
                 </ul>
             </div>
         </section>
 
         <section id="voice" class="guide-section">
-            <h2>6. Voice-to-Text Issues</h2>
+            <h2>6. Problemas con Voz a Texto</h2>
             <div class="step-card">
-                <h3>6.1 Voice Recognition Not Working</h3>
+                <h3>6.1 El Reconocimiento de Voz No Funciona</h3>
                 <ul>
-                    <li><strong>Permissions:</strong> Asegúrate de que <strong>Microphone</strong> and <strong>Speech
-                            Recognition</strong> (iOS) permissions are granted.</li>
-                    <li><strong>Internet:</strong> Most recognition engines require an active connection for processing.
-                    </li>
-                    <li><strong>Wrong Idioma:</strong> The recognition uses the app's current language setting. Check
-                        **Settings > Idioma**.</li>
+                    <li><strong>Permisos:</strong> Asegúrate de que se hayan concedido los permisos de <strong>Micr&oacute;fono</strong> y <strong>Reconocimiento de Voz</strong> (iOS).</li>
+                    <li><strong>Internet:</strong> La mayor&iacute;a de mecanismos de reconocimiento requieren conexi&oacute;n activa a datos.</li>
+                    <li><strong>Idioma Equivocado:</strong> El reconocimiento usa la configuraci&oacute;n del idioma actual de la app. Revisa **Configuraci&oacute;n > Idioma**.</li>
                 </ul>
             </div>
         </section>
 
         <section id="contacts" class="guide-section">
-            <h2>7. Contactos and Recipients Issues</h2>
+            <h2>7. Problemas con Contactos</h2>
             <div class="step-card">
-                <h3>7.1 Cannot See Contactos</h3>
+                <h3>7.1 No Puedo Ver Mis Contactos</h3>
                 <ul>
-                    <li><strong>iOS Limited Access:</strong> If you previously chose "Selecciona Contactos...", go to
-                        **Settings > Privacidad & Security > Contactos > <span class="notranslate" translate="no">TapAlert</span>** and change to **"All Contactos"**.</li>
-                    <li><strong>Android Permissions:</strong> Asegúrate de que **Contactos** permission is set to "Allow" in system
-                        settings.</li>
-                    <li><strong>Format:</strong> Asegúrate de que numbers include the country code with a **+** prefix.</li>
+                    <li><strong>Acceso Limitado de iOS:</strong> Si elegiste "Seleccionar Contactos..." anteriormente, ve a **Ajustes > Privacidad y Seguridad > Contactos > <span class="notranslate" translate="no">TapAlert</span>** y cambia a **"Todos los Contactos"**.</li>
+                    <li><strong>Permisos de Android:</strong> Asegúrate de que de que el permiso de **Contactos** est&eacute; "Permitido" en los ajustes de sistema.</li>
+                    <li><strong>Formato:</strong> Asegúrate de que que los n&uacute;meros incluyan el c&oacute;digo del pa&iacute;s con el prefijo **+**.</li>
                 </ul>
             </div>
         </section>
 
         <section id="purchase" class="guide-section">
-            <h2>8. In-App Purchase Issues</h2>
+            <h2>8. Problemas con Compras</h2>
             <div class="step-card">
-                <h3>8.2 Purchased But Still Shows Gratis</h3>
+                <h3>8.2 Comprado pero a&uacute;n se ve Gratis</h3>
                 <ul>
-                    <li><strong>Restore Purchases:</strong> In the Upgrade screen, tap the **Restore** to
-                        re-validate your purchase with the store.</li>
-                    <li><strong>Same Account:</strong> Asegúrate de que you're signed in with the same store cuenta used for the
-                        original purchase.</li>
+                    <li><strong>Restaurar Compras:</strong> En la secci&oacute;n para ascender de categor&iacute;a, toca el bot&oacute;n **Restaurar** para volver a validar tu compra.</li>
+                    <li><strong>Misma Cuenta:</strong> Asegúrate de que que la sesi&oacute;n iniciada sea por el respectivo usuario que la cre&oacute;.</li>
                 </ul>
             </div>
         </section>
 
         <section id="widget" class="guide-section">
-            <h2>9. Widget Issues (Android)</h2>
+            <h2>9. Problemas de Widget (Android)</h2>
             <div class="step-card">
-                <h3>9.1 Widget Not Appearing</h3>
+                <h3>9.1 El Widget No Aparece</h3>
                 <ul>
-                    <li><strong>Manual Add:</strong> Try adding the widget from **Settings > Widget > Add** within the
-                        app if it doesn't appear in the system widget picker.</li>
-                    <li><strong>Battery Optimization:</strong> Aggressive optimization may prevent the widget from
-                        launching the app correctly.</li>
+                    <li><strong>A&ntilde;adir Manualmente:</strong> Intenta a&ntilde;adir el widget desde **Ajustes > Widget > A&ntilde;adir** dentro de la aplicaci&oacute;n si no aparece en el selector.</li>
+                    <li><strong>Optimizaci&oacute;n de la Bater&iacute;a:</strong> La intervenci&oacute;n del sistema estricto impedir&aacute; su despliegue.</li>
                 </ul>
             </div>
         </section>
 
         <section id="notifications" class="guide-section">
-            <h2>10. Notification Issues</h2>
+            <h2>10. Problemas de Notificaciones</h2>
             <div class="step-card">
-                <h3>10.2 Recipients Not Noticing Calls/SMS</h3>
+                <h3>10.2 Los Destinatarios No Notan Llamadas/SMS</h3>
                 <ul>
-                    <li><strong>iPhone:</strong> Have recipients enable **Excepción por Emergencia** for your contact number.
-                    </li>
-                    <li><strong>Android:</strong> Have recipients set notification priority to **"Alta"** or
-                        **"Urgente"** for your messages.</li>
+                    <li><strong>iPhone:</strong> P&iacute;dele a los destinatarios que habiliten **Excepción por Emergencia** en tus notificaciones.</li>
+                    <li><strong>Android:</strong> Que los destinatarios configuren la prioridad a **Alta** para tus mensajes.</li>
                 </ul>
             </div>
         </section>
 
         <section id="behavior" class="guide-section">
-            <h2>11. App Behavior Issues</h2>
+            <h2>11. Problemas de Comportamiento de la App</h2>
             <div class="step-card">
-                <h3>11.1 Alert Fires Immediately on Open</h3>
-                <p>Go to **Settings** and disable **"Auto-Start on Launch"**. This feature is intended for physical
-                    panics.</p>
+                <h3>11.1 La Alerta se Activa Inmediatamente al Abrirla</h3>
+                <p>Ve a **Ajustes** y deshabilita **"Auto-Empezar al Iniciar"**. Esta funci&oacute;n est&aacute; pensada para hardware externo.</p>
             </div>
         </section>
 
         <section id="ios" class="guide-section">
-            <h2>12. iOS-Specific Issues</h2>
+            <h2>12. Problemas de iOS</h2>
             <div class="step-card">
-                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> vs. Mensajes iOS</h3>
+                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> vs. Mensajes de iOS</h3>
                 <ul>
-                    <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Automatic):</strong> Silent background sending, requires internet.</li>
-                    <li><strong>Mensajes iOS (Manual):</strong> Requires you to tap Send in the composer, works via
-                        cellular.</li>
+                    <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Autom&aacute;tico):</strong> Manda mensajes de fondo, necesita internet.</li>
+                    <li><strong>Mensajes (Manual):</strong> Exige t&uacute; env&iacute;o interponi&eacute;ndose, depende del celular.</li>
                 </ul>
             </div>
         </section>
 
         <section id="android" class="guide-section">
-            <h2>13. Android-Specific Issues</h2>
+            <h2>13. Problemas de Android</h2>
             <div class="step-card">
-                <h3>13.1 Battery Optimization</h3>
-                <p>Some manufacturers (Xiaomi, Samsung, Huawei) require manual steps to prevent the app from being
-                    killed in the background. Check your phone's battery settings for **"No restrictions"**.</p>
+                <h3>13.1 Optimizaci&oacute;n de Bater&iacute;a</h3>
+                <p>Algunos fabricantes (Xiaomi, Samsung) impiden el trabajo en segundo plano. Config&uacute;ralo sin restricciones.</p>
             </div>
         </section>
 
         <section id="tips" class="guide-section">
-            <h2>14. General Tips</h2>
+            <h2>14. Consejos Generales</h2>
             <div class="alert-box">
-                <h4>✅ Before an Emergency</h4>
+                <h4>✅ Antes de una Emergencia</h4>
                 <ul>
-                    <li>Send a test alert to verify setup.</li>
-                    <li>Check the Status page for connectivity.</li>
-                    <li>Asegúrate de que all permissions are granted.</li>
+                    <li>Env&iacute;a una alerta de prueba.</li>
+                    <li>Revisa el estado de conexi&oacute;n.</li>
+                    <li>Asegúrate de que habilitados permisos de locaci&oacute;n.</li>
                 </ul>
             </div>
         </section>

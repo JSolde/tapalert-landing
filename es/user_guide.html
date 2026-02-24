@@ -7,7 +7,7 @@
     <link rel="alternate" hreflang="es" href="https://tapalert.app/es/user_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/user_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TapAlert - User Guide</title>
+    <title>TapAlert - Guía de Usuario</title>
     <style>
         * {
             margin: 0;
@@ -463,488 +463,349 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Volver a las Guías</a>
 
-        <h1 class="guide-title">User Guide: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">This guide explains how to configure and use <strong><span class="notranslate"
-                    translate="no">TapAlert</span></strong> on your Android or
-            iOS device.</p>
+        <h1 class="guide-title">Guía de Usuario: <span class="notranslate" translate="no">TapAlert</span></h1>
+        <p class="guide-intro">Esta guía explica cómo configurar y usar <strong><span class="notranslate" translate="no">TapAlert</span></strong> en tu dispositivo Android o iOS.</p>
 
         <section class="guide-section">
-            <h2>1. 🛡️ Required Permissions</h2>
-            <p>Upon first launch, the app will request the following permissions:</p>
+            <h2>1. 🛡️ Permisos Requeridos</h2>
+            <p>Al iniciarse por primera vez, la aplicación solicitará los siguientes permisos:</p>
             <ul>
-                <li><strong>SMS (Android Only):</strong> Needed to send direct messages from your phone's SIM card.</li>
-                <li><strong>Ubicación:</strong> Needed to include your GPS coordinates in the alert message.</li>
-                <li><strong>Microphone:</strong> Needed if you use the voice recording feature to transcribe your alert
-                    message.</li>
-                <li><strong>Contactos:</strong> Needed to easily select recipients from your phone's address book.</li>
+                <li><strong>SMS (Solo Android):</strong> Necesario para enviar mensajes directos desde la tarjeta SIM de tu teléfono.</li>
+                <li><strong>Ubicación:</strong> Necesario para incluir tus coordenadas GPS en el mensaje de alerta.</li>
+                <li><strong>Micrófono:</strong> Necesario si usas la función de grabación de voz para transcribir tu mensaje de alerta.</li>
+                <li><strong>Contactos:</strong> Necesario para seleccionar fácilmente destinatarios de la libreta de direcciones de tu teléfono.</li>
             </ul>
             <blockquote class="alert-note">
-                <strong>NOTE:</strong> On iOS, <span class="notranslate" translate="no">direct SMS</span> sending is not
-                supported by the system for automated alerts.
-                You Debes use the <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong> method.
+                <strong>NOTA:</strong> En iOS, el envío de <span class="notranslate" translate="no">SMS directo</span> no está soportado por el sistema para alertas automáticas. Tú Debes usar el método de <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong>.
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>2. 📱 Interface Modes</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> offers two distinct interface modes to suit your
-                needs. You can switch between them in
-                <strong>Settings > Interface Mode</strong>.
-            </p>
+            <h2>2. 📱 Modos de Interfaz</h2>
+            <p><span class="notranslate" translate="no">TapAlert</span> ofrece dos modos de interfaz distintos para adaptarse a tus necesidades. Puedes cambiar entre ellos en <strong>Ajustes > Modo de Interfaz</strong>.</p>
 
-            <h3><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
-                    translate="no">SOS</span> / OK)</h3>
-            <p>A streamlined interface designed for maximum simplicity and accessibility, ideal for elderly users or
-                high-stress situations.</p>
+            <h3><span class="notranslate" translate="no">Modo Pánico</span> (<span class="notranslate" translate="no">SOS</span> / OK)</h3>
+            <p>Una interfaz simplificada diseñada para máxima simplicidad y accesibilidad, ideal para usuarios mayores o situaciones de alto estrés.</p>
             <ul>
-                <li><strong>Large <span class="notranslate" translate="no">SOS</span> Button:</strong> Instantly starts
-                    the countdown for an "<span class="notranslate" translate="no">SOS</span>, I need help" alert.
-                </li>
-                <li><strong>I'm OK Button:</strong> Quickly sends an "I'm OK" status update to reassure contacts.</li>
-                <li><strong>Voice Buttons:</strong> Each section hcomo dedicated voice to record and send an
-                    audio transcript along with the <span class="notranslate" translate="no">SOS</span> or OK status.
-                </li>
-                <li><strong>Emergency Call Button:</strong> A dedicated to immediately call local emergency
-                    services (e.g., 112, 911) based on your location.</li>
+                <li><strong>Botón <span class="notranslate" translate="no">SOS</span> Grande:</strong> Inicia instantáneamente la cuenta regresiva para una alerta de "<span class="notranslate" translate="no">SOS</span>, necesito ayuda".</li>
+                <li><strong>Botón Estoy OK:</strong> Envía rápidamente una actualización de estado de "Estoy OK" para tranquilizar a los contactos.</li>
+                <li><strong>Botones de Voz:</strong> Cada sección tiene un botón dedicado de voz para grabar y enviar una transcripción de audio junto con el estado de <span class="notranslate" translate="no">SOS</span> u OK.</li>
+                <li><strong>Botón de Llamada de Emergencia:</strong> Un botón dedicado para llamar inmediatamente a los servicios de emergencia locales (ej., 112, 911) basándose en tu ubicación.</li>
             </ul>
 
-            <h3>Report Mode (Tabs)</h3>
-            <p>The default mode, offering flexibility with multiple message types.</p>
+            <h3>Modo Reporte (Pestañas)</h3>
+            <p>El modo predeterminado, ofreciendo flexibilidad con múltiples tipos de mensajes.</p>
             <ul>
-                <li><strong>4 Message Tabs:</strong> Pre-configure different alerts (e.g., "Medical", "Car Trouble",
-                    "Generic").</li>
-                <li><strong>Customizable Text:</strong> Tap inside the message box to edit content on the fly.</li>
-                <li><strong>Voice Transcription:</strong> Use the microphone to dictate a custom message.</li>
+                <li><strong>4 Pestañas de Mensajes:</strong> Preconfigura diferentes alertas (ej., "Médico", "Problema con el auto", "Genérico").</li>
+                <li><strong>Texto Personalizable:</strong> Toca dentro de la caja de mensaje para editar el contenido sobre la marcha.</li>
+                <li><strong>Transcripción de Voz:</strong> Usa el micrófono para dictar un mensaje personalizado.</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>3. 📝 Setup Predefined Messages (Report Mode)</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> comes with 4 predefined message slots (tabs)
-                allowing you to quickly switch between different
-                alert scenarios.</p>
+            <h2>3. 📝 Configurar Mensajes Predefinidos (Modo Reporte)</h2>
+            <p><span class="notranslate" translate="no">TapAlert</span> viene con 4 espacios (pestañas) de mensajes predefinidos permitiéndote cambiar rápidamente entre diferentes escenarios de alerta.</p>
 
-            <h3>Editaring Messages</h3>
+            <h3>Editando Mensajes</h3>
             <ol>
-                <li><strong>Selecciona a Tab:</strong> Tap on one of the numbered tabs (1-3) at the top.</li>
-                <li><strong>Editar Text:</strong> Tap inside the message box to type your custom alert message (e.g.,
-                    "Medical Emergency", "Car Trouble").</li>
-                <li><strong>Auto-Save:</strong> Your changes are saved automatically as you type.</li>
-                <li><strong>Dictation:</strong> You can also use the dictation icon to dictate your message.</li>
+                <li><strong>Selecciona una Pestaña:</strong> Toca en una de las pestañas numeradas (1-3) en la parte superior.</li>
+                <li><strong>Edita el Texto:</strong> Toca dentro de la caja de mensaje para escribir tu mensaje de alerta personalizado (ej., "Emergencia Médica", "Problema con el Auto").</li>
+                <li><strong>Autoguardado:</strong> Tus cambios se guardan automáticamente al escribir.</li>
+                <li><strong>Dictado:</strong> También puedes usar el icono de dictado para dictar tu mensaje.</li>
             </ol>
 
-            <h3>🎙️ Voice Quick Alert Message</h3>
-            <p>You can use your voice to generate the alert text in real-time. This is useful for describing a specific
-                situation quickly. The message will be saved on the 4th tab.</p>
+            <h3>🎙️ Mensaje de Alerta Rápida por Voz</h3>
+            <p>Puedes usar tu voz para generar el texto de la alerta en tiempo real. Esto es útil para describir una situación específica rápidamente. El mensaje se guardará en la cuarta pestaña.</p>
             <ol>
-                <li><strong>Tap the Microphone red:</strong> It will start <strong>pulsing</strong> when active.
-                </li>
-                <li><strong>Speak your message:</strong> The status bar at the bottom will turn <strong>light
-                        orange</strong> and show a sound wave symbol while listening.</li>
-                <li><strong>Automatic Update and Instant Send:</strong> After speaking or tapping the microphone
-                    again, the message text will be updated and the <strong>SEND ALERT</strong> will be triggered
-                    immediately. You can also press the <strong>SEND ALERT</strong> directly while recording; the
-                    app will automatically stop the recording and save and send the transcribed message immediately.
-                </li>
+                <li><strong>Toca el botón rojo del Micrófono:</strong> Comenzará a <strong>pulsar</strong> cuando esté activo.</li>
+                <li><strong>Habla tu mensaje:</strong> La barra de estado en la parte inferior se volverá <strong>naranja claro</strong> y mostrará un símbolo de onda de sonido mientras escucha.</li>
+                <li><strong>Actualización Automática y Envío Instantáneo:</strong> Después de hablar o tocar el botón del micrófono nuevamente, el texto del mensaje se actualizará y se activará el <strong>ENVIAR ALERTA</strong> inmediatamente. También puedes presionar el botón de <strong>ENVIAR ALERTA</strong> directamente mientras grabas; la app detendrá automáticamente la grabación, y guardará y enviará el mensaje transcrito de inmediato.</li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>4. 👥 Setup/Managing Recipients</h2>
-            <p>This is done in the dedicated <strong>Recipients Screen</strong>, accessible from the top bar of the Home
-                Screen:</p>
+            <h2>4. 👥 Configurar/Gestionar Destinatarios</h2>
+            <p>Esto se hace en la <strong>Pantalla de Destinatarios</strong> dedicada, accesible desde la barra superior de la Pantalla de Inicio:</p>
             <ol>
-                <li><strong>Open Recipients:</strong> Tap the <strong>People/Group Icon</strong> (👥) in the top-right
-                    toolbar.</li>
-                <li><strong>Add Number:</strong>
+                <li><strong>Abrir Destinatarios:</strong> Toca el <strong>Icono de Personas/Grupo</strong> (👥) en la barra de herramientas superior derecha.</li>
+                <li><strong>Añadir Número:</strong>
                     <ul>
-                        <li>Tap the <strong>"Add"</strong> to manually enter a phone number.</li>
-                        <li>Tap the <strong>Contacto Icon</strong> to pick a number directly from your phone's address
-                            book.</li>
+                        <li>Toca el botón <strong>"Añadir"</strong> para ingresar un número de teléfono manualmente.</li>
+                        <li>Toca el <strong>Icono de Contacto</strong> para elegir un número directamente de la libreta de direcciones de tu teléfono.</li>
                     </ul>
                 </li>
-                <li><strong>Format:</strong> Use the <strong>E.164 international format</strong> (e.g.,
-                    <code>+34600000000</code>) for best results.
-                </li>
-                <li><strong>Remove:</strong> Tap the delete icon next to any number in the list to remove it. You can
-                    also "Delete All" using the trash bin icon at the top.</li>
+                <li><strong>Formato:</strong> Usa el <strong>formato internacional E.164</strong> (ej., <code>+34600000000</code>) para mejores resultados.</li>
+                <li><strong>Eliminar:</strong> Toca el icono de eliminar al lado de cualquier número en la lista para quitarlo. También puedes "Eliminar Todos" usando el icono de papelera en la parte superior.</li>
             </ol>
             <blockquote class="alert-tip">
-                <strong>TIP: Can't see all your contacts?</strong>
+                <strong>CONSEJO: ¿No puedes ver todos tus contactos?</strong>
                 <ul>
-                    <li><strong>iOS:</strong> If you chose "Selecciona Contactos..." (Limited Access), the app can only see
-                        the few you picked. To fix this, go to <strong>iPhone Settings > Privacidad & Security > Contactos >
-                            <span class="notranslate" translate="no">TapAlert</span></strong> and select <strong>"All
-                            Contactos"</strong>.</li>
-                    <li><strong>Android:</strong> Permissions are "all-or-nothing". If you denied access, the picker
-                        will be empty. Asegúrate de que the app has "Contactos" permission in your phone's App Settings.</li>
+                    <li><strong>iOS:</strong> Si elegiste "Seleccionar Contactos..." (Acceso Limitado), la app solo puede ver los pocos que elegiste. Para arreglar esto, ve a <strong>Ajustes del iPhone > Privacidad y Seguridad > Contactos > <span class="notranslate" translate="no">TapAlert</span></strong> y selecciona <strong>"Todos los Contactos"</strong>.</li>
+                    <li><strong>Android:</strong> Los permisos son "todo o nada". Si denegaste el acceso, el selector estará vacío. Asegúrate de que la app tenga permiso de "Contactos" en los Ajustes de Apps de tu teléfono.</li>
                 </ul>
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>5. ⚙️ Configuration Options</h2>
-            <p>Access the settings menu via the gear icon ⚙️ to further customize the alert message text and the SMS
-                delivery method.</p>
+            <h2>5. ⚙️ Opciones de Configuración</h2>
+            <p>Accede al menú de ajustes mediante el icono de engranaje ⚙️ para personalizar aún más el texto del mensaje de alerta y el método de entrega de SMS.</p>
 
-            <h3>SMS Sending Methods</h3>
-            <p>The app supports two ways to send messages:</p>
+            <h3>Métodos de Envío de SMS</h3>
+            <p>La app soporta dos formas de enviar mensajes:</p>
             <ul>
-                <li><strong><span class="notranslate" translate="no">SMS Directo</span> (Android):</strong> Uses your
-                    phone's SIM card. Cost depends on your mobile
-                    carrier plan.</li>
-                <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS (Android & iOS):</strong> Uses
-                    the <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> API over the internet (Wi-Fi/Data).
-                    Confiable and required for iOS.</li>
+                <li><strong><span class="notranslate" translate="no">SMS Directo</span> (Android):</strong> Usa la tarjeta SIM de tu teléfono. El costo depende de tu plan de operador móvil.</li>
+                <li><strong>SMS por <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Android e iOS):</strong> Usa la API de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> a través de internet (Wi-Fi/Datos). Altamente confiable y requerido para iOS.</li>
             </ul>
 
-            <h3><span class="notranslate" translate="no">Redundancia Inteligente</span> (Android Only)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span>  a <strong><span class="notranslate"
-                        translate="no">Redundancia Inteligente</span></strong> system that automatically switches methods if
-                the
-                primary one fails:</p>
+            <h3><span class="notranslate" translate="no">Redundancia Inteligente</span> (Solo Android)</h3>
+            <p><span class="notranslate" translate="no">TapAlert</span> cuenta con un sistema de <strong><span class="notranslate" translate="no">Redundancia Inteligente</span></strong> que cambia automáticamente de método si el principal falla:</p>
             <ul>
-                <li><strong>No Signal?</strong> If you try to send a <span class="notranslate" translate="no">Direct
-                        SMS</span> but have no cellular coverage (e.g.,
-                    inside a building), the app will automatically attempt to send via <span class="notranslate"
-                        translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Wi-Fi).</li>
-                <li><strong>No Data?</strong> If you use <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> as
-                    primary but are hiking sin 4G/5G, the app will
-                    automatically <span class="notranslate" translate="no">fallback</span> to sending a <span
-                        class="notranslate" translate="no">SMS Directo</span>.</li>
+                <li><strong>¿Sin Señal?</strong> Si intentas enviar un <span class="notranslate" translate="no">SMS Directo</span> pero no tienes cobertura celular (ej., dentro de un edificio), la app intentará automáticamente enviar vía <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Wi-Fi).</li>
+                <li><strong>¿Sin Datos?</strong> Si usas <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> como principal pero estás de excursión sin 4G/5G, la app automáticamente usará como <span class="notranslate" translate="no">respaldo</span> el envío de un <span class="notranslate" translate="no">SMS Directo</span>.</li>
             </ul>
-            <p><strong>To enable:</strong> Go to Settings and turn on <strong>"<span class="notranslate"
-                        translate="no">Redundancia Inteligente</span>"</strong>.</p>
+            <p><strong>Para habilitar:</strong> Ve a Ajustes y activa <strong>"<span class="notranslate" translate="no">Redundancia Inteligente</span>"</strong>.</p>
 
-            <h3>Email Redundancy (Wi-Fi <span class="notranslate" translate="no">Respaldo</span>)</h3>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate"
-                    translate="no">TapAlert</span> can send your alert via email.</p>
+            <h3>Respaldo por Email (Wi-Fi <span class="notranslate" translate="no">Respaldo</span>)</h3>
+            <p>Si no tienes señal celular pero estás conectado a Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> puede enviar tu alerta por correo electrónico.</p>
             <ul>
-                <li><strong>Setup:</strong> Go to <strong>Settings > Email Redundancy</strong>. For detailed
-                    instructions, see <strong>Chapter 6: Configuring Email Redundancy</strong>.</li>
-                <li><strong>Automatic <span class="notranslate" translate="no">Respaldo</span>:</strong> When enabled,
-                    the app will attempt to send an email alert if
-                    both <span class="notranslate" translate="no">SMS Directo</span> and <span class="notranslate"
-                        translate="no"><span class="notranslate" translate="no">Twilio</span></span> (cellular) fail.</li>
+                <li><strong>Configuración:</strong> Ve a <strong>Ajustes > Respaldo por Email</strong>. Para instrucciones detalladas, consulta el <strong>Capítulo 6: Configurando el Respaldo por Email</strong>.</li>
+                <li><strong><span class="notranslate" translate="no">Respaldo</span> Automática:</strong> Cuando está habilitado, la app intentará enviar una alerta por email si tanto <span class="notranslate" translate="no">SMS Directo</span> como <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (celular) fallan.</li>
             </ul>
 
-            <h3>Trigger Method (Tap vs. Hold)</h3>
-            <p>Prevent accidental triggers by changing how the alert is activated in <strong>Settings > Trigger
-                    Method</strong>:</p>
+            <h3>Método de Activación (Tocar vs. Mantener)</h3>
+            <p>Previene activaciones accidentales cambiando cómo se activa la alerta en <strong>Ajustes > Método de Activación</strong>:</p>
             <ul>
-                <li><strong>Tap to Send (Default):</strong> A single tap on the alert triggers the countdown.
-                </li>
-                <li><strong>Press & Hold (5s):</strong> You Debes hold the alert for 5 continuous seconds to
-                    trigger the countdown. This is recommended to avoid false alarms.</li>
+                <li><strong>Tocar para Enviar (Predeterminado):</strong> Un solo toque en el botón de alerta inicia la cuenta regresiva.</li>
+                <li><strong>Presionar y Mantener (5s):</strong> Debes mantener presionado el botón de alerta durante 5 segundos continuos para iniciar la cuenta regresiva. Esto se recomienda para evitar falsas alarmas.</li>
             </ul>
 
             <blockquote class="alert-important">
-                <strong>IMPORTANT: iOS Users</strong><br>
-                You Debes configure a <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> cuenta.<br>
-                👉 <strong>For detailed <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> setup instructions,
-                    please see the separate "<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Guide" in the Help
-                    menu.</strong>
+                <strong>IMPORTANTE: Usuarios de iOS</strong><br> Debes configurar una cuenta de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.<br> 👉 <strong>Para instrucciones detalladas de configuración de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, por favor consulta la "Guía de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>" separada en el menú de Ayuda.</strong>
             </blockquote>
 
-            <h3>Auto-Start on Launch</h3>
-            <p>Automatically start the alert countdown immediately when the app opens.</p>
+            <h3>Auto-Inicio al Abrir</h3>
+            <p>Inicia automáticamente la cuenta regresiva de la alerta inmediatamente cuando la app se abre.</p>
             <ul>
-                <li><strong>Useful for:</strong> Creating a physical panic (using hardware key remapping) or a
-                    quick-launch shortcut.</li>
-                <li><strong>Warning:</strong> When enabled, opening the app will always trigger the countdown. You can
-                    cancel it during the delay period.</li>
+                <li><strong>Útil para:</strong> Crear un botón de pánico físico (usando la reasignación de teclas de hardware) o un acceso directo de inicio rápido.</li>
+                <li><strong>Advertencia:</strong> Cuando está habilitado, abrir la app siempre activará la cuenta regresiva. Puedes cancelarla durante el período de retraso.</li>
             </ul>
 
-            <h3>Message Ubicación</h3>
+            <h3>Ubicación del Mensaje</h3>
             <ul>
-                <li><strong>Include Ubicación:</strong> Append GPS coordinates to the message.</li>
-                <li><strong>Include Address:</strong> Attempt to convert coordinates into a human-readable address.</li>
+                <li><strong>Incluir Ubicación:</strong> Agrega coordenadas GPS al mensaje.</li>
+                <li><strong>Incluir Dirección:</strong> Intenta convertir las coordenadas en una dirección legible para humanos.</li>
             </ul>
 
-            <h3>Additional Settings</h3>
+            <h3>Ajustes Adicionales</h3>
             <ul>
-                <li><strong>Sender Identity:</strong> (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Only)
-                    Choose the name or number that appears as the sender
-                    (e.g., "Alert" or your specific <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> number).</li>
-                <li><strong>Appearance:</strong> Toggle between Light Mode, Dark Mode, or follow System Settings.</li>
-                <li><strong>App Idioma:</strong> Manually override the app's language (default: System Idioma).</li>
-                <li><strong>Region and formatting:</strong> Set your region to ensure phone numbers are formatted
-                    correctly (e.g., auto-adding country codes).</li>
-                <li><strong>Notification sound:</strong> Choose the alert sound that plays after a successful message
-                    delivery.</li>
+                <li><strong>Identidad del Remitente:</strong> (Solo <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>) Elige el nombre o número que aparece como remitente (ej., "Alerta" o tu número de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> específico).</li>
+                <li><strong>Apariencia:</strong> Cambia entre Modo Claro, Modo Oscuro, o sigue los Ajustes del Sistema.</li>
+                <li><strong>Idioma de la App:</strong> Anula manualmente el idioma de la app (predeterminado: Idioma del Sistema).</li>
+                <li><strong>Región y formato:</strong> Establece tu región para asegurar que los números de teléfono tengán el formato correcto (ej., auto-agregar códigos de país).</li>
+                <li><strong>Sonido de notificación:</strong> Elige el sonido de alerta que se reproduce después de una entrega de mensaje exitosa.</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>6. 📧 Configuring Email Redundancy</h2>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate"
-                    translate="no">TapAlert</span> can send your alert via email.</p>
+            <h2>6. 📧 Configurando el Respaldo por Email</h2>
+            <p>Si no tienes señal celular pero estás conectado a Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> puede enviar tu alerta por correo electrónico.</p>
 
-            <h3>Setup Instructions</h3>
+            <h3>Instrucciones de Configuración</h3>
             <ol>
-                <li><strong>Open Settings:</strong> Tap the gear icon ⚙️ and select <strong>Email Redundancy</strong>.
-                </li>
-                <li><strong>Enable the feature:</strong> Toggle <strong>Enable Email Redundancy</strong> to ON.</li>
-                <li><strong>SMTP Configuration:</strong> Enter your email provider's SMTP details:
+                <li><strong>Abrir Ajustes:</strong> Toca el logo de engranaje ⚙️ y selecciona <strong>Respaldo por Email</strong>.</li>
+                <li><strong>Habilitar la característica:</strong> Activa el botón <strong>Habilitar Respaldo por Email</strong>.</li>
+                <li><strong>Configuración SMTP:</strong> Ingresa los datos del servidor de tu proveedor de correo:
                     <ul>
-                        <li><strong>SMTP Host:</strong> (e.g., <code>smtp.gmail.com</code> for Gmail,
-                            <code>smtp-mail.outlook.com</code> for Outlook).
-                        </li>
-                        <li><strong>SMTP Port:</strong> (e.g., <code>587</code> or <code>465</code>).</li>
-                        <li><strong>Username / Email:</strong> Your full email address.</li>
-                        <li><strong>Password / App Password:</strong> Your email password or a dedicated App Password.
-                        </li>
+                        <li><strong>Servidor SMTP:</strong> (ej., <code>smtp.gmail.com</code> para Google, <code>smtp-mail.outlook.com</code> para Outlook).</li>
+                        <li><strong>Puerto SMTP:</strong> (ej., <code>587</code> o <code>465</code>).</li>
+                        <li><strong>Usuario / Email:</strong> Tu dirección de correo completa.</li>
+                        <li><strong>Contraseña / Contraseña de Aplicación:</strong> Tu contraseña actual o una clave creada especialmente para Aplicación.</li>
                     </ul>
                 </li>
             </ol>
 
-            <h3>⚡ Quick Setup (Common Providers)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> includes presets for popular email
-                providers. Simply tap a preset to auto-fill the
-                SMTP host and port settings:</p>
+            <h3>⚡ Ajuste Rápido (Proveedores Comunes)</h3>
+            <p><span class="notranslate" translate="no">TapAlert</span> cuenta con atajos fácilmente configurables. Sólo elige el tuyo para autocompletar la sección de Host y Puerto:</p>
             <ul>
                 <li><strong>Gmail</strong> (smtp.gmail.com:587)</li>
                 <li><strong>Outlook</strong> (smtp-mail.outlook.com:587)</li>
                 <li><strong>Yahoo</strong> (smtp.mail.yahoo.com:587)</li>
                 <li><strong>iCloud</strong> (smtp.mail.me.com:587)</li>
             </ul>
-            <p>After tapping a preset, you only need to enter your email address and app password (see below).</p>
+            <p>Luego de tocar un atajo, únicamente escribe tu dirección actual de correo y contraseña para proceder.</p>
 
             <blockquote class="alert-important">
-                <strong>IMPORTANT: App Passwords Are Provider-Specific</strong><br>
-                Each email provider has its own app password system. You cannot use a Gmail app password with Outlook,
-                or vice versa. You Debes generate an app password specific to the provider you're using.
+                <strong>IMPORTANTE: Cada App necesita diferentes Contraseñas</strong><br> Cada proveedor requiere contraseñas con reglas y formatos únicos. No funciona copiar tu contraseña de Gmail y colocar en otra categoría. Tú Debes que generar tu clave especial.
             </blockquote>
 
-            <h3>🔒 Using App Passwords (Recommended)</h3>
-            <p>For security and reliability, we strongly recommend using an <strong>App Password</strong> instead of
-                your primary password.</p>
+            <h3>🔒 Uso de las Contraseñas de Aplicación (Recomendado)</h3>
+            <p>Por mayor seguridad y rapidez, exhortamos el uso exclusivo de la <strong>Contraseña Especial de Aplicación</strong> y no tu acceso principal.</p>
             <ul>
-                <li><strong>Why?</strong> It bypasses 2-Factor Authentication and keeps your main cuenta secure.</li>
+                <li><strong>¿Por qué?</strong> Debido a no tener que introducir códigos adicionales de 2 factor authentication cada mes.</li>
             </ul>
 
             <h4>Gmail</h4>
             <ol>
-                <li>Go to your <strong>Google Account > Security</strong> or <a
-                        href="https://mycuenta.google.com/apppasswords"
-                        target="_blank">https://mycuenta.google.com/apppasswords</a></li>
-                <li>Search for <strong>"App passwords"</strong> (requires 2-step verification enabled).</li>
-                <li>Generate a new password for "Other" and call it "<span class="notranslate"
-                        translate="no">TapAlert</span>".</li>
-                <li>Use the 16-character code provided in <span class="notranslate" translate="no">TapAlert</span>
-                    (blanks included).</li>
+                <li>Navega a la página de <strong>Google Account > Security</strong> o <a href="https://mycuenta.google.com/apppasswords" target="_blank">https://mycuenta.google.com/apppasswords</a></li>
+                <li>Busca la sección de <strong>"App passwords"</strong> (2 passwords validation requerido).</li>
+                <li>Genera el nombre que se vinculará "Other" con un clásico como "<span class="notranslate" translate="no">TapAlert</span>".</li>
+                <li>Introduce esa mezcla en <span class="notranslate" translate="no">TapAlert</span> y ya (espacios no aceptados).</li>
             </ol>
 
             <h4>Outlook / Hotmail / Live</h4>
             <ol>
-                <li>Go to <strong>Microsoft Account > Security > Advanced security options</strong> or <a
-                        href="https://cuenta.live.com/names/manage"
-                        target="_blank">https://cuenta.live.com/names/manage</a>.</li>
-                <li>Under <strong>"App passwords"</strong>, create a new app password.</li>
-                <li>Selecciona "Other" and name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
+                <li>Navegue a la sección de Administración de Seguriidad o <a href="https://cuenta.live.com/names/manage" target="_blank">https://cuenta.live.com/names/manage</a>.</li>
+                <li>Cree ahora ahí la nueva clave especial.</li>
+                <li>Selecciona "Others" como título y asigné "<span class="notranslate" translate="no">TapAlert</span>".</li>
+                <li>Procopiela al menú en app principal de <span class="notranslate" translate="no">TapAlert</span>.</li>
             </ol>
 
             <h4>Yahoo</h4>
             <ol>
-                <li>Go to <strong>Yahoo Account Security</strong> or <a href="https://login.yahoo.com/cuenta/security"
-                        target="_blank">https://login.yahoo.com/cuenta/security</a>.</li>
-                <li>Selecciona <strong>"Generate app password"</strong>.</li>
-                <li>Choose "Other App" and name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
+                <li>Abre Yahoo Configura o <a href="https://login.yahoo.com/cuenta/security" target="_blank">https://login.yahoo.com/cuenta/security</a>.</li>
+                <li>Selecciona <strong>"Crear Contraseña"</strong>.</li>
+                <li>Para otro como "Other App" ingresen una mención visible a "<span class="notranslate" translate="no">TapAlert</span>".</li>
+                <li>Procopiela al menú en app principal de <span class="notranslate" translate="no">TapAlert</span>.</li>
             </ol>
 
             <h4>iCloud</h4>
             <ol>
-                <li>Go to <strong>appleid.apple.com > Sign-In and Security > App-Specific Passwords</strong> or <a
-                        href="https://appleid.apple.com/cuenta/manage"
-                        target="_blank">https://appleid.apple.com/cuenta/manage</a>.</li>
-                <li>Click the <strong>+</strong> to generate a new password.</li>
-                <li>Name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
+                <li>Ingresen aappleid.apple.com con normalidad, para entrar a las opciones y App-Specific Passwords o utilicen <a href="https://appleid.apple.com/cuenta/manage" target="_blank">https://appleid.apple.com/cuenta/manage</a>.</li>
+                <li>Ubicando su atención toquen el gran símbolo de <strong>+</strong> y generé nueva credencial.</li>
+                <li>Y llamando este de paso por identificaro "<span class="notranslate" translate="no">TapAlert</span>".</li>
+                <li>Procopiela al menú en app principal de <span class="notranslate" translate="no">TapAlert</span>.</li>
             </ol>
 
-            <h3>Recipients</h3>
-            <p>Emails will be sent to all contacts in your <strong>Recipients</strong> list who have an email address
-                saved. To add an email to a contact:</p>
+            <h3>Destinatarios</h3>
+            <p>Los correos se enviarán masivamente de esta manera sólamente con las personas anotadas en correo electrónico:</p>
             <ol>
-                <li>Go to the <strong>Recipients</strong> screen.</li>
-                <li>Editar a contact and ensure the email field is filled.</li>
+                <li>Mueva las pestañas hacia la <strong>Librería</strong> central.</li>
+                <li>Escoge a una persona particular, toca y valida llenar la información precisa.</li>
             </ol>
 
             <h3>🧪 Testing</h3>
-            <p>Before relying on it, tap <strong>Test Connection</strong>. Enter an email address to receive a test
-                message. If successful, your setup is correct.</p>
+            <p>Asegura todos estés funcionando correctamentee mediante pruebas de Conexión. Selecciona los correos para la autoayuda a todos envío validando que nada falte.</p>
         </section>
 
         <section class="guide-section">
-            <h2>7. 📱 Widget de Pantalla de Inicio (Android Only)</h2>
-            <p>For even faster emergency alerts, you can add a widget to your Android home screen:</p>
+            <h2>7. 📱 Widget de Pantalla de Inicio (Solo Android)</h2>
+            <p>Un atajo siempre a la mano a manera más fácill sin bloqueaar de las demás vistas:</p>
 
-            <h3>Adding the Widget</h3>
+            <h3>Agreggando sus accesos</h3>
             <ol>
-                <li><strong>Open Settings:</strong> Tap the gear icon ⚙️ in the app.</li>
-                <li><strong>Find Widget Section:</strong> Scroll down to the "Widget" section.</li>
-                <li><strong>Tap "Add":</strong> The system will prompt you to place the widget on your home screen.</li>
-                <li><strong>Position the Widget:</strong> Drag it to your preferred location and release.</li>
+                <li><strong>Ajustess:</strong> Dentro tú pulsa ⚙️ de vuelta al inicioo.</li>
+                <li><strong>El apartado Widget:</strong> Muévelo hacia el panel del apartado exacto.</li>
+                <li><strong>Opción final "Agregar":</strong> Automáticamente confirmarás su añadido a su panel primarioo.</li>
+                <li><strong>Un paso y soltarlo:</strong> Donde requieran su posición, al sólo dejarlo caer tendrás final.</li>
             </ol>
             <blockquote class="alert-note">
-                <strong>NOTE:</strong> If you already have a widget on your home screen, you'll need to remove the old
-                one before adding a new one.
+                <strong>NOTA:</strong> Si tú deseas instalar repetidamente más, debes borrar una para habilitarl nuevamente.
             </blockquote>
 
-            <h3>Using the Widget</h3>
+            <h3>Maniobrando sus ventajas</h3>
             <ul>
-                <li><strong>Tap the Widget:</strong> Opens the app and starts the <strong>Countdown</strong>
-                    immediately.</li>
-                <li><strong>App Experience:</strong> You will see the countdown dialog, ensuring the alert is
-                    intentional. You can cancel it if pressed by mistake.</li>
-                <li><strong>Sound:</strong> The app plays an audible alert tone while counting down.</li>
+                <li><strong>Pulsación sólo a un click:</strong> Abrir la aplicación  e interrogar un reloj contador sin preguntar.</li>
+                <li><strong>Resumen interno Visual:</strong> Entendiendo al usuario se otorga su momento si no quiso enviar la alerta final en el contador mostrado.</li>
+                <li><strong>Reconocimiento:</strong> Avisar un volumen a su máximo notificaciones de la app.</li>
             </ul>
             <blockquote class="alert-tip">
-                <strong>TIP:</strong> The widget is perfect for true emergencies when you need to send an alert with a
-                single tap, sin finding the app in your drawer.
+                <strong>CONSEJO:</strong>  Ideal para escenarios périidss debido estar cerca del botón de un panel inicial para no requerir busquedas innecesarias..
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>8. 🚀 Sending an Alert</h2>
+            <h2>8. 🚀 Método de Lanzamiento de su señal</h2>
             <ol>
-                <li><strong>Abre la app de App.</strong></li>
-                <li><strong>Trigger the Alert:</strong>
+                <li><strong>Abrir aplicación.</strong></li>
+                <li><strong>Señal a reacción:</strong>
                     <ul>
-                        <li><strong>In Report Mode:</strong> Tap the large red <strong>SEND ALERT</strong>. The
-                            message selected in the tabs (1-4) will be sent.</li>
-                        <li><strong>In <span class="notranslate" translate="no">Panic Mode</span>:</strong>
+                        <li><strong>Modos estándares con menús:</strong> Con tú pulso inicia todo este procedimiento veloz y automático.</li>
+                        <li><strong>Al estar encendidos en modo  pánicos </strong>
                             <ul>
-                                <li>Tap the big red <strong><span class="notranslate" translate="no">SOS</span></strong>
-                                    to send a "Help needed" alert.</li>
-                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of <span class="notranslate"
-                                        translate="no">SOS</span>) to record and send a
-                                    specific voice message with your <span class="notranslate" translate="no">SOS</span>
-                                    alert.</li>
-                                <li>Tap the green <strong>I'm OK</strong> to send a reassuring "I'm OK" status.
-                                </li>
-                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of I'm OK) to record and send
-                                    a voice message with your OK status.</li>
-                                <li>Tap the <strong>Emergency Call</strong> to dial local emergency services
-                                    immediately.</li>
+                                <li>Alerta gigante roja en  en la mitad inicia el caos principal.</li>
+                                <li><strong>Acciones a usar sonido por micrófono: </strong> Iniciar tus acciones y su interacci&oacue;n.</li>
+                                <li>Acciones secundarias de luz Verde te indican <strong>Estoy Bien</strong>.</li>
+                                <li>En la de luz verde tu podrás mandar su acción respectiva.</li>
+                                <li>Para pedir señal de socorro hay botones extra que tú requieres local.</li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><strong>The app will:</strong>
+                <li><strong>Sistema autónomamente de app :</strong>
                     <ul>
-                        <li>Fetch your current location (if configured).</li>
-                        <li>Show a <strong>Countdown Dialog</strong> (see "Countdown Dialog" below).</li>
-                        <li>Send the alert message to all recipients.</li>
+                        <li>Generen una extracción gps en tiempoo reale.</li>
+                        <li>Ventana un pequeño relog final en pantalla retroactiva (visibles detalladas secciónes extras)abajo).</li>
+                        <li>Enviarlos ya y automa&iacute;tico para todos lo vinculádos.</li>
                     </ul>
                 </li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>9. ⏱️ Countdown Dialog</h2>
-            <p>To prevent accidental alerts, <span class="notranslate" translate="no">TapAlert</span> shows a countdown
-                before sending.</p>
+            <h2>9. ⏱️ Cuadro regresivorelojj</h2>
+            <p>Más seguro evitamos accionar a causa de equivocaciones sin aviso <span class="notranslate" translate="no">TapAlert</span> siempre generará protecciones previas.</p>
             <ul>
-                <li><strong>Countdown Duration:</strong> By default, the app waits <strong>10 seconds</strong>. You can
-                    customize this in <strong>Settings</strong> (from <strong>0s</strong> for immediate sending up to
-                    <strong>30s</strong>).
-                </li>
-                <li><strong>Cancelling:</strong> You can tap <strong>CANCEL</strong> during the countdown to stop the
-                    alert.</li>
+                <li><strong>Lapsos del retraso de cuenta :</strong> Empiezan del valor default usualmente 10 <strong> segundos</strong> y personalizable total a como tú los adecuees a tú vida mímino valor es sin restraso .</li>
+                <li><strong>Evasión temporal:</strong> Sin la necesidad para de nada se de  CANCELAR a mitad interponte si en eso fallaste para que  se apague el envío automático totalmente al final de esta.</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>10. 🔔 Making Alert SMS Stand Out</h2>
-            <p>To ensure your emergency contacts don't miss your alert message among other notifications, we recommend
-                configuring their phones to treat messages from your <span class="notranslate"
-                    translate="no">TapAlert</span> number differently.</p>
+            <h2>10. 🔔 Priorizando llamadas SMS más alta visibilidad</h2>
+            <p>Grarantizamos sus notificaciones sin ningún peligro con la garantía de evitar perdida o mezclen de app máviles extras ajustando su teléfono mótil a favor a <span class="notranslate" translate="no">TapAlert</span></p>
 
-            <h3>Para Contactos con iPhone</h3>
+            <h3>Contactos usuarios en modelos y marca Apple</h3>
             <ol>
-                <li><strong>Open Contactos:</strong> Selecciona tu entrada de contacto.</li>
-                <li><strong>Asignar Excepción por Emergencia:</strong> Tap <strong>Editar</strong> > <strong>Tono de llamada</strong> (or
-                    Text Tone) and toggle <strong>Excepción por Emergencia</strong> ON. This allows sounds/vibrations even if
-                    their phone is on Silent or Do Not Disturb.</li>
-                <li><strong>Tono Personalizado:</strong> Choose a loud, distinct sound for your messages.</li>
+                <li><strong>Pantalla del libretos :</strong> Selecciona tu entrada de contacto..</li>
+                <li><strong>Asignar Excepción por Emergencia:</strong> Presionar sobre  <strong>Editar</strong> > <strong>Tono de llamada</strong> o sonidos textos y dejarlo <strong>ENCENDIDO Excepción por Emergencia</strong> . Que te evitarán bloqueos en Modo sin Interrupciones</li>
+                <li><strong>Tiempos: </strong> Puedes configurar para identificar  ruido extras del habitual</li>
             </ol>
 
-            <h3>For Android Recipients</h3>
+            <h3>Destinatarios modeloss de SO en marca Google</h3>
             <ol>
-                <li><strong>Abrir Mensajes:</strong> Selecciona la conversación contigo.</li>
-                <li><strong>Categorías de Notificación:</strong> Tap <strong>Detalles</strong> >
-                    <strong>Notificaciones</strong>.
-                </li>
-                <li><strong>Set as "Urgente":</strong> Cambia la prioridad a <strong>"Alta"</strong> or
-                    <strong>"Urgente"</strong>.
-                </li>
-                <li><strong>Sobrescribir No Molestar:</strong> Asegúrate de que <strong>"Ignorar No molestar"</strong> is enabled for this
-                    conversation.</li>
-                <li><strong>Sonido Personalizado:</strong> Elige un sonido de alerta de alta prioridad.</li>
+                <li><strong>Ir : </strong> App predeterminado  de Mensajes iOS.</li>
+                <li><strong>Visualiza y selecciona tu : </strong> Tu charlla actual  luego > <strong>Opciones sobre este canal.</strong>  </li>
+                <li><strong>Reconfigura a Máxima prioridad  </strong> Ajustar a "Alta" las demás alertas y sonidos</li>
+                <li><strong>El único a no dudar  </strong> Que <strong>"Ignorar No molestar" </strong> esté vigente activadamente por chat e imágenes</li>
+                <li><strong>Ignonar  :  Modo descansando </strong></li>
             </ol>
             <blockquote class="alert-note">
-                <strong>NOTE: Using <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong> If you send alerts
-                via <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, your contacts will receive the
-                message from your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> number or an Alphanumeric ID
-                (e.g., "<span class="notranslate" translate="no">TapAlert</span>"). Ellos <strong>Debes</strong> add
-                this number/ID to their contacts list for the settings above to work correctly. Otherwise, the message
-                will still be delivered but como un standard SMS sin any priority notifications.
+                <strong>NOTA: Soportes o usos a tecnologías ccomo la compañia líder en nube <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong> Asegurar al destinatario todos tú teléfono y nombées a registrarte debido que los SMS saldrá  sólo con un número desconocido. Deben ellos grabarlo manualmente a contact  para ser considerados de Más prioridad del Sistema general sino sóolo llegará sin atención preeferencial del día a díaa.
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>11. 🕰️ Alert History</h2>
-            <p>To keep track of your sent emergency alerts:</p>
+            <h2>11. 🕰️ Historial Completo sobre todas alertas emitidias </h2>
+            <p>Podrán controlar o registrar el archivo así:</p>
             <ol>
-                <li><strong>Tap the History Icon:</strong> The clock icon 🕰️ located in the top bar.</li>
-                <li><strong>View Recent Alerts:</strong> The app maintains a log of the last <strong>50 alerts</strong>
-                    sent.</li>
-                <li><strong>Check Status:</strong> Tap any entry to see exactly which recipients received the message
-                    successfully and which failed (with error details).</li>
-                <li><strong>Clear History:</strong> You can delete all logs by tapping the trash icon 🗑️ inside the
-                    history screen.</li>
+                <li><strong>Pulza y activa a icono final </strong> El famoso simbolo el ⏲️ reloj y más </li>
+                <li><strong>Registros anteriores 50 enviaos:</strong> Y ademáss están grabadas ahí .</li>
+                <li><strong>Detallles d estado exactos:</strong> Con esto observareis envíos q han llogar bien sin problemas ademáss detallae que sal&oacute;rón mál</li>
+                <li><strong>Lavaado todo un hstoril másss allall de limpte  </strong></li>
             </ol>
         </section>
 
         <section class="guide-section" id="troubleshooting">
-            <h2>12. ❓ Solución de problemas</h2>
+            <h2>12. ❓ Solución de problemas ¿Dudas¿¿</h2>
             <ul>
-                <li><strong>Message not sending (<span class="notranslate" translate="no">SMS Directo</span>):</strong>
-                    Check your mobile signal and carrier credit
-                    (Android only).</li>
-                <li><strong>Message not sending (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>):</strong>
-                    Verify your internet connection and double-check your
-                    credentials in the settings.</li>
-                <li><strong>Ubicación missing:</strong> Asegúrate de que GPS is enabled in your phone's system settings and the app
-                    has Ubicación permission.</li>
-                <li><strong>Contactos missing (iOS):</strong> Go to Settings > Privacidad > Contactos > <span
-                        class="notranslate" translate="no">TapAlert</span> and ensure
-                    <strong>"All Contactos"</strong> is checked.
-                </li>
-                <li><strong>Contactos missing (Android):</strong> Go to Settings > Apps > <span class="notranslate"
-                        translate="no">TapAlert</span> > Permissions and
-                    ensure <strong>"Contactos"</strong> is allowed.</li>
+                <li><strong>No llega mensajes ( Método<span class="notranslate" translate="no">SMS Directo</span> ): </strong> Tu tén y ten en cuentga aserctaar las señales celulaéreas. </li>
+                <li><strong>Mnsj no mandados o retenido de ( M&eth;todo <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> ): </strong> Chequea internetes de WIÍ-FIE y conexiónas de de a la internet local en red.</li>
+                <li><strong>Ubicación Fallosa GPS no fujnciona  </strong> Sabe habilitado y permiso todo días no temporalesl GPS .</li>
+                <li><strong>Listados Contactós mal configudos nulo iPhone :  </strong> Habilítado todoss lo qu te pide a Privacidad por  <span class="notranslate" translate="no">TapAlert</span></li>
+                <li><strong>Listaos â Contactos no visínles de SO para Androdi  </strong> Chequea app permosos totales sólo dá  Aceptar todos Contactoss <strong>todos accesos¿</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>13. ⏳ Check-in Timer</h2>
-            <p>The <strong>Check-in Timer</strong> is an "inactive" safety feature. It allows you to set a timer when
-                starting a potentially risky activity (e.g., walking home alone, going on a hike).</p>
+            <h2>13. ⏳ Cuantificador y  Conometro Checqueadsooorrs de Actividda</h2>
+            <p>La mejor tecnologíaa pasiva e innnnovada segura para avisoo y emergencias del conmetro que sirve sin tocra un click cuando caminabas</p>
             <ol>
-                <li><strong>Start the Timer:</strong> Selecciona a duration (from 5 minutes up to 24 hours) and an optional
-                    message.</li>
-                <li><strong>The Countdown:</strong> A persistent notification will show you the remaining time.</li>
-                <li><strong>The Check-in:</strong> You Debes return to the app and tap <strong>"I'm OK (Reset)"</strong>
-                    before the timer expires.</li>
-                <li><strong>Automatic Alert:</strong> If you <em>don't</em> reset the timer before it hits zero,
-                    <span class="notranslate" translate="no">TapAlert</span> will automatically send your alert message
-                    and location to all recipients.
-                </li>
+                <li><strong>Iniciar relogd Temporizaarodoor:</strong> Colocaa a dsu interrvalo o mensaje opcoiional .</li>
+                <li><strong>En cuenta más atr&aacute;ss: </strong> Alarman persistented</li>
+                <li><strong>Su chqueeoo:</strong> Entra de nuevo antes al expirarse de presionar boton "Estoy ok reincicar ".</li>
+                <li><strong>Automatizar lalert a túu favoorr : </strong> Llleer a  cero su tiemoo o de vida <span class="notranslate" translate="no">TapAlert</span> mandarâ su inforrmción automática.</li>
             </ol>
             <blockquote class="alert-tip">
                 <strong>TIP:</strong> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     {{ hreflang_tags }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TapAlert - User Guide</title>
+    <title>TapAlert - {{ ug_title }}</title>
     <style>
         * {
             margin: 0;
@@ -433,488 +433,349 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">{{ guide_back_guides }}</a>
 
-        <h1 class="guide-title">User Guide: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">This guide explains how to configure and use <strong><span class="notranslate"
-                    translate="no">TapAlert</span></strong> on your {{ android_table_th2 }} or
-            iOS device.</p>
+        <h1 class="guide-title">{{ ug_title }}: <span class="notranslate" translate="no">TapAlert</span></h1>
+        <p class="guide-intro">{{ ug_intro }}</p>
 
         <section class="guide-section">
-            <h2>1. 🛡️ Required Permissions</h2>
-            <p>Upon first launch, the app will request the following permissions:</p>
+            <h2>{{ ug_h2_1 }}</h2>
+            <p>{{ ug_p1 }}</p>
             <ul>
-                <li><strong>SMS ({{ android_table_th2 }} Only):</strong> Needed to send direct messages from your phone's SIM card.</li>
-                <li><strong>{{ ts_li1_5 }}:</strong> Needed to include your GPS coordinates in the alert message.</li>
-                <li><strong>Microphone:</strong> Needed if you use the voice recording feature to transcribe your alert
-                    message.</li>
-                <li><strong>{{ sms_so_li1_2 }}:</strong> Needed to easily select recipients from your phone's address book.</li>
+                <li>{{ ug_li1_1 }}</li>
+                <li>{{ ug_li1_2 }}</li>
+                <li>{{ ug_li1_3 }}</li>
+                <li>{{ ug_li1_4 }}</li>
             </ul>
             <blockquote class="alert-note">
-                <strong>NOTE:</strong> On iOS, <span class="notranslate" translate="no">direct SMS</span> sending is not
-                supported by the system for automated alerts.
-                You {{ ts_em_li5 }} use the <strong><span class="notranslate" translate="no">{{ term_twilio }}</span></strong> method.
+                {{ ug_note_1 }}
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>2. 📱 Interface Modes</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> offers two distinct interface modes to suit your
-                needs. You can switch between them in
-                <strong>Settings > Interface Mode</strong>.
-            </p>
+            <h2>{{ ug_h2_2 }}</h2>
+            <p>{{ ug_p2 }}</p>
 
-            <h3><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
-                    translate="no">SOS</span> / OK)</h3>
-            <p>A streamlined interface designed for maximum simplicity and accessibility, ideal for elderly users or
-                high-stress situations.</p>
+            <h3>{{ ug_h3_1 }}</h3>
+            <p>{{ ug_p3 }}</p>
             <ul>
-                <li><strong>Large <span class="notranslate" translate="no">SOS</span> Button:</strong> Instantly starts
-                    the countdown for an "<span class="notranslate" translate="no">SOS</span>, I need help" alert.
-                </li>
-                <li><strong>I'm OK Button:</strong> Quickly sends an "I'm OK" status update to reassure contacts.</li>
-                <li><strong>Voice Buttons:</strong> Each section h{{ qa_step3_p5 }} dedicated voice{{ phil_sen_li2 }} to record and send an
-                    audio transcript along with the <span class="notranslate" translate="no">SOS</span> or OK status.
-                </li>
-                <li><strong>Emergency Call Button:</strong> A dedicated{{ phil_sen_li2 }} to immediately call local emergency
-                    services (e.g., 112, 911) based on your location.</li>
+                <li>{{ ug_li2_1 }}</li>
+                <li>{{ ug_li2_2 }}</li>
+                <li>{{ ug_li2_3 }}</li>
+                <li>{{ ug_li2_4 }}</li>
             </ul>
 
-            <h3>Report Mode (Tabs)</h3>
-            <p>The default mode, offering flexibility with multiple message types.</p>
+            <h3>{{ ug_h3_2 }}</h3>
+            <p>{{ ug_p4 }}</p>
             <ul>
-                <li><strong>4 Message Tabs:</strong> Pre-configure different alerts (e.g., "Medical", "Car Trouble",
-                    "Generic").</li>
-                <li><strong>Customizable Text:</strong> Tap inside the message box to edit content on the fly.</li>
-                <li><strong>Voice Transcription:</strong> Use the microphone to dictate a custom message.</li>
+                <li>{{ ug_li3_1 }}</li>
+                <li>{{ ug_li3_2 }}</li>
+                <li>{{ ug_li3_3 }}</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>3. 📝 Setup Predefined Messages (Report Mode)</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> comes with 4 predefined message slots (tabs)
-                allowing you to quickly switch between different
-                alert scenarios.</p>
+            <h2>{{ ug_h2_3 }}</h2>
+            <p>{{ ug_p5 }}</p>
 
-            <h3>{{ sms_ios_li1 }}ing Messages</h3>
+            <h3>{{ ug_h3_3 }}</h3>
             <ol>
-                <li><strong>{{ ts_loc_li2 }} a Tab:</strong> Tap on one of the numbered tabs (1-3) at the top.</li>
-                <li><strong>{{ sms_ios_li1 }} Text:</strong> Tap inside the message box to type your custom alert message (e.g.,
-                    "Medical Emergency", "Car Trouble").</li>
-                <li><strong>Auto-Save:</strong> Your changes are saved automatically as you type.</li>
-                <li><strong>Dictation:</strong> You can also use the dictation icon to dictate your message.</li>
+                <li>{{ ug_li4_1 }}</li>
+                <li>{{ ug_li4_2 }}</li>
+                <li>{{ ug_li4_3 }}</li>
+                <li>{{ ug_li4_4 }}</li>
             </ol>
 
-            <h3>🎙️ Voice Quick Alert Message</h3>
-            <p>You can use your voice to generate the alert text in real-time. This is useful for describing a specific
-                situation quickly. The message will be saved on the 4th tab.</p>
+            <h3>{{ ug_h3_4 }}</h3>
+            <p>{{ ug_p6 }}</p>
             <ol>
-                <li><strong>Tap the Microphone red{{ phil_sen_li2 }}:</strong> It will start <strong>pulsing</strong> when active.
-                </li>
-                <li><strong>Speak your message:</strong> The status bar at the bottom will turn <strong>light
-                        orange</strong> and show a sound wave symbol while listening.</li>
-                <li><strong>Automatic Update and Instant Send:</strong> After speaking or tapping the microphone{{ phil_sen_li2 }}
-                    again, the message text will be updated and the <strong>SEND ALERT</strong> will be triggered
-                    immediately. You can also press the <strong>SEND ALERT</strong>{{ phil_sen_li2 }} directly while recording; the
-                    app will automatically stop the recording and save and send the transcribed message immediately.
-                </li>
+                <li>{{ ug_li5_1 }}</li>
+                <li>{{ ug_li5_2 }}</li>
+                <li>{{ ug_li5_3 }}</li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>4. 👥 Setup/Managing Recipients</h2>
-            <p>This is done in the dedicated <strong>Recipients Screen</strong>, accessible from the top bar of the Home
-                Screen:</p>
+            <h2>{{ ug_h2_4 }}</h2>
+            <p>{{ ug_p7 }}</p>
             <ol>
-                <li><strong>Open Recipients:</strong> Tap the <strong>People/Group Icon</strong> (👥) in the top-right
-                    toolbar.</li>
-                <li><strong>Add Number:</strong>
+                <li>{{ ug_li6_1 }}</li>
+                <li>{{ ug_li6_2_1 }}
                     <ul>
-                        <li>Tap the <strong>"Add"</strong>{{ phil_sen_li2 }} to manually enter a phone number.</li>
-                        <li>Tap the <strong>{{ nav_contact }} Icon</strong> to pick a number directly from your phone's address
-                            book.</li>
+                        <li>{{ ug_li6_2_2 }}</li>
+                        <li>{{ ug_li6_2_3 }}</li>
                     </ul>
                 </li>
-                <li><strong>Format:</strong> Use the <strong>E.164 international format</strong> (e.g.,
-                    <code>+34600000000</code>) for best results.
-                </li>
-                <li><strong>Remove:</strong> Tap the delete icon next to any number in the list to remove it. You can
-                    also "Delete All" using the trash bin icon at the top.</li>
+                <li>{{ ug_li6_3 }}</li>
+                <li>{{ ug_li6_4 }}</li>
             </ol>
             <blockquote class="alert-tip">
-                <strong>TIP: Can't see all your contacts?</strong>
+                {{ ug_tip_1_1 }}
                 <ul>
-                    <li><strong>iOS:</strong> If you chose "{{ ts_loc_li2 }} {{ sms_so_li1_2 }}..." (Limited Access), the app can only see
-                        the few you picked. To fix this, go to <strong>iPhone Settings > {{ table_r2c1 }} & Security > {{ sms_so_li1_2 }} >
-                            <span class="notranslate" translate="no">TapAlert</span></strong> and select <strong>"All
-                            {{ sms_so_li1_2 }}"</strong>.</li>
-                    <li><strong>{{ android_table_th2 }}:</strong> Permissions are "all-or-nothing". If you denied access, the picker
-                        will be empty. {{ sms_and_li6 }} the app has "{{ sms_so_li1_2 }}" permission in your phone's App Settings.</li>
+                    <li>{{ ug_tip_1_2 }}</li>
+                    <li>{{ ug_tip_1_3 }}</li>
                 </ul>
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>5. ⚙️ Configuration Options</h2>
-            <p>Access the settings menu via the gear icon ⚙️ to further customize the alert message text and the SMS
-                delivery method.</p>
+            <h2>{{ ug_h2_5 }}</h2>
+            <p>{{ ug_p8 }}</p>
 
-            <h3>SMS Sending Methods</h3>
-            <p>The app supports two ways to send messages:</p>
+            <h3>{{ ug_h3_5 }}</h3>
+            <p>{{ ug_p9 }}</p>
             <ul>
-                <li><strong><span class="notranslate" translate="no">{{ term_direct_sms }}</span> ({{ android_table_th2 }}):</strong> Uses your
-                    phone's SIM card. Cost depends on your mobile
-                    carrier plan.</li>
-                <li><strong><span class="notranslate" translate="no">{{ term_twilio }}</span> SMS ({{ android_table_th2 }} & iOS):</strong> Uses
-                    the <span class="notranslate" translate="no">{{ term_twilio }}</span> API over the internet (Wi-Fi/Data).
-                    {{ feature_reliable }} and required for iOS.</li>
+                <li>{{ ug_li7_1 }}</li>
+                <li>{{ ug_li7_2 }}</li>
             </ul>
 
-            <h3><span class="notranslate" translate="no">{{ phil_red_title }}</span> ({{ android_table_th2 }} Only)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> {{ price_features }} a <strong><span class="notranslate"
-                        translate="no">{{ phil_red_title }}</span></strong> system that automatically switches methods if
-                the
-                primary one fails:</p>
+            <h3>{{ ug_h3_6 }}</h3>
+            <p>{{ ug_p10 }}</p>
             <ul>
-                <li><strong>No Signal?</strong> If you try to send a <span class="notranslate" translate="no">Direct
-                        SMS</span> but have no cellular coverage (e.g.,
-                    inside a building), the app will automatically attempt to send via <span class="notranslate"
-                        translate="no">{{ term_twilio }}</span> (Wi-Fi).</li>
-                <li><strong>No Data?</strong> If you use <span class="notranslate" translate="no">{{ term_twilio }}</span> as
-                    primary but are hiking {{ ts_loc_li7 }} 4G/5G, the app will
-                    automatically <span class="notranslate" translate="no">fallback</span> to sending a <span
-                        class="notranslate" translate="no">{{ term_direct_sms }}</span>.</li>
+                <li>{{ ug_li8_1 }}</li>
+                <li>{{ ug_li8_2 }}</li>
             </ul>
-            <p><strong>To enable:</strong> Go to Settings and turn on <strong>"<span class="notranslate"
-                        translate="no">{{ phil_red_title }}</span>"</strong>.</p>
+            <p>{{ ug_p11 }}</p>
 
-            <h3>Email Redundancy (Wi-Fi <span class="notranslate" translate="no">{{ plat_int_2 }}</span>)</h3>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate"
-                    translate="no">TapAlert</span> can send your alert via email.</p>
+            <h3>{{ ug_h3_7 }}</h3>
+            <p>{{ ug_p12 }}</p>
             <ul>
-                <li><strong>Setup:</strong> Go to <strong>Settings > Email Redundancy</strong>. For detailed
-                    instructions, see <strong>Chapter 6: Configuring Email Redundancy</strong>.</li>
-                <li><strong>Automatic <span class="notranslate" translate="no">{{ plat_int_2 }}</span>:</strong> When enabled,
-                    the app will attempt to send an email alert if
-                    both <span class="notranslate" translate="no">{{ term_direct_sms }}</span> and <span class="notranslate"
-                        translate="no">{{ term_twilio }}</span> (cellular) fail.</li>
+                <li>{{ ug_li9_1 }}</li>
+                <li>{{ ug_li9_2 }}</li>
             </ul>
 
-            <h3>Trigger Method (Tap vs. Hold)</h3>
-            <p>Prevent accidental triggers by changing how the alert is activated in <strong>Settings > Trigger
-                    Method</strong>:</p>
+            <h3>{{ ug_h3_8 }}</h3>
+            <p>{{ ug_p13 }}</p>
             <ul>
-                <li><strong>Tap to Send (Default):</strong> A single tap on the alert{{ phil_sen_li2 }} triggers the countdown.
-                </li>
-                <li><strong>Press & Hold (5s):</strong> You {{ ts_em_li5 }} hold the alert{{ phil_sen_li2 }} for 5 continuous seconds to
-                    trigger the countdown. This is recommended to avoid false alarms.</li>
+                <li>{{ ug_li10_1 }}</li>
+                <li>{{ ug_li10_2 }}</li>
             </ul>
 
             <blockquote class="alert-important">
-                <strong>IMPORTANT: iOS Users</strong><br>
-                You {{ ts_em_li5 }} configure a <span class="notranslate" translate="no">{{ term_twilio }}</span> {{ qa_step3_p4 }}.<br>
-                👉 <strong>For detailed <span class="notranslate" translate="no">{{ term_twilio }}</span> setup instructions,
-                    please see the separate "<span class="notranslate" translate="no">{{ term_twilio }}</span> Guide" in the Help
-                    menu.</strong>
+                {{ ug_note_2 }}
             </blockquote>
 
-            <h3>Auto-Start on Launch</h3>
-            <p>Automatically start the alert countdown immediately when the app opens.</p>
+            <h3>{{ ug_h3_9 }}</h3>
+            <p>{{ ug_p14 }}</p>
             <ul>
-                <li><strong>Useful for:</strong> Creating a physical panic{{ phil_sen_li2 }} (using hardware key remapping) or a
-                    quick-launch shortcut.</li>
-                <li><strong>Warning:</strong> When enabled, opening the app will always trigger the countdown. You can
-                    cancel it during the delay period.</li>
+                <li>{{ ug_li11_1 }}</li>
+                <li>{{ ug_li11_2 }}</li>
             </ul>
 
-            <h3>Message {{ ts_li1_5 }}</h3>
+            <h3>{{ ug_h3_10 }}</h3>
             <ul>
-                <li><strong>Include {{ ts_li1_5 }}:</strong> Append GPS coordinates to the message.</li>
-                <li><strong>Include Address:</strong> Attempt to convert coordinates into a human-readable address.</li>
+                <li>{{ ug_li12_1 }}</li>
+                <li>{{ ug_li12_2 }}</li>
             </ul>
 
-            <h3>Additional Settings</h3>
+            <h3>{{ ug_h3_11 }}</h3>
             <ul>
-                <li><strong>Sender Identity:</strong> (<span class="notranslate" translate="no">{{ term_twilio }}</span> Only)
-                    Choose the name or number that appears as the sender
-                    (e.g., "Alert" or your specific <span class="notranslate" translate="no">{{ term_twilio }}</span> number).</li>
-                <li><strong>Appearance:</strong> Toggle between Light Mode, Dark Mode, or follow System Settings.</li>
-                <li><strong>App {{ guide_lang }}:</strong> Manually override the app's language (default: System {{ guide_lang }}).</li>
-                <li><strong>Region and formatting:</strong> Set your region to ensure phone numbers are formatted
-                    correctly (e.g., auto-adding country codes).</li>
-                <li><strong>Notification sound:</strong> Choose the alert sound that plays after a successful message
-                    delivery.</li>
+                <li>{{ ug_li13_1 }}</li>
+                <li>{{ ug_li13_2 }}</li>
+                <li>{{ ug_li13_3 }}</li>
+                <li>{{ ug_li13_4 }}</li>
+                <li>{{ ug_li13_5 }}</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>6. 📧 Configuring Email Redundancy</h2>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate"
-                    translate="no">TapAlert</span> can send your alert via email.</p>
+            <h2>{{ ug_h2_6 }}</h2>
+            <p>{{ ug_p12 }}</p>
 
-            <h3>Setup Instructions</h3>
+            <h3>{{ ug_h3_12 }}</h3>
             <ol>
-                <li><strong>Open Settings:</strong> Tap the gear icon ⚙️ and select <strong>Email Redundancy</strong>.
-                </li>
-                <li><strong>Enable the feature:</strong> Toggle <strong>Enable Email Redundancy</strong> to ON.</li>
-                <li><strong>SMTP Configuration:</strong> Enter your email provider's SMTP details:
+                <li>{{ ug_li14_1 }}</li>
+                <li>{{ ug_li14_2 }}</li>
+                <li>{{ ug_li14_3_1 }}
                     <ul>
-                        <li><strong>SMTP Host:</strong> (e.g., <code>smtp.gmail.com</code> for Gmail,
-                            <code>smtp-mail.outlook.com</code> for Outlook).
-                        </li>
-                        <li><strong>SMTP Port:</strong> (e.g., <code>587</code> or <code>465</code>).</li>
-                        <li><strong>Username / Email:</strong> Your full email address.</li>
-                        <li><strong>Password / App Password:</strong> Your email password or a dedicated App Password.
-                        </li>
+                        <li>{{ ug_li14_3_2 }}</li>
+                        <li>{{ ug_li14_3_3 }}</li>
+                        <li>{{ ug_li14_3_4 }}</li>
+                        <li>{{ ug_li14_3_5 }}</li>
                     </ul>
                 </li>
             </ol>
 
-            <h3>⚡ Quick Setup (Common Providers)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> includes preset{{ phil_sen_li2 }}s for popular email
-                providers. Simply tap a preset{{ phil_sen_li2 }} to auto-fill the
-                SMTP host and port settings:</p>
+            <h3>{{ ug_h3_13 }}</h3>
+            <p>{{ ug_p16 }}</p>
             <ul>
                 <li><strong>Gmail</strong> (smtp.gmail.com:587)</li>
                 <li><strong>Outlook</strong> (smtp-mail.outlook.com:587)</li>
                 <li><strong>Yahoo</strong> (smtp.mail.yahoo.com:587)</li>
                 <li><strong>iCloud</strong> (smtp.mail.me.com:587)</li>
             </ul>
-            <p>After tapping a preset, you only need to enter your email address and app password (see below).</p>
+            <p>{{ ug_p17 }}</p>
 
             <blockquote class="alert-important">
-                <strong>IMPORTANT: App Passwords Are Provider-Specific</strong><br>
-                Each email provider has its own app password system. You cannot use a Gmail app password with Outlook,
-                or vice versa. You {{ ts_em_li5 }} generate an app password specific to the provider you're using.
+                {{ ug_note_3 }}
             </blockquote>
 
-            <h3>🔒 Using App Passwords (Recommended)</h3>
-            <p>For security and reliability, we strongly recommend using an <strong>App Password</strong> instead of
-                your primary password.</p>
+            <h3>{{ ug_h3_14 }}</h3>
+            <p>{{ ug_p18 }}</p>
             <ul>
-                <li><strong>Why?</strong> It bypasses 2-Factor Authentication and keeps your main {{ qa_step3_p4 }} secure.</li>
+                <li>{{ ug_li15_1 }}</li>
             </ul>
 
-            <h4>Gmail</h4>
+            <h4>{{ ug_h4_1 }}</h4>
             <ol>
-                <li>Go to your <strong>Google Account > Security</strong> or <a
-                        href="https://my{{ qa_step3_p4 }}.google.com/apppasswords"
-                        target="_blank">https://my{{ qa_step3_p4 }}.google.com/apppasswords</a></li>
-                <li>Search for <strong>"App passwords"</strong> (requires 2-step verification enabled).</li>
-                <li>Generate a new password for "Other" and call it "<span class="notranslate"
-                        translate="no">TapAlert</span>".</li>
-                <li>Use the 16-character code provided in <span class="notranslate" translate="no">TapAlert</span>
-                    (blanks included).</li>
+                <li>{{ ug_li16_1 }}</li>
+                <li>{{ ug_li16_2 }}</li>
+                <li>{{ ug_li16_3 }}</li>
+                <li>{{ ug_li16_4 }}</li>
             </ol>
 
-            <h4>Outlook / Hotmail / Live</h4>
+            <h4>{{ ug_h4_2 }}</h4>
             <ol>
-                <li>Go to <strong>Microsoft Account > Security > Advanced security options</strong> or <a
-                        href="https://{{ qa_step3_p4 }}.live.com/names/manage"
-                        target="_blank">https://{{ qa_step3_p4 }}.live.com/names/manage</a>.</li>
-                <li>Under <strong>"App passwords"</strong>, create a new app password.</li>
-                <li>{{ ts_loc_li2 }} "Other" and name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
+                <li>{{ ug_li17_1 }}</li>
+                <li>{{ ug_li17_2 }}</li>
+                <li>{{ ug_li17_3 }}</li>
+                <li>{{ ug_li17_4 }}</li>
             </ol>
 
-            <h4>Yahoo</h4>
+            <h4>{{ ug_h4_3 }}</h4>
             <ol>
-                <li>Go to <strong>Yahoo Account Security</strong> or <a href="https://login.yahoo.com/{{ qa_step3_p4 }}/security"
-                        target="_blank">https://login.yahoo.com/{{ qa_step3_p4 }}/security</a>.</li>
-                <li>{{ ts_loc_li2 }} <strong>"Generate app password"</strong>.</li>
-                <li>Choose "Other App" and name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
+                <li>{{ ug_li18_1 }}</li>
+                <li>{{ ug_li18_2 }}</li>
+                <li>{{ ug_li18_3 }}</li>
+                <li>{{ ug_li17_4 }}</li>
             </ol>
 
-            <h4>iCloud</h4>
+            <h4>{{ ug_h4_4 }}</h4>
             <ol>
-                <li>Go to <strong>appleid.apple.com > Sign-In and Security > App-Specific Passwords</strong> or <a
-                        href="https://appleid.apple.com/{{ qa_step3_p4 }}/manage"
-                        target="_blank">https://appleid.apple.com/{{ qa_step3_p4 }}/manage</a>.</li>
-                <li>Click the <strong>+</strong>{{ phil_sen_li2 }} to generate a new password.</li>
-                <li>Name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
+                <li>{{ ug_li19_1 }}</li>
+                <li>{{ ug_li19_2 }}</li>
+                <li>{{ ug_li19_3 }}</li>
+                <li>{{ ug_li17_4 }}</li>
             </ol>
 
-            <h3>Recipients</h3>
-            <p>Emails will be sent to all contacts in your <strong>Recipients</strong> list who have an email address
-                saved. To add an email to a contact:</p>
+            <h3>{{ ug_h3_15 }}</h3>
+            <p>{{ ug_p19 }}</p>
             <ol>
-                <li>Go to the <strong>Recipients</strong> screen.</li>
-                <li>{{ sms_ios_li1 }} a contact and ensure the email field is filled.</li>
+                <li>{{ ug_li20_1 }}</li>
+                <li>{{ ug_li20_2 }}</li>
             </ol>
 
-            <h3>🧪 Testing</h3>
-            <p>Before relying on it, tap <strong>Test Connection</strong>. Enter an email address to receive a test
-                message. If successful, your setup is correct.</p>
+            <h3>{{ ug_h3_16 }}</h3>
+            <p>{{ ug_p20 }}</p>
         </section>
 
         <section class="guide-section">
-            <h2>7. 📱 {{ feat_widget_title }} ({{ android_table_th2 }} Only)</h2>
-            <p>For even faster emergency alerts, you can add a widget to your {{ android_table_th2 }} home screen:</p>
+            <h2>{{ ug_h2_7 }}</h2>
+            <p>{{ ug_p21 }}</p>
 
-            <h3>Adding the Widget</h3>
+            <h3>{{ ug_h3_17 }}</h3>
             <ol>
-                <li><strong>Open Settings:</strong> Tap the gear icon ⚙️ in the app.</li>
-                <li><strong>Find Widget Section:</strong> Scroll down to the "Widget" section.</li>
-                <li><strong>Tap "Add":</strong> The system will prompt you to place the widget on your home screen.</li>
-                <li><strong>Position the Widget:</strong> Drag it to your preferred location and release.</li>
+                <li>{{ ug_li21_1 }}</li>
+                <li>{{ ug_li21_2 }}</li>
+                <li>{{ ug_li21_3 }}</li>
+                <li>{{ ug_li21_4 }}</li>
             </ol>
             <blockquote class="alert-note">
-                <strong>NOTE:</strong> If you already have a widget on your home screen, you'll need to remove the old
-                one before adding a new one.
+                {{ ug_note_4 }}
             </blockquote>
 
-            <h3>Using the Widget</h3>
+            <h3>{{ ug_h3_18 }}</h3>
             <ul>
-                <li><strong>Tap the Widget:</strong> Opens the app and starts the <strong>Countdown</strong>
-                    immediately.</li>
-                <li><strong>App Experience:</strong> You will see the countdown dialog, ensuring the alert is
-                    intentional. You can cancel it if pressed by mistake.</li>
-                <li><strong>Sound:</strong> The app plays an audible alert tone while counting down.</li>
+                <li>{{ ug_li22_1 }}</li>
+                <li>{{ ug_li22_2 }}</li>
+                <li>{{ ug_li22_3 }}</li>
             </ul>
             <blockquote class="alert-tip">
-                <strong>TIP:</strong> The widget is perfect for true emergencies when you need to send an alert with a
-                single tap, {{ ts_loc_li7 }} finding the app in your drawer.
+                {{ ug_tip_2 }}
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>8. 🚀 Sending an Alert</h2>
+            <h2>{{ ug_h2_8 }}</h2>
             <ol>
-                <li><strong>{{ sms_so_li1_1 }} App.</strong></li>
-                <li><strong>Trigger the Alert:</strong>
+                <li>{{ ug_li23_1 }}</li>
+                <li>{{ ug_li23_2_1 }}
                     <ul>
-                        <li><strong>In Report Mode:</strong> Tap the large red <strong>SEND ALERT</strong>{{ phil_sen_li2 }}. The
-                            message selected in the tabs (1-4) will be sent.</li>
-                        <li><strong>In <span class="notranslate" translate="no">Panic Mode</span>:</strong>
+                        <li>{{ ug_li23_2_2 }}</li>
+                        <li>{{ ug_li23_2_3 }}
                             <ul>
-                                <li>Tap the big red <strong><span class="notranslate" translate="no">SOS</span></strong>
-                                   {{ phil_sen_li2 }} to send a "Help needed" alert.</li>
-                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of <span class="notranslate"
-                                        translate="no">SOS</span>) to record and send a
-                                    specific voice message with your <span class="notranslate" translate="no">SOS</span>
-                                    alert.</li>
-                                <li>Tap the green <strong>I'm OK</strong>{{ phil_sen_li2 }} to send a reassuring "I'm OK" status.
-                                </li>
-                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of I'm OK) to record and send
-                                    a voice message with your OK status.</li>
-                                <li>Tap the <strong>Emergency Call</strong>{{ phil_sen_li2 }} to dial local emergency services
-                                    immediately.</li>
+                                <li>{{ ug_li23_2_4 }}</li>
+                                <li>{{ ug_li23_2_5 }}</li>
+                                <li>{{ ug_li23_2_6 }}</li>
+                                <li>{{ ug_li23_2_7 }}</li>
+                                <li>{{ ug_li23_2_8 }}</li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><strong>The app will:</strong>
+                <li>{{ ug_li23_3_1 }}
                     <ul>
-                        <li>Fetch your current location (if configured).</li>
-                        <li>Show a <strong>Countdown Dialog</strong> (see "Countdown Dialog" below).</li>
-                        <li>Send the alert message to all recipients.</li>
+                        <li>{{ ug_li23_3_2 }}</li>
+                        <li>{{ ug_li23_3_3 }}</li>
+                        <li>{{ ug_li23_3_4 }}</li>
                     </ul>
                 </li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>9. ⏱️ Countdown Dialog</h2>
-            <p>To prevent accidental alerts, <span class="notranslate" translate="no">TapAlert</span> shows a countdown
-                before sending.</p>
+            <h2>{{ ug_h2_9 }}</h2>
+            <p>{{ ug_p22 }}</p>
             <ul>
-                <li><strong>Countdown Duration:</strong> By default, the app waits <strong>10 seconds</strong>. You can
-                    customize this in <strong>Settings</strong> (from <strong>0s</strong> for immediate sending up to
-                    <strong>30s</strong>).
-                </li>
-                <li><strong>Cancelling:</strong> You can tap <strong>CANCEL</strong> during the countdown to stop the
-                    alert.</li>
+                <li>{{ ug_li24_1 }}</li>
+                <li>{{ ug_li24_2 }}</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>10. 🔔 Making Alert SMS Stand Out</h2>
-            <p>To ensure your emergency contacts don't miss your alert message among other notifications, we recommend
-                configuring their phones to treat messages from your <span class="notranslate"
-                    translate="no">TapAlert</span> number differently.</p>
+            <h2>{{ ug_h2_10 }}</h2>
+            <p>{{ ug_p23 }}</p>
 
-            <h3>{{ sms_so_h2_1b }}</h3>
+            <h3>{{ ug_h3_19 }}</h3>
             <ol>
-                <li><strong>Open {{ sms_so_li1_2 }}:</strong> {{ sms_so_step1 }}</li>
-                <li><strong>{{ sms_so_step2 }}</strong> Tap <strong>{{ sms_ios_li1 }}</strong> > <strong>{{ sms_ios_li2 }}</strong> (or
-                    Text Tone) and toggle <strong>{{ sms_so_bypass }}</strong> ON. This allows sounds/vibrations even if
-                    their phone is on Silent or Do Not Disturb.</li>
-                <li><strong>{{ sms_so_tone }}</strong> Choose a loud, distinct sound for your messages.</li>
+                <li>{{ ug_li25_1 }}</li>
+                <li>{{ ug_li25_2 }}</li>
+                <li>{{ ug_li25_3 }}</li>
             </ol>
 
-            <h3>For {{ android_table_th2 }} Recipients</h3>
+            <h3>{{ ug_h3_20 }}</h3>
             <ol>
-                <li><strong>{{ sms_so_and_1 }}</strong> {{ sms_so_and_2 }}</li>
-                <li><strong>{{ sms_so_and_3 }}</strong> Tap <strong>{{ sms_and_li1 }}</strong> >
-                    <strong>{{ sms_and_li2 }}</strong>.
-                </li>
-                <li><strong>Set as {{ sms_and_li5 }}:</strong> {{ sms_and_li3 }} <strong>{{ sms_and_li4 }}</strong> or
-                    <strong>{{ sms_and_li5 }}</strong>.
-                </li>
-                <li><strong>{{ sms_so_and_4 }}</strong> {{ sms_and_li6 }} <strong>{{ sms_and_li7 }}</strong> is enabled for this
-                    conversation.</li>
-                <li><strong>{{ sms_so_and_5 }}</strong> {{ sms_so_and_6 }}</li>
+                <li>{{ ug_li26_1 }}</li>
+                <li>{{ ug_li26_2 }}</li>
+                <li>{{ ug_li26_3 }}</li>
+                <li>{{ ug_li26_4 }}</li>
+                <li>{{ ug_li26_5 }}</li>
             </ol>
             <blockquote class="alert-note">
-                <strong>NOTE: Using <span class="notranslate" translate="no">{{ term_twilio }}</span>?</strong> If you send alerts
-                via <span class="notranslate" translate="no">{{ term_twilio }}</span>, your contacts will receive the
-                message from your <span class="notranslate" translate="no">{{ term_twilio }}</span> number or an Alphanumeric ID
-                (e.g., "<span class="notranslate" translate="no">TapAlert</span>"). {{ sms_twilio_p3 }} <strong>{{ ts_em_li5 }}</strong> add
-                this number/ID to their contacts list for the settings above to work correctly. Otherwise, the message
-                will still be delivered but{{ price_disclaimer3 }}standard SMS {{ ts_loc_li7 }} any priority notifications.
+                {{ ug_note_5 }}
             </blockquote>
         </section>
 
         <section class="guide-section">
-            <h2>11. 🕰️ Alert History</h2>
-            <p>To keep track of your sent emergency alerts:</p>
+            <h2>{{ ug_h2_11 }}</h2>
+            <p>{{ ug_p24 }}</p>
             <ol>
-                <li><strong>Tap the History Icon:</strong> The clock icon 🕰️ located in the top bar.</li>
-                <li><strong>View Recent Alerts:</strong> The app maintains a log of the last <strong>50 alerts</strong>
-                    sent.</li>
-                <li><strong>Check Status:</strong> Tap any entry to see exactly which recipients received the message
-                    successfully and which failed (with error details).</li>
-                <li><strong>Clear History:</strong> You can delete all logs by tapping the trash icon 🗑️ inside the
-                    history screen.</li>
+                <li>{{ ug_li27_1 }}</li>
+                <li>{{ ug_li27_2 }}</li>
+                <li>{{ ug_li27_3 }}</li>
+                <li>{{ ug_li27_4 }}</li>
             </ol>
         </section>
 
         <section class="guide-section" id="troubleshooting">
-            <h2>12. ❓ {{ nav_troubleshooting }}</h2>
+            <h2>{{ ug_h2_12 }}</h2>
             <ul>
-                <li><strong>Message not sending (<span class="notranslate" translate="no">{{ term_direct_sms }}</span>):</strong>
-                    Check your mobile signal and carrier credit
-                    ({{ android_table_th2 }} only).</li>
-                <li><strong>Message not sending (<span class="notranslate" translate="no">{{ term_twilio }}</span>):</strong>
-                    Verify your internet connection and double-check your
-                    credentials in the settings.</li>
-                <li><strong>{{ ts_li1_5 }} missing:</strong> {{ sms_and_li6 }} GPS is enabled in your phone's system settings and the app
-                    has {{ ts_li1_5 }} permission.</li>
-                <li><strong>{{ sms_so_li1_2 }} missing (iOS):</strong> Go to Settings > {{ table_r2c1 }} > {{ sms_so_li1_2 }} > <span
-                        class="notranslate" translate="no">TapAlert</span> and ensure
-                    <strong>"All {{ sms_so_li1_2 }}"</strong> is checked.
-                </li>
-                <li><strong>{{ sms_so_li1_2 }} missing ({{ android_table_th2 }}):</strong> Go to Settings > Apps > <span class="notranslate"
-                        translate="no">TapAlert</span> > Permissions and
-                    ensure <strong>"{{ sms_so_li1_2 }}"</strong> is allowed.</li>
+                <li>{{ ug_li28_1 }}</li>
+                <li>{{ ug_li28_2 }}</li>
+                <li>{{ ug_li28_3 }}</li>
+                <li>{{ ug_li28_4 }}</li>
+                <li>{{ ug_li28_5 }}</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>13. ⏳ Check-in Timer</h2>
-            <p>The <strong>Check-in Timer</strong> is an "inactive" safety feature. It allows you to set a timer when
-                starting a potentially risky activity (e.g., walking home alone, going on a hike).</p>
+            <h2>{{ ug_h2_13 }}</h2>
+            <p>{{ ug_p25 }}</p>
             <ol>
-                <li><strong>Start the Timer:</strong> {{ ts_loc_li2 }} a duration (from 5 minutes up to 24 hours) and an optional
-                    message.</li>
-                <li><strong>The Countdown:</strong> A persistent notification will show you the remaining time.</li>
-                <li><strong>The Check-in:</strong> You {{ ts_em_li5 }} return to the app and tap <strong>"I'm OK (Reset)"</strong>
-                    before the timer expires.</li>
-                <li><strong>Automatic Alert:</strong> If you <em>don't</em> reset the timer before it hits zero,
-                    <span class="notranslate" translate="no">TapAlert</span> will automatically send your alert message
-                    and location to all recipients.
-                </li>
+                <li>{{ ug_li29_1 }}</li>
+                <li>{{ ug_li29_2 }}</li>
+                <li>{{ ug_li29_3 }}</li>
+                <li>{{ ug_li29_4 }}</li>
             </ol>
             <blockquote class="alert-tip">
                 <strong>TIP:</strong> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if

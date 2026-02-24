@@ -7,7 +7,7 @@
     <link rel="alternate" hreflang="es" href="https://tapalert.app/es/email_redundancy_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/email_redundancy_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Redundancy Guide - TapAlert</title>
+    <title>Guía de Redundancia de Correo - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -400,137 +400,94 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Volver a las Guías</a>
 
-        <h1 class="guide-title">Email Redundancy Guide</h1>
+        <h1 class="guide-title">Configurando la Redundancia de Correo</h1>
 
         <section class="guide-section">
-            <h2>💡 What is the Email Redundancy Característica?</h2>
-            <p>Redundancia de correo electrónico in <span class="notranslate" translate="no">TapAlert</span> allows the app to send
-                emergency alerts and reporting messages to your designated contacts via email, in addition to or instead
-                of SMS.</p>
+            <h2>💡 ¿Qué es la Característica de Respaldo por Correo?</h2>
+            <p>Redundancia de correo electrónico en <span class="notranslate" translate="no">TapAlert</span> permite a la aplicación enviar alertas de emergencia y mensajes informativos a los contactos designados a través de correo electrónico, además o en lugar de un SMS.</p>
 
-            <h2>🎯 What is its Purpose?</h2>
-            <p>The primary purpose of email redundancy is to ensure your message gets delivered even if primary SMS
-                channels fail or are unavailable.</p>
+            <h2>🎯 ¿Cuál es su propósito?</h2>
+            <p>El propósito principal del respaldo por correo electrónico es asegurar que tu mensaje se envíe incluso si los canales de SMS primarios fallan o no están disponibles.</p>
             <ul>
-                <li>✅ <strong>Secondary Delivery Path:</strong> If you are connected to Wi-Fi but have no cellular
-                    service (and Wi-Fi Calling is disabled or unsupported), email acts como un perfect <span
-                        class="notranslate" translate="no">fallback</span>.</li>
-                <li>✅ <strong>International Travel:</strong> When traveling abroad where SMS might be extremely
-                    expensive or unreliable, you can rely purely on Wi-Fi and send alerts via email for free.</li>
-                <li>✅ <strong>Additional Peace of Mind:</strong> Sending alerts via both SMS and Email simultaneously
-                    ensures that if an emergency contact misses a text, they might still see the email notification.
-                </li>
+                <li>✅ <strong>Vía de Entrega Secundaria:</strong> Si estás conectado a una red Wi-Fi pero no tienes servicio celular (y las llamadas Wi-Fi están desactivadas o sin soporte), el correo actuará como un perfecto <span class="notranslate" translate="no">respaldo</span>.</li>
+                <li>✅ <strong>Viajes Internacionales:</strong> Al viajar al extranjero y usar un SMS pudiese resultar muy costoso o poco confiable, puedes basarte meramente en una red Wi-Fi y enviar correos alertas sin costo adicional.</li>
+                <li>✅ <strong>Paz Mental Adicional:</strong> Mandar alertas por ambos canales vía SMS y Email al mismo tiempo garantiza asegurar en un grado superior de atención que los destinatatios serán más partícipes y asertivos.</li>
             </ul>
         </section>
 
         <section class="guide-section">
-            <h2>⚙️ How to Configure Email Redundancy</h2>
+            <h2>⚙️ Cómo configurar este Respaldo por Correo</h2>
             <ol>
-                <li>Abre la app de <span class="notranslate" translate="no">TapAlert</span> app and go to
-                    <strong>Settings</strong>.
-                </li>
-                <li>Scroll to the <strong>Email Alerts</strong> section and toggle <strong>Enable Email Alerts</strong>
-                    ON.</li>
-                <li>Selecciona your <strong>Email Provider</strong> from the presets (Gmail, Outlook, Yahoo, iCloud)
-                    to auto-fill the SMTP Host and Port.</li>
-                <li>Enter your full <strong>Email Address</strong>.</li>
-                <li>Enter your <strong>App Password</strong> (See the section below on what this is and how to get one).
-                </li>
-                <li>Tap <strong>"Save Settings"</strong> and use the "Test Email" to ensure it is configured
-                    correctly.</li>
+                <li>Abre la app de En la app <span class="notranslate" translate="no">TapAlert</span> entra en los  <strong>Ajustes</strong>.</li>
+                <li>Desplázate a la sección de <strong>Alertas por Correo</strong> y actívala de manera que el estado indique <strong>Habilitar Alertas por Correo</strong>.</li>
+                <li>Selecciona un <strong>Proveedor de Correo</strong> desde la lista de opciones preconfiguradas (Gmail, Outlook, Yahoo, iCloud). Esto completará automáticamente los puertos y el host SMTP.</li>
+                <li>Escribe las direcciones de correo de destino completas.</li>
+                <li>Agrega tu <strong>Contraseña de Aplicación</strong> (Revisa más abajo si no sabes qué es esto o cómo obtenerla).</li>
+                <li>Haz clic en <strong>Guardar Ajustes</strong>. Luego haz una prueba de envío presionando <strong>Test de Correo</strong> para comprobar que quedó perfectamente configurado.</li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>🔑 What is an App Password?</h2>
-            <p>An <strong>App Password</strong> is a randomly generated passcode that gives a third-party app (like
-                <span class="notranslate" translate="no">TapAlert</span>) permission to access your email cuenta to
-                send messages on your behalf.
-            </p>
+            <h2>🔑 ¿Qué e una Contraseñq App ?</h2>
+            <p>Una <strong>Contraseña de App</strong> es un código numérico aleatorio que otorga permiso exclusivo a aplicaciones de terceros (como <span class="notranslate" translate="no">TapAlert</span>) para acceder a tu cuenta de correo y enviar mensajes en tu nombre.</p>
 
-            <h3>Why do I need one instead of my real password?</h3>
-            <p>Modern email providers block basic password logins to protect your cuenta from hackers. An App Password
-                bypasses Two-Factor Authentication (2FA) for that specific app <em>sin</em> giving the app your
-                actual cuenta password. If you ever want to revoke <span class="notranslate"
-                    translate="no">TapAlert</span>'s access, you simply delete the App Password in your email settings,
-                and your main cuenta password remains safe and unchanged.</p>
+            <h3>¿Por qué necesito usar esto y no mi contraseña real?</h3>
+            <p>Los proveedores de correo actuales bloquean los inicios de sesión con contraseñas simples para proteger tu cuenta de los hackers. Una Contraseña de App salta el requisito de Autenticación de 2 Factores (2FA) y te permite dar acceso a <span class="notranslate" translate="no">TapAlert</span> sin darle tu contraseña de cuenta principal. Así tu contraseña sigue segura y, si quieres quitarle los permisos, únicamente debes borrarla y tu contraseña principal se queda intacta.</p>
 
             <div class="alert-box">
-                <h4>⚠️ Important Note</h4>
-                <p>To generate an App Password, almost all email providers require you to have <strong>Two-Factor
-                        Authentication (2FA)</strong> enabled on your cuenta first.</p>
+                <h4>⚠️ Nota Impoooortsnte   t e</h4>
+                <p>Para poder crear y generar una de éstas necesitas primero tener activada la <strong>Verificación en 2 pasos (o 2FA)</strong> en tu cuenta principal.</p>
             </div>
         </section>
 
         <section class="guide-section">
-            <h2>📝 How to Create an App Password</h2>
-            <p>Here are clear, step-by-step instructions for the most common email providers.</p>
+            <h2>📝 Cómo crear una Contraseña de App</h2>
+            <p>Aquí tienes las instrucciones paso a paso para los proveedores de correo más comunes.</p>
 
-            <h3>1. Gmail (Google Account)</h3>
+            <h3>1. Gmail (Cuenta de Google)</h3>
             <ol>
-                <li>Go to your <a href="https://mycuenta.google.com/" target="_blank">Google Account management
-                        page</a> and log in.</li>
-                <li>On the left navigation panel, click <strong>Security</strong>.</li>
-                <li>Under the "How you sign in to Google" section, make sure <strong>2-Step Verification</strong> is
-                    turned <strong>On</strong>. (If it's Off, you Debes turn it on first).</li>
-                <li>Click on <strong>2-Step Verification</strong>. Scroll to the very bottom of the page and click on
-                    <strong>App passwords</strong>.
-                </li>
-                <li>In the "Selecciona app" dropdown, choose <em>Other (Custom name)</em> and type <strong><span
-                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
-                <li>Click <strong>Generate</strong>.</li>
-                <li>A yellow box will appear with a 16-character code. Copy this code and paste it into the "App
-                    Password" field in the <span class="notranslate" translate="no">TapAlert</span> app (you do not need
-                    to include the spaces).</li>
-                <li>Click <strong>Done</strong>.</li>
+                <li>Ve a la <a href="https://myaccount.google.com/" target="_blank">página de gestión de tu cuenta de Google</a> e inicia sesión.</li>
+                <li>En el panel de navegación de la izquierda, haz clic en <strong>Seguridad</strong>.</li>
+                <li>En la sección "Cómo inicias sesión en Google", asegúrate de que la <strong>Verificación en 2 pasos</strong> esté <strong>Activada</strong>. (Si está Desactivada, deberás activarla primero).</li>
+                <li>Haz clic en <strong>Verificación en 2 pasos</strong>. Desplázate hasta el final de la página y haz clic en <strong>Contraseñas de aplicaciones</strong>.</li>
+                <li>En el menú desplegable "Seleccionar aplicación", elige <em>Otra (Nombre personalizado)</em> y escribe <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Haz clic en <strong>Generar</strong>.</li>
+                <li>Aparecerá un recuadro amarillo con un código de 16 caracteres. Copia este código y pégalo en el campo "Contraseña de aplicación" en la app de <span class="notranslate" translate="no">TapAlert</span> (no necesitas incluir los espacios).</li>
+                <li>Haz clic en <strong>Hecho</strong>.</li>
             </ol>
 
-            <h3>2. Hotmail / Outlook (Microsoft Account)</h3>
+            <h3>2. Outlook / Hotmail / Live</h3>
             <ol>
-                <li>Go to the <a href="https://cuenta.microsoft.com/security" target="_blank">Microsoft Account
-                        Security page</a> and log in.</li>
-                <li>Click on <strong>Advanced security options</strong>.</li>
-                <li>Under the "Additional security" section, ensure <strong>Two-step verification</strong> is turned
-                    <strong>On</strong>.
-                </li>
-                <li>Scroll down to the <strong>App passwords</strong> section.</li>
-                <li>Click <strong>Create a new app password</strong>.</li>
-                <li>A new screen will appear displaying your unique App Password.</li>
-                <li>Copy this password and paste it into <span class="notranslate" translate="no">TapAlert</span>, then
-                    click <strong>Done</strong>.</li>
+                <li>Ve a la <a href="https://account.microsoft.com/security" target="_blank">Página de seguridad de la cuenta de Microsoft</a> e inicia sesión.</li>
+                <li>Haz clic en <strong>Opciones de seguridad avanzadas</strong>.</li>
+                <li>En la sección "Seguridad adicional", asegúrate de que la <strong>Verificación en dos pasos</strong> esté activada.</li>
+                <li>Desplázate hacia abajo hasta la sección de <strong>Contraseñas de aplicaciones</strong>.</li>
+                <li>Haz clic en <strong>Crear una nueva contraseña de aplicación</strong>.</li>
+                <li>Aparecerá una nueva pantalla mostrando tu Contraseña de Aplicación única.</li>
+                <li>Copia esta contraseña y pégala en <span class="notranslate" translate="no">TapAlert</span>, luego haz clic en <strong>Hecho</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Go to your <a href="https://login.yahoo.com/cuenta/security" target="_blank">Yahoo Account Security
-                        page</a> and log in.</li>
-                <li>Scroll down to the bottom of the page and click on <strong>Generate and manage app
-                        passwords</strong>.</li>
-                <li>A modal window will appear. Enter <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong> as the app's name.</li>
-                <li>Click <strong>Generate password</strong>.</li>
-                <li>Copy the 16-character password displayed on the screen and paste it into <span class="notranslate"
-                        translate="no">TapAlert</span> (omitting any spaces).</li>
-                <li>Click <strong>Done</strong>.</li>
+                <li>Ve a tu <a href="https://login.yahoo.com/account/security" target="_blank">página de Seguridad de la Cuenta de Yahoo</a> e inicia sesión.</li>
+                <li>Desplázate hasta la parte inferior de la página y haz clic en <strong>Generar y gestionar contraseñas de aplicaciones</strong>.</li>
+                <li>Aparecerá una ventana modal. Introduce <strong><span class="notranslate" translate="no">TapAlert</span></strong> como nombre de la aplicación.</li>
+                <li>Haz clic en <strong>Generar contraseña</strong>.</li>
+                <li>Copia la contraseña de 16 caracteres mostrada en la pantalla y pégala en <span class="notranslate" translate="no">TapAlert</span> (omitiendo cualquier espacio).</li>
+                <li>Haz clic en <strong>Hecho</strong>.</li>
             </ol>
 
             <h3>4. iCloud (Apple ID)</h3>
             <ol>
-                <li>Go to <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> and log in with
-                    your Apple ID.</li>
-                <li>In the <strong>Sign-In and Security</strong> section, click on <strong>App-Specific
-                        Passwords</strong>.</li>
-                <li>Click the <strong>Generate an app-specific password</strong> or the <strong>Add (+)</strong>.
-                </li>
-                <li>Enter <strong><span class="notranslate" translate="no">TapAlert</span></strong> when prompted for an
-                    app name, and click Create.</li>
-                <li>You may be asked to enter your Apple ID password again to confirm.</li>
-                <li>A unique app-specific password will be generated and displayed (typically in the format
-                    <code>xxxx-xxxx-xxxx-xxxx</code>).
-                </li>
-                <li>Copy this entire password and paste it into <span class="notranslate"
-                        translate="no">TapAlert</span>, then click <strong>Done</strong>.</li>
+                <li>Ve a <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> e inicia sesión con tu Apple ID.</li>
+                <li>En la sección de <strong>Inicio de sesión y seguridad</strong>, haz clic en <strong>Contraseñas específicas de la aplicación</strong>.</li>
+                <li>Haz clic en el botón <strong>Generar una contraseña específica de la aplicación</strong> o en el botón <strong>Añadir (+)</strong>.</li>
+                <li>Introduce <strong><span class="notranslate" translate="no">TapAlert</span></strong> cuando se te pida el nombre de la aplicación y haz clic en Crear.</li>
+                <li>Es posible que se te pida introducir de nuevo la contraseña de tu Apple ID para confirmar.</li>
+                <li>Se generará y mostrará una contraseña única específica de la aplicación (generalmente en el formato <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
+                <li>Copia toda la contraseña y pégala en <span class="notranslate" translate="no">TapAlert</span>, luego haz clic en <strong>Hecho</strong>.</li>
             </ol>
         </section>
 

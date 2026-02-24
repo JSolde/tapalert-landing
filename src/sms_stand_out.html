@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     {{ hreflang_tags }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make Your SMS Alert Stand Out - TapAlert</title>
+    <title>{{ sms_so_title }} - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -442,12 +442,11 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">{{ guide_back_guides }}</a>
 
-        <h1 class="guide-title">Making Alert SMS Stand Out</h1>
+        <h1 class="guide-title">{{ sms_so_h1 }}</h1>
 
-        <p>To ensure your emergency contacts don't miss your alert message among other notifications, we recommend
-            configuring their phones to treat messages from your <span class="notranslate"
-                translate="no">TapAlert</span> number differently.</p>
+        <p>{{ sms_so_intro }}</p>
 
         <section class="guide-section">
             <div class="step-list">
@@ -469,7 +468,7 @@
                 <div class="step-card">
                     <div class="step-header">
                         <div class="step-icon">🤖</div>
-                        <h3>For {{ android_table_th2 }} Recipients</h3>
+                        <h3>{{ sms_so_h3_and }}</h3>
                     </div>
                     <ol>
                         <li><strong>{{ sms_so_and_1 }}</strong> {{ sms_so_and_2 }}</li>

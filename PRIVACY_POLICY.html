@@ -218,56 +218,44 @@
             App operates on a <strong>local-first</strong> principle: all personal data stays on your device.</p>
 
         <h2>1. Information the App Processes</h2>
-        <p>To provide its core functionality (sending emergency alerts via SMS and/or email), the App processes the
-            following information:</p>
+        <p>To provide its core functionality (sending emergency alerts via SMS and/or email), the App processes the following information:</p>
         <ul>
             <li><strong>Location Data:</strong> When you trigger an alert, the App accesses your device's GPS
                 coordinates and may resolve them into a physical address. This information is included in the alert
                 message sent to your chosen recipients via a Google Maps link. Location is only fetched at the moment of
                 sending and is not tracked continuously.</li>
-            <li><strong>Recipient Contact Information:</strong> You provide the phone numbers and optionally email
-                addresses of your trusted contacts. These are stored locally on your device.</li>
-            <li><strong>Alert Messages:</strong> You may create and customise predefined alert messages. These are
-                stored locally on your device.</li>
+            <li><strong>Recipient Contact Information:</strong> You provide the phone numbers and optionally email addresses of your trusted contacts. These are stored locally on your device.</li>
+            <li><strong>Alert Messages:</strong> You may create and customise predefined alert messages. These are stored locally on your device.</li>
             <li><strong>Voice Recordings:</strong> The App uses speech-to-text to transcribe voice messages. Audio is
                 processed on-device for transcription and is not stored or transmitted beyond the transcription result,
                 which becomes part of the alert message.</li>
-            <li><strong>Alert History:</strong> The App maintains a local log of alerts sent, including timestamps,
-                recipients, and delivery status. This history is stored on your device only.</li>
+            <li><strong>Alert History:</strong> The App maintains a local log of alerts sent, including timestamps, recipients, and delivery status. This history is stored on your device only.</li>
         </ul>
 
         <h2>2. Permissions</h2>
-        <p>The App requests specific system permissions to function. Each permission is requested at runtime with a
-            clear explanation, and you may deny any permission (though some features will be unavailable).</p>
+        <p>The App requests specific system permissions to function. Each permission is requested at runtime with a clear explanation, and you may deny any permission (though some features will be unavailable).</p>
 
         <h3>Android Permissions</h3>
         <ul>
-            <li><strong>Fine &amp; Coarse Location (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</strong> To determine
-                your geographic coordinates when sending an emergency alert.</li>
+            <li><strong>Fine &amp; Coarse Location (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</strong> To determine your geographic coordinates when sending an emergency alert.</li>
             <li><strong>Send SMS (SEND_SMS):</strong> To send alert messages directly via your device's SIM card without
                 requiring a third-party service.</li>
             <li><strong>Read Phone State (READ_PHONE_STATE):</strong> To check SIM card availability and cellular
                 network registration status, ensuring the App can accurately report whether SMS sending is possible.
             </li>
-            <li><strong>Record Audio (RECORD_AUDIO):</strong> To capture voice input for speech-to-text transcription of
-                alert messages.</li>
-            <li><strong>Read Contacts (READ_CONTACTS):</strong> To allow you to select emergency recipients from your
-                existing contacts.</li>
-            <li><strong>Post Notifications (POST_NOTIFICATIONS):</strong> To display notifications about alert delivery
-                status and dead man's switch timer events.</li>
+            <li><strong>Record Audio (RECORD_AUDIO):</strong> To capture voice input for speech-to-text transcription of alert messages.</li>
+            <li><strong>Read Contacts (READ_CONTACTS):</strong> To allow you to select emergency recipients from your existing contacts.</li>
+            <li><strong>Post Notifications (POST_NOTIFICATIONS):</strong> To display notifications about alert delivery status and dead man's switch timer events.</li>
             <li><strong>Internet &amp; Network State (INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE):</strong> To
                 communicate with the <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS API (if configured),
                 send email alerts via SMTP, perform address lookups
                 from GPS coordinates, and verify connectivity status.</li>
-            <li><strong>Wake Lock (WAKE_LOCK):</strong> To prevent the device from sleeping during the alert sending
-                process, ensuring delivery completes.</li>
+            <li><strong>Wake Lock (WAKE_LOCK):</strong> To prevent the device from sleeping during the alert sending process, ensuring delivery completes.</li>
             <li><strong>Disable Keyguard (DISABLE_KEYGUARD):</strong> To allow alerts triggered from home screen widgets
                 or external automation (e.g., Bluetooth buttons) to proceed without requiring the device to be unlocked.
             </li>
-            <li><strong>Battery Optimisation Exemption (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS):</strong> To ensure the
-                dead man's switch timer and widget-triggered alerts work reliably in the background.</li>
-            <li><strong>Billing (com.android.vending.BILLING):</strong> To process in-app purchases for unlocking the
-                unlimited recipients feature via Google Play.</li>
+            <li><strong>Battery Optimisation Exemption (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS):</strong> To ensure the dead man's switch timer and widget-triggered alerts work reliably in the background.</li>
+            <li><strong>Billing (com.android.vending.BILLING):</strong> To process in-app purchases for unlocking the unlimited recipients feature via Google Play.</li>
         </ul>
 
         <h3>iOS Permissions</h3>
@@ -295,8 +283,7 @@
                 according to <a href="https://www.twilio.com/legal/privacy" target="_blank"><span class="notranslate"
                         translate="no"><span class="notranslate" translate="no">Twilio</span></span>'s Privacy Policy</a>.
             </li>
-            <li><strong>iOS SMS Composer:</strong> On iOS, the App may present the native SMS composer interface, which
-                requires manual confirmation before sending.</li>
+            <li><strong>iOS SMS Composer:</strong> On iOS, the App may present the native SMS composer interface, which requires manual confirmation before sending.</li>
             <li><strong>Email (SMTP):</strong> If you configure email redundancy, the App sends alert emails using your
                 SMTP
                 credentials. These credentials are stored locally on your device. The email is transmitted through your
@@ -312,8 +299,7 @@
                 credentials (Account SID, Auth Token) are stored
                 using flutter_secure_storage, which uses the Android Keystore system and iOS Keychain for
                 hardware-backed encryption.</li>
-            <li><strong>No Cloud Storage:</strong> The Developer does not operate any server to collect, store, or
-                monitor your location data, contacts, messages, or usage patterns.</li>
+            <li><strong>No Cloud Storage:</strong> The Developer does not operate any server to collect, store, or monitor your location data, contacts, messages, or usage patterns.</li>
             <li><strong>No Analytics or Tracking:</strong> The App does not include any analytics SDKs, crash reporting
                 tools, or advertising frameworks. No usage data is transmitted to the Developer or any third party.</li>
         </ul>
@@ -325,39 +311,29 @@
         <ul>
             <li>To the <strong>recipients you explicitly configured</strong> when you trigger an alert (via SMS and/or
                 email).</li>
-            <li>To your <strong>mobile carrier</strong> when sending <span class="notranslate" translate="no">Direct
-                    SMS</span> on Android.</li>
+            <li>To your <strong>mobile carrier</strong> when sending <span class="notranslate" translate="no">Direct SMS</span> on Android.</li>
             <li>To <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong> when using the <span
                     class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> API for SMS delivery (only if you have configured
                 it).
             </li>
             <li>To your <strong>SMTP email provider</strong> when sending email alerts (only if you have configured it).
             </li>
-            <li>To <strong>Google Maps</strong> via a URL link included in the alert message (the recipient opens this
-                link; no data is sent to Google by the App itself).</li>
-            <li>To <strong>Apple/Google</strong> for in-app purchase verification (purchase status only, no personal
-                data).</li>
+            <li>To <strong>Google Maps</strong> via a URL link included in the alert message (the recipient opens this link; no data is sent to Google by the App itself).</li>
+            <li>To <strong>Apple/Google</strong> for in-app purchase verification (purchase status only, no personal data).</li>
         </ul>
 
         <h2>6. In-App Purchases</h2>
-        <p>The App offers an optional in-app purchase to unlock unlimited recipients. This purchase is processed
-            entirely through the Apple App Store or Google Play Store. The Developer does not receive or store any
-            payment information. Purchase status is cached locally on your device.</p>
+        <p>The App offers an optional in-app purchase to unlock unlimited recipients. This purchase is processed entirely through the Apple App Store or Google Play Store. The Developer does not receive or store any payment information. Purchase status is cached locally on your device.</p>
 
         <h2>7. Home Screen Widgets (Android)</h2>
-        <p>The App provides optional home screen widgets for quick alert access. Widget configuration (custom message)
-            is stored locally via SharedPreferences. Tapping a widget launches the App to send an alert and does not
-            transmit any data independently.</p>
+        <p>The App provides optional home screen widgets for quick alert access. Widget configuration (custom message) is stored locally via SharedPreferences. Tapping a widget launches the App to send an alert and does not transmit any data independently.</p>
 
         <h2>8. Dead Man's Switch</h2>
-        <p>The App includes a countdown timer feature that can automatically send an alert if not dismissed within a
-            configured period. This operates entirely on-device. No data is transmitted until an alert is actually
-            triggered.</p>
+        <p>The App includes a countdown timer feature that can automatically send an alert if not dismissed within a configured period. This operates entirely on-device. No data is transmitted until an alert is actually triggered.</p>
 
         <h2>9. Data Retention and Deletion</h2>
         <ul>
-            <li>All data is stored locally on your device and persists until you clear the App's data, uninstall the
-                App, or manually delete entries (e.g., alert history, recipients).</li>
+            <li>All data is stored locally on your device and persists until you clear the App's data, uninstall the App, or manually delete entries (e.g., alert history, recipients).</li>
             <li>Uninstalling the App removes all locally stored data.</li>
             <li>The Developer has no access to your data and therefore cannot delete it on your behalf.</li>
         </ul>
@@ -368,12 +344,10 @@
             data is collected or processed by the Developer.</p>
 
         <h2>11. Your Rights</h2>
-        <p>Because all data is stored locally on your device and the Developer does not collect or have access to any
-            personal data:</p>
+        <p>Because all data is stored locally on your device and the Developer does not collect or have access to any personal data:</p>
         <ul>
             <li>You have <strong>full control</strong> over all your data at all times.</li>
-            <li>You can <strong>view, modify, or delete</strong> any data through the App's settings and history
-                screens.</li>
+            <li>You can <strong>view, modify, or delete</strong> any data through the App's settings and history screens.</li>
             <li>You can <strong>revoke any permission</strong> at any time through your device's system settings.</li>
             <li>You can <strong>remove all data</strong> by uninstalling the App.</li>
         </ul>

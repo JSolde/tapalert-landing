@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     {{ hreflang_tags }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One-Tap Alert Guide - TapAlert</title>
+    <title>{{ ota_title }} - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -418,134 +418,102 @@
 
     <!-- Main Content -->
     <main class="guide-container">
+        <a href="index.html#guides" class="back-link">{{ guide_back_guides }}</a>
 
-        <h1 class="guide-title">One-Tap Alert: All the Ways to Trigger <span class="notranslate"
-                translate="no">TapAlert</span> Instantly</h1>
+        <h1 class="guide-title">{{ ota_h1 }}</h1>
 
-        <p><span class="notranslate" translate="no">TapAlert</span> can be configured for instant, one-tap emergency
-            alerts using several different methods. This guide
-            covers every option, from home screen widgets to physical{{ phil_sen_li2 }}s and automated timers.</p>
+        <p>{{ ota_intro }}</p>
 
         <section class="guide-section">
             <h2>1. 📱 {{ android_table_th2 }} {{ feat_widget_title }}</h2>
             <p><strong>{{ nav_platform }}:</strong> {{ android_table_th2 }} only</p>
-            <p>The fastest way to trigger an alert. A dedicated widget sits on your home screen — one tap and the
-                countdown starts immediately.</p>
+            <p>{{ ota_widget_p1 }}</p>
 
-            <h3>How to Set Up</h3>
+            <h3>{{ ota_h3_setup }}</h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → tap the <strong>⚙️
-                        Settings</strong> icon.</li>
-                <li>Scroll to the <strong>Widget</strong> section.</li>
-                <li>Tap <strong>"Add"</strong> → the system will prompt you to place the widget on your home screen.
-                </li>
-                <li>Drag it to your preferred spot (ideally on your main screen for quick access).</li>
+                <li>{{ ota_setup_li1 }}</li>
+                <li>{{ ota_setup_li2 }}</li>
+                <li>{{ ota_setup_li3 }}</li>
+                <li>{{ ota_setup_li4 }}</li>
             </ol>
 
-            <h3>How It Works</h3>
+            <h3>{{ ota_h3_how_works }}</h3>
             <ul>
-                <li><strong>Single tap</strong> on the widget → <span class="notranslate" translate="no">TapAlert</span>
-                    opens and the <strong>countdown begins
-                        immediately</strong>.</li>
-                <li>You see the countdown dialog and can <strong>cancel</strong> if it w{{ qa_step3_p5 }}ccidental.</li>
-                <li>After the countdown, the alert is sent and the app auto-closes.</li>
+                <li>{{ ota_works_li1 }}</li>
+                <li>{{ ota_works_li2 }}</li>
+                <li>{{ ota_works_li3 }}</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Place the widget on your lock screen (if supported by your {{ android_table_th2 }} version) or on the very first home
-                    screen page for the quickest access.</p>
+                <p>{{ ota_tip_p1 }}</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
             <p><strong>{{ nav_platform }}:</strong> {{ android_table_th2 }} & iPhone</p>
-            <p>Map a <strong>physical{{ phil_sen_li2 }}</strong> on your phone (power{{ phil_sen_li2 }}, volume key, or back-tap gesture) to
-                launch <span class="notranslate" translate="no">TapAlert</span>. Combined with <strong>Auto-Start on
-                    Launch</strong>, this creates a true one-tap panic
-               {{ phil_sen_li2 }}.</p>
+            <p>{{ ota_p_phys_1 }}</p>
 
-            <h3>Step 1: Enable Auto-Start in <span class="notranslate" translate="no">TapAlert</span></h3>
+            <h3>{{ ota_h3_phys_s1 }}</h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️
-                        Settings</strong>.</li>
-                <li>Enable <strong>"Auto-Start on Launch"</strong>.</li>
+                <li>{{ ota_phys_s1_li1 }}</li>
+                <li>{{ ota_phys_s1_li2 }}</li>
             </ol>
 
             <div class="alert-box warning">
-                <h4>⚠️ WARNING</h4>
-                <p>When Auto-Start is enabled, the countdown will trigger <strong>every time</strong> you open the app —
-                    including when you open it normally from the app drawer. Only enable this if you primarily launch
-                    via a physical{{ phil_sen_li2 }} shortcut.</p>
+                <h4>{{ ota_warning_h4 }}</h4>
+                <p>{{ ota_warning_p }}</p>
             </div>
 
-            <h3>Step 2: Configure Your Phone's Button</h3>
+            <h3>{{ ota_h3_phys_s2 }}</h3>
 
-            <h4>Samsung Galaxy (Side Key)</h4>
+            <h4>{{ ota_h4_samsung }}</h4>
             <ol>
-                <li><strong>Settings</strong> → <strong>Advanced {{ price_features }}</strong> → <strong>Side key</strong>.</li>
-                <li>Enable <strong>Double press</strong> → <strong>Open app</strong> → select <strong><span
-                            class="notranslate" translate="no">TapAlert</span></strong>.
-                </li>
-                <li>Double-press the power{{ phil_sen_li2 }} to trigger.</li>
+                <li>{{ ota_samsung_li1 }}</li>
+                <li>{{ ota_samsung_li2 }}</li>
+                <li>{{ ota_samsung_li3 }}</li>
             </ol>
 
-            <h4>Google Pixel (Quick Tap)</h4>
+            <h4>{{ ota_h4_pixel }}</h4>
             <ol>
-                <li><strong>Settings</strong> → <strong>System</strong> → <strong>Gestures</strong> → <strong>Quick Tap
-                        to start actions</strong>.</li>
-                <li>Enable <strong>Use Quick Tap</strong> → <strong>Open app</strong> → select
-                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
-                </li>
-                <li>Double-tap the back of your phone to trigger.</li>
+                <li>{{ ota_pixel_li1 }}</li>
+                <li>{{ ota_pixel_li2 }}</li>
+                <li>{{ ota_pixel_li3 }}</li>
             </ol>
 
-            <h4>iPhone 15 Pro+ (Action Button)</h4>
+            <h4>{{ ota_h4_iphone_ab }}</h4>
             <ol>
-                <li><strong>Settings</strong> → <strong>Action Button</strong> → swipe to <strong>Shortcut</strong>.
-                </li>
-                <li>Tap selector → <strong>Open App</strong> → choose <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong>.</li>
-                <li>Hold the Action Button to trigger.</li>
+                <li>{{ ota_iphone_ab_li1 }}</li>
+                <li>{{ ota_iphone_ab_li2 }}</li>
+                <li>{{ ota_iphone_ab_li3 }}</li>
             </ol>
 
-            <h4>iPhone — All Models (Back Tap)</h4>
+            <h4>{{ ota_h4_iphone_bt }}</h4>
             <ol>
-                <li><strong>Settings</strong> → <strong>Accessibility</strong> → <strong>Touch</strong> → <strong>Back
-                        Tap</strong>.</li>
-                <li>Choose <strong>Double Tap</strong> or <strong>Triple Tap</strong>.</li>
-                <li>To link to <span class="notranslate" translate="no">TapAlert</span>, first create a Shortcut:
+                <li>{{ ota_iphone_bt_li1 }}</li>
+                <li>{{ ota_iphone_bt_li2 }}</li>
+                <li>{{ ota_iphone_bt_li3 }}
                     <ul>
-                        <li>Open <strong>Shortcuts</strong> app → <strong>+</strong> → <strong>Add Action</strong> →
-                            <strong>Open App</strong> → <strong><span class="notranslate"
-                                    translate="no">TapAlert</span></strong>.
-                        </li>
-                        <li>Name it "Open <span class="notranslate" translate="no">TapAlert</span>".</li>
+                        <li>{{ ota_iphone_bt_li3a }}</li>
+                        <li>{{ ota_iphone_bt_li3b }}</li>
                     </ul>
                 </li>
-                <li>Go back to <strong>Back Tap</strong> settings → select your "Open <span class="notranslate"
-                        translate="no">TapAlert</span>" shortcut.</li>
+                <li>{{ ota_iphone_bt_li4 }}</li>
             </ol>
 
-            <h4>Any {{ android_table_th2 }} (Button Mapper Apps)</h4>
-            <p>If your device lacks {{ phil_priv_li2 }}{{ phil_sen_li2 }} remapping, install <strong>"Button Mapper"</strong> or
-                <strong>"MacroDroid"</strong> from the Play Store:
-            </p>
+            <h4>{{ ota_h4_android_apps }}</h4>
+            <p>{{ ota_android_apps_p }}</p>
             <ul>
-                <li>Remap any hardware key (volume{{ phil_sen_li2 }}s, etc.) to <strong>Open Application</strong> →
-                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
-                </li>
+                <li>{{ ota_android_apps_li1 }}</li>
             </ul>
 
-            <h3>How It Works</h3>
+            <h3>{{ ota_h3_how_works }}</h3>
             <ol>
-                <li>Press your configured{{ phil_sen_li2 }}/gesture.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> opens → the countdown starts
-                    <strong>automatically</strong> (if Auto-Start is enabled).
-                </li>
-                <li>The alert is sent and the app auto-closes.</li>
-                <li>Works even from a locked screen (with proper battery optimization — see below).</li>
+                <li>{{ ota_phys_work_li1 }}</li>
+                <li>{{ ota_phys_work_li2 }}</li>
+                <li>{{ ota_phys_work_li3 }}</li>
+                <li>{{ ota_phys_work_li4 }}</li>
             </ol>
         </section>
 
@@ -553,195 +521,167 @@
             <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
                     translate="no">SOS</span> / OK)</h2>
             <p><strong>{{ nav_platform }}:</strong> {{ android_table_th2 }} & iOS</p>
-            <p><span class="notranslate" translate="no">Panic Mode</span> transforms the entire screen into two giant
-               {{ phil_sen_li2 }}s — <strong><span class="notranslate" translate="no">SOS</span></strong> and <strong>I'm
-                    OK</strong> — making it virtually impossible to miss.</p>
+            <p>{{ ota_panic_p }}</p>
 
-            <h3>How to Enable</h3>
+            <h3>{{ ota_h3_enable }}</h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> and it will open by
-                    default in <span class="notranslate" translate="no">Panic Mode</span>.</li>
-                <li>Remember: you can switch from Configured message Alerts to <span class="notranslate"
-                        translate="no">Panic mode</span> swiping left/right on the home
-                    screen or tap the mode icon in the top bar.</li>
+                <li>{{ ota_enable_li1 }}</li>
+                <li>{{ ota_enable_li2 }}</li>
             </ol>
 
-            <h3>How It Works</h3>
+            <h3>{{ ota_h3_how_works }}</h3>
             <ul>
-                <li><strong>Tap the large red <span class="notranslate" translate="no">SOS</span>{{ phil_sen_li2 }}</strong> →
-                    countdown starts for an emergency alert.</li>
-                <li><strong>Tap the green I'm OK{{ phil_sen_li2 }}</strong> → sends a reassurance message.</li>
-                <li><strong>Emergency Call{{ phil_sen_li2 }}</strong> at the bottom dials your local emergency number (112, 911,
-                    etc.).</li>
+                <li>{{ ota_panic_work_li1 }}</li>
+                <li>{{ ota_panic_work_li2 }}</li>
+                <li>{{ ota_panic_work_li3 }}</li>
             </ul>
 
-            <h3>Trigger Method: Tap vs. Hold</h3>
-            <p>For added safety, you can require a <strong>5-second press-and-hold</strong> instead of a single tap:</p>
+            <h3>{{ ota_h3_trigger }}</h3>
+            <p>{{ ota_trigger_p }}</p>
             <ul>
-                <li><strong>Settings</strong> → <strong>Trigger Method</strong> → <strong>Press & Hold (5s)</strong>.
-                </li>
-                <li>This prevents accidental triggers while still being fast enough in emergencies.</li>
+                <li>{{ ota_trigger_li1 }}</li>
+                <li>{{ ota_trigger_li2 }}</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>4. 🎙️ Voice Quick Alert</h2>
             <p><strong>{{ nav_platform }}:</strong> {{ android_table_th2 }} & iOS</p>
-            <p>In <span class="notranslate" translate="no">Panic mode</span> you can also send an alert with a
-                <strong>voice-dictated message</strong> in one action —
-                ideal when you can't type.</p>
+            <p>{{ ota_voice_p }}</p>
             <ol>
                 <li>Tap the <strong>🎤 Microphone</strong>{{ phil_sen_li2 }} next to <span class="notranslate"
                         translate="no">SOS</span> or I'm OK.</li>
-                <li>Speak your message.</li>
-                <li>After speaking the countdown starts automatically with your transcribed voice message attached.</li>
+                <li>{{ ota_voice_li2 }}</li>
+                <li>{{ ota_voice_li3 }}</li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>5. ⏳ Check-in Timer (Dead Man's Switch)</h2>
+            <h2>{{ ota_h2_5 }}</h2>
             <p><strong>{{ nav_platform }}:</strong> {{ android_table_th2 }} & iOS</p>
-            <p>The timer sends an alert <strong>automatically</strong> if you don't check in — no tap required at all.
-            </p>
+            <p>{{ ota_timer_p }}</p>
 
-            <h3>How to Set Up</h3>
+            <h3>{{ ota_h3_setup }}</h3>
             <ol>
-                <li>Tap the <strong>⏱️ Timer icon</strong> in the top bar.</li>
+                <li>{{ ota_timer_li1 }}</li>
                 <li>{{ ts_loc_li2 }} a duration.</li>
-                <li>Optionally add a custom message.</li>
-                <li>Start the timer.</li>
+                <li>{{ ota_timer_li3 }}</li>
+                <li>{{ ota_timer_li4 }}</li>
             </ol>
 
-            <h3>How It Works</h3>
+            <h3>{{ ota_h3_how_works }}</h3>
             <ul>
-                <li>A persistent notification counts down the remaining time.</li>
-                <li>If you check in (tap <strong>"I'm OK / Reset"</strong>) → timer resets, no alert sent.</li>
-                <li>If you don't check in → <span class="notranslate" translate="no">TapAlert</span> automatically sends
-                    your alert with location to all recipients.
-                </li>
+                <li>{{ ota_timer_work_li1 }}</li>
+                <li>{{ ota_timer_work_li2 }}</li>
+                <li>{{ ota_timer_work_li3 }}</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Perfect for solo activities: hiking, walking home at night, meeting strangers, or traveling alone.
-                </p>
+                <p>{{ ota_tip_p2 }}</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>6. 🔋 Critical: Battery Optimization ({{ android_table_th2 }})</h2>
-            <p>For <strong>physical{{ phil_sen_li2 }}</strong> and <strong>widget</strong> triggers to work reliably — especially
-                from a locked/sleeping screen — you {{ ts_em_li5 }} disable battery optimization for <span class="notranslate"
-                    translate="no">TapAlert</span>.</p>
+            <p>{{ ota_battery_p1 }}</p>
 
-            <h3>Why?</h3>
-            <p>{{ android_table_th2 }} manufacturers aggressively kill background apps to save battery. This can prevent <span
-                    class="notranslate" translate="no">TapAlert</span> from
-                waking your phone when the screen is off.</p>
+            <h3>{{ ota_h3_why }}</h3>
+            <p>{{ ota_why_p }}</p>
 
-            <h3>Quick Steps (All Devices)</h3>
+            <h3>{{ ota_h3_quick }}</h3>
             <ol>
-                <li><strong>Settings</strong> → <strong>Apps</strong> → <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong> →
-                    <strong>Battery</strong>.
-                </li>
-                <li>{{ ts_loc_li2 }} <strong>"Don't optimize"</strong> or <strong>"Unrestricted"</strong>.</li>
-                <li>Enable <strong>"Allow background activity"</strong>.</li>
+                <li>{{ ota_quick_li1 }}</li>
+                <li>{{ ota_quick_li2 }}</li>
+                <li>{{ ota_quick_li3 }}</li>
             </ol>
 
-            <h3>Test It</h3>
+            <h3>{{ ota_h3_test }}</h3>
             <ol>
-                <li>Lock your phone and wait 1–2 minutes (screen fully off).</li>
-                <li>Press your configured physical{{ phil_sen_li2 }} or tap the widget.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> should open and start the countdown
-                    instantly.</li>
+                <li>{{ ota_test_li1 }}</li>
+                <li>{{ ota_test_li2 }}</li>
+                <li>{{ ota_test_li3 }}</li>
             </ol>
         </section>
 
         <section class="guide-section">
-            <h2>Quick Comparison</h2>
+            <h2>{{ ota_h2_comp }}</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Method</th>
+                        <th>{{ ota_th_method }}</th>
                         <th>{{ nav_platform }}</th>
-                        <th>Taps to Alert</th>
-                        <th>Works From Lock Screen</th>
-                        <th>Requires Setup</th>
+                        <th>{{ ota_th_taps }}</th>
+                        <th>{{ ota_th_lock }}</th>
+                        <th>{{ ota_th_setup }}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ android_table_th2 }} Widget</td>
+                        <td>{{ ota_td_widget }}</td>
                         <td>{{ android_table_th2 }}</td>
                         <td>1</td>
-                        <td>Partial*</td>
-                        <td>Minimal</td>
+                        <td>{{ ota_td_partial }}</td>
+                        <td>{{ ota_td_minimal }}</td>
                     </tr>
                     <tr>
-                        <td>Physical Button + Auto-Start</td>
+                        <td>{{ ota_td_phys }}</td>
                         <td>{{ android_table_th2 }} & iOS</td>
                         <td>1</td>
-                        <td>✅ Yes</td>
-                        <td>Moderate</td>
+                        <td>{{ ota_td_yes }}</td>
+                        <td>{{ ota_td_mod }}</td>
                     </tr>
                     <tr>
-                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
-                                translate="no">SOS</span>{{ phil_sen_li2 }})</td>
+                        <td>{{ ota_td_panic }}</td>
                         <td>{{ android_table_th2 }} & iOS</td>
-                        <td>2 (open app + tap)</td>
-                        <td>—</td>
-                        <td>Minimal</td>
+                        <td>{{ ota_td_2taps }}</td>
+                        <td>{{ ota_td_dash }}</td>
+                        <td>{{ ota_td_minimal }}</td>
                     </tr>
                     <tr>
-                        <td>Voice Quick Alert</td>
+                        <td>{{ ota_td_voice }}</td>
                         <td>{{ android_table_th2 }} & iOS</td>
-                        <td>2 (open app + tap mic)</td>
-                        <td>—</td>
-                        <td>None</td>
+                        <td>{{ ota_td_2taps_mic }}</td>
+                        <td>{{ ota_td_dash }}</td>
+                        <td>{{ ota_td_none }}</td>
                     </tr>
                     <tr>
-                        <td>Check-in Timer</td>
+                        <td>{{ ota_td_timer }}</td>
                         <td>{{ android_table_th2 }} & iOS</td>
-                        <td>0 (automatic)</td>
-                        <td>✅ Yes</td>
-                        <td>Minimal</td>
+                        <td>{{ ota_td_0taps }}</td>
+                        <td>{{ ota_td_yes }}</td>
+                        <td>{{ ota_td_minimal }}</td>
                     </tr>
                 </tbody>
             </table>
-            <p><small>*Widget lock screen support varies by {{ android_table_th2 }} version and manufacturer.</small></p>
+            <p>{{ ota_comp_footnote }}</p>
         </section>
 
         <section class="guide-section">
-            <h2>Recommended Configurations</h2>
+            <h2>{{ ota_h2_recom }}</h2>
 
             <h3>👴 For Senior Users</h3>
             <ul>
-                <li>Use <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (big <span
-                        class="notranslate" translate="no">SOS</span> / I'm OK{{ phil_sen_li2 }}s).</li>
-                <li>Set <strong>Trigger Method</strong> to <strong>Tap</strong> (simplest interaction).</li>
-                <li>Add the <strong>{{ android_table_th2 }} widget</strong> to the home screen.</li>
-                <li>Set countdown to <strong>10 - 15 seconds</strong> (time to cancel mistakes).</li>
+                <li>{{ ota_recom_senior_li1 }}</li>
+                <li>{{ ota_recom_senior_li2 }}</li>
+                <li>{{ ota_recom_senior_li3 }}</li>
+                <li>{{ ota_recom_senior_li4 }}</li>
             </ul>
 
             <h3>🏃 For Active / Solo Users</h3>
             <ul>
-                <li>Set up the <strong>Check-in Timer</strong> before activities.</li>
-                <li>Configure a <strong>physical{{ phil_sen_li2 }}</strong> for instant <span class="notranslate"
-                        translate="no">SOS</span>.</li>
-                <li>Enable <strong><span class="notranslate" translate="no">{{ phil_red_title }}</span></strong> (auto-<span
-                        class="notranslate" translate="no">fallback</span> between SMS methods).</li>
-                <li>Enable <strong>Email Redundancy</strong> for areas with Wi-Fi only.</li>
+                <li>{{ ota_recom_active_li1 }}</li>
+                <li>{{ ota_recom_active_li2 }}</li>
+                <li>{{ ota_recom_active_li3 }}</li>
+                <li>{{ ota_recom_active_li4 }}</li>
             </ul>
 
             <h3>🔒 For Maximum Security</h3>
             <ul>
-                <li>Configure <strong>physical{{ phil_sen_li2 }}</strong> with <strong>Auto-Start</strong>.</li>
-                <li>Set <strong>Trigger Method</strong> to <strong>Press & Hold (5s)</strong> to prevent accidental
-                    triggers.</li>
-                <li>Enable <strong>both</strong> <span class="notranslate" translate="no">{{ phil_red_title }}</span> and
-                    Email Redundancy.</li>
-                <li>Disable battery optimization and test from locked screen.</li>
+                <li>{{ ota_recom_secure_li1 }}</li>
+                <li>{{ ota_recom_secure_li2 }}</li>
+                <li>{{ ota_recom_secure_li3 }}</li>
+                <li>{{ ota_recom_secure_li4 }}</li>
             </ul>
         </section>
 
