@@ -825,7 +825,7 @@
     "tw_li5": "✅ <strong>Vorteil:</strong> Sie müssen keine Telefonnummer kaufen (Sie sparen monatliche Kosten! abhängig von der Anzahl der von Ihnen gesendeten Nachrichten).",
     "tw_li6": "✅ <strong>Vorteil:</strong> Empfänger sehen einen Namen (z. B. „<span class=\"notranslate\" translator=\"no\">TapAlert</span>\" oder Ihren Namen) anstelle einer Zufallszahl.",
     "tw_li7": "⚠️ <strong>Hinweis:</strong> Nur in eine Richtung (keine Antworten) und wird in einigen Ländern (wie den USA) nicht unterstützt.",
-    "tw_li8": "<a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-{{ term_twilio }}-Programmable-SMS\" target=\"_blank\">Erfahren Sie mehr über alphanumerische Sender-ID</a>",
+    "tw_li8": "ℹ️ <a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS\" target=\"_blank\">Erfahren Sie mehr über alphanumerische Sender-ID</a>",
     "tw_p10": "<strong>OPTION B: Kaufen Sie eine <span class=\"notranslate\" translator=\"no\">{{ term_twilio }}</span> Telefonnummer</strong>",
     "tw_li9": "✅ <strong>Vorteil:</strong> Funktioniert weltweit (einschließlich USA).",
     "tw_li10": "⚠️ <strong>Kosten:</strong> Erfordert den Kauf einer Nummer (ca. 1 $/Monat).",

@@ -825,7 +825,7 @@
     "tw_li5": "✅ <strong>Avantatge:</strong> no cal comprar un número de telèfon (estalvieu costos mensuals! en funció del nombre de missatges que envieu).",
     "tw_li6": "✅ <strong>Avantatge:</strong> els destinataris veuen un nom (p. ex., \"<span class=\"notranslate\" translate=\"no\">TapAlert</span>\" o el vostre nom) en lloc d'un nombre aleatori.",
     "tw_li7": "⚠️ <strong>Nota:</strong> només d'anada (sense respostes) i no s'admet en alguns països (com els EUA).",
-    "tw_li8": "<a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-{{ term_twilio }}-Programmable-SMS\" target=\"_blank\">Més informació sobre l'identificador alfanumèric del remitent</a>",
+    "tw_li8": "ℹ️ <a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS\" target=\"_blank\">Més informació sobre l'identificador alfanumèric del remitent</a>",
     "tw_p10": "<strong>OPCIÓ B: compra un número de telèfon <span class=\"notranslate\" translate=\"no\">{{ term_twilio }}</span></strong>",
     "tw_li9": "✅ <strong>Avantatge:</strong> funciona a tot el món (inclosos els EUA).",
     "tw_li10": "⚠️ <strong>Cost:</strong> requereix la compra d'un número (aproximadament 1 $/mes).",

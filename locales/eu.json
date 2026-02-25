@@ -825,7 +825,7 @@
     "tw_li5": "✅ <strong>Abantaila:</strong> Ez da telefono-zenbakirik erosi behar (Aurreztu hileroko kostuak! Bidaltzen dituzun mezu kopuruaren arabera).",
     "tw_li6": "✅ <strong>Abantaila:</strong> hartzaileek izen bat ikusten dute (adibidez, \"<span class=\"notranslate\" translate=\"no\">TapAlert</span>\" edo zure izena) ausazko zenbaki baten ordez.",
     "tw_li7": "⚠️ <strong>Oharra:</strong> norabide bakarrekoa (erantzunrik gabe) eta herrialde batzuetan ez da onartzen (AEB, esaterako).",
-    "tw_li8": "<a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-{{ term_twilio }}-Programmable-SMS\" target=\"_blank\">Lortu informazio gehiago igorle alfanumerikoaren IDari buruz</a>",
+    "tw_li8": "ℹ️ <a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS\" target=\"_blank\">Lortu informazio gehiago igorle alfanumerikoaren IDari buruz</a>",
     "tw_p10": "<strong>B AUKERA: erosi <span class=\"notranslate\" translate=\"no\">{{ term_twilio }}</span> telefono-zenbakia</strong>",
     "tw_li9": "✅ <strong>Abantaila:</strong> mundu osoan funtzionatzen du (AEB barne).",
     "tw_li10": "⚠️ <strong>Kostua:</strong> zenbaki bat erosi behar da (gutxi gorabehera $ 1 hilean).",

@@ -825,7 +825,7 @@
     "tw_li5": "✅ <strong>Voordeel:</strong> U hoeft geen telefoonnummer te kopen (bespaar maandelijkse kosten! afhankelijk van het aantal berichten dat u verzendt).",
     "tw_li6": "✅ <strong>Voordeel:</strong> ontvangers zien een naam (bijvoorbeeld \"<span class=\"notranslate\" translate=\"no\">TapAlert</span>\" of uw naam) in plaats van een willekeurig getal.",
     "tw_li7": "⚠️ <strong>Opmerking:</strong> Alleen eenrichtingsverkeer (geen antwoorden) en niet ondersteund in sommige landen (zoals de VS).",
-    "tw_li8": "<a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-{{ term_twilio }}-Programmable-SMS\" target=\"_blank\">Meer informatie over alfanumerieke afzender-ID</a>",
+    "tw_li8": "ℹ️ <a href=\"https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS\" target=\"_blank\">Meer informatie over alfanumerieke afzender-ID</a>",
     "tw_p10": "<strong>OPTIE B: Koop een <span class=\"notranslate\" translate=\"no\">{{ term_twilio }}</span> telefoonnummer</strong>",
     "tw_li9": "✅ <strong>Voordeel:</strong> Werkt wereldwijd (inclusief de VS).",
     "tw_li10": "⚠️ <strong>Kosten:</strong> vereist aankoop van een nummer (ongeveer $ 1/maand).",
