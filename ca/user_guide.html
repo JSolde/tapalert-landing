@@ -11,6 +11,7 @@
     <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/user_guide.html">
     <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/user_guide.html">
     <link rel="alternate" hreflang="it" href="https://tapalert.app/it/user_guide.html">
+    <link rel="alternate" hreflang="nl" href="https://tapalert.app/nl/user_guide.html">
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/user_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/user_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,6 @@
             background-color: #f8f9fa;
         }
 
-        /* Reusing core styles from index.html */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -59,7 +59,6 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Guide Specific Styles */
         .guide-header {
             background: white;
             padding: 20px 0;
@@ -109,6 +108,41 @@
             margin-bottom: 40px;
         }
 
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
         .guide-section {
             margin-bottom: 40px;
         }
@@ -141,8 +175,7 @@
             color: #4a5568;
         }
 
-        ul,
-        ol {
+        ul, ol {
             margin-bottom: 20px;
             padding-left: 20px;
             color: #4a5568;
@@ -164,7 +197,10 @@
             margin-bottom: 0;
         }
 
-        /* Alert Styles based on Blockquotes */
+        blockquote p + p {
+            margin-top: 10px;
+        }
+
         .alert-note {
             background-color: #ebf8ff;
             border-left-color: #4299e1;
@@ -175,12 +211,6 @@
             background-color: #f0fff4;
             border-left-color: #48bb78;
             color: #2f855a;
-        }
-
-        .alert-important {
-            background-color: #fff5f5;
-            border-left-color: #f56565;
-            color: #c53030;
         }
 
         .alert-warning {
@@ -206,7 +236,32 @@
             text-decoration: underline;
         }
 
-        /* Footer Reuse */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
         footer {
             background: #1a1a1a;
             color: white;
@@ -255,173 +310,47 @@
             color: #999;
         }
 
-        /* Large phones */
         @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            .brand-logo {
-                font-size: 1.2rem;
-            }
-
-            .btn {
-                padding: 8px 16px;
-                font-size: 0.85rem;
-            }
-
-            .guide-container {
-                padding: 20px;
-                margin: 20px;
-            }
-
-            .guide-title {
-                font-size: 1.8rem;
-                padding-bottom: 15px;
-                margin-bottom: 15px;
-            }
-
-            .guide-intro {
-                font-size: 1.05rem;
-                margin-bottom: 30px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                margin-top: 30px;
-                margin-bottom: 15px;
-                padding-left: 12px;
-            }
-
-            h3 {
-                font-size: 1.2rem;
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-
-            h4 {
-                font-size: 1rem;
-            }
-
-            p,
-            li {
-                font-size: 0.9rem;
-            }
-
-            blockquote {
-                padding: 15px;
-                margin: 15px 0;
-            }
-
-            code {
-                font-size: 0.85rem;
-            }
-
-            .guide-section {
-                margin-bottom: 30px;
-            }
-
-            footer {
-                padding: 40px 15px 20px;
-                margin-top: 40px;
-            }
-
-            .footer-content {
-                gap: 25px;
-                margin-bottom: 25px;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-
-            .footer-section h3 {
-                font-size: 1rem;
-                margin-bottom: 12px;
-            }
-
-            .footer-section a,
-            .footer-section p,
-            .footer-bottom p {
-                font-size: 0.85rem;
-            }
+            body { font-size: 14px; }
+            .brand-logo { font-size: 1.2rem; }
+            .btn { padding: 8px 16px; font-size: 0.85rem; }
+            .guide-container { padding: 20px; margin: 20px; }
+            .guide-title { font-size: 1.8rem; padding-bottom: 15px; margin-bottom: 15px; }
+            .guide-intro { font-size: 1.05rem; margin-bottom: 30px; }
+            h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; }
+            h3 { font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px; }
+            h4 { font-size: 1rem; }
+            p, li { font-size: 0.9rem; }
+            blockquote { padding: 15px; margin: 15px 0; }
+            code { font-size: 0.85rem; }
+            .guide-section { margin-bottom: 30px; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 8px 10px; }
+            footer { padding: 40px 15px 20px; margin-top: 40px; }
+            .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .footer-section h3 { font-size: 1rem; margin-bottom: 12px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.85rem; }
         }
 
-        /* Small phones */
         @media (max-width: 430px) {
-            body {
-                font-size: 13px;
-            }
-
-            .brand-logo {
-                font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 7px 14px;
-                font-size: 0.8rem;
-            }
-
-            .guide-container {
-                padding: 15px;
-                margin: 12px;
-            }
-
-            .guide-title {
-                font-size: 1.5rem;
-                padding-bottom: 12px;
-            }
-
-            .guide-intro {
-                font-size: 0.95rem;
-                margin-bottom: 25px;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-                margin-top: 25px;
-                padding-left: 10px;
-                border-left-width: 4px;
-            }
-
-            h3 {
-                font-size: 1.05rem;
-            }
-
-            h4 {
-                font-size: 0.95rem;
-            }
-
-            p,
-            li {
-                font-size: 0.85rem;
-            }
-
-            blockquote {
-                padding: 12px;
-            }
-
-            code {
-                font-size: 0.8rem;
-            }
-
-            footer {
-                padding: 30px 12px 15px;
-                margin-top: 30px;
-            }
-
-            .footer-content {
-                gap: 20px;
-                grid-template-columns: 1fr;
-            }
-
-            .footer-section h3 {
-                font-size: 0.95rem;
-                margin-bottom: 10px;
-            }
-
-            .footer-section a,
-            .footer-section p,
-            .footer-bottom p {
-                font-size: 0.8rem;
-            }
+            body { font-size: 13px; }
+            .brand-logo { font-size: 1.1rem; }
+            .btn { padding: 7px 14px; font-size: 0.8rem; }
+            .guide-container { padding: 15px; margin: 12px; }
+            .guide-title { font-size: 1.5rem; padding-bottom: 12px; }
+            .guide-intro { font-size: 0.95rem; margin-bottom: 25px; }
+            h2 { font-size: 1.3rem; margin-top: 25px; padding-left: 10px; border-left-width: 4px; }
+            h3 { font-size: 1.05rem; }
+            h4 { font-size: 0.95rem; }
+            p, li { font-size: 0.85rem; }
+            blockquote { padding: 12px; }
+            code { font-size: 0.8rem; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 6px 8px; }
+            footer { padding: 30px 12px 15px; margin-top: 30px; }
+            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            .footer-section h3 { font-size: 0.95rem; margin-bottom: 10px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -432,8 +361,8 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Tornar a casa</a>
         
@@ -469,6 +398,7 @@
             <a href="../fr/user_guide.html" hreflang="fr">FR</a>
             <a href="../gl/user_guide.html" hreflang="gl">GL</a>
             <a href="../it/user_guide.html" hreflang="it">IT</a>
+            <a href="../nl/user_guide.html" hreflang="nl">NL</a>
             <a href="../pt/user_guide.html" hreflang="pt">PT</a>
         </div>
     </div>
@@ -481,351 +411,363 @@
         <a href="index.html#guides" class="back-link">← Torna a Guies</a>
 
         <h1 class="guide-title">Guia d'usuari: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">Aquesta guia explica com configurar i utilitzar <strong><span class="notranslate" translate="no">TapAlert</span></strong> al vostre dispositiu Android o iOS.</p>
+        <p class="guide-intro">Una aplicació de seguretat personal que envia alertes per SMS i correu electrònic als vostres contactes d'emergència amb la vostra ubicació GPS, amb un sol toc.</p>
 
-        <section class="guide-section">
-            <h2>1. 🛡️ Permisos necessaris</h2>
-            <p>En el primer llançament, l'aplicació sol·licitarà els permisos següents:</p>
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h3>Continguts</h3>
+            <ol>
+                <li><a href="#permissions">Primer llançament: permisos</a></li>
+                <li><a href="#home-screen">Visió general de la pantalla d'inici</a></li>
+                <li><a href="#panic-mode">Mode de pànic</a></li>
+                <li><a href="#standard-mode">Mode estàndard</a></li>
+                <li><a href="#recipients">Gestió de destinataris</a></li>
+                <li><a href="#sending">Enviament d'una alerta</a></li>
+                <li><a href="#countdown">Diàleg de compte enrere</a></li>
+                <li><a href="#checkin-timer">Temporitzador d'entrada (Premium)</a></li>
+                <li><a href="#history">Historial d'alertes</a></li>
+                <li><a href="#settings">Configuració</a></li>
+                <li><a href="#widget">Giny de pantalla d'inici (Android)</a></li>
+                <li><a href="#stand-out">Fer que les alertes destaquin als telèfons dels destinataris</a></li>
+                <li><a href="#magic-link">Configuració remota (Magic Link)</a></li>
+                <li><a href="#premium">Actualització Premium</a></li>
+                <li><a href="#troubleshooting">Resolució de problemes</a></li>
+            </ol>
+        </nav>
+
+        <!-- 1. Permissions -->
+        <section class="guide-section" id="permissions">
+            <h2>1. Primer llançament: permisos</h2>
+            <p>Al primer llançament, TapAlert us guiarà per una pantalla de configuració de permisos. Concediu el següent per a una funcionalitat completa:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permís</th>
+                        <th>Per què és necessari</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Ubicació</strong></td><td>Inclou les vostres coordenades GPS i adreça a les alertes</td></tr>
+                    <tr><td><strong>Micròfon / Parla</strong></td><td>Permet la veu a text per als missatges d'alerta personalitzats</td></tr>
+                    <tr><td><strong>Contactes</strong></td><td>Et permet escollir destinataris de la llibreta d'adreces del teu telèfon</td></tr>
+                    <tr><td><strong>Notificacions</strong></td><td>Mostra la confirmació quan s'envia una alerta</td></tr>
+                    <tr><td><strong>SMS (només per a Android)</strong></td><td>Envia alertes directament des de la targeta SIM</td></tr>
+                    <tr><td><strong>Estat del telèfon (només per a Android)</strong></td><td>Detecta la disponibilitat mòbil per a una alternativa intel·ligent</td></tr>
+                </tbody>
+            </table>
+            <p>Podeu concedir o ometre qualsevol permís durant la configuració i ajustar-los més endavant a la configuració del sistema del vostre dispositiu.</p>
+        </section>
+
+        <!-- 2. Home Screen Overview -->
+        <section class="guide-section" id="home-screen">
+            <h2>2. Visió general de la pantalla d'inici</h2>
+            <p>La pantalla d'inici té tres pàgines per navegar fent lliscar el dit cap a l'esquerra o cap a la dreta:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pàgina</th>
+                        <th>Nom</th>
+                        <th>Descripció</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>← Esquerra</td>
+                        <td><strong>Temporitzador d'entrada</strong></td>
+                        <td>Temporitzador de canvi d'home mort (només Premium)</td>
+                    </tr>
+                    <tr>
+                        <td>Centre</td>
+                        <td><strong>Mode de pànic</strong></td>
+                        <td>Botons grans SOS i estic d'acord, els predeterminats</td>
+                    </tr>
+                    <tr>
+                        <td>D'acord →</td>
+                        <td><strong>Mode estàndard</strong></td>
+                        <td>Ranures de missatges d'alerta preconfigurades</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>L'aplicació sempre s'obre en mode de pànic (pàgina central).</p>
+        </section>
+
+        <!-- 3. Panic Mode -->
+        <section class="guide-section" id="panic-mode">
+            <h2>3. Mode de pànic</h2>
+            <p>La pàgina central està dissenyada per a la màxima simplicitat, ideal per a emergències i usuaris grans.</p>
             <ul>
-                <li><strong>SMS (Android només):</strong> necessari per enviar missatges directes des de la targeta SIM del telèfon.</li>
-                <li><strong>Ubicació:</strong> cal incloure les teves coordenades GPS al missatge d'alerta.</li>
-                <li><strong>Micròfon:</strong> és necessari si utilitzeu la funció d'enregistrament de veu per transcriure el vostre missatge d'alerta.</li>
-                <li><strong>Contactes:</strong> cal per seleccionar fàcilment els destinataris de la llibreta d'adreces del telèfon.</li>
+                <li>Botó SOS: envia una alerta "SOS, necessito ajuda" amb la vostra ubicació.</li>
+                <li>Botó Estic bé: envia un estat tranquil·litzador "Estic bé" a tots els contactes.</li>
+                <li>Botons de veu: toqueu la icona del micròfon al costat de SOS o estic bé per gravar un missatge de veu. El vostre discurs es transcriu a text i s'inclou a l'alerta.</li>
+                <li>Botó de trucada d'emergència: marca el vostre número d'emergència local (per exemple, 112, 911) immediatament, segons la configuració del vostre país.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Standard Mode -->
+        <section class="guide-section" id="standard-mode">
+            <h2>4. Mode estàndard</h2>
+            <p>Feu lliscar el dit cap a la dreta des del mode de pànic per accedir al mode estàndard. Aquesta pàgina mostra una llista d'espais d'alerta preconfigurats.</p>
+            <ul>
+                <li>Ranures de text: fins a 7 ranures de missatges personalitzables (per defecte: 3). Toqueu qualsevol ranura per editar el missatge. Toqueu la icona de l'emoji per canviar-ne la icona del botó.</li>
+                <li>Ranura de veu: sempre disponible com a darrera ranura. Toqueu-lo per gravar un missatge de veu en temps real; el text transcrit s'envia com a alerta.</li>
+            </ul>
+            <p>El nombre d'espais de text visibles es pot ajustar a Configuració > Nombre d'alertes configurades.</p>
+        </section>
+
+        <!-- 5. Managing Recipients -->
+        <section class="guide-section" id="recipients">
+            <h2>5. Gestió de destinataris</h2>
+            <p>Toqueu la icona de persones a la barra d'eines superior per obrir la pantalla Destinataris.</p>
+            <ul>
+                <li>Afegeix manualment: toqueu Afegeix i introduïu un número de telèfon en format internacional (p. ex., +31600000000).</li>
+                <li>Afegeix des de Contactes: toqueu la icona de contactes per triar directament des de la llibreta d'adreces del telèfon.</li>
+                <li>Afegeix correu electrònic: afegiu opcionalment una adreça de correu electrònic a cada destinatari per a la redundància de correu electrònic.</li>
+                <li>Elimina: llisca o toca la icona d'eliminació que hi ha al costat de qualsevol contacte.</li>
             </ul>
             <blockquote class="alert-note">
-                <strong>NOTA:</strong> a iOS, el sistema no admet l'enviament de <span class="notranslate" translate="no">direct SMS</span> per a alertes automàtiques. deu feu servir el mètode <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong>.
+                <p>Nivell gratuït: fins a 1 destinatari. Premium: fins a 50 destinataris.</p>
+                <p>Consell per a iOS: si només veieu uns quants contactes, aneu a Configuració > Privadesa > Contactes > TapAlert i seleccioneu Tots els contactes.</p>
             </blockquote>
         </section>
 
-        <section class="guide-section">
-            <h2>2. 📱 Modes d'interfície</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> ofereix dos modes d'interfície diferents per adaptar-se a les vostres necessitats. Podeu canviar entre ells a <strong>Configuració > Mode d'interfície</strong>.</p>
-
-            <h3><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span> / D'acord)</h3>
-            <p>Una interfície simplificada dissenyada per a la màxima senzillesa i accessibilitat, ideal per a usuaris grans o situacions d'alt estrès.</p>
+        <!-- 6. Sending an Alert -->
+        <section class="guide-section" id="sending">
+            <h2>6. Enviament d'una alerta</h2>
+            <ol>
+                <li>Obriu l'aplicació (o toqueu el giny de la pantalla d'inici).</li>
+                <li>Toqueu el botó d'alerta (SOS, estic bé o una ranura de mode estàndard).</li>
+                <li>Si es configura un compte enrere, apareixerà un diàleg que us donarà temps per cancel·lar-lo.</li>
+                <li>L'aplicació obté la vostra ubicació GPS actual i crea el missatge.</li>
+                <li>El so d'alerta es reprodueix mentre s'envia.</li>
+                <li>Es mostra un informe d'estat amb detalls d'èxit o fracàs per destinatari.</li>
+            </ol>
+            <p>El missatge d'alerta inclou:</p>
             <ul>
-                <li><strong>Botó <span class="notranslate" translate="no">SOS</span> gran:</strong> inicia instantàniament el compte enrere per a una alerta "<span class="notranslate" translate="no">SOS</span>, necessito ajuda".</li>
-                <li><strong>Botó Estic d'acord:</strong> envia ràpidament una actualització d'estat "Estic bé" per tranquil·litzar els contactes.</li>
-                <li><strong>Botons de veu:</strong> cada secció hcom a dedica la veubotó per gravar i enviar una transcripció d'àudio juntament amb l'estat <span class="notranslate" translate="no">SOS</span> o D'acord.</li>
-                <li><strong>Botó de trucada d'emergència:</strong> un botó dedicat per trucar immediatament als serveis d'emergència locals (p. ex., 112, 911) en funció de la vostra ubicació.</li>
-            </ul>
-
-            <h3>Mode d'informe (pestanyes)</h3>
-            <p>El mode predeterminat, que ofereix flexibilitat amb diversos tipus de missatges.</p>
-            <ul>
-                <li><strong>4 pestanyes de missatges:</strong> configureu prèviament diferents alertes (p. ex., "Mèdic", "Problema amb el cotxe", "Generic").</li>
-                <li><strong>Text personalitzable:</strong> toqueu dins del quadre de missatge per editar contingut sobre la marxa.</li>
-                <li><strong>Transcripció de veu:</strong> fes servir el micròfon per dictar un missatge personalitzat.</li>
+                <li>El vostre nom (si està definit a Configuració)</li>
+                <li>El text del missatge</li>
+                <li>Un enllaç de Google Maps a la vostra ubicació actual</li>
+                <li>El teu nivell de bateria</li>
             </ul>
         </section>
 
-        <section class="guide-section">
-            <h2>3. 📝 Configura missatges predefinits (mode d'informe)</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> inclou 4 espais de missatges predefinits (pestanyes) que us permeten canviar ràpidament entre diferents escenaris d'alerta.</p>
-
-            <h3>Editaing Missatges</h3>
-            <ol>
-                <li><strong>Seleccioneu una pestanya:</strong> toqueu una de les pestanyes numerades (1-3) a la part superior.</li>
-                <li><strong>Edita Text:</strong> toqueu dins del quadre de missatge per escriure el vostre missatge d'alerta personalitzat (p. ex., "Emergència mèdica", "Problema amb el cotxe").</li>
-                <li><strong>Desa automàticament:</strong> els vostres canvis es desen automàticament mentre escriviu.</li>
-                <li><strong>Dictat:</strong> també podeu utilitzar la icona de dictat per dictar el vostre missatge.</li>
-            </ol>
-
-            <h3>🎙️ Missatge d'alerta ràpida de veu</h3>
-            <p>Podeu utilitzar la vostra veu per generar el text d'alerta en temps real. Això és útil per descriure ràpidament una situació específica. El missatge es desarà a la 4a pestanya.</p>
-            <ol>
-                <li><strong>Toqueu el micròfon vermellbotó:</strong> començarà a <strong>batre</strong> quan estigui actiu.</li>
-                <li><strong>Digueu el vostre missatge:</strong> la barra d'estat de la part inferior es tornarà a <strong>taronja clar</strong> i mostrarà un símbol d'ona sonora mentre escolteu.</li>
-                <li><strong>Actualització automàtica i enviament instantani:</strong> després de tornar a parlar o tocar el micròfonbotó, el text del missatge s'actualitzarà i l'<strong>ENVIA ALERTA</strong> s'activarà immediatament. També podeu prémer <strong>ENVIA ALERTA</strong>botó directament mentre enregistreu; l'aplicació aturarà automàticament la gravació i desarà i enviarà el missatge transcrit immediatament.</li>
-            </ol>
+        <!-- 7. Countdown Dialog -->
+        <section class="guide-section" id="countdown">
+            <h2>7. Diàleg de compte enrere</h2>
+            <p>Abans d'enviar, TapAlert mostra un compte enrere per evitar alertes accidentals.</p>
+            <ul>
+                <li>Durada per defecte: 10 segons. Ajustable de 0 (immediat) a 30 segons a Configuració > Durada del compte enrere.</li>
+                <li>Cancel·la: toqueu CANCEL·LA en qualsevol moment durant el compte enrere per avortar.</li>
+                <li>Envia immediatament: toca ENVIAR ARA per ometre el retard restant.</li>
+            </ul>
         </section>
 
-        <section class="guide-section">
-            <h2>4. 👥 Configuració/Gestió de destinataris</h2>
-            <p>Això es fa a la <strong>pantalla de destinataris</strong> dedicada, accessible des de la barra superior de la pantalla d'inici:</p>
+        <!-- 8. Check-in Timer -->
+        <section class="guide-section" id="checkin-timer">
+            <h2>8. Temporitzador d'entrada (Premium)</h2>
+            <p>El temporitzador d'entrada és un interruptor d'home mort: si no el cancel·leu a temps, TapAlert envia automàticament una alerta. Útil per fer senderisme, viatjar sol o qualsevol situació en què vulgueu que algú avisi si deixeu de respondre.</p>
+
+            <h3>Per començar:</h3>
             <ol>
-                <li><strong>Obre els destinataris:</strong> toca la <strong>icona de persones/grup</strong> (👥) a la barra d'eines superior dreta.</li>
-                <li><strong>Afegeix un número:</strong>
+                <li>Feu lliscar el dit cap a l'esquerra fins a la pàgina Temporitzador d'entrada.</li>
+                <li>Utilitzeu els selectors de rodes per establir una durada (hores i minuts).</li>
+                <li>Opcionalment, escriviu un missatge personalitzat.</li>
+                <li>Toqueu Inicia el temporitzador.</li>
+            </ol>
+
+            <h3>Mentre corre:</h3>
+            <ul>
+                <li>El temporitzador compta enrere a la pantalla.</li>
+                <li>Quan queden menys de 5 minuts, TapAlert reprodueix un so d'advertència i mostra un diàleg:
                     <ul>
-                        <li>Toqueu <strong>"Afegeix"</strong>botó per introduir manualment un número de telèfon.</li>
-                        <li>Toca la <strong>Contacte icona</strong> per triar un número directament de la llibreta d'adreces del teu telèfon.</li>
+                        <li>Cancel·la: descarta l'avís i deixa que el temporitzador continuï.</li>
+                        <li>Atura: avorta el temporitzador (no s'enviarà cap alerta).</li>
+                        <li>Reinicia: restabliu el temporitzador a la durada original.</li>
                     </ul>
                 </li>
-                <li><strong>Format</strong>: utilitzeu el <strong>format internacional E.164</strong> (p. ex., <code>+34600000000</code>) per obtenir els millors resultats.</li>
-                <li><strong>Suprimeix:</strong> toqueu la icona d'eliminació que hi ha al costat de qualsevol número de la llista per eliminar-lo. També podeu "Suprimeix-ho tot" fent servir la icona de la paperera a la part superior.</li>
+                <li>Si el temporitzador arriba a zero sense aturar-se ni restablir, l'alerta s'envia automàticament.</li>
+            </ul>
+
+            <blockquote class="alert-warning">
+                <p>Android: el temporitzador s'executa com un servei en primer pla i roman actiu quan l'aplicació està en segon pla o la pantalla està apagada.</p>
+                <p>iOS: és possible que el temporitzador no s'activi si l'aplicació es tanca forçant. Mantingueu l'aplicació en funcionament en segon pla.</p>
+            </blockquote>
+        </section>
+
+        <!-- 9. Alert History -->
+        <section class="guide-section" id="history">
+            <h2>9. Historial d'alertes</h2>
+            <p>Toqueu la icona del rellotge a la barra d'eines superior per veure el vostre historial d'alertes.</p>
+            <ul>
+                <li>Mostra la marca de temps, el missatge i el mètode de lliurament de cada alerta.</li>
+                <li>Toqueu qualsevol entrada per obtenir els detalls d'èxit/error per destinatari i la informació d'error.</li>
+                <li>Nivell gratuït: emmagatzema les 20 últimes alertes. Premium: botigues fins a 200.</li>
+                <li>Suprimeix entrades individuals o esborra tot l'historial de la icona de la paperera.</li>
+            </ul>
+        </section>
+
+        <!-- 10. Settings -->
+        <section class="guide-section" id="settings">
+            <h2>10. Configuració</h2>
+            <p>Toqueu la icona d'engranatge per obrir Configuració.</p>
+
+            <h3>Mètode SMS</h3>
+            <h4>Android:</h4>
+            <ul>
+                <li>SMS directes: s'envia a través de la targeta SIM, sense necessitat d'Internet. Preferible quan el mòbil està disponible.</li>
+                <li>Twilio: envia mitjançant l'API Twilio per Internet (Wi-Fi o dades). S'utilitza com a alternativa automàtica si falla l'SMS directe.</li>
+            </ul>
+            <h4>iOS:</h4>
+            <ul>
+                <li>Missatges d'iOS (manual): obre l'aplicació Missatges nativa emplenada prèviament. Toqueu Envia manualment. No cal cap compte Twilio.</li>
+                <li>Twilio (automàtic): envia automàticament mitjançant l'API Twilio. Requereix un compte Twilio.</li>
+            </ul>
+            <blockquote class="alert-note">
+                <p>Per obtenir instruccions de configuració de Twilio, consulteu la Guia de Twilio al menú Ajuda.</p>
+            </blockquote>
+
+            <h3>Redundància de correu electrònic</h3>
+            <p>Configureu el correu electrònic SMTP per enviar alertes per correu electrònic a més d'SMS. Útil quan els SMS no estan disponibles però hi ha Wi-Fi connectada.</p>
+            <ol>
+                <li>Aneu a Configuració > Redundància de correu electrònic.</li>
+                <li>Activa la redundància de correu electrònic.</li>
+                <li>Seleccioneu un proveïdor predefinit (Gmail, Outlook, Yahoo, iCloud) o introduïu detalls SMTP personalitzats.</li>
+                <li>Introduïu la vostra adreça de correu electrònic i una contrasenya d'aplicació (recomanada per sobre de la vostra contrasenya principal).</li>
+                <li>Toqueu Prova la connexió de correu electrònic per verificar abans de confiar-hi.</li>
             </ol>
+            <p>Els correus electrònics s'envien a qualsevol destinatari de la vostra llista que tingui una adreça de correu electrònic desada.</p>
+
+            <h3>Ubicació</h3>
+            <ul>
+                <li>Inclou la ubicació: afegeix les coordenades GPS (enllaç de Google Maps) a cada alerta.</li>
+                <li>Inclou l'adreça: també intenta resoldre una adreça postal a partir de les teves coordenades.</li>
+            </ul>
+
+            <h3>Mètode de disparador</h3>
+            <ul>
+                <li>Toca per enviar: un sol toc comença el compte enrere.</li>
+                <li>Manteniu premut (5 segons): heu de mantenir premut el botó durant 5 segons. Recomanat per evitar enviaments accidentals.</li>
+            </ul>
+
+            <h3>Compte enrere d'alerta</h3>
+            <p>Estableix el retard abans que s'enviï l'alerta (0-30 segons). Un compte enrere més llarg us dóna més temps per cancel·lar-lo si s'activa per error.</p>
+
+            <h3>Configuració de so</h3>
+            <ul>
+                <li>Trieu entre Sons senzills o Sons rics (o Cap).</li>
+                <li>Patró de so: seleccioneu entre Alerta ràpida, Bips curts, Campana musical, Sirena de lament, So de pols, Orgue de tubs, Anell metàl·lic o Rusc electrònic.</li>
+                <li>To del so: baix, estàndard o alt.</li>
+                <li>Volum: ajusta amb el control lliscant.</li>
+                <li>Les alertes SOS i estic bé tenen patrons de so independents.</li>
+            </ul>
+
+            <h3>Altres configuracions</h3>
+            <ul>
+                <li>El vostre nom: inclòs als missatges de sortida perquè els destinataris sàpiguen qui ha enviat l'alerta.</li>
+                <li>Durada del compte enrere: retard abans de l'enviament (vegeu més amunt).</li>
+                <li>Nombre d'alertes configurades: quantes ranures de text apareixen en el mode estàndard (3–7).</li>
+                <li>Inici automàtic al llançament: activa el compte enrere immediatament quan s'obre l'aplicació. Habiliteu-ho només si inicieu TapAlert mitjançant una drecera de botó físic.</li>
+                <li>Flaix en alerta: parpelleja la pantalla i la torxa quan s'envia una alerta.</li>
+                <li>País d'origen: assegura que els números de telèfon locals tenen el format correcte.</li>
+                <li>Idioma de l'aplicació: substituïu l'idioma de la interfície (per defecte: idioma del dispositiu).</li>
+                <li>Tema de l'aplicació: clar, fosc o predeterminat del sistema.</li>
+            </ul>
+        </section>
+
+        <!-- 11. Home Screen Widget -->
+        <section class="guide-section" id="widget">
+            <h2>11. Giny de pantalla d'inici (Android)</h2>
+            <p>Afegiu un giny TapAlert a la pantalla d'inici d'Android per accedir amb un sol toc sense obrir l'aplicació.</p>
+
+            <h3>Per afegir:</h3>
+            <ol>
+                <li>Aneu a Configuració > Giny > Afegeix un widget.</li>
+                <li>Trieu Estàndard (1x1) per a una icona compacta o Gran (2x2) per a una major visibilitat.</li>
+                <li>Seguiu les instruccions de la pantalla per col·locar-lo a la vostra pantalla d'inici.</li>
+            </ol>
+
+            <h3>Com funciona:</h3>
+            <ul>
+                <li>Tocant el giny s'obre l'aplicació i immediatament s'inicia el compte enrere d'alerta.</li>
+                <li>Es reprodueix el so i apareix el diàleg del compte enrere; encara podeu cancel·lar-lo si s'activa per error.</li>
+            </ul>
+        </section>
+
+        <!-- 12. Making Alerts Stand Out -->
+        <section class="guide-section" id="stand-out">
+            <h2>12. Fer que les alertes destaquin als telèfons dels destinataris</h2>
+            <p>Els vostres destinataris poden configurar els seus telèfons per donar als missatges TapAlert un to de trucada especial o evitar No molestar.</p>
+
+            <h3>Destinataris d'iPhone:</h3>
+            <ol>
+                <li>Obriu Contactes i trobeu la vostra entrada.</li>
+                <li>Toqueu Edita > To de text.</li>
+                <li>Activa l'evitació d'emergència: això passa per alt el mode silenciós i No molestar.</li>
+                <li>Trieu un to fort i distintiu.</li>
+            </ol>
+
+            <h3>Destinataris d'Android:</h3>
+            <ol>
+                <li>Obriu l'aplicació Missatges i cerqueu la conversa.</li>
+                <li>Toqueu el menú > Detalls > Notificacions.</li>
+                <li>Estableix la prioritat com a Alta o Urgent.</li>
+                <li>Activa l'anul·lació No molestis.</li>
+            </ol>
+
             <blockquote class="alert-tip">
-                <strong>CONSELL: no podeu veure tots els vostres contactes?</strong>
-                <ul>
-                    <li><strong>iOS:</strong> si trieu "Seleccioneu Contactes..." (accés limitat), l'aplicació només podrà veure els pocs que heu escollit. Per solucionar-ho, aneu a <strong>Configuració de l'iPhone > Privadesa i seguretat > Contactes > <span class="notranslate" translate="no">TapAlert</span></strong> i seleccioneu <strong>"Tots els Contactes"</strong>.</li>
-                    <li><strong>Android:</strong> els permisos són "tot o res". Si heu denegat l'accés, el selector estarà buit. Assegureu-vos l'aplicació té permís "Contactes" a la configuració de l'aplicació del teu telèfon.</li>
-                </ul>
+                <p>Utilitza Twilio? Els vostres contactes rebran missatges del vostre número de Twilio o identificador del remitent (p. ex., TapAlert). Haurien d'afegir aquest número/identificador als seus contactes perquè s'apliquin la configuració anterior.</p>
             </blockquote>
         </section>
 
-        <section class="guide-section">
-            <h2>5. ⚙️ Opcions de configuració</h2>
-            <p>Accediu al menú de configuració mitjançant la icona d'engranatge ⚙️ per personalitzar encara més el text del missatge d'alerta i el mètode d'enviament dels SMS.</p>
-
-            <h3>Mètodes d'enviament de SMS</h3>
-            <p>L'aplicació admet dues maneres d'enviar missatges:</p>
-            <ul>
-                <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> (Android):</strong> fa servir la targeta SIM del telèfon. El cost depèn del vostre pla d'operador mòbil.</li>
-                <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS (Android i iOS):</strong> fa servir l'API <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> a Internet (Wi-Fi/Dades). Fiable i obligatori per a iOS.</li>
-            </ul>
-
-            <h3><span class="notranslate" translate="no">Redundància intel·ligent</span> (només Android)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> característiques un sistema <strong><span class="notranslate" translate="no">Redundància intel·ligent</span></strong> que canvia automàticament de mètode si falla el principal:</p>
-            <ul>
-                <li><strong>Sense senyal?</strong> Si proveu d'enviar un <span class="notranslate" translate="no">Direct SMS</span> però no teniu cobertura mòbil (p. ex., dins d'un edifici), l'aplicació intentarà enviar automàticament mitjançant <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Wi-Fi).</li>
-                <li><strong>No hi ha dades?</strong> Si utilitzeu <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> com a principal però feu excursions sense 4G/5G, l'aplicació <span class="notranslate" translate="no">fallback</span> enviarà automàticament un <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>.</li>
-            </ul>
-            <p><strong>Per activar:</strong> aneu a Configuració i activeu <strong>"<span class="notranslate" translate="no">Redundància intel·ligent</span>"</strong>.</p>
-
-            <h3>Redundància de correu electrònic (Wi-Fi <span class="notranslate" translate="no">Tornada</span>)</h3>
-            <p>Si no teniu cap senyal mòbil però esteu connectat a una Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> pot enviar la vostra alerta per correu electrònic.</p>
-            <ul>
-                <li><strong>Configuració:</strong> aneu a <strong>Configuració > Redundància del correu electrònic</strong>. Per obtenir instruccions detallades, consulteu el <strong>Capítol 6: Configuració de la redundància del correu electrònic</strong>.</li>
-                <li><strong>Automàtic <span class="notranslate" translate="no">Tornada</span>:</strong> quan està activat, l'aplicació intentarà enviar una alerta per correu electrònic si fallen tant <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> com <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (mòbil).</li>
-            </ul>
-
-            <h3>Mètode d'activació (toc vs. premut)</h3>
-            <p>Eviteu activacions accidentals canviant com s'activa l'alerta a <strong>Configuració > Mètode d'activació</strong>:</p>
-            <ul>
-                <li><strong>Toc per enviar (predeterminat):</strong> un sol toc a l'alertabotó activa el compte enrere.</li>
-                <li><strong>Premeu i manteniu premut (5 s):</strong> deu manteniu premuda l'alertabotó durant 5 segons continus per activar el compte enrere. Això es recomana per evitar falses alarmes.</li>
-            </ul>
-
-            <blockquote class="alert-important">
-                <strong>IMPORTANT: Usuaris d'iOS</strong><br> Vostè deu configureu un <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> compte.<br> 👉 <strong>Per obtenir instruccions detallades de configuració de <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, consulteu la "<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Guia" independent al menú Ajuda.</strong>
-            </blockquote>
-
-            <h3>Inici automàtic al llançament</h3>
-            <p>Inicia automàticament el compte enrere d'alerta immediatament quan s'obre l'aplicació.</p>
-            <ul>
-                <li><strong>Útil per:</strong> crear un pànic físicbotó (utilitzant la reasignació de claus de maquinari) o una drecera d'inici ràpid.</li>
-                <li><strong>Avís:</strong> quan està activat, l'obertura de l'aplicació sempre activarà el compte enrere. Podeu cancel·lar-lo durant el període de retard.</li>
-            </ul>
-
-            <h3>Missatge Ubicació</h3>
-            <ul>
-                <li><strong>Inclou Ubicació:</strong> afegiu les coordenades GPS al missatge.</li>
-                <li><strong>Inclou l'adreça:</strong> intenteu convertir les coordenades en una adreça llegible per persones.</li>
-            </ul>
-
-            <h3>Configuració addicional</h3>
-            <ul>
-                <li><strong>Identitat del remitent:</strong> (només <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>) trieu el nom o el número que apareix com a remitent (p. ex., "Alerta" o el vostre número <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> específic).</li>
-                <li><strong>Aparença:</strong> canvieu entre el mode clar, el mode fosc o seguiu la configuració del sistema.</li>
-                <li><strong>Aplicació Llengua:</strong> anul·la manualment l'idioma de l'aplicació (per defecte: Sistema Llengua).</li>
-                <li><strong>Regió i format:</strong> configureu la vostra regió per assegurar-vos que els números de telèfon tinguin el format correcte (p. ex., afegint codis de país automàticament).</li>
-                <li><strong>So de notificació:</strong> trieu el so d'alerta que es reproduirà després d'un missatge amb èxit.</li>
-            </ul>
+        <!-- 13. Remote Setup (Magic Link) -->
+        <section class="guide-section" id="magic-link">
+            <h2>13. Configuració remota (Magic Link)</h2>
+            <p>Un familiar o cuidador pot configurar TapAlert al dispositiu de forma remota mitjançant un Magic Link.</p>
+            <p>El cuidador obre TapAlert, selecciona Configurar per a algú altre, omple els contactes, les plantilles de missatges i les credencials opcionals de Twilio/correu electrònic i, a continuació, genera un enllaç de configuració. Quan toqueu aquest enllaç al vostre dispositiu, TapAlert aplica la configuració completa automàticament.</p>
+            <p>Això significa que un membre de la família expert en tecnologia pot configurar-ho tot sense necessitat d'estar present: només cal que toqueu un enllaç.</p>
         </section>
 
-        <section class="guide-section">
-            <h2>6. 📧 Configuració de la redundància del correu electrònic</h2>
-            <p>Si no teniu cap senyal mòbil però esteu connectat a una Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> pot enviar la vostra alerta per correu electrònic.</p>
-
-            <h3>Instruccions de configuració</h3>
-            <ol>
-                <li><strong>Obre Configuració:</strong> toca la icona d'engranatge ⚙️ i selecciona <strong>Redundància del correu electrònic</strong>.</li>
-                <li><strong>Activa la funció:</strong> activa <strong>Activa la redundància del correu electrònic</strong> a ACTIVAT.</li>
-                <li><strong>Configuració SMTP:</strong> introduïu els detalls SMTP del vostre proveïdor de correu electrònic:
-                    <ul>
-                        <li><strong>Amfitrió SMTP:</strong> (p. ex., <code>smtp.gmail.com</code> per a Gmail, <code>smtp-mail.outlook.com</code> per a Outlook).</li>
-                        <li><strong>Port SMTP:</strong> (p. ex., <code>587</code> o <code>465</code>).</li>
-                        <li><strong>Nom d'usuari/Correu electrònic:</strong> la vostra adreça electrònica completa.</li>
-                        <li><strong>Contrasenya/contrasenya de l'aplicació:</strong> la vostra contrasenya de correu electrònic o una contrasenya d'aplicació dedicada.</li>
-                    </ul>
-                </li>
-            </ol>
-
-            <h3>⚡ Configuració ràpida (proveïdors comuns)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> incloubotós predefinits per a proveïdors de correu electrònic populars. Només cal que toqueu un botó preestablert per omplir automàticament la configuració del port i l'amfitrió SMTP:</p>
-            <ul>
-                <li><strong>Gmail</strong> (smtp.gmail.com:587)</li>
-                <li><strong>Outlook</strong> (smtp-mail.outlook.com:587)</li>
-                <li><strong>Yahoo</strong> (smtp.mail.yahoo.com:587)</li>
-                <li><strong>iCloud</strong> (smtp.mail.me.com:587)</li>
-            </ul>
-            <p>Després de tocar un valor predefinit, només cal que introduïu la vostra adreça de correu electrònic i la contrasenya de l'aplicació (vegeu a continuació).</p>
-
-            <blockquote class="alert-important">
-                <strong>IMPORTANT: les contrasenyes d'aplicació són específiques del proveïdor</strong><br> Cada proveïdor de correu electrònic té el seu propi sistema de contrasenyes d'aplicació. No podeu utilitzar una contrasenya d'aplicació de Gmail amb Outlook, ni viceversa. deu genereu una contrasenya d'aplicació específica per al proveïdor que utilitzeu.
-            </blockquote>
-
-            <h3>🔒 Ús de contrasenyes d'aplicació (recomanat)</h3>
-            <p>Per seguretat i fiabilitat, us recomanem que utilitzeu una <strong>contrasenya d'aplicació</strong> en lloc de la vostra contrasenya principal.</p>
-            <ul>
-                <li><strong>Per què?</strong> Omet l'autenticació de 2 factors i manté la vostra compte segura.</li>
-            </ul>
-
-            <h4>Gmail</h4>
-            <ol>
-                <li>Aneu al vostre <strong>Compte de Google > Seguretat</strong> o a <a href="https://mycompte.google.com/apppasswords" target="_blank">https://mycompte.google.com/apppasswords</a></li>
-                <li>Cerqueu <strong>"Contrasenyes d'aplicacions"</strong> (requereix la verificació en dos passos activada).</li>
-                <li>Genereu una contrasenya nova per a "Altres" i anomeneu-la "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Utilitzeu el codi de 16 caràcters proporcionat a <span class="notranslate" translate="no">TapAlert</span> (espais en blanc inclosos).</li>
-            </ol>
-
-            <h4>Outlook / Hotmail / Live</h4>
-            <ol>
-                <li>Aneu a <strong>Compte de Microsoft > Seguretat > Opcions de seguretat avançades</strong> o <a href="https://compte.live.com/names/manage" target="_blank">https://compte.live.com/names/manage</a>.</li>
-                <li>A <strong>"Contrasenyes d'aplicació"</strong>, creeu una contrasenya d'aplicació nova.</li>
-                <li>Seleccioneu "Altres" i nomena'l "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Utilitzeu la contrasenya generada a <span class="notranslate" translate="no">TapAlert</span>.</li>
-            </ol>
-
-            <h4>Yahoo</h4>
-            <ol>
-                <li>Aneu a <strong>Seguretat del compte de Yahoo</strong> o a <a href="https://login.yahoo.com/compte/security" target="_blank">https://login.yahoo.com/compte/security</a>.</li>
-                <li>Seleccioneu <strong>"Genera la contrasenya de l'aplicació"</strong>.</li>
-                <li>Trieu "Una altra aplicació" i nomeneu-la "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Utilitzeu la contrasenya generada a <span class="notranslate" translate="no">TapAlert</span>.</li>
-            </ol>
-
-            <h4>iCloud</h4>
-            <ol>
-                <li>Aneu a <strong>appleid.apple.com > Inici de sessió i seguretat > Contrasenyes específiques de l'aplicació</strong> o <a href="https://appleid.apple.com/compte/manage" target="_blank">https://appleid.apple.com/compte/manage</a>.</li>
-                <li>Feu clic al <strong>+</strong>botó per generar una contrasenya nova.</li>
-                <li>Anomena'l "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Utilitzeu la contrasenya generada a <span class="notranslate" translate="no">TapAlert</span>.</li>
-            </ol>
-
-            <h3>Destinataris</h3>
-            <p>S'enviaran correus electrònics a tots els contactes de la vostra llista <strong>Destinataris</strong> que tinguin una adreça electrònica desada. Per afegir un correu electrònic a un contacte:</p>
-            <ol>
-                <li>Aneu a la pantalla <strong>Destinataris</strong>.</li>
-                <li>Edita un contacte i assegureu-vos d'omplir el camp de correu electrònic.</li>
-            </ol>
-
-            <h3>🧪 Proves</h3>
-            <p>Abans de confiar-hi, toca <strong>Prova la connexió</strong>. Introduïu una adreça de correu electrònic per rebre un missatge de prova. Si té èxit, la vostra configuració és correcta.</p>
+        <!-- 14. Premium Upgrade -->
+        <section class="guide-section" id="premium">
+            <h2>14. Actualització Premium</h2>
+            <p>Algunes funcions requereixen una actualització Premium única (sense subscripció):</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Gratuït</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Destinataris</td><td>1</td><td>Fins a 50</td></tr>
+                    <tr><td>Historial d'alertes</td><td>20 entrades</td><td>200 entrades</td></tr>
+                    <tr><td>Temporitzador d'entrada</td><td>None</td><td>✓</td></tr>
+                </tbody>
+            </table>
+            <p>Toqueu Actualitza a la pantalla de destinataris o a la pàgina del temporitzador. Si ja heu comprat Premium en un altre dispositiu, toqueu Restaura les compres.</p>
         </section>
 
-        <section class="guide-section">
-            <h2>7. 📱 Giny de la pantalla d'inici (només Android)</h2>
-            <p>Per obtenir alertes d'emergència encara més ràpides, podeu afegir un widget a la vostra pantalla d'inici Android:</p>
-
-            <h3>Afegint el widget</h3>
-            <ol>
-                <li><strong>Obre Configuració:</strong> toca la icona d'engranatge ⚙️ a l'aplicació.</li>
-                <li><strong>Cerca la secció de widgets:</strong> desplaceu-vos cap avall fins a la secció "Widget".</li>
-                <li><strong>Toqueu "Afegeix":</strong> el sistema us demanarà que col·loqueu el giny a la pantalla d'inici.</li>
-                <li><strong>Coloqueu el widget:</strong> arrossegueu-lo a la vostra ubicació preferida i deixeu-lo anar.</li>
-            </ol>
-            <blockquote class="alert-note">
-                <strong>NOTA:</strong> si ja teniu un widget a la pantalla d'inici, haureu d'eliminar l'antic abans d'afegir-ne un de nou.
-            </blockquote>
-
-            <h3>Ús del widget</h3>
-            <ul>
-                <li><strong>Toqueu el widget:</strong> obre l'aplicació i inicia el <strong>compte enrere</strong> immediatament.</li>
-                <li><strong>Experiència amb l'aplicació:</strong> veureu el diàleg del compte enrere per assegurar-vos que l'alerta és intencionada. Podeu cancel·lar-lo si premeu per error.</li>
-                <li><strong>So:</strong> l'aplicació reprodueix un to d'alerta audible mentre fa el compte enrere.</li>
-            </ul>
-            <blockquote class="alert-tip">
-                <strong>CONSELL:</strong> el giny és perfecte per a emergències reals quan necessiteu enviar una alerta amb un sol toc, sense cercant l'aplicació al calaix.
-            </blockquote>
-        </section>
-
-        <section class="guide-section">
-            <h2>8. 🚀 Enviament d'una alerta</h2>
-            <ol>
-                <li><strong>Obriu el Aplicació.</strong></li>
-                <li><strong>Activar l'alerta:</strong>
-                    <ul>
-                        <li><strong>En mode d'informe:</strong> toqueu el <strong>ENVIA ALERTA</strong>botó de color vermell gran. S'enviarà el missatge seleccionat a les pestanyes (1-4).</li>
-                        <li><strong>A <span class="notranslate" translate="no">Panic Mode</span>:</strong>
-                            <ul>
-                                <li>Toqueu el gran <strong><span class="notranslate" translate="no">SOS</span></strong> botó vermell per enviar una alerta "Necessiteu ajuda".</li>
-                                <li>Toqueu la <strong>icona del micròfon</strong> (a la part inferior dreta de <span class="notranslate" translate="no">SOS</span>) per gravar i enviar un missatge de veu específic amb la vostra alerta <span class="notranslate" translate="no">SOS</span>.</li>
-                                <li>Toca el botó verd <strong>Estic bé</strong>botó per enviar un estat tranquil·litzador "Estic bé".</li>
-                                <li>Toqueu la <strong>icona del micròfon</strong> (a la part inferior dreta d'Estic bé) per gravar i enviar un missatge de veu amb el vostre estat d'acord.</li>
-                                <li>Toca la <strong>Trucada d'emergència</strong>botó per marcar els serveis d'emergència locals immediatament.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>L'aplicació farà:</strong>
-                    <ul>
-                        <li>Obteniu la vostra ubicació actual (si està configurada).</li>
-                        <li>Mostra un <strong>Diàleg de compte enrere</strong> (vegeu "Diàleg de compte enrere" a continuació).</li>
-                        <li>Envieu el missatge d'alerta a tots els destinataris.</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-
-        <section class="guide-section">
-            <h2>9. ⏱️ Diàleg de compte enrere</h2>
-            <p>Per evitar alertes accidentals, <span class="notranslate" translate="no">TapAlert</span> mostra un compte enrere abans d'enviar.</p>
-            <ul>
-                <li><strong>Durada del compte enrere:</strong> de manera predeterminada, l'aplicació espera <strong>10 segons</strong>. Podeu personalitzar-ho a <strong>Configuració</strong> (des de <strong>0s</strong> per a l'enviament immediat fins a <strong>30s</strong>).</li>
-                <li><strong>Cancel·lació:</strong> podeu tocar <strong>CANCEL·LA</strong> durant el compte enrere per aturar l'alerta.</li>
-            </ul>
-        </section>
-
-        <section class="guide-section">
-            <h2>10. 🔔 Destacar els SMS d'alerta</h2>
-            <p>Per assegurar-vos que els vostres contactes d'emergència no es perdin el vostre missatge d'alerta entre altres notificacions, us recomanem que configureu els seus telèfons per tractar els missatges del vostre número <span class="notranslate" translate="no">TapAlert</span> de manera diferent.</p>
-
-            <h3>Per a destinataris d'iPhone</h3>
-            <ol>
-                <li><strong>Obre Contactes:</strong> Seleccioneu la vostra entrada de contacte.</li>
-                <li><strong>Assigna una derivació d'emergència:</strong> Toca <strong>Edita</strong> > <strong>To de trucada</strong> (o to de text) i activa <strong>Bypass d'emergència</strong>. Això permet sons/vibracions fins i tot si el seu telèfon està en silenci o No molestar.</li>
-                <li><strong>To personalitzat:</strong> Trieu un so fort i diferent per als vostres missatges.</li>
-            </ol>
-
-            <h3>Per a Android Destinataris</h3>
-            <ol>
-                <li><strong>Missatges oberts:</strong> Seleccioneu la conversa amb vosaltres.</li>
-                <li><strong>Categories de notificació:</strong> Toqueu <strong>Detalls</strong> > <strong>Notificacions</strong>.</li>
-                <li><strong>Estableix com a "Urgent":</strong> Canvia la prioritat a <strong>"Alt"</strong> o <strong>"Urgent"</strong>.</li>
-                <li><strong>Anul·lar DND:</strong> Assegureu-vos <strong>"Ignora No molestis"</strong> està habilitat per a aquesta conversa.</li>
-                <li><strong>So personalitzat:</strong> Trieu un so d'alerta d'alta prioritat.</li>
-            </ol>
-            <blockquote class="alert-note">
-                <strong>NOTA: feu servir <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong> Si envieu alertes mitjançant <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, els vostres contactes rebran el missatge del vostre número <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> o un identificador alfanumèric (p. ex., "<span class="notranslate" translate="no">TapAlert</span>"). Ells <strong>deu</strong> afegeix aquest número/ID a la seva llista de contactes perquè la configuració anterior funcioni correctament. En cas contrari, el missatge encara s'entregarà peròcom aSMS estàndard sense qualsevol notificació prioritària.
-            </blockquote>
-        </section>
-
-        <section class="guide-section">
-            <h2>11. 🕰️ Historial d'alertes</h2>
-            <p>Per fer un seguiment de les alertes d'emergència enviades:</p>
-            <ol>
-                <li><strong>Toqueu la icona d'historial:</strong> la icona del rellotge 🕰️ situada a la barra superior.</li>
-                <li><strong>Mostra les alertes recents:</strong> l'aplicació manté un registre de les últimes <strong>50 alertes</strong> enviades.</li>
-                <li><strong>Comprova l'estat:</strong> toca qualsevol entrada per veure exactament quins destinataris han rebut el missatge correctament i quins han fallat (amb els detalls de l'error).</li>
-                <li><strong>Esborra l'historial:</strong> pots suprimir tots els registres tocant la icona de la paperera 🗑️ a la pantalla de l'historial.</li>
-            </ol>
-        </section>
-
+        <!-- 15. Troubleshooting -->
         <section class="guide-section" id="troubleshooting">
-            <h2>12. ❓ Resolució de problemes</h2>
-            <ul>
-                <li><strong>No s'està enviant el missatge (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>):</strong> comproveu el vostre senyal mòbil i el crèdit de l'operador (només Android).</li>
-                <li><strong>No s'està enviant el missatge (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>):</strong> verifiqueu la vostra connexió a Internet i comproveu les vostres credencials a la configuració.</li>
-                <li><strong>Ubicació falta:</strong> Assegureu-vos GPS està activat a la configuració del sistema del teu telèfon i l'aplicació té permís Ubicació.</li>
-                <li><strong>Contactes falta (iOS):</strong> aneu a Configuració > Privadesa > Contactes > <span class="notranslate" translate="no">TapAlert</span> i assegureu-vos que <strong>"Tot el Contactes"</strong> estigui marcat.</li>
-                <li><strong>Contactes falta (Android):</strong> aneu a Configuració > Aplicacions > <span class="notranslate" translate="no">TapAlert</span> > Permisos i assegureu-vos que <strong>"Contactes"</strong> estigui permès.</li>
-            </ul>
-        </section>
-
-        <section class="guide-section">
-            <h2>13. ⏳ Temporitzador d'entrada</h2>
-            <p>El <strong>temporitzador de registre</strong> és una funció de seguretat "inactiva". Us permet configurar un temporitzador quan inicieu una activitat potencialment arriscada (p. ex., caminar sol a casa, anar d'excursió).</p>
-            <ol>
-                <li><strong>Inicia el temporitzador:</strong> Seleccioneu una durada (des de 5 minuts fins a 24 hores) i un missatge opcional.</li>
-                <li><strong>El compte enrere:</strong> una notificació persistent us mostrarà el temps restant.</li>
-                <li><strong>El registre d'entrada:</strong> deu torneu a l'aplicació i toqueu <strong>"Estic bé (restableix)</strong> abans que caduqui el temporitzador.</li>
-                <li><strong>Alerta automàtica:</strong> si <em>no</em> reinicieu el temporitzador abans que arribi a zero, <span class="notranslate" translate="no">TapAlert</span> enviarà automàticament el vostre missatge d'alerta i la vostra ubicació a tots els destinataris.</li>
-            </ol>
-            <blockquote class="alert-tip">
-                <strong>TIP:</strong> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if
-                you become incapacitated or lose access to your phone.
-            </blockquote>
+            <h2>15. Solució de problemes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Problema</th>
+                        <th>Solució</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Alerta no enviada (SMS directe)</td><td>Comproveu el senyal mòbil i els crèdits de la SIM</td></tr>
+                    <tr><td>Alerta no enviada (Twilio)</td><td>Comproveu la connexió a Internet i les credencials de Twilio a Configuració</td></tr>
+                    <tr><td>Falta la ubicació</td><td>Activa el GPS a la configuració del sistema i concedeix permís d'ubicació a TapAlert</td></tr>
+                    <tr><td>No es mostra l'adreça</td><td>Habiliteu Inclou l'adreça a la configuració; requereix Internet per a la geocodificació</td></tr>
+                    <tr><td>Els contactes no apareixen (iOS)</td><td>Configuració > Privadesa > Contactes > TapAlert > Tots els contactes</td></tr>
+                    <tr><td>Els contactes no apareixen (Android)</td><td>Configuració > Aplicacions > TapAlert > Permisos > activar Contactes</td></tr>
+                    <tr><td>El temporitzador no s'activa (iOS)</td><td>Manteniu TapAlert obert en segon pla; És possible que el temporitzador no s'activi si l'aplicació es tanca forçadament</td></tr>
+                    <tr><td>Es mostra un llenguatge incorrecte</td><td>Configuració > Idioma de l'aplicació: seleccioneu manualment el vostre idioma preferit</td></tr>
+                </tbody>
+            </table>
         </section>
 
     </main>

@@ -11,6 +11,7 @@
     <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/user_guide.html">
     <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/user_guide.html">
     <link rel="alternate" hreflang="it" href="https://tapalert.app/it/user_guide.html">
+    <link rel="alternate" hreflang="nl" href="https://tapalert.app/nl/user_guide.html">
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/user_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/user_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,6 @@
             background-color: #f8f9fa;
         }
 
-        /* Reusing core styles from index.html */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -59,7 +59,6 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Guide Specific Styles */
         .guide-header {
             background: white;
             padding: 20px 0;
@@ -109,6 +108,41 @@
             margin-bottom: 40px;
         }
 
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
         .guide-section {
             margin-bottom: 40px;
         }
@@ -141,8 +175,7 @@
             color: #4a5568;
         }
 
-        ul,
-        ol {
+        ul, ol {
             margin-bottom: 20px;
             padding-left: 20px;
             color: #4a5568;
@@ -164,7 +197,10 @@
             margin-bottom: 0;
         }
 
-        /* Alert Styles based on Blockquotes */
+        blockquote p + p {
+            margin-top: 10px;
+        }
+
         .alert-note {
             background-color: #ebf8ff;
             border-left-color: #4299e1;
@@ -175,12 +211,6 @@
             background-color: #f0fff4;
             border-left-color: #48bb78;
             color: #2f855a;
-        }
-
-        .alert-important {
-            background-color: #fff5f5;
-            border-left-color: #f56565;
-            color: #c53030;
         }
 
         .alert-warning {
@@ -206,7 +236,32 @@
             text-decoration: underline;
         }
 
-        /* Footer Reuse */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
         footer {
             background: #1a1a1a;
             color: white;
@@ -255,173 +310,47 @@
             color: #999;
         }
 
-        /* Large phones */
         @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            .brand-logo {
-                font-size: 1.2rem;
-            }
-
-            .btn {
-                padding: 8px 16px;
-                font-size: 0.85rem;
-            }
-
-            .guide-container {
-                padding: 20px;
-                margin: 20px;
-            }
-
-            .guide-title {
-                font-size: 1.8rem;
-                padding-bottom: 15px;
-                margin-bottom: 15px;
-            }
-
-            .guide-intro {
-                font-size: 1.05rem;
-                margin-bottom: 30px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                margin-top: 30px;
-                margin-bottom: 15px;
-                padding-left: 12px;
-            }
-
-            h3 {
-                font-size: 1.2rem;
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-
-            h4 {
-                font-size: 1rem;
-            }
-
-            p,
-            li {
-                font-size: 0.9rem;
-            }
-
-            blockquote {
-                padding: 15px;
-                margin: 15px 0;
-            }
-
-            code {
-                font-size: 0.85rem;
-            }
-
-            .guide-section {
-                margin-bottom: 30px;
-            }
-
-            footer {
-                padding: 40px 15px 20px;
-                margin-top: 40px;
-            }
-
-            .footer-content {
-                gap: 25px;
-                margin-bottom: 25px;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-
-            .footer-section h3 {
-                font-size: 1rem;
-                margin-bottom: 12px;
-            }
-
-            .footer-section a,
-            .footer-section p,
-            .footer-bottom p {
-                font-size: 0.85rem;
-            }
+            body { font-size: 14px; }
+            .brand-logo { font-size: 1.2rem; }
+            .btn { padding: 8px 16px; font-size: 0.85rem; }
+            .guide-container { padding: 20px; margin: 20px; }
+            .guide-title { font-size: 1.8rem; padding-bottom: 15px; margin-bottom: 15px; }
+            .guide-intro { font-size: 1.05rem; margin-bottom: 30px; }
+            h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; }
+            h3 { font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px; }
+            h4 { font-size: 1rem; }
+            p, li { font-size: 0.9rem; }
+            blockquote { padding: 15px; margin: 15px 0; }
+            code { font-size: 0.85rem; }
+            .guide-section { margin-bottom: 30px; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 8px 10px; }
+            footer { padding: 40px 15px 20px; margin-top: 40px; }
+            .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .footer-section h3 { font-size: 1rem; margin-bottom: 12px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.85rem; }
         }
 
-        /* Small phones */
         @media (max-width: 430px) {
-            body {
-                font-size: 13px;
-            }
-
-            .brand-logo {
-                font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 7px 14px;
-                font-size: 0.8rem;
-            }
-
-            .guide-container {
-                padding: 15px;
-                margin: 12px;
-            }
-
-            .guide-title {
-                font-size: 1.5rem;
-                padding-bottom: 12px;
-            }
-
-            .guide-intro {
-                font-size: 0.95rem;
-                margin-bottom: 25px;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-                margin-top: 25px;
-                padding-left: 10px;
-                border-left-width: 4px;
-            }
-
-            h3 {
-                font-size: 1.05rem;
-            }
-
-            h4 {
-                font-size: 0.95rem;
-            }
-
-            p,
-            li {
-                font-size: 0.85rem;
-            }
-
-            blockquote {
-                padding: 12px;
-            }
-
-            code {
-                font-size: 0.8rem;
-            }
-
-            footer {
-                padding: 30px 12px 15px;
-                margin-top: 30px;
-            }
-
-            .footer-content {
-                gap: 20px;
-                grid-template-columns: 1fr;
-            }
-
-            .footer-section h3 {
-                font-size: 0.95rem;
-                margin-bottom: 10px;
-            }
-
-            .footer-section a,
-            .footer-section p,
-            .footer-bottom p {
-                font-size: 0.8rem;
-            }
+            body { font-size: 13px; }
+            .brand-logo { font-size: 1.1rem; }
+            .btn { padding: 7px 14px; font-size: 0.8rem; }
+            .guide-container { padding: 15px; margin: 12px; }
+            .guide-title { font-size: 1.5rem; padding-bottom: 12px; }
+            .guide-intro { font-size: 0.95rem; margin-bottom: 25px; }
+            h2 { font-size: 1.3rem; margin-top: 25px; padding-left: 10px; border-left-width: 4px; }
+            h3 { font-size: 1.05rem; }
+            h4 { font-size: 0.95rem; }
+            p, li { font-size: 0.85rem; }
+            blockquote { padding: 12px; }
+            code { font-size: 0.8rem; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 6px 8px; }
+            footer { padding: 30px 12px 15px; margin-top: 30px; }
+            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            .footer-section h3 { font-size: 0.95rem; margin-bottom: 10px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -432,8 +361,8 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
         
@@ -469,6 +398,7 @@
             <a href="../fr/user_guide.html" hreflang="fr">FR</a>
             <a href="../gl/user_guide.html" hreflang="gl">GL</a>
             <a href="../it/user_guide.html" hreflang="it">IT</a>
+            <a href="../nl/user_guide.html" hreflang="nl">NL</a>
             <a href="../pt/user_guide.html" hreflang="pt">PT</a>
         </div>
     </div>
@@ -481,351 +411,363 @@
         <a href="index.html#guides" class="back-link">← Itzuli Gidetara</a>
 
         <h1 class="guide-title">Erabiltzailearen Gida: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">Gida honek <strong><span class="notranslate" translate="no">TapAlert</span></strong> nola konfiguratu eta nola erabili azaltzen du zure Android edo iOS gailuan.</p>
+        <p class="guide-intro">Zure GPS kokapenarekin SMS eta posta elektronikoko alertak bidaltzen dituen segurtasun-aplikazio pertsonala, ukitu bakar batekin.</p>
 
-        <section class="guide-section">
-            <h2>1. 🛡️ Beharrezko baimenak</h2>
-            <p>Lehenengo abiaraztean, aplikazioak baimen hauek eskatuko ditu:</p>
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h3>Edukiak</h3>
+            <ol>
+                <li><a href="#permissions">Lehenengo abiarazte: Baimenak</a></li>
+                <li><a href="#home-screen">Hasierako pantailaren ikuspegi orokorra</a></li>
+                <li><a href="#panic-mode">Izu modua</a></li>
+                <li><a href="#standard-mode">Modu estandarra</a></li>
+                <li><a href="#recipients">Hartzaileak kudeatzea</a></li>
+                <li><a href="#sending">Alerta bat bidaltzea</a></li>
+                <li><a href="#countdown">Atzerako kontaketa elkarrizketa</a></li>
+                <li><a href="#checkin-timer">Check-in tenporizadorea (Premium)</a></li>
+                <li><a href="#history">Alertaren historia</a></li>
+                <li><a href="#settings">Ezarpenak</a></li>
+                <li><a href="#widget">Hasierako pantailaren widgeta (Android)</a></li>
+                <li><a href="#stand-out">Hartzaileen telefonoetan alertak nabarmentzea</a></li>
+                <li><a href="#magic-link">Urruneko konfigurazioa (Magic Link)</a></li>
+                <li><a href="#premium">Premium Upgrade</a></li>
+                <li><a href="#troubleshooting">Arazoak konpontzea</a></li>
+            </ol>
+        </nav>
+
+        <!-- 1. Permissions -->
+        <section class="guide-section" id="permissions">
+            <h2>1. Lehen abiarazte: Baimenak</h2>
+            <p>Lehen abiaraztean, TapAlert-ek baimenen konfigurazio-pantailan zehar gidatuko zaitu. Eman honako hau funtzionaltasun osoa lortzeko:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Baimena</th>
+                        <th>Zergatik behar den</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Kokapena</strong></td><td>Zure GPS koordenatuak eta helbidea sartzen ditu abisuetan</td></tr>
+                    <tr><td><strong>Mikrofonoa / Hitzaldia</strong></td><td>Ahotsetik testurako aukera ematen du alerta mezu pertsonalizatuetarako</td></tr>
+                    <tr><td><strong>Kontaktuak</strong></td><td>Telefonoaren helbide-liburutik hartzaileak hautatzeko aukera ematen dizu</td></tr>
+                    <tr><td><strong>Jakinarazpenak</strong></td><td>Alerta bidaltzen denean berrespena erakusten du</td></tr>
+                    <tr><td><strong>SMS (Android soilik)</strong></td><td>Zure SIM txarteletik alertak bidaltzen ditu zuzenean</td></tr>
+                    <tr><td><strong>Telefonoaren egoera (Android soilik)</strong></td><td>Mugikorren erabilgarritasuna antzematen du atzerabide adimendunetarako</td></tr>
+                </tbody>
+            </table>
+            <p>Konfigurazioan zehar edozein baimen eman edo salta dezakezu eta geroago doi ditzakezu zure gailuaren sistemaren ezarpenetan.</p>
+        </section>
+
+        <!-- 2. Home Screen Overview -->
+        <section class="guide-section" id="home-screen">
+            <h2>2. Hasierako pantailaren ikuspegi orokorra</h2>
+            <p>Hasierako pantailak hiru orrialde ditu hatza ezkerrera edo eskuinera pasatuz nabiga dezakezu:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Orria</th>
+                        <th>Izena</th>
+                        <th>Deskribapena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>← Ezkerra</td>
+                        <td><strong>Check-in tenporizadorea</strong></td>
+                        <td>Dead man's switch timer (Premium soilik)</td>
+                    </tr>
+                    <tr>
+                        <td>Zentroa</td>
+                        <td><strong>Izu modua</strong></td>
+                        <td>SOS eta Ados nago botoi handiak — lehenetsiak</td>
+                    </tr>
+                    <tr>
+                        <td>Eskuin →</td>
+                        <td><strong>Modu estandarra</strong></td>
+                        <td>Aurrez konfiguratutako alerta-mezuen zirrikituak</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Aplikazioa izu moduan irekitzen da beti (erdiko orrialdea).</p>
+        </section>
+
+        <!-- 3. Panic Mode -->
+        <section class="guide-section" id="panic-mode">
+            <h2>3. Izu modua</h2>
+            <p>Orrialde nagusia erraztasun handiena lortzeko diseinatuta dago, larrialdietarako eta erabiltzaile nagusientzat aproposa.</p>
             <ul>
-                <li><strong>SMS (Android soilik):</strong> zure telefonoaren SIM txarteletik mezu zuzenak bidaltzeko behar dira.</li>
-                <li><strong>Kokapena:</strong> Zure GPS koordenatuak alerta-mezuan sartu behar dira.</li>
-                <li><strong>Mikrofonoa:</strong> beharrezkoa da ahotsa grabatzeko eginbidea erabiltzen baduzu alerta-mezua transkribatzeko.</li>
-                <li><strong>Kontaktuak:</strong> Zure telefonoko helbide-liburuko hartzaileak erraz hautatzeko behar dira.</li>
+                <li>SOS botoia — "SOS, laguntza behar dut" alerta bidaltzen du zure kokapenarekin.</li>
+                <li>Ados nago botoia — "Ongi nago" egoera lasaigarria bidaltzen die kontaktu guztiei.</li>
+                <li>Ahots-botoiak — sakatu SOS alboko mikrofonoaren ikonoa edo Ados nago ahots-mezu bat grabatzeko. Zure diskurtsoa testura transkribatzen da eta alertan sartzen da.</li>
+                <li>Larrialdi-deiak botoia — zure tokiko larrialdi-zenbakia (adibidez, 112, 911) markatzen du berehala, zure herrialdeko ezarpenaren arabera.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Standard Mode -->
+        <section class="guide-section" id="standard-mode">
+            <h2>4. Modu Estandarra</h2>
+            <p>Irristatu Izu-modutik eskuinera Modu Estandarra sartzeko. Orrialde honek aurrez konfiguratutako alerta tarteen zerrenda erakusten du.</p>
+            <ul>
+                <li>Testu-zerbitzuak — Gehienez 7 mezu-zerbitzu pertsonalizagarri (lehenetsia: 3). Sakatu edozein zirrikitu mezua editatzeko. Sakatu emoji ikonoa bere botoiaren ikonoa aldatzeko.</li>
+                <li>Ahotsaren zirrikitua — beti eskuragarri azken zirrikitua. Ukitu ezazu ahots-mezu bat denbora errealean grabatzeko; transkribatutako testua alerta gisa bidaltzen da.</li>
+            </ul>
+            <p>Ikusgai dauden testu zirrikituen kopurua Ezarpenak > Konfiguratutako alerta-kopurua atalean doi daiteke.</p>
+        </section>
+
+        <!-- 5. Managing Recipients -->
+        <section class="guide-section" id="recipients">
+            <h2>5. Hartzaileak kudeatzea</h2>
+            <p>Sakatu goiko tresna-barrako jendearen ikonoa Hartzaileak pantaila irekitzeko.</p>
+            <ul>
+                <li>Gehitu eskuz: ukitu Gehitu eta idatzi telefono-zenbaki bat nazioarteko formatuan (adibidez, +31600000000).</li>
+                <li>Gehitu Kontaktuetatik — sakatu kontaktuen ikonoa telefonoaren helbide-liburutik zuzenean hautatzeko.</li>
+                <li>Gehitu posta elektronikoa — aukeran gehitu helbide elektroniko bat hartzaile bakoitzari, posta elektronikoa erredundatzeko.</li>
+                <li>Kendu — irristatu hatza edo ukitu edozein kontaktuen ondoan dagoen ezabatzeko ikonoa.</li>
             </ul>
             <blockquote class="alert-note">
-                <strong>OHARRA:</strong> iOS-en, <span class="notranslate" translate="no">direct SMS</span> bidalketa sistemak ez du onartzen alerta automatikoetarako. behar <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong> metodoa erabiltzen duzu.
+                <p>Doako maila: hartzaile bat gehienez. Premium: 50 hartzaile gehienez.</p>
+                <p>iOS aholkua: Kontaktu batzuk bakarrik ikusten badituzu, joan Ezarpenak > Pribatutasuna > Kontaktuak > TapAlert eta hautatu Kontaktu guztiak.</p>
             </blockquote>
         </section>
 
-        <section class="guide-section">
-            <h2>2. 📱 Interfaze moduak</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span>-k bi interfaze modu desberdin eskaintzen ditu zure beharretara egokitzeko. Haien artean alda dezakezu <strong>Ezarpenak > Interfaze modua</strong>n.</p>
-
-            <h3><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span> / Ados)</h3>
-            <p>Soiltasun eta irisgarritasun handiena lortzeko diseinatutako interfaze erraztua, adineko erabiltzaileentzat edo estres handiko egoeretarako aproposa.</p>
+        <!-- 6. Sending an Alert -->
+        <section class="guide-section" id="sending">
+            <h2>6. Alerta bat bidaltzea</h2>
+            <ol>
+                <li>Ireki aplikazioa (edo sakatu hasierako pantailako widget-a).</li>
+                <li>Sakatu alerta-botoia (SOS, Ondo nago edo Modu Estandarreko zirrikitua).</li>
+                <li>Atzerako kontaketa konfiguratuta badago, elkarrizketa-koadro bat agertuko da bertan behera uzteko denbora emango dizu.</li>
+                <li>Aplikazioak zure uneko GPS kokapena lortzen du eta mezua eraikitzen du.</li>
+                <li>Alerta-soinua bidaltzen duzun bitartean erreproduzitzen da.</li>
+                <li>Egoera-txosten bat erakusten da hartzaile bakoitzeko arrakasta edo hutsegite xehetasunekin.</li>
+            </ol>
+            <p>Alerta-mezuak honako hauek ditu:</p>
             <ul>
-                <li><strong><span class="notranslate" translate="no">SOS</span> Botoi handia:</strong> berehala hasten da "<span class="notranslate" translate="no">SOS</span>, laguntza behar dut" alerta baten atzerako kontaketa.</li>
-                <li><strong>Ongi nago botoia:</strong> azkar bidaltzen du "Ongi nago" egoera-eguneratzea kontaktuak lasaitzeko.</li>
-                <li><strong>Ahots-botoiak:</strong> atal bakoitzak ha gisa ahotsbotoia eskainitako audio-transkripzioa grabatzeko eta bidaltzeko <span class="notranslate" translate="no">SOS</span> edo Ados egoerarekin batera.</li>
-                <li><strong>Larrialdietarako deitzeko botoia:</strong> zure kokapenaren arabera tokiko larrialdi zerbitzuetara (adibidez, 112, 911) berehala deitzeko botoia dedikatu bat.</li>
-            </ul>
-
-            <h3>Txosten modua (fitxak)</h3>
-            <p>Modu lehenetsia, malgutasuna eskaintzen du hainbat mezu motarekin.</p>
-            <ul>
-                <li><strong>4 Mezuen fitxa:</strong> aldez aurretik konfiguratu alerta desberdinak (adibidez, "Medikua", "Autoko arazoak", "Generikoa").</li>
-                <li><strong>Testu pertsonalizagarria:</strong> sakatu mezu-koadroaren barruan edukia berehala editatzeko.</li>
-                <li><strong>Ahotsaren transkripzioa:</strong> Erabili mikrofonoa mezu pertsonalizatu bat diktatzeko.</li>
+                <li>Zure izena (Ezarpenetan ezarrita badago)</li>
+                <li>Mezuaren testua</li>
+                <li>Google Maps-en esteka bat zure uneko kokapenerako</li>
+                <li>Zure bateria-maila</li>
             </ul>
         </section>
 
-        <section class="guide-section">
-            <h2>3. 📝 Konfiguratu aurrez zehaztutako mezuak (Txosten modua)</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> aurrez zehaztutako 4 mezu-tarte (fitxa) ditu, alerta-egoera ezberdinetatik azkar aldatzeko aukera ematen dutenak.</p>
-
-            <h3>Editatuing Mezuak</h3>
-            <ol>
-                <li><strong>Hautatu fitxa bat:</strong> sakatu goiko aldean dagoen zenbakidun fitxetako bat (1-3).</li>
-                <li><strong>Editatu Testua:</strong> sakatu mezu-koadroaren barruan zure alerta-mezu pertsonalizatua idazteko (adibidez, "Larrialdi medikoa", "Autoaren arazoak").</li>
-                <li><strong>Gorde automatikoki:</strong> zure aldaketak automatikoki gordetzen dira idazten duzun bitartean.</li>
-                <li><strong>Diktaketa:</strong> Zure mezua diktatzeko diktaketa ikonoa ere erabil dezakezu.</li>
-            </ol>
-
-            <h3>🎙️ Ahotsaren alerta azkarraren mezua</h3>
-            <p>Zure ahotsa erabil dezakezu alerta-testua denbora errealean sortzeko. Egoera zehatz bat azkar deskribatzeko erabilgarria da. Mezua 4. fitxan gordeko da.</p>
-            <ol>
-                <li><strong>Sakatu Mikrofonoa gorriabotoia:</strong> aktibo dagoenean <strong>pultsatzen</strong> hasiko da.</li>
-                <li><strong>Esan zure mezua:</strong> beheko egoera-barra <strong>laranja argia</strong> bihurtuko da eta soinu-uhinaren ikurra erakutsiko du entzuten duzun bitartean.</li>
-                <li><strong>Eguneratze automatikoa eta berehalako bidalketa:</strong> berriro hitz egin edo mikrofonoabotoia sakatu ondoren, mezuaren testua eguneratuko da eta <strong>BIDALI ALERTA</strong> berehala piztuko da. <strong>BIDALI ALERTA</strong>botoia zuzenean saka dezakezu grabatzen ari zaren bitartean; Aplikazioak grabazioa automatikoki geldituko du eta transkribatutako mezua berehala gorde eta bidaliko du.</li>
-            </ol>
+        <!-- 7. Countdown Dialog -->
+        <section class="guide-section" id="countdown">
+            <h2>7. Atzerako kontaketa elkarrizketa</h2>
+            <p>Bidali aurretik, TapAlert-ek atzerako kontaketa bat erakusten du ustekabeko alertak saihesteko.</p>
+            <ul>
+                <li>Iraupena lehenetsia: 10 segundo. 0tik (berehala) 30 segundora doi daiteke Ezarpenak > Atzerako kontuaren iraupena atalean.</li>
+                <li>Utzi: ukitu UTZEZ Atzerako kontaketa zehar edozein unetan bertan behera uzteko.</li>
+                <li>Bidali berehala: sakatu BIDALI ORAIN geratzen den atzerapena saltatzeko.</li>
+            </ul>
         </section>
 
-        <section class="guide-section">
-            <h2>4. 👥 Hartzaileak konfiguratu/kudeatzea</h2>
-            <p>Hau <strong>Hartzaileen pantaila</strong> dedikatuan egiten da, hasierako pantailaren goiko barratik atzitzeko:</p>
+        <!-- 8. Check-in Timer -->
+        <section class="guide-section" id="checkin-timer">
+            <h2>8. Check-in tenporizadorea (Premium)</h2>
+            <p>Check-in tenporizadorea hildakoen etengailua da: ez baduzu bertan behera uzten garaiz, TapAlert-ek automatikoki alerta bat bidaltzen du. Baliagarria ibilaldietarako, bakarrik bidaiatzeko edo erantzutea uzten baduzu norbait jakinaraztea nahi duzun edozein egoeratan.</p>
+
+            <h3>Hasteko:</h3>
             <ol>
-                <li><strong>Ireki hartzaileak:</strong> sakatu <strong>Pertsonen/Taldearen ikonoa</strong> (👥) goiko eskuineko tresna-barran.</li>
-                <li><strong>Gehitu zenbakia:</strong>
+                <li>Irristatu hatza ezkerrera fakturazio-tenporizadorea orrira.</li>
+                <li>Erabili gurpil-hautatzaileak iraupena (orduak eta minutuak) ezartzeko.</li>
+                <li>Aukeran, idatzi mezu pertsonalizatu bat.</li>
+                <li>Sakatu Hasi tenporizadorea.</li>
+            </ol>
+
+            <h3>Korrika bitartean:</h3>
+            <ul>
+                <li>Tenporizadoreak atzerako kontaketa egiten du pantailan.</li>
+                <li>5 minutu baino gutxiago geratzen direnean, TapAlert-ek abisu-soinu bat erreproduzitzen du eta elkarrizketa-koadro bat erakusten du:
                     <ul>
-                        <li>Sakatu <strong>"Gehitu"</strong>botoia telefono-zenbaki bat eskuz sartzeko.</li>
-                        <li>Sakatu <strong>Kontaktua ikonoa</strong> telefonoaren helbide-liburutik zuzenean zenbaki bat hautatzeko.</li>
+                        <li>Utzi — baztertu abisua eta utzi tenporizadoreak aurrera egiten.</li>
+                        <li>Gelditu — bertan behera utzi tenporizadorea (ez da alertarik bidaliko).</li>
+                        <li>Berrabiarazi — berrezarri tenporizadorea jatorrizko iraupenera.</li>
                     </ul>
                 </li>
-                <li><strong>Formatua:</strong> Erabili <strong>E.164 nazioarteko formatua</strong> (adibidez, <code>+34600000000</code>) emaitza onenak lortzeko.</li>
-                <li><strong>Kendu:</strong> sakatu ezabatzeko ikonoa zerrendako edozein zenbakiren ondoan dagoena kentzeko. "Guztia ezabatu" ere egin dezakezu goiko aldean dagoen zakarrontziaren ikonoa erabiliz.</li>
+                <li>Tenporizadorea zerora iristen bada gelditu edo berrezarri gabe, alerta automatikoki bidaliko da.</li>
+            </ul>
+
+            <blockquote class="alert-warning">
+                <p>Android: tenporizadorea lehen planoko zerbitzu gisa exekutatzen da eta aktibo jarraitzen du aplikazioa atzeko planoan dagoenean edo pantaila itzalita dagoenean.</p>
+                <p>iOS: baliteke tenporizadorea ez abiatzea aplikazioa indarrez ixten bada. Mantendu aplikazioa atzeko planoan martxan.</p>
+            </blockquote>
+        </section>
+
+        <!-- 9. Alert History -->
+        <section class="guide-section" id="history">
+            <h2>9. Alertaren historia</h2>
+            <p>Sakatu goiko tresna-barrako erlojuaren ikonoa zure alerta-historia ikusteko.</p>
+            <ul>
+                <li>Alerta bakoitzaren denbora-zigilua, mezua eta entrega-metodoa erakusten ditu.</li>
+                <li>Sakatu edozein sarrera hartzaile bakoitzeko arrakasta/hutsegiteko xehetasunak eta erroreen informazioa lortzeko.</li>
+                <li>Doako maila: azken 20 alertak gordetzen ditu. Premium: 200 denda gehienez.</li>
+                <li>Ezabatu banakako sarrerak edo garbitu historia guztia zakarrontziaren ikonotik.</li>
+            </ul>
+        </section>
+
+        <!-- 10. Settings -->
+        <section class="guide-section" id="settings">
+            <h2>10. Ezarpenak</h2>
+            <p>Sakatu engranajearen ikonoa Ezarpenak irekitzeko.</p>
+
+            <h3>SMS metodoa</h3>
+            <h4>Android:</h4>
+            <ul>
+                <li>Zuzeneko SMSa — zure SIM txartelaren bidez bidaltzen du, ez da Internet behar. Mugikorra erabilgarri dagoenean hobesten da.</li>
+                <li>Twilio — Twilio APIaren bidez bidaltzen du Internet bidez (Wi-Fi edo datuak). Errepide automatiko gisa erabiltzen da SMS zuzenak huts egiten badu.</li>
+            </ul>
+            <h4>iOS:</h4>
+            <ul>
+                <li>iOS Mezuak (eskuz) — aurrez betetako jatorrizko Mezuak aplikazioa irekitzen du. Bidali eskuz ukitzen duzu. Ez da Twilio konturik behar.</li>
+                <li>Twilio (Automatikoa) - Twilio APIaren bidez automatikoki bidaltzen du. Twilio kontua behar du.</li>
+            </ul>
+            <blockquote class="alert-note">
+                <p>Twilio konfiguratzeko argibideak ikusteko, ikusi Twilio Gida Laguntza menuan.</p>
+            </blockquote>
+
+            <h3>Posta elektronikoaren erredundantzia</h3>
+            <p>Konfiguratu SMTP posta elektronikoa SMSez gain posta elektroniko bidez alertak bidaltzeko. Erabilgarria SMS erabilgarri ez dagoenean baina Wi-Fi konektatuta dagoenean.</p>
+            <ol>
+                <li>Joan Ezarpenak > Posta elektronikoaren erredundantzia.</li>
+                <li>Gaitu posta elektronikoaren erredundantzia.</li>
+                <li>Hautatu aurrez ezarritako hornitzaile bat (Gmail, Outlook, Yahoo, iCloud) edo idatzi SMTP xehetasun pertsonalizatuak.</li>
+                <li>Sartu zure helbide elektronikoa eta aplikazioaren pasahitz bat (pasahitz nagusiaren gainetik gomendatua).</li>
+                <li>Ukitu Probatu posta elektronikoaren konexioa egiaztatzeko, bertan fidatu aurretik.</li>
             </ol>
+            <p>Mezuak helbide elektroniko bat gordeta duen zure zerrendako edozein hartzaileri bidaltzen dira.</p>
+
+            <h3>Kokapena</h3>
+            <ul>
+                <li>Sartu kokapena — GPS koordenatuak eransten ditu (Google Maps esteka) alerta guztietan.</li>
+                <li>Sartu helbidea — zure koordenatuetatik kale-helbide bat ebazten ere saiatzen da.</li>
+            </ul>
+
+            <h3>Trigger metodoa</h3>
+            <ul>
+                <li>Ukitu bidaltzeko — ukitu bakar batek atzerako kontaketa hasten du.</li>
+                <li>Eduki sakatuta (5s) — botoia 5 segundoz eduki behar duzu. Ustekabeko bidalketak saihesteko gomendatua.</li>
+            </ul>
+
+            <h3>Alerta atzerako kontaketa</h3>
+            <p>Ezarri alerta bidali aurretik atzerapena (0-30 segundo). Atzerako kontaketa luzeago batek denbora gehiago ematen dizu bertan behera uzteko, akats baten ondorioz abiarazten bada.</p>
+
+            <h3>Soinu ezarpenak</h3>
+            <ul>
+                <li>Aukeratu Soinu arruntak edo Soinu aberatsak (edo Bat ere ez).</li>
+                <li>Soinu-eredua: hautatu alerta azkarra, bip laburrak, txirrin musikala, sirena deigarria, pultsu-dei-jotzea, tutu organoa, eraztun metalikoa edo erlauntza elektronikoa.</li>
+                <li>Soinuaren tonua: baxua, estandarra edo altua.</li>
+                <li>Bolumena — egokitu graduatzailearekin.</li>
+                <li>SOS eta I'm OK alertek soinu eredu independenteak dituzte.</li>
+            </ul>
+
+            <h3>Beste ezarpen batzuk</h3>
+            <ul>
+                <li>Zure izena — irteerako mezuetan sartzen da hartzaileek alerta nork bidali duen jakin dezaten.</li>
+                <li>Atzerako kontuaren iraupena — bidali aurretik atzeratzea (ikus goian).</li>
+                <li>Konfiguratutako alerta-kopurua: modu estandarrean zenbat testu-tarte agertzen diren (3–7).</li>
+                <li>Abiarazi automatikoki abiaraztean: atzerako kontaketa berehala abiarazten du aplikazioa irekitzen denean. Gaitu hau TapAlert lasterbide fisiko baten bidez abiarazten baduzu soilik.</li>
+                <li>Flash on Alert — Pantaila eta linterna keinu egiten ditu alerta bat bidaltzen denean.</li>
+                <li>Jatorrizko herrialdea: tokiko telefono-zenbakiak behar bezala formateatu direla ziurtatzen du.</li>
+                <li>Aplikazioaren hizkuntza — gainidatzi interfazearen hizkuntza (lehenetsia: gailuaren hizkuntza).</li>
+                <li>Aplikazioaren gaia — Argia, Iluna edo Sistemaren lehenetsia.</li>
+            </ul>
+        </section>
+
+        <!-- 11. Home Screen Widget -->
+        <section class="guide-section" id="widget">
+            <h2>11. Hasierako pantailaren widgeta (Android)</h2>
+            <p>Gehitu TapAlert widget bat zure Android-en hasierako pantailan ukitu bakarrean sartzeko aplikazioa ireki gabe.</p>
+
+            <h3>Gehitzeko:</h3>
+            <ol>
+                <li>Joan Ezarpenak > Widget > Gehitu widget-era.</li>
+                <li>Aukeratu Estandarra (1x1) ikono trinko baterako edo Handia (2x2) ikusgarritasun handiagoa izateko.</li>
+                <li>Jarraitu pantailako argibideei hasierako pantailan jartzeko.</li>
+            </ol>
+
+            <h3>Nola funtzionatzen du:</h3>
+            <ul>
+                <li>Widgeta sakatuz gero, aplikazioa irekitzen da eta berehala hasten da alerta atzerako kontaketa.</li>
+                <li>Soinua erreproduzitzen da eta atzerako kontaketa elkarrizketa-koadroa agertzen da; hala ere, bertan behera utz dezakezu akats baten ondorioz abiarazten bada.</li>
+            </ul>
+        </section>
+
+        <!-- 12. Making Alerts Stand Out -->
+        <section class="guide-section" id="stand-out">
+            <h2>12. Hartzaileen telefonoetan alertak nabarmentzea</h2>
+            <p>Hartzaileek telefonoak konfigura ditzakete TapAlert mezuei dei-tonu berezi bat emateko edo Ez molestatu saihesteko.</p>
+
+            <h3>iPhone hartzaileak:</h3>
+            <ol>
+                <li>Ireki Kontaktuak eta aurkitu zure sarrera.</li>
+                <li>Ukitu Editatu > Testu-tonua.</li>
+                <li>Gaitu Larrialdi Saihespena: honek isiltasun modua eta Ez molestatu saihesten ditu.</li>
+                <li>Aukeratu tonu ozen eta bereizgarria.</li>
+            </ol>
+
+            <h3>Android hartzaileak:</h3>
+            <ol>
+                <li>Ireki Mezuak aplikazioa eta bilatu elkarrizketa.</li>
+                <li>Ukitu menua > Xehetasunak > Jakinarazpenak.</li>
+                <li>Ezarri lehentasuna Altua edo Premiazkoa.</li>
+                <li>Gaitu Gainditzea Ez molestatu.</li>
+            </ol>
+
             <blockquote class="alert-tip">
-                <strong>AHOLKUA: Ezin dituzu zure kontaktu guztiak ikusi?</strong>
-                <ul>
-                    <li><strong>iOS:</strong> "Hautatu Kontaktuak..." (Sarbide mugatua) aukeratzen baduzu, aplikazioak hautatu dituzun gutxi batzuk bakarrik ikusiko ditu. Hau konpontzeko, joan <strong>iPhone ezarpenak > Pribatutasuna eta segurtasuna > Kontaktuak > <span class="notranslate" translate="no">TapAlert</span></strong> atalera eta hautatu <strong>"Guztiak Kontaktuak"</strong>.</li>
-                    <li><strong>Android:</strong> Baimenak "dena ala ezer" dira. Sarbidea ukatu baduzu, hautatzailea hutsik egongo da. Ziurtatu aplikazioak "Kontaktuak" baimena du zure telefonoko aplikazioen ezarpenetan.</li>
-                </ul>
+                <p>Twilio erabiltzen? Zure kontaktuek zure Twilio zenbakitik edo igorlearen IDtik (adibidez, TapAlert) mezuak jasoko dituzte. Zenbaki/ID hori bere kontaktuetan gehitu beharko lukete goiko ezarpenak aplikatzeko.</p>
             </blockquote>
         </section>
 
-        <section class="guide-section">
-            <h2>5. ⚙️ Konfigurazio aukerak</h2>
-            <p>Sartu ezarpenen menura engranajearen ikonoaren bidez ⚙️ alerta-mezuaren testua eta SMSak bidaltzeko metodoa gehiago pertsonalizatzeko.</p>
-
-            <h3>SMSak bidaltzeko metodoak</h3>
-            <p>Aplikazioak mezuak bidaltzeko bi modu onartzen ditu:</p>
-            <ul>
-                <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> (Android):</strong> zure telefonoaren SIM txartela erabiltzen du. Kostua zure mugikorreko operadore planaren araberakoa da.</li>
-                <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS (Android eta iOS):</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> APIa erabiltzen du Internet bidez (Wi-Fi/Datuak). Fidagarria eta iOS-erako beharrezkoa.</li>
-            </ul>
-
-            <h3><span class="notranslate" translate="no">Erredundantzia adimenduna</span> (Android soilik)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> ezaugarriak <strong><span class="notranslate" translate="no">Erredundantzia adimenduna</span></strong> sistema automatikoki aldatzen duena metodo nagusiak huts egiten badu:</p>
-            <ul>
-                <li><strong>Seinalerik ez?</strong> <span class="notranslate" translate="no">Direct SMS</span> bat bidaltzen saiatzen bazara baina ez baduzu estaldura mugikorra (adibidez, eraikin baten barruan), aplikazioa automatikoki saiatuko da <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Wi-Fi) bidez bidaltzen.</li>
-                <li><strong>Ez dago daturik?</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> nagusi gisa erabiltzen baduzu baina gabe 4G/5G ibiltzen ari bazara, aplikazioak automatikoki <span class="notranslate" translate="no">fallback</span> bidaliko du <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>.</li>
-            </ul>
-            <p><strong>Gaitzeko:</strong> Joan Ezarpenak atalera eta aktibatu <strong>"<span class="notranslate" translate="no">Erredundantzia adimenduna</span>"</strong>.</p>
-
-            <h3>Posta elektronikoaren erredundantzia (Wi-Fi <span class="notranslate" translate="no">Erabakia</span>)</h3>
-            <p>Telefono mugikorren seinalerik ez baduzu baina Wi-Fira konektatuta bazaude, <span class="notranslate" translate="no">TapAlert</span>-k zure alerta posta elektroniko bidez bidal dezake.</p>
-            <ul>
-                <li><strong>Konfigurazioa:</strong> joan <strong>Ezarpenak > Posta elektronikoaren erredundantzia</strong> atalera. Argibide zehatzak lortzeko, ikusi <strong>6. kapitulua: Posta elektronikoaren erredundantzia konfiguratzea</strong>.</li>
-                <li><strong>Automatika <span class="notranslate" translate="no">Erabakia</span>:</strong> gaituta dagoenean, aplikazioak posta elektronikoko alerta bat bidaltzen saiatuko da <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> eta <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (telefono mugikorra) huts egiten badute.</li>
-            </ul>
-
-            <h3>Abiarazte metodoa (Sakatu eta eutsi)</h3>
-            <p>Saihestu ustekabeko abiarazteak <strong>Ezarpenak > Abiarazte metodoa</strong>n alerta nola aktibatzen den aldatuz:</p>
-            <ul>
-                <li><strong>Sakatu bidaltzeko (lehenetsia):</strong> alertabotoia sakatu bakar batek atzerako kontaketa abiarazten du.</li>
-                <li><strong>Eutsi sakatuta (5s):</strong> behar mantentzen duzu alertabotoia 5 segundo etengabez atzerako kontaketa abiarazteko. Hau gomendatzen da alarma faltsuak saihesteko.</li>
-            </ul>
-
-            <blockquote class="alert-important">
-                <strong>GARRANTZITSUA: iOS erabiltzaileak</strong><br> Zuk behar <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> kontua konfiguratzen duzu.<br> 👉 <strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> konfigurazio argibide zehatzak lortzeko, ikusi "<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Gida" bereizia Laguntza menuan.</strong>
-            </blockquote>
-
-            <h3>Abiarazi automatikoki abiaraztean</h3>
-            <p>Abiarazi automatikoki alerta atzerako kontaketa berehala aplikazioa irekitzen denean.</p>
-            <ul>
-                <li><strong>Erabilera:</strong> Izu fisikoabotoia sortzeko (hardwarearen teklaren birmapping erabiliz) edo abiarazteko lasterbide bizkor bat sortzeko.</li>
-                <li><strong>Abisua:</strong> gaituta dagoenean, aplikazioa irekitzeak atzerako kontaketa abiaraziko du beti. Atzerapen epean bertan behera utzi dezakezu.</li>
-            </ul>
-
-            <h3>Kokapena mezua</h3>
-            <ul>
-                <li><strong>Sartu Kokapena:</strong> erantsi GPS koordenatuak mezuari.</li>
-                <li><strong>Sartu helbidea:</strong> Saia zaitez koordenatuak gizakiek irakurtzeko moduko helbide batean bihurtzen.</li>
-            </ul>
-
-            <h3>Ezarpen gehigarriak</h3>
-            <ul>
-                <li><strong>Igorlearen identitatea:</strong> (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> soilik) Aukeratu igorle gisa agertzen den izena edo zenbakia (adibidez, "Alerta" edo zure <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> zenbaki zehatza).</li>
-                <li><strong>Itxura:</strong> aldatu argi modua, modu iluna edo jarraitu sistemaren ezarpenak.</li>
-                <li><strong>Aplikazioa Hizkuntza:</strong> eskuz gainidatzi aplikazioaren hizkuntza (lehenetsia: Sistema Hizkuntza).</li>
-                <li><strong>Eskualdea eta formatua:</strong> ezarri zure eskualdea telefono-zenbakiek formateatu zuzena dutela ziurtatzeko (adibidez, herrialde-kodeak automatikoki gehitzea).</li>
-                <li><strong>Jakinarazpen-soinua:</strong> aukeratu mezua ongi bidali ondoren jotzen den alerta-soinua.</li>
-            </ul>
+        <!-- 13. Remote Setup (Magic Link) -->
+        <section class="guide-section" id="magic-link">
+            <h2>13. Urruneko konfigurazioa (Magic Link)</h2>
+            <p>Familiako kide edo zaintzaileak TapAlert zure gailuan urrunetik konfiguratu dezake Magic Link bat erabiliz.</p>
+            <p>Zaintzaileak TapAlert irekitzen du, Konfiguratu beste norbaitentzat hautatzen du, kontaktuak, mezu-txantiloiak eta Twilio/posta elektronikoaren aukerako kredentzialak betetzen ditu, eta konfigurazio-esteka bat sortzen du. Zure gailuan esteka hori ukitzen duzunean, TapAlert-ek automatikoki aplikatzen du konfigurazio osoa.</p>
+            <p>Horrek esan nahi du teknologian aditua den familiako kide batek dena konfigura dezakeela bertan egon beharrik gabe; esteka bat sakatu besterik ez duzu.</p>
         </section>
 
-        <section class="guide-section">
-            <h2>6. 📧 Posta elektronikoaren erredundantzia konfiguratzea</h2>
-            <p>Telefono mugikorren seinalerik ez baduzu baina Wi-Fira konektatuta bazaude, <span class="notranslate" translate="no">TapAlert</span>-k zure alerta posta elektroniko bidez bidal dezake.</p>
-
-            <h3>Konfigurazio Argibideak</h3>
-            <ol>
-                <li><strong>Ireki ezarpenak:</strong> sakatu engranajearen ikonoa ⚙️ eta hautatu <strong>E-posta erredundantzia</strong>.</li>
-                <li><strong>Gaitu eginbidea:</strong> Aktibatu <strong>Gaitu posta elektronikoaren erredundantzia</strong> aukeran.</li>
-                <li><strong>SMTP konfigurazioa:</strong> Sartu zure posta-hornitzailearen SMTP xehetasunak:
-                    <ul>
-                        <li><strong>SMTP ostalaria:</strong> (adibidez, <code>smtp.gmail.com</code> Gmail-erako, <code>smtp-mail.outlook.com</code> Outlook-erako).</li>
-                        <li><strong>SMTP ataka:</strong> (adibidez, <code>587</code> edo <code>465</code>).</li>
-                        <li><strong>Erabiltzaile-izena / Helbide elektronikoa:</strong> zure helbide elektroniko osoa.</li>
-                        <li><strong>Pasahitza / Aplikazioaren pasahitza:</strong> zure posta elektronikoko pasahitza edo aplikazioaren pasahitz esklusibo bat.</li>
-                    </ul>
-                </li>
-            </ol>
-
-            <h3>⚡ Konfigurazio azkarra (hornitzaile arruntak)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span>-k posta elektronikoko hornitzaile ezagunentzako aurrez ezarritakobotoiaak biltzen ditu. Besterik gabe, ukitu aurrezarpen batbotoia SMTP ostalariaren eta atakaren ezarpenak automatikoki betetzeko:</p>
-            <ul>
-                <li><strong>Gmail</strong> (smtp.gmail.com:587)</li>
-                <li><strong>Outlook</strong> (smtp-mail.outlook.com:587)</li>
-                <li><strong>Yahoo</strong> (smtp.mail.yahoo.com:587)</li>
-                <li><strong>iCloud</strong> (smtp.mail.me.com:587)</li>
-            </ul>
-            <p>Aurrez ezarritako bat ukitu ondoren, zure helbide elektronikoa eta aplikazioaren pasahitza soilik sartu behar dituzu (ikus behean).</p>
-
-            <blockquote class="alert-important">
-                <strong>GARRANTZITSUA: Aplikazioen pasahitzak hornitzaileen espezifikoak dira</strong><br> Posta elektronikoaren hornitzaile bakoitzak bere aplikazioaren pasahitz sistema du. Ezin duzu Gmail aplikazioaren pasahitza erabili Outlook-ekin, edo alderantziz. behar erabiltzen ari zaren hornitzailearentzat berariazko aplikazioaren pasahitza sortzen duzu.
-            </blockquote>
-
-            <h3>🔒 Aplikazioen pasahitzak erabiltzea (gomendatua)</h3>
-            <p>Segurtasuna eta fidagarritasuna lortzeko, <strong>Aplikazioaren pasahitza</strong> erabiltzea gomendatzen dugu zure pasahitz nagusiaren ordez.</p>
-            <ul>
-                <li><strong>Zergatik?</strong> Bi faktoreko autentifikazioa saihesten du eta zure kontua nagusia seguru mantentzen du.</li>
-            </ul>
-
-            <h4>Gmail</h4>
-            <ol>
-                <li>Joan zure <strong>Google kontua > Segurtasuna</strong> edo <a href="https://mykontua.google.com/apppasswords" target="_blank">https://mykontua.google.com/apppasswords</a>.</li>
-                <li>Bilatu <strong>"Aplikazioen pasahitzak"</strong> (bi urratseko egiaztapena gaituta behar da).</li>
-                <li>Sortu pasahitz berri bat "Besteak" eta deitu "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Erabili <span class="notranslate" translate="no">TapAlert</span> atalean emandako 16 karaktereko kodea (hutsuneak barne).</li>
-            </ol>
-
-            <h4>Outlook / Hotmail / Live</h4>
-            <ol>
-                <li>Joan <strong>Microsoft kontua > Segurtasuna > Segurtasun aukera aurreratuak</strong> edo <a href="https://kontua.live.com/names/manage" target="_blank">https://kontua.live.com/names/manage</a>.</li>
-                <li><strong>"Aplikazioen pasahitzak"</strong> atalean, sortu aplikazioaren pasahitz berri bat.</li>
-                <li>Hautatu "Besteak" eta izendatu "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Erabili sortutako pasahitza <span class="notranslate" translate="no">TapAlert</span> atalean.</li>
-            </ol>
-
-            <h4>Yahoo</h4>
-            <ol>
-                <li>Joan <strong>Yahoo kontuaren segurtasuna</strong> edo <a href="https://login.yahoo.com/kontua/security" target="_blank">https://login.yahoo.com/kontua/security</a>.</li>
-                <li>Hautatu <strong>"Sortu aplikazioaren pasahitza"</strong>.</li>
-                <li>Aukeratu "Beste aplikazioa" eta izendatu "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Erabili sortutako pasahitza <span class="notranslate" translate="no">TapAlert</span> atalean.</li>
-            </ol>
-
-            <h4>iCloud</h4>
-            <ol>
-                <li>Joan <strong>appleid.apple.com > Saioa hasi eta segurtasuna > Aplikazioen pasahitz espezifikoak</strong> edo <a href="https://appleid.apple.com/kontua/manage" target="_blank">https://appleid.apple.com/kontua/manage</a>.</li>
-                <li>Sakatu <strong>+</strong>botoia pasahitz berri bat sortzeko.</li>
-                <li>Izena "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Erabili sortutako pasahitza <span class="notranslate" translate="no">TapAlert</span> atalean.</li>
-            </ol>
-
-            <h3>Hartzaileak</h3>
-            <p>Helbide elektronikoa gordeta duten <strong>Hartzaileak</strong> zerrendako kontaktu guztiei bidaliko zaizkie mezu elektronikoak. Kontaktu bati mezu elektroniko bat gehitzeko:</p>
-            <ol>
-                <li>Joan <strong>Hartzaileak</strong> pantailara.</li>
-                <li>Editatu kontaktu bat eta ziurtatu posta elektronikoaren eremua beteta dagoela.</li>
-            </ol>
-
-            <h3>🧪 Probak</h3>
-            <p>Horretan fidatu aurretik, sakatu <strong>Probatu konexioa</strong>. Sartu helbide elektroniko bat proba-mezu bat jasotzeko. Arrakasta bada, zure konfigurazioa zuzena da.</p>
+        <!-- 14. Premium Upgrade -->
+        <section class="guide-section" id="premium">
+            <h2>14. Premium Upgrade</h2>
+            <p>Eginbide batzuek Premium-eko bertsio berritzea eskatzen dute (harpidetzarik gabe):</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ezaugarri</th>
+                        <th>Doan</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Hartzaileak</td><td>1</td><td>50 arte</td></tr>
+                    <tr><td>Alertaren historia</td><td>20 sarrera</td><td>200 sarrera</td></tr>
+                    <tr><td>Check-in tenporizadorea</td><td>None</td><td>✓</td></tr>
+                </tbody>
+            </table>
+            <p>Ukitu Berritu hartzaileen pantailan edo tenporizadorearen orrian. Beste gailu batean Premium erosi baduzu, sakatu Berrezarri erosketak.</p>
         </section>
 
-        <section class="guide-section">
-            <h2>7. 📱 Hasierako pantailaren widgeta (Android soilik)</h2>
-            <p>Larrialdi-abisu azkarragoak lortzeko, widget bat gehi dezakezu zure Android hasierako pantailan:</p>
-
-            <h3>Widget-a gehitzea</h3>
-            <ol>
-                <li><strong>Ireki ezarpenak:</strong> sakatu engranajearen ikonoa ⚙️ aplikazioan.</li>
-                <li><strong>Bilatu widget-a:</strong> joan behera "Widget" atala.</li>
-                <li><strong>Sakatu "Gehitu":</strong> sistemak widget-a hasierako pantailan jartzeko eskatuko dizu.</li>
-                <li><strong>Kokatu widget-a:</strong> arrastatu nahi duzun tokira eta askatu.</li>
-            </ol>
-            <blockquote class="alert-note">
-                <strong>OHARRA:</strong> widget bat baduzu hasierako pantailan, zaharra kendu beharko duzu berria gehitu aurretik.
-            </blockquote>
-
-            <h3>Widget-a erabiliz</h3>
-            <ul>
-                <li><strong>Sakatu widget-a:</strong> aplikazioa irekitzen du eta <strong>Atzerako kontaketa</strong> berehala hasten da.</li>
-                <li><strong>Aplikazioaren esperientzia:</strong> atzerako kontaketa elkarrizketa-koadroa ikusiko duzu, alerta nahita dagoela ziurtatuz. Hutsez sakatzen baduzu bertan behera utzi dezakezu.</li>
-                <li><strong>Soinua:</strong> aplikazioak abisu-tonu entzungarri bat jotzen du atzerako kontaketa egiten duen bitartean.</li>
-            </ul>
-            <blockquote class="alert-tip">
-                <strong>AHOLKUA:</strong> widget-a ezin hobea da benetako larrialdietarako alerta bat ukitu bakar batekin bidali behar duzunean, gabe aplikazioa zure tiraderan aurkituz.
-            </blockquote>
-        </section>
-
-        <section class="guide-section">
-            <h2>8. 🚀 Alerta bat bidaltzea</h2>
-            <ol>
-                <li><strong>Ireki Aplikazioa.</strong></li>
-                <li><strong>Aktibatu alerta:</strong>
-                    <ul>
-                        <li><strong>Txosten moduan:</strong> sakatu <strong>BIDALI ALERTA</strong>botoia gorri handia. (1-4) fitxetan hautatutako mezua bidaliko da.</li>
-                        <li><strong><span class="notranslate" translate="no">Panic Mode</span>-n:</strong>
-                            <ul>
-                                <li>Sakatu <strong><span class="notranslate" translate="no">SOS</span></strong> botoia gorri handia "Beharrezko laguntza" alerta bidaltzeko.</li>
-                                <li>Sakatu <strong>Mikrofonoaren ikonoa</strong> (<span class="notranslate" translate="no">SOS</span>-ren beheko eskuinean) ahots-mezu zehatz bat grabatzeko eta bidaltzeko zure <span class="notranslate" translate="no">SOS</span> alertarekin.</li>
-                                <li>Sakatu berdea <strong>Ondo nago</strong>botoia "Ondo nago" egoera lasaigarria bidaltzeko.</li>
-                                <li>Sakatu <strong>Mikrofonoaren ikonoa</strong> (Ondo nagoen beheko eskuinaldean) zure Ados egoerarekin ahots-mezu bat grabatzeko eta bidaltzeko.</li>
-                                <li>Sakatu <strong>Larrialdi-deia</strong>botoia tokiko larrialdi-zerbitzuak berehala markatzeko.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>Aplikazioak hau egingo du:</strong>
-                    <ul>
-                        <li>Lortu zure uneko kokapena (konfiguratuta badago).</li>
-                        <li>Erakutsi <strong>Atzerako kontaketa elkarrizketa</strong> (ikus behean "Atzerako kontaketa" elkarrizketa).</li>
-                        <li>Bidali alerta-mezua hartzaile guztiei.</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-
-        <section class="guide-section">
-            <h2>9. ⏱️ Atzerako kontaketa elkarrizketa</h2>
-            <p>Ustekabeko alertak saihesteko, <span class="notranslate" translate="no">TapAlert</span>-k atzerako kontaketa bat erakusten du bidali aurretik.</p>
-            <ul>
-                <li><strong>Atzerako kontuaren iraupena:</strong> lehenespenez, aplikazioak <strong>10 segundo</strong> itxarongo du. Hau pertsonaliza dezakezu <strong>Ezarpenak</strong>n (<strong>0s</strong>etik <strong>30s</strong> arte berehala bidaltzeko).</li>
-                <li><strong>Utzi gabe uztea:</strong> <strong>UZTEZ</strong> sakatu dezakezu atzerako kontaketa bitartean alerta geldiarazteko.</li>
-            </ul>
-        </section>
-
-        <section class="guide-section">
-            <h2>10. 🔔 Alerta SMSak nabarmentzea</h2>
-            <p>Zure larrialdietako kontaktuek beste jakinarazpenen artean zure alerta-mezua galdu ez dezaten, haien telefonoak konfiguratzea gomendatzen dugu zure <span class="notranslate" translate="no">TapAlert</span> zenbakiko mezuak modu ezberdinean tratatzeko.</p>
-
-            <h3>iPhone Hartzaileentzat</h3>
-            <ol>
-                <li><strong>Ireki Kontaktuak:</strong> Hautatu zure kontaktuaren sarrera.</li>
-                <li><strong>Esleitu Larrialdi Saihesbidea:</strong> Sakatu <strong>Editatu</strong> > <strong>Dei-tonua</strong> (edo Testu-tonua) eta aktibatu <strong>Larrialdi Saihesbidea</strong>. Honek soinuak/bibrazioak ahalbidetzen ditu, nahiz eta telefonoa Isilik edo Ez molestatu.</li>
-                <li><strong>Tonu pertsonalizatua:</strong> Aukeratu soinu ozen eta bereizgarri bat zure mezuetarako.</li>
-            </ol>
-
-            <h3>Android Hartzaileentzat</h3>
-            <ol>
-                <li><strong>Ireki mezuak:</strong> Hautatu zurekin elkarrizketa.</li>
-                <li><strong>Jakinarazpen-kategoriak:</strong> Sakatu <strong>Xehetasunak</strong> > <strong>Jakinarazpenak</strong>.</li>
-                <li><strong>Ezarri "Premiazkoa" gisa:</strong> Aldatu lehentasuna <strong>"Altua"</strong> edo <strong>"Premiazkoa"</strong>.</li>
-                <li><strong>Gainidatzi DND:</strong> Ziurtatu <strong>"Ez ikusi ez molestatu"</strong> gaituta dago elkarrizketa honetarako.</li>
-                <li><strong>Soinu pertsonalizatua:</strong> Aukeratu lehentasun handiko alerta-soinu bat.</li>
-            </ol>
-            <blockquote class="alert-note">
-                <strong>OHARRA: <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> erabiltzen?</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> bidez alertak bidaltzen badituzu, zure kontaktuek zure <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> zenbakitik edo ID alfanumeriko batetik jasoko dute mezua (adibidez, "<span class="notranslate" translate="no">TapAlert</span>"). Haiek <strong>behar</strong> gehitu zenbaki/ID hau kontaktuen zerrendan goiko ezarpenek behar bezala funtziona dezaten. Bestela, mezua oraindik ere entregatuko da bainaa gisaSMS estandarra gabe lehentasunezko jakinarazpenik.
-            </blockquote>
-        </section>
-
-        <section class="guide-section">
-            <h2>11. 🕰️ Alertaren historia</h2>
-            <p>Bidalitako larrialdi abisuen jarraipena egiteko:</p>
-            <ol>
-                <li><strong>Sakatu Historiaren ikonoa:</strong> goiko barran dagoen erlojuaren ikonoa 🕰️.</li>
-                <li><strong>Ikusi azken alertak:</strong> aplikazioak bidalitako azken <strong>50 abisu</strong>en erregistroa mantentzen du.</li>
-                <li><strong>Egiaztatu egoera:</strong> sakatu edozein sarrera zehatz-mehatz zein hartzaileek jaso duten mezua ongi eta zeinek huts egin duen (erroreen xehetasunekin).</li>
-                <li><strong>Garbitu historia:</strong> erregistro guztiak ezaba ditzakezu historia pantailaren barruan dagoen zakarrontziaren ikonoa 🗑️ sakatuta.</li>
-            </ol>
-        </section>
-
+        <!-- 15. Troubleshooting -->
         <section class="guide-section" id="troubleshooting">
-            <h2>12. ❓ Arazoak konpontzea</h2>
-            <ul>
-                <li><strong>Mezua ez da bidaltzen (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>):</strong> egiaztatu zure mugikorraren seinalea eta operadorearen kreditua (Android soilik).</li>
-                <li><strong>Mezua ez da bidaltzen (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>):</strong> Egiaztatu Interneteko konexioa eta egiaztatu zure kredentzialak ezarpenetan.</li>
-                <li><strong>Kokapena falta da:</strong> Ziurtatu GPS gaituta dago telefonoaren sistemaren ezarpenetan eta aplikazioak Kokapena baimena du.</li>
-                <li><strong>Kontaktuak falta da (iOS):</strong> Joan Ezarpenak > Pribatutasuna > Kontaktuak > <span class="notranslate" translate="no">TapAlert</span> eta ziurtatu <strong>"Kontaktuak guztiak"</strong> markatuta dagoela.</li>
-                <li><strong>Kontaktuak falta da (Android):</strong> joan Ezarpenak > Aplikazioak > <span class="notranslate" translate="no">TapAlert</span> > Baimenak eta ziurtatu <strong>"Kontaktuak"</strong> baimenduta dagoela.</li>
-            </ul>
-        </section>
-
-        <section class="guide-section">
-            <h2>13. ⏳ Check-in tenporizadorea</h2>
-            <p><strong>Fakturatzeko tenporizadorea</strong> "inaktibo" segurtasun-eginbide bat da. Arriskutsua izan daitekeen jarduera bat hastean tenporizadore bat ezartzeko aukera ematen du (adibidez, etxera bakarrik ibiltzea, ibilaldi bat egitea).</p>
-            <ol>
-                <li><strong>Hasi tenporizadorea:</strong> Hautatu iraupena (5 minututik 24 ordura arte) eta aukerako mezu bat.</li>
-                <li><strong>Atzerako kontaketa:</strong> jakinarazpen iraunkor batek geratzen den denbora erakutsiko dizu.</li>
-                <li><strong>Hasiera:</strong> behar aplikaziora itzultzen zara eta sakatu <strong>"Ondo nago (berrezarri)"</strong> tenporizadorea iraungi baino lehen.</li>
-                <li><strong>Alerta automatikoa:</strong> <em>ez baduzu</em> tenporizadorea berrezartzen zerora iritsi baino lehen, <span class="notranslate" translate="no">TapAlert</span> automatikoki bidaliko die zure alerta-mezua eta kokapena hartzaile guztiei.</li>
-            </ol>
-            <blockquote class="alert-tip">
-                <strong>TIP:</strong> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if
-                you become incapacitated or lose access to your phone.
-            </blockquote>
+            <h2>15. Arazoak konpontzea</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Arazoa</th>
+                        <th>Irtenbidea</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Alerta ez bidaltzen (SMS zuzena)</td><td>Egiaztatu seinale mugikorra eta SIM kredituak</td></tr>
+                    <tr><td>Alerta ez da bidali (Twilio)</td><td>Egiaztatu Interneteko konexioa eta Twilio-ko kredentzialak Ezarpenak atalean</td></tr>
+                    <tr><td>Kokapena falta da</td><td>Gaitu GPS sistemaren ezarpenetan eta eman Kokapen-baimena TapAlert-i</td></tr>
+                    <tr><td>Helbidea ez da agertzen</td><td>Gaitu Sartu helbidea Ezarpenetan; Internet behar du geokodetzeko</td></tr>
+                    <tr><td>Kontaktuak ez dira agertzen (iOS)</td><td>Ezarpenak > Pribatutasuna > Kontaktuak > TapAlert > Kontaktu guztiak</td></tr>
+                    <tr><td>Kontaktuak ez dira agertzen (Android)</td><td>Ezarpenak > Aplikazioak > TapAlert > Baimenak > gaitu Kontaktuak</td></tr>
+                    <tr><td>Tenporizadorea ez da pizten (iOS)</td><td>Mantendu TapAlert irekita atzeko planoan; baliteke tenporizadorea ez abiatzea aplikazioa indarrez ixten bada</td></tr>
+                    <tr><td>Erakutsitako hizkuntza okerra</td><td>Ezarpenak > Aplikazioaren hizkuntza — hautatu eskuz nahi duzun hizkuntza</td></tr>
+                </tbody>
+            </table>
         </section>
 
     </main>

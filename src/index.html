@@ -1428,7 +1428,7 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">{{ pricing_h2 }}</h2>
-            <p class="section-subtitle">{{ pricing_subtitle }}</p>
+            <p class="section-subtitle">{{ pricing_subtitle }}<br>{{ pricing_subtitle_2 }}</p>
 
             <div class="pricing-cards">
                 <div class="pricing-card">
@@ -1567,6 +1567,14 @@
             <p class="section-subtitle">{{ guides_subtitle }}</p>
 
             <div class="features-grid">
+                <a href="user_guide.html" style="text-decoration: none; color: inherit;">
+                    <div class="feature-card" style="height: 100%;">
+                        <div class="feature-icon">📖</div>
+                        <h3>{{ guide_ug_title }}</h3>
+                        <p>{{ guide_ug_desc }}</p>
+                    </div>
+                </a>
+
                 <a href="quickstart_android.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">🚀</div>

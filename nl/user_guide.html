@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/user_guide.html">
+    <link rel="alternate" hreflang="de" href="https://tapalert.app/de/user_guide.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/user_guide.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/user_guide.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/user_guide.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/user_guide.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/user_guide.html">
+    <link rel="alternate" hreflang="it" href="https://tapalert.app/it/user_guide.html">
+    <link rel="alternate" hreflang="nl" href="https://tapalert.app/nl/user_guide.html">
+    <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/user_guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/user_guide.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapAlert - Gebruikershandleiding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-intro {
+            font-size: 1.2rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        blockquote {
+            padding: 20px;
+            background: #f8fafc;
+            border-left: 5px solid #cbd5e0;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+        }
+
+        blockquote p + p {
+            margin-top: 10px;
+        }
+
+        .alert-note {
+            background-color: #ebf8ff;
+            border-left-color: #4299e1;
+            color: #2b6cb0;
+        }
+
+        .alert-tip {
+            background-color: #f0fff4;
+            border-left-color: #48bb78;
+            color: #2f855a;
+        }
+
+        .alert-warning {
+            background-color: #fffff0;
+            border-left-color: #ecc94b;
+            color: #744210;
+        }
+
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e53e3e;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            .brand-logo { font-size: 1.2rem; }
+            .btn { padding: 8px 16px; font-size: 0.85rem; }
+            .guide-container { padding: 20px; margin: 20px; }
+            .guide-title { font-size: 1.8rem; padding-bottom: 15px; margin-bottom: 15px; }
+            .guide-intro { font-size: 1.05rem; margin-bottom: 30px; }
+            h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; }
+            h3 { font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px; }
+            h4 { font-size: 1rem; }
+            p, li { font-size: 0.9rem; }
+            blockquote { padding: 15px; margin: 15px 0; }
+            code { font-size: 0.85rem; }
+            .guide-section { margin-bottom: 30px; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 8px 10px; }
+            footer { padding: 40px 15px 20px; margin-top: 40px; }
+            .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .footer-section h3 { font-size: 1rem; margin-bottom: 12px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 430px) {
+            body { font-size: 13px; }
+            .brand-logo { font-size: 1.1rem; }
+            .btn { padding: 7px 14px; font-size: 0.8rem; }
+            .guide-container { padding: 15px; margin: 12px; }
+            .guide-title { font-size: 1.5rem; padding-bottom: 12px; }
+            .guide-intro { font-size: 0.95rem; margin-bottom: 25px; }
+            h2 { font-size: 1.3rem; margin-top: 25px; padding-left: 10px; border-left-width: 4px; }
+            h3 { font-size: 1.05rem; }
+            h4 { font-size: 0.95rem; }
+            p, li { font-size: 0.85rem; }
+            blockquote { padding: 12px; }
+            code { font-size: 0.8rem; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 6px 8px; }
+            footer { padding: 30px 12px 15px; margin-top: 30px; }
+            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            .footer-section h3 { font-size: 0.95rem; margin-bottom: 10px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">NL</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/user_guide.html" hreflang="ca">CA</a>
+            <a href="../de/user_guide.html" hreflang="de">DE</a>
+            <a href="../user_guide.html" hreflang="en">EN</a>
+            <a href="../es/user_guide.html" hreflang="es">ES</a>
+            <a href="../eu/user_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/user_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/user_guide.html" hreflang="gl">GL</a>
+            <a href="../it/user_guide.html" hreflang="it">IT</a>
+            <a href="../nl/user_guide.html" hreflang="nl" class="active">NL</a>
+            <a href="../pt/user_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Terug naar Gidsen</a>
+
+        <h1 class="guide-title">Gebruikershandleiding: <span class="notranslate" translate="no">TapAlert</span></h1>
+        <p class="guide-intro">Een app voor persoonlijke veiligheid die met één tik sms- en e-mailwaarschuwingen naar uw contacten voor noodgevallen stuurt met uw GPS-locatie.</p>
+
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h3>Inhoud</h3>
+            <ol>
+                <li><a href="#permissions">Eerste lancering: machtigingen</a></li>
+                <li><a href="#home-screen">Overzicht startscherm</a></li>
+                <li><a href="#panic-mode">Paniekmodus</a></li>
+                <li><a href="#standard-mode">Standaardmodus</a></li>
+                <li><a href="#recipients">Ontvangers beheren</a></li>
+                <li><a href="#sending">Een waarschuwing verzenden</a></li>
+                <li><a href="#countdown">Afteldialoog</a></li>
+                <li><a href="#checkin-timer">Inchecktimer (Premium)</a></li>
+                <li><a href="#history">Waarschuwingsgeschiedenis</a></li>
+                <li><a href="#settings">Instellingen</a></li>
+                <li><a href="#widget">Widget voor het startscherm (Android)</a></li>
+                <li><a href="#stand-out">Zorg ervoor dat waarschuwingen opvallen op de telefoons van ontvangers</a></li>
+                <li><a href="#magic-link">Installatie op afstand (Magic Link)</a></li>
+                <li><a href="#premium">Premium-upgrade</a></li>
+                <li><a href="#troubleshooting">Problemen oplossen</a></li>
+            </ol>
+        </nav>
+
+        <!-- 1. Permissions -->
+        <section class="guide-section" id="permissions">
+            <h2>1. Eerste lancering: machtigingen</h2>
+            <p>Bij de eerste keer opstarten leidt TapAlert u door een scherm voor het instellen van machtigingen. Verleen het volgende voor volledige functionaliteit:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Toestemming</th>
+                        <th>Waarom het nodig is</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Locatie</strong></td><td>Bevat uw GPS-coördinaten en adres in waarschuwingen</td></tr>
+                    <tr><td><strong>Microfoon / Toespraak</strong></td><td>Maakt spraak-naar-tekst mogelijk voor aangepaste waarschuwingsberichten</td></tr>
+                    <tr><td><strong>Contacten</strong></td><td>Hiermee kunt u ontvangers uit het adresboek van uw telefoon kiezen</td></tr>
+                    <tr><td><strong>Meldingen</strong></td><td>Toont bevestiging wanneer een waarschuwing wordt verzonden</td></tr>
+                    <tr><td><strong>SMS (alleen Android)</strong></td><td>Verzendt waarschuwingen rechtstreeks vanaf uw simkaart</td></tr>
+                    <tr><td><strong>Telefoonstatus (alleen Android)</strong></td><td>Detecteert mobiele beschikbaarheid voor slimme fallback</td></tr>
+                </tbody>
+            </table>
+            <p>U kunt tijdens de installatie toestemming verlenen of overslaan en deze later aanpassen in de systeeminstellingen van uw apparaat.</p>
+        </section>
+
+        <!-- 2. Home Screen Overview -->
+        <section class="guide-section" id="home-screen">
+            <h2>2. Overzicht startscherm</h2>
+            <p>Het startscherm heeft drie pagina's waar u doorheen kunt navigeren door naar links of rechts te vegen:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pagina</th>
+                        <th>Naam</th>
+                        <th>Beschrijving</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>← Links</td>
+                        <td><strong>Inchecktimer</strong></td>
+                        <td>Dodemansschakelaar-timer (alleen Premium)</td>
+                    </tr>
+                    <tr>
+                        <td>Centrum</td>
+                        <td><strong>Paniekmodus</strong></td>
+                        <td>Grote SOS- en Ik ben OK-knoppen: de standaard</td>
+                    </tr>
+                    <tr>
+                        <td>Rechts →</td>
+                        <td><strong>Standaardmodus</strong></td>
+                        <td>Vooraf geconfigureerde slots voor waarschuwingsberichten</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>De app wordt altijd geopend in de paniekmodus (middelste pagina).</p>
+        </section>
+
+        <!-- 3. Panic Mode -->
+        <section class="guide-section" id="panic-mode">
+            <h2>3. Paniekmodus</h2>
+            <p>De centrale pagina is ontworpen voor maximale eenvoud – ideaal voor noodgevallen en senior gebruikers.</p>
+            <ul>
+                <li>SOS-knop — verzendt een waarschuwing "SOS, ik heb hulp nodig" met uw locatie.</li>
+                <li>Knop 'Ik ben OK': stuurt een geruststellende 'Ik ben OK'-status naar alle contacten.</li>
+                <li>Spraakknoppen: tik op het microfoonpictogram naast SOS of Ik ben oké om een ​​spraakbericht op te nemen. Uw toespraak wordt naar tekst getranscribeerd en opgenomen in de waarschuwing.</li>
+                <li>Noodoproepknop — belt onmiddellijk uw lokale alarmnummer (bijvoorbeeld 112, 911), op basis van uw landinstelling.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Standard Mode -->
+        <section class="guide-section" id="standard-mode">
+            <h2>4. Standaardmodus</h2>
+            <p>Veeg vanuit de paniekmodus naar rechts om de standaardmodus te openen. Deze pagina toont een lijst met vooraf geconfigureerde waarschuwingsslots.</p>
+            <ul>
+                <li>Tekstvakken — maximaal 7 aanpasbare berichtvakken (standaard: 3). Tik op een willekeurige plek om het bericht te bewerken. Tik op het emoji-pictogram om het knoppictogram te wijzigen.</li>
+                <li>Spraakslot — altijd beschikbaar als laatste slot. Tik erop om in realtime een spraakbericht op te nemen; de getranscribeerde tekst wordt als waarschuwing verzonden.</li>
+            </ul>
+            <p>Het aantal zichtbare tekstvakken kan worden aangepast in Instellingen > Aantal geconfigureerde waarschuwingen.</p>
+        </section>
+
+        <!-- 5. Managing Recipients -->
+        <section class="guide-section" id="recipients">
+            <h2>5. Ontvangers beheren</h2>
+            <p>Tik op het personenpictogram in de bovenste werkbalk om het scherm Ontvangers te openen.</p>
+            <ul>
+                <li>Handmatig toevoegen: tik op Toevoegen en voer een telefoonnummer in internationaal formaat in (bijvoorbeeld +31600000000).</li>
+                <li>Toevoegen uit contacten: tik op het contactenpictogram om rechtstreeks uit het adresboek van uw telefoon te kiezen.</li>
+                <li>E-mail toevoegen: voeg optioneel een e-mailadres toe aan elke ontvanger voor e-mailredundantie.</li>
+                <li>Verwijderen: veeg of tik op het verwijderpictogram naast een contact.</li>
+            </ul>
+            <blockquote class="alert-note">
+                <p>Gratis niveau: maximaal 1 ontvanger. Premium: maximaal 50 ontvangers.</p>
+                <p>iOS-tip: Als je maar een paar contacten ziet, ga dan naar Instellingen > Privacy > Contacten > TapAlert en selecteer Alle contacten.</p>
+            </blockquote>
+        </section>
+
+        <!-- 6. Sending an Alert -->
+        <section class="guide-section" id="sending">
+            <h2>6. Een waarschuwing verzenden</h2>
+            <ol>
+                <li>Open de app (of tik op uw startschermwidget).</li>
+                <li>Tik op de waarschuwingsknop (SOS, Ik ben in orde of een slot in de standaardmodus).</li>
+                <li>Als er een aftelling is geconfigureerd, verschijnt er een dialoogvenster waarin u de tijd heeft om te annuleren.</li>
+                <li>De app haalt uw huidige GPS-locatie op en bouwt het bericht op.</li>
+                <li>Het waarschuwingsgeluid wordt afgespeeld tijdens het verzenden.</li>
+                <li>Er wordt een statusrapport weergegeven met details over succes of mislukking per ontvanger.</li>
+            </ol>
+            <p>Het waarschuwingsbericht omvat:</p>
+            <ul>
+                <li>Uw naam (indien ingesteld in Instellingen)</li>
+                <li>De berichttekst</li>
+                <li>Een Google Maps-link naar uw huidige locatie</li>
+                <li>Uw batterijniveau</li>
+            </ul>
+        </section>
+
+        <!-- 7. Countdown Dialog -->
+        <section class="guide-section" id="countdown">
+            <h2>7. Afteldialoog</h2>
+            <p>Voordat TapAlert wordt verzonden, wordt er afgeteld om onbedoelde waarschuwingen te voorkomen.</p>
+            <ul>
+                <li>Standaardduur: 10 seconden. Instelbaar van 0 (onmiddellijk) tot 30 seconden in Instellingen > Aftelduur.</li>
+                <li>Annuleren: Tik op ANNULEREN op elk gewenst moment tijdens het aftellen om af te breken.</li>
+                <li>Direct verzenden: Tik op NU VERZENDEN om de resterende vertraging over te slaan.</li>
+            </ul>
+        </section>
+
+        <!-- 8. Check-in Timer -->
+        <section class="guide-section" id="checkin-timer">
+            <h2>8. Inchecktimer (Premium)</h2>
+            <p>De Check-in Timer is een dodemansschakelaar: als je hem niet op tijd annuleert, stuurt TapAlert automatisch een waarschuwing. Handig als u gaat wandelen, alleen reist of in elke situatie waarin u wilt dat iemand op de hoogte wordt gesteld als u niet meer reageert.</p>
+
+            <h3>Om te beginnen:</h3>
+            <ol>
+                <li>Veeg naar links naar de pagina Inchecktimer.</li>
+                <li>Gebruik de wielkiezers om een ​​duur in te stellen (uren en minuten).</li>
+                <li>Typ eventueel een aangepast bericht.</li>
+                <li>Tik op Timer starten.</li>
+            </ol>
+
+            <h3>Tijdens het hardlopen:</h3>
+            <ul>
+                <li>De timer telt af op het scherm.</li>
+                <li>Als er minder dan 5 minuten resteren, speelt TapAlert een waarschuwingsgeluid af en wordt een dialoogvenster weergegeven:
+                    <ul>
+                        <li>Annuleren: negeer de waarschuwing en laat de timer doorgaan.</li>
+                        <li>Stoppen — de timer afbreken (er wordt geen waarschuwing verzonden).</li>
+                        <li>Opnieuw opstarten — reset de timer naar de oorspronkelijke duur.</li>
+                    </ul>
+                </li>
+                <li>Als de timer nul bereikt zonder te worden gestopt of gereset, wordt de waarschuwing automatisch verzonden.</li>
+            </ul>
+
+            <blockquote class="alert-warning">
+                <p>Android: De timer draait als voorgrondservice en blijft actief als de app op de achtergrond staat of het scherm uit staat.</p>
+                <p>iOS: De timer wordt mogelijk niet geactiveerd als de app geforceerd wordt gesloten. Houd de app actief op de achtergrond.</p>
+            </blockquote>
+        </section>
+
+        <!-- 9. Alert History -->
+        <section class="guide-section" id="history">
+            <h2>9. Waarschuwingsgeschiedenis</h2>
+            <p>Tik op het klokpictogram in de bovenste werkbalk om uw waarschuwingsgeschiedenis te bekijken.</p>
+            <ul>
+                <li>Toont tijdstempel, bericht en bezorgmethode voor elke waarschuwing.</li>
+                <li>Tik op een item voor details over succes/mislukking per ontvanger en foutinformatie.</li>
+                <li>Gratis niveau: slaat de laatste 20 waarschuwingen op. Premium: winkels tot 200.</li>
+                <li>Verwijder individuele vermeldingen of wis de hele geschiedenis via het prullenbakpictogram.</li>
+            </ul>
+        </section>
+
+        <!-- 10. Settings -->
+        <section class="guide-section" id="settings">
+            <h2>10. Instellingen</h2>
+            <p>Tik op het tandwielpictogram om Instellingen te openen.</p>
+
+            <h3>SMS-methode</h3>
+            <h4>Android:</h4>
+            <ul>
+                <li>Directe sms — verzonden via uw simkaart, geen internet nodig. Bij voorkeur wanneer mobiel beschikbaar is.</li>
+                <li>Twilio — verzendt via de Twilio API via internet (Wi-Fi of data). Wordt gebruikt als automatische terugval als Direct SMS mislukt.</li>
+            </ul>
+            <h4>iOS:</h4>
+            <ul>
+                <li>iOS-berichten (handmatig) — opent de native Berichten-app die vooraf is ingevuld. U tikt op Handmatig verzenden. Geen Twilio-account nodig.</li>
+                <li>Twilio (automatisch) — verzendt automatisch via de Twilio API. Vereist een Twilio-account.</li>
+            </ul>
+            <blockquote class="alert-note">
+                <p>Voor installatie-instructies voor Twilio raadpleegt u de Twilio-handleiding in het Help-menu.</p>
+            </blockquote>
+
+            <h3>E-mailredundantie</h3>
+            <p>Configureer SMTP-e-mail om naast sms ook waarschuwingen via e-mail te verzenden. Handig als SMS niet beschikbaar is, maar Wi-Fi is verbonden.</p>
+            <ol>
+                <li>Ga naar Instellingen > E-mailredundantie.</li>
+                <li>E-mailredundantie inschakelen.</li>
+                <li>Selecteer een vooraf ingestelde provider (Gmail, Outlook, Yahoo, iCloud) of voer aangepaste SMTP-gegevens in.</li>
+                <li>Voer uw e-mailadres en een app-wachtwoord in (aanbevolen in plaats van uw hoofdwachtwoord).</li>
+                <li>Tik op E-mailverbinding testen om te verifiëren voordat u erop vertrouwt.</li>
+            </ol>
+            <p>E-mails worden verzonden naar elke ontvanger in uw lijst die een e-mailadres heeft opgeslagen.</p>
+
+            <h3>Locatie</h3>
+            <ul>
+                <li>Locatie opnemen: voegt GPS-coördinaten (Google Maps-link) toe aan elke waarschuwing.</li>
+                <li>Adres opnemen — probeert ook een adres op te lossen op basis van uw coördinaten.</li>
+            </ul>
+
+            <h3>Trigger-methode</h3>
+            <ul>
+                <li>Tik om te verzenden: een enkele tik start het aftellen.</li>
+                <li>Ingedrukt houden (5s) — u moet de knop 5 seconden ingedrukt houden. Aanbevolen om onbedoelde verzendingen te voorkomen.</li>
+            </ul>
+
+            <h3>Alarm aftellen</h3>
+            <p>Stel de vertraging in voordat de waarschuwing wordt verzonden (0-30 seconden). Een langere aftelling geeft u meer tijd om te annuleren als deze per ongeluk wordt geactiveerd.</p>
+
+            <h3>Geluidsinstellingen</h3>
+            <ul>
+                <li>Kies tussen gewone geluiden of rijke geluiden (of geen).</li>
+                <li>Geluidspatroon — kies uit snelle waarschuwing, korte pieptonen, muzieksignaal, loeiende sirene, pulsgeluid, pijporgel, metalen ring of elektronische Hive.</li>
+                <li>Geluidshoogte — Laag, Standaard of Hoog.</li>
+                <li>Volume — pas aan met de schuifregelaar.</li>
+                <li>SOS- en Ik ben oké-waarschuwingen hebben onafhankelijke geluidspatronen.</li>
+            </ul>
+
+            <h3>Overige instellingen</h3>
+            <ul>
+                <li>Uw naam: opgenomen in uitgaande berichten, zodat ontvangers weten wie de waarschuwing heeft verzonden.</li>
+                <li>Aftelduur — vertraging vóór verzending (zie hierboven).</li>
+                <li>Aantal geconfigureerde waarschuwingen: hoeveel tekstvakken verschijnen in de standaardmodus (3–7).</li>
+                <li>Automatisch starten bij starten: activeert het aftellen onmiddellijk wanneer de app wordt geopend. Schakel dit alleen in als u TapAlert start via een fysieke knopsnelkoppeling.</li>
+                <li>Flitser bij waarschuwing: het scherm en de zaklamp laten knipperen wanneer er een waarschuwing wordt verzonden.</li>
+                <li>Thuisland — zorgt ervoor dat lokale telefoonnummers correct worden opgemaakt.</li>
+                <li>App-taal — overschrijf de interfacetaal (standaard: apparaattaal).</li>
+                <li>App-thema: Licht, Donker of Systeemstandaard.</li>
+            </ul>
+        </section>
+
+        <!-- 11. Home Screen Widget -->
+        <section class="guide-section" id="widget">
+            <h2>11. Widget op het startscherm (Android)</h2>
+            <p>Voeg een TapAlert-widget toe aan uw Android-startscherm voor toegang met één tik zonder de app te openen.</p>
+
+            <h3>Toevoegen:</h3>
+            <ol>
+                <li>Ga naar Instellingen > Widget > Widget toevoegen.</li>
+                <li>Kies Standaard (1x1) voor een compact pictogram of Groot (2x2) voor een betere zichtbaarheid.</li>
+                <li>Volg de instructies op het scherm om het op uw startscherm te plaatsen.</li>
+            </ol>
+
+            <h3>Hoe het werkt:</h3>
+            <ul>
+                <li>Als u op de widget tikt, wordt de app geopend en wordt onmiddellijk het aftellen van de waarschuwingen gestart.</li>
+                <li>Het geluid wordt afgespeeld en het afteldialoogvenster verschijnt. U kunt nog steeds annuleren als dit per ongeluk wordt geactiveerd.</li>
+            </ul>
+        </section>
+
+        <!-- 12. Making Alerts Stand Out -->
+        <section class="guide-section" id="stand-out">
+            <h2>12. Zorg ervoor dat waarschuwingen opvallen op de telefoons van ontvangers</h2>
+            <p>Uw ontvangers kunnen hun telefoons configureren om TapAlert-berichten een speciale beltoon te geven of Niet storen te omzeilen.</p>
+
+            <h3>iPhone-ontvangers:</h3>
+            <ol>
+                <li>Open Contacten en zoek uw invoer.</li>
+                <li>Tik op Bewerken > Teksttoon.</li>
+                <li>Noodbypass inschakelen: hiermee worden de Stille modus en Niet storen omzeild.</li>
+                <li>Kies een luide, onderscheidende toon.</li>
+            </ol>
+
+            <h3>Android-ontvangers:</h3>
+            <ol>
+                <li>Open de Berichten-app en zoek het gesprek.</li>
+                <li>Tik op het menu > Details > Meldingen.</li>
+                <li>Stel de prioriteit in op Hoog of Dringend.</li>
+                <li>Schakel 'Niet storen' in.</li>
+            </ol>
+
+            <blockquote class="alert-tip">
+                <p>Twilio gebruiken? Uw contacten ontvangen berichten van uw Twilio-nummer of afzender-ID (bijvoorbeeld TapAlert). Ze moeten dat nummer/ID aan hun contacten toevoegen om de bovenstaande instellingen toe te passen.</p>
+            </blockquote>
+        </section>
+
+        <!-- 13. Remote Setup (Magic Link) -->
+        <section class="guide-section" id="magic-link">
+            <h2>13. Installatie op afstand (Magic Link)</h2>
+            <p>Een familielid of verzorger kan TapAlert op afstand op uw apparaat configureren met behulp van een Magic Link.</p>
+            <p>De zorgverlener opent TapAlert, selecteert Instellen voor iemand anders, vult de contacten, berichtsjablonen en optionele Twilio/e-mailgegevens in en genereert vervolgens een configuratielink. Wanneer u op die link op uw apparaat tikt, past TapAlert automatisch de volledige configuratie toe.</p>
+            <p>Dit betekent dat een technisch onderlegd familielid alles kan instellen zonder dat hij aanwezig hoeft te zijn: u tikt gewoon op een link.</p>
+        </section>
+
+        <!-- 14. Premium Upgrade -->
+        <section class="guide-section" id="premium">
+            <h2>14. Premium-upgrade</h2>
+            <p>Voor sommige functies is een eenmalige Premium-upgrade vereist (geen abonnement):</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Functie</th>
+                        <th>Vrij</th>
+                        <th>Premie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ontvangers</td><td>1</td><td>Tot 50</td></tr>
+                    <tr><td>Waarschuwingsgeschiedenis</td><td>20 inzendingen</td><td>200 inzendingen</td></tr>
+                    <tr><td>Inchecktimer</td><td>None</td><td>✓</td></tr>
+                </tbody>
+            </table>
+            <p>Tik op Upgraden vanuit het ontvangersscherm of de timerpagina. Als je Premium al op een ander apparaat hebt gekocht, tik je op Aankopen herstellen.</p>
+        </section>
+
+        <!-- 15. Troubleshooting -->
+        <section class="guide-section" id="troubleshooting">
+            <h2>15. Problemen oplossen</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Probleem</th>
+                        <th>Oplossing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Waarschuwing wordt niet verzonden (directe sms)</td><td>Controleer het mobiele signaal en het SIM-tegoed</td></tr>
+                    <tr><td>Waarschuwing wordt niet verzonden (Twilio)</td><td>Controleer de internetverbinding en Twilio-inloggegevens in Instellingen</td></tr>
+                    <tr><td>Locatie ontbreekt</td><td>Schakel GPS in de systeeminstellingen in en verleen locatietoestemming aan TapAlert</td></tr>
+                    <tr><td>Adres wordt niet weergegeven</td><td>Schakel Adres opnemen in Instellingen in; vereist internet voor geocodering</td></tr>
+                    <tr><td>Contacten verschijnen niet (iOS)</td><td>Instellingen > Privacy > Contacten > TapAlert > Alle contacten</td></tr>
+                    <tr><td>Contacten verschijnen niet (Android)</td><td>Instellingen > Apps > TapAlert > Toestemmingen > Contacten inschakelen</td></tr>
+                    <tr><td>Timer werkt niet (iOS)</td><td>Houd TapAlert open op de achtergrond; de timer wordt mogelijk niet geactiveerd als de app geforceerd wordt gesloten</td></tr>
+                    <tr><td>Verkeerde taal weergegeven</td><td>Instellingen > App-taal — selecteer handmatig uw voorkeurstaal</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="index.html#features">Functies</a></li>
+                        <li><a href="index.html#pricing">Prijzen</a></li>
+                        <li><a href="index.html#download">Downloaden</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legaal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Privacybeleid</a></li>
+                        <li><a href="terms.html">Servicevoorwaarden</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Steun</h3>
+                    <ul>
+                        <li><a href="#">Veelgestelde vragen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
+                        <li><a href="troubleshooting.html">Problemen oplossen</a></li>
+                        <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="alternate" hreflang="ca" href="https://tapalert.app/ca/troubleshooting.html">
+    <link rel="alternate" hreflang="de" href="https://tapalert.app/de/troubleshooting.html">
+    <link rel="alternate" hreflang="en" href="https://tapalert.app/troubleshooting.html">
+    <link rel="alternate" hreflang="es" href="https://tapalert.app/es/troubleshooting.html">
+    <link rel="alternate" hreflang="eu" href="https://tapalert.app/eu/troubleshooting.html">
+    <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/troubleshooting.html">
+    <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/troubleshooting.html">
+    <link rel="alternate" hreflang="it" href="https://tapalert.app/it/troubleshooting.html">
+    <link rel="alternate" hreflang="nl" href="https://tapalert.app/nl/troubleshooting.html">
+    <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/troubleshooting.html">
+    <link rel="alternate" hreflang="x-default" href="https://tapalert.app/troubleshooting.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemen oplossen - TapAlert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        /* Reusing core styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Guide Specific Styles */
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box h4 {
+            margin-top: 0;
+            color: #c05621;
+        }
+
+        /* Step Card Styles */
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 6px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+
+        .step-card:hover {
+            transform: translateX(5px);
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .step-header h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .step-card p {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer Reuse */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        .toc {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .toc h4 {
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        /* Large phones */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .toc {
+                padding: 15px;
+                margin-bottom: 30px;
+            }
+
+            .toc h4 {
+                font-size: 0.95rem;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .toc a {
+                font-size: 0.88rem;
+            }
+
+            .step-card {
+                padding: 18px;
+                margin-bottom: 15px;
+            }
+
+            .step-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .step-card p {
+                font-size: 0.92rem;
+            }
+
+            .alert-box {
+                padding: 12px;
+                margin: 15px 0;
+            }
+
+            .alert-box h4 {
+                font-size: 0.95rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 430px) {
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            .toc {
+                padding: 12px;
+            }
+
+            .toc h4 {
+                font-size: 0.9rem;
+            }
+
+            .toc a {
+                font-size: 0.82rem;
+            }
+
+            .step-card {
+                padding: 14px;
+                border-left-width: 4px;
+            }
+
+            .step-card h3 {
+                font-size: 1rem;
+            }
+
+            .step-card p {
+                font-size: 0.85rem;
+            }
+
+            .alert-box {
+                padding: 10px;
+            }
+
+            .alert-box h4 {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="guide-header">
+        <div class="container guide-nav">
+            <a href="index.html" class="brand-logo">
+                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span class="notranslate" translate="no">TapAlert</span>
+            </a>
+            <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
+        
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
+
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">NL</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/troubleshooting.html" hreflang="ca">CA</a>
+            <a href="../de/troubleshooting.html" hreflang="de">DE</a>
+            <a href="../troubleshooting.html" hreflang="en">EN</a>
+            <a href="../es/troubleshooting.html" hreflang="es">ES</a>
+            <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
+            <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
+            <a href="../gl/troubleshooting.html" hreflang="gl">GL</a>
+            <a href="../it/troubleshooting.html" hreflang="it">IT</a>
+            <a href="../nl/troubleshooting.html" hreflang="nl" class="active">NL</a>
+            <a href="../pt/troubleshooting.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guide-container">
+        <a href="index.html#guides" class="back-link">← Terug naar Gidsen</a>
+
+        <h1 class="guide-title">Gids voor probleemoplossing</h1>
+
+        <p>Deze handleiding behandelt veelvoorkomende problemen en oplossingen voor <span class="notranslate" translate="no">TapAlert</span> op zowel Android als iOS.</p>
+
+        <nav class="toc">
+            <h4>Ga naar sectie:</h4>
+            <ul>
+                <li><a href="#sms">1. SMS-problemen</a></li>
+                <li><a href="#email">2. E-mailproblemen</a></li>
+                <li><a href="#location">3. Locatie Problemen</a></li>
+                <li><a href="#connectivity">4. Connectiviteit</a></li>
+                <li><a href="#timer">5. Inchecktimer</a></li>
+                <li><a href="#voice">6. Spraak-naar-tekst</a></li>
+                <li><a href="#contacts">7. Contacten</a></li>
+                <li><a href="#purchase">8. Aankopen</a></li>
+                <li><a href="#widget">9. Widgets</a></li>
+                <li><a href="#notifications">10. {{ sms_en_li2 }}</a></li>
+                <li><a href="#behavior">11. App-gedrag</a></li>
+                <li><a href="#ios">12. iOS-specifiek</a></li>
+                <li><a href="#android">13. Android Specifiek</a></li>
+                <li><a href="#tips">14. Algemene tips</a></li>
+            </ul>
+        </nav>
+
+        <section id="sms" class="guide-section">
+            <h2>1. Problemen met het verzenden van sms-berichten</h2>
+
+            <div class="step-card">
+                <h3>1.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Directe sms</span></span> Niet verzenden (Android)</h3>
+                <p><strong>Symptoom:</strong> u tikt op 'Waarschuwing verzenden', maar de sms mislukt. De waarschuwingsgeschiedenis toont een fout voor een of meer ontvangers.</p>
+                <ul>
+                    <li><strong>Geen mobiel signaal:</strong> controleer de statusbalk. De statuspagina in de app toont uw huidige mobiele status.</li>
+                    <li><strong>Geen simkaart:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Directe sms</span></span> vereist een werkende simkaart. Controleer de SIM-status op de statuspagina.</li>
+                    <li><strong>Rechten:</strong> Ervoor zorgen <strong>SMS</strong> toestemming is toegestaan ​​in de telefooninstellingen.</li>
+                    <li><strong>Ongeldig formaat:</strong> gebruik een internationaal formaat met landcode (bijvoorbeeld +34600123456).</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS wordt niet verzonden</h3>
+                <p><strong>Symptoom:</strong> waarschuwing mislukt met een <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> foutmelding.</p>
+                <ul>
+                    <li><strong>Internet vereist:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> heeft wifi of mobiele data nodig.</li>
+                    <li><strong>Inloggegevens:</strong> verifieer account-SID, auth-token en <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> telefoonnummer in Instellingen.</li>
+                    <li><strong>Proefbeperkingen:</strong> Proefperiodes van rekening kunnen alleen worden verzonden naar geverifieerd telefoonnummers.</li>
+                    <li><strong>Saldo:</strong> controleer uw <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> rekening saldo.</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h3>1.3 Problemen met iOS SMS Composer</h3>
+                <p><strong>Symptoom:</strong> op de iPhone wordt de SMS-componist geopend, maar het bericht wordt niet afgeleverd.</p>
+                <ul>
+                    <li><strong>Signaal:</strong> de Berichten-app heeft een mobiel signaal nodig (of bellen via WiFi indien actief).</li>
+                    <li><strong>Annulering:</strong> als u op Annuleren tikt in de componist, wordt de waarschuwing geannuleerd.</li>
+                    <li><strong>Ongeldig nummer:</strong> iOS zal het bericht in de wachtrij plaatsen en stilzwijgend mislukken. Controleer de Berichten-app op rode uitroeptekens.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="email" class="guide-section">
+            <h2>2. Problemen met e-mailredundantie</h2>
+            <div class="step-card">
+                <h3>2.1 E-mailtest mislukt</h3>
+                <ul>
+                    <li><strong>SMTP-instellingen:</strong> Controleer host en poort (Gmail/iCloud gebruiken 587).</li>
+                    <li><strong>App-wachtwoord:</strong> De meeste providers vereisen een <strong>App-wachtwoord</strong> als 2FA is ingeschakeld.</li>
+                    <li><strong>Internet:</strong> voor e-mail is een actieve gegevensverbinding vereist.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="location" class="guide-section">
+            <h2>3. Locatie Problemen</h2>
+            <div class="step-card">
+                <h3>3.1 Locatie Ontbreekt in waarschuwing</h3>
+                <ul>
+                    <li><strong>Rechten:</strong> Ervoor zorgen Locatie de rechten zijn ingesteld op "Tijdens gebruik" of "Altijd".</li>
+                    <li><strong>GPS uitgeschakeld:</strong> controleer of de telefoonlocatieservices zijn ingeschakeld.</li>
+                    <li><strong>Ontvangst:</strong> binnenshuis of in dichte gebieden kan een GPS-time-out optreden.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="connectivity" class="guide-section">
+            <h2>4. Connectiviteit en status</h2>
+            <div class="step-card">
+                <h3>4.2 Betekenissen van schildpictogrammen</h3>
+                <ul>
+                    <li><strong>Groen:</strong> klaar voor betrouwbare sms/<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> bezorging.</li>
+                    <li><strong>Oranje:</strong> Onzeker. Alleen WiFi, geen <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. Bellen via WiFi werkt mogelijk.</li>
+                    <li><strong>Rood:</strong> Verbinding verbroken. Zowel mobiel als wifi zijn uitgeschakeld.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="timer" class="guide-section">
+            <h2>5. Problemen met de inchecktimer</h2>
+            <div class="step-card">
+                <h3>5.1 Timer werkt niet</h3>
+                <ul>
+                    <li><strong>App gesloten:</strong> Vermijd het geforceerd sluiten van de app. Op iOS moeten tik je op de melding die je wilt activeren.</li>
+                    <li><strong>Batterijoptimalisatie:</strong> stel <span class="notranslate" translate="no">TapAlert</span> in op 'Onbeperkt' in de batterij-instellingen van Android.</li>
+                    <li><strong>Meldingen:</strong> Ervoor zorgen meldingsrechten zijn verleend.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="voice" class="guide-section">
+            <h2>6. Problemen met spraak-naar-tekst</h2>
+            <div class="step-card">
+                <h3>6.1 Spraakherkenning werkt niet</h3>
+                <ul>
+                    <li><strong>Rechten:</strong> Ervoor zorgen <strong>Microfoon</strong> en <strong>Spraakherkenning</strong> (iOS) rechten worden verleend.</li>
+                    <li><strong>Internet:</strong> de meeste herkenningsengines hebben een actieve verbinding nodig voor verwerking.</li>
+                    <li><strong>Fout Taal:</strong> De herkenning gebruikt de huidige taalinstelling van de app. Vink **Instellingen > Taal** aan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contacts" class="guide-section">
+            <h2>7. Problemen met Contacten en ontvangers</h2>
+            <div class="step-card">
+                <h3>7.1 Kan Contacten niet zien</h3>
+                <ul>
+                    <li><strong>iOS beperkte toegang:</strong> als je eerder "Selecteer Contacten..." hebt gekozen, ga dan naar **Instellingen > Privacy & Beveiliging > Contacten > <span class="notranslate" translate="no">TapAlert</span>** en wijzig dit in **"Alles Contacten"**.</li>
+                    <li><strong>Android Machtigingen:</strong> Ervoor zorgen **Contacten** de rechten zijn ingesteld op "Toestaan" in de systeeminstellingen.</li>
+                    <li><strong>Formaat:</strong> Ervoor zorgen getallen bevatten de landcode met een *++** voorvoegsel.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="purchase" class="guide-section">
+            <h2>8. Problemen met in-app-aankopen</h2>
+            <div class="step-card">
+                <h3>8.2 Gekocht maar toont nog steeds Vrij</h3>
+                <ul>
+                    <li><strong>Aankopen herstellen:</strong> tik in het upgradescherm op **Herstellen**knop om uw aankoop opnieuw te valideren bij de winkel.</li>
+                    <li><strong>Hetzelfde account:</strong> Ervoor zorgen je bent ingelogd bij dezelfde winkel rekening die werd gebruikt voor de oorspronkelijke aankoop.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="widget" class="guide-section">
+            <h2>9. Widgetproblemen (Android)</h2>
+            <div class="step-card">
+                <h3>9.1 Widget verschijnt niet</h3>
+                <ul>
+                    <li><strong>Handmatig toevoegen:</strong> Probeer de widget toe te voegen via **Instellingen > Widget > Toevoegen** in de app als deze niet verschijnt in de systeemwidgetkiezer.</li>
+                    <li><strong>Batterijoptimalisatie:</strong> Agressieve optimalisatie kan ervoor zorgen dat de widget de app niet correct start.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="notifications" class="guide-section">
+            <h2>10. Meldingsproblemen</h2>
+            <div class="step-card">
+                <h3>10.2 Ontvangers merken geen oproepen/sms op</h3>
+                <ul>
+                    <li><strong>iPhone:</strong> laat ontvangers **Noodbypass** inschakelen voor uw contactnummer.</li>
+                    <li><strong>Android:</strong> Laat ontvangers de meldingsprioriteit instellen op **"Hoog"** of **"Dringend"** voor uw berichten.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="behavior" class="guide-section">
+            <h2>11. Problemen met app-gedrag</h2>
+            <div class="step-card">
+                <h3>11.1 Alarm gaat onmiddellijk af bij openen</h3>
+                <p>Ga naar **Instellingen** en schakel **"Automatisch starten bij starten"** uit. Deze functie is bedoeld voor fysieke paniekknops.</p>
+            </div>
+        </section>
+
+        <section id="ios" class="guide-section">
+            <h2>12. iOS-specifieke problemen</h2>
+            <div class="step-card">
+                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> versus iOS-berichten</h3>
+                <ul>
+                    <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (automatisch):</strong> Stille verzending op de achtergrond, internet vereist.</li>
+                    <li><strong>iOS-berichten (Handmatig):</strong> vereist dat je op Verzenden tikt in de componist, werkt via mobiel.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="android" class="guide-section">
+            <h2>13. Android-Specifieke problemen</h2>
+            <div class="step-card">
+                <h3>13.1 Batterijoptimalisatie</h3>
+                <p>Sommige fabrikanten (Xiaomi, Samsung, Huawei) vereisen handmatige stappen om te voorkomen dat de app op de achtergrond wordt afgesloten. Controleer de batterij-instellingen van uw telefoon op **"Geen beperkingen"**.</p>
+            </div>
+        </section>
+
+        <section id="tips" class="guide-section">
+            <h2>14. Algemene tips</h2>
+            <div class="alert-box">
+                <h4>✅ Vóór een noodgeval</h4>
+                <ul>
+                    <li>Stuur een testwaarschuwing om de configuratie te verifiëren.</li>
+                    <li>Controleer de statuspagina voor connectiviteit.</li>
+                    <li>Ervoor zorgen alle rechten zijn verleend.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="notranslate" translate="no">TapAlert</span></h3>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="index.html#features">Functies</a></li>
+                        <li><a href="index.html#pricing">Prijzen</a></li>
+                        <li><a href="index.html#download">Downloaden</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legaal</h3>
+                    <ul>
+                        <li><a href="PRIVACY_POLICY.html">Privacybeleid</a></li>
+                        <li><a href="terms.html">Servicevoorwaarden</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Steun</h3>
+                    <ul>
+                        <li><a href="#">Veelgestelde vragen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
+                        <li><a href="troubleshooting.html">Problemen oplossen</a></li>
+                        <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

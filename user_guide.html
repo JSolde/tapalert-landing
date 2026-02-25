@@ -11,6 +11,7 @@
     <link rel="alternate" hreflang="fr" href="https://tapalert.app/fr/user_guide.html">
     <link rel="alternate" hreflang="gl" href="https://tapalert.app/gl/user_guide.html">
     <link rel="alternate" hreflang="it" href="https://tapalert.app/it/user_guide.html">
+    <link rel="alternate" hreflang="nl" href="https://tapalert.app/nl/user_guide.html">
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/user_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/user_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,6 @@
             background-color: #f8f9fa;
         }
 
-        /* Reusing core styles from index.html */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -59,7 +59,6 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Guide Specific Styles */
         .guide-header {
             background: white;
             padding: 20px 0;
@@ -109,6 +108,41 @@
             margin-bottom: 40px;
         }
 
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
         .guide-section {
             margin-bottom: 40px;
         }
@@ -141,8 +175,7 @@
             color: #4a5568;
         }
 
-        ul,
-        ol {
+        ul, ol {
             margin-bottom: 20px;
             padding-left: 20px;
             color: #4a5568;
@@ -164,7 +197,10 @@
             margin-bottom: 0;
         }
 
-        /* Alert Styles based on Blockquotes */
+        blockquote p + p {
+            margin-top: 10px;
+        }
+
         .alert-note {
             background-color: #ebf8ff;
             border-left-color: #4299e1;
@@ -175,12 +211,6 @@
             background-color: #f0fff4;
             border-left-color: #48bb78;
             color: #2f855a;
-        }
-
-        .alert-important {
-            background-color: #fff5f5;
-            border-left-color: #f56565;
-            color: #c53030;
         }
 
         .alert-warning {
@@ -206,7 +236,32 @@
             text-decoration: underline;
         }
 
-        /* Footer Reuse */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
         footer {
             background: #1a1a1a;
             color: white;
@@ -255,173 +310,47 @@
             color: #999;
         }
 
-        /* Large phones */
         @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            .brand-logo {
-                font-size: 1.2rem;
-            }
-
-            .btn {
-                padding: 8px 16px;
-                font-size: 0.85rem;
-            }
-
-            .guide-container {
-                padding: 20px;
-                margin: 20px;
-            }
-
-            .guide-title {
-                font-size: 1.8rem;
-                padding-bottom: 15px;
-                margin-bottom: 15px;
-            }
-
-            .guide-intro {
-                font-size: 1.05rem;
-                margin-bottom: 30px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                margin-top: 30px;
-                margin-bottom: 15px;
-                padding-left: 12px;
-            }
-
-            h3 {
-                font-size: 1.2rem;
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-
-            h4 {
-                font-size: 1rem;
-            }
-
-            p,
-            li {
-                font-size: 0.9rem;
-            }
-
-            blockquote {
-                padding: 15px;
-                margin: 15px 0;
-            }
-
-            code {
-                font-size: 0.85rem;
-            }
-
-            .guide-section {
-                margin-bottom: 30px;
-            }
-
-            footer {
-                padding: 40px 15px 20px;
-                margin-top: 40px;
-            }
-
-            .footer-content {
-                gap: 25px;
-                margin-bottom: 25px;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-
-            .footer-section h3 {
-                font-size: 1rem;
-                margin-bottom: 12px;
-            }
-
-            .footer-section a,
-            .footer-section p,
-            .footer-bottom p {
-                font-size: 0.85rem;
-            }
+            body { font-size: 14px; }
+            .brand-logo { font-size: 1.2rem; }
+            .btn { padding: 8px 16px; font-size: 0.85rem; }
+            .guide-container { padding: 20px; margin: 20px; }
+            .guide-title { font-size: 1.8rem; padding-bottom: 15px; margin-bottom: 15px; }
+            .guide-intro { font-size: 1.05rem; margin-bottom: 30px; }
+            h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; }
+            h3 { font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px; }
+            h4 { font-size: 1rem; }
+            p, li { font-size: 0.9rem; }
+            blockquote { padding: 15px; margin: 15px 0; }
+            code { font-size: 0.85rem; }
+            .guide-section { margin-bottom: 30px; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 8px 10px; }
+            footer { padding: 40px 15px 20px; margin-top: 40px; }
+            .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .footer-section h3 { font-size: 1rem; margin-bottom: 12px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.85rem; }
         }
 
-        /* Small phones */
         @media (max-width: 430px) {
-            body {
-                font-size: 13px;
-            }
-
-            .brand-logo {
-                font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 7px 14px;
-                font-size: 0.8rem;
-            }
-
-            .guide-container {
-                padding: 15px;
-                margin: 12px;
-            }
-
-            .guide-title {
-                font-size: 1.5rem;
-                padding-bottom: 12px;
-            }
-
-            .guide-intro {
-                font-size: 0.95rem;
-                margin-bottom: 25px;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-                margin-top: 25px;
-                padding-left: 10px;
-                border-left-width: 4px;
-            }
-
-            h3 {
-                font-size: 1.05rem;
-            }
-
-            h4 {
-                font-size: 0.95rem;
-            }
-
-            p,
-            li {
-                font-size: 0.85rem;
-            }
-
-            blockquote {
-                padding: 12px;
-            }
-
-            code {
-                font-size: 0.8rem;
-            }
-
-            footer {
-                padding: 30px 12px 15px;
-                margin-top: 30px;
-            }
-
-            .footer-content {
-                gap: 20px;
-                grid-template-columns: 1fr;
-            }
-
-            .footer-section h3 {
-                font-size: 0.95rem;
-                margin-bottom: 10px;
-            }
-
-            .footer-section a,
-            .footer-section p,
-            .footer-bottom p {
-                font-size: 0.8rem;
-            }
+            body { font-size: 13px; }
+            .brand-logo { font-size: 1.1rem; }
+            .btn { padding: 7px 14px; font-size: 0.8rem; }
+            .guide-container { padding: 15px; margin: 12px; }
+            .guide-title { font-size: 1.5rem; padding-bottom: 12px; }
+            .guide-intro { font-size: 0.95rem; margin-bottom: 25px; }
+            h2 { font-size: 1.3rem; margin-top: 25px; padding-left: 10px; border-left-width: 4px; }
+            h3 { font-size: 1.05rem; }
+            h4 { font-size: 0.95rem; }
+            p, li { font-size: 0.85rem; }
+            blockquote { padding: 12px; }
+            code { font-size: 0.8rem; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 6px 8px; }
+            footer { padding: 30px 12px 15px; margin-top: 30px; }
+            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            .footer-section h3 { font-size: 0.95rem; margin-bottom: 10px; }
+            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -432,8 +361,8 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Back to Home</a>
         
@@ -469,6 +398,7 @@
             <a href="fr/user_guide.html" hreflang="fr">FR</a>
             <a href="gl/user_guide.html" hreflang="gl">GL</a>
             <a href="it/user_guide.html" hreflang="it">IT</a>
+            <a href="nl/user_guide.html" hreflang="nl">NL</a>
             <a href="pt/user_guide.html" hreflang="pt">PT</a>
         </div>
     </div>
@@ -481,351 +411,363 @@
         <a href="index.html#guides" class="back-link">← Back to Guides</a>
 
         <h1 class="guide-title">User Guide: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">This guide explains how to configure and use <strong><span class="notranslate" translate="no">TapAlert</span></strong> on your Android or iOS device.</p>
+        <p class="guide-intro">A personal safety app that sends SMS and email alerts to your emergency contacts with your GPS location — with a single tap.</p>
 
-        <section class="guide-section">
-            <h2>1. 🛡️ Required Permissions</h2>
-            <p>Upon first launch, the app will request the following permissions:</p>
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h3>Contents</h3>
+            <ol>
+                <li><a href="#permissions">First Launch: Permissions</a></li>
+                <li><a href="#home-screen">Home Screen Overview</a></li>
+                <li><a href="#panic-mode">Panic Mode</a></li>
+                <li><a href="#standard-mode">Standard Mode</a></li>
+                <li><a href="#recipients">Managing Recipients</a></li>
+                <li><a href="#sending">Sending an Alert</a></li>
+                <li><a href="#countdown">Countdown Dialog</a></li>
+                <li><a href="#checkin-timer">Check-in Timer (Premium)</a></li>
+                <li><a href="#history">Alert History</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#widget">Home Screen Widget (Android)</a></li>
+                <li><a href="#stand-out">Making Alerts Stand Out on Recipients' Phones</a></li>
+                <li><a href="#magic-link">Remote Setup (Magic Link)</a></li>
+                <li><a href="#premium">Premium Upgrade</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+            </ol>
+        </nav>
+
+        <!-- 1. Permissions -->
+        <section class="guide-section" id="permissions">
+            <h2>1. First Launch: Permissions</h2>
+            <p>On first launch, TapAlert will walk you through a permissions setup screen. Grant the following for full functionality:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Why it's needed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Location</strong></td><td>Includes your GPS coordinates and address in alerts</td></tr>
+                    <tr><td><strong>Microphone / Speech</strong></td><td>Allows voice-to-text for custom alert messages</td></tr>
+                    <tr><td><strong>Contacts</strong></td><td>Lets you pick recipients from your phone's address book</td></tr>
+                    <tr><td><strong>Notifications</strong></td><td>Shows confirmation when an alert is sent</td></tr>
+                    <tr><td><strong>SMS (Android only)</strong></td><td>Sends alerts directly from your SIM card</td></tr>
+                    <tr><td><strong>Phone State (Android only)</strong></td><td>Detects cellular availability for smart fallback</td></tr>
+                </tbody>
+            </table>
+            <p>You can grant or skip any permission during setup and adjust them later in your device's system settings.</p>
+        </section>
+
+        <!-- 2. Home Screen Overview -->
+        <section class="guide-section" id="home-screen">
+            <h2>2. Home Screen Overview</h2>
+            <p>The home screen has three pages you can navigate by swiping left or right:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>← Left</td>
+                        <td><strong>Check-in Timer</strong></td>
+                        <td>Dead man's switch timer (Premium only)</td>
+                    </tr>
+                    <tr>
+                        <td>Center</td>
+                        <td><strong>Panic Mode</strong></td>
+                        <td>Large SOS and I'm OK buttons — the default</td>
+                    </tr>
+                    <tr>
+                        <td>Right →</td>
+                        <td><strong>Standard Mode</strong></td>
+                        <td>Pre-configured alert message slots</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The app always opens on Panic Mode (center page).</p>
+        </section>
+
+        <!-- 3. Panic Mode -->
+        <section class="guide-section" id="panic-mode">
+            <h2>3. Panic Mode</h2>
+            <p>The central page is designed for maximum simplicity — ideal for emergencies and senior users.</p>
             <ul>
-                <li><strong>SMS (Android Only):</strong> Needed to send direct messages from your phone's SIM card.</li>
-                <li><strong>Location:</strong> Needed to include your GPS coordinates in the alert message.</li>
-                <li><strong>Microphone:</strong> Needed if you use the voice recording feature to transcribe your alert message.</li>
-                <li><strong>Contacts:</strong> Needed to easily select recipients from your phone's address book.</li>
+                <li>SOS button — sends an "SOS, I need help" alert with your location.</li>
+                <li>I'm OK button — sends a reassuring "I'm OK" status to all contacts.</li>
+                <li>Voice buttons — tap the microphone icon next to SOS or I'm OK to record a voice message. Your speech is transcribed to text and included in the alert.</li>
+                <li>Emergency Call button — dials your local emergency number (e.g., 112, 911) immediately, based on your country setting.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Standard Mode -->
+        <section class="guide-section" id="standard-mode">
+            <h2>4. Standard Mode</h2>
+            <p>Swipe right from Panic Mode to access Standard Mode. This page shows a list of pre-configured alert slots.</p>
+            <ul>
+                <li>Text slots — up to 7 customizable message slots (default: 3). Tap any slot to edit the message. Tap the emoji icon to change its button icon.</li>
+                <li>Voice slot — always available as the last slot. Tap it to record a voice message in real time; the transcribed text is sent as the alert.</li>
+            </ul>
+            <p>The number of visible text slots can be adjusted in Settings > Number of configured alerts.</p>
+        </section>
+
+        <!-- 5. Managing Recipients -->
+        <section class="guide-section" id="recipients">
+            <h2>5. Managing Recipients</h2>
+            <p>Tap the people icon in the top toolbar to open the Recipients screen.</p>
+            <ul>
+                <li>Add manually — tap Add and enter a phone number in international format (e.g., +31600000000).</li>
+                <li>Add from Contacts — tap the contacts icon to pick directly from your phone's address book.</li>
+                <li>Add email — optionally add an email address to each recipient for email redundancy.</li>
+                <li>Remove — swipe or tap the delete icon next to any contact.</li>
             </ul>
             <blockquote class="alert-note">
-                <strong>NOTE:</strong> On iOS, <span class="notranslate" translate="no">direct SMS</span> sending is not supported by the system for automated alerts. You must use the <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span></strong> method.
+                <p>Free tier: up to 1 recipient. Premium: up to 50 recipients.</p>
+                <p>iOS tip: If you only see a few contacts, go to Settings > Privacy > Contacts > TapAlert and select All Contacts.</p>
             </blockquote>
         </section>
 
-        <section class="guide-section">
-            <h2>2. 📱 Interface Modes</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> offers two distinct interface modes to suit your needs. You can switch between them in <strong>Settings > Interface Mode</strong>.</p>
-
-            <h3><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span> / OK)</h3>
-            <p>A streamlined interface designed for maximum simplicity and accessibility, ideal for elderly users or high-stress situations.</p>
+        <!-- 6. Sending an Alert -->
+        <section class="guide-section" id="sending">
+            <h2>6. Sending an Alert</h2>
+            <ol>
+                <li>Open the app (or tap your home screen widget).</li>
+                <li>Tap the alert button (SOS, I'm OK, or a Standard Mode slot).</li>
+                <li>If a countdown is configured, a dialog appears giving you time to cancel.</li>
+                <li>The app fetches your current GPS location and builds the message.</li>
+                <li>The alert sound plays while sending.</li>
+                <li>A status report is shown with per-recipient success or failure details.</li>
+            </ol>
+            <p>The alert message includes:</p>
             <ul>
-                <li><strong>Large <span class="notranslate" translate="no">SOS</span> Button:</strong> Instantly starts the countdown for an "<span class="notranslate" translate="no">SOS</span>, I need help" alert.</li>
-                <li><strong>I'm OK Button:</strong> Quickly sends an "I'm OK" status update to reassure contacts.</li>
-                <li><strong>Voice Buttons:</strong> Each section has a dedicated voice button to record and send an audio transcript along with the <span class="notranslate" translate="no">SOS</span> or OK status.</li>
-                <li><strong>Emergency Call Button:</strong> A dedicated button to immediately call local emergency services (e.g., 112, 911) based on your location.</li>
-            </ul>
-
-            <h3>Report Mode (Tabs)</h3>
-            <p>The default mode, offering flexibility with multiple message types.</p>
-            <ul>
-                <li><strong>4 Message Tabs:</strong> Pre-configure different alerts (e.g., "Medical", "Car Trouble", "Generic").</li>
-                <li><strong>Customizable Text:</strong> Tap inside the message box to edit content on the fly.</li>
-                <li><strong>Voice Transcription:</strong> Use the microphone to dictate a custom message.</li>
+                <li>Your name (if set in Settings)</li>
+                <li>The message text</li>
+                <li>A Google Maps link to your current location</li>
+                <li>Your battery level</li>
             </ul>
         </section>
 
-        <section class="guide-section">
-            <h2>3. 📝 Setup Predefined Messages (Report Mode)</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span> comes with 4 predefined message slots (tabs) allowing you to quickly switch between different alert scenarios.</p>
-
-            <h3>Editing Messages</h3>
-            <ol>
-                <li><strong>Select a Tab:</strong> Tap on one of the numbered tabs (1-3) at the top.</li>
-                <li><strong>Edit Text:</strong> Tap inside the message box to type your custom alert message (e.g., "Medical Emergency", "Car Trouble").</li>
-                <li><strong>Auto-Save:</strong> Your changes are saved automatically as you type.</li>
-                <li><strong>Dictation:</strong> You can also use the dictation icon to dictate your message.</li>
-            </ol>
-
-            <h3>🎙️ Voice Quick Alert Message</h3>
-            <p>You can use your voice to generate the alert text in real-time. This is useful for describing a specific situation quickly. The message will be saved on the 4th tab.</p>
-            <ol>
-                <li><strong>Tap the Microphone red button:</strong> It will start <strong>pulsing</strong> when active.</li>
-                <li><strong>Speak your message:</strong> The status bar at the bottom will turn <strong>light orange</strong> and show a sound wave symbol while listening.</li>
-                <li><strong>Automatic Update and Instant Send:</strong> After speaking or tapping the microphone button again, the message text will be updated and the <strong>SEND ALERT</strong> will be triggered immediately. You can also press the <strong>SEND ALERT</strong> button directly while recording; the app will automatically stop the recording and save and send the transcribed message immediately.</li>
-            </ol>
+        <!-- 7. Countdown Dialog -->
+        <section class="guide-section" id="countdown">
+            <h2>7. Countdown Dialog</h2>
+            <p>Before sending, TapAlert shows a countdown to prevent accidental alerts.</p>
+            <ul>
+                <li>Default duration: 10 seconds. Adjustable from 0 (immediate) to 30 seconds in Settings > Countdown Duration.</li>
+                <li>Cancel: Tap CANCEL any time during the countdown to abort.</li>
+                <li>Send immediately: Tap SEND NOW to skip the remaining delay.</li>
+            </ul>
         </section>
 
-        <section class="guide-section">
-            <h2>4. 👥 Setup/Managing Recipients</h2>
-            <p>This is done in the dedicated <strong>Recipients Screen</strong>, accessible from the top bar of the Home Screen:</p>
+        <!-- 8. Check-in Timer -->
+        <section class="guide-section" id="checkin-timer">
+            <h2>8. Check-in Timer (Premium)</h2>
+            <p>The Check-in Timer is a dead man's switch: if you don't cancel it in time, TapAlert automatically sends an alert. Useful for hiking, traveling alone, or any situation where you want someone notified if you stop responding.</p>
+
+            <h3>To start:</h3>
             <ol>
-                <li><strong>Open Recipients:</strong> Tap the <strong>People/Group Icon</strong> (👥) in the top-right toolbar.</li>
-                <li><strong>Add Number:</strong>
+                <li>Swipe left to the Check-in Timer page.</li>
+                <li>Use the wheel pickers to set a duration (hours and minutes).</li>
+                <li>Optionally type a custom message.</li>
+                <li>Tap Start Timer.</li>
+            </ol>
+
+            <h3>While running:</h3>
+            <ul>
+                <li>The timer counts down on screen.</li>
+                <li>When less than 5 minutes remain, TapAlert plays a warning sound and shows a dialog:
                     <ul>
-                        <li>Tap the <strong>"Add"</strong> button to manually enter a phone number.</li>
-                        <li>Tap the <strong>Contact Icon</strong> to pick a number directly from your phone's address book.</li>
+                        <li>Cancel — dismiss the warning and let the timer continue.</li>
+                        <li>Stop — abort the timer (no alert will be sent).</li>
+                        <li>Restart — reset the timer to the original duration.</li>
                     </ul>
                 </li>
-                <li><strong>Format:</strong> Use the <strong>E.164 international format</strong> (e.g., <code>+34600000000</code>) for best results.</li>
-                <li><strong>Remove:</strong> Tap the delete icon next to any number in the list to remove it. You can also "Delete All" using the trash bin icon at the top.</li>
+                <li>If the timer reaches zero without being stopped or reset, the alert is sent automatically.</li>
+            </ul>
+
+            <blockquote class="alert-warning">
+                <p>Android: The timer runs as a foreground service and remains active when the app is in the background or the screen is off.</p>
+                <p>iOS: The timer may not fire if the app is force-closed. Keep the app running in the background.</p>
+            </blockquote>
+        </section>
+
+        <!-- 9. Alert History -->
+        <section class="guide-section" id="history">
+            <h2>9. Alert History</h2>
+            <p>Tap the clock icon in the top toolbar to view your alert history.</p>
+            <ul>
+                <li>Shows timestamp, message, and delivery method for each alert.</li>
+                <li>Tap any entry for per-recipient success/failure details and error information.</li>
+                <li>Free tier: stores the last 20 alerts. Premium: stores up to 200.</li>
+                <li>Delete individual entries or clear all history from the trash icon.</li>
+            </ul>
+        </section>
+
+        <!-- 10. Settings -->
+        <section class="guide-section" id="settings">
+            <h2>10. Settings</h2>
+            <p>Tap the gear icon to open Settings.</p>
+
+            <h3>SMS Method</h3>
+            <h4>Android:</h4>
+            <ul>
+                <li>Direct SMS — sends via your SIM card, no internet needed. Preferred when cellular is available.</li>
+                <li>Twilio — sends via the Twilio API over internet (Wi-Fi or data). Used as automatic fallback if Direct SMS fails.</li>
+            </ul>
+            <h4>iOS:</h4>
+            <ul>
+                <li>iOS Messages (Manual) — opens the native Messages app pre-filled. You tap Send manually. No Twilio account needed.</li>
+                <li>Twilio (Automatic) — sends automatically via the Twilio API. Requires a Twilio account.</li>
+            </ul>
+            <blockquote class="alert-note">
+                <p>For Twilio setup instructions, see the Twilio Guide in the Help menu.</p>
+            </blockquote>
+
+            <h3>Email Redundancy</h3>
+            <p>Configure SMTP email to send alerts via email in addition to SMS. Useful when SMS is unavailable but Wi-Fi is connected.</p>
+            <ol>
+                <li>Go to Settings > Email Redundancy.</li>
+                <li>Enable Email Redundancy.</li>
+                <li>Select a preset provider (Gmail, Outlook, Yahoo, iCloud) or enter custom SMTP details.</li>
+                <li>Enter your email address and an App Password (recommended over your main password).</li>
+                <li>Tap Test Email Connection to verify before relying on it.</li>
             </ol>
+            <p>Emails are sent to any recipient in your list who has an email address saved.</p>
+
+            <h3>Location</h3>
+            <ul>
+                <li>Include Location — appends GPS coordinates (Google Maps link) to every alert.</li>
+                <li>Include Address — also attempts to resolve a street address from your coordinates.</li>
+            </ul>
+
+            <h3>Trigger Method</h3>
+            <ul>
+                <li>Tap to Send — a single tap starts the countdown.</li>
+                <li>Press and Hold (5s) — you must hold the button for 5 seconds. Recommended to prevent accidental sends.</li>
+            </ul>
+
+            <h3>Alert Countdown</h3>
+            <p>Set the delay before the alert sends (0–30 seconds). A longer countdown gives you more time to cancel if triggered by mistake.</p>
+
+            <h3>Sound Settings</h3>
+            <ul>
+                <li>Choose between Plain Sounds or Rich Sounds (or None).</li>
+                <li>Sound Pattern — select from Fast Alert, Short Beeps, Musical Chime, Wailing Siren, Pulse Ringing, Pipe Organ, Metallic Ring, or Electronic Hive.</li>
+                <li>Sound Pitch — Low, Standard, or High.</li>
+                <li>Volume — adjust with the slider.</li>
+                <li>SOS and I'm OK alerts have independent sound patterns.</li>
+            </ul>
+
+            <h3>Other Settings</h3>
+            <ul>
+                <li>Your Name — included in outgoing messages so recipients know who sent the alert.</li>
+                <li>Countdown Duration — delay before sending (see above).</li>
+                <li>Number of configured alerts — how many text slots appear in Standard Mode (3–7).</li>
+                <li>Auto-Start on Launch — triggers the countdown immediately when the app opens. Only enable this if you launch TapAlert via a physical button shortcut.</li>
+                <li>Flash on Alert — flashes the screen and torch when an alert is sent.</li>
+                <li>Home Country — ensures local phone numbers are formatted correctly.</li>
+                <li>App Language — override the interface language (default: device language).</li>
+                <li>App Theme — Light, Dark, or System Default.</li>
+            </ul>
+        </section>
+
+        <!-- 11. Home Screen Widget -->
+        <section class="guide-section" id="widget">
+            <h2>11. Home Screen Widget (Android)</h2>
+            <p>Add a TapAlert widget to your Android home screen for one-tap access without opening the app.</p>
+
+            <h3>To add:</h3>
+            <ol>
+                <li>Go to Settings > Widget > Add Widget.</li>
+                <li>Choose Standard (1x1) for a compact icon or Large (2x2) for higher visibility.</li>
+                <li>Follow the on-screen instructions to place it on your home screen.</li>
+            </ol>
+
+            <h3>How it works:</h3>
+            <ul>
+                <li>Tapping the widget opens the app and immediately starts the alert countdown.</li>
+                <li>The sound plays and the countdown dialog appears — you can still cancel if triggered by mistake.</li>
+            </ul>
+        </section>
+
+        <!-- 12. Making Alerts Stand Out -->
+        <section class="guide-section" id="stand-out">
+            <h2>12. Making Alerts Stand Out on Recipients' Phones</h2>
+            <p>Your recipients can configure their phones to give TapAlert messages a special ringtone or bypass Do Not Disturb.</p>
+
+            <h3>iPhone recipients:</h3>
+            <ol>
+                <li>Open Contacts and find your entry.</li>
+                <li>Tap Edit > Text Tone.</li>
+                <li>Enable Emergency Bypass — this bypasses Silent mode and Do Not Disturb.</li>
+                <li>Choose a loud, distinctive tone.</li>
+            </ol>
+
+            <h3>Android recipients:</h3>
+            <ol>
+                <li>Open the Messages app and find the conversation.</li>
+                <li>Tap the menu > Details > Notifications.</li>
+                <li>Set priority to High or Urgent.</li>
+                <li>Enable Override Do Not Disturb.</li>
+            </ol>
+
             <blockquote class="alert-tip">
-                <strong>TIP: Can't see all your contacts?</strong>
-                <ul>
-                    <li><strong>iOS:</strong> If you chose "Select Contacts..." (Limited Access), the app can only see the few you picked. To fix this, go to <strong>iPhone Settings > Privacy & Security > Contacts > <span class="notranslate" translate="no">TapAlert</span></strong> and select <strong>"All Contacts"</strong>.</li>
-                    <li><strong>Android:</strong> Permissions are "all-or-nothing". If you denied access, the picker will be empty. Ensure the app has "Contacts" permission in your phone's App Settings.</li>
-                </ul>
+                <p>Using Twilio? Your contacts will receive messages from your Twilio number or sender ID (e.g., TapAlert). They should add that number/ID to their contacts for the above settings to apply.</p>
             </blockquote>
         </section>
 
-        <section class="guide-section">
-            <h2>5. ⚙️ Configuration Options</h2>
-            <p>Access the settings menu via the gear icon ⚙️ to further customize the alert message text and the SMS delivery method.</p>
-
-            <h3>SMS Sending Methods</h3>
-            <p>The app supports two ways to send messages:</p>
-            <ul>
-                <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> (Android):</strong> Uses your phone's SIM card. Cost depends on your mobile carrier plan.</li>
-                <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS (Android & iOS):</strong> Uses the <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> API over the internet (Wi-Fi/Data). Reliable and required for iOS.</li>
-            </ul>
-
-            <h3><span class="notranslate" translate="no">Smart Redundancy</span> (Android Only)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> features a <strong><span class="notranslate" translate="no">Smart Redundancy</span></strong> system that automatically switches methods if the primary one fails:</p>
-            <ul>
-                <li><strong>No Signal?</strong> If you try to send a <span class="notranslate" translate="no">Direct SMS</span> but have no cellular coverage (e.g., inside a building), the app will automatically attempt to send via <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Wi-Fi).</li>
-                <li><strong>No Data?</strong> If you use <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> as primary but are hiking without 4G/5G, the app will automatically <span class="notranslate" translate="no">fallback</span> to sending a <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>.</li>
-            </ul>
-            <p><strong>To enable:</strong> Go to Settings and turn on <strong>"<span class="notranslate" translate="no">Smart Redundancy</span>"</strong>.</p>
-
-            <h3>Email Redundancy (Wi-Fi <span class="notranslate" translate="no">Fallback</span>)</h3>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> can send your alert via email.</p>
-            <ul>
-                <li><strong>Setup:</strong> Go to <strong>Settings > Email Redundancy</strong>. For detailed instructions, see <strong>Chapter 6: Configuring Email Redundancy</strong>.</li>
-                <li><strong>Automatic <span class="notranslate" translate="no">Fallback</span>:</strong> When enabled, the app will attempt to send an email alert if both <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> and <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (cellular) fail.</li>
-            </ul>
-
-            <h3>Trigger Method (Tap vs. Hold)</h3>
-            <p>Prevent accidental triggers by changing how the alert is activated in <strong>Settings > Trigger Method</strong>:</p>
-            <ul>
-                <li><strong>Tap to Send (Default):</strong> A single tap on the alert button triggers the countdown.</li>
-                <li><strong>Press & Hold (5s):</strong> You must hold the alert button for 5 continuous seconds to trigger the countdown. This is recommended to avoid false alarms.</li>
-            </ul>
-
-            <blockquote class="alert-important">
-                <strong>IMPORTANT: iOS Users</strong><br> You must configure a <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> account.<br> 👉 <strong>For detailed <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> setup instructions, please see the separate "<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Guide" in the Help menu.</strong>
-            </blockquote>
-
-            <h3>Auto-Start on Launch</h3>
-            <p>Automatically start the alert countdown immediately when the app opens.</p>
-            <ul>
-                <li><strong>Useful for:</strong> Creating a physical panic button (using hardware key remapping) or a quick-launch shortcut.</li>
-                <li><strong>Warning:</strong> When enabled, opening the app will always trigger the countdown. You can cancel it during the delay period.</li>
-            </ul>
-
-            <h3>Message Location</h3>
-            <ul>
-                <li><strong>Include Location:</strong> Append GPS coordinates to the message.</li>
-                <li><strong>Include Address:</strong> Attempt to convert coordinates into a human-readable address.</li>
-            </ul>
-
-            <h3>Additional Settings</h3>
-            <ul>
-                <li><strong>Sender Identity:</strong> (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Only) Choose the name or number that appears as the sender (e.g., "Alert" or your specific <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> number).</li>
-                <li><strong>Appearance:</strong> Toggle between Light Mode, Dark Mode, or follow System Settings.</li>
-                <li><strong>App Language:</strong> Manually override the app's language (default: System Language).</li>
-                <li><strong>Region and formatting:</strong> Set your region to ensure phone numbers are formatted correctly (e.g., auto-adding country codes).</li>
-                <li><strong>Notification sound:</strong> Choose the alert sound that plays after a successful message delivery.</li>
-            </ul>
+        <!-- 13. Remote Setup (Magic Link) -->
+        <section class="guide-section" id="magic-link">
+            <h2>13. Remote Setup (Magic Link)</h2>
+            <p>A family member or caregiver can configure TapAlert on your device remotely using a Magic Link.</p>
+            <p>The caregiver opens TapAlert, selects Set Up for Someone Else, fills in the contacts, message templates, and optional Twilio/email credentials, then generates a setup link. When you tap that link on your device, TapAlert applies the full configuration automatically.</p>
+            <p>This means a tech-savvy family member can set everything up without needing to be present — you just tap a link.</p>
         </section>
 
-        <section class="guide-section">
-            <h2>6. 📧 Configuring Email Redundancy</h2>
-            <p>If you have no cellular signal but are connected to Wi-Fi, <span class="notranslate" translate="no">TapAlert</span> can send your alert via email.</p>
-
-            <h3>Setup Instructions</h3>
-            <ol>
-                <li><strong>Open Settings:</strong> Tap the gear icon ⚙️ and select <strong>Email Redundancy</strong>.</li>
-                <li><strong>Enable the feature:</strong> Toggle <strong>Enable Email Redundancy</strong> to ON.</li>
-                <li><strong>SMTP Configuration:</strong> Enter your email provider's SMTP details:
-                    <ul>
-                        <li><strong>SMTP Host:</strong> (e.g., <code>smtp.gmail.com</code> for Gmail, <code>smtp-mail.outlook.com</code> for Outlook).</li>
-                        <li><strong>SMTP Port:</strong> (e.g., <code>587</code> or <code>465</code>).</li>
-                        <li><strong>Username / Email:</strong> Your full email address.</li>
-                        <li><strong>Password / App Password:</strong> Your email password or a dedicated App Password.</li>
-                    </ul>
-                </li>
-            </ol>
-
-            <h3>⚡ Quick Setup (Common Providers)</h3>
-            <p><span class="notranslate" translate="no">TapAlert</span> includes preset buttons for popular email providers. Simply tap a preset button to auto-fill the SMTP host and port settings:</p>
-            <ul>
-                <li><strong>Gmail</strong> (smtp.gmail.com:587)</li>
-                <li><strong>Outlook</strong> (smtp-mail.outlook.com:587)</li>
-                <li><strong>Yahoo</strong> (smtp.mail.yahoo.com:587)</li>
-                <li><strong>iCloud</strong> (smtp.mail.me.com:587)</li>
-            </ul>
-            <p>After tapping a preset, you only need to enter your email address and app password (see below).</p>
-
-            <blockquote class="alert-important">
-                <strong>IMPORTANT: App Passwords Are Provider-Specific</strong><br> Each email provider has its own app password system. You cannot use a Gmail app password with Outlook, or vice versa. You must generate an app password specific to the provider you're using.
-            </blockquote>
-
-            <h3>🔒 Using App Passwords (Recommended)</h3>
-            <p>For security and reliability, we strongly recommend using an <strong>App Password</strong> instead of your primary password.</p>
-            <ul>
-                <li><strong>Why?</strong> It bypasses 2-Factor Authentication and keeps your main account secure.</li>
-            </ul>
-
-            <h4>Gmail</h4>
-            <ol>
-                <li>Go to your <strong>Google Account > Security</strong> or <a href="https://myaccount.google.com/apppasswords" target="_blank">https://myaccount.google.com/apppasswords</a></li>
-                <li>Search for <strong>"App passwords"</strong> (requires 2-step verification enabled).</li>
-                <li>Generate a new password for "Other" and call it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the 16-character code provided in <span class="notranslate" translate="no">TapAlert</span> (blanks included).</li>
-            </ol>
-
-            <h4>Outlook / Hotmail / Live</h4>
-            <ol>
-                <li>Go to <strong>Microsoft Account > Security > Advanced security options</strong> or <a href="https://account.live.com/names/manage" target="_blank">https://account.live.com/names/manage</a>.</li>
-                <li>Under <strong>"App passwords"</strong>, create a new app password.</li>
-                <li>Select "Other" and name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
-            </ol>
-
-            <h4>Yahoo</h4>
-            <ol>
-                <li>Go to <strong>Yahoo Account Security</strong> or <a href="https://login.yahoo.com/account/security" target="_blank">https://login.yahoo.com/account/security</a>.</li>
-                <li>Select <strong>"Generate app password"</strong>.</li>
-                <li>Choose "Other App" and name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
-            </ol>
-
-            <h4>iCloud</h4>
-            <ol>
-                <li>Go to <strong>appleid.apple.com > Sign-In and Security > App-Specific Passwords</strong> or <a href="https://appleid.apple.com/account/manage" target="_blank">https://appleid.apple.com/account/manage</a>.</li>
-                <li>Click the <strong>+</strong> button to generate a new password.</li>
-                <li>Name it "<span class="notranslate" translate="no">TapAlert</span>".</li>
-                <li>Use the generated password in <span class="notranslate" translate="no">TapAlert</span>.</li>
-            </ol>
-
-            <h3>Recipients</h3>
-            <p>Emails will be sent to all contacts in your <strong>Recipients</strong> list who have an email address saved. To add an email to a contact:</p>
-            <ol>
-                <li>Go to the <strong>Recipients</strong> screen.</li>
-                <li>Edit a contact and ensure the email field is filled.</li>
-            </ol>
-
-            <h3>🧪 Testing</h3>
-            <p>Before relying on it, tap <strong>Test Connection</strong>. Enter an email address to receive a test message. If successful, your setup is correct.</p>
+        <!-- 14. Premium Upgrade -->
+        <section class="guide-section" id="premium">
+            <h2>14. Premium Upgrade</h2>
+            <p>Some features require a one-time Premium upgrade (no subscription):</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Free</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Recipients</td><td>1</td><td>Up to 50</td></tr>
+                    <tr><td>Alert history</td><td>20 entries</td><td>200 entries</td></tr>
+                    <tr><td>Check-in Timer</td><td>—</td><td>✓</td></tr>
+                </tbody>
+            </table>
+            <p>Tap Upgrade from the recipients screen or the timer page. If you have already purchased Premium on another device, tap Restore Purchases.</p>
         </section>
 
-        <section class="guide-section">
-            <h2>7. 📱 Home Screen Widget (Android Only)</h2>
-            <p>For even faster emergency alerts, you can add a widget to your Android home screen:</p>
-
-            <h3>Adding the Widget</h3>
-            <ol>
-                <li><strong>Open Settings:</strong> Tap the gear icon ⚙️ in the app.</li>
-                <li><strong>Find Widget Section:</strong> Scroll down to the "Widget" section.</li>
-                <li><strong>Tap "Add":</strong> The system will prompt you to place the widget on your home screen.</li>
-                <li><strong>Position the Widget:</strong> Drag it to your preferred location and release.</li>
-            </ol>
-            <blockquote class="alert-note">
-                <strong>NOTE:</strong> If you already have a widget on your home screen, you'll need to remove the old one before adding a new one.
-            </blockquote>
-
-            <h3>Using the Widget</h3>
-            <ul>
-                <li><strong>Tap the Widget:</strong> Opens the app and starts the <strong>Countdown</strong> immediately.</li>
-                <li><strong>App Experience:</strong> You will see the countdown dialog, ensuring the alert is intentional. You can cancel it if pressed by mistake.</li>
-                <li><strong>Sound:</strong> The app plays an audible alert tone while counting down.</li>
-            </ul>
-            <blockquote class="alert-tip">
-                <strong>TIP:</strong> The widget is perfect for true emergencies when you need to send an alert with a single tap, without finding the app in your drawer.
-            </blockquote>
-        </section>
-
-        <section class="guide-section">
-            <h2>8. 🚀 Sending an Alert</h2>
-            <ol>
-                <li><strong>Open the App.</strong></li>
-                <li><strong>Trigger the Alert:</strong>
-                    <ul>
-                        <li><strong>In Report Mode:</strong> Tap the large red <strong>SEND ALERT</strong> button. The message selected in the tabs (1-4) will be sent.</li>
-                        <li><strong>In <span class="notranslate" translate="no">Panic Mode</span>:</strong>
-                            <ul>
-                                <li>Tap the big red <strong><span class="notranslate" translate="no">SOS</span></strong>  button to send a "Help needed" alert.</li>
-                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of <span class="notranslate" translate="no">SOS</span>) to record and send a specific voice message with your <span class="notranslate" translate="no">SOS</span> alert.</li>
-                                <li>Tap the green <strong>I'm OK</strong> button to send a reassuring "I'm OK" status.</li>
-                                <li>Tap the <strong>Microphone icon</strong> (bottom-right of I'm OK) to record and send a voice message with your OK status.</li>
-                                <li>Tap the <strong>Emergency Call</strong> button to dial local emergency services immediately.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>The app will:</strong>
-                    <ul>
-                        <li>Fetch your current location (if configured).</li>
-                        <li>Show a <strong>Countdown Dialog</strong> (see "Countdown Dialog" below).</li>
-                        <li>Send the alert message to all recipients.</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-
-        <section class="guide-section">
-            <h2>9. ⏱️ Countdown Dialog</h2>
-            <p>To prevent accidental alerts, <span class="notranslate" translate="no">TapAlert</span> shows a countdown before sending.</p>
-            <ul>
-                <li><strong>Countdown Duration:</strong> By default, the app waits <strong>10 seconds</strong>. You can customize this in <strong>Settings</strong> (from <strong>0s</strong> for immediate sending up to <strong>30s</strong>).</li>
-                <li><strong>Cancelling:</strong> You can tap <strong>CANCEL</strong> during the countdown to stop the alert.</li>
-            </ul>
-        </section>
-
-        <section class="guide-section">
-            <h2>10. 🔔 Making Alert SMS Stand Out</h2>
-            <p>To ensure your emergency contacts don't miss your alert message among other notifications, we recommend configuring their phones to treat messages from your <span class="notranslate" translate="no">TapAlert</span> number differently.</p>
-
-            <h3>For iPhone Recipients</h3>
-            <ol>
-                <li><strong>Open Contacts:</strong> Select your contact entry.</li>
-                <li><strong>Assign Emergency Bypass:</strong> Tap <strong>Edit</strong> > <strong>Ringtone</strong> (or Text Tone) and toggle <strong>Emergency Bypass</strong> ON. This allows sounds/vibrations even if their phone is on Silent or Do Not Disturb.</li>
-                <li><strong>Custom Tone:</strong> Choose a loud, distinct sound for your messages.</li>
-            </ol>
-
-            <h3>For Android Recipients</h3>
-            <ol>
-                <li><strong>Open Messages:</strong> Select the conversation with you.</li>
-                <li><strong>Notification Categories:</strong> Tap <strong>Details</strong> > <strong>Notifications</strong>.</li>
-                <li><strong>Set as "Urgent":</strong> Change the priority to <strong>"High"</strong> or <strong>"Urgent"</strong>.</li>
-                <li><strong>Override DND:</strong> Ensure <strong>"Ignore Do Not Disturb"</strong> is enabled for this conversation.</li>
-                <li><strong>Custom Sound:</strong> Pick a high-priority alert sound.</li>
-            </ol>
-            <blockquote class="alert-note">
-                <strong>NOTE: Using <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong> If you send alerts via <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, your contacts will receive the message from your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> number or an Alphanumeric ID (e.g., "<span class="notranslate" translate="no">TapAlert</span>"). They <strong>must</strong> add this number/ID to their contacts list for the settings above to work correctly. Otherwise, the message will still be delivered but as a standard SMS without any priority notifications.
-            </blockquote>
-        </section>
-
-        <section class="guide-section">
-            <h2>11. 🕰️ Alert History</h2>
-            <p>To keep track of your sent emergency alerts:</p>
-            <ol>
-                <li><strong>Tap the History Icon:</strong> The clock icon 🕰️ located in the top bar.</li>
-                <li><strong>View Recent Alerts:</strong> The app maintains a log of the last <strong>50 alerts</strong> sent.</li>
-                <li><strong>Check Status:</strong> Tap any entry to see exactly which recipients received the message successfully and which failed (with error details).</li>
-                <li><strong>Clear History:</strong> You can delete all logs by tapping the trash icon 🗑️ inside the history screen.</li>
-            </ol>
-        </section>
-
+        <!-- 15. Troubleshooting -->
         <section class="guide-section" id="troubleshooting">
-            <h2>12. ❓ Troubleshooting</h2>
-            <ul>
-                <li><strong>Message not sending (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>):</strong> Check your mobile signal and carrier credit (Android only).</li>
-                <li><strong>Message not sending (<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>):</strong> Verify your internet connection and double-check your credentials in the settings.</li>
-                <li><strong>Location missing:</strong> Ensure GPS is enabled in your phone's system settings and the app has Location permission.</li>
-                <li><strong>Contacts missing (iOS):</strong> Go to Settings > Privacy > Contacts > <span class="notranslate" translate="no">TapAlert</span> and ensure <strong>"All Contacts"</strong> is checked.</li>
-                <li><strong>Contacts missing (Android):</strong> Go to Settings > Apps > <span class="notranslate" translate="no">TapAlert</span> > Permissions and ensure <strong>"Contacts"</strong> is allowed.</li>
-            </ul>
-        </section>
-
-        <section class="guide-section">
-            <h2>13. ⏳ Check-in Timer</h2>
-            <p>The <strong>Check-in Timer</strong> is an "inactive" safety feature. It allows you to set a timer when starting a potentially risky activity (e.g., walking home alone, going on a hike).</p>
-            <ol>
-                <li><strong>Start the Timer:</strong> Select a duration (from 5 minutes up to 24 hours) and an optional message.</li>
-                <li><strong>The Countdown:</strong> A persistent notification will show you the remaining time.</li>
-                <li><strong>The Check-in:</strong> You must return to the app and tap <strong>"I'm OK (Reset)"</strong> before the timer expires.</li>
-                <li><strong>Automatic Alert:</strong> If you <em>don't</em> reset the timer before it hits zero, <span class="notranslate" translate="no">TapAlert</span> will automatically send your alert message and location to all recipients.</li>
-            </ol>
-            <blockquote class="alert-tip">
-                <strong>TIP:</strong> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if
-                you become incapacitated or lose access to your phone.
-            </blockquote>
+            <h2>15. Troubleshooting</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Alert not sending (Direct SMS)</td><td>Check cellular signal and SIM credits</td></tr>
+                    <tr><td>Alert not sending (Twilio)</td><td>Check internet connection and Twilio credentials in Settings</td></tr>
+                    <tr><td>Location missing</td><td>Enable GPS in system settings and grant Location permission to TapAlert</td></tr>
+                    <tr><td>Address not showing</td><td>Enable Include Address in Settings; requires internet for geocoding</td></tr>
+                    <tr><td>Contacts not appearing (iOS)</td><td>Settings > Privacy > Contacts > TapAlert > All Contacts</td></tr>
+                    <tr><td>Contacts not appearing (Android)</td><td>Settings > Apps > TapAlert > Permissions > enable Contacts</td></tr>
+                    <tr><td>Timer not firing (iOS)</td><td>Keep TapAlert open in the background; the timer may not fire if the app is force-closed</td></tr>
+                    <tr><td>Wrong language shown</td><td>Settings > App Language — select your preferred language manually</td></tr>
+                </tbody>
+            </table>
         </section>
 
     </main>

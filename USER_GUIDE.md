@@ -1,269 +1,270 @@
 # User Guide: TapAlert
 
-This guide explains how to configure and use **TapAlert** on your Android or iOS device.
+TapAlert is a personal safety app that sends SMS and email alerts to your emergency contacts with your GPS location — with a single tap.
 
-## 1. 🛡️ Required Permissions
+---
 
-Upon first launch, the app will request the following permissions:
--   **SMS (Android Only):** Needed to send direct messages from your phone's SIM card.
--   **Location:** Needed to include your GPS coordinates in the alert message.
--   **Microphone:** Needed if you use the voice recording feature to transcribe your alert message.
--   **Contacts:** Needed to easily select recipients from your phone's address book.
+## 1. 🛡️ First Launch: Permissions
 
-> [!NOTE]
-> On iOS, direct SMS sending is not supported by the system for automated alerts. You must use the **Twilio** method.
+On first launch, TapAlert will walk you through a permissions setup screen. Grant the following for full functionality:
 
-## 2. 📱 Interface Modes
+| Permission | Why it's needed |
+|---|---|
+| **Location** | Includes your GPS coordinates and address in alerts |
+| **Microphone / Speech** | Allows voice-to-text for custom alert messages |
+| **Contacts** | Lets you pick recipients from your phone's address book |
+| **Notifications** | Shows confirmation when an alert is sent |
+| **SMS** *(Android only)* | Sends alerts directly from your SIM card |
+| **Phone State** *(Android only)* | Detects cellular availability for smart fallback |
 
-TapAlert offers two distinct interface modes to suit your needs. You can switch between them in **Settings > Interface Mode**.
+You can grant or skip any permission during setup and adjust them later in your device's system settings.
 
-### Panic Mode (SOS / OK)
-A streamlined interface designed for maximum simplicity and accessibility, ideal for elderly users or high-stress situations.
-- **Large SOS Button:** Instantly starts the countdown for an "SOS, I need help" alert.
-- **I'm OK Button:** Quickly sends an "I'm OK" status update to reassure contacts.
-- **Voice Buttons:** Each section has a dedicated voice button to record and send an audio transcript along with the SOS or OK status.
-- **Emergency Call Button:** A dedicated button to immediately call local emergency services (e.g., 112, 911) based on your location.
+---
 
-### Report Mode (Tabs)
-The default mode, offering flexibility with multiple message types.
-- **4 Message Tabs:** Pre-configure different alerts (e.g., "Medical", "Car Trouble", "Generic").
-- **Customizable Text:** Tap inside the message box to edit content on the fly.
-- **Voice Transcription:** Use the microphone to dictate a custom message.
+## 2. 📱 Home Screen Overview
 
-## 3. 📝 Setup Predefined Messages (Report Mode)
+The home screen has **three pages** you can navigate by swiping left or right:
 
-TapAlert comes with 4 predefined message slots (tabs) allowing you to quickly switch between different alert scenarios.
+| Page | Name | Description |
+|---|---|---|
+| ← Left | **Check-in Timer** | Dead man's switch timer *(Premium only)* |
+| Center | **Panic Mode** | Large SOS and I'm OK buttons — the default |
+| Right → | **Standard Mode** | Pre-configured alert message slots |
 
-### Editing Messages
-1.  **Select a Tab:** Tap on one of the numbered tabs (1-3) at the top.
-2.  **Edit Text:** Tap inside the message box to type your custom alert message (e.g., "Medical Emergency", "Car Trouble"). 
-3.  **Auto-Save:** Your changes are saved automatically as you type.
-4.  **Dictation:** You can also use the dictation icon to dictate your message.
+The app always opens on **Panic Mode** (center page).
 
-### 🎙️ Voice Quick Alert Message
-You can use your voice to generate the alert text in real-time. This is useful for describing a specific situation quickly. The message will be saved on the 4th tab.
+---
 
-1.  **Tap the Microphone red button:** It will start **pulsing** when active.
-2.  **Speak your message:** The status bar at the bottom will turn **light orange** and show a sound wave symbol while listening.
-3.  **Automatic Update and Instant Send:** After speaking or tapping the microphone button again, the message text will be updated and the **SEND ALERT** will be triggered immediately. You can also press the **SEND ALERT** button directly while recording; the app will automatically stop the recording and save and send the transcribed message immediately.
+## 3. 🆘 Panic Mode
 
-## 4. 👥 Setup/Managing Recipients
+The central page is designed for maximum simplicity — ideal for emergencies and senior users.
 
-This is done in the dedicated **Recipients Screen**, accessible from the top bar of the Home Screen:
+- **SOS button** — sends an "SOS, I need help" alert with your location.
+- **I'm OK button** — sends a reassuring "I'm OK" status to all contacts.
+- **Voice buttons** — tap the microphone icon next to SOS or I'm OK to record a voice message. Your speech is transcribed to text and included in the alert.
+- **Emergency Call button** — dials your local emergency number (e.g., 112, 911) immediately, based on your country setting.
 
-1.  **Open Recipients:** Tap the **People/Group Icon** (👥) in the top-right toolbar.
-2.  **Add Number:**
-    -   Tap the **"Add"** button to manually enter a phone number.
-    -   Tap the **Contact Icon** to pick a number directly from your phone's address book.
-3.  **Format:** Use the **E.164 international format** (e.g., `+34600000000`) for best results.
-4.  **Remove:** Tap the delete icon next to any number in the list to remove it. You can also "Delete All" using the trash bin icon at the top.
+---
 
-> [!TIP]
-> **Can't see all your contacts?**
-> - **iOS:** If you chose "Select Contacts..." (Limited Access), the app can only see the few you picked. To fix this, go to **iPhone Settings > Privacy & Security > Contacts > TapAlert** and select **"All Contacts"**.
-> - **Android:** Permissions are "all-or-nothing". If you denied access, the picker will be empty. Ensure the app has "Contacts" permission in your phone's App Settings.
+## 4. 📋 Standard Mode
 
-## 5. ⚙️ Configuration Options
+Swipe right from Panic Mode to access Standard Mode. This page shows a list of pre-configured alert slots.
 
-Access the settings menu via the gear icon ⚙️ to further customize the alert message text and the SMS delivery method.
+- **Text slots** — up to 7 customizable message slots (default: 3). Tap any slot to edit the message. Tap the emoji icon to change its button icon.
+- **Voice slot** — always available as the last slot. Tap it to record a voice message in real time; the transcribed text is sent as the alert.
 
-### SMS Sending Methods
+The number of visible text slots can be adjusted in **Settings → Number of configured alerts**.
 
-The app supports two ways to send messages:
+---
 
-*   **Direct SMS (Android):** Uses your phone's SIM card. Cost depends on your mobile carrier plan.
-*   **Twilio SMS (Android & iOS):** Uses the Twilio API over the internet (Wi-Fi/Data). Reliable and required for iOS.
+## 5. 👥 Managing Recipients
 
-### Smart Redundancy (Android Only)
-TapAlert features a **Smart Redundancy** system that automatically switches methods if the primary one fails:
-*   **No Signal?** If you try to send a Direct SMS but have no cellular coverage (e.g., inside a building), the app will automatically attempt to send via Twilio (Wi-Fi).
-*   **No Data?** If you use Twilio as primary but are hiking without 4G/5G, the app will automatically fallback to sending a Direct SMS.
+Tap the **people icon** in the top toolbar to open the Recipients screen.
 
-**To enable:** Go to Settings and turn on **"Smart Redundancy"**.
+- **Add manually** — tap **Add** and enter a phone number in international format (e.g., `+31600000000`).
+- **Add from Contacts** — tap the contacts icon to pick directly from your phone's address book.
+- **Add email** — optionally add an email address to each recipient for email redundancy.
+- **Remove** — swipe or tap the delete icon next to any contact.
 
-### Email Redundancy (Wi-Fi Fallback)
-If you have no cellular signal but are connected to Wi-Fi, TapAlert can send your alert via email.
-- **Setup:** Go to **Settings > Email Redundancy**. For detailed instructions, see **Chapter 6: Configuring Email Redundancy**.
-- **Automatic Fallback:** When enabled, the app will attempt to send an email alert if both Direct SMS and Twilio (cellular) fail.
+> **Free tier:** up to 1 recipient. **Premium:** up to 50 recipients.
 
-### Trigger Method (Tap vs. Hold)
-Prevent accidental triggers by changing how the alert is activated in **Settings > Trigger Method**:
-- **Tap to Send (Default):** A single tap on the alert button triggers the countdown.
-- **Press & Hold (5s):** You must hold the alert button for 5 continuous seconds to trigger the countdown. This is recommended to avoid false alarms.
+> **iOS tip:** If you only see a few contacts, go to **Settings → Privacy → Contacts → TapAlert** and select **All Contacts**.
 
-> [!IMPORTANT]
-> **iOS Users:** You must configure a Twilio account.
-> 
-> 👉 **For detailed Twilio setup instructions, please see the separate "Twilio Guide" in the Help menu.**
+---
 
-### Auto-Start on Launch
-Automatically start the alert countdown immediately when the app opens.
-*   **Useful for:** Creating a physical panic button (using hardware key remapping) or a quick-launch shortcut.
-*   **Warning:** When enabled, opening the app will always trigger the countdown. You can cancel it during the delay period.
+## 6. 🚀 Sending an Alert
 
-### Message Location
--   **Include Location:** Append GPS coordinates to the message.
--   **Include Address:** Attempt to convert coordinates into a human-readable address.
+1. Open the app (or tap your home screen widget).
+2. Tap the alert button (SOS, I'm OK, or a Standard Mode slot).
+3. If a **countdown** is configured, a dialog appears giving you time to cancel.
+4. The app fetches your current GPS location and builds the message.
+5. The alert sound plays while sending.
+6. A **status report** is shown with per-recipient success or failure details.
 
-### Additional Settings
--   **Sender Identity:** (Twilio Only) Choose the name or number that appears as the sender (e.g., "Alert" or your specific Twilio number).
--   **Appearance:** Toggle between Light Mode, Dark Mode, or follow System Settings.
--   **App Language:** Manually override the app's language (default: System Language).
--   **Region and formatting:** Set your region to ensure phone numbers are formatted correctly (e.g., auto-adding country codes).
--   **Notification sound:** Choose the alert sound that plays after a successful message delivery.
+The alert message includes:
+- Your name (if set in Settings)
+- The message text
+- A Google Maps link to your current location
+- Your battery level
 
-## 6. 📧 Configuring Email Redundancy
+---
 
-If you have no cellular signal but are connected to Wi-Fi, TapAlert can send your alert via email.
+## 7. ⏱️ Countdown Dialog
 
-### Setup Instructions
-1.  **Open Settings:** Tap the gear icon ⚙️ and select **Email Redundancy**.
-2.  **Enable the feature:** Toggle **Enable Email Redundancy** to ON.
-3.  **SMTP Configuration:** Enter your email provider's SMTP details:
-    - **SMTP Host:** (e.g., `smtp.gmail.com` for Gmail, `smtp-mail.outlook.com` for Outlook).
-    - **SMTP Port:** (e.g., `587` or `465`).
-    - **Username / Email:** Your full email address.
-    - **Password / App Password:** Your email password or a dedicated App Password.
+Before sending, TapAlert shows a countdown to prevent accidental alerts.
 
-### ⚡ Quick Setup (Common Providers)
-TapAlert includes preset buttons for popular email providers. Simply tap a preset button to auto-fill the SMTP host and port settings:
+- **Default duration:** 10 seconds. Adjustable from 0 (immediate) to 30 seconds in **Settings → Countdown Duration**.
+- **Cancel:** Tap **CANCEL** any time during the countdown to abort.
+- **Send immediately:** Tap **SEND NOW** to skip the remaining delay.
 
-- **Gmail** (smtp.gmail.com:587)
-- **Outlook** (smtp-mail.outlook.com:587)
-- **Yahoo** (smtp.mail.yahoo.com:587)
-- **iCloud** (smtp.mail.me.com:587)
+---
 
-After tapping a preset, you only need to enter your email address and app password (see below).
+## 8. ⏰ Check-in Timer *(Premium)*
 
-> [!IMPORTANT]
-> **App Passwords Are Provider-Specific**
+The Check-in Timer is a "dead man's switch": if you don't cancel it in time, TapAlert automatically sends an alert. Useful for hiking, traveling alone, or any situation where you want someone notified if you stop responding.
+
+**To start:**
+1. Swipe left to the **Check-in Timer** page.
+2. Use the wheel pickers to set a duration (hours and minutes).
+3. Optionally type a custom message.
+4. Tap **Start Timer**.
+
+**While running:**
+- The timer counts down on screen.
+- When **less than 5 minutes remain**, TapAlert plays a warning sound and shows a dialog:
+  - **Cancel** — dismiss the warning and let the timer continue.
+  - **Stop** — abort the timer (no alert will be sent).
+  - **Restart** — reset the timer to the original duration.
+- If the timer reaches zero without being stopped or reset, the alert is sent automatically.
+
+> **Android:** The timer runs as a foreground service and remains active when the app is in the background or the screen is off.
 >
-> Each email provider has its own app password system. You cannot use a Gmail app password with Outlook, or vice versa. You must generate an app password specific to the provider you're using.
+> **iOS:** The timer may not fire if the app is force-closed. Keep the app running in the background.
 
-### 🔒 Using App Passwords (Recommended)
-For security and reliability, we strongly recommend using an **App Password** instead of your primary password.
-- **Why?** It bypasses 2-Factor Authentication and keeps your main account secure.
-- **How to generate:**
+---
 
-#### Gmail
-  1. Go to your **Google Account > Security** or [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
-  2. Search for **"App passwords"** (requires 2-step verification enabled).
-  3. Generate a new password for "Other" and call it "TapAlert".
-  4. Use the 16-character code provided in TapAlert (blanks included).
+## 9. 📜 Alert History
 
-#### Outlook / Hotmail / Live
-  1. Go to **Microsoft Account > Security > Advanced security options** or [https://account.live.com/names/manage](https://account.live.com/names/manage).
-  2. Under **"App passwords"**, create a new app password.
-  3. Select "Other" and name it "TapAlert".
-  4. Use the generated password in TapAlert.
+Tap the **clock icon** in the top toolbar to view your alert history.
 
-#### Yahoo
-  1. Go to **Yahoo Account Security** or [https://login.yahoo.com/account/security](https://login.yahoo.com/account/security).
-  2. Select **"Generate app password"**.
-  3. Choose "Other App" and name it "TapAlert".
-  4. Use the generated password in TapAlert.
+- Shows timestamp, message, and delivery method for each alert.
+- Tap any entry for per-recipient success/failure details and error information.
+- **Free tier:** stores the last 20 alerts. **Premium:** stores up to 200.
+- Delete individual entries or clear all history from the trash icon.
 
-#### iCloud
-  1. Go to **appleid.apple.com > Sign-In and Security > App-Specific Passwords** or [https://appleid.apple.com/account/manage](https://appleid.apple.com/account/manage).
-  2. Click the **+** button to generate a new password.
-  3. Name it "TapAlert".
-  4. Use the generated password in TapAlert.  
+---
 
-### Recipients
-Emails will be sent to all contacts in your **Recipients** list who have an email address saved. To add an email to a contact:
-1. Go to the **Recipients** screen.
-2. Edit a contact and ensure the email field is filled.
+## 10. ⚙️ Settings
 
-### 🧪 Testing
-Before relying on it, tap **Test Connection**. Enter an email address to receive a test message. If successful, your setup is correct.
+Tap the **gear icon** to open Settings.
 
-## 7. 📱 Home Screen Widget (Android Only)
+### SMS Method
 
-For even faster emergency alerts, you can add a widget to your Android home screen:
+**Android:**
+- **Direct SMS** — sends via your SIM card, no internet needed. Preferred when cellular is available.
+- **Twilio** — sends via the Twilio API over internet (Wi-Fi or data). Used as automatic fallback if Direct SMS fails.
 
-### Adding the Widget
+**iOS:**
+- **iOS Messages (Manual)** — opens the native Messages app pre-filled. You tap Send manually. No Twilio account needed.
+- **Twilio (Automatic)** — sends automatically via the Twilio API. Requires a Twilio account.
 
-1.  **Open Settings:** Tap the gear icon ⚙️ in the app.
-2.  **Find Widget Section:** Scroll down to the "Widget" section.
-3.  **Tap "Add":** The system will prompt you to place the widget on your home screen.
-4.  **Position the Widget:** Drag it to your preferred location and release.
+> For Twilio setup instructions, see the **Twilio Guide** in the Help menu.
 
-> [!NOTE]
-> If you already have a widget on your home screen, you'll need to remove the old one before adding a new one.
+### Email Redundancy
 
-### Using the Widget
+Configure SMTP email to send alerts via email in addition to SMS. Useful when SMS is unavailable but Wi-Fi is connected.
 
--   **Tap the Widget:** Opens the app and starts the **Countdown** immediately.
--   **App Experience:** You will see the countdown dialog, ensuring the alert is intentional. You can cancel it if pressed by mistake.
--   **Sound:** The app plays an audible alert tone while counting down.
+1. Go to **Settings → Email Redundancy**.
+2. Enable **Email Redundancy**.
+3. Select a preset provider (Gmail, Outlook, Yahoo, iCloud) or enter custom SMTP details.
+4. Enter your email address and an **App Password** (recommended over your main password).
+5. Tap **Test Email Connection** to verify before relying on it.
 
-> [!TIP]
-> The widget is perfect for true emergencies when you need to send an alert with a single tap, without finding the app in your drawer.
+Emails are sent to any recipient in your list who has an email address saved.
 
-## 8. 🚀 Sending an Alert
-1.  **Open the App.**
-2.  **Trigger the Alert:**
-    *   **In Report Mode:** Tap the large red **SEND ALERT** button. The message selected in the tabs (1-4) will be sent.
-    *   **In Panic Mode:** 
-        *   Tap the big red **SOS** button to send a "Help needed" alert.
-        *   Tap the **Microphone icon** (bottom-right of SOS) to record and send a specific voice message with your SOS alert.
-        *   Tap the green **I'm OK** button to send a reassuring "I'm OK" status.
-        *   Tap the **Microphone icon** (bottom-right of I'm OK) to record and send a voice message with your OK status.
-        *   Tap the **Emergency Call** button to dial local emergency services immediately.
-3.  **The app will:**
-    -   Fetch your current location (if configured).
-    -   Show a **Countdown Dialog** (see "Countdown Dialog" below).
-    -   Send the alert message to all recipients.
+### Location
 
-## 9. ⏱️ Countdown Dialog
+- **Include Location** — appends GPS coordinates (Google Maps link) to every alert.
+- **Include Address** — also attempts to resolve a street address from your coordinates.
 
-To prevent accidental alerts, TapAlert shows a countdown before sending.
+### Trigger Method
 
--   **Countdown Duration:** By default, the app waits **10 seconds**. You can customize this in **Settings** (from **0s** for immediate sending up to **30s**).
--   **Cancelling:** You can tap **CANCEL** during the countdown to stop the alert.
+- **Tap to Send** — a single tap starts the countdown.
+- **Press & Hold (5s)** — you must hold the button for 5 seconds. Recommended to prevent accidental sends.
 
-## 10. 🔔 Making Alert SMS Stand Out
-To ensure your emergency contacts don't miss your alert message among other notifications, we recommend configuring their phones to treat messages from your TapAlert number differently.
+### Alert Countdown
 
-### For iPhone Recipients
-1. **Open Contacts:** Select your contact entry.
-2. **Assign Emergency Bypass:** Tap **Edit** > **Ringtone** (or Text Tone) and toggle **Emergency Bypass** ON. This allows sounds/vibrations even if their phone is on Silent or Do Not Disturb.
-3. **Custom Tone:** Choose a loud, distinct sound for your messages.
+Set the delay before the alert sends (0–30 seconds). A longer countdown gives you more time to cancel if triggered by mistake.
 
-### For Android Recipients
-1. **Open Messages:** Select the conversation with you.
-2. **Notification Categories:** Tap **Details** > **Notifications**.
-3. **Set as "Urgent":** Change the priority to **"High"** or **"Urgent"**.
-4. **Override DND:** Ensure **"Ignore Do Not Disturb"** is enabled for this conversation.
-5. **Custom Sound:** Pick a high-priority alert sound.
+### Sound Settings
 
-> [!NOTE]
-> **Using Twilio?** If you send alerts via Twilio, your contacts will receive the message from your Twilio number or an Alphanumeric ID (e.g., "TapAlert"). They **must** add this number/ID to their contacts list for the settings above to work correctly. Otherwise, the message will still be delivered but as a standard SMS without any priority notifications.
+- Choose between **Plain Sounds** or **Rich Sounds** (or None).
+- **Sound Pattern** — select from Fast Alert, Short Beeps, Musical Chime, Wailing Siren, Pulse Ringing, Pipe Organ, Metallic Ring, or Electronic Hive.
+- **Sound Pitch** — Low, Standard, or High.
+- **Volume** — adjust with the slider.
+- SOS and I'm OK alerts have independent sound patterns.
 
-## 11. 🕰️ Alert History
+### Other Settings
 
-To keep track of your sent emergency alerts:
-1.  **Tap the History Icon:** The clock icon 🕰️ located in the top bar.
-2.  **View Recent Alerts:** The app maintains a log of the last **50 alerts** sent.
-3.  **Check Status:** Tap any entry to see exactly which recipients received the message successfully and which failed (with error details).
-4.  **Clear History:** You can delete all logs by tapping the trash icon 🗑️ inside the history screen.
+- **Your Name** — included in outgoing messages so recipients know who sent the alert.
+- **Countdown Duration** — delay before sending (see above).
+- **Number of configured alerts** — how many text slots appear in Standard Mode (3–7).
+- **Auto-Start on Launch** — triggers the countdown immediately when the app opens. Only enable this if you launch TapAlert via a physical button shortcut.
+- **Flash on Alert** — flashes the screen and torch when an alert is sent.
+- **Home Country** — ensures local phone numbers are formatted correctly.
+- **App Language** — override the interface language (default: device language).
+- **App Theme** — Light, Dark, or System Default.
 
-## 12. ❓ Troubleshooting
+---
 
--   **Message not sending (Direct SMS):** Check your mobile signal and carrier credit (Android only).
--   **Message not sending (Twilio):** Verify your internet connection and double-check your credentials in the settings.
--   **Location missing:** Ensure GPS is enabled in your phone's system settings and the app has Location permission.
--   **Contacts missing (iOS):** Go to Settings > Privacy > Contacts > TapAlert and ensure **"All Contacts"** is checked.
--   **Contacts missing (Android):** Go to Settings > Apps > TapAlert > Permissions and ensure **"Contacts"** is allowed.
+## 11. 📱 Home Screen Widget *(Android)*
 
-## 13. ⏳ Check-in Timer
+Add a TapAlert widget to your Android home screen for one-tap access without opening the app.
 
-The **Check-in Timer** is an "inactive" safety feature. It allows you to set a timer when starting a potentially risky activity (e.g., walking home alone, going on a hike).
+**To add:**
+1. Go to **Settings → Widget → Add Widget**.
+2. Choose **Standard (1×1)** for a compact icon or **Large (2×2)** for higher visibility.
+3. Follow the on-screen instructions to place it on your home screen.
 
-1.  **Start the Timer:** Select a duration (from 5 minutes up to 24 hours) and an optional message.
-2.  **The Countdown:** A persistent notification will show you the remaining time.
-3.  **The Check-in:** You must return to the app and tap **"I'm OK (Reset)"** before the timer expires.
-4.  **Automatic Alert:** If you *don't* reset the timer before it hits zero, TapAlert will automatically send your alert message and location to all recipients.
+**How it works:**
+- Tapping the widget opens the app and immediately starts the alert countdown.
+- The sound plays and the countdown dialog appears — you can still cancel if triggered by mistake.
 
-> [!TIP]
-> This is perfect for "Dead Man's Switch" scenarios where you want an alert sent if you become incapacitated or lose access to your phone.
+---
+
+## 12. 🔔 Making Alerts Stand Out on Recipients' Phones
+
+Your recipients can configure their phones to give TapAlert messages a special ringtone or bypass Do Not Disturb.
+
+**iPhone recipients:**
+1. Open **Contacts** and find your entry.
+2. Tap **Edit → Text Tone**.
+3. Enable **Emergency Bypass** — this bypasses Silent mode and Do Not Disturb.
+4. Choose a loud, distinctive tone.
+
+**Android recipients:**
+1. Open the **Messages** app and find the conversation.
+2. Tap the menu → **Details → Notifications**.
+3. Set priority to **High** or **Urgent**.
+4. Enable **Override Do Not Disturb**.
+
+> **Using Twilio?** Your contacts will receive messages from your Twilio number or sender ID (e.g., "TapAlert"). They should add that number/ID to their contacts for the above settings to apply.
+
+---
+
+## 13. 🔗 Remote Setup (Magic Link)
+
+A family member or caregiver can configure TapAlert on your device remotely using a **Magic Link**.
+
+The caregiver opens TapAlert, selects **Set Up for Someone Else**, fills in the contacts, message templates, and optional Twilio/email credentials, then generates a setup link. When you tap that link on your device, TapAlert applies the full configuration automatically.
+
+This means a tech-savvy family member can set everything up without needing to be present — you just tap a link.
+
+---
+
+## 14. 🌟 Premium Upgrade
+
+Some features require a one-time Premium upgrade (no subscription):
+
+| Feature | Free | Premium |
+|---|---|---|
+| Recipients | 1 | Up to 50 |
+| Alert history | 20 entries | 200 entries |
+| Check-in Timer | — | ✓ |
+
+Tap **Upgrade** from the recipients screen or the timer page. If you've already purchased Premium on another device, tap **Restore Purchases**.
+
+---
+
+## 15. ❓ Troubleshooting
+
+| Problem | Solution |
+|---|---|
+| Alert not sending (Direct SMS) | Check cellular signal and SIM credits |
+| Alert not sending (Twilio) | Check internet connection and Twilio credentials in Settings |
+| Location missing | Enable GPS in system settings and grant Location permission to TapAlert |
+| Address not showing | Enable "Include Address" in Settings; requires internet for geocoding |
+| Contacts not appearing (iOS) | Settings → Privacy → Contacts → TapAlert → **All Contacts** |
+| Contacts not appearing (Android) | Settings → Apps → TapAlert → Permissions → enable **Contacts** |
+| Timer not firing (iOS) | Keep TapAlert open in the background; the timer may not fire if the app is force-closed |
+| Wrong language shown | Settings → App Language — select your preferred language manually |
