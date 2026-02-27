@@ -7,56 +7,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ fas_h1 }} - TapAlert</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn { padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
-        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-        .guide-header { background: white; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .guide-nav { display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { display: flex; align-items: center; font-weight: 800; font-size: 1.5rem; color: #333; text-decoration: none; }
-        .guide-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .guide-title { font-size: 2.2rem; color: #2c3e50; margin-bottom: 10px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .guide-subtitle { text-align: center; color: #667eea; font-size: 1.05rem; margin-bottom: 30px; }
-        .guide-section { margin-bottom: 40px; }
-        h2 { font-size: 1.8rem; color: #2c3e50; margin-top: 40px; margin-bottom: 20px; border-left: 5px solid #667eea; padding-left: 15px; }
-        h3 { font-size: 1.3rem; color: #4a5568; margin-top: 25px; margin-bottom: 12px; }
-        p { margin-bottom: 15px; color: #4a5568; }
-        ul, ol { margin-bottom: 20px; padding-left: 25px; color: #4a5568; }
-        li { margin-bottom: 8px; }
-        a { color: #667eea; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .tip-box { background-color: #f0f4ff; border-left: 4px solid #667eea; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .tip-box strong { color: #2c3e50; }
-        .warn-box { background-color: #fffaf0; border-left: 4px solid #ed8936; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .warn-box strong { color: #c05621; }
-        pre { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin: 20px 0; line-height: 1.5; }
-        code { background: #eef1f8; color: #667eea; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-        pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
-        .checklist { list-style: none; padding-left: 5px; }
-        .checklist li::before { content: "☐ "; color: #667eea; font-size: 1.1em; }
-        footer { background: #1a1a1a; color: white; padding: 60px 20px 30px; margin-top: 60px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h3 { margin-bottom: 20px; color: #667eea; }
-        .footer-section ul { list-style: none; padding-left: 0; }
-        .footer-section ul li { padding: 8px 0; }
-        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s ease; }
-        .footer-section a:hover { color: white; text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; }
-        @media (max-width: 768px) {
-            body { font-size: 14px; } .brand-logo { font-size: 1.2rem; } .btn { padding: 8px 16px; font-size: 0.85rem; }
-            .guide-container { padding: 20px; margin: 20px; } .guide-title { font-size: 1.7rem; }
-            h2 { font-size: 1.4rem; margin-top: 30px; padding-left: 12px; } h3 { font-size: 1.15rem; }
-            p, li { font-size: 0.9rem; } pre { font-size: 0.75rem; padding: 14px; }
-            footer { padding: 40px 15px 20px; margin-top: 40px; } .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-subtitle {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tip-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .tip-box strong {
+            color: #2c3e50;
+        }
+
+        .warn-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .warn-box strong {
+            color: #c05621;
+        }
+
+        pre {
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #eef1f8;
+            color: #667eea;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .checklist li::before {
+            content: "☐ ";
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            pre {
+                font-size: 0.75rem;
+                padding: 14px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
         @media (max-width: 430px) {
-            body { font-size: 13px; } .btn { padding: 7px 14px; font-size: 0.8rem; }
-            .guide-container { padding: 15px; margin: 12px; } .guide-title { font-size: 1.45rem; }
-            h2 { font-size: 1.2rem; padding-left: 10px; border-left-width: 4px; } h3 { font-size: 1.05rem; }
-            pre { font-size: 0.7rem; padding: 10px; } footer { padding: 30px 12px 15px; margin-top: 30px; }
-            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            body {
+                font-size: 13px;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.45rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            pre {
+                font-size: 0.7rem;
+                padding: 10px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -66,7 +361,7 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <img src="media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">{{ guide_back }}</a>
@@ -86,7 +381,7 @@
         <section class="guide-section" id="overview">
             <h2>{{ fas_overview_h2 }}</h2>
             <p>{{ fas_overview_p1 }}</p>
-<pre>Admin's phone                         Senior's phone
+            <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
 2. Fill in all configuration
@@ -421,7 +716,7 @@
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
             <h2>{{ fas_ref_h2 }}</h2>
-<pre>┌─────────────────────────────────────────────┐
+            <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
 │  🔴  Big red button  →  Send EMERGENCY      │
@@ -469,7 +764,8 @@
                 <div class="footer-section">
                     <h3>{{ footer_support }}</h3>
                     <ul>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>{{ footer_guides }}</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>{{
+                                footer_guides }}</a></li>
                         <li><a href="troubleshooting.html">{{ nav_troubleshooting }}</a></li>
                         <li><a href="contact.html">{{ footer_contact_support }}</a></li>
                     </ul>
@@ -482,4 +778,5 @@
     </footer>
 
 </body>
+
 </html>

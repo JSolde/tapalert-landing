@@ -15,7 +15,8 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/index.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/index.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" translator="no">TapAlert</span> – Einfache Notfallwarnungen. Keine monatlichen Gebühren.</title>
+    <title><span class="notranslate" translator="no">TapAlert</span> – Einfache Notfallwarnungen. Keine monatlichen
+        Gebühren.</title>
     <style>
         * {
             margin: 0;
@@ -1094,7 +1095,8 @@
     <!-- Top Navigation -->
     <header>
         <a href="#download" class="nav-logo">
-            <img src="../media/app_icon.png" alt="TapAlert"> <span class="notranslate" translate="no">TapAlert</span>
+            <img src="../media/tapalert-icon-web.png" alt="TapAlert"> <span class="notranslate"
+                translate="no">TapAlert</span>
         </a>
         <nav style="display: flex; align-items: center;">
             <ul class="nav-links">
@@ -1106,44 +1108,136 @@
                 <li><a href="#pricing" class="nav-link" data-section="pricing">Preise</a></li>
                 <li><a href="#guides" class="nav-link" data-section="guides">Führer</a></li>
             </ul>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">DE</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/index.html" hreflang="ca">CA</a>
-            <a href="../de/index.html" hreflang="de" class="active">DE</a>
-            <a href="../index.html" hreflang="en">EN</a>
-            <a href="../es/index.html" hreflang="es">ES</a>
-            <a href="../eu/index.html" hreflang="eu">EU</a>
-            <a href="../fr/index.html" hreflang="fr">FR</a>
-            <a href="../gl/index.html" hreflang="gl">GL</a>
-            <a href="../it/index.html" hreflang="it">IT</a>
-            <a href="../nl/index.html" hreflang="nl">NL</a>
-            <a href="../pt/index.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">DE</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/index.html" hreflang="ca">CA</a>
+                        <a href="../de/index.html" hreflang="de" class="active">DE</a>
+                        <a href="../index.html" hreflang="en">EN</a>
+                        <a href="../es/index.html" hreflang="es">ES</a>
+                        <a href="../eu/index.html" hreflang="eu">EU</a>
+                        <a href="../fr/index.html" hreflang="fr">FR</a>
+                        <a href="../gl/index.html" hreflang="gl">GL</a>
+                        <a href="../it/index.html" hreflang="it">IT</a>
+                        <a href="../nl/index.html" hreflang="nl">NL</a>
+                        <a href="../pt/index.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">
             <div class="bar"></div>
@@ -1154,19 +1248,30 @@
     <!-- Hero Section -->
     <section class="hero" id="download">
         <div class="hero-content fade-in-up">
-            <h1><img src="../media/app_icon.png" alt="TapAlert"
+            <h1><img src="../media/tapalert-icon-web.png" alt="TapAlert"
                     style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                     translate="no">TapAlert</span></h1>
-            <p class="tagline">Einfache Benachrichtigungen mit nur einem Fingertipp. Privatsphäre-Erste.<br> Speziell für Senioren konzipiert: einfach, sicher, keine monatlichen Gebühren.<br> Reibungslose (fernunterstützte) Erstkonfiguration für Senioren.<br></p>
+            <p class="tagline">Einfache Benachrichtigungen mit nur einem Fingertipp. Privatsphäre-Erste.<br> Speziell
+                für Senioren konzipiert: einfach, sicher, keine monatlichen Gebühren.<br> Reibungslose
+                (fernunterstützte) Erstkonfiguration für Senioren.<br></p>
             <p class="tagline">Für Ihre Eltern, Großeltern und ältere Erwachsene.</p>
             <p class="tagline">Für Ihren Seelenfrieden.</p>
             <div class="summary-box">
                 <p class="subtitle">Schützen Sie Ihre älteren Erwachsenen und Angehörigen mit einem Fingertipp.</p>
                 <p class="subtitle">NEINAbonnements, kein Tracking, keine Konten erforderlich, keine Werbung.</p>
-                <p class="subtitle">Persönliches Sicherheitswarntool für Senioren, Familien, Reisende und alle, die eine schnelle Möglichkeit suchen, vertrauenswürdige Kontakte zu benachrichtigen, wenn etwas nicht stimmt – ohne Abonnements, Konten oder Nachverfolgung.</p>
-                <p class="subtitle"><strong>Stellen Sie sicher, dass Sie in einer Welt, in der das Unerwartete zur neuen Normalität gehört – von plötzlichen Überschwemmungen bis hin zu Stromausfällen –, nie wirklich allein sind. Teilen Sie Ihren Lieben mit nur einem Fingertipp mit, dass Sie in Sicherheit sind oder eine helfende Hand benötigen, egal, was der Tag bringt.</strong></p>
+                <p class="subtitle">Persönliches Sicherheitswarntool für Senioren, Familien, Reisende und alle, die eine
+                    schnelle Möglichkeit suchen, vertrauenswürdige Kontakte zu benachrichtigen, wenn etwas nicht stimmt
+                    – ohne Abonnements, Konten oder Nachverfolgung.</p>
+                <p class="subtitle"><strong>Stellen Sie sicher, dass Sie in einer Welt, in der das Unerwartete zur neuen
+                        Normalität gehört – von plötzlichen Überschwemmungen bis hin zu Stromausfällen –, nie wirklich
+                        allein sind. Teilen Sie Ihren Lieben mit nur einem Fingertipp mit, dass Sie in Sicherheit sind
+                        oder eine helfende Hand benötigen, egal, was der Tag bringt.</strong></p>
                 <p class="subtitle">
-                    Unsere App sendet Benachrichtigungen per SMS und nicht über datenbasierte Nachrichten – Ihre Nachricht kommt also an, wenn Apps, WLAN und Push-Benachrichtigungen dies nicht tun. Unabhängig davon, ob Ihre Empfänger über Smartphones, Feature-Phones oder eingeschränkte Konnektivität verfügen, SMS liefert sie. Umgehen Sie die Filter „Stumm/Nicht stören“, um Ihre Kontakte zu wecken, wenn es darauf ankommt. Funktioniert auch ohne Internetzugang.
+                    Unsere App sendet Benachrichtigungen per SMS und nicht über datenbasierte Nachrichten – Ihre
+                    Nachricht kommt also an, wenn Apps, WLAN und Push-Benachrichtigungen dies nicht tun. Unabhängig
+                    davon, ob Ihre Empfänger über Smartphones, Feature-Phones oder eingeschränkte Konnektivität
+                    verfügen, SMS liefert sie. Umgehen Sie die Filter „Stumm/Nicht stören“, um Ihre Kontakte zu wecken,
+                    wenn es darauf ankommt. Funktioniert auch ohne Internetzugang.
                 </p>
             </div>
             <div class="cta-buttons">
@@ -1190,41 +1295,67 @@
                             — Die App funktioniert vollständig lokal, keine Anmeldung oder Anmeldung</li>
                         <li><span class="check">✅</span> <strong>NEINTracking oder Analyse</strong>
                             — Es werden keine Daten zum Nutzerverhalten erhoben oder übermittelt</li>
-                        <li><span class="check">✅</span> <strong>NEINAnzeigen</strong> — Die App ist werbefrei und wird nur durch einen einmaligen In-App-Kauf für Premium-Funktionen monetarisiert</li>
-                        <li><span class="check">✅</span> <strong>NEINAbonnements</strong> — Benutzer zahlen einmalig (oder gar nicht für das kostenlose Kontingent), es fallen keine wiederkehrenden Gebühren an</li>
-                        <li><span class="check">✅</span> <strong>Auf den Standort wird nur zugegriffen, wenn eine Warnung gesendet wird</strong> — nie im Hintergrund</li>
+                        <li><span class="check">✅</span> <strong>NEINAnzeigen</strong> — Die App ist werbefrei und wird
+                            nur durch einen einmaligen In-App-Kauf für Premium-Funktionen monetarisiert</li>
+                        <li><span class="check">✅</span> <strong>NEINAbonnements</strong> — Benutzer zahlen einmalig
+                            (oder gar nicht für das kostenlose Kontingent), es fallen keine wiederkehrenden Gebühren an
+                        </li>
+                        <li><span class="check">✅</span> <strong>Auf den Standort wird nur zugegriffen, wenn eine
+                                Warnung gesendet wird</strong> — nie im Hintergrund</li>
                     </ul>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">📡</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">SMS-First-Architektur</h3>
-                    <p style="font-size: 0.9em; margin-bottom: 15px;">Die App priorisiert SMS gegenüber datenbasierten Nachrichten (Push-Benachrichtigungen, WhatsApp usw.), weil:</p>
+                    <p style="font-size: 0.9em; margin-bottom: 15px;">Die App priorisiert SMS gegenüber datenbasierten
+                        Nachrichten (Push-Benachrichtigungen, WhatsApp usw.), weil:</p>
                     <ul class="feature-list" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
-                        <li><span class="check">✅</span> SMS funktioniert, wenn Internet/WLAN ausgefallen ist (Mobilfunkmasten verfügen über Batterie-Backup)</li>
-                        <li><span class="check">✅</span> Empfänger benötigen keine Smartphones – Feature-Telefone und Basistelefone empfangen SMS</li>
+                        <li><span class="check">✅</span> SMS funktioniert, wenn Internet/WLAN ausgefallen ist
+                            (Mobilfunkmasten verfügen über Batterie-Backup)</li>
+                        <li><span class="check">✅</span> Empfänger benötigen keine Smartphones – Feature-Telefone und
+                            Basistelefone empfangen SMS</li>
                         <li><span class="check">✅</span> NEINApp-Installation auf Empfängerseite erforderlich</li>
-                        <li><span class="check">✅</span> Die Zustellung von SMS erfolgt auf Anbieterebene und ist nicht davon abhängig, dass Server von Drittanbietern online sind</li>
+                        <li><span class="check">✅</span> Die Zustellung von SMS erfolgt auf Anbieterebene und ist nicht
+                            davon abhängig, dass Server von Drittanbietern online sind</li>
                     </ul>
                     <p style="font-size: 0.9em;"><strong><span class="notranslate" translate="no">Smart
-                                Redundancy</span>:</strong> Wenn kein Mobilfunkdienst verfügbar ist, sendet die App zunächst SMS über WLAN-Anrufe (falls verfügbar, abhängig vom Telefon/Anbieter) oder, falls nicht, über <span class="notranslate" translator="no">Twilio</span> (falls konfiguriert). Dies bietet einen sekundären Zustellungspfad, wenn der primäre SMS-Kanal nicht verfügbar ist. Ebenso fungiert <span class="notranslate" translator="no">Twilio</span> (sofern konfiguriert) in einer Situation mit nur Mobilfunkdienst (kein WLAN und kein Internet) als Failback, wenn die <span class="notranslate" translator="no">Direkt-SMS</span> aus irgendeinem Grund fehlschlägt (defekte oder keine SIM-Karte,...), da es als letzten Ausweg auch das Mobilfunknetz (über 4G/5G) zum Senden der Nachricht nutzen kann.</p>
+                                Redundancy</span>:</strong> Wenn kein Mobilfunkdienst verfügbar ist, sendet die App
+                        zunächst SMS über WLAN-Anrufe (falls verfügbar, abhängig vom Telefon/Anbieter) oder, falls
+                        nicht, über <span class="notranslate" translator="no">Twilio</span> (falls konfiguriert). Dies
+                        bietet einen sekundären Zustellungspfad, wenn der primäre SMS-Kanal nicht verfügbar ist. Ebenso
+                        fungiert <span class="notranslate" translator="no">Twilio</span> (sofern konfiguriert) in einer
+                        Situation mit nur Mobilfunkdienst (kein WLAN und kein Internet) als Failback, wenn die <span
+                            class="notranslate" translator="no">Direkt-SMS</span> aus irgendeinem Grund fehlschlägt
+                        (defekte oder keine SIM-Karte,...), da es als letzten Ausweg auch das Mobilfunknetz (über 4G/5G)
+                        zum Senden der Nachricht nutzen kann.</p>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">👴</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">Seniorenfreundliches Design</h3>
                     <ul class="feature-list" style="list-style-type: none; padding: 0;">
-                        <li><span class="check">✅</span> Große, kontrastreiche Tasten (Einzelne <span class="notranslate" translator="no">SOS</span> und mir geht es gut)</li>
+                        <li><span class="check">✅</span> Große, kontrastreiche Tasten (Einzelne <span
+                                class="notranslate" translator="no">SOS</span> und mir geht es gut)</li>
                         <li><span class="check">✅</span> Minimale Navigation und kognitive Belastung</li>
                         <li><span class="check">✅</span> Voice-to-Text, sodass Benutzer nicht tippen müssen</li>
-                        <li><span class="check">✅</span> Der konfigurierbare Countdown-Timer oder die Hold-to-Send-Bestätigung verhindern versehentliche Benachrichtigungen</li>
+                        <li><span class="check">✅</span> Der konfigurierbare Countdown-Timer oder die
+                            Hold-to-Send-Bestätigung verhindern versehentliche Benachrichtigungen</li>
                         <li><span class="check">✅</span> Geführtes Onboarding mit Schritt-für-Schritt-Einrichtung</li>
-                        <li><span class="check">✅</span> Bei allen UI-Entscheidungen haben Klarheit und Einfachheit Vorrang vor Funktionsdichte</li>
-                        <li><span class="check">✅</span> Reibungslose Konfiguration mit magischem Link, der per WhatsApp, SMS, E-Mail usw. gesendet werden kann. Mit einem einzigen Klick kann Ihr Senior die App konfigurieren und mit der Nutzung beginnen.</li>
-                        <li><span class="check">✅</span> Bildschirmblitz – 3 helle Blitze bestätigen jede Warnung, sodass Benutzer mit Hörverlust sie nie verpassen</li>
-                        <li><span class="check">✅</span> Niederfrequente Töne – Standardalarmtöne bei 500–600 Hz, leichter zu hören bei altersbedingtem Hörverlust</li>
-                        <li><span class="check">✅</span> Haptischer Countdown – das Telefon pulsiert während des Countdowns einmal pro Sekunde, Sie müssen nicht auf den Bildschirm schauen</li>
-                        <li><span class="check">✅</span> Unterstützung für Bildschirmleseprogramme – vollständig kompatibel mit TalkBack (Android) und VoiceOver (iOS); Die Schaltflächen sind beschriftet und die Ergebnisse werden laut angesagt</li>
+                        <li><span class="check">✅</span> Bei allen UI-Entscheidungen haben Klarheit und Einfachheit
+                            Vorrang vor Funktionsdichte</li>
+                        <li><span class="check">✅</span> Reibungslose Konfiguration mit magischem Link, der per
+                            WhatsApp, SMS, E-Mail usw. gesendet werden kann. Mit einem einzigen Klick kann Ihr Senior
+                            die App konfigurieren und mit der Nutzung beginnen.</li>
+                        <li><span class="check">✅</span> Bildschirmblitz – 3 helle Blitze bestätigen jede Warnung,
+                            sodass Benutzer mit Hörverlust sie nie verpassen</li>
+                        <li><span class="check">✅</span> Niederfrequente Töne – Standardalarmtöne bei 500–600 Hz,
+                            leichter zu hören bei altersbedingtem Hörverlust</li>
+                        <li><span class="check">✅</span> Haptischer Countdown – das Telefon pulsiert während des
+                            Countdowns einmal pro Sekunde, Sie müssen nicht auf den Bildschirm schauen</li>
+                        <li><span class="check">✅</span> Unterstützung für Bildschirmleseprogramme – vollständig
+                            kompatibel mit TalkBack (Android) und VoiceOver (iOS); Die Schaltflächen sind beschriftet
+                            und die Ergebnisse werden laut angesagt</li>
                     </ul>
                 </div>
 
@@ -1236,81 +1367,110 @@
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">Leistungsstarke Funktionen für Ihre Sicherheit</h2>
-            <p class="section-subtitle">Alles, was Sie brauchen, um mit Ihren Notfallkontakten in Verbindung zu bleiben, konzipiert für Einfachheit und Zuverlässigkeit.</p>
+            <p class="section-subtitle">Alles, was Sie brauchen, um mit Ihren Notfallkontakten in Verbindung zu bleiben,
+                konzipiert für Einfachheit und Zuverlässigkeit.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🆘</div>
                     <h3><span class="notranslate" translator="no">SOS</span>- und OK-Schaltflächen</h3>
-                    <p>Senden Sie vordefinierte <span class="notranslate" translator="no">SOS</span> „Ich brauche Hilfe!“ oder „Mir geht es gut“-Nachrichten sofort mit einem Fingertipp. Die Nachrichten enthalten Ihren genauen GPS-Standort und Ihre Adresse.</p>
+                    <p>Senden Sie vordefinierte <span class="notranslate" translator="no">SOS</span> „Ich brauche
+                        Hilfe!“ oder „Mir geht es gut“-Nachrichten sofort mit einem Fingertipp. Die Nachrichten
+                        enthalten Ihren genauen GPS-Standort und Ihre Adresse.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📶</div>
                     <h3>Intelligente Nachrichtenübermittlung</h3>
-                    <p>Funktioniert offline mit <span class="notranslate" translator="no">Direkt-SMS</span>. Automatischer <span class="notranslate" translator="no">Fallback</span> zwischen Mobilfunk und WLAN, um sicherzustellen, dass Ihre Nachricht ankommt.</p>
+                    <p>Funktioniert offline mit <span class="notranslate" translator="no">Direkt-SMS</span>.
+                        Automatischer <span class="notranslate" translator="no">Fallback</span> zwischen Mobilfunk und
+                        WLAN, um sicherzustellen, dass Ihre Nachricht ankommt.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Check-in-Timer</h3>
-                    <p>Stellen Sie einen Countdown-Timer ein. Wenn Sie nicht rechtzeitig einchecken, wird eine automatische Benachrichtigung an Ihre Kontakte gesendet. Perfekt für Soloaktivitäten.</p>
+                    <p>Stellen Sie einen Countdown-Timer ein. Wenn Sie nicht rechtzeitig einchecken, wird eine
+                        automatische Benachrichtigung an Ihre Kontakte gesendet. Perfekt für Soloaktivitäten.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
                     <h3>Sprach-zu-Text-Benachrichtigungen</h3>
-                    <p>Erstellen Sie Nachrichten freihändig per Spracheingabe. Hilfreich in Stresssituationen oder Situationen mit eingeschränkter Mobilität, in denen das Tippen nicht möglich ist.</p>
+                    <p>Erstellen Sie Nachrichten freihändig per Spracheingabe. Hilfreich in Stresssituationen oder
+                        Situationen mit eingeschränkter Mobilität, in denen das Tippen nicht möglich ist.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">👴</div>
                     <h3>Seniorenfreundliches Design</h3>
-                    <p>Großer Text, hoher Kontrast, einstellbare Tonhöhe für Hörgeschädigte und eine klare, ablenkungsfreie Benutzeroberfläche. Einfach für Senioren und technisch nicht versierte Benutzer.</p>
+                    <p>Großer Text, hoher Kontrast, einstellbare Tonhöhe für Hörgeschädigte und eine klare,
+                        ablenkungsfreie Benutzeroberfläche. Einfach für Senioren und technisch nicht versierte Benutzer.
+                    </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
                     <h3>Familienunterstützte Einrichtung</h3>
-                    <p>Über einen Konfigurationslink können Familienmitglieder Senioren dabei helfen, die App und Kontakte aus der Ferne einzurichten. Konfigurieren Sie die App auf Ihrem eigenen Gerät und senden Sie ihnen den Link zur Installation und Konfiguration der App mit nur einem Klick.</p>
+                    <p>Über einen Konfigurationslink können Familienmitglieder Senioren dabei helfen, die App und
+                        Kontakte aus der Ferne einzurichten. Konfigurieren Sie die App auf Ihrem eigenen Gerät und
+                        senden Sie ihnen den Link zur Installation und Konfiguration der App mit nur einem Klick.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <h3>Mehrere Sprachen</h3>
-                    <p>Unterstützt mehrere Sprachen für eine breitere Zugänglichkeit. Verwenden <span class="notranslate" translate="no">TapAlert</span> in Ihrer bevorzugten Sprache.
+                    <p>Unterstützt mehrere Sprachen für eine breitere Zugänglichkeit. Verwenden <span
+                            class="notranslate" translate="no">TapAlert</span> in Ihrer bevorzugten Sprache.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📍</div>
                     <h3>Intelligenter Standortkontext</h3>
-                    <p>Enthält sowohl genaue GPS-Koordinaten als auch eine für Menschen lesbare Straßenadresse. Funktioniert auch dann, wenn die Empfänger offline sind oder normale Telefone verwenden.</p>
+                    <p>Enthält sowohl genaue GPS-Koordinaten als auch eine für Menschen lesbare Straßenadresse.
+                        Funktioniert auch dann, wenn die Empfänger offline sind oder normale Telefone verwenden.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">✉️</div>
                     <h3>E-Mail-Redundanz</h3>
-                    <p>Kann E-Mail-Benachrichtigungen als Verstärkungsnachrichtenmethode oder zur Bereitstellung von Alarmredundanz senden, wenn <span class="notranslate" translator="no">Twilio</span> nicht verfügbar ist.</p>
+                    <p>Kann E-Mail-Benachrichtigungen als Verstärkungsnachrichtenmethode oder zur Bereitstellung von
+                        Alarmredundanz senden, wenn <span class="notranslate" translator="no">Twilio</span> nicht
+                        verfügbar ist.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon"><img src="../media/twilio.png" alt="Twilio"
                             style="height: 1em; vertical-align: bottom;"></div>
                     <h3><span class="notranslate" translator="no">Twilio</span> als SMS-Failback</h3>
-                    <p><strong>Android:</strong> Die App sendet SMS direkt von Ihrem Telefon, es ist kein <span class="notranslate" translator="no">Twilio</span> erforderlich, wird aber empfohlen. <span class="notranslate" translator="no">Twilio</span> ist optional und wird als WLAN-Backup verwendet, wenn das Mobilfunknetz nicht verfügbar oder defekt ist. Es kann jedoch auch als Failback in reinen Mobilfunksituationen verwendet werden, wenn Ihre <span class="notranslate" translator="no">Direkt-SMS</span> nicht funktioniert oder nicht verfügbar ist.</p>
-                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple blockiert den direkten SMS-Versand von Apps. Dies ist eine Einschränkung von Apple und keine Einschränkung von <span class="notranslate" translator="no">TapAlert</span>. <span class="notranslate" translator="no">Twilio</span> ist die Brücke, mit der die App automatisch SMS in Ihrem Namen senden kann. Ohne sie besteht die einzige Möglichkeit darin, in der Nachrichten-App noch einmal manuell auf „Senden“ zu tippen – nicht ideal im Notfall.
+                    <p><strong>Android:</strong> Die App sendet SMS direkt von Ihrem Telefon, es ist kein <span
+                            class="notranslate" translator="no">Twilio</span> erforderlich, wird aber empfohlen. <span
+                            class="notranslate" translator="no">Twilio</span> ist optional und wird als WLAN-Backup
+                        verwendet, wenn das Mobilfunknetz nicht verfügbar oder defekt ist. Es kann jedoch auch als
+                        Failback in reinen Mobilfunksituationen verwendet werden, wenn Ihre <span class="notranslate"
+                            translator="no">Direkt-SMS</span> nicht funktioniert oder nicht verfügbar ist.</p>
+                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple blockiert den direkten SMS-Versand von
+                        Apps. Dies ist eine Einschränkung von Apple und keine Einschränkung von <span
+                            class="notranslate" translator="no">TapAlert</span>. <span class="notranslate"
+                            translator="no">Twilio</span> ist die Brücke, mit der die App automatisch SMS in Ihrem Namen
+                        senden kann. Ohne sie besteht die einzige Möglichkeit darin, in der Nachrichten-App noch einmal
+                        manuell auf „Senden“ zu tippen – nicht ideal im Notfall.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🆘📋</div>
                     <h3>Panik-Modus & Situationsmeldungen</h3>
-                    <p>Der Panik-Modus sendet sofortige SOS- und „Alles OK“-Alarme mit einem Tippen. Nach links wischen für Situationsmeldungen — 3 anpassbare Meldungsschaltflächen für nicht-dringende Situationen, mit optionaler Sprachaufnahme je Alarm.</p>
+                    <p>Der Panik-Modus sendet sofortige SOS- und „Alles OK“-Alarme mit einem Tippen. Nach links wischen
+                        für Situationsmeldungen — 3 anpassbare Meldungsschaltflächen für nicht-dringende Situationen,
+                        mit optionaler Sprachaufnahme je Alarm.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Startbildschirm-Widget</h3>
-                    <p><strong>Android nur:</strong> Fügen Sie Ihrem Startbildschirm mit nur einem Tastendruck ein Notfall-Widget hinzu, um sofort darauf zugreifen zu können, ohne die App öffnen zu müssen. Anweisungen zur Verwendung mit einer physischen Taste oder Geste finden Sie auch in der App.</p>
+                    <p><strong>Android nur:</strong> Fügen Sie Ihrem Startbildschirm mit nur einem Tastendruck ein
+                        Notfall-Widget hinzu, um sofort darauf zugreifen zu können, ohne die App öffnen zu müssen.
+                        Anweisungen zur Verwendung mit einer physischen Taste oder Geste finden Sie auch in der App.</p>
                 </div>
             </div>
         </div>
@@ -1320,7 +1480,8 @@
     <section class="screenshots" id="screenshots">
         <div class="container">
             <h2 class="section-title">Siehe <span class="notranslate" translator="no">TapAlert</span> in Aktion</h2>
-            <p class="section-subtitle">Intuitive Benutzeroberfläche, die auf Geschwindigkeit und Einfachheit ausgelegt ist</p>
+            <p class="section-subtitle">Intuitive Benutzeroberfläche, die auf Geschwindigkeit und Einfachheit ausgelegt
+                ist</p>
 
             <div class="screenshots-container">
                 <button class="carousel-button prev" onclick="moveCarousel(-1)">‹</button>
@@ -1376,9 +1537,12 @@
         <div class="container">
             <div class="android-content">
                 <h2 class="section-title">🤖 Android Erste</h2>
-                <p class="section-subtitle">Während wir unterstützen iOS Für plattformübergreifende Familien bietet unser Flaggschiff die Hebelwirkung Android Funktionen zum Senden automatisierter nativer SMS-Benachrichtigungen.</p>
+                <p class="section-subtitle">Während wir unterstützen iOS Für plattformübergreifende Familien bietet
+                    unser Flaggschiff die Hebelwirkung Android Funktionen zum Senden automatisierter nativer
+                    SMS-Benachrichtigungen.</p>
                 <div class="comparison-table-wrapper">
-                    <h3 style="margin-bottom: 20px; color: #2c3e50;">Zusammenfassung: Was jede Plattform leisten kann</h3>
+                    <h3 style="margin-bottom: 20px; color: #2c3e50;">Zusammenfassung: Was jede Plattform leisten kann
+                    </h3>
                     <table class="comparison-table">
                         <thead>
                             <tr>
@@ -1390,34 +1554,42 @@
                         <tbody>
                             <tr>
                                 <td><strong>Senden Sie kostenlos SMS</strong></td>
-                                <td><span class="check">✅</span> Ja (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translator="no">Direkte SMS</span></span>, stets)</td>
+                                <td><span class="check">✅</span> Ja (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translator="no">Direkte SMS</span></span>, stets)</td>
                                 <td><span class="check">✅</span> Ja (iOS Messages, erfordert Benutzerinteraktion)</td>
                             </tr>
                             <tr>
                                 <td><strong>SMS automatisch versenden</strong></td>
-                                <td><span class="check">✅</span> Ja (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translator="no">Direkte SMS</span></span>, stets)</td>
-                                <td><span class="cross">❌</span> Nur mit <span class="notranslate" translator="no">Twilio</span> (kostenpflichtig)</td>
+                                <td><span class="check">✅</span> Ja (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translator="no">Direkte SMS</span></span>, stets)</td>
+                                <td><span class="cross">❌</span> Nur mit <span class="notranslate"
+                                        translator="no">Twilio</span> (kostenpflichtig)</td>
                             </tr>
                             <tr>
                                 <td><strong>Funktioniert ohne Internet</strong></td>
-                                <td><span class="check">✅</span> Ja (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translator="no">Direkte SMS</span></span> nutzt Mobilfunknetz)</td>
+                                <td><span class="check">✅</span> Ja (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translator="no">Direkte SMS</span></span> nutzt
+                                    Mobilfunknetz)</td>
                                 <td><span class="check">✅</span> Ja (iOS Messages nutzt Mobilfunknetz)</td>
                             </tr>
                             <tr>
                                 <td><strong>Vollautomatischer Totmann-Timer</strong></td>
                                 <td><span class="check">✅</span> Ja</td>
-                                <td><span class="cross">❌</span> Nur mit <span class="notranslate" translator="no">Twilio</span> (kostenpflichtig). Ohne <span class="notranslate" translator="no">Twilio</span> wird die Nachrichten-App geöffnet und der Benutzer muss auf Senden tippen</td>
+                                <td><span class="cross">❌</span> Nur mit <span class="notranslate"
+                                        translator="no">Twilio</span> (kostenpflichtig). Ohne <span class="notranslate"
+                                        translator="no">Twilio</span> wird die Nachrichten-App geöffnet und der Benutzer
+                                    muss auf Senden tippen</td>
                             </tr>
                             <tr>
                                 <td><strong>NEINBenutzerinteraktion erforderlich</strong></td>
                                 <td><span class="check">✅</span> Ja</td>
-                                <td><span class="cross">❌</span> Nur mit <span class="notranslate" translator="no">Twilio</span>. Für iOS-Nachrichten muss immer auf „Senden“ getippt werden</td>
+                                <td><span class="cross">❌</span> Nur mit <span class="notranslate"
+                                        translator="no">Twilio</span>. Für iOS-Nachrichten muss immer auf „Senden“
+                                    getippt werden</td>
                             </tr>
                             <tr>
-                                <td><strong>E-Mail an <span class="notranslate" translator="no">Fallback</span></strong></td>
+                                <td><strong>E-Mail an <span class="notranslate" translator="no">Fallback</span></strong>
+                                </td>
                                 <td><span class="check">✅</span> Ja (wenn Internet verfügbar ist)</td>
                                 <td><span class="check">✅</span> Ja (wenn Internet verfügbar ist)</td>
                             </tr>
@@ -1429,10 +1601,14 @@
                         <h3>iOS Einschränkungen</h3>
                         <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(im Vergleich zu Android)</p>
                         <ul class="feature-list">
-                            <li><span class="cross">❌</span> SMS können nicht programmgesteuert gesendet werden (Apple-Einschränkung)</li>
-                            <li><span class="cross">❌</span> Für vollautomatische SMS ist <span class="notranslate" translator="no">Twilio</span> erforderlich</li>
-                            <li><span class="cross">❌</span> Dead Man Timer kann ohne <span class="notranslate" translator="no">Twilio</span> keine SMS senden</li>
-                            <li><span class="cross">⚠️</span> iOS Messages Die Einstellung erfordert, dass der Benutzer physisch auf „Senden“ tippt
+                            <li><span class="cross">❌</span> SMS können nicht programmgesteuert gesendet werden
+                                (Apple-Einschränkung)</li>
+                            <li><span class="cross">❌</span> Für vollautomatische SMS ist <span class="notranslate"
+                                    translator="no">Twilio</span> erforderlich</li>
+                            <li><span class="cross">❌</span> Dead Man Timer kann ohne <span class="notranslate"
+                                    translator="no">Twilio</span> keine SMS senden</li>
+                            <li><span class="cross">⚠️</span> iOS Messages Die Einstellung erfordert, dass der Benutzer
+                                physisch auf „Senden“ tippt
                             </li>
                         </ul>
                     </div>
@@ -1440,19 +1616,26 @@
                     <div class="platform-card android">
                         <h3>Android Vorteile</h3>
                         <ul class="feature-list">
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span class="notranslate" translator="no">Direkte SMS</span></span> ist immer kostenlos und automatisch</li>
-                            <li><span class="check">✅</span> NEIN<span class="notranslate"
-                                    translate="no">Twilio</span> für die Grundfunktionalität erforderlich</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span
+                                        class="notranslate" translator="no">Direkte SMS</span></span> ist immer
+                                kostenlos und automatisch</li>
+                            <li><span class="check">✅</span> NEIN<span class="notranslate" translate="no">Twilio</span>
+                                für die Grundfunktionalität erforderlich</li>
                             <li><span class="check">✅</span> Der Totmann-Timer ist immer vollautomatisch</li>
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> Fügt Redundanz hinzu (zweite Methode), keine Voraussetzung (solange Ihr Telefon/Anbieter WLAN-Anrufe zulässt)</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> Fügt
+                                Redundanz hinzu (zweite Methode), keine Voraussetzung (solange Ihr Telefon/Anbieter
+                                WLAN-Anrufe zulässt)</li>
                         </ul>
                     </div>
 
                     <div class="platform-card" style="border-top: 4px solid #667eea;">
                         <h3>Wenn sich beide Plattformen gleich verhalten</h3>
                         <ul class="feature-list">
-                            <li><span class="check">ℹ️</span> Nur WLAN (kein Mobilfunk): Beide nutzen WLAN-Anruf, sofern verfügbar, <span class="notranslate" translator="no">Twilio</span> oder E-Mail – identisches Verhalten</li>
-                            <li><span class="check">✅</span> E-Mail-Redundanz: Funktioniert auf beiden Plattformen gleich</li>
+                            <li><span class="check">ℹ️</span> Nur WLAN (kein Mobilfunk): Beide nutzen WLAN-Anruf, sofern
+                                verfügbar, <span class="notranslate" translator="no">Twilio</span> oder E-Mail –
+                                identisches Verhalten</li>
+                            <li><span class="check">✅</span> E-Mail-Redundanz: Funktioniert auf beiden Plattformen
+                                gleich</li>
                         </ul>
                     </div>
                 </div>
@@ -1464,7 +1647,8 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Einfache, ehrliche Preisgestaltung</h2>
-            <p class="section-subtitle">Keine Abonnements. Keine versteckten Gebühren.<br>Einmal bezahlen, für immer nutzen.</p>
+            <p class="section-subtitle">Keine Abonnements. Keine versteckten Gebühren.<br>Einmal bezahlen, für immer
+                nutzen.</p>
 
             <div class="pricing-cards">
                 <div class="pricing-card">
@@ -1474,7 +1658,8 @@
                     <ul class="features-list">
                         <li>✅ Bis zu 1 Empfänger</li>
                         <li>✅ <span class="notranslate" translator="no">SOS</span>- und OK-Tasten</li>
-                        <li>✅ <span class="notranslate" translator="no">Berichtsmodus</span> mit voreingestellten Nachrichten</li>
+                        <li>✅ <span class="notranslate" translator="no">Berichtsmodus</span> mit voreingestellten
+                            Nachrichten</li>
                         <li>✅ Alarmverlauf: letzte 50 Nachrichten</li>
                         <li>✅ Intelligente Redundanz (SMS + WLAN)</li>
                         <li>✅ E-Mail als <span class="notranslate" translator="no">Fallback</span> oder Redundanz</li>
@@ -1493,21 +1678,28 @@
                         <li>✅ Check-in-Timer</li>
                         <li>✅ Immer noch keine monatlichen Gebühren!</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Schalten Sie <span class="notranslate" translator="no">Premium</span> frei</a>
+                    <a href="#" class="btn btn-primary">Schalten Sie <span class="notranslate"
+                            translator="no">Premium</span> frei</a>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS haben ihren Preis, Ihr Seelenfrieden jedoch nicht</h3>
+                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS haben ihren Preis, Ihr
+                    Seelenfrieden jedoch nicht</h3>
                 <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
-                    <span class="notranslate" translate="no">TapAlert</span> erhebt keine Gebühren für die gesendeten Nachrichten. Die einzigen Kosten, die Ihnen möglicherweise entstehen, sind die, die Ihr eigener Mobilfunkanbieter für Standard-SMS – wie für jede normale Textnachricht – und, falls Sie sich für die Konfiguration entscheiden, berechnet
+                    <span class="notranslate" translate="no">TapAlert</span> erhebt keine Gebühren für die gesendeten
+                    Nachrichten. Die einzigen Kosten, die Ihnen möglicherweise entstehen, sind die, die Ihr eigener
+                    Mobilfunkanbieter für Standard-SMS – wie für jede normale Textnachricht – und, falls Sie sich für
+                    die Konfiguration entscheiden, berechnet
                     <span class="notranslate" translate="no">Twilio</span> als Failback- oder Alternativdienst,
                     <a href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
-                        style="color: #667eea; text-decoration: underline;">die Gebühren pro Nachricht, die von festgelegt werden <span
-                            class="notranslate" translate="no">Twilio</span></a>
+                        style="color: #667eea; text-decoration: underline;">die Gebühren pro Nachricht, die von
+                        festgelegt werden <span class="notranslate" translate="no">Twilio</span></a>
                     (Hinweis: Es gibt eine
                     <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
-                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;">kostenloses <span class="notranslate" translator="no">Twilio</span>-Testkonto</a>
+                        target="_blank" rel="noopener noreferrer"
+                        style="color: #667eea; text-decoration: underline;">kostenloses <span class="notranslate"
+                            translator="no">Twilio</span>-Testkonto</a>
                     wir empfehlen jedoch nicht, es zu verwenden). Die App selbst verursacht keine zusätzlichen Kosten.
                 </p>
             </div>
@@ -1518,7 +1710,8 @@
     <section class="privacy">
         <div class="container">
             <h2 class="section-title" style="color: white;">🔒 Privatsphäre durch Design</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Ihre Sicherheitsdaten bleiben Ihr Eigentum. Keine Konten, keine Nachverfolgung, keine Überwachung.</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Ihre Sicherheitsdaten bleiben Ihr
+                Eigentum. Keine Konten, keine Nachverfolgung, keine Überwachung.</p>
 
             <div class="privacy-grid">
                 <div class="privacy-item">
@@ -1546,19 +1739,22 @@
     <!-- Anwendungsfälle Section -->
     <section class="use-cases">
         <div class="container">
-            <h2 class="section-title">Für wen ist <span class="notranslate" translator="no">TapAlert</span> geeignet?</h2>
+            <h2 class="section-title">Für wen ist <span class="notranslate" translator="no">TapAlert</span> geeignet?
+            </h2>
             <p class="section-subtitle">Entwickelt für alle, die Sicherheit und Seelenfrieden schätzen</p>
 
             <div class="use-case-highlight" style="max-width: 600px; margin: 0 auto 40px auto; transform: scale(1.05);">
                 <div class="use-case" style="border: 2px solid #667eea; background: white;">
                     <h3 style="font-size: 1.4rem;">👴 Ältere Erwachsene & Betreuer</h3>
-                    <p style="font-size: 1.1rem;">Ein Panikknopf für allein lebende oder unabhängig reisende Senioren. Ein Fingertipp benachrichtigt alle Familienmitglieder über den genauen Standort.</p>
+                    <p style="font-size: 1.1rem;">Ein Panikknopf für allein lebende oder unabhängig reisende Senioren.
+                        Ein Fingertipp benachrichtigt alle Familienmitglieder über den genauen Standort.</p>
                 </div>
             </div>
 
             <div class="section-divider" style="text-align: center; margin-bottom: 40px; position: relative;">
                 <span
-                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">aber auch für...</span>
+                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">aber
+                    auch für...</span>
                 <div
                     style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #e2e8f0; z-index: 0;">
                 </div>
@@ -1568,27 +1764,32 @@
 
                 <div class="use-case">
                     <h3>🥾 Solo-Abenteurer</h3>
-                    <p>Wanderer oder Radfahrer, die ihren Standort am Anfang/Ende eines Weges oder im Notfall zuverlässig an ihre Familie übermitteln möchten.</p>
+                    <p>Wanderer oder Radfahrer, die ihren Standort am Anfang/Ende eines Weges oder im Notfall
+                        zuverlässig an ihre Familie übermitteln möchten.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>🌙 Persönliche Sicherheit</h3>
-                    <p>Spät abends nach Hause laufen oder Mitfahrgelegenheiten nutzen? Senden Sie eine diskrete „Pass auf mich auf“-Benachrichtigung an Freunde und Familie.</p>
+                    <p>Spät abends nach Hause laufen oder Mitfahrgelegenheiten nutzen? Senden Sie eine diskrete „Pass
+                        auf mich auf“-Benachrichtigung an Freunde und Familie.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>💼 Kleine Unternehmen</h3>
-                    <p>Außendienstmitarbeiter oder Einzelmitarbeiter (Immobilienmakler, Lieferfahrer), die ein einfaches Check-in- oder Notsignal benötigen.</p>
+                    <p>Außendienstmitarbeiter oder Einzelmitarbeiter (Immobilienmakler, Lieferfahrer), die ein einfaches
+                        Check-in- oder Notsignal benötigen.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>✈️ Internationale Reisende</h3>
-                    <p>Nutzen Sie Wi-Fi-Messaging, um teure Roaming-SMS-Gebühren zu umgehen und gleichzeitig Ihre Familie über Ihren Aufenthaltsort auf dem Laufenden zu halten.</p>
+                    <p>Nutzen Sie Wi-Fi-Messaging, um teure Roaming-SMS-Gebühren zu umgehen und gleichzeitig Ihre
+                        Familie über Ihren Aufenthaltsort auf dem Laufenden zu halten.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>👨‍👩‍👧‍👦 Familien bleiben in Verbindung</h3>
-                    <p>Behalten Sie Familienmitglieder im Auge, indem Sie schnell „Mir geht es gut“ einchecken, ohne dass Sie ständig anrufen oder Textnachrichten senden müssen.</p>
+                    <p>Behalten Sie Familienmitglieder im Auge, indem Sie schnell „Mir geht es gut“ einchecken, ohne
+                        dass Sie ständig anrufen oder Textnachrichten senden müssen.</p>
                 </div>
             </div>
         </div>
@@ -1598,14 +1799,16 @@
     <section class="guides" id="guides" style="padding: 80px 20px; background: white;">
         <div class="container">
             <h2 class="section-title">Schritt-für-Schritt-Anleitungen</h2>
-            <p class="section-subtitle">Meistern Sie <span class="notranslate" translator="no">TapAlert</span> mit unseren leicht verständlichen Anleitungen</p>
+            <p class="section-subtitle">Meistern Sie <span class="notranslate" translator="no">TapAlert</span> mit
+                unseren leicht verständlichen Anleitungen</p>
 
             <div class="features-grid">
                 <a href="user_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📖</div>
                         <h3>TapAlert-Benutzerhandbuch</h3>
-                        <p>Vollständige Referenz für alle App-Funktionen – Berechtigungen, Modi, Einstellungen, Empfänger, Warnungen und mehr.</p>
+                        <p>Vollständige Referenz für alle App-Funktionen – Berechtigungen, Modi, Einstellungen,
+                            Empfänger, Warnungen und mehr.</p>
                     </div>
                 </a>
 
@@ -1621,7 +1824,8 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">👨‍👩‍👧</div>
                         <h3>Familiengestützte Einrichtung</h3>
-                        <p>TapAlert für Senioren mit Magic Link einrichten — kein Tippen für den Senior erforderlich.</p>
+                        <p>TapAlert für Senioren mit Magic Link einrichten — kein Tippen für den Senior erforderlich.
+                        </p>
                     </div>
                 </a>
 
@@ -1650,7 +1854,8 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📧</div>
                         <h3>E-Mail-Redundanz konfigurieren</h3>
-                        <p>Konfigurieren Sie E-Mail als <span class="notranslate" translator="no">Fallback</span> oder Redundanz-Warnmeldung.</p>
+                        <p>Konfigurieren Sie E-Mail als <span class="notranslate" translator="no">Fallback</span> oder
+                            Redundanz-Warnmeldung.</p>
                     </div>
                 </a>
                 <a href="accessibility_guide.html" style="text-decoration: none; color: inherit;">
@@ -1669,8 +1874,11 @@
         <div class="notice-content">
             <div class="notice-icon">⚠️</div>
             <h2>Wichtiger Sicherheitshinweis</h2>
-            <p><strong><span class="notranslate" translator="no">TapAlert</span> ist KEIN Ersatz für Notdienste wie 911 oder 112.</strong></p>
-            <p style="margin-top: 15px;">Die Nachrichtenzustellung hängt von der Netzwerkverfügbarkeit und der Aktion des Empfängers ab. Diese App bietet keine Überwachung, Notfallreaktion oder garantierte Zustellung. Wenden Sie sich in echten Notfällen immer direkt an den Rettungsdienst.</p>
+            <p><strong><span class="notranslate" translator="no">TapAlert</span> ist KEIN Ersatz für Notdienste wie 911
+                    oder 112.</strong></p>
+            <p style="margin-top: 15px;">Die Nachrichtenzustellung hängt von der Netzwerkverfügbarkeit und der Aktion
+                des Empfängers ab. Diese App bietet keine Überwachung, Notfallreaktion oder garantierte Zustellung.
+                Wenden Sie sich in echten Notfällen immer direkt an den Rettungsdienst.</p>
         </div>
     </section>
 
@@ -1705,7 +1913,8 @@
                     <h3>Unterstützung</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Schritt-für-Schritt-Anleitungen</a></li>
+                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span>
+                                Schritt-für-Schritt-Anleitungen</a></li>
                         <li><a href="accessibility_guide.html">Leitfaden zur Barrierefreiheit</a></li>
                         <li><a href="troubleshooting.html">Fehlerbehebung</a></li>
                         <li><a href="contact.html">Kontaktieren Sie den Support</a></li>
@@ -1714,7 +1923,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. | Hergestellt mit ❤️ für Ihre Sicherheit</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. |
+                    Hergestellt mit ❤️ für Ihre Sicherheit</p>
             </div>
         </div>
     </footer>

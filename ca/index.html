@@ -15,7 +15,8 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/index.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/index.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" translate="no">TapAlert</span> - Alertes d'emergència senzilles. Sense quotes mensuals.</title>
+    <title><span class="notranslate" translate="no">TapAlert</span> - Alertes d'emergència senzilles. Sense quotes
+        mensuals.</title>
     <style>
         * {
             margin: 0;
@@ -1094,7 +1095,8 @@
     <!-- Top Navigation -->
     <header>
         <a href="#download" class="nav-logo">
-            <img src="../media/app_icon.png" alt="TapAlert"> <span class="notranslate" translate="no">TapAlert</span>
+            <img src="../media/tapalert-icon-web.png" alt="TapAlert"> <span class="notranslate"
+                translate="no">TapAlert</span>
         </a>
         <nav style="display: flex; align-items: center;">
             <ul class="nav-links">
@@ -1106,44 +1108,136 @@
                 <li><a href="#pricing" class="nav-link" data-section="pricing">Preus</a></li>
                 <li><a href="#guides" class="nav-link" data-section="guides">Guies</a></li>
             </ul>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">CA</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/index.html" hreflang="ca" class="active">CA</a>
-            <a href="../de/index.html" hreflang="de">DE</a>
-            <a href="../index.html" hreflang="en">EN</a>
-            <a href="../es/index.html" hreflang="es">ES</a>
-            <a href="../eu/index.html" hreflang="eu">EU</a>
-            <a href="../fr/index.html" hreflang="fr">FR</a>
-            <a href="../gl/index.html" hreflang="gl">GL</a>
-            <a href="../it/index.html" hreflang="it">IT</a>
-            <a href="../nl/index.html" hreflang="nl">NL</a>
-            <a href="../pt/index.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">CA</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/index.html" hreflang="ca" class="active">CA</a>
+                        <a href="../de/index.html" hreflang="de">DE</a>
+                        <a href="../index.html" hreflang="en">EN</a>
+                        <a href="../es/index.html" hreflang="es">ES</a>
+                        <a href="../eu/index.html" hreflang="eu">EU</a>
+                        <a href="../fr/index.html" hreflang="fr">FR</a>
+                        <a href="../gl/index.html" hreflang="gl">GL</a>
+                        <a href="../it/index.html" hreflang="it">IT</a>
+                        <a href="../nl/index.html" hreflang="nl">NL</a>
+                        <a href="../pt/index.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">
             <div class="bar"></div>
@@ -1154,19 +1248,30 @@
     <!-- Hero Section -->
     <section class="hero" id="download">
         <div class="hero-content fade-in-up">
-            <h1><img src="../media/app_icon.png" alt="TapAlert"
+            <h1><img src="../media/tapalert-icon-web.png" alt="TapAlert"
                     style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                     translate="no">TapAlert</span></h1>
-            <p class="tagline">Alertes fàcils d'un sol toc. Privadesa-primer.<br> Dissenyat pensant en la gent gran: senzill, segur, sense quotes mensuals.<br> Configuració inicial sense fricció (assistència remota) per a gent gran.<br></p>
+            <p class="tagline">Alertes fàcils d'un sol toc. Privadesa-primer.<br> Dissenyat pensant en la gent gran:
+                senzill, segur, sense quotes mensuals.<br> Configuració inicial sense fricció (assistència remota) per a
+                gent gran.<br></p>
             <p class="tagline">Per als teus pares, avis i gent gran.</p>
             <p class="tagline">Per la teva tranquil·litat.</p>
             <div class="summary-box">
                 <p class="subtitle">Protegiu els vostres adults grans i éssers estimats amb un sol toc.</p>
                 <p class="subtitle">Nosubscripcions, sense seguiment, sense necessitat de comptes, sense anuncis.</p>
-                <p class="subtitle">Eina d'alerta de seguretat personal dissenyada per a gent gran, famílies, viatgers i qualsevol persona que vulgui una manera ràpida d'avisar als contactes de confiança quan alguna cosa no va bé, sense subscripcions, comptes ni seguiment.</p>
-                <p class="subtitle"><strong>En un món on l'inesperat és la nova normalitat, des d'inundacions sobtades fins a talls de llum, assegureu-vos que mai no esteu sols. Amb un sol toc, fes que els teus éssers estimats sàpiguen que estàs segur o necessites un cop de mà, independentment del que porti el dia.</strong></p>
+                <p class="subtitle">Eina d'alerta de seguretat personal dissenyada per a gent gran, famílies, viatgers i
+                    qualsevol persona que vulgui una manera ràpida d'avisar als contactes de confiança quan alguna cosa
+                    no va bé, sense subscripcions, comptes ni seguiment.</p>
+                <p class="subtitle"><strong>En un món on l'inesperat és la nova normalitat, des d'inundacions sobtades
+                        fins a talls de llum, assegureu-vos que mai no esteu sols. Amb un sol toc, fes que els teus
+                        éssers estimats sàpiguen que estàs segur o necessites un cop de mà, independentment del que
+                        porti el dia.</strong></p>
                 <p class="subtitle">
-                    La nostra aplicació envia alertes per SMS, no per missatgeria basada en dades, de manera que el vostre missatge arriba quan les aplicacions, la Wi-Fi i les notificacions push no ho fan. Tant si els vostres destinataris tenen telèfons intel·ligents, telèfons funcionals o connectivitat limitada, els SMS ofereixen. Omet els filtres Silenci/No Molestis per despertar els teus contactes quan sigui important. Funciona fins i tot sense accés a Internet.
+                    La nostra aplicació envia alertes per SMS, no per missatgeria basada en dades, de manera que el
+                    vostre missatge arriba quan les aplicacions, la Wi-Fi i les notificacions push no ho fan. Tant si
+                    els vostres destinataris tenen telèfons intel·ligents, telèfons funcionals o connectivitat limitada,
+                    els SMS ofereixen. Omet els filtres Silenci/No Molestis per despertar els teus contactes quan sigui
+                    important. Funciona fins i tot sense accés a Internet.
                 </p>
             </div>
             <div class="cta-buttons">
@@ -1190,41 +1295,67 @@
                             — l'aplicació funciona totalment localment, sense registre ni inici de sessió</li>
                         <li><span class="check">✅</span> <strong>Noseguiment o anàlisi</strong>
                             — no es recullen ni es transmeten dades de comportament dels usuaris</li>
-                        <li><span class="check">✅</span> <strong>Noanuncis</strong> — l'aplicació no té anuncis, només es monetitza mitjançant una compra única des de l'aplicació per a funcions premium</li>
-                        <li><span class="check">✅</span> <strong>Nosubscripcions</strong> — els usuaris paguen una vegada (o no paguen en absolut pel nivell gratuït), sense comissions recurrents</li>
-                        <li><span class="check">✅</span> <strong>Només s'accedeix a la ubicació quan s'envia una alerta</strong> — mai en un segon pla</li>
+                        <li><span class="check">✅</span> <strong>Noanuncis</strong> — l'aplicació no té anuncis, només
+                            es monetitza mitjançant una compra única des de l'aplicació per a funcions premium</li>
+                        <li><span class="check">✅</span> <strong>Nosubscripcions</strong> — els usuaris paguen una
+                            vegada (o no paguen en absolut pel nivell gratuït), sense comissions recurrents</li>
+                        <li><span class="check">✅</span> <strong>Només s'accedeix a la ubicació quan s'envia una
+                                alerta</strong> — mai en un segon pla</li>
                     </ul>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">📡</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">SMS-Primera arquitectura</h3>
-                    <p style="font-size: 0.9em; margin-bottom: 15px;">L'aplicació prioritza els SMS sobre els missatges basats en dades (notificacions push, WhatsApp, etc.) perquè:</p>
+                    <p style="font-size: 0.9em; margin-bottom: 15px;">L'aplicació prioritza els SMS sobre els missatges
+                        basats en dades (notificacions push, WhatsApp, etc.) perquè:</p>
                     <ul class="feature-list" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
-                        <li><span class="check">✅</span> L'SMS funciona quan Internet/Wi-Fi està caiguda (les torres mòbils tenen bateria de seguretat)</li>
-                        <li><span class="check">✅</span> Els destinataris no necessiten telèfons intel·ligents: els telèfons funcionals i els telèfons bàsics reben SMS</li>
-                        <li><span class="check">✅</span> Noinstal·lació de l'aplicació necessària al final del destinatari</li>
-                        <li><span class="check">✅</span> L'SMS és un lliurament a nivell d'operador, no depèn que els servidors de tercers estiguin en línia</li>
+                        <li><span class="check">✅</span> L'SMS funciona quan Internet/Wi-Fi està caiguda (les torres
+                            mòbils tenen bateria de seguretat)</li>
+                        <li><span class="check">✅</span> Els destinataris no necessiten telèfons intel·ligents: els
+                            telèfons funcionals i els telèfons bàsics reben SMS</li>
+                        <li><span class="check">✅</span> Noinstal·lació de l'aplicació necessària al final del
+                            destinatari</li>
+                        <li><span class="check">✅</span> L'SMS és un lliurament a nivell d'operador, no depèn que els
+                            servidors de tercers estiguin en línia</li>
                     </ul>
                     <p style="font-size: 0.9em;"><strong><span class="notranslate" translate="no">Smart
-                                Redundancy</span>:</strong> Quan no hi ha cap servei mòbil disponible, l'aplicació torna a enviar SMS primer mitjançant trucades per Wi-Fi (si està disponible, depenent del telèfon/proveïdor) o, si no, mitjançant <span class="notranslate" translate="no">Twilio</span> (si està configurat). Això proporciona una ruta de lliurament secundària quan el canal d'SMS principal no està disponible. Així mateix, en una situació amb només servei mòbil (sense Wi-Fi i sense internet), si el <span class="notranslate" translate="no">Direct SMS</span> falla per algun motiu (defectuós o sense SIM,...), <span class="notranslate" translate="no">Twilio</span> (si està configurat) actuarà com a failback, ja que també pot utilitzar la xarxa mòbil (mitjançant 4G/5G) per enviar el missatge com a últim recurs.</p>
+                                Redundancy</span>:</strong> Quan no hi ha cap servei mòbil disponible, l'aplicació torna
+                        a enviar SMS primer mitjançant trucades per Wi-Fi (si està disponible, depenent del
+                        telèfon/proveïdor) o, si no, mitjançant <span class="notranslate" translate="no">Twilio</span>
+                        (si està configurat). Això proporciona una ruta de lliurament secundària quan el canal d'SMS
+                        principal no està disponible. Així mateix, en una situació amb només servei mòbil (sense Wi-Fi i
+                        sense internet), si el <span class="notranslate" translate="no">Direct SMS</span> falla per
+                        algun motiu (defectuós o sense SIM,...), <span class="notranslate" translate="no">Twilio</span>
+                        (si està configurat) actuarà com a failback, ja que també pot utilitzar la xarxa mòbil
+                        (mitjançant 4G/5G) per enviar el missatge com a últim recurs.</p>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">👴</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">Disseny per a persones grans</h3>
                     <ul class="feature-list" style="list-style-type: none; padding: 0;">
-                        <li><span class="check">✅</span> Botons grans i d'alt contrast (un sol <span class="notranslate" translate="no">SOS</span> i estic bé)</li>
+                        <li><span class="check">✅</span> Botons grans i d'alt contrast (un sol <span class="notranslate"
+                                translate="no">SOS</span> i estic bé)</li>
                         <li><span class="check">✅</span> Mínima navegació i càrrega cognitiva</li>
                         <li><span class="check">✅</span> Veu a text perquè els usuaris no necessiten escriure</li>
-                        <li><span class="check">✅</span> El temporitzador de compte enrere configurable o la confirmació d'espera per enviar evita alertes accidentals</li>
+                        <li><span class="check">✅</span> El temporitzador de compte enrere configurable o la confirmació
+                            d'espera per enviar evita alertes accidentals</li>
                         <li><span class="check">✅</span> Incorporació guiada amb configuració pas a pas</li>
-                        <li><span class="check">✅</span> Totes les decisions de la interfície d'usuari prioritzen la claredat i la simplicitat per sobre de la densitat de funcions</li>
-                        <li><span class="check">✅</span> Configuració de fricció zero amb enllaç màgic que es pot enviar per WhatsApp, SMS, correu electrònic, etc. Amb un sol clic el teu sènior pot configurar l'aplicació i començar a utilitzar-la.</li>
-                        <li><span class="check">✅</span> Flaix de pantalla: 3 flaixos brillants confirmen cada alerta, de manera que els usuaris amb pèrdua auditiva no la perdin mai</li>
-                        <li><span class="check">✅</span> Tons de baixa freqüència: l'alerta predeterminada sona a 500–600 Hz, més fàcil d'escoltar per a la pèrdua auditiva relacionada amb l'edat</li>
-                        <li><span class="check">✅</span> Compte enrere hàptic: el telèfon pulsa una vegada per segon durant el compte enrere, no cal mirar la pantalla</li>
-                        <li><span class="check">✅</span> Compatibilitat amb lectors de pantalla: totalment compatible amb TalkBack (Android) i VoiceOver (iOS); els botons s'etiqueten i els resultats s'anuncien en veu alta</li>
+                        <li><span class="check">✅</span> Totes les decisions de la interfície d'usuari prioritzen la
+                            claredat i la simplicitat per sobre de la densitat de funcions</li>
+                        <li><span class="check">✅</span> Configuració de fricció zero amb enllaç màgic que es pot enviar
+                            per WhatsApp, SMS, correu electrònic, etc. Amb un sol clic el teu sènior pot configurar
+                            l'aplicació i començar a utilitzar-la.</li>
+                        <li><span class="check">✅</span> Flaix de pantalla: 3 flaixos brillants confirmen cada alerta,
+                            de manera que els usuaris amb pèrdua auditiva no la perdin mai</li>
+                        <li><span class="check">✅</span> Tons de baixa freqüència: l'alerta predeterminada sona a
+                            500–600 Hz, més fàcil d'escoltar per a la pèrdua auditiva relacionada amb l'edat</li>
+                        <li><span class="check">✅</span> Compte enrere hàptic: el telèfon pulsa una vegada per segon
+                            durant el compte enrere, no cal mirar la pantalla</li>
+                        <li><span class="check">✅</span> Compatibilitat amb lectors de pantalla: totalment compatible
+                            amb TalkBack (Android) i VoiceOver (iOS); els botons s'etiqueten i els resultats s'anuncien
+                            en veu alta</li>
                     </ul>
                 </div>
 
@@ -1236,81 +1367,110 @@
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">Funcions potents per a la vostra seguretat</h2>
-            <p class="section-subtitle">Tot el que necessiteu per mantenir-vos connectat amb els vostres contactes d'emergència, dissenyat per a la simplicitat i la fiabilitat.</p>
+            <p class="section-subtitle">Tot el que necessiteu per mantenir-vos connectat amb els vostres contactes
+                d'emergència, dissenyat per a la simplicitat i la fiabilitat.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🆘</div>
                     <h3><span class="notranslate" translate="no">SOS</span> i Botons D'acord</h3>
-                    <p>Envia <span class="notranslate" translate="no">SOS</span> predefinit "Necessito ajuda!" o missatges "Estic bé" a l'instant amb un sol toc. Els missatges inclouen la vostra ubicació i adreça GPS precises.</p>
+                    <p>Envia <span class="notranslate" translate="no">SOS</span> predefinit "Necessito ajuda!" o
+                        missatges "Estic bé" a l'instant amb un sol toc. Els missatges inclouen la vostra ubicació i
+                        adreça GPS precises.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📶</div>
                     <h3>Lliurament de missatges intel·ligents</h3>
-                    <p>Funciona fora de línia amb <span class="notranslate" translate="no">Direct SMS</span>. <span class="notranslate" translate="no">fallback</span> automàtic entre el mòbil i la Wi-Fi per assegurar-vos que el vostre missatge arribi.</p>
+                    <p>Funciona fora de línia amb <span class="notranslate" translate="no">Direct SMS</span>. <span
+                            class="notranslate" translate="no">fallback</span> automàtic entre el mòbil i la Wi-Fi per
+                        assegurar-vos que el vostre missatge arribi.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Temporitzador d'entrada</h3>
-                    <p>Estableix un temporitzador de compte enrere. Si no us registreu a temps, s'enviarà una alerta automàtica als vostres contactes. Perfecte per a activitats en solitari.</p>
+                    <p>Estableix un temporitzador de compte enrere. Si no us registreu a temps, s'enviarà una alerta
+                        automàtica als vostres contactes. Perfecte per a activitats en solitari.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
                     <h3>Alertes de veu a text</h3>
-                    <p>Creeu missatges amb mans lliures mitjançant l'entrada de veu. Útil en situacions estressants o de mobilitat limitada quan no es pot escriure.</p>
+                    <p>Creeu missatges amb mans lliures mitjançant l'entrada de veu. Útil en situacions estressants o de
+                        mobilitat limitada quan no es pot escriure.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">👴</div>
                     <h3>Disseny per a la gent gran</h3>
-                    <p>Text gran, contrast alt, to de so ajustable per a persones amb discapacitat auditiva i una interfície clara i sense distraccions. Fàcil per a gent gran i usuaris no tècnics.</p>
+                    <p>Text gran, contrast alt, to de so ajustable per a persones amb discapacitat auditiva i una
+                        interfície clara i sense distraccions. Fàcil per a gent gran i usuaris no tècnics.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
                     <h3>Muntatge assistit per la família</h3>
-                    <p>Els membres de la família poden ajudar les persones grans a configurar l'aplicació i els contactes de forma remota mitjançant un enllaç de configuració. Configura l'aplicació al teu propi dispositiu i envia'ls l'enllaç per instal·lar i configurar l'aplicació amb un sol clic.</p>
+                    <p>Els membres de la família poden ajudar les persones grans a configurar l'aplicació i els
+                        contactes de forma remota mitjançant un enllaç de configuració. Configura l'aplicació al teu
+                        propi dispositiu i envia'ls l'enllaç per instal·lar i configurar l'aplicació amb un sol clic.
+                    </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <h3>Múltiples idiomes</h3>
-                    <p>Admet diversos idiomes per a una major accessibilitat. Ús <span class="notranslate" translate="no">TapAlert</span> en el vostre idioma preferit.
+                    <p>Admet diversos idiomes per a una major accessibilitat. Ús <span class="notranslate"
+                            translate="no">TapAlert</span> en el vostre idioma preferit.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📍</div>
                     <h3>Context d'ubicació intel·ligent</h3>
-                    <p>Inclou coordenades GPS precises i adreça de carrer llegible per l'home. Funciona fins i tot si els destinataris estan fora de línia o utilitzen telèfons bàsics.</p>
+                    <p>Inclou coordenades GPS precises i adreça de carrer llegible per l'home. Funciona fins i tot si
+                        els destinataris estan fora de línia o utilitzen telèfons bàsics.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">✉️</div>
                     <h3>Redundància de correu electrònic</h3>
-                    <p>Pot enviar alertes per correu electrònic com a mètode de missatgeria de reforç o per proporcionar una redundància d'alertes si <span class="notranslate" translate="no">Twilio</span> no està disponible.</p>
+                    <p>Pot enviar alertes per correu electrònic com a mètode de missatgeria de reforç o per proporcionar
+                        una redundància d'alertes si <span class="notranslate" translate="no">Twilio</span> no està
+                        disponible.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon"><img src="../media/twilio.png" alt="Twilio"
                             style="height: 1em; vertical-align: bottom;"></div>
                     <h3><span class="notranslate" translate="no">Twilio</span> com a resposta per error d'SMS</h3>
-                    <p><strong>Android:</strong> l'aplicació envia SMS directament des del vostre telèfon, no cal <span class="notranslate" translate="no">Twilio</span> però és recomanable. <span class="notranslate" translate="no">Twilio</span> és opcional, s'utilitza com a còpia de seguretat de la Wi-Fi quan el mòbil no està disponible o està trencat, però també es pot utilitzar com a recuperació per error en situacions només amb mòbil si el vostre <span class="notranslate" translate="no">Direct SMS</span> no funciona o no està disponible.</p>
-                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple impedeix que les aplicacions enviïn SMS directament. Aquesta és una restricció d'Apple, no una limitació <span class="notranslate" translate="no">TapAlert</span>. <span class="notranslate" translate="no">Twilio</span> és el pont que permet que l'aplicació enviï SMS automàticament en nom vostre. Sense això, l'única opció és tornar a tocar manualment "Envia" a l'aplicació Missatges, no és ideal en cas d'emergència.
+                    <p><strong>Android:</strong> l'aplicació envia SMS directament des del vostre telèfon, no cal <span
+                            class="notranslate" translate="no">Twilio</span> però és recomanable. <span
+                            class="notranslate" translate="no">Twilio</span> és opcional, s'utilitza com a còpia de
+                        seguretat de la Wi-Fi quan el mòbil no està disponible o està trencat, però també es pot
+                        utilitzar com a recuperació per error en situacions només amb mòbil si el vostre <span
+                            class="notranslate" translate="no">Direct SMS</span> no funciona o no està disponible.</p>
+                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple impedeix que les aplicacions enviïn SMS
+                        directament. Aquesta és una restricció d'Apple, no una limitació <span class="notranslate"
+                            translate="no">TapAlert</span>. <span class="notranslate" translate="no">Twilio</span> és el
+                        pont que permet que l'aplicació enviï SMS automàticament en nom vostre. Sense això, l'única
+                        opció és tornar a tocar manualment "Envia" a l'aplicació Missatges, no és ideal en cas
+                        d'emergència.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🆘📋</div>
                     <h3>Mode Pànic i Alertes de Situació</h3>
-                    <p>El Mode Pànic envia alertes SOS i «Estic bé» instantànies amb un sol toc. Llisca cap a l'esquerra per a les Alertes de Situació: 3 botons de missatge personalitzables per a qualsevol situació no urgent, amb gravació de veu opcional per alerta.</p>
+                    <p>El Mode Pànic envia alertes SOS i «Estic bé» instantànies amb un sol toc. Llisca cap a l'esquerra
+                        per a les Alertes de Situació: 3 botons de missatge personalitzables per a qualsevol situació no
+                        urgent, amb gravació de veu opcional per alerta.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Giny de la pantalla d'inici</h3>
-                    <p><strong>Android només:</strong> Afegiu un widget d'emergència amb un sol toc a la vostra pantalla d'inici per accedir-hi instantàniament sense obrir l'aplicació. També es proporcionen instruccions per utilitzar-lo amb un botó físic o un gest a l'aplicació.</p>
+                    <p><strong>Android només:</strong> Afegiu un widget d'emergència amb un sol toc a la vostra pantalla
+                        d'inici per accedir-hi instantàniament sense obrir l'aplicació. També es proporcionen
+                        instruccions per utilitzar-lo amb un botó físic o un gest a l'aplicació.</p>
                 </div>
             </div>
         </div>
@@ -1376,7 +1536,8 @@
         <div class="container">
             <div class="android-content">
                 <h2 class="section-title">🤖 Android Primer</h2>
-                <p class="section-subtitle">Mentre donem suport iOS per a famílies multiplataforma, el nostre producte insígnia s'aprofita Android capacitats per enviar alertes SMS natives automatitzades.</p>
+                <p class="section-subtitle">Mentre donem suport iOS per a famílies multiplataforma, el nostre producte
+                    insígnia s'aprofita Android capacitats per enviar alertes SMS natives automatitzades.</p>
                 <div class="comparison-table-wrapper">
                     <h3 style="margin-bottom: 20px; color: #2c3e50;">Resum: Què pot fer cada plataforma</h3>
                     <table class="comparison-table">
@@ -1390,34 +1551,42 @@
                         <tbody>
                             <tr>
                                 <td><strong>Envia SMS gratis</strong></td>
-                                <td><span class="check">✅</span> Sí (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>, sempre)</td>
-                                <td><span class="check">✅</span> Sí (iOS Messages, requereix la interacció de l'usuari)</td>
+                                <td><span class="check">✅</span> Sí (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Direct SMS</span></span>, sempre)</td>
+                                <td><span class="check">✅</span> Sí (iOS Messages, requereix la interacció de l'usuari)
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>Envia SMS automàticament</strong></td>
-                                <td><span class="check">✅</span> Sí (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>, sempre)</td>
-                                <td><span class="cross">❌</span> Només amb <span class="notranslate" translate="no">Twilio</span> (de pagament)</td>
+                                <td><span class="check">✅</span> Sí (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Direct SMS</span></span>, sempre)</td>
+                                <td><span class="cross">❌</span> Només amb <span class="notranslate"
+                                        translate="no">Twilio</span> (de pagament)</td>
                             </tr>
                             <tr>
                                 <td><strong>Funciona sense internet</strong></td>
-                                <td><span class="check">✅</span> Sí (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> utilitza la xarxa cel·lular)</td>
+                                <td><span class="check">✅</span> Sí (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Direct SMS</span></span> utilitza la
+                                    xarxa cel·lular)</td>
                                 <td><span class="check">✅</span> Sí (iOS Messages utilitza la xarxa cel·lular)</td>
                             </tr>
                             <tr>
                                 <td><strong>Temporitzador de Dead Man totalment automàtic</strong></td>
                                 <td><span class="check">✅</span> Sí</td>
-                                <td><span class="cross">❌</span> Només amb <span class="notranslate" translate="no">Twilio</span> (de pagament). Sense <span class="notranslate" translate="no">Twilio</span>, s'obre l'aplicació Missatges i l'usuari ha de tocar Envia</td>
+                                <td><span class="cross">❌</span> Només amb <span class="notranslate"
+                                        translate="no">Twilio</span> (de pagament). Sense <span class="notranslate"
+                                        translate="no">Twilio</span>, s'obre l'aplicació Missatges i l'usuari ha de
+                                    tocar Envia</td>
                             </tr>
                             <tr>
                                 <td><strong>Nonecessària la interacció de l'usuari</strong></td>
                                 <td><span class="check">✅</span> Sí</td>
-                                <td><span class="cross">❌</span> Només amb <span class="notranslate" translate="no">Twilio</span>. Missatges d'iOS sempre requereix tocar Envia</td>
+                                <td><span class="cross">❌</span> Només amb <span class="notranslate"
+                                        translate="no">Twilio</span>. Missatges d'iOS sempre requereix tocar Envia</td>
                             </tr>
                             <tr>
-                                <td><strong>Correu electrònic <span class="notranslate" translate="no">fallback</span></strong></td>
+                                <td><strong>Correu electrònic <span class="notranslate"
+                                            translate="no">fallback</span></strong></td>
                                 <td><span class="check">✅</span> Sí (quan hi hagi internet)</td>
                                 <td><span class="check">✅</span> Sí (quan hi hagi internet)</td>
                             </tr>
@@ -1429,10 +1598,14 @@
                         <h3>iOS Limitacions</h3>
                         <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(en comparació amb Android)</p>
                         <ul class="feature-list">
-                            <li><span class="cross">❌</span> No es pot enviar SMS amb programació (restricció d'Apple)</li>
-                            <li><span class="cross">❌</span> Els SMS totalment automàtics requereixen <span class="notranslate" translate="no">Twilio</span></li>
-                            <li><span class="cross">❌</span> Dead Man Timer no pot enviar SMS en silenci sense <span class="notranslate" translate="no">Twilio</span></li>
-                            <li><span class="cross">⚠️</span> iOS Messages La preferència requereix que l'usuari toqui físicament Envia
+                            <li><span class="cross">❌</span> No es pot enviar SMS amb programació (restricció d'Apple)
+                            </li>
+                            <li><span class="cross">❌</span> Els SMS totalment automàtics requereixen <span
+                                    class="notranslate" translate="no">Twilio</span></li>
+                            <li><span class="cross">❌</span> Dead Man Timer no pot enviar SMS en silenci sense <span
+                                    class="notranslate" translate="no">Twilio</span></li>
+                            <li><span class="cross">⚠️</span> iOS Messages La preferència requereix que l'usuari toqui
+                                físicament Envia
                             </li>
                         </ul>
                     </div>
@@ -1440,19 +1613,26 @@
                     <div class="platform-card android">
                         <h3>Android Avantatges</h3>
                         <ul class="feature-list">
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> sempre és gratuït i automàtic</li>
-                            <li><span class="check">✅</span> No<span class="notranslate"
-                                    translate="no">Twilio</span> necessàries per a la funcionalitat bàsica</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span
+                                        class="notranslate" translate="no">Direct SMS</span></span> sempre és gratuït i
+                                automàtic</li>
+                            <li><span class="check">✅</span> No<span class="notranslate" translate="no">Twilio</span>
+                                necessàries per a la funcionalitat bàsica</li>
                             <li><span class="check">✅</span> Dead Man Timer sempre és totalment automàtic</li>
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> afegeix redundància (segon mètode), no és un requisit (sempre que el vostre telèfon/operador permeti trucades Wifi)</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span>
+                                afegeix redundància (segon mètode), no és un requisit (sempre que el vostre
+                                telèfon/operador permeti trucades Wifi)</li>
                         </ul>
                     </div>
 
                     <div class="platform-card" style="border-top: 4px solid #667eea;">
                         <h3>Quan les dues plataformes es comporten igual</h3>
                         <ul class="feature-list">
-                            <li><span class="check">ℹ️</span> Només WiFi (sense cel·la): tots dos utilitzen la trucada Wifi si està disponible, <span class="notranslate" translate="no">Twilio</span> o el correu electrònic: comportament idèntic</li>
-                            <li><span class="check">✅</span> Redundància de correu electrònic: funciona igual a les dues plataformes</li>
+                            <li><span class="check">ℹ️</span> Només WiFi (sense cel·la): tots dos utilitzen la trucada
+                                Wifi si està disponible, <span class="notranslate" translate="no">Twilio</span> o el
+                                correu electrònic: comportament idèntic</li>
+                            <li><span class="check">✅</span> Redundància de correu electrònic: funciona igual a les dues
+                                plataformes</li>
                         </ul>
                     </div>
                 </div>
@@ -1464,7 +1644,8 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Preus senzills i honestos</h2>
-            <p class="section-subtitle">Sense subscripcions. Sense comissions ocultes.<br>Paga una vegada, utilitza per sempre.</p>
+            <p class="section-subtitle">Sense subscripcions. Sense comissions ocultes.<br>Paga una vegada, utilitza per
+                sempre.</p>
 
             <div class="pricing-cards">
                 <div class="pricing-card">
@@ -1474,10 +1655,12 @@
                     <ul class="features-list">
                         <li>✅ Fins a 1 destinatari</li>
                         <li>✅ Botons <span class="notranslate" translate="no">SOS</span> i D'acord</li>
-                        <li>✅ <span class="notranslate" translate="no">Reporting mode</span> amb missatges preestablerts</li>
+                        <li>✅ <span class="notranslate" translate="no">Reporting mode</span> amb missatges preestablerts
+                        </li>
                         <li>✅ Historial d'alertes: darrers 50 missatges</li>
                         <li>✅ Redundància intel·ligent (SMS + Wifi)</li>
-                        <li>✅ Correu electrònic com a <span class="notranslate" translate="no">fallback</span> o redundància</li>
+                        <li>✅ Correu electrònic com a <span class="notranslate" translate="no">fallback</span> o
+                            redundància</li>
                     </ul>
                     <a href="#" class="btn btn-secondary">Comença gratuïtament</a>
                 </div>
@@ -1493,21 +1676,27 @@
                         <li>✅ Temporitzador de registre d'entrada</li>
                         <li>✅ Encara no hi ha quotes mensuals!</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Desbloqueja <span class="notranslate" translate="no">Premium</span></a>
+                    <a href="#" class="btn btn-primary">Desbloqueja <span class="notranslate"
+                            translate="no">Premium</span></a>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 Els SMS tenen un preu, però la vostra tranquil·litat no</h3>
+                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 Els SMS tenen un preu, però la
+                    vostra tranquil·litat no</h3>
                 <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
-                    <span class="notranslate" translate="no">TapAlert</span> no cobra pels missatges enviats. Els únics costos en els quals podeu incórrer són els aplicats pel vostre propi operador de telefonia mòbil per als SMS estàndard, com qualsevol missatge de text normal, i, si decidiu configurar
+                    <span class="notranslate" translate="no">TapAlert</span> no cobra pels missatges enviats. Els únics
+                    costos en els quals podeu incórrer són els aplicats pel vostre propi operador de telefonia mòbil per
+                    als SMS estàndard, com qualsevol missatge de text normal, i, si decidiu configurar
                     <span class="notranslate" translate="no">Twilio</span> com a servei alternatiu o alternativa,
                     <a href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
-                        style="color: #667eea; text-decoration: underline;">les tarifes per missatge establertes per <span
-                            class="notranslate" translate="no">Twilio</span></a>
+                        style="color: #667eea; text-decoration: underline;">les tarifes per missatge establertes per
+                        <span class="notranslate" translate="no">Twilio</span></a>
                     (Nota: hi ha un
                     <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
-                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;"><span class="notranslate" translate="no">Twilio</span> compte de prova gratuït</a>
+                        target="_blank" rel="noopener noreferrer"
+                        style="color: #667eea; text-decoration: underline;"><span class="notranslate"
+                            translate="no">Twilio</span> compte de prova gratuït</a>
                     però no recomanem utilitzar-lo). L'aplicació en si afegeix zero cost addicional a la part superior.
                 </p>
             </div>
@@ -1518,7 +1707,8 @@
     <section class="privacy">
         <div class="container">
             <h2 class="section-title" style="color: white;">🔒 Privadesa per Disseny</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Les teves dades de seguretat segueixen sent teves. Sense comptes, sense seguiment, sense vigilància.</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Les teves dades de seguretat segueixen
+                sent teves. Sense comptes, sense seguiment, sense vigilància.</p>
 
             <div class="privacy-grid">
                 <div class="privacy-item">
@@ -1547,18 +1737,21 @@
     <section class="use-cases">
         <div class="container">
             <h2 class="section-title">Per a qui va <span class="notranslate" translate="no">TapAlert</span>?</h2>
-            <p class="section-subtitle">Dissenyat per a qualsevol persona que valora la seguretat i la tranquil·litat</p>
+            <p class="section-subtitle">Dissenyat per a qualsevol persona que valora la seguretat i la tranquil·litat
+            </p>
 
             <div class="use-case-highlight" style="max-width: 600px; margin: 0 auto 40px auto; transform: scale(1.05);">
                 <div class="use-case" style="border: 2px solid #667eea; background: white;">
                     <h3 style="font-size: 1.4rem;">👴 Adults Grans i cuidadors</h3>
-                    <p style="font-size: 1.1rem;">Un botó de pànic per a persones grans que viuen soles o que viatgen de manera independent. Un toc notifica a tots els membres de la família la ubicació exacta.</p>
+                    <p style="font-size: 1.1rem;">Un botó de pànic per a persones grans que viuen soles o que viatgen de
+                        manera independent. Un toc notifica a tots els membres de la família la ubicació exacta.</p>
                 </div>
             </div>
 
             <div class="section-divider" style="text-align: center; margin-bottom: 40px; position: relative;">
                 <span
-                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">però també per...</span>
+                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">però
+                    també per...</span>
                 <div
                     style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #e2e8f0; z-index: 0;">
                 </div>
@@ -1568,27 +1761,32 @@
 
                 <div class="use-case">
                     <h3>🥾 Aventurers en solitari</h3>
-                    <p>Senderistes o ciclistes que volen una manera fiable d'enviar la seva ubicació a la família a l'inici/final d'una ruta o en cas d'emergència.</p>
+                    <p>Senderistes o ciclistes que volen una manera fiable d'enviar la seva ubicació a la família a
+                        l'inici/final d'una ruta o en cas d'emergència.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>🌙 Seguretat personal</h3>
-                    <p>Camineu a casa tard a la nit o utilitzeu cotxes compartits? Envia una alerta discreta "Cuida'm l'esquena" a amics i familiars.</p>
+                    <p>Camineu a casa tard a la nit o utilitzeu cotxes compartits? Envia una alerta discreta "Cuida'm
+                        l'esquena" a amics i familiars.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>💼 Petites empreses</h3>
-                    <p>Treballadors de camp o empleats solitaris (agents immobiliaris, conductors de repartiment) que necessiten un simple senyal d'entrada o socors.</p>
+                    <p>Treballadors de camp o empleats solitaris (agents immobiliaris, conductors de repartiment) que
+                        necessiten un simple senyal d'entrada o socors.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>✈️ Viatgers internacionals</h3>
-                    <p>Ús de missatgeria Wi-Fi per evitar les cares tarifes d'SMS d'itinerància mentre manté la família actualitzada sobre el teu parador.</p>
+                    <p>Ús de missatgeria Wi-Fi per evitar les cares tarifes d'SMS d'itinerància mentre manté la família
+                        actualitzada sobre el teu parador.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>👨‍👩‍👧‍👦 Les famílies es mantenen connectades</h3>
-                    <p>Vigileu els membres de la família amb registres ràpids de "Estic bé" sense necessitat de trucades telefòniques o missatges de text constants.</p>
+                    <p>Vigileu els membres de la família amb registres ràpids de "Estic bé" sense necessitat de trucades
+                        telefòniques o missatges de text constants.</p>
                 </div>
             </div>
         </div>
@@ -1598,14 +1796,16 @@
     <section class="guides" id="guides" style="padding: 80px 20px; background: white;">
         <div class="container">
             <h2 class="section-title">Guies pas a pas</h2>
-            <p class="section-subtitle">Domina <span class="notranslate" translate="no">TapAlert</span> amb les nostres guies fàcils de seguir</p>
+            <p class="section-subtitle">Domina <span class="notranslate" translate="no">TapAlert</span> amb les nostres
+                guies fàcils de seguir</p>
 
             <div class="features-grid">
                 <a href="user_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📖</div>
                         <h3>Guia d'usuari de TapAlert</h3>
-                        <p>Referència completa de totes les funcions de l'aplicació: permisos, modes, configuració, destinataris, alertes i molt més.</p>
+                        <p>Referència completa de totes les funcions de l'aplicació: permisos, modes, configuració,
+                            destinataris, alertes i molt més.</p>
                     </div>
                 </a>
 
@@ -1621,7 +1821,8 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">👨‍👩‍👧</div>
                         <h3>Configuració assistida per la família</h3>
-                        <p>Configura TapAlert per a una persona gran amb Magic Link: sense necessitat d'escriure res.</p>
+                        <p>Configura TapAlert per a una persona gran amb Magic Link: sense necessitat d'escriure res.
+                        </p>
                     </div>
                 </a>
 
@@ -1650,14 +1851,16 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📧</div>
                         <h3>Configuració de la redundància del correu electrònic</h3>
-                        <p>Configureu el correu electrònic com a <span class="notranslate" translate="no">fallback</span> o missatgeria d'alerta de redundància.</p>
+                        <p>Configureu el correu electrònic com a <span class="notranslate"
+                                translate="no">fallback</span> o missatgeria d'alerta de redundància.</p>
                     </div>
                 </a>
                 <a href="accessibility_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">🦻</div>
                         <h3>Característiques d'accessibilitat</h3>
-                        <p>Obteniu informació sobre les funcions dissenyades per a la visió, l'oïda i l'assistència motriu.</p>
+                        <p>Obteniu informació sobre les funcions dissenyades per a la visió, l'oïda i l'assistència
+                            motriu.</p>
                     </div>
                 </a>
             </div>
@@ -1669,8 +1872,11 @@
         <div class="notice-content">
             <div class="notice-icon">⚠️</div>
             <h2>Avís de seguretat important</h2>
-            <p><strong><span class="notranslate" translate="no">TapAlert</span> NO substitueix els serveis d'emergència com el 911 o el 112.</strong></p>
-            <p style="margin-top: 15px;">L'entrega del missatge depèn de la disponibilitat de la xarxa i de l'acció del destinatari. Aquesta aplicació no ofereix control, resposta d'emergència ni lliurament garantit. En cas d'emergència real, contacteu sempre directament amb els serveis d'emergència.</p>
+            <p><strong><span class="notranslate" translate="no">TapAlert</span> NO substitueix els serveis d'emergència
+                    com el 911 o el 112.</strong></p>
+            <p style="margin-top: 15px;">L'entrega del missatge depèn de la disponibilitat de la xarxa i de l'acció del
+                destinatari. Aquesta aplicació no ofereix control, resposta d'emergència ni lliurament garantit. En cas
+                d'emergència real, contacteu sempre directament amb els serveis d'emergència.</p>
         </div>
     </section>
 
@@ -1680,7 +1886,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només seguretat.</p>
+                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només
+                        seguretat.</p>
                 </div>
 
                 <div class="footer-section">
@@ -1705,7 +1912,8 @@
                     <h3>Suport</h3>
                     <ul>
                         <li><a href="#">Preguntes freqüents</a></li>
-                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Guies pas a pas</a></li>
+                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Guies pas a
+                                pas</a></li>
                         <li><a href="accessibility_guide.html">Guia d'accessibilitat</a></li>
                         <li><a href="troubleshooting.html">Resolució de problemes</a></li>
                         <li><a href="contact.html">Contacta amb l'assistència</a></li>
@@ -1714,7 +1922,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet amb ❤️ per la teva seguretat</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet
+                    amb ❤️ per la teva seguretat</p>
             </div>
         </div>
     </footer>

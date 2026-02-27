@@ -17,56 +17,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👨‍👩‍👧 Gids voor door familie ondersteunde installatie - TapAlert</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn { padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
-        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-        .guide-header { background: white; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .guide-nav { display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { display: flex; align-items: center; font-weight: 800; font-size: 1.5rem; color: #333; text-decoration: none; }
-        .guide-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .guide-title { font-size: 2.2rem; color: #2c3e50; margin-bottom: 10px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .guide-subtitle { text-align: center; color: #667eea; font-size: 1.05rem; margin-bottom: 30px; }
-        .guide-section { margin-bottom: 40px; }
-        h2 { font-size: 1.8rem; color: #2c3e50; margin-top: 40px; margin-bottom: 20px; border-left: 5px solid #667eea; padding-left: 15px; }
-        h3 { font-size: 1.3rem; color: #4a5568; margin-top: 25px; margin-bottom: 12px; }
-        p { margin-bottom: 15px; color: #4a5568; }
-        ul, ol { margin-bottom: 20px; padding-left: 25px; color: #4a5568; }
-        li { margin-bottom: 8px; }
-        a { color: #667eea; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .tip-box { background-color: #f0f4ff; border-left: 4px solid #667eea; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .tip-box strong { color: #2c3e50; }
-        .warn-box { background-color: #fffaf0; border-left: 4px solid #ed8936; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .warn-box strong { color: #c05621; }
-        pre { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin: 20px 0; line-height: 1.5; }
-        code { background: #eef1f8; color: #667eea; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-        pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
-        .checklist { list-style: none; padding-left: 5px; }
-        .checklist li::before { content: "☐ "; color: #667eea; font-size: 1.1em; }
-        footer { background: #1a1a1a; color: white; padding: 60px 20px 30px; margin-top: 60px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h3 { margin-bottom: 20px; color: #667eea; }
-        .footer-section ul { list-style: none; padding-left: 0; }
-        .footer-section ul li { padding: 8px 0; }
-        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s ease; }
-        .footer-section a:hover { color: white; text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; }
-        @media (max-width: 768px) {
-            body { font-size: 14px; } .brand-logo { font-size: 1.2rem; } .btn { padding: 8px 16px; font-size: 0.85rem; }
-            .guide-container { padding: 20px; margin: 20px; } .guide-title { font-size: 1.7rem; }
-            h2 { font-size: 1.4rem; margin-top: 30px; padding-left: 12px; } h3 { font-size: 1.15rem; }
-            p, li { font-size: 0.9rem; } pre { font-size: 0.75rem; padding: 14px; }
-            footer { padding: 40px 15px 20px; margin-top: 40px; } .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-subtitle {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tip-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .tip-box strong {
+            color: #2c3e50;
+        }
+
+        .warn-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .warn-box strong {
+            color: #c05621;
+        }
+
+        pre {
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #eef1f8;
+            color: #667eea;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .checklist li::before {
+            content: "☐ ";
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            pre {
+                font-size: 0.75rem;
+                padding: 14px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
         @media (max-width: 430px) {
-            body { font-size: 13px; } .btn { padding: 7px 14px; font-size: 0.8rem; }
-            .guide-container { padding: 15px; margin: 12px; } .guide-title { font-size: 1.45rem; }
-            h2 { font-size: 1.2rem; padding-left: 10px; border-left-width: 4px; } h3 { font-size: 1.05rem; }
-            pre { font-size: 0.7rem; padding: 10px; } footer { padding: 30px 12px 15px; margin-top: 30px; }
-            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            body {
+                font-size: 13px;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.45rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            pre {
+                font-size: 0.7rem;
+                padding: 10px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -76,48 +371,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">NL</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
-            <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
-            <a href="../family_assisted_setup.html" hreflang="en">EN</a>
-            <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
-            <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
-            <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
-            <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
-            <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
-            <a href="../nl/family_assisted_setup.html" hreflang="nl" class="active">NL</a>
-            <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">NL</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
+                        <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
+                        <a href="../family_assisted_setup.html" hreflang="en">EN</a>
+                        <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
+                        <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
+                        <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
+                        <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
+                        <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
+                        <a href="../nl/family_assisted_setup.html" hreflang="nl" class="active">NL</a>
+                        <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -127,13 +514,18 @@
         <h1 class="guide-title">👨‍👩‍👧 Gids voor door familie ondersteunde installatie</h1>
         <p class="guide-subtitle">TapAlert instellen voor een senior met Magic Link</p>
 
-        <p>Deze gids is bestemd voor familieleden, verzorgers en iedereen die een oudere of minder tech-savvy persoon helpt TapAlert volledig in te stellen. Met de Magic Link-functie kunt u de volledige app op uw eigen apparaat instellen en de gebruiker met één tik een gebruiksklare configuratie overhandigen.</p>
+        <p>Deze gids is bestemd voor familieleden, verzorgers en iedereen die een oudere of minder tech-savvy persoon
+            helpt TapAlert volledig in te stellen. Met de Magic Link-functie kunt u de volledige app op uw eigen
+            apparaat instellen en de gebruiker met één tik een gebruiksklare configuratie overhandigen.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
             <h2>Overzicht: Hoe Magic Link werkt</h2>
-            <p>Met de Magic Link-functie kan een techsavvy persoon ("de beheerder") al het configuratiewerk doen en dit delen als een speciale link. Wanneer de senior op die link tikt op zijn telefoon, past TapAlert automatisch de volledige configuratie toe — contacten, berichten, instellingen en alles — in één stap.</p>
-<pre>Admin's phone                         Senior's phone
+            <p>Met de Magic Link-functie kan een techsavvy persoon ("de beheerder") al het configuratiewerk doen en dit
+                delen als een speciale link. Wanneer de senior op die link tikt op zijn telefoon, past TapAlert
+                automatisch de volledige configuratie toe — contacten, berichten, instellingen en alles — in één stap.
+            </p>
+            <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
 2. Fill in all configuration
@@ -157,15 +549,19 @@
             </ul>
 
             <h3>Optioneel: Voor geautomatiseerde sms via Twilio</h3>
-            <p>Als u wilt dat meldingen automatisch worden verzonden zonder dat een app op de telefoon van de senior open hoeft te zijn:</p>
+            <p>Als u wilt dat meldingen automatisch worden verzonden zonder dat een app op de telefoon van de senior
+                open hoeft te zijn:</p>
             <ul class="checklist">
                 <li>Een Twilio-account (gratis proefperiode beschikbaar op twilio.com)</li>
                 <li>Twilio Account SID (van het Twilio Console-dashboard)</li>
                 <li>Twilio Auth Token (van het Twilio Console-dashboard)</li>
-                <li>Een Twilio-telefoonnummer, OF een alfanumerische afzendernaam (bijv. "TapAlert") als uw land dit ondersteunt</li>
+                <li>Een Twilio-telefoonnummer, OF een alfanumerische afzendernaam (bijv. "TapAlert") als uw land dit
+                    ondersteunt</li>
                 <li>Uw eigen telefoonnummer — de app stuurt een test-sms om te controleren of Twilio werkt</li>
             </ul>
-            <div class="warn-box">Opmerking voor iOS-gebruikers: Op de iPhone vereisen geautomatiseerde sms'jes Twilio. Zonder Twilio opent de app de native Berichten-app en tikt de senior handmatig op Verzenden. Dit is nog steeds betrouwbaar maar vereist één extra tik.</div>
+            <div class="warn-box">Opmerking voor iOS-gebruikers: Op de iPhone vereisen geautomatiseerde sms'jes Twilio.
+                Zonder Twilio opent de app de native Berichten-app en tikt de senior handmatig op Verzenden. Dit is nog
+                steeds betrouwbaar maar vereist één extra tik.</div>
 
             <h3>Optioneel: Voor e-mailredundantie</h3>
             <p>Als u wilt dat meldingen naast sms ook per e-mail worden verzonden:</p>
@@ -181,10 +577,13 @@
             <ol>
                 <li>Installeer TapAlert op uw eigen telefoon (u heeft de app nodig om de Magic Link te genereren).</li>
                 <li>Open TapAlert.</li>
-                <li>Als u de onboarding nog niet heeft voltooid, doorloop dan de toestemmingsschermen. Tik op het laatste scherm op "Instellen voor iemand anders".</li>
-                <li>Als TapAlert al geïnstalleerd is, ga naar Instellingen → scroll helemaal naar beneden → tik op "Admin-setup / Magic Link".</li>
+                <li>Als u de onboarding nog niet heeft voltooid, doorloop dan de toestemmingsschermen. Tik op het
+                    laatste scherm op "Instellen voor iemand anders".</li>
+                <li>Als TapAlert al geïnstalleerd is, ga naar Instellingen → scroll helemaal naar beneden → tik op
+                    "Admin-setup / Magic Link".</li>
             </ol>
-            <p>Het admin-instellingsscherm wordt geopend. Scroll door de secties — u vult elke sectie in bij de stappen hieronder.</p>
+            <p>Het admin-instellingsscherm wordt geopend. Scroll door de secties — u vult elke sectie in bij de stappen
+                hieronder.</p>
         </section>
 
         <!-- Step 2 -->
@@ -192,9 +591,11 @@
             <h2>Stap 2: De naam van de senior invoeren</h2>
             <p>In het gedeelte "Gebruikersinformatie" bovenaan het scherm:</p>
             <ul>
-                <li>Naam van de senior — Typ zijn/haar voornaam (bijv. "Maria"). Deze naam verschijnt in meldingsberichten zodat ontvangers weten wie de melding heeft verzonden.</li>
+                <li>Naam van de senior — Typ zijn/haar voornaam (bijv. "Maria"). Deze naam verschijnt in
+                    meldingsberichten zodat ontvangers weten wie de melding heeft verzonden.</li>
             </ul>
-            <div class="tip-box">Voorbeeld: Als u "Maria" typt, ontvangen ontvangers: "MELDING van Maria: Ik heb hulp nodig. Locatie: …"</div>
+            <div class="tip-box">Voorbeeld: Als u "Maria" typt, ontvangen ontvangers: "MELDING van Maria: Ik heb hulp
+                nodig. Locatie: …"</div>
         </section>
 
         <!-- Step 3 -->
@@ -205,7 +606,8 @@
             <p>Laat de schakelaar "Twilio SMS inschakelen" uit.</p>
             <ul>
                 <li>Op Android stuurt de app sms'jes rechtstreeks via de simkaart — geen Twilio nodig.</li>
-                <li>Op de iPhone opent de app de Berichten-app vooraf ingevuld en tikt de senior eenmaal op Verzenden. Eenvoudig maar één extra stap.</li>
+                <li>Op de iPhone opent de app de Berichten-app vooraf ingevuld en tikt de senior eenmaal op Verzenden.
+                    Eenvoudig maar één extra stap.</li>
             </ul>
 
             <h3>Optie B: Met Twilio (aanbevolen voor volledige automatisering)</h3>
@@ -215,28 +617,37 @@
                 <li>Voer het Auth Token in van uw Twilio Console (tik op het oogpictogram om te tonen/verbergen).</li>
                 <li>Kies hoe u de afzender wilt identificeren:
                     <ul>
-                        <li>Twilio-nummer — Voer het Twilio-nummer in (bijv. +12015551234). Selecteer eerst de landvlag.</li>
-                        <li>Afzendernaam — Zet "Alfanumerische afzendernaam" aan en typ een korte naam (bijv. "TapAlert"). Let op: niet in alle landen ondersteund (bijv. VS).</li>
+                        <li>Twilio-nummer — Voer het Twilio-nummer in (bijv. +12015551234). Selecteer eerst de landvlag.
+                        </li>
+                        <li>Afzendernaam — Zet "Alfanumerische afzendernaam" aan en typ een korte naam (bijv.
+                            "TapAlert"). Let op: niet in alle landen ondersteund (bijv. VS).</li>
                     </ul>
                 </li>
-                <li>Uw nummer — Voer uw eigen nummer in. De app stuurt een test-sms om te bevestigen dat Twilio werkt voordat de link wordt gegenereerd.</li>
+                <li>Uw nummer — Voer uw eigen nummer in. De app stuurt een test-sms om te bevestigen dat Twilio werkt
+                    voordat de link wordt gegenereerd.</li>
             </ol>
-            <div class="tip-box">Waar u Twilio-inloggegevens vindt: Log in op console.twilio.com. Account SID en Auth Token staan op de hoofdpagina van het dashboard. Uw nummer staat onder Telefoonnummers → Beheren → Actieve nummers.</div>
+            <div class="tip-box">Waar u Twilio-inloggegevens vindt: Log in op console.twilio.com. Account SID en Auth
+                Token staan op de hoofdpagina van het dashboard. Uw nummer staat onder Telefoonnummers → Beheren →
+                Actieve nummers.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
             <h2>Stap 4: E-mailmeldingen configureren (optioneel)</h2>
-            <p>E-mailmeldingen sturen een kopie van elke melding naar ontvangers met een e-mailadres. Dit is een nuttige backup als sms mislukt.</p>
+            <p>E-mailmeldingen sturen een kopie van elke melding naar ontvangers met een e-mailadres. Dit is een nuttige
+                backup als sms mislukt.</p>
             <ol>
                 <li>Zet "E-mailredundantie inschakelen" aan.</li>
-                <li>Selecteer uw e-mailprovider: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (serverinstellingen automatisch ingevuld) of Aangepaste SMTP.</li>
-                <li>Voer het e-mailadres in om vanaf te verzenden — bij voorkeur een speciaal adres, niet de persoonlijke inbox van de senior.</li>
+                <li>Selecteer uw e-mailprovider: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (serverinstellingen
+                    automatisch ingevuld) of Aangepaste SMTP.</li>
+                <li>Voer het e-mailadres in om vanaf te verzenden — bij voorkeur een speciaal adres, niet de
+                    persoonlijke inbox van de senior.</li>
                 <li>Voer het app-wachtwoord in voor dat account.</li>
             </ol>
 
             <h3>Hoe u een app-wachtwoord krijgt</h3>
-            <p>Gewone e-mailwachtwoorden werken niet. E-mailproviders vereisen app-wachtwoorden voor apps die verbinding maken via SMTP.</p>
+            <p>Gewone e-mailwachtwoorden werken niet. E-mailproviders vereisen app-wachtwoorden voor apps die verbinding
+                maken via SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
@@ -273,22 +684,28 @@
                 <li>Voer hun naam in het Naam-veld in (bijv. "Carlos" of "Dr. García").</li>
                 <li>Voer hun telefoonnummer in — selecteer eerst de juiste landvlag en typ dan het nummer.</li>
                 <li>Tik op de blauwe + knop om ze aan de lijst toe te voegen.</li>
-                <li>Herhaal voor elk contact. U kunt er zoveel toevoegen als nodig (tot 50 met premium; gratis versie ondersteunt 1).</li>
+                <li>Herhaal voor elk contact. U kunt er zoveel toevoegen als nodig (tot 50 met premium; gratis versie
+                    ondersteunt 1).</li>
             </ol>
             <p>Om een contact te verwijderen, tikt u op het rode prullenbak-pictogram naast hun naam.</p>
-            <div class="tip-box">Tip: Voeg minimaal 2 contacten toe voor redundantie — voor het geval iemand niet bereikbaar is.</div>
+            <div class="tip-box">Tip: Voeg minimaal 2 contacten toe voor redundantie — voor het geval iemand niet
+                bereikbaar is.</div>
         </section>
 
         <!-- Step 6 -->
         <section class="guide-section" id="step-6">
             <h2>Stap 6: Vooraf geconfigureerde waarschuwingsberichten schrijven</h2>
-            <p>In de sectie <strong>"Waarschuwingsberichten"</strong> kunt u maximaal 3 kant-en-klare berichten schrijven:</p>
+            <p>In de sectie <strong>"Waarschuwingsberichten"</strong> kunt u maximaal 3 kant-en-klare berichten
+                schrijven:</p>
             <ul>
-                <li><strong>Bericht 1</strong> — Het hoofdbericht voor noodgevallen (bijv. "Ik heb hulp nodig, bel me")</li>
+                <li><strong>Bericht 1</strong> — Het hoofdbericht voor noodgevallen (bijv. "Ik heb hulp nodig, bel me")
+                </li>
                 <li><strong>Bericht 2</strong> — Een "Ik ben OK"-bericht (bijv. "Alles goed, maak je geen zorgen")</li>
-                <li><strong>Bericht 3</strong> — Een ander aangepast bericht (bijv. "Ik ben gevallen, kom alsjeblieft")</li>
+                <li><strong>Bericht 3</strong> — Een ander aangepast bericht (bijv. "Ik ben gevallen, kom alsjeblieft")
+                </li>
             </ul>
-            <p>Deze verschijnen als grote knoppen op het hoofdscherm van de oudere zodat ze met één tik een melding kunnen sturen, zonder iets te hoeven typen.</p>
+            <p>Deze verschijnen als grote knoppen op het hoofdscherm van de oudere zodat ze met één tik een melding
+                kunnen sturen, zonder iets te hoeven typen.</p>
             <div class="tip-box">
                 <strong>Tips voor goede berichten:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
@@ -302,32 +719,40 @@
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
             <h2>Stap 7: App-instellingen kiezen</h2>
-            <p>In de sectie <strong>"App-instellingen"</strong> configureert u hoe de app zich gedraagt voor de oudere:</p>
+            <p>In de sectie <strong>"App-instellingen"</strong> configureert u hoe de app zich gedraagt voor de oudere:
+            </p>
 
             <h3>Waarschuwingsaftelling</h3>
-            <p>Hoeveel seconden na het tikken op de waarschuwingsknop gewacht wordt voordat het daadwerkelijk verstuurd wordt.</p>
+            <p>Hoeveel seconden na het tikken op de waarschuwingsknop gewacht wordt voordat het daadwerkelijk verstuurd
+                wordt.</p>
             <ul>
                 <li><strong>0 seconden</strong> — verzendt onmiddellijk, annulering niet mogelijk</li>
-                <li><strong>3–10 seconden</strong> — aanbevolen voor de meeste ouderen; geeft tijd om te annuleren als per ongeluk ingedrukt</li>
+                <li><strong>3–10 seconden</strong> — aanbevolen voor de meeste ouderen; geeft tijd om te annuleren als
+                    per ongeluk ingedrukt</li>
                 <li><strong>15–30 seconden</strong> — als de oudere de neiging heeft om per ongeluk te tikken</li>
             </ul>
 
             <h3>Activatiemodus</h3>
             <ul>
-                <li><strong>Enkele tik</strong> — eenmaal tikken om de aftelling te starten (makkelijker voor ouderen met beperkte mobiliteit)</li>
-                <li><strong>Ingedrukt houden</strong> — houd de knop ingedrukt om te bevestigen (voorkomt onbedoeld verzenden)</li>
+                <li><strong>Enkele tik</strong> — eenmaal tikken om de aftelling te starten (makkelijker voor ouderen
+                    met beperkte mobiliteit)</li>
+                <li><strong>Ingedrukt houden</strong> — houd de knop ingedrukt om te bevestigen (voorkomt onbedoeld
+                    verzenden)</li>
             </ul>
 
             <h3>Weergave</h3>
             <ul>
                 <li><strong>Systeemstandaard</strong> — volgt de licht/donker-modus instelling van de telefoon</li>
                 <li><strong>Lichte modus</strong> — altijd lichte achtergrond</li>
-                <li><strong>Donkere modus</strong> — altijd donkere achtergrond (zachter voor de ogen bij weinig licht)</li>
+                <li><strong>Donkere modus</strong> — altijd donkere achtergrond (zachter voor de ogen bij weinig licht)
+                </li>
             </ul>
 
             <h3>Taal</h3>
-            <p>Selecteer de taal voor de app-interface. Beschikbaar: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
-            <div class="tip-box">Tip: Stel de taal in zodat die overeenkomt met wat de oudere spreekt, ook als u het instelt in een andere taal.</div>
+            <p>Selecteer de taal voor de app-interface. Beschikbaar: English, Español, Català, Français, Deutsch,
+                Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Tip: Stel de taal in zodat die overeenkomt met wat de oudere spreekt, ook als u het
+                instelt in een andere taal.</div>
         </section>
 
         <!-- Step 8 -->
@@ -342,16 +767,23 @@
             <h3>Wat er vervolgens gebeurt:</h3>
             <p><strong>Testfase</strong> (duurt een paar seconden):</p>
             <ul>
-                <li>Als Twilio is ingeschakeld: de app stuurt een echte test-SMS naar <strong>uw telefoonnummer</strong> om te controleren of het werkt. U zou deze SMS binnen seconden moeten ontvangen.</li>
-                <li>Als e-mail is ingeschakeld: de app stuurt een test-e-mail naar het e-mailadres dat u hebt ingevoerd. Controleer uw inbox.</li>
-                <li>Als tests mislukken, verschijnt er een foutmelding. Controleer uw inloggegevens en probeer het opnieuw.</li>
+                <li>Als Twilio is ingeschakeld: de app stuurt een echte test-SMS naar <strong>uw telefoonnummer</strong>
+                    om te controleren of het werkt. U zou deze SMS binnen seconden moeten ontvangen.</li>
+                <li>Als e-mail is ingeschakeld: de app stuurt een test-e-mail naar het e-mailadres dat u hebt ingevoerd.
+                    Controleer uw inbox.</li>
+                <li>Als tests mislukken, verschijnt er een foutmelding. Controleer uw inloggegevens en probeer het
+                    opnieuw.</li>
             </ul>
             <p><strong>Deelfase:</strong></p>
             <ul>
                 <li>Het systeemdeel-venster opent automatisch.</li>
-                <li>Stuur de Magic Link naar de oudere via <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>e-mail</strong>, <strong>SMS</strong> of een andere berichtenapp.</li>
+                <li>Stuur de Magic Link naar de oudere via <strong>WhatsApp</strong>, <strong>iMessage</strong>,
+                    <strong>e-mail</strong>, <strong>SMS</strong> of een andere berichtenapp.
+                </li>
             </ul>
-            <div class="warn-box">De link is veilig om te delen — maar behandel hem als een wachtwoord. Het bevat de configuratie van de oudere inclusief contacten en (indien geconfigureerd) uw Twilio/e-mail-inloggegevens. Deel het alleen met de oudere.</div>
+            <div class="warn-box">De link is veilig om te delen — maar behandel hem als een wachtwoord. Het bevat de
+                configuratie van de oudere inclusief contacten en (indien geconfigureerd) uw
+                Twilio/e-mail-inloggegevens. Deel het alleen met de oudere.</div>
         </section>
 
         <!-- Step 9 -->
@@ -361,12 +793,14 @@
             <ol>
                 <li>De oudere ontvangt het bericht dat u heeft gestuurd.</li>
                 <li>Ze tikken op de link.</li>
-                <li>TapAlert opent automatisch en toont een bevestigingsscherm: <em>"Klaar om TapAlert te configureren voor [Naam]?"</em> met een samenvatting van wat wordt ingesteld.</li>
+                <li>TapAlert opent automatisch en toont een bevestigingsscherm: <em>"Klaar om TapAlert te configureren
+                        voor [Naam]?"</em> met een samenvatting van wat wordt ingesteld.</li>
                 <li>De oudere tikt op <strong>"Ja, instellen"</strong> (of vergelijkbare knop).</li>
                 <li>De app past de volledige configuratie onmiddellijk toe.</li>
                 <li>Er verschijnt een succesbericht en de app opent het hoofdscherm — klaar voor gebruik.</li>
             </ol>
-            <p><strong>Dat is alles. De oudere hoeft geen instellingen in te voeren, geen inloggegevens te typen of keuzes te maken.</strong></p>
+            <p><strong>Dat is alles. De oudere hoeft geen instellingen in te voeren, geen inloggegevens te typen of
+                    keuzes te maken.</strong></p>
 
             <h3>Als TapAlert nog niet is geïnstalleerd op de telefoon van de oudere</h3>
             <ol>
@@ -385,20 +819,24 @@
                 <li>U zou de naam van de oudere op het beginscherm moeten zien.</li>
                 <li>Tik op een van de waarschuwingsknoppen.</li>
                 <li>Wacht op de aftelling (of stuur onmiddellijk als aftelling 0 is).</li>
-                <li>Bevestig dat alle geconfigureerde contacten de SMS ontvangen (en e-mail, indien geconfigureerd).</li>
+                <li>Bevestig dat alle geconfigureerde contacten de SMS ontvangen (en e-mail, indien geconfigureerd).
+                </li>
                 <li>Controleer of de berichttekst en de locatielink correct zijn.</li>
             </ol>
-            <div class="tip-box">Als er iets mis is, kunt u de Magic Link opnieuw genereren met correcties en opnieuw verzenden — het toepassen van een nieuwe link overschrijft de vorige configuratie.</div>
+            <div class="tip-box">Als er iets mis is, kunt u de Magic Link opnieuw genereren met correcties en opnieuw
+                verzenden — het toepassen van een nieuwe link overschrijft de vorige configuratie.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
             <h2>Na de instelling: Wat de oudere ziet</h2>
-            <p>De app van de oudere opent direct naar het <strong>Paniek modus</strong>-scherm — een eenvoudige noodknop op volledig scherm. De interface is ontworpen om te gebruiken zonder iets te lezen:</p>
+            <p>De app van de oudere opent direct naar het <strong>Paniek modus</strong>-scherm — een eenvoudige noodknop
+                op volledig scherm. De interface is ontworpen om te gebruiken zonder iets te lezen:</p>
             <ul>
                 <li><strong>Grote rode SOS-knop</strong> in het midden — tik om een noodmelding te sturen</li>
                 <li><strong>Grote groene OK-knop</strong> eronder — tik om een "Ik ben OK"-bericht te sturen</li>
-                <li><strong>Veeg naar links</strong> om vooraf geconfigureerde berichtknoppen te zien (als berichten zijn ingesteld)</li>
+                <li><strong>Veeg naar links</strong> om vooraf geconfigureerde berichtknoppen te zien (als berichten
+                    zijn ingesteld)</li>
             </ul>
             <p>De oudere hoeft nooit naar Instellingen te gaan of te begrijpen hoe iets werkt.</p>
         </section>
@@ -408,8 +846,10 @@
             <h2>Meerdere ouderen instellen</h2>
             <p>U kunt TapAlert voor meerdere ouderen instellen zonder elke keer opnieuw te beginnen:</p>
             <ol>
-                <li>Na het genereren van de eerste Magic Link tikt u op <strong>"Nog een oudere instellen"</strong> in het voltooiingsdialoogvenster.</li>
-                <li>Het formulier wist de naam en contacten van de oudere, maar <strong>behoudt uw Twilio-inloggegevens, e-mailinstellingen en app-voorkeuren</strong>.</li>
+                <li>Na het genereren van de eerste Magic Link tikt u op <strong>"Nog een oudere instellen"</strong> in
+                    het voltooiingsdialoogvenster.</li>
+                <li>Het formulier wist de naam en contacten van de oudere, maar <strong>behoudt uw Twilio-inloggegevens,
+                        e-mailinstellingen en app-voorkeuren</strong>.</li>
                 <li>Wijzig alleen wat anders is (naam, contacten, berichten) voor de volgende oudere.</li>
                 <li>Genereer en deel een nieuwe Magic Link.</li>
             </ol>
@@ -422,35 +862,47 @@
             <h3>Fout "Validatie mislukt" bij het genereren van de link</h3>
             <ul>
                 <li>Controleer of alle verplichte velden zijn ingevuld (gemarkeerd met een rode foutmelding).</li>
-                <li>Als Twilio is ingeschakeld, zorg er dan voor dat Account SID, Auth Token en telefoonnummer correct zijn.</li>
-                <li>Als e-mail is ingeschakeld, verifieer het App-wachtwoord — normale accountwachtwoorden werken niet.</li>
+                <li>Als Twilio is ingeschakeld, zorg er dan voor dat Account SID, Auth Token en telefoonnummer correct
+                    zijn.</li>
+                <li>Als e-mail is ingeschakeld, verifieer het App-wachtwoord — normale accountwachtwoorden werken niet.
+                </li>
             </ul>
 
             <h3>De oudere heeft de test-SMS niet ontvangen</h3>
             <ul>
-                <li>Verifieer dat het Twilio-telefoonnummer actief is en geen proefnummer is dat naar niet-geverifieerde nummers stuurt.</li>
-                <li>Bij de gratis proef van Twilio kunt u alleen verzenden naar telefoonnummers die u heeft geverifieerd in de Twilio Console. Voeg de contacten van de oudere toe als geverifieerde nummers, of upgrade naar een betaald account.</li>
+                <li>Verifieer dat het Twilio-telefoonnummer actief is en geen proefnummer is dat naar niet-geverifieerde
+                    nummers stuurt.</li>
+                <li>Bij de gratis proef van Twilio kunt u alleen verzenden naar telefoonnummers die u heeft geverifieerd
+                    in de Twilio Console. Voeg de contacten van de oudere toe als geverifieerde nummers, of upgrade naar
+                    een betaald account.</li>
                 <li>Controleer of het telefoonnummerformaat correct is (landcode inbegrepen).</li>
             </ul>
 
             <h3>De Magic Link opent TapAlert niet</h3>
             <ul>
                 <li>Zorg ervoor dat TapAlert is geïnstalleerd op de telefoon van de oudere.</li>
-                <li>Op sommige Android-telefoons tikt u lang op de link en kiest u "Openen met TapAlert" in plaats van een browser.</li>
-                <li>Als er in plaats daarvan een browser opent, kopieer dan de volledige URL en plak deze opnieuw in de browser — bij de tweede poging biedt het systeem gewoonlijk TapAlert als optie.</li>
+                <li>Op sommige Android-telefoons tikt u lang op de link en kiest u "Openen met TapAlert" in plaats van
+                    een browser.</li>
+                <li>Als er in plaats daarvan een browser opent, kopieer dan de volledige URL en plak deze opnieuw in de
+                    browser — bij de tweede poging biedt het systeem gewoonlijk TapAlert als optie.</li>
             </ul>
 
             <h3>De oudere tikt per ongeluk op de verkeerde knop</h3>
             <ul>
-                <li>Vergroot de <strong>Waarschuwingsaftelling</strong> naar 10–15 seconden — dit geeft tijd om te annuleren voor het verzenden.</li>
-                <li>Of schakel over naar de <strong>Ingedrukt houden-modus</strong> (activatiemodus = ingedrukt houden) zodat de knop een bewuste lang indrukken vereist.</li>
-                <li>U kunt deze instellingen bijwerken door een nieuwe Magic Link te genereren met gecorrigeerde instellingen en deze naar de telefoon van de oudere te sturen.</li>
+                <li>Vergroot de <strong>Waarschuwingsaftelling</strong> naar 10–15 seconden — dit geeft tijd om te
+                    annuleren voor het verzenden.</li>
+                <li>Of schakel over naar de <strong>Ingedrukt houden-modus</strong> (activatiemodus = ingedrukt houden)
+                    zodat de knop een bewuste lang indrukken vereist.</li>
+                <li>U kunt deze instellingen bijwerken door een nieuwe Magic Link te genereren met gecorrigeerde
+                    instellingen en deze naar de telefoon van de oudere te sturen.</li>
             </ul>
 
             <h3>Twilio SMS werkt maar e-mail niet</h3>
             <ul>
-                <li>Meest voorkomende oorzaak: ontvangers hebben geen e-mailadressen opgeslagen. Controleer ontvangers in het Ontvangers-scherm van de app.</li>
-                <li>Zorg ervoor dat het App-wachtwoord correct is en niet is verlopen. App-wachtwoorden van Gmail en Outlook kunnen worden ingetrokken — genereer een nieuw als dat nodig is.</li>
+                <li>Meest voorkomende oorzaak: ontvangers hebben geen e-mailadressen opgeslagen. Controleer ontvangers
+                    in het Ontvangers-scherm van de app.</li>
+                <li>Zorg ervoor dat het App-wachtwoord correct is en niet is verlopen. App-wachtwoorden van Gmail en
+                    Outlook kunnen worden ingetrokken — genereer een nieuw als dat nodig is.</li>
             </ul>
         </section>
 
@@ -458,17 +910,22 @@
         <section class="guide-section" id="security">
             <h2>Beveiligings- en privacyopmerkingen</h2>
             <ul>
-                <li><strong>De Magic Link-payload</strong> is gecodeerd maar niet versleuteld. Iedereen die het onderschept kan de configuratie lezen, inclusief Twilio-inloggegevens. Deel het alleen rechtstreeks met de oudere.</li>
-                <li><strong>TapAlert heeft geen servers</strong> — de Magic Link wordt volledig verwerkt op het apparaat van de oudere. Er worden geen gegevens naar de TapAlert-service gestuurd.</li>
-                <li><strong>Twilio-inloggegevens in de link</strong> worden lokaal opgeslagen op het apparaat van de oudere in beveiligde (versleutelde) opslag zodra ze zijn toegepast.</li>
-                <li>Als u denkt dat een Magic Link is onderschept, <strong>roteer uw Twilio Auth Token</strong> in de Twilio Console onmiddellijk en genereer een nieuwe Magic Link.</li>
+                <li><strong>De Magic Link-payload</strong> is gecodeerd maar niet versleuteld. Iedereen die het
+                    onderschept kan de configuratie lezen, inclusief Twilio-inloggegevens. Deel het alleen rechtstreeks
+                    met de oudere.</li>
+                <li><strong>TapAlert heeft geen servers</strong> — de Magic Link wordt volledig verwerkt op het apparaat
+                    van de oudere. Er worden geen gegevens naar de TapAlert-service gestuurd.</li>
+                <li><strong>Twilio-inloggegevens in de link</strong> worden lokaal opgeslagen op het apparaat van de
+                    oudere in beveiligde (versleutelde) opslag zodra ze zijn toegepast.</li>
+                <li>Als u denkt dat een Magic Link is onderschept, <strong>roteer uw Twilio Auth Token</strong> in de
+                    Twilio Console onmiddellijk en genereer een nieuwe Magic Link.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
             <h2>Snelle naslagkaart (om af te drukken voor de oudere)</h2>
-<pre>┌─────────────────────────────────────────────┐
+            <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
 │  🔴  Big red button  →  Send EMERGENCY      │
@@ -495,7 +952,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Product</h3>
@@ -516,17 +974,20 @@
                 <div class="footer-section">
                     <h3>Steun</h3>
                     <ul>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate"
+                                    translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
                         <li><a href="troubleshooting.html">Problemen oplossen</a></li>
                         <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. |
+                    Gemaakt met ❤️ voor uw veiligheid</p>
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>

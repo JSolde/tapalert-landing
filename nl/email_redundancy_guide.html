@@ -370,48 +370,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
-        
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">NL</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
-            <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
-            <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
-            <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-            <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
-            <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
-            <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
-            <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
-            <a href="../nl/email_redundancy_guide.html" hreflang="nl" class="active">NL</a>
-            <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">NL</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
+                        <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
+                        <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
+                        <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
+                        <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
+                        <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
+                        <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
+                        <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
+                        <a href="../nl/email_redundancy_guide.html" hreflang="nl" class="active">NL</a>
+                        <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -423,39 +515,64 @@
 
         <section class="guide-section">
             <h2>💡 Wat is de e-mailredundantie Functie?</h2>
-            <p>Met E-mailredundantie in <span class="notranslate" translate="no">TapAlert</span> kan de app noodwaarschuwingen en rapportageberichten naar uw aangewezen contacten sturen via e-mail, naast of in plaats van sms.</p>
+            <p>Met E-mailredundantie in <span class="notranslate" translate="no">TapAlert</span> kan de app
+                noodwaarschuwingen en rapportageberichten naar uw aangewezen contacten sturen via e-mail, naast of in
+                plaats van sms.</p>
 
             <h2>🎯 Wat is het doel ervan?</h2>
-            <p>Het primaire doel van e-mailredundantie is ervoor te zorgen dat uw bericht wordt afgeleverd, zelfs als de primaire sms-kanalen uitvallen of niet beschikbaar zijn.</p>
+            <p>Het primaire doel van e-mailredundantie is ervoor te zorgen dat uw bericht wordt afgeleverd, zelfs als de
+                primaire sms-kanalen uitvallen of niet beschikbaar zijn.</p>
             <ul>
-                <li>✅ <strong>Secundair bezorgingspad:</strong> als je verbonden bent met wifi, maar geen mobiele service hebt (en bellen via wifi is uitgeschakeld of niet ondersteund), fungeert e-mailals eenperfect <span class="notranslate" translate="no">fallback</span>.</li>
-                <li>✅ <strong>Internationale reizen:</strong> wanneer u naar het buitenland reist waar sms extreem duur of onbetrouwbaar kan zijn, kunt u uitsluitend op Wi-Fi vertrouwen en gratis waarschuwingen via e-mail verzenden.</li>
-                <li>✅ <strong>Extra gemoedsrust:</strong> het tegelijkertijd verzenden van waarschuwingen via zowel sms als e-mail zorgt ervoor dat als een contactpersoon voor noodgevallen een sms mist, hij of zij de e-mailmelding nog steeds kan zien.</li>
+                <li>✅ <strong>Secundair bezorgingspad:</strong> als je verbonden bent met wifi, maar geen mobiele
+                    service hebt (en bellen via wifi is uitgeschakeld of niet ondersteund), fungeert e-mailals
+                    eenperfect <span class="notranslate" translate="no">fallback</span>.</li>
+                <li>✅ <strong>Internationale reizen:</strong> wanneer u naar het buitenland reist waar sms extreem duur
+                    of onbetrouwbaar kan zijn, kunt u uitsluitend op Wi-Fi vertrouwen en gratis waarschuwingen via
+                    e-mail verzenden.</li>
+                <li>✅ <strong>Extra gemoedsrust:</strong> het tegelijkertijd verzenden van waarschuwingen via zowel sms
+                    als e-mail zorgt ervoor dat als een contactpersoon voor noodgevallen een sms mist, hij of zij de
+                    e-mailmelding nog steeds kan zien.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ E-mailredundantie configureren</h2>
             <ol>
-                <li>Open de <span class="notranslate" translate="no">TapAlert</span> app en ga naar <strong>Instellingen</strong>.</li>
-                <li>Scroll naar het gedeelte <strong>E-mailwaarschuwingen</strong> en schakel <strong>E-mailwaarschuwingen inschakelen</strong> in.</li>
-                <li>Selecteer uw <strong>e-mailprovider</strong> uit de vooraf ingestelde knops (Gmail, Outlook, Yahoo, iCloud) om de SMTP-host en -poort automatisch in te vullen.</li>
+                <li>Open de <span class="notranslate" translate="no">TapAlert</span> app en ga naar
+                    <strong>Instellingen</strong>.
+                </li>
+                <li>Scroll naar het gedeelte <strong>E-mailwaarschuwingen</strong> en schakel
+                    <strong>E-mailwaarschuwingen inschakelen</strong> in.
+                </li>
+                <li>Selecteer uw <strong>e-mailprovider</strong> uit de vooraf ingestelde knops (Gmail, Outlook, Yahoo,
+                    iCloud) om de SMTP-host en -poort automatisch in te vullen.</li>
                 <li>Voer uw volledige <strong>e-mailadres</strong> in.</li>
-                <li>Voer uw <strong>App-wachtwoord</strong> in (zie het gedeelte hieronder over wat dit is en hoe u er een kunt verkrijgen).</li>
-                <li>Tik op <strong>'Instellingen opslaan'</strong> en gebruik de 'Test-e-mail'knop om er zeker van te zijn dat deze correct is geconfigureerd.</li>
+                <li>Voer uw <strong>App-wachtwoord</strong> in (zie het gedeelte hieronder over wat dit is en hoe u er
+                    een kunt verkrijgen).</li>
+                <li>Tik op <strong>'Instellingen opslaan'</strong> en gebruik de 'Test-e-mail'knop om er zeker van te
+                    zijn dat deze correct is geconfigureerd.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>🔑 Wat is een app-wachtwoord?</h2>
-            <p>Een <strong>app-wachtwoord</strong> is een willekeurig gegenereerde toegangscode die een app van derden (zoals <span class="notranslate" translate="no">TapAlert</span>) toestemming geeft om toegang te krijgen tot uw e-mail rekening om namens u berichten te verzenden.</p>
+            <p>Een <strong>app-wachtwoord</strong> is een willekeurig gegenereerde toegangscode die een app van derden
+                (zoals <span class="notranslate" translate="no">TapAlert</span>) toestemming geeft om toegang te krijgen
+                tot uw e-mail rekening om namens u berichten te verzenden.</p>
 
             <h3>Waarom heb ik er een nodig in plaats van mijn echte wachtwoord?</h3>
-            <p>Moderne e-mailproviders blokkeren standaardaanmeldingen met wachtwoorden om uw rekening tegen hackers te beschermen. Een app-wachtwoord omzeilt twee-factor-authenticatie (2FA) voor die specifieke app <em>zonder</em> waardoor de app uw daadwerkelijke rekening wachtwoord krijgt. Als u ooit de toegang van <span class="notranslate" translation="no">TapAlert</span> wilt intrekken, verwijdert u eenvoudigweg het app-wachtwoord in uw e-mailinstellingen en blijft uw hoofdwachtwoord rekening veilig en ongewijzigd.</p>
+            <p>Moderne e-mailproviders blokkeren standaardaanmeldingen met wachtwoorden om uw rekening tegen hackers te
+                beschermen. Een app-wachtwoord omzeilt twee-factor-authenticatie (2FA) voor die specifieke app
+                <em>zonder</em> waardoor de app uw daadwerkelijke rekening wachtwoord krijgt. Als u ooit de toegang van
+                <span class="notranslate" translation="no">TapAlert</span> wilt intrekken, verwijdert u eenvoudigweg het
+                app-wachtwoord in uw e-mailinstellingen en blijft uw hoofdwachtwoord rekening veilig en ongewijzigd.
+            </p>
 
             <div class="alert-box">
                 <h4>⚠️ Belangrijke opmerking</h4>
-                <p>Om een ​​app-wachtwoord te genereren, vereisen bijna alle e-mailproviders dat u eerst <strong>Twee-Factor Authenticatie (2FA)</strong> hebt ingeschakeld op uw rekening.</p>
+                <p>Om een ​​app-wachtwoord te genereren, vereisen bijna alle e-mailproviders dat u eerst
+                    <strong>Twee-Factor Authenticatie (2FA)</strong> hebt ingeschakeld op uw rekening.
+                </p>
             </div>
         </section>
 
@@ -465,46 +582,69 @@
 
             <h3>1. Gmail (Google-account)</h3>
             <ol>
-                <li>Ga naar uw <a href="https://myrekening.google.com/" target="_blank">Google-accountbeheerpagina</a> en log in.</li>
+                <li>Ga naar uw <a href="https://myrekening.google.com/" target="_blank">Google-accountbeheerpagina</a>
+                    en log in.</li>
                 <li>Klik in het linkernavigatiepaneel op <strong>Beveiliging</strong>.</li>
-                <li>Zorg ervoor dat in het gedeelte 'Hoe u inlogt bij Google' de <strong>Authenticatie in twee stappen</strong> is ingeschakeld <strong>Ingeschakeld</strong>. (Als het uit staat, moeten zet je het eerst aan).</li>
-                <li>Klik op <strong>Authenticatie in twee stappen</strong>. Scrol helemaal onderaan de pagina en klik op <strong>App-wachtwoorden</strong>.</li>
-                <li>In de vervolgkeuzelijst 'Selecteer app' kiest u <em>Anders (aangepaste naam)</em> en typ <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Zorg ervoor dat in het gedeelte 'Hoe u inlogt bij Google' de <strong>Authenticatie in twee
+                        stappen</strong> is ingeschakeld <strong>Ingeschakeld</strong>. (Als het uit staat, moeten zet
+                    je het eerst aan).</li>
+                <li>Klik op <strong>Authenticatie in twee stappen</strong>. Scrol helemaal onderaan de pagina en klik op
+                    <strong>App-wachtwoorden</strong>.
+                </li>
+                <li>In de vervolgkeuzelijst 'Selecteer app' kiest u <em>Anders (aangepaste naam)</em> en typ
+                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
+                </li>
                 <li>Klik op <strong>Genereren</strong>.</li>
-                <li>Er verschijnt een geel vak met een code van 16 tekens. Kopieer deze code en plak deze in het veld 'App-wachtwoord' in de app <span class="notranslate" translate="no">TapAlert</span> (u hoeft de spaties niet op te nemen).</li>
+                <li>Er verschijnt een geel vak met een code van 16 tekens. Kopieer deze code en plak deze in het veld
+                    'App-wachtwoord' in de app <span class="notranslate" translate="no">TapAlert</span> (u hoeft de
+                    spaties niet op te nemen).</li>
                 <li>Klik op <strong>Gereed</strong>.</li>
             </ol>
 
             <h3>2. Hotmail / Outlook (Microsoft-account)</h3>
             <ol>
-                <li>Ga naar de <a href="https://rekening.microsoft.com/security" target="_blank">Microsoft Account Security-pagina</a> en log in.</li>
+                <li>Ga naar de <a href="https://rekening.microsoft.com/security" target="_blank">Microsoft Account
+                        Security-pagina</a> en log in.</li>
                 <li>Klik op <strong>Geavanceerde beveiligingsopties</strong>.</li>
-                <li>Zorg ervoor dat in het gedeelte 'Aanvullende beveiliging' <strong>Tweestapsverificatie</strong> is ingeschakeld <strong>Ingeschakeld</strong>.</li>
+                <li>Zorg ervoor dat in het gedeelte 'Aanvullende beveiliging' <strong>Tweestapsverificatie</strong> is
+                    ingeschakeld <strong>Ingeschakeld</strong>.</li>
                 <li>Scroll omlaag naar het gedeelte <strong>App-wachtwoorden</strong>.</li>
                 <li>Klik op <strong>Een nieuw app-wachtwoord maken</strong>.</li>
                 <li>Er verschijnt een nieuw scherm met uw unieke app-wachtwoord.</li>
-                <li>Kopieer dit wachtwoord en plak het in <span class="notranslate" translate="no">TapAlert</span> en klik vervolgens op <strong>Gereed</strong>.</li>
+                <li>Kopieer dit wachtwoord en plak het in <span class="notranslate" translate="no">TapAlert</span> en
+                    klik vervolgens op <strong>Gereed</strong>.</li>
             </ol>
 
             <h3>3. Yahoo-mail</h3>
             <ol>
-                <li>Ga naar uw <a href="https://login.yahoo.com/rekening/security" target="_blank">Yahoo Accountbeveiligingspagina</a> en log in.</li>
-                <li>Scrol omlaag naar de onderkant van de pagina en klik op <strong>App-wachtwoorden genereren en beheren</strong>.</li>
-                <li>Er verschijnt een modaal venster. Voer <strong><span class="notranslate" translate="no">TapAlert</span></strong> in als de naam van de app.</li>
+                <li>Ga naar uw <a href="https://login.yahoo.com/rekening/security" target="_blank">Yahoo
+                        Accountbeveiligingspagina</a> en log in.</li>
+                <li>Scrol omlaag naar de onderkant van de pagina en klik op <strong>App-wachtwoorden genereren en
+                        beheren</strong>.</li>
+                <li>Er verschijnt een modaal venster. Voer <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong> in als de naam van de app.</li>
                 <li>Klik op <strong>Wachtwoord genereren</strong>.</li>
-                <li>Kopieer het wachtwoord van 16 tekens dat op het scherm wordt weergegeven en plak het in <span class="notranslate" translate="no">TapAlert</span> (laat eventuele spaties weg).</li>
+                <li>Kopieer het wachtwoord van 16 tekens dat op het scherm wordt weergegeven en plak het in <span
+                        class="notranslate" translate="no">TapAlert</span> (laat eventuele spaties weg).</li>
                 <li>Klik op <strong>Gereed</strong>.</li>
             </ol>
 
             <h3>4. iCloud (Apple ID)</h3>
             <ol>
-                <li>Ga naar <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> en log in met uw Apple ID.</li>
-                <li>Klik in het gedeelte <strong>Aanmelden en beveiliging</strong> op <strong>App-specifieke wachtwoorden</strong>.</li>
-                <li>Klik op <strong>Een app-specifiek wachtwoord genereren</strong> of op <strong>Toevoegen (+)</strong>knop.</li>
-                <li>Voer <strong><span class="notranslate" translate="no">TapAlert</span></strong> in wanneer u om een ​​app-naam wordt gevraagd en klik op Maken.</li>
+                <li>Ga naar <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> en log in met uw
+                    Apple ID.</li>
+                <li>Klik in het gedeelte <strong>Aanmelden en beveiliging</strong> op <strong>App-specifieke
+                        wachtwoorden</strong>.</li>
+                <li>Klik op <strong>Een app-specifiek wachtwoord genereren</strong> of op <strong>Toevoegen
+                        (+)</strong>knop.</li>
+                <li>Voer <strong><span class="notranslate" translate="no">TapAlert</span></strong> in wanneer u om een
+                    ​​app-naam wordt gevraagd en klik op Maken.</li>
                 <li>Mogelijk wordt u ter bevestiging gevraagd uw Apple ID-wachtwoord opnieuw in te voeren.</li>
-                <li>Er wordt een uniek app-specifiek wachtwoord gegenereerd en weergegeven (meestal in het formaat <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
-                <li>Kopieer dit volledige wachtwoord en plak het in <span class="notranslate" translate="no">TapAlert</span> en klik vervolgens op <strong>Gereed</strong>.</li>
+                <li>Er wordt een uniek app-specifiek wachtwoord gegenereerd en weergegeven (meestal in het formaat
+                    <code>xxxx-xxxx-xxxx-xxxx</code>).
+                </li>
+                <li>Kopieer dit volledige wachtwoord en plak het in <span class="notranslate"
+                        translate="no">TapAlert</span> en klik vervolgens op <strong>Gereed</strong>.</li>
             </ol>
         </section>
 
@@ -516,7 +656,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -541,7 +682,8 @@
                     <h3>Steun</h3>
                     <ul>
                         <li><a href="#">Veelgestelde vragen</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate"
+                                    translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
                         <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
                         <li><a href="troubleshooting.html">Problemen oplossen</a></li>
                         <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
@@ -550,7 +692,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. |
+                    Gemaakt met ❤️ voor uw veiligheid</p>
             </div>
         </div>
     </footer>

@@ -443,48 +443,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Back to Home</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="ca/quickstart_android.html" hreflang="ca">CA</a>
-            <a href="de/quickstart_android.html" hreflang="de">DE</a>
-            <a href="quickstart_android.html" hreflang="en" class="active">EN</a>
-            <a href="es/quickstart_android.html" hreflang="es">ES</a>
-            <a href="eu/quickstart_android.html" hreflang="eu">EU</a>
-            <a href="fr/quickstart_android.html" hreflang="fr">FR</a>
-            <a href="gl/quickstart_android.html" hreflang="gl">GL</a>
-            <a href="it/quickstart_android.html" hreflang="it">IT</a>
-            <a href="nl/quickstart_android.html" hreflang="nl">NL</a>
-            <a href="pt/quickstart_android.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">EN</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="ca/quickstart_android.html" hreflang="ca">CA</a>
+                        <a href="de/quickstart_android.html" hreflang="de">DE</a>
+                        <a href="quickstart_android.html" hreflang="en" class="active">EN</a>
+                        <a href="es/quickstart_android.html" hreflang="es">ES</a>
+                        <a href="eu/quickstart_android.html" hreflang="eu">EU</a>
+                        <a href="fr/quickstart_android.html" hreflang="fr">FR</a>
+                        <a href="gl/quickstart_android.html" hreflang="gl">GL</a>
+                        <a href="it/quickstart_android.html" hreflang="it">IT</a>
+                        <a href="nl/quickstart_android.html" hreflang="nl">NL</a>
+                        <a href="pt/quickstart_android.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -501,7 +593,9 @@
                         <div class="step-icon">✅</div>
                         <h3>1. Grant Essential Permissions</h3>
                     </div>
-                    <p>During the application onboarding, accept all permissions (SMS, Location, Contacts). If skipped, they will be requested when needed later, but we recommend accepting them now for a seamless experience.</p>
+                    <p>During the application onboarding, accept all permissions (SMS, Location, Contacts). If skipped,
+                        they will be requested when needed later, but we recommend accepting them now for a seamless
+                        experience.</p>
                 </div>
 
                 <div class="step-card">
@@ -514,7 +608,8 @@
                         <li><strong>Add recipients</strong> to your emergency alert list.</li>
                         <li><strong>Add the app widget</strong> to your home screen for instant access.</li>
                     </ul>
-                    <p style="margin-top: 10px;"><small><em>Note: These can also be managed in Settings after onboarding.</em></small></p>
+                    <p style="margin-top: 10px;"><small><em>Note: These can also be managed in Settings after
+                                onboarding.</em></small></p>
                 </div>
 
                 <div class="step-card">
@@ -522,8 +617,14 @@
                         <div class="step-icon">📡</div>
                         <h3>3. Connectivity & <span class="notranslate" translate="no">fallback</span>s</h3>
                     </div>
-                    <p>Verify if <strong>Wifi calls</strong> are enabled on your phone. If your carrier doesn't support it, consider using a <strong><span class="notranslate" translate="no">Twilio</span> account</strong> as a <span class="notranslate" translate="no">fallback</span> for Wifi-only situations. <span class="notranslate" translate="no">Twilio</span> is free to start and provides reliable SMS delivery without a cell signal.</p>
-                    <p style="margin-top: 10px;">You can also enable <strong>Email redundancy</strong> in <span class="notranslate" translate="no">TapAlert</span> to ensure your loved ones are notified via multiple channels.</p>
+                    <p>Verify if <strong>Wifi calls</strong> are enabled on your phone. If your carrier doesn't support
+                        it, consider using a <strong><span class="notranslate" translate="no">Twilio</span>
+                            account</strong> as a <span class="notranslate" translate="no">fallback</span> for Wifi-only
+                        situations. <span class="notranslate" translate="no">Twilio</span> is free to start and provides
+                        reliable SMS delivery without a cell signal.</p>
+                    <p style="margin-top: 10px;">You can also enable <strong>Email redundancy</strong> in <span
+                            class="notranslate" translate="no">TapAlert</span> to ensure your loved ones are notified
+                        via multiple channels.</p>
                 </div>
 
                 <div class="step-card">
@@ -531,7 +632,9 @@
                         <div class="step-icon">🧪</div>
                         <h3>4. Perform a Test Alert</h3>
                     </div>
-                    <p>Test your setup by sending an <strong>‘I’m OK’</strong> message. Tap the button once (or hold for 5s if configured). A countdown will appear, giving you time to cancel or send immediately. Letting it expire sends the alert automatically!</p>
+                    <p>Test your setup by sending an <strong>‘I’m OK’</strong> message. Tap the button once (or hold for
+                        5s if configured). A countdown will appear, giving you time to cancel or send immediately.
+                        Letting it expire sends the alert automatically!</p>
                 </div>
 
                 <div class="step-card">
@@ -539,7 +642,9 @@
                         <div class="step-icon">↔️</div>
                         <h3>5. Explore Navigation</h3>
                     </div>
-                    <p>Swipe <strong>Left</strong> to access your preconfigured custom messages for specific situations. Swipe <strong>Right</strong> to activate the <strong>Check-in Timer</strong> (Dead Man's Switch), which auto-alerts if you don't check in by a certain time.</p>
+                    <p>Swipe <strong>Left</strong> to access your preconfigured custom messages for specific situations.
+                        Swipe <strong>Right</strong> to activate the <strong>Check-in Timer</strong> (Dead Man's
+                        Switch), which auto-alerts if you don't check in by a certain time.</p>
                 </div>
 
                 <div class="step-card">
@@ -547,7 +652,9 @@
                         <div class="step-icon">🤝</div>
                         <h3>6. Setup for Others</h3>
                     </div>
-                    <p>If you’re setting this phone up for someone else (like a senior relative), take a moment to preconfigure their custom alerts (Swipe Left) so they have the most relevant messages ready at their fingertips.</p>
+                    <p>If you’re setting this phone up for someone else (like a senior relative), take a moment to
+                        preconfigure their custom alerts (Swipe Left) so they have the most relevant messages ready at
+                        their fingertips.</p>
                 </div>
             </div>
         </section>
@@ -586,7 +693,8 @@
                     <h3>Support</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by Step Guides</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by
+                                Step Guides</a></li>
                         <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
                         <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
@@ -595,7 +703,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made
+                    with ❤️ for your safety</p>
             </div>
         </div>
     </footer>

@@ -17,56 +17,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👨‍👩‍👧 Guide de configuration assistée par la famille - TapAlert</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn { padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
-        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-        .guide-header { background: white; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .guide-nav { display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { display: flex; align-items: center; font-weight: 800; font-size: 1.5rem; color: #333; text-decoration: none; }
-        .guide-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .guide-title { font-size: 2.2rem; color: #2c3e50; margin-bottom: 10px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .guide-subtitle { text-align: center; color: #667eea; font-size: 1.05rem; margin-bottom: 30px; }
-        .guide-section { margin-bottom: 40px; }
-        h2 { font-size: 1.8rem; color: #2c3e50; margin-top: 40px; margin-bottom: 20px; border-left: 5px solid #667eea; padding-left: 15px; }
-        h3 { font-size: 1.3rem; color: #4a5568; margin-top: 25px; margin-bottom: 12px; }
-        p { margin-bottom: 15px; color: #4a5568; }
-        ul, ol { margin-bottom: 20px; padding-left: 25px; color: #4a5568; }
-        li { margin-bottom: 8px; }
-        a { color: #667eea; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .tip-box { background-color: #f0f4ff; border-left: 4px solid #667eea; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .tip-box strong { color: #2c3e50; }
-        .warn-box { background-color: #fffaf0; border-left: 4px solid #ed8936; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .warn-box strong { color: #c05621; }
-        pre { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin: 20px 0; line-height: 1.5; }
-        code { background: #eef1f8; color: #667eea; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-        pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
-        .checklist { list-style: none; padding-left: 5px; }
-        .checklist li::before { content: "☐ "; color: #667eea; font-size: 1.1em; }
-        footer { background: #1a1a1a; color: white; padding: 60px 20px 30px; margin-top: 60px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h3 { margin-bottom: 20px; color: #667eea; }
-        .footer-section ul { list-style: none; padding-left: 0; }
-        .footer-section ul li { padding: 8px 0; }
-        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s ease; }
-        .footer-section a:hover { color: white; text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; }
-        @media (max-width: 768px) {
-            body { font-size: 14px; } .brand-logo { font-size: 1.2rem; } .btn { padding: 8px 16px; font-size: 0.85rem; }
-            .guide-container { padding: 20px; margin: 20px; } .guide-title { font-size: 1.7rem; }
-            h2 { font-size: 1.4rem; margin-top: 30px; padding-left: 12px; } h3 { font-size: 1.15rem; }
-            p, li { font-size: 0.9rem; } pre { font-size: 0.75rem; padding: 14px; }
-            footer { padding: 40px 15px 20px; margin-top: 40px; } .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-subtitle {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tip-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .tip-box strong {
+            color: #2c3e50;
+        }
+
+        .warn-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .warn-box strong {
+            color: #c05621;
+        }
+
+        pre {
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #eef1f8;
+            color: #667eea;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .checklist li::before {
+            content: "☐ ";
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            pre {
+                font-size: 0.75rem;
+                padding: 14px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
         @media (max-width: 430px) {
-            body { font-size: 13px; } .btn { padding: 7px 14px; font-size: 0.8rem; }
-            .guide-container { padding: 15px; margin: 12px; } .guide-title { font-size: 1.45rem; }
-            h2 { font-size: 1.2rem; padding-left: 10px; border-left-width: 4px; } h3 { font-size: 1.05rem; }
-            pre { font-size: 0.7rem; padding: 10px; } footer { padding: 30px 12px 15px; margin-top: 30px; }
-            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            body {
+                font-size: 13px;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.45rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            pre {
+                font-size: 0.7rem;
+                padding: 10px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -76,48 +371,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Retour à la maison</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">FR</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
-            <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
-            <a href="../family_assisted_setup.html" hreflang="en">EN</a>
-            <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
-            <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
-            <a href="../fr/family_assisted_setup.html" hreflang="fr" class="active">FR</a>
-            <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
-            <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
-            <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
-            <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">FR</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
+                        <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
+                        <a href="../family_assisted_setup.html" hreflang="en">EN</a>
+                        <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
+                        <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
+                        <a href="../fr/family_assisted_setup.html" hreflang="fr" class="active">FR</a>
+                        <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
+                        <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
+                        <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
+                        <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -127,13 +514,19 @@
         <h1 class="guide-title">👨‍👩‍👧 Guide de configuration assistée par la famille</h1>
         <p class="guide-subtitle">Configurer TapAlert pour un senior avec Magic Link</p>
 
-        <p>Ce guide est destiné aux membres de la famille, aux aidants et à toute personne aidant une personne âgée ou peu familière avec la technologie à configurer TapAlert complètement. Grâce à la fonction Magic Link, vous pouvez configurer l'application entière depuis votre propre appareil et remettre une configuration prête à l'emploi en un seul tap.</p>
+        <p>Ce guide est destiné aux membres de la famille, aux aidants et à toute personne aidant une personne âgée ou
+            peu familière avec la technologie à configurer TapAlert complètement. Grâce à la fonction Magic Link, vous
+            pouvez configurer l'application entière depuis votre propre appareil et remettre une configuration prête à
+            l'emploi en un seul tap.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
             <h2>Aperçu : Comment fonctionne Magic Link</h2>
-            <p>La fonction Magic Link permet à une personne technophile ("l'administrateur") d'effectuer tout le travail de configuration, puis de le partager sous forme de lien spécial. Lorsque le senior appuie sur ce lien sur son téléphone, TapAlert applique automatiquement la configuration complète — contacts, messages, paramètres et tout le reste — en une seule étape.</p>
-<pre>Admin's phone                         Senior's phone
+            <p>La fonction Magic Link permet à une personne technophile ("l'administrateur") d'effectuer tout le travail
+                de configuration, puis de le partager sous forme de lien spécial. Lorsque le senior appuie sur ce lien
+                sur son téléphone, TapAlert applique automatiquement la configuration complète — contacts, messages,
+                paramètres et tout le reste — en une seule étape.</p>
+            <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
 2. Fill in all configuration
@@ -142,30 +535,38 @@
                                        5. Senior taps the link
                                        6. TapAlert opens and asks to confirm
                                        7. Senior taps "Apply" → app is ready!</pre>
-            <p><strong>Le senior n'a jamais besoin de taper quoi que ce soit ni de naviguer dans les paramètres.</strong></p>
+            <p><strong>Le senior n'a jamais besoin de taper quoi que ce soit ni de naviguer dans les
+                    paramètres.</strong></p>
         </section>
 
         <!-- Before You Begin -->
         <section class="guide-section" id="before-you-begin">
             <h2>Avant de commencer : Ce dont vous aurez besoin</h2>
-            <p>Selon la façon dont vous souhaitez configurer la distribution des alertes, rassemblez ces éléments avant de commencer :</p>
+            <p>Selon la façon dont vous souhaitez configurer la distribution des alertes, rassemblez ces éléments avant
+                de commencer :</p>
 
             <h3>Toujours requis</h3>
             <ul class="checklist">
                 <li>Le prénom du senior (utilisé pour personnaliser les messages d'alerte)</li>
-                <li>Les numéros de téléphone des personnes qui doivent recevoir les alertes (famille, voisins, etc.)</li>
+                <li>Les numéros de téléphone des personnes qui doivent recevoir les alertes (famille, voisins, etc.)
+                </li>
             </ul>
 
             <h3>Optionnel : Pour les SMS automatisés via Twilio</h3>
-            <p>Si vous souhaitez que les alertes soient envoyées automatiquement sans qu'aucune application sur le téléphone du senior n'ait besoin d'être ouverte :</p>
+            <p>Si vous souhaitez que les alertes soient envoyées automatiquement sans qu'aucune application sur le
+                téléphone du senior n'ait besoin d'être ouverte :</p>
             <ul class="checklist">
                 <li>Un compte Twilio (essai gratuit disponible sur twilio.com)</li>
                 <li>SID de compte Twilio (depuis le tableau de bord de la console Twilio)</li>
                 <li>Auth Token Twilio (depuis le tableau de bord de la console Twilio)</li>
-                <li>Un numéro de téléphone Twilio, OU un nom d'expéditeur alphanumérique (p. ex., "TapAlert") si votre pays le permet</li>
-                <li>Votre propre numéro de téléphone — l'application enverra un SMS de test pour vérifier que Twilio fonctionne</li>
+                <li>Un numéro de téléphone Twilio, OU un nom d'expéditeur alphanumérique (p. ex., "TapAlert") si votre
+                    pays le permet</li>
+                <li>Votre propre numéro de téléphone — l'application enverra un SMS de test pour vérifier que Twilio
+                    fonctionne</li>
             </ul>
-            <div class="warn-box">Note pour les utilisateurs iOS : Sur iPhone, les SMS automatisés nécessitent Twilio. Sans lui, l'application ouvre l'app Messages native et le senior appuie manuellement sur Envoyer. C'est toujours fiable mais nécessite un tap supplémentaire.</div>
+            <div class="warn-box">Note pour les utilisateurs iOS : Sur iPhone, les SMS automatisés nécessitent Twilio.
+                Sans lui, l'application ouvre l'app Messages native et le senior appuie manuellement sur Envoyer. C'est
+                toujours fiable mais nécessite un tap supplémentaire.</div>
 
             <h3>Optionnel : Pour la redondance par e-mail</h3>
             <p>Si vous souhaitez que les alertes soient également envoyées par e-mail en plus des SMS :</p>
@@ -179,12 +580,16 @@
         <section class="guide-section" id="step-1">
             <h2>Étape 1 : Ouvrir la configuration administrateur sur votre téléphone</h2>
             <ol>
-                <li>Installez TapAlert sur votre propre téléphone (vous avez besoin de l'application pour générer le Magic Link).</li>
+                <li>Installez TapAlert sur votre propre téléphone (vous avez besoin de l'application pour générer le
+                    Magic Link).</li>
                 <li>Ouvrez TapAlert.</li>
-                <li>Si vous n'avez pas encore terminé l'intégration, parcourez les écrans d'autorisations. Sur le dernier écran, appuyez sur « Configurer pour quelqu'un d'autre ».</li>
-                <li>Si TapAlert est déjà installé et configuré, allez dans Paramètres → faites défiler jusqu'en bas → appuyez sur « Configuration admin / Magic Link ».</li>
+                <li>Si vous n'avez pas encore terminé l'intégration, parcourez les écrans d'autorisations. Sur le
+                    dernier écran, appuyez sur « Configurer pour quelqu'un d'autre ».</li>
+                <li>Si TapAlert est déjà installé et configuré, allez dans Paramètres → faites défiler jusqu'en bas →
+                    appuyez sur « Configuration admin / Magic Link ».</li>
             </ol>
-            <p>L'écran de configuration administrateur s'ouvrira. Faites défiler les sections — vous les remplirez dans les étapes suivantes.</p>
+            <p>L'écran de configuration administrateur s'ouvrira. Faites défiler les sections — vous les remplirez dans
+                les étapes suivantes.</p>
         </section>
 
         <!-- Step 2 -->
@@ -192,9 +597,11 @@
             <h2>Étape 2 : Saisir le prénom du senior</h2>
             <p>Dans la section « Informations utilisateur » en haut de l'écran :</p>
             <ul>
-                <li>Prénom du senior — Tapez son prénom (ex. : «Maria»). Ce nom apparaît dans les messages d'alerte pour que les destinataires sachent qui l'a envoyée.</li>
+                <li>Prénom du senior — Tapez son prénom (ex. : «Maria»). Ce nom apparaît dans les messages d'alerte pour
+                    que les destinataires sachent qui l'a envoyée.</li>
             </ul>
-            <div class="tip-box">Exemple : Si vous tapez «Maria», les destinataires recevront : «ALERTE de Maria : J'ai besoin d'aide. Localisation : …»</div>
+            <div class="tip-box">Exemple : Si vous tapez «Maria», les destinataires recevront : «ALERTE de Maria : J'ai
+                besoin d'aide. Localisation : …»</div>
         </section>
 
         <!-- Step 3 -->
@@ -204,46 +611,59 @@
             <h3>Option A : Sans Twilio (la plus simple)</h3>
             <p>Laissez le bouton « Activer les SMS Twilio » désactivé.</p>
             <ul>
-                <li>Sur Android, l'application envoie les SMS directement via la carte SIM du téléphone — pas de Twilio nécessaire.</li>
-                <li>Sur iPhone, l'application ouvre l'app Messages pré-remplie et le senior appuie sur Envoyer une fois. Simple mais nécessite une étape supplémentaire.</li>
+                <li>Sur Android, l'application envoie les SMS directement via la carte SIM du téléphone — pas de Twilio
+                    nécessaire.</li>
+                <li>Sur iPhone, l'application ouvre l'app Messages pré-remplie et le senior appuie sur Envoyer une fois.
+                    Simple mais nécessite une étape supplémentaire.</li>
             </ul>
 
             <h3>Option B : Avec Twilio (recommandé pour une automatisation complète)</h3>
             <ol>
                 <li>Activez le bouton « Activer les SMS Twilio ».</li>
                 <li>Entrez le SID de compte depuis votre console Twilio (commence par « AC… »).</li>
-                <li>Entrez l'Auth Token depuis votre console Twilio (appuyez sur l'icône oeil pour afficher/masquer).</li>
+                <li>Entrez l'Auth Token depuis votre console Twilio (appuyez sur l'icône oeil pour afficher/masquer).
+                </li>
                 <li>Choisissez comment identifier l'expéditeur :
                     <ul>
-                        <li>Numéro Twilio — Entrez le numéro Twilio (ex. +12015551234). Sélectionnez d'abord le drapeau du pays.</li>
-                        <li>Nom d'expéditeur — Activez «Utiliser un nom alphanumérique» et tapez un nom court (ex. «TapAlert»). Remarque : non pris en charge dans tous les pays (ex. USA).</li>
+                        <li>Numéro Twilio — Entrez le numéro Twilio (ex. +12015551234). Sélectionnez d'abord le drapeau
+                            du pays.</li>
+                        <li>Nom d'expéditeur — Activez «Utiliser un nom alphanumérique» et tapez un nom court (ex.
+                            «TapAlert»). Remarque : non pris en charge dans tous les pays (ex. USA).</li>
                     </ul>
                 </li>
-                <li>Votre numéro — Entrez votre propre numéro. L'application envoie un SMS de test pour confirmer que Twilio fonctionne avant de générer le lien.</li>
+                <li>Votre numéro — Entrez votre propre numéro. L'application envoie un SMS de test pour confirmer que
+                    Twilio fonctionne avant de générer le lien.</li>
             </ol>
-            <div class="tip-box">Où trouver les identifiants Twilio : Connectez-vous sur console.twilio.com. L'Account SID et l'Auth Token sont sur la page principale du tableau de bord. Le numéro est sous Numéros de téléphone → Gérer → Numéros actifs.</div>
+            <div class="tip-box">Où trouver les identifiants Twilio : Connectez-vous sur console.twilio.com. L'Account
+                SID et l'Auth Token sont sur la page principale du tableau de bord. Le numéro est sous Numéros de
+                téléphone → Gérer → Numéros actifs.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
             <h2>Étape 4 : Configurer les alertes par e-mail (optionnel)</h2>
-            <p>Les alertes e-mail envoient une copie de chaque alerte aux destinataires qui ont une adresse e-mail. C'est une sauvegarde utile si les SMS échouent.</p>
+            <p>Les alertes e-mail envoient une copie de chaque alerte aux destinataires qui ont une adresse e-mail.
+                C'est une sauvegarde utile si les SMS échouent.</p>
             <ol>
                 <li>Activez le bouton « Activer la redondance par e-mail ».</li>
-                <li>Sélectionnez votre fournisseur d'e-mail : Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (paramètres auto-remplis) ou SMTP personnalisé.</li>
-                <li>Entrez l'adresse e-mail à utiliser pour l'envoi — idéalement une adresse dédiée, pas la boîte personnelle du senior.</li>
+                <li>Sélectionnez votre fournisseur d'e-mail : Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail
+                    (paramètres auto-remplis) ou SMTP personnalisé.</li>
+                <li>Entrez l'adresse e-mail à utiliser pour l'envoi — idéalement une adresse dédiée, pas la boîte
+                    personnelle du senior.</li>
                 <li>Entrez le mot de passe d'application pour ce compte.</li>
             </ol>
 
             <h3>Comment obtenir un mot de passe d'application</h3>
-            <p>Les mots de passe e-mail ordinaires ne fonctionnent pas. Les fournisseurs d'e-mail exigent des mots de passe d'application pour les apps se connectant via SMTP.</p>
+            <p>Les mots de passe e-mail ordinaires ne fonctionnent pas. Les fournisseurs d'e-mail exigent des mots de
+                passe d'application pour les apps se connectant via SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
                 <li>Allez sur myaccount.google.com → Sécurité</li>
                 <li>Activez la validation en 2 étapes si ce n'est pas déjà fait</li>
                 <li>Retournez dans Sécurité → « Mots de passe des applications »</li>
-                <li>Créez un nouveau mot de passe d'application, nommez-le « TapAlert », copiez le code à 16 caractères</li>
+                <li>Créez un nouveau mot de passe d'application, nommez-le « TapAlert », copiez le code à 16 caractères
+                </li>
             </ol>
 
             <h3>Outlook / Hotmail</h3>
@@ -271,24 +691,32 @@
             <p>Dans la section « Contacts d'urgence », pour chaque personne devant recevoir les alertes du senior :</p>
             <ol>
                 <li>Entrez leur nom dans le champ Nom (ex. : « Carlos » ou « Dr. García »).</li>
-                <li>Entrez leur numéro de téléphone — sélectionnez d'abord le bon drapeau de pays, puis tapez le numéro.</li>
+                <li>Entrez leur numéro de téléphone — sélectionnez d'abord le bon drapeau de pays, puis tapez le numéro.
+                </li>
                 <li>Appuyez sur le bouton + bleu pour les ajouter à la liste.</li>
-                <li>Répétez pour chaque contact. Vous pouvez en ajouter autant que nécessaire (jusqu'à 50 avec premium ; la version gratuite en prend en charge 1).</li>
+                <li>Répétez pour chaque contact. Vous pouvez en ajouter autant que nécessaire (jusqu'à 50 avec premium ;
+                    la version gratuite en prend en charge 1).</li>
             </ol>
             <p>Pour supprimer un contact, appuyez sur l'icône de corbeille rouge à côté de son nom.</p>
-            <div class="tip-box">Conseil : Ajoutez au moins 2 contacts pour plus de redondance — au cas où l'une des personnes est injoignable.</div>
+            <div class="tip-box">Conseil : Ajoutez au moins 2 contacts pour plus de redondance — au cas où l'une des
+                personnes est injoignable.</div>
         </section>
 
         <!-- Step 6 -->
         <section class="guide-section" id="step-6">
             <h2>Étape 6 : Rédiger les messages d'alerte préconfigurés</h2>
-            <p>Dans la section <strong>"Messages d'alerte"</strong>, vous pouvez écrire jusqu'à 3 messages prêts à l'emploi :</p>
+            <p>Dans la section <strong>"Messages d'alerte"</strong>, vous pouvez écrire jusqu'à 3 messages prêts à
+                l'emploi :</p>
             <ul>
-                <li><strong>Message 1</strong> — Le message d'urgence principal (ex. : "J'ai besoin d'aide, appelez-moi")</li>
-                <li><strong>Message 2</strong> — Un message "Je vais bien" ou de confirmation (ex. : "Tout va bien, ne vous inquiétez pas")</li>
-                <li><strong>Message 3</strong> — Un autre message personnalisé (ex. : "Je suis tombé(e), venez s'il vous plaît")</li>
+                <li><strong>Message 1</strong> — Le message d'urgence principal (ex. : "J'ai besoin d'aide,
+                    appelez-moi")</li>
+                <li><strong>Message 2</strong> — Un message "Je vais bien" ou de confirmation (ex. : "Tout va bien, ne
+                    vous inquiétez pas")</li>
+                <li><strong>Message 3</strong> — Un autre message personnalisé (ex. : "Je suis tombé(e), venez s'il vous
+                    plaît")</li>
             </ul>
-            <p>Ces messages apparaîtront sous forme de grands boutons sur l'écran principal de la personne âgée, lui permettant d'envoyer une alerte en un seul appui, sans rien taper.</p>
+            <p>Ces messages apparaîtront sous forme de grands boutons sur l'écran principal de la personne âgée, lui
+                permettant d'envoyer une alerte en un seul appui, sans rien taper.</p>
             <div class="tip-box">
                 <strong>Conseils pour de bons messages :</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
@@ -302,32 +730,40 @@
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
             <h2>Étape 7 : Choisir les paramètres de l'application</h2>
-            <p>Dans la section <strong>"Paramètres de l'application"</strong>, configurez le comportement de l'application pour la personne âgée :</p>
+            <p>Dans la section <strong>"Paramètres de l'application"</strong>, configurez le comportement de
+                l'application pour la personne âgée :</p>
 
             <h3>Compte à rebours d'alerte</h3>
-            <p>Combien de secondes attendre après que la personne âgée appuie sur le bouton d'alerte avant l'envoi réel.</p>
+            <p>Combien de secondes attendre après que la personne âgée appuie sur le bouton d'alerte avant l'envoi réel.
+            </p>
             <ul>
                 <li><strong>0 seconde</strong> — envoi immédiat, aucune annulation possible</li>
-                <li><strong>3–10 secondes</strong> — recommandé pour la plupart des seniors ; laisse le temps d'annuler en cas d'appui accidentel</li>
+                <li><strong>3–10 secondes</strong> — recommandé pour la plupart des seniors ; laisse le temps d'annuler
+                    en cas d'appui accidentel</li>
                 <li><strong>15–30 secondes</strong> — si la personne âgée a tendance à appuyer accidentellement</li>
             </ul>
 
             <h3>Mode d'activation</h3>
             <ul>
-                <li><strong>Appui simple</strong> — appuyez une fois pour démarrer le compte à rebours (plus facile pour les seniors à mobilité réduite)</li>
-                <li><strong>Maintenir</strong> — maintenez le bouton enfoncé pour confirmer (évite les envois accidentels)</li>
+                <li><strong>Appui simple</strong> — appuyez une fois pour démarrer le compte à rebours (plus facile pour
+                    les seniors à mobilité réduite)</li>
+                <li><strong>Maintenir</strong> — maintenez le bouton enfoncé pour confirmer (évite les envois
+                    accidentels)</li>
             </ul>
 
             <h3>Apparence</h3>
             <ul>
                 <li><strong>Par défaut du système</strong> — suit le paramètre mode clair/sombre du téléphone</li>
                 <li><strong>Mode clair</strong> — fond toujours clair</li>
-                <li><strong>Mode sombre</strong> — fond toujours sombre (plus reposant pour les yeux en faible luminosité)</li>
+                <li><strong>Mode sombre</strong> — fond toujours sombre (plus reposant pour les yeux en faible
+                    luminosité)</li>
             </ul>
 
             <h3>Langue</h3>
-            <p>Sélectionnez la langue de l'interface de l'application. Disponible : English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
-            <div class="tip-box">Conseil : Définissez la langue pour qu'elle corresponde à celle parlée par la personne âgée, même si vous configurez l'application dans une autre langue.</div>
+            <p>Sélectionnez la langue de l'interface de l'application. Disponible : English, Español, Català, Français,
+                Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Conseil : Définissez la langue pour qu'elle corresponde à celle parlée par la personne
+                âgée, même si vous configurez l'application dans une autre langue.</div>
         </section>
 
         <!-- Step 8 -->
@@ -342,16 +778,23 @@
             <h3>Ce qui se passe ensuite :</h3>
             <p><strong>Phase de test</strong> (prend quelques secondes) :</p>
             <ul>
-                <li>Si Twilio est activé : l'application envoie un vrai SMS de test à <strong>votre numéro de téléphone</strong> pour vérifier son fonctionnement. Vous devriez le recevoir en quelques secondes.</li>
-                <li>Si l'e-mail est activé : l'application envoie un e-mail de test à l'adresse e-mail que vous avez saisie. Vérifiez votre boîte de réception.</li>
+                <li>Si Twilio est activé : l'application envoie un vrai SMS de test à <strong>votre numéro de
+                        téléphone</strong> pour vérifier son fonctionnement. Vous devriez le recevoir en quelques
+                    secondes.</li>
+                <li>Si l'e-mail est activé : l'application envoie un e-mail de test à l'adresse e-mail que vous avez
+                    saisie. Vérifiez votre boîte de réception.</li>
                 <li>Si les tests échouent, un message d'erreur s'affiche. Vérifiez vos identifiants et réessayez.</li>
             </ul>
             <p><strong>Phase de partage :</strong></p>
             <ul>
                 <li>La feuille de partage du système s'ouvre automatiquement.</li>
-                <li>Envoyez le Magic Link à la personne âgée via <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>e-mail</strong>, <strong>SMS</strong> ou toute application de messagerie que vous utilisez.</li>
+                <li>Envoyez le Magic Link à la personne âgée via <strong>WhatsApp</strong>, <strong>iMessage</strong>,
+                    <strong>e-mail</strong>, <strong>SMS</strong> ou toute application de messagerie que vous utilisez.
+                </li>
             </ul>
-            <div class="warn-box">Le lien peut être partagé en toute sécurité — mais traitez-le comme un mot de passe. Il contient la configuration de la personne âgée, y compris les contacts et (si configurés) vos identifiants Twilio/e-mail. Partagez-le uniquement avec la personne âgée.</div>
+            <div class="warn-box">Le lien peut être partagé en toute sécurité — mais traitez-le comme un mot de passe.
+                Il contient la configuration de la personne âgée, y compris les contacts et (si configurés) vos
+                identifiants Twilio/e-mail. Partagez-le uniquement avec la personne âgée.</div>
         </section>
 
         <!-- Step 9 -->
@@ -361,12 +804,15 @@
             <ol>
                 <li>La personne âgée reçoit le message que vous avez envoyé.</li>
                 <li>Ils appuient sur le lien.</li>
-                <li>TapAlert s'ouvre automatiquement et affiche un écran de confirmation : <em>"Prêt à configurer TapAlert pour [Nom] ?"</em> avec un résumé de ce qui sera configuré.</li>
+                <li>TapAlert s'ouvre automatiquement et affiche un écran de confirmation : <em>"Prêt à configurer
+                        TapAlert pour [Nom] ?"</em> avec un résumé de ce qui sera configuré.</li>
                 <li>La personne âgée appuie sur <strong>"Oui, configurer"</strong> (ou le bouton équivalent).</li>
                 <li>L'application applique toute la configuration instantanément.</li>
-                <li>Un message de succès apparaît et l'application s'ouvre sur l'écran principal — prête à l'emploi.</li>
+                <li>Un message de succès apparaît et l'application s'ouvre sur l'écran principal — prête à l'emploi.
+                </li>
             </ol>
-            <p><strong>C'est tout. La personne âgée n'a pas besoin de saisir de paramètres, d'entrer des identifiants ou de faire des choix.</strong></p>
+            <p><strong>C'est tout. La personne âgée n'a pas besoin de saisir de paramètres, d'entrer des identifiants ou
+                    de faire des choix.</strong></p>
 
             <h3>Si TapAlert n'est pas encore installé sur le téléphone de la personne âgée</h3>
             <ol>
@@ -388,17 +834,21 @@
                 <li>Confirmez que tous les contacts configurés reçoivent le SMS (et l'e-mail, si configuré).</li>
                 <li>Vérifiez que le texte du message et le lien de localisation sont corrects.</li>
             </ol>
-            <div class="tip-box">Si quelque chose ne va pas, vous pouvez regénérer le Magic Link avec des corrections et le renvoyer — l'application d'un nouveau lien écrase la configuration précédente.</div>
+            <div class="tip-box">Si quelque chose ne va pas, vous pouvez regénérer le Magic Link avec des corrections et
+                le renvoyer — l'application d'un nouveau lien écrase la configuration précédente.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
             <h2>Après la configuration : Ce que voit la personne âgée</h2>
-            <p>L'application de la personne âgée s'ouvre directement sur l'écran du <strong>Mode Panique</strong> — un simple bouton d'urgence plein écran. L'interface est conçue pour être utilisée sans rien lire :</p>
+            <p>L'application de la personne âgée s'ouvre directement sur l'écran du <strong>Mode Panique</strong> — un
+                simple bouton d'urgence plein écran. L'interface est conçue pour être utilisée sans rien lire :</p>
             <ul>
                 <li><strong>Grand bouton rouge SOS</strong> au centre — appuyez pour envoyer une alerte d'urgence</li>
-                <li><strong>Grand bouton vert OK</strong> en dessous — appuyez pour envoyer un message "Je vais bien"</li>
-                <li><strong>Faites glisser vers la gauche</strong> pour voir les boutons de messages préconfigurés (si des messages ont été configurés)</li>
+                <li><strong>Grand bouton vert OK</strong> en dessous — appuyez pour envoyer un message "Je vais bien"
+                </li>
+                <li><strong>Faites glisser vers la gauche</strong> pour voir les boutons de messages préconfigurés (si
+                    des messages ont été configurés)</li>
             </ul>
             <p>La personne âgée n'a jamais besoin d'aller dans les paramètres ni de comprendre le fonctionnement.</p>
         </section>
@@ -406,10 +856,13 @@
         <!-- Multiple Seniors -->
         <section class="guide-section" id="multiple-seniors">
             <h2>Configurer plusieurs personnes âgées</h2>
-            <p>Vous pouvez configurer TapAlert pour plusieurs personnes âgées sans recommencer à zéro à chaque fois :</p>
+            <p>Vous pouvez configurer TapAlert pour plusieurs personnes âgées sans recommencer à zéro à chaque fois :
+            </p>
             <ol>
-                <li>Après avoir généré le premier Magic Link, appuyez sur <strong>"Configurer une autre personne âgée"</strong> dans la boîte de dialogue de fin.</li>
-                <li>Le formulaire efface le nom et les contacts de la personne âgée, mais <strong>conserve vos identifiants Twilio, les paramètres d'e-mail et les préférences de l'application</strong>.</li>
+                <li>Après avoir généré le premier Magic Link, appuyez sur <strong>"Configurer une autre personne
+                        âgée"</strong> dans la boîte de dialogue de fin.</li>
+                <li>Le formulaire efface le nom et les contacts de la personne âgée, mais <strong>conserve vos
+                        identifiants Twilio, les paramètres d'e-mail et les préférences de l'application</strong>.</li>
                 <li>Ne modifiez que ce qui est différent (nom, contacts, messages) pour la prochaine personne âgée.</li>
                 <li>Générez et partagez un nouveau Magic Link.</li>
             </ol>
@@ -421,36 +874,49 @@
 
             <h3>Erreur "La validation a échoué" lors de la génération du lien</h3>
             <ul>
-                <li>Vérifiez que tous les champs obligatoires sont remplis (indiqués par un message d'erreur rouge).</li>
-                <li>Si Twilio est activé, assurez-vous que l'Account SID, l'Auth Token et le numéro de téléphone sont corrects.</li>
-                <li>Si l'e-mail est activé, vérifiez le mot de passe d'application — les mots de passe de compte habituels ne fonctionneront pas.</li>
+                <li>Vérifiez que tous les champs obligatoires sont remplis (indiqués par un message d'erreur rouge).
+                </li>
+                <li>Si Twilio est activé, assurez-vous que l'Account SID, l'Auth Token et le numéro de téléphone sont
+                    corrects.</li>
+                <li>Si l'e-mail est activé, vérifiez le mot de passe d'application — les mots de passe de compte
+                    habituels ne fonctionneront pas.</li>
             </ul>
 
             <h3>La personne âgée n'a pas reçu le SMS de test</h3>
             <ul>
-                <li>Vérifiez que le numéro de téléphone Twilio est actif et qu'il ne s'agit pas d'un numéro d'essai envoyant à des numéros non vérifiés.</li>
-                <li>Lors de l'essai gratuit de Twilio, vous ne pouvez envoyer qu'à des numéros de téléphone que vous avez vérifiés dans la console Twilio. Ajoutez les contacts de la personne âgée comme numéros vérifiés, ou passez à un compte payant.</li>
+                <li>Vérifiez que le numéro de téléphone Twilio est actif et qu'il ne s'agit pas d'un numéro d'essai
+                    envoyant à des numéros non vérifiés.</li>
+                <li>Lors de l'essai gratuit de Twilio, vous ne pouvez envoyer qu'à des numéros de téléphone que vous
+                    avez vérifiés dans la console Twilio. Ajoutez les contacts de la personne âgée comme numéros
+                    vérifiés, ou passez à un compte payant.</li>
                 <li>Vérifiez que le format du numéro de téléphone est correct (indicatif de pays inclus).</li>
             </ul>
 
             <h3>Le Magic Link n'ouvre pas TapAlert</h3>
             <ul>
                 <li>Assurez-vous que TapAlert est installé sur le téléphone de la personne âgée.</li>
-                <li>Sur certains téléphones Android, appuyez longuement sur le lien et choisissez "Ouvrir avec TapAlert" plutôt qu'un navigateur.</li>
-                <li>Si un navigateur s'ouvre à la place, copiez l'URL complète et collez-la à nouveau dans le navigateur — au deuxième essai, le système propose généralement TapAlert comme option.</li>
+                <li>Sur certains téléphones Android, appuyez longuement sur le lien et choisissez "Ouvrir avec TapAlert"
+                    plutôt qu'un navigateur.</li>
+                <li>Si un navigateur s'ouvre à la place, copiez l'URL complète et collez-la à nouveau dans le navigateur
+                    — au deuxième essai, le système propose généralement TapAlert comme option.</li>
             </ul>
 
             <h3>La personne âgée appuie accidentellement sur le mauvais bouton</h3>
             <ul>
-                <li>Augmentez le <strong>Compte à rebours d'alerte</strong> à 10–15 secondes — cela laisse le temps d'annuler avant l'envoi.</li>
-                <li>Ou passez en <strong>Mode maintien</strong> (mode d'activation = maintenir) pour que le bouton nécessite un appui long délibéré.</li>
-                <li>Vous pouvez mettre à jour ces paramètres en générant un nouveau Magic Link avec les paramètres corrigés et en l'envoyant au téléphone de la personne âgée.</li>
+                <li>Augmentez le <strong>Compte à rebours d'alerte</strong> à 10–15 secondes — cela laisse le temps
+                    d'annuler avant l'envoi.</li>
+                <li>Ou passez en <strong>Mode maintien</strong> (mode d'activation = maintenir) pour que le bouton
+                    nécessite un appui long délibéré.</li>
+                <li>Vous pouvez mettre à jour ces paramètres en générant un nouveau Magic Link avec les paramètres
+                    corrigés et en l'envoyant au téléphone de la personne âgée.</li>
             </ul>
 
             <h3>Le SMS Twilio fonctionne mais pas l'e-mail</h3>
             <ul>
-                <li>Cause la plus courante : les destinataires n'ont pas d'adresse e-mail enregistrée. Vérifiez les destinataires dans l'écran Destinataires de l'application.</li>
-                <li>Assurez-vous que le mot de passe d'application est correct et n'a pas expiré. Les mots de passe d'application de Gmail et Outlook peuvent être révoqués — générez-en un nouveau si nécessaire.</li>
+                <li>Cause la plus courante : les destinataires n'ont pas d'adresse e-mail enregistrée. Vérifiez les
+                    destinataires dans l'écran Destinataires de l'application.</li>
+                <li>Assurez-vous que le mot de passe d'application est correct et n'a pas expiré. Les mots de passe
+                    d'application de Gmail et Outlook peuvent être révoqués — générez-en un nouveau si nécessaire.</li>
             </ul>
         </section>
 
@@ -458,17 +924,22 @@
         <section class="guide-section" id="security">
             <h2>Notes sur la sécurité et la confidentialité</h2>
             <ul>
-                <li><strong>Le contenu du Magic Link</strong> est encodé mais pas chiffré. Toute personne qui l'intercepte peut lire la configuration, y compris les identifiants Twilio. Partagez-le uniquement directement à la personne âgée.</li>
-                <li><strong>TapAlert n'a pas de serveurs</strong> — le Magic Link est traité entièrement sur l'appareil de la personne âgée. Aucune donnée n'est envoyée au service TapAlert.</li>
-                <li><strong>Les identifiants Twilio dans le lien</strong> sont stockés localement sur l'appareil de la personne âgée dans un stockage sécurisé (chiffré) une fois appliqués.</li>
-                <li>Si vous pensez qu'un Magic Link a été intercepté, <strong>faites pivoter votre Auth Token Twilio</strong> dans la console Twilio immédiatement et générez un nouveau Magic Link.</li>
+                <li><strong>Le contenu du Magic Link</strong> est encodé mais pas chiffré. Toute personne qui
+                    l'intercepte peut lire la configuration, y compris les identifiants Twilio. Partagez-le uniquement
+                    directement à la personne âgée.</li>
+                <li><strong>TapAlert n'a pas de serveurs</strong> — le Magic Link est traité entièrement sur l'appareil
+                    de la personne âgée. Aucune donnée n'est envoyée au service TapAlert.</li>
+                <li><strong>Les identifiants Twilio dans le lien</strong> sont stockés localement sur l'appareil de la
+                    personne âgée dans un stockage sécurisé (chiffré) une fois appliqués.</li>
+                <li>Si vous pensez qu'un Magic Link a été intercepté, <strong>faites pivoter votre Auth Token
+                        Twilio</strong> dans la console Twilio immédiatement et générez un nouveau Magic Link.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
             <h2>Carte de référence rapide (à imprimer pour la personne âgée)</h2>
-<pre>┌─────────────────────────────────────────────┐
+            <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
 │  🔴  Big red button  →  Send EMERGENCY      │
@@ -495,7 +966,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Des alertes d'urgence simples pour tout le monde. Pas d'abonnement, pas de suivi, juste de la sécurité.</p>
+                    <p>Des alertes d'urgence simples pour tout le monde. Pas d'abonnement, pas de suivi, juste de la
+                        sécurité.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Produit</h3>
@@ -516,17 +988,20 @@
                 <div class="footer-section">
                     <h3>Soutien</h3>
                     <ul>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guides étape par étape</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guides
+                                étape par étape</a></li>
                         <li><a href="troubleshooting.html">Dépannage</a></li>
                         <li><a href="contact.html">Contacter l'assistance</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tous droits réservés. | Fabriqué avec ❤️ pour votre sécurité</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tous droits réservés. |
+                    Fabriqué avec ❤️ pour votre sécurité</p>
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>

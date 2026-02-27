@@ -17,56 +17,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👨‍👩‍👧 Guia de configuració assistida per la família - TapAlert</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn { padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
-        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-        .guide-header { background: white; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .guide-nav { display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { display: flex; align-items: center; font-weight: 800; font-size: 1.5rem; color: #333; text-decoration: none; }
-        .guide-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .guide-title { font-size: 2.2rem; color: #2c3e50; margin-bottom: 10px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .guide-subtitle { text-align: center; color: #667eea; font-size: 1.05rem; margin-bottom: 30px; }
-        .guide-section { margin-bottom: 40px; }
-        h2 { font-size: 1.8rem; color: #2c3e50; margin-top: 40px; margin-bottom: 20px; border-left: 5px solid #667eea; padding-left: 15px; }
-        h3 { font-size: 1.3rem; color: #4a5568; margin-top: 25px; margin-bottom: 12px; }
-        p { margin-bottom: 15px; color: #4a5568; }
-        ul, ol { margin-bottom: 20px; padding-left: 25px; color: #4a5568; }
-        li { margin-bottom: 8px; }
-        a { color: #667eea; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .tip-box { background-color: #f0f4ff; border-left: 4px solid #667eea; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .tip-box strong { color: #2c3e50; }
-        .warn-box { background-color: #fffaf0; border-left: 4px solid #ed8936; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .warn-box strong { color: #c05621; }
-        pre { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin: 20px 0; line-height: 1.5; }
-        code { background: #eef1f8; color: #667eea; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-        pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
-        .checklist { list-style: none; padding-left: 5px; }
-        .checklist li::before { content: "☐ "; color: #667eea; font-size: 1.1em; }
-        footer { background: #1a1a1a; color: white; padding: 60px 20px 30px; margin-top: 60px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h3 { margin-bottom: 20px; color: #667eea; }
-        .footer-section ul { list-style: none; padding-left: 0; }
-        .footer-section ul li { padding: 8px 0; }
-        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s ease; }
-        .footer-section a:hover { color: white; text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; }
-        @media (max-width: 768px) {
-            body { font-size: 14px; } .brand-logo { font-size: 1.2rem; } .btn { padding: 8px 16px; font-size: 0.85rem; }
-            .guide-container { padding: 20px; margin: 20px; } .guide-title { font-size: 1.7rem; }
-            h2 { font-size: 1.4rem; margin-top: 30px; padding-left: 12px; } h3 { font-size: 1.15rem; }
-            p, li { font-size: 0.9rem; } pre { font-size: 0.75rem; padding: 14px; }
-            footer { padding: 40px 15px 20px; margin-top: 40px; } .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-subtitle {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tip-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .tip-box strong {
+            color: #2c3e50;
+        }
+
+        .warn-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .warn-box strong {
+            color: #c05621;
+        }
+
+        pre {
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #eef1f8;
+            color: #667eea;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .checklist li::before {
+            content: "☐ ";
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            pre {
+                font-size: 0.75rem;
+                padding: 14px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
         @media (max-width: 430px) {
-            body { font-size: 13px; } .btn { padding: 7px 14px; font-size: 0.8rem; }
-            .guide-container { padding: 15px; margin: 12px; } .guide-title { font-size: 1.45rem; }
-            h2 { font-size: 1.2rem; padding-left: 10px; border-left-width: 4px; } h3 { font-size: 1.05rem; }
-            pre { font-size: 0.7rem; padding: 10px; } footer { padding: 30px 12px 15px; margin-top: 30px; }
-            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            body {
+                font-size: 13px;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.45rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            pre {
+                font-size: 0.7rem;
+                padding: 10px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -76,48 +371,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Tornar a casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">CA</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/family_assisted_setup.html" hreflang="ca" class="active">CA</a>
-            <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
-            <a href="../family_assisted_setup.html" hreflang="en">EN</a>
-            <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
-            <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
-            <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
-            <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
-            <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
-            <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
-            <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">CA</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/family_assisted_setup.html" hreflang="ca" class="active">CA</a>
+                        <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
+                        <a href="../family_assisted_setup.html" hreflang="en">EN</a>
+                        <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
+                        <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
+                        <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
+                        <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
+                        <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
+                        <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
+                        <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -127,13 +514,18 @@
         <h1 class="guide-title">👨‍👩‍👧 Guia de configuració assistida per la família</h1>
         <p class="guide-subtitle">Configurar TapAlert per a una persona gran amb Magic Link</p>
 
-        <p>Aquesta guia és per a familiars, cuidadors i qualsevol persona que ajudi una persona gran o amb menys experiència tecnològica a configurar TapAlert completament. Amb la funció Magic Link, podeu configurar tota l'aplicació des del vostre dispositiu i lliurar una configuració llesta per usar-se amb un sol toc.</p>
+        <p>Aquesta guia és per a familiars, cuidadors i qualsevol persona que ajudi una persona gran o amb menys
+            experiència tecnològica a configurar TapAlert completament. Amb la funció Magic Link, podeu configurar tota
+            l'aplicació des del vostre dispositiu i lliurar una configuració llesta per usar-se amb un sol toc.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
             <h2>Descripció general: Com funciona Magic Link</h2>
-            <p>La funció Magic Link permet que una persona amb coneixements tècnics ("l'administrador") faci tota la feina de configuració i la comparteixi com un enllaç especial. Quan la persona gran toca aquest enllaç al seu telèfon, TapAlert aplica automàticament la configuració completa — contactes, missatges, ajustos i tot — en un sol pas.</p>
-<pre>Admin's phone                         Senior's phone
+            <p>La funció Magic Link permet que una persona amb coneixements tècnics ("l'administrador") faci tota la
+                feina de configuració i la comparteixi com un enllaç especial. Quan la persona gran toca aquest enllaç
+                al seu telèfon, TapAlert aplica automàticament la configuració completa — contactes, missatges, ajustos
+                i tot — en un sol pas.</p>
+            <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
 2. Fill in all configuration
@@ -157,20 +549,26 @@
             </ul>
 
             <h3>Opcional: Per a SMS automatitzats mitjançant Twilio</h3>
-            <p>Si voleu que les alertes s'enviïn automàticament sense necessitat de tenir cap aplicació oberta al telèfon de la persona gran:</p>
+            <p>Si voleu que les alertes s'enviïn automàticament sense necessitat de tenir cap aplicació oberta al
+                telèfon de la persona gran:</p>
             <ul class="checklist">
                 <li>Un compte de Twilio (prova gratuïta disponible a twilio.com)</li>
                 <li>SID del compte de Twilio (del tauler de la consola de Twilio)</li>
                 <li>Token d'autenticació de Twilio (del tauler de la consola de Twilio)</li>
-                <li>Un número de telèfon de Twilio, O un nom de remitent alfanumèric (p. ex., "TapAlert") si el vostre país ho admet</li>
-                <li>El vostre propi número de telèfon — l'aplicació enviarà un SMS de prova per verificar que Twilio funciona</li>
+                <li>Un número de telèfon de Twilio, O un nom de remitent alfanumèric (p. ex., "TapAlert") si el vostre
+                    país ho admet</li>
+                <li>El vostre propi número de telèfon — l'aplicació enviarà un SMS de prova per verificar que Twilio
+                    funciona</li>
             </ul>
-            <div class="warn-box">Nota per a usuaris d'iOS: A l'iPhone, els SMS automatitzats requereixen Twilio. Sense ell, l'aplicació obre l'app nativa de Missatges i la persona gran toca Enviar manualment. Continua sent fiable, però requereix un toc addicional.</div>
+            <div class="warn-box">Nota per a usuaris d'iOS: A l'iPhone, els SMS automatitzats requereixen Twilio. Sense
+                ell, l'aplicació obre l'app nativa de Missatges i la persona gran toca Enviar manualment. Continua sent
+                fiable, però requereix un toc addicional.</div>
 
             <h3>Opcional: Per a redundància de correu electrònic</h3>
             <p>Si voleu que les alertes també s'enviïn per correu electrònic a més dels SMS:</p>
             <ul class="checklist">
-                <li>Una adreça de correu electrònic dedicada per a l'enviament (Gmail, Outlook, iCloud, Yahoo o personalitzada)</li>
+                <li>Una adreça de correu electrònic dedicada per a l'enviament (Gmail, Outlook, iCloud, Yahoo o
+                    personalitzada)</li>
                 <li>Una contrasenya d'aplicació per a aquell compte (vegeu el Pas 4 més avall)</li>
             </ul>
         </section>
@@ -181,10 +579,13 @@
             <ol>
                 <li>Instal·leu TapAlert al vostre propi telèfon (necessiteu l'aplicació per generar el Magic Link).</li>
                 <li>Obriu TapAlert.</li>
-                <li>Si encara no heu completat la configuració inicial, passeu per les pantalles de permisos. A l'última pantalla, toqueu «Configurar per a una altra persona».</li>
-                <li>Si TapAlert ja està instal·lat i configurat, aneu a Configuració → desplaceu-vos fins al final → toqueu «Configuració d'administrador / Magic Link».</li>
+                <li>Si encara no heu completat la configuració inicial, passeu per les pantalles de permisos. A l'última
+                    pantalla, toqueu «Configurar per a una altra persona».</li>
+                <li>Si TapAlert ja està instal·lat i configurat, aneu a Configuració → desplaceu-vos fins al final →
+                    toqueu «Configuració d'administrador / Magic Link».</li>
             </ol>
-            <p>S'obrirà la pantalla de configuració d'administrador. Desplaceu-vos per les seccions: les anireu completant als passos següents.</p>
+            <p>S'obrirà la pantalla de configuració d'administrador. Desplaceu-vos per les seccions: les anireu
+                completant als passos següents.</p>
         </section>
 
         <!-- Step 2 -->
@@ -192,9 +593,11 @@
             <h2>Pas 2: Introduir el nom de la persona gran</h2>
             <p>A la secció «Informació de l'usuari» a la part superior de la pantalla:</p>
             <ul>
-                <li>Nom de la persona gran — Escriviu el seu nom (p. ex., «Maria»). Aquest nom apareix als missatges d'alerta perquè els destinataris sàpiguen qui l'ha enviada.</li>
+                <li>Nom de la persona gran — Escriviu el seu nom (p. ex., «Maria»). Aquest nom apareix als missatges
+                    d'alerta perquè els destinataris sàpiguen qui l'ha enviada.</li>
             </ul>
-            <div class="tip-box">Exemple: Si escriviu «Maria», els destinataris rebran: «ALERTA de Maria: Necessito ajuda. Ubicació: …»</div>
+            <div class="tip-box">Exemple: Si escriviu «Maria», els destinataris rebran: «ALERTA de Maria: Necessito
+                ajuda. Ubicació: …»</div>
         </section>
 
         <!-- Step 3 -->
@@ -204,8 +607,10 @@
             <h3>Opció A: Sense Twilio (la més senzilla)</h3>
             <p>Deixeu el commutador «Activa SMS de Twilio» desactivat.</p>
             <ul>
-                <li>A Android, l'aplicació envia SMS directament amb la SIM del telèfon, sense necessitat de Twilio.</li>
-                <li>A l'iPhone, l'aplicació obre l'app Missatges amb el text ja escrit i la persona gran toca Enviar una vegada. Senzill però requereix un pas addicional.</li>
+                <li>A Android, l'aplicació envia SMS directament amb la SIM del telèfon, sense necessitat de Twilio.
+                </li>
+                <li>A l'iPhone, l'aplicació obre l'app Missatges amb el text ja escrit i la persona gran toca Enviar una
+                    vegada. Senzill però requereix un pas addicional.</li>
             </ul>
 
             <h3>Opció B: Amb Twilio (recomanat per a l'automatització completa)</h3>
@@ -215,28 +620,37 @@
                 <li>Introduïu l'Auth Token de la consola de Twilio (toqueu la icona de l'ull per mostrar/ocultar).</li>
                 <li>Trieu com identificar el remitent:
                     <ul>
-                        <li>Número de Twilio — Introduïu el número de Twilio (p. ex., +12015551234). Seleccioneu primer la bandera del país.</li>
-                        <li>Nom del remitent — Activeu «Usa nom alfanumèric» i escriviu un nom curt (p. ex., «TapAlert»). Nota: no disponible a tots els països (p. ex., EUA).</li>
+                        <li>Número de Twilio — Introduïu el número de Twilio (p. ex., +12015551234). Seleccioneu primer
+                            la bandera del país.</li>
+                        <li>Nom del remitent — Activeu «Usa nom alfanumèric» i escriviu un nom curt (p. ex.,
+                            «TapAlert»). Nota: no disponible a tots els països (p. ex., EUA).</li>
                     </ul>
                 </li>
-                <li>El vostre número — Introduïu el vostre propi número. L'aplicació envia un SMS de prova per confirmar que Twilio funciona abans de generar l'enllaç.</li>
+                <li>El vostre número — Introduïu el vostre propi número. L'aplicació envia un SMS de prova per confirmar
+                    que Twilio funciona abans de generar l'enllaç.</li>
             </ol>
-            <div class="tip-box">On trobar les credencials de Twilio: Inicieu sessió a console.twilio.com. L'Account SID i el Auth Token es mostren al tauler principal. El número es troba a Números de telèfon → Gestionar → Números actius.</div>
+            <div class="tip-box">On trobar les credencials de Twilio: Inicieu sessió a console.twilio.com. L'Account SID
+                i el Auth Token es mostren al tauler principal. El número es troba a Números de telèfon → Gestionar →
+                Números actius.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
             <h2>Pas 4: Configurar alertes per correu electrònic (opcional)</h2>
-            <p>Les alertes per correu envien una còpia de cada alerta als destinataris que tenen adreça de correu. És una còpia de seguretat útil si el SMS falla.</p>
+            <p>Les alertes per correu envien una còpia de cada alerta als destinataris que tenen adreça de correu. És
+                una còpia de seguretat útil si el SMS falla.</p>
             <ol>
                 <li>Activeu el commutador «Activa redundància de correu».</li>
-                <li>Seleccioneu el vostre proveïdor de correu: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (configuració automàtica) o SMTP personalitzat.</li>
-                <li>Introduïu l'adreça de correu des de la qual s'enviarà, idealment una adreça dedicada i no el bústia personal de la persona gran.</li>
+                <li>Seleccioneu el vostre proveïdor de correu: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail
+                    (configuració automàtica) o SMTP personalitzat.</li>
+                <li>Introduïu l'adreça de correu des de la qual s'enviarà, idealment una adreça dedicada i no el bústia
+                    personal de la persona gran.</li>
                 <li>Introduïu la contrasenya d'aplicació per a aquell compte.</li>
             </ol>
 
             <h3>Com obtenir una contrasenya d'aplicació</h3>
-            <p>Les contrasenyes de correu habituals no funcionen. Els proveïdors de correu requereixen contrasenyes d'aplicació per a apps que es connecten per SMTP.</p>
+            <p>Les contrasenyes de correu habituals no funcionen. Els proveïdors de correu requereixen contrasenyes
+                d'aplicació per a apps que es connecten per SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
@@ -268,15 +682,19 @@
         <!-- Step 5 -->
         <section class="guide-section" id="step-5">
             <h2>Pas 5: Afegir contactes d'emergència</h2>
-            <p>A la secció «Contactes d'emergència», per a cada persona que ha de rebre les alertes de la persona gran:</p>
+            <p>A la secció «Contactes d'emergència», per a cada persona que ha de rebre les alertes de la persona gran:
+            </p>
             <ol>
                 <li>Introduïu el seu nom al camp Nom (p. ex., «Carlos» o «Dr. García»).</li>
-                <li>Introduïu el seu número de telèfon: seleccioneu primer la bandera del país correcte i després escriviu el número.</li>
+                <li>Introduïu el seu número de telèfon: seleccioneu primer la bandera del país correcte i després
+                    escriviu el número.</li>
                 <li>Toqueu el botó + blau per afegir-los a la llista.</li>
-                <li>Repetiu per a cada contacte. Podeu afegir-ne tants com calgui (fins a 50 amb premium; la versió gratuïta n'admet 1).</li>
+                <li>Repetiu per a cada contacte. Podeu afegir-ne tants com calgui (fins a 50 amb premium; la versió
+                    gratuïta n'admet 1).</li>
             </ol>
             <p>Per eliminar un contacte, toqueu la icona de paperera vermella al costat del seu nom.</p>
-            <div class="tip-box">Consell: Afegiu almenys 2 contactes per a major redundància, per si un no està disponible.</div>
+            <div class="tip-box">Consell: Afegiu almenys 2 contactes per a major redundància, per si un no està
+                disponible.</div>
         </section>
 
         <!-- Step 6 -->
@@ -284,11 +702,15 @@
             <h2>Pas 6: Escriure missatges d'alerta preconfigurats</h2>
             <p>A la secció <strong>«Missatges d'alerta»</strong>, podeu escriure fins a 3 missatges llests per usar:</p>
             <ul>
-                <li><strong>Missatge 1</strong> — El missatge principal d'emergència (p. ex., «Necessito ajuda, truqueu-me»)</li>
-                <li><strong>Missatge 2</strong> — Un missatge «estic bé» o de comprovació (p. ex., «Estic bé, no us preocupeu»)</li>
-                <li><strong>Missatge 3</strong> — Un altre missatge personalitzat (p. ex., «M'he caigut, veniu si us plau»)</li>
+                <li><strong>Missatge 1</strong> — El missatge principal d'emergència (p. ex., «Necessito ajuda,
+                    truqueu-me»)</li>
+                <li><strong>Missatge 2</strong> — Un missatge «estic bé» o de comprovació (p. ex., «Estic bé, no us
+                    preocupeu»)</li>
+                <li><strong>Missatge 3</strong> — Un altre missatge personalitzat (p. ex., «M'he caigut, veniu si us
+                    plau»)</li>
             </ul>
-            <p>Apareixeràn com a botons grans a la pantalla principal de la persona gran perquè pugui enviar una alerta amb un sol toc, sense escriure res.</p>
+            <p>Apareixeràn com a botons grans a la pantalla principal de la persona gran perquè pugui enviar una alerta
+                amb un sol toc, sense escriure res.</p>
             <div class="tip-box">
                 <strong>Consells per a bons missatges:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
@@ -302,32 +724,39 @@
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
             <h2>Pas 7: Triar la configuració de l'app</h2>
-            <p>A la secció <strong>«Configuració de l'app»</strong>, configureu com es comporta l'app per a la persona gran:</p>
+            <p>A la secció <strong>«Configuració de l'app»</strong>, configureu com es comporta l'app per a la persona
+                gran:</p>
 
             <h3>Compte enrere de l'alerta</h3>
             <p>Quants segons esperar després que la persona gran toqui el botó d'alerta abans que s'enviï realment.</p>
             <ul>
                 <li><strong>0 segons</strong> — s'envia immediatament, sense possibilitat de cancel·lar</li>
-                <li><strong>3–10 segons</strong> — recomanat per a la majoria de persones grans; dóna temps per cancel·lar si es prem per error</li>
+                <li><strong>3–10 segons</strong> — recomanat per a la majoria de persones grans; dóna temps per
+                    cancel·lar si es prem per error</li>
                 <li><strong>15–30 segons</strong> — si la persona gran tendeix a tocar accidentalment</li>
             </ul>
 
             <h3>Mode d'activació</h3>
             <ul>
-                <li><strong>Toc únic</strong> — toqueu una vegada per iniciar el compte enrere (més fàcil per a persones grans amb mobilitat limitada)</li>
-                <li><strong>Mantenir premut</strong> — manteniu el botó premut per confirmar (evita enviaments accidentals)</li>
+                <li><strong>Toc únic</strong> — toqueu una vegada per iniciar el compte enrere (més fàcil per a persones
+                    grans amb mobilitat limitada)</li>
+                <li><strong>Mantenir premut</strong> — manteniu el botó premut per confirmar (evita enviaments
+                    accidentals)</li>
             </ul>
 
             <h3>Aparença</h3>
             <ul>
-                <li><strong>Predeterminat del sistema</strong> — segueix la configuració de mode clar/fosc del telèfon</li>
+                <li><strong>Predeterminat del sistema</strong> — segueix la configuració de mode clar/fosc del telèfon
+                </li>
                 <li><strong>Mode clar</strong> — fons sempre clar</li>
                 <li><strong>Mode fosc</strong> — fons sempre fosc (més còmode per als ulls amb poca llum)</li>
             </ul>
 
             <h3>Idioma</h3>
-            <p>Seleccioneu l'idioma per a la interfície de l'app. Disponible: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
-            <div class="tip-box">Consell: Establiu l'idioma perquè coincideixi amb el que parla la persona gran, encara que l'estigueu configurant en un idioma diferent.</div>
+            <p>Seleccioneu l'idioma per a la interfície de l'app. Disponible: English, Español, Català, Français,
+                Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Consell: Establiu l'idioma perquè coincideixi amb el que parla la persona gran, encara
+                que l'estigueu configurant en un idioma diferent.</div>
         </section>
 
         <!-- Step 8 -->
@@ -342,16 +771,24 @@
             <h3>Què passa a continuació:</h3>
             <p><strong>Fase de prova</strong> (triga uns segons):</p>
             <ul>
-                <li>Si Twilio està activat: l'app envia un SMS de prova real al <strong>vostre número de telèfon</strong> per verificar que funciona. Haureu de rebre'l en qestió de segons.</li>
-                <li>Si el correu electrònic està activat: l'app envia un correu de prova a l'adreça de correu que heu introduit. Comproveu la vostra bústia d'entrada.</li>
-                <li>Si les proves fallen, apareix un missatge d'error. Comproveu les vostres credencials i torneu-ho a intentar.</li>
+                <li>Si Twilio està activat: l'app envia un SMS de prova real al <strong>vostre número de
+                        telèfon</strong> per verificar que funciona. Haureu de rebre'l en qestió de segons.</li>
+                <li>Si el correu electrònic està activat: l'app envia un correu de prova a l'adreça de correu que heu
+                    introduit. Comproveu la vostra bústia d'entrada.</li>
+                <li>Si les proves fallen, apareix un missatge d'error. Comproveu les vostres credencials i torneu-ho a
+                    intentar.</li>
             </ul>
             <p><strong>Fase de compartir:</strong></p>
             <ul>
                 <li>El full de compartir del sistema s'obre automàticament.</li>
-                <li>Envieu el Magic Link a la persona gran per <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>correu electrònic</strong>, <strong>SMS</strong> o qualsevol app de missatgeria que feu servir.</li>
+                <li>Envieu el Magic Link a la persona gran per <strong>WhatsApp</strong>, <strong>iMessage</strong>,
+                    <strong>correu electrònic</strong>, <strong>SMS</strong> o qualsevol app de missatgeria que feu
+                    servir.
+                </li>
             </ul>
-            <div class="warn-box">L'enllaç és segur per compartir — però tracteu-lo com una contrasenya. Conté la configuració de la persona gran, inclòs els contactes i (si està configurat) les vostres credencials de Twilio/correu. Compartiu-lo només amb la persona gran.</div>
+            <div class="warn-box">L'enllaç és segur per compartir — però tracteu-lo com una contrasenya. Conté la
+                configuració de la persona gran, inclòs els contactes i (si està configurat) les vostres credencials de
+                Twilio/correu. Compartiu-lo només amb la persona gran.</div>
         </section>
 
         <!-- Step 9 -->
@@ -361,12 +798,14 @@
             <ol>
                 <li>La persona gran rep el missatge que heu enviat.</li>
                 <li>Toca l'enllaç.</li>
-                <li>TapAlert s'obre automàticament i mostra una pantalla de confirmació: <em>«Preparats per configurar TapAlert per a [Nom]?»</em> amb un resum del que es configurarà.</li>
+                <li>TapAlert s'obre automàticament i mostra una pantalla de confirmació: <em>«Preparats per configurar
+                        TapAlert per a [Nom]?»</em> amb un resum del que es configurarà.</li>
                 <li>La persona gran toca <strong>"Sí, configura-ho"</strong> (o el botó equivalent).</li>
                 <li>L'app aplica tota la configuració al moment.</li>
                 <li>Apareix un missatge d'èxit i l'app s'obre a la pantalla principal — a punt per usar.</li>
             </ol>
-            <p><strong>Això és tot. La persona gran no necessita introduir cap configuració, escriure cap credencial ni prendre cap decisió.</strong></p>
+            <p><strong>Això és tot. La persona gran no necessita introduir cap configuració, escriure cap credencial ni
+                    prendre cap decisió.</strong></p>
 
             <h3>Si TapAlert no està instal·lat encara al telèfon de la persona gran</h3>
             <ol>
@@ -385,20 +824,24 @@
                 <li>Haureu de veure el nom de la persona gran a la pantalla d'inici.</li>
                 <li>Toqueu un dels botons d'alerta.</li>
                 <li>Espereu el compte enrere (o envieu immediatament si el compte enrere és 0).</li>
-                <li>Confirmeu que tots els contactes configurats reben el SMS (i el correu electrònic, si està configurat).</li>
+                <li>Confirmeu que tots els contactes configurats reben el SMS (i el correu electrònic, si està
+                    configurat).</li>
                 <li>Comproveu que el text del missatge i l'enllaç d'ubicació són correctes.</li>
             </ol>
-            <div class="tip-box">Si alguna cosa no està bé, podeu regenerar el Magic Link amb correccions i enviar-lo de nou — aplicar un nou enllaç sobreescriu la configuració anterior.</div>
+            <div class="tip-box">Si alguna cosa no està bé, podeu regenerar el Magic Link amb correccions i enviar-lo de
+                nou — aplicar un nou enllaç sobreescriu la configuració anterior.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
             <h2>Després de la configuració: El que veu la persona gran</h2>
-            <p>L'app de la persona gran s'obre directament a la pantalla del <strong>Mode Pànic</strong> — un botó d'emergència simple a pantalla completa. La interfaz està dissenyada per usar-se sense llegir res:</p>
+            <p>L'app de la persona gran s'obre directament a la pantalla del <strong>Mode Pànic</strong> — un botó
+                d'emergència simple a pantalla completa. La interfaz està dissenyada per usar-se sense llegir res:</p>
             <ul>
                 <li><strong>Botó vermell SOS gran</strong> al centre — toqueu per enviar una alerta d'emergència</li>
                 <li><strong>Botó verd OK gran</strong> a sota — toqueu per enviar un missatge «Estic bé»</li>
-                <li><strong>Llisca cap a l'esquerra</strong> per veure els botons de missatges preconfigurats (si es van configurar missatges)</li>
+                <li><strong>Llisca cap a l'esquerra</strong> per veure els botons de missatges preconfigurats (si es van
+                    configurar missatges)</li>
             </ul>
             <p>La persona gran mai necessita entrar a Configuració ni entendre com funciona res.</p>
         </section>
@@ -408,8 +851,10 @@
             <h2>Configurar diverses persones grans</h2>
             <p>Podeu configurar TapAlert per a diverses persones grans sense començar des de zero cada vegada:</p>
             <ol>
-                <li>Després de generar el primer Magic Link, toqueu <strong>"Configura una altra persona gran"</strong> al diàleg de finalització.</li>
-                <li>El formulari esborra el nom i els contactes de la persona gran, però <strong>conserva les vostres credencials de Twilio, la configuració de correu i les preferències de l'app</strong>.</li>
+                <li>Després de generar el primer Magic Link, toqueu <strong>"Configura una altra persona gran"</strong>
+                    al diàleg de finalització.</li>
+                <li>El formulari esborra el nom i els contactes de la persona gran, però <strong>conserva les vostres
+                        credencials de Twilio, la configuració de correu i les preferències de l'app</strong>.</li>
                 <li>Canvieu només el que sigui diferent (nom, contactes, missatges) per a la següent persona gran.</li>
                 <li>Genereu i compartiu un nou Magic Link.</li>
             </ol>
@@ -421,36 +866,49 @@
 
             <h3>Error de «validació fallida» en generar l'enllaç</h3>
             <ul>
-                <li>Comproveu que tots els camps obligatoris estiguin completats (marcats amb un missatge d'error vermell).</li>
-                <li>Si Twilio està activat, assegureu-vos que l'Account SID, el Auth Token i el número de telèfon són correctes.</li>
-                <li>Si el correu electrònic està activat, verifiqueu la Contrasenya de l'App — les contrasenyes de compte normals no funcionaran.</li>
+                <li>Comproveu que tots els camps obligatoris estiguin completats (marcats amb un missatge d'error
+                    vermell).</li>
+                <li>Si Twilio està activat, assegureu-vos que l'Account SID, el Auth Token i el número de telèfon són
+                    correctes.</li>
+                <li>Si el correu electrònic està activat, verifiqueu la Contrasenya de l'App — les contrasenyes de
+                    compte normals no funcionaran.</li>
             </ul>
 
             <h3>La persona gran no va rebre el SMS de prova</h3>
             <ul>
-                <li>Verifiqueu que el número de telèfon de Twilio estigui actiu i no sigui un número de prova que enviï a números no verificats.</li>
-                <li>A la prova gratuita de Twilio, només podeu enviar a números de telèfon que hagueu verificat a la Consola de Twilio. Afegiu els contactes de la persona gran com a números verificats, o actualitzeu a un compte de pagament.</li>
+                <li>Verifiqueu que el número de telèfon de Twilio estigui actiu i no sigui un número de prova que enviï
+                    a números no verificats.</li>
+                <li>A la prova gratuita de Twilio, només podeu enviar a números de telèfon que hagueu verificat a la
+                    Consola de Twilio. Afegiu els contactes de la persona gran com a números verificats, o actualitzeu a
+                    un compte de pagament.</li>
                 <li>Comproveu que el format del número de telèfon és correcte (codi de país inclòs).</li>
             </ul>
 
             <h3>El Magic Link no obre TapAlert</h3>
             <ul>
                 <li>Assegureu-vos que TapAlert estigui instal·lat al telèfon de la persona gran.</li>
-                <li>En alguns telèfons Android, manteniu premut l'enllaç i trieu "Obrir amb TapAlert" en lloc d'un navegador.</li>
-                <li>Si en canvi s'obre un navegador, copieu la URL completa i enganxeu-la de nou al navegador — en el segon intent, el sistema normalment ofereix TapAlert com a opció.</li>
+                <li>En alguns telèfons Android, manteniu premut l'enllaç i trieu "Obrir amb TapAlert" en lloc d'un
+                    navegador.</li>
+                <li>Si en canvi s'obre un navegador, copieu la URL completa i enganxeu-la de nou al navegador — en el
+                    segon intent, el sistema normalment ofereix TapAlert com a opció.</li>
             </ul>
 
             <h3>La persona gran toca accidentalment el botó equivocat</h3>
             <ul>
-                <li>Augmenteu el <strong>Compte enrere de l'alerta</strong> a 10–15 segons — això dóna temps per cancel·lar abans d'enviar.</li>
-                <li>O canvieu al <strong>Mode mantenir premut</strong> (mode d'activació = mantenir) perquè el botó requereixi una pulsació deliberada.</li>
-                <li>Podeu actualitzar aquests ajustos generant un nou Magic Link amb els ajustos corregits i enviant-lo al telèfon de la persona gran.</li>
+                <li>Augmenteu el <strong>Compte enrere de l'alerta</strong> a 10–15 segons — això dóna temps per
+                    cancel·lar abans d'enviar.</li>
+                <li>O canvieu al <strong>Mode mantenir premut</strong> (mode d'activació = mantenir) perquè el botó
+                    requereixi una pulsació deliberada.</li>
+                <li>Podeu actualitzar aquests ajustos generant un nou Magic Link amb els ajustos corregits i enviant-lo
+                    al telèfon de la persona gran.</li>
             </ul>
 
             <h3>El SMS de Twilio funciona però el correu electrònic no</h3>
             <ul>
-                <li>Causa més freqüent: els destinataris no tenen adreça de correu electrònic desada. Comproveu els destinataris a la pantalla de Destinataris de l'app.</li>
-                <li>Assegureu-vos que la Contrasenya de l'App és correcta i no ha caducat. Les Contrasenyes d'App de Gmail i Outlook poden ser revocades — genereu-ne una de nova si cal.</li>
+                <li>Causa més freqüent: els destinataris no tenen adreça de correu electrònic desada. Comproveu els
+                    destinataris a la pantalla de Destinataris de l'app.</li>
+                <li>Assegureu-vos que la Contrasenya de l'App és correcta i no ha caducat. Les Contrasenyes d'App de
+                    Gmail i Outlook poden ser revocades — genereu-ne una de nova si cal.</li>
             </ul>
         </section>
 
@@ -458,17 +916,22 @@
         <section class="guide-section" id="security">
             <h2>Notes de seguretat i privadesa</h2>
             <ul>
-                <li><strong>El contingut del Magic Link</strong> està codificat però no xifrat. Qualsevol que l'intercepti pot llegir la configuració, inclòs les credencials de Twilio. Compartiu-lo només directament amb la persona gran.</li>
-                <li><strong>TapAlert no té servidors</strong> — el Magic Link es processa íntegrament al dispositiu de la persona gran. No s'envien dades al servei TapAlert.</li>
-                <li><strong>Les credencials de Twilio a l'enllaç</strong> s'emmagatzemen localment al dispositiu de la persona gran en emmagatzematge segur (xifrat) un cop aplicades.</li>
-                <li>Si creieu que un Magic Link ha estat interceptat, <strong>roteu el vostre Auth Token de Twilio</strong> a la Consola de Twilio immediatament i genereu un nou Magic Link.</li>
+                <li><strong>El contingut del Magic Link</strong> està codificat però no xifrat. Qualsevol que
+                    l'intercepti pot llegir la configuració, inclòs les credencials de Twilio. Compartiu-lo només
+                    directament amb la persona gran.</li>
+                <li><strong>TapAlert no té servidors</strong> — el Magic Link es processa íntegrament al dispositiu de
+                    la persona gran. No s'envien dades al servei TapAlert.</li>
+                <li><strong>Les credencials de Twilio a l'enllaç</strong> s'emmagatzemen localment al dispositiu de la
+                    persona gran en emmagatzematge segur (xifrat) un cop aplicades.</li>
+                <li>Si creieu que un Magic Link ha estat interceptat, <strong>roteu el vostre Auth Token de
+                        Twilio</strong> a la Consola de Twilio immediatament i genereu un nou Magic Link.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
             <h2>Targeta de referència ràpida (per imprimir per a la persona gran)</h2>
-<pre>┌─────────────────────────────────────────────┐
+            <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
 │  🔴  Big red button  →  Send EMERGENCY      │
@@ -495,7 +958,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només seguretat.</p>
+                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només
+                        seguretat.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Producte</h3>
@@ -516,17 +980,20 @@
                 <div class="footer-section">
                     <h3>Suport</h3>
                     <ul>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies pas a pas</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies
+                                pas a pas</a></li>
                         <li><a href="troubleshooting.html">Resolució de problemes</a></li>
                         <li><a href="contact.html">Contacta amb l'assistència</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet amb ❤️ per la teva seguretat</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet
+                    amb ❤️ per la teva seguretat</p>
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>

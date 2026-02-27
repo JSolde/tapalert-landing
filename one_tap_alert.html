@@ -418,48 +418,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Back to Home</a>
-        
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="ca/one_tap_alert.html" hreflang="ca">CA</a>
-            <a href="de/one_tap_alert.html" hreflang="de">DE</a>
-            <a href="one_tap_alert.html" hreflang="en" class="active">EN</a>
-            <a href="es/one_tap_alert.html" hreflang="es">ES</a>
-            <a href="eu/one_tap_alert.html" hreflang="eu">EU</a>
-            <a href="fr/one_tap_alert.html" hreflang="fr">FR</a>
-            <a href="gl/one_tap_alert.html" hreflang="gl">GL</a>
-            <a href="it/one_tap_alert.html" hreflang="it">IT</a>
-            <a href="nl/one_tap_alert.html" hreflang="nl">NL</a>
-            <a href="pt/one_tap_alert.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">EN</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="ca/one_tap_alert.html" hreflang="ca">CA</a>
+                        <a href="de/one_tap_alert.html" hreflang="de">DE</a>
+                        <a href="one_tap_alert.html" hreflang="en" class="active">EN</a>
+                        <a href="es/one_tap_alert.html" hreflang="es">ES</a>
+                        <a href="eu/one_tap_alert.html" hreflang="eu">EU</a>
+                        <a href="fr/one_tap_alert.html" hreflang="fr">FR</a>
+                        <a href="gl/one_tap_alert.html" hreflang="gl">GL</a>
+                        <a href="it/one_tap_alert.html" hreflang="it">IT</a>
+                        <a href="nl/one_tap_alert.html" hreflang="nl">NL</a>
+                        <a href="pt/one_tap_alert.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -467,50 +559,63 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Back to Guides</a>
 
-        <h1 class="guide-title">One-Tap Alert: All the Ways to Trigger <span class="notranslate" translate="no">TapAlert</span> Instantly</h1>
+        <h1 class="guide-title">One-Tap Alert: All the Ways to Trigger <span class="notranslate"
+                translate="no">TapAlert</span> Instantly</h1>
 
-        <p><span class="notranslate" translate="no">TapAlert</span> can be configured for instant, one-tap emergency alerts using several different methods. This guide covers every option, from home screen widgets to physical buttons and automated timers.</p>
+        <p><span class="notranslate" translate="no">TapAlert</span> can be configured for instant, one-tap emergency
+            alerts using several different methods. This guide covers every option, from home screen widgets to physical
+            buttons and automated timers.</p>
 
         <section class="guide-section">
             <h2>1. 📱 Android Home Screen Widget</h2>
             <p><strong>Platform:</strong> Android only</p>
-            <p>The fastest way to trigger an alert. A dedicated widget sits on your home screen — one tap and the countdown starts immediately.</p>
+            <p>The fastest way to trigger an alert. A dedicated widget sits on your home screen — one tap and the
+                countdown starts immediately.</p>
 
             <h3>How to Set Up</h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → tap the <strong>⚙️ Settings</strong> icon.</li>
+                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → tap the <strong>⚙️
+                        Settings</strong> icon.</li>
                 <li>Scroll to the <strong>Widget</strong> section.</li>
-                <li>Tap <strong>"Add"</strong> → the system will prompt you to place the widget on your home screen.</li>
+                <li>Tap <strong>"Add"</strong> → the system will prompt you to place the widget on your home screen.
+                </li>
                 <li>Drag it to your preferred spot (ideally on your main screen for quick access).</li>
             </ol>
 
             <h3>How It Works</h3>
             <ul>
-                <li><strong>Single tap</strong> on the widget → <span class="notranslate" translate="no">TapAlert</span> opens and the <strong>countdown begins immediately</strong>.</li>
+                <li><strong>Single tap</strong> on the widget → <span class="notranslate" translate="no">TapAlert</span>
+                    opens and the <strong>countdown begins immediately</strong>.</li>
                 <li>You see the countdown dialog and can <strong>cancel</strong> if it was accidental.</li>
                 <li>After the countdown, the alert is sent and the app auto-closes.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Place the widget on your lock screen (if supported by your Android version) or on the very first home screen page for the quickest access.</p>
+                <p>Place the widget on your lock screen (if supported by your Android version) or on the very first home
+                    screen page for the quickest access.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
             <p><strong>Platform:</strong> Android & iPhone</p>
-            <p>Map a <strong>physical button</strong> on your phone (power button, volume key, or back-tap gesture) to launch <span class="notranslate" translate="no">TapAlert</span>. Combined with <strong>Auto-Start on Launch</strong>, this creates a true one-tap panic  button.</p>
+            <p>Map a <strong>physical button</strong> on your phone (power button, volume key, or back-tap gesture) to
+                launch <span class="notranslate" translate="no">TapAlert</span>. Combined with <strong>Auto-Start on
+                    Launch</strong>, this creates a true one-tap panic button.</p>
 
             <h3>Step 1: Enable Auto-Start in <span class="notranslate" translate="no">TapAlert</span></h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️ Settings</strong>.</li>
+                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️
+                        Settings</strong>.</li>
                 <li>Enable <strong>"Auto-Start on Launch"</strong>.</li>
             </ol>
 
             <div class="alert-box warning">
                 <h4>⚠️ WARNING</h4>
-                <p>When Auto-Start is enabled, the countdown will trigger <strong>every time</strong> you open the app — including when you open it normally from the app drawer. Only enable this if you primarily launch via a physical button shortcut.</p>
+                <p>When Auto-Start is enabled, the countdown will trigger <strong>every time</strong> you open the app —
+                    including when you open it normally from the app drawer. Only enable this if you primarily launch
+                    via a physical button shortcut.</p>
             </div>
 
             <h3>Step 2: Configure Your Phone's Button</h3>
@@ -518,47 +623,62 @@
             <h4>Samsung Galaxy (Side Key)</h4>
             <ol>
                 <li><strong>Settings</strong> → <strong>Advanced features</strong> → <strong>Side key</strong>.</li>
-                <li>Enable <strong>Double press</strong> → <strong>Open app</strong> → select <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Enable <strong>Double press</strong> → <strong>Open app</strong> → select <strong><span
+                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Double-press the power button to trigger.</li>
             </ol>
 
             <h4>Google Pixel (Quick Tap)</h4>
             <ol>
-                <li><strong>Settings</strong> → <strong>System</strong> → <strong>Gestures</strong> → <strong>Quick Tap to start actions</strong>.</li>
-                <li>Enable <strong>Use Quick Tap</strong> → <strong>Open app</strong> → select <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Settings</strong> → <strong>System</strong> → <strong>Gestures</strong> → <strong>Quick Tap
+                        to start actions</strong>.</li>
+                <li>Enable <strong>Use Quick Tap</strong> → <strong>Open app</strong> → select <strong><span
+                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Double-tap the back of your phone to trigger.</li>
             </ol>
 
             <h4>iPhone 15 Pro+ (Action Button)</h4>
             <ol>
-                <li><strong>Settings</strong> → <strong>Action Button</strong> → swipe to <strong>Shortcut</strong>.</li>
-                <li>Tap selector → <strong>Open App</strong> → choose <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Settings</strong> → <strong>Action Button</strong> → swipe to <strong>Shortcut</strong>.
+                </li>
+                <li>Tap selector → <strong>Open App</strong> → choose <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong>.</li>
                 <li>Hold the Action Button to trigger.</li>
             </ol>
 
             <h4>iPhone — All Models (Back Tap)</h4>
             <ol>
-                <li><strong>Settings</strong> → <strong>Accessibility</strong> → <strong>Touch</strong> → <strong>Back Tap</strong>.</li>
+                <li><strong>Settings</strong> → <strong>Accessibility</strong> → <strong>Touch</strong> → <strong>Back
+                        Tap</strong>.</li>
                 <li>Choose <strong>Double Tap</strong> or <strong>Triple Tap</strong>.</li>
                 <li>To link to <span class="notranslate" translate="no">TapAlert</span>, first create a Shortcut:
                     <ul>
-                        <li>Open <strong>Shortcuts</strong> app → <strong>+</strong> → <strong>Add Action</strong> → <strong>Open App</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                        <li>Open <strong>Shortcuts</strong> app → <strong>+</strong> → <strong>Add Action</strong> →
+                            <strong>Open App</strong> → <strong><span class="notranslate"
+                                    translate="no">TapAlert</span></strong>.
+                        </li>
                         <li>Name it "Open <span class="notranslate" translate="no">TapAlert</span>".</li>
                     </ul>
                 </li>
-                <li>Go back to <strong>Back Tap</strong> settings → select your "Open <span class="notranslate" translate="no">TapAlert</span>" shortcut.</li>
+                <li>Go back to <strong>Back Tap</strong> settings → select your "Open <span class="notranslate"
+                        translate="no">TapAlert</span>" shortcut.</li>
             </ol>
 
             <h4>Any Android (Button Mapper Apps)</h4>
-            <p>If your device lacks built-in button remapping, install <strong>"Button Mapper"</strong> or <strong>"MacroDroid"</strong> from the Play Store:</p>
+            <p>If your device lacks built-in button remapping, install <strong>"Button Mapper"</strong> or
+                <strong>"MacroDroid"</strong> from the Play Store:
+            </p>
             <ul>
-                <li>Remap any hardware key (volume buttons, etc.) to <strong>Open Application</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Remap any hardware key (volume buttons, etc.) to <strong>Open Application</strong> → <strong><span
+                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
             </ul>
 
             <h3>How It Works</h3>
             <ol>
                 <li>Press your configured button/gesture.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> opens → the countdown starts <strong>automatically</strong> (if Auto-Start is enabled).</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> opens → the countdown starts
+                    <strong>automatically</strong> (if Auto-Start is enabled).
+                </li>
                 <li>The alert is sent and the app auto-closes.</li>
                 <li>Works even from a locked screen (with proper battery optimization — see below).</li>
             </ol>
@@ -568,25 +688,33 @@
             <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
                     translate="no">SOS</span> / OK)</h2>
             <p><strong>Platform:</strong> Android & iOS</p>
-            <p><span class="notranslate" translate="no">Panic Mode</span> transforms the entire screen into two giant  buttons — <strong><span class="notranslate" translate="no">SOS</span></strong> and <strong>I'm OK</strong> — making it virtually impossible to miss.</p>
+            <p><span class="notranslate" translate="no">Panic Mode</span> transforms the entire screen into two giant
+                buttons — <strong><span class="notranslate" translate="no">SOS</span></strong> and <strong>I'm
+                    OK</strong> — making it virtually impossible to miss.</p>
 
             <h3>How to Enable</h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> and it will open by default in <span class="notranslate" translate="no">Panic Mode</span>.</li>
-                <li>Remember: you can switch from Configured message Alerts to <span class="notranslate" translate="no">Panic mode</span> swiping left/right on the home screen or tap the mode icon in the top bar.</li>
+                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> and it will open by
+                    default in <span class="notranslate" translate="no">Panic Mode</span>.</li>
+                <li>Remember: you can switch from Configured message Alerts to <span class="notranslate"
+                        translate="no">Panic mode</span> swiping left/right on the home screen or tap the mode icon in
+                    the top bar.</li>
             </ol>
 
             <h3>How It Works</h3>
             <ul>
-                <li><strong>Tap the large red <span class="notranslate" translate="no">SOS</span> button</strong> → countdown starts for an emergency alert.</li>
+                <li><strong>Tap the large red <span class="notranslate" translate="no">SOS</span> button</strong> →
+                    countdown starts for an emergency alert.</li>
                 <li><strong>Tap the green I'm OK button</strong> → sends a reassurance message.</li>
-                <li><strong>Emergency Call button</strong> at the bottom dials your local emergency number (112, 911, etc.).</li>
+                <li><strong>Emergency Call button</strong> at the bottom dials your local emergency number (112, 911,
+                    etc.).</li>
             </ul>
 
             <h3>Trigger Method: Tap vs. Hold</h3>
             <p>For added safety, you can require a <strong>5-second press-and-hold</strong> instead of a single tap:</p>
             <ul>
-                <li><strong>Settings</strong> → <strong>Trigger Method</strong> → <strong>Press & Hold (5s)</strong>.</li>
+                <li><strong>Settings</strong> → <strong>Trigger Method</strong> → <strong>Press & Hold (5s)</strong>.
+                </li>
                 <li>This prevents accidental triggers while still being fast enough in emergencies.</li>
             </ul>
         </section>
@@ -594,7 +722,9 @@
         <section class="guide-section">
             <h2>4. 🎙️ Voice Quick Alert</h2>
             <p><strong>Platform:</strong> Android & iOS</p>
-            <p>In <span class="notranslate" translate="no">Panic mode</span> you can also send an alert with a <strong>voice-dictated message</strong> in one action — ideal when you can't type.</p>
+            <p>In <span class="notranslate" translate="no">Panic mode</span> you can also send an alert with a
+                <strong>voice-dictated message</strong> in one action — ideal when you can't type.
+            </p>
             <ol>
                 <li>Tap the <strong>🎤 Microphone</strong> button next to <span class="notranslate"
                         translate="no">SOS</span> or I'm OK.</li>
@@ -606,7 +736,8 @@
         <section class="guide-section">
             <h2>5. ⏳ Check-in Timer (Dead Man's Switch)</h2>
             <p><strong>Platform:</strong> Android & iOS</p>
-            <p>The timer sends an alert <strong>automatically</strong> if you don't check in — no tap required at all.</p>
+            <p>The timer sends an alert <strong>automatically</strong> if you don't check in — no tap required at all.
+            </p>
 
             <h3>How to Set Up</h3>
             <ol>
@@ -620,25 +751,32 @@
             <ul>
                 <li>A persistent notification counts down the remaining time.</li>
                 <li>If you check in (tap <strong>"I'm OK / Reset"</strong>) → timer resets, no alert sent.</li>
-                <li>If you don't check in → <span class="notranslate" translate="no">TapAlert</span> automatically sends your alert with location to all recipients.</li>
+                <li>If you don't check in → <span class="notranslate" translate="no">TapAlert</span> automatically sends
+                    your alert with location to all recipients.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Perfect for solo activities: hiking, walking home at night, meeting strangers, or traveling alone.</p>
+                <p>Perfect for solo activities: hiking, walking home at night, meeting strangers, or traveling alone.
+                </p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
-            <p>For <strong>physical button</strong> and <strong>widget</strong> triggers to work reliably — especially from a locked/sleeping screen — you must disable battery optimization for <span class="notranslate" translate="no">TapAlert</span>.</p>
+            <p>For <strong>physical button</strong> and <strong>widget</strong> triggers to work reliably — especially
+                from a locked/sleeping screen — you must disable battery optimization for <span class="notranslate"
+                    translate="no">TapAlert</span>.</p>
 
             <h3>Why?</h3>
-            <p>Android manufacturers aggressively kill background apps to save battery. This can prevent <span class="notranslate" translate="no">TapAlert</span> from waking your phone when the screen is off.</p>
+            <p>Android manufacturers aggressively kill background apps to save battery. This can prevent <span
+                    class="notranslate" translate="no">TapAlert</span> from waking your phone when the screen is off.
+            </p>
 
             <h3>Quick Steps (All Devices)</h3>
             <ol>
-                <li><strong>Settings</strong> → <strong>Apps</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>Battery</strong>.</li>
+                <li><strong>Settings</strong> → <strong>Apps</strong> → <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong> → <strong>Battery</strong>.</li>
                 <li>Select <strong>"Don't optimize"</strong> or <strong>"Unrestricted"</strong>.</li>
                 <li>Enable <strong>"Allow background activity"</strong>.</li>
             </ol>
@@ -647,7 +785,8 @@
             <ol>
                 <li>Lock your phone and wait 1–2 minutes (screen fully off).</li>
                 <li>Press your configured physical button or tap the widget.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> should open and start the countdown instantly.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> should open and start the countdown
+                    instantly.</li>
             </ol>
         </section>
 
@@ -679,7 +818,8 @@
                         <td>Moderate</td>
                     </tr>
                     <tr>
-                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span> button)</td>
+                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
+                                translate="no">SOS</span> button)</td>
                         <td>Android & iOS</td>
                         <td>2 (open app + tap)</td>
                         <td>—</td>
@@ -709,7 +849,8 @@
 
             <h3>👴 For Senior Users</h3>
             <ul>
-                <li>Use <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (big <span class="notranslate" translate="no">SOS</span> / I'm OK buttons).</li>
+                <li>Use <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (big <span
+                        class="notranslate" translate="no">SOS</span> / I'm OK buttons).</li>
                 <li>Set <strong>Trigger Method</strong> to <strong>Tap</strong> (simplest interaction).</li>
                 <li>Add the <strong>Android widget</strong> to the home screen.</li>
                 <li>Set countdown to <strong>10 - 15 seconds</strong> (time to cancel mistakes).</li>
@@ -718,16 +859,20 @@
             <h3>🏃 For Active / Solo Users</h3>
             <ul>
                 <li>Set up the <strong>Check-in Timer</strong> before activities.</li>
-                <li>Configure a <strong>physical button</strong> for instant <span class="notranslate" translate="no">SOS</span>.</li>
-                <li>Enable <strong><span class="notranslate" translate="no">Smart Redundancy</span></strong> (auto-<span class="notranslate" translate="no">fallback</span> between SMS methods).</li>
+                <li>Configure a <strong>physical button</strong> for instant <span class="notranslate"
+                        translate="no">SOS</span>.</li>
+                <li>Enable <strong><span class="notranslate" translate="no">Smart Redundancy</span></strong> (auto-<span
+                        class="notranslate" translate="no">fallback</span> between SMS methods).</li>
                 <li>Enable <strong>Email Redundancy</strong> for areas with Wi-Fi only.</li>
             </ul>
 
             <h3>🔒 For Maximum Security</h3>
             <ul>
                 <li>Configure <strong>physical button</strong> with <strong>Auto-Start</strong>.</li>
-                <li>Set <strong>Trigger Method</strong> to <strong>Press & Hold (5s)</strong> to prevent accidental triggers.</li>
-                <li>Enable <strong>both</strong> <span class="notranslate" translate="no">Smart Redundancy</span> and Email Redundancy.</li>
+                <li>Set <strong>Trigger Method</strong> to <strong>Press & Hold (5s)</strong> to prevent accidental
+                    triggers.</li>
+                <li>Enable <strong>both</strong> <span class="notranslate" translate="no">Smart Redundancy</span> and
+                    Email Redundancy.</li>
                 <li>Disable battery optimization and test from locked screen.</li>
             </ul>
         </section>
@@ -765,7 +910,8 @@
                     <h3>Support</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by Step Guides</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by
+                                Step Guides</a></li>
                         <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
                         <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
@@ -774,7 +920,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made
+                    with ❤️ for your safety</p>
             </div>
         </div>
     </footer>

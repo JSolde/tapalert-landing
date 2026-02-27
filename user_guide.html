@@ -175,7 +175,8 @@
             color: #4a5568;
         }
 
-        ul, ol {
+        ul,
+        ol {
             margin-bottom: 20px;
             padding-left: 20px;
             color: #4a5568;
@@ -197,7 +198,7 @@
             margin-bottom: 0;
         }
 
-        blockquote p + p {
+        blockquote p+p {
             margin-top: 10px;
         }
 
@@ -311,46 +312,188 @@
         }
 
         @media (max-width: 768px) {
-            body { font-size: 14px; }
-            .brand-logo { font-size: 1.2rem; }
-            .btn { padding: 8px 16px; font-size: 0.85rem; }
-            .guide-container { padding: 20px; margin: 20px; }
-            .guide-title { font-size: 1.8rem; padding-bottom: 15px; margin-bottom: 15px; }
-            .guide-intro { font-size: 1.05rem; margin-bottom: 30px; }
-            h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; }
-            h3 { font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px; }
-            h4 { font-size: 1rem; }
-            p, li { font-size: 0.9rem; }
-            blockquote { padding: 15px; margin: 15px 0; }
-            code { font-size: 0.85rem; }
-            .guide-section { margin-bottom: 30px; }
-            table { font-size: 0.85rem; }
-            th, td { padding: 8px 10px; }
-            footer { padding: 40px 15px 20px; margin-top: 40px; }
-            .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-            .footer-section h3 { font-size: 1rem; margin-bottom: 12px; }
-            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.85rem; }
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .guide-intro {
+                font-size: 1.05rem;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            blockquote {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            code {
+                font-size: 0.85rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th,
+            td {
+                padding: 8px 10px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
         }
 
         @media (max-width: 430px) {
-            body { font-size: 13px; }
-            .brand-logo { font-size: 1.1rem; }
-            .btn { padding: 7px 14px; font-size: 0.8rem; }
-            .guide-container { padding: 15px; margin: 12px; }
-            .guide-title { font-size: 1.5rem; padding-bottom: 12px; }
-            .guide-intro { font-size: 0.95rem; margin-bottom: 25px; }
-            h2 { font-size: 1.3rem; margin-top: 25px; padding-left: 10px; border-left-width: 4px; }
-            h3 { font-size: 1.05rem; }
-            h4 { font-size: 0.95rem; }
-            p, li { font-size: 0.85rem; }
-            blockquote { padding: 12px; }
-            code { font-size: 0.8rem; }
-            table { font-size: 0.8rem; }
-            th, td { padding: 6px 8px; }
-            footer { padding: 30px 12px 15px; margin-top: 30px; }
-            .footer-content { gap: 20px; grid-template-columns: 1fr; }
-            .footer-section h3 { font-size: 0.95rem; margin-bottom: 10px; }
-            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.8rem; }
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            .guide-intro {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            h4 {
+                font-size: 0.95rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            blockquote {
+                padding: 12px;
+            }
+
+            code {
+                font-size: 0.8rem;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -361,48 +504,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <img src="media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Back to Home</a>
-        
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="ca/user_guide.html" hreflang="ca">CA</a>
-            <a href="de/user_guide.html" hreflang="de">DE</a>
-            <a href="user_guide.html" hreflang="en" class="active">EN</a>
-            <a href="es/user_guide.html" hreflang="es">ES</a>
-            <a href="eu/user_guide.html" hreflang="eu">EU</a>
-            <a href="fr/user_guide.html" hreflang="fr">FR</a>
-            <a href="gl/user_guide.html" hreflang="gl">GL</a>
-            <a href="it/user_guide.html" hreflang="it">IT</a>
-            <a href="nl/user_guide.html" hreflang="nl">NL</a>
-            <a href="pt/user_guide.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">EN</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="ca/user_guide.html" hreflang="ca">CA</a>
+                        <a href="de/user_guide.html" hreflang="de">DE</a>
+                        <a href="user_guide.html" hreflang="en" class="active">EN</a>
+                        <a href="es/user_guide.html" hreflang="es">ES</a>
+                        <a href="eu/user_guide.html" hreflang="eu">EU</a>
+                        <a href="fr/user_guide.html" hreflang="fr">FR</a>
+                        <a href="gl/user_guide.html" hreflang="gl">GL</a>
+                        <a href="it/user_guide.html" hreflang="it">IT</a>
+                        <a href="nl/user_guide.html" hreflang="nl">NL</a>
+                        <a href="pt/user_guide.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -411,7 +646,8 @@
         <a href="index.html#guides" class="back-link">← Back to Guides</a>
 
         <h1 class="guide-title">User Guide: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">A personal safety app that sends SMS and email alerts to your emergency contacts with your GPS location — with a single tap.</p>
+        <p class="guide-intro">A personal safety app that sends SMS and email alerts to your emergency contacts with
+            your GPS location — with a single tap.</p>
 
         <!-- Table of Contents -->
         <nav class="toc">
@@ -438,7 +674,8 @@
         <!-- 1. Permissions -->
         <section class="guide-section" id="permissions">
             <h2>1. 🔐 First Launch: Permissions</h2>
-            <p>On first launch, TapAlert will walk you through a permissions setup screen. Grant the following for full functionality:</p>
+            <p>On first launch, TapAlert will walk you through a permissions setup screen. Grant the following for full
+                functionality:</p>
             <table>
                 <thead>
                     <tr>
@@ -447,15 +684,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td><strong>Location</strong></td><td>Includes your GPS coordinates and address in alerts</td></tr>
-                    <tr><td><strong>Microphone / Speech</strong></td><td>Allows voice-to-text for custom alert messages</td></tr>
-                    <tr><td><strong>Contacts</strong></td><td>Lets you pick recipients from your phone's address book</td></tr>
-                    <tr><td><strong>Notifications</strong></td><td>Shows confirmation when an alert is sent</td></tr>
-                    <tr><td><strong>SMS (Android only)</strong></td><td>Sends alerts directly from your SIM card</td></tr>
-                    <tr><td><strong>Phone State (Android only)</strong></td><td>Detects cellular availability for smart fallback</td></tr>
+                    <tr>
+                        <td><strong>Location</strong></td>
+                        <td>Includes your GPS coordinates and address in alerts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Microphone / Speech</strong></td>
+                        <td>Allows voice-to-text for custom alert messages</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contacts</strong></td>
+                        <td>Lets you pick recipients from your phone's address book</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Notifications</strong></td>
+                        <td>Shows confirmation when an alert is sent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SMS (Android only)</strong></td>
+                        <td>Sends alerts directly from your SIM card</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phone State (Android only)</strong></td>
+                        <td>Detects cellular availability for smart fallback</td>
+                    </tr>
                 </tbody>
             </table>
-            <p>You can grant or skip any permission during setup and adjust them later in your device's system settings.</p>
+            <p>You can grant or skip any permission during setup and adjust them later in your device's system settings.
+            </p>
         </section>
 
         <!-- 2. Home Screen Overview -->
@@ -498,18 +754,23 @@
             <ul>
                 <li>SOS button — sends an "SOS, I need help" alert with your location.</li>
                 <li>I'm OK button — sends a reassuring "I'm OK" status to all contacts.</li>
-                <li>Voice buttons — tap the microphone icon next to SOS or I'm OK to record a voice message. Your speech is transcribed to text and included in the alert.</li>
-                <li>Emergency Call button — dials your local emergency number (e.g., 112, 911) immediately, based on your country setting.</li>
+                <li>Voice buttons — tap the microphone icon next to SOS or I'm OK to record a voice message. Your speech
+                    is transcribed to text and included in the alert.</li>
+                <li>Emergency Call button — dials your local emergency number (e.g., 112, 911) immediately, based on
+                    your country setting.</li>
             </ul>
         </section>
 
         <!-- 4. Situation Alerts Mode -->
         <section class="guide-section" id="situation-alerts-mode">
             <h2>4. 📋 Situation Alerts Mode</h2>
-            <p>Swipe left from Panic Mode to access Situation Alerts Mode. This page shows a list of 3 pre-configured alert buttons.</p>
-            <p>You can edit the situation alert text using the edit button on the bottom of the screen and then selecting the message to be edited.</p>
+            <p>Swipe left from Panic Mode to access Situation Alerts Mode. This page shows a list of 3 pre-configured
+                alert buttons.</p>
+            <p>You can edit the situation alert text using the edit button on the bottom of the screen and then
+                selecting the message to be edited.</p>
             <p>The messages are sent tapping the corresponding button.</p>
-            <p>If you want to add a voice message to the button text you can use the microphone button besides it corresponding alert.</p>
+            <p>If you want to add a voice message to the button text you can use the microphone button besides it
+                corresponding alert.</p>
         </section>
 
         <!-- 5. Managing Recipients -->
@@ -524,7 +785,8 @@
             </ul>
             <blockquote class="alert-note">
                 <p>Free tier: up to 1 recipient. Premium: up to 50 recipients.</p>
-                <p>iOS tip: If you only see a few contacts, go to Settings > Privacy > Contacts > TapAlert and select All Contacts.</p>
+                <p>iOS tip: If you only see a few contacts, go to Settings > Privacy > Contacts > TapAlert and select
+                    All Contacts.</p>
             </blockquote>
         </section>
 
@@ -553,7 +815,8 @@
             <h2>7. ⏱️ Countdown Dialog</h2>
             <p>Before sending, TapAlert shows a countdown to prevent accidental alerts.</p>
             <ul>
-                <li>Default duration: 10 seconds. Adjustable from 0 (immediate) to 30 seconds in Settings > Countdown Duration.</li>
+                <li>Default duration: 10 seconds. Adjustable from 0 (immediate) to 30 seconds in Settings > Countdown
+                    Duration.</li>
                 <li>Cancel: Tap CANCEL any time during the countdown to abort.</li>
                 <li>Send immediately: Tap SEND NOW to skip the remaining delay.</li>
             </ul>
@@ -562,7 +825,9 @@
         <!-- 8. Check-in Timer -->
         <section class="guide-section" id="checkin-timer">
             <h2>8. ⏰ Check-in Timer (Premium)</h2>
-            <p>The Check-in Timer is a dead man's switch: if you don't cancel it in time, TapAlert automatically sends an alert. Useful for hiking, traveling alone, or any situation where you want someone notified if you stop responding.</p>
+            <p>The Check-in Timer is a dead man's switch: if you don't cancel it in time, TapAlert automatically sends
+                an alert. Useful for hiking, traveling alone, or any situation where you want someone notified if you
+                stop responding.</p>
 
             <h3>To start:</h3>
             <ol>
@@ -586,7 +851,8 @@
             </ul>
 
             <blockquote class="alert-warning">
-                <p>Android: The timer runs as a foreground service and remains active when the app is in the background or the screen is off.</p>
+                <p>Android: The timer runs as a foreground service and remains active when the app is in the background
+                    or the screen is off.</p>
                 <p>iOS: The timer may not fire if the app is force-closed. Keep the app running in the background.</p>
             </blockquote>
         </section>
@@ -612,11 +878,13 @@
             <h4>Android:</h4>
             <ul>
                 <li>Direct SMS — sends via your SIM card, no internet needed. Preferred when cellular is available.</li>
-                <li>Twilio — sends via the Twilio API over internet (Wi-Fi or data). Used as automatic fallback if Direct SMS fails.</li>
+                <li>Twilio — sends via the Twilio API over internet (Wi-Fi or data). Used as automatic fallback if
+                    Direct SMS fails.</li>
             </ul>
             <h4>iOS:</h4>
             <ul>
-                <li>iOS Messages (Manual) — opens the native Messages app pre-filled. You tap Send manually. No Twilio account needed.</li>
+                <li>iOS Messages (Manual) — opens the native Messages app pre-filled. You tap Send manually. No Twilio
+                    account needed.</li>
                 <li>Twilio (Automatic) — sends automatically via the Twilio API. Requires a Twilio account.</li>
             </ul>
             <blockquote class="alert-note">
@@ -624,7 +892,8 @@
             </blockquote>
 
             <h3>Email Redundancy</h3>
-            <p>Configure SMTP email to send alerts via email in addition to SMS. Useful when SMS is unavailable but Wi-Fi is connected.</p>
+            <p>Configure SMTP email to send alerts via email in addition to SMS. Useful when SMS is unavailable but
+                Wi-Fi is connected.</p>
             <ol>
                 <li>Go to Settings > Email Redundancy.</li>
                 <li>Enable Email Redundancy.</li>
@@ -643,16 +912,19 @@
             <h3>Trigger Method</h3>
             <ul>
                 <li>Tap to Send — a single tap starts the countdown.</li>
-                <li>Press and Hold (5s) — you must hold the button for 5 seconds. Recommended to prevent accidental sends.</li>
+                <li>Press and Hold (5s) — you must hold the button for 5 seconds. Recommended to prevent accidental
+                    sends.</li>
             </ul>
 
             <h3>Alert Countdown</h3>
-            <p>Set the delay before the alert sends (0–30 seconds). A longer countdown gives you more time to cancel if triggered by mistake.</p>
+            <p>Set the delay before the alert sends (0–30 seconds). A longer countdown gives you more time to cancel if
+                triggered by mistake.</p>
 
             <h3>Sound Settings</h3>
             <ul>
                 <li>Choose between Plain Sounds or Rich Sounds (or None).</li>
-                <li>Sound Pattern — select from Fast Alert, Short Beeps, Musical Chime, Wailing Siren, Pulse Ringing, Pipe Organ, Metallic Ring, or Electronic Hive.</li>
+                <li>Sound Pattern — select from Fast Alert, Short Beeps, Musical Chime, Wailing Siren, Pulse Ringing,
+                    Pipe Organ, Metallic Ring, or Electronic Hive.</li>
                 <li>Sound Pitch — Low, Standard, or High.</li>
                 <li>Volume — adjust with the slider.</li>
                 <li>SOS and I'm OK alerts have independent sound patterns.</li>
@@ -663,7 +935,8 @@
                 <li>Your Name — included in outgoing messages so recipients know who sent the alert.</li>
                 <li>Countdown Duration — delay before sending (see above).</li>
                 <li>Number of configured alerts — how many text slots appear in Standard Mode (3–7).</li>
-                <li>Auto-Start on Launch — triggers the countdown immediately when the app opens. Only enable this if you launch TapAlert via a physical button shortcut.</li>
+                <li>Auto-Start on Launch — triggers the countdown immediately when the app opens. Only enable this if
+                    you launch TapAlert via a physical button shortcut.</li>
                 <li>Flash on Alert — flashes the screen and torch when an alert is sent.</li>
                 <li>Home Country — ensures local phone numbers are formatted correctly.</li>
                 <li>App Language — override the interface language (default: device language).</li>
@@ -686,14 +959,16 @@
             <h3>How it works:</h3>
             <ul>
                 <li>Tapping the widget opens the app and immediately starts the alert countdown.</li>
-                <li>The sound plays and the countdown dialog appears — you can still cancel if triggered by mistake.</li>
+                <li>The sound plays and the countdown dialog appears — you can still cancel if triggered by mistake.
+                </li>
             </ul>
         </section>
 
         <!-- 12. Making Alerts Stand Out -->
         <section class="guide-section" id="stand-out">
             <h2>12. 🔔 Making Alerts Stand Out on Recipients' Phones</h2>
-            <p>Your recipients can configure their phones to give TapAlert messages a special ringtone or bypass Do Not Disturb.</p>
+            <p>Your recipients can configure their phones to give TapAlert messages a special ringtone or bypass Do Not
+                Disturb.</p>
 
             <h3>iPhone recipients:</h3>
             <ol>
@@ -712,7 +987,8 @@
             </ol>
 
             <blockquote class="alert-tip">
-                <p>Using Twilio? Your contacts will receive messages from your Twilio number or sender ID (e.g., TapAlert). They should add that number/ID to their contacts for the above settings to apply.</p>
+                <p>Using Twilio? Your contacts will receive messages from your Twilio number or sender ID (e.g.,
+                    TapAlert). They should add that number/ID to their contacts for the above settings to apply.</p>
             </blockquote>
         </section>
 
@@ -720,8 +996,11 @@
         <section class="guide-section" id="magic-link">
             <h2>13. 🔗 Remote Setup (Magic Link)</h2>
             <p>A family member or caregiver can configure TapAlert on your device remotely using a Magic Link.</p>
-            <p>The caregiver opens TapAlert, selects Set Up for Someone Else, fills in the contacts, message templates, and optional Twilio/email credentials, then generates a setup link. When you tap that link on your device, TapAlert applies the full configuration automatically.</p>
-            <p>This means a tech-savvy family member can set everything up without needing to be present — you just tap a link.</p>
+            <p>The caregiver opens TapAlert, selects Set Up for Someone Else, fills in the contacts, message templates,
+                and optional Twilio/email credentials, then generates a setup link. When you tap that link on your
+                device, TapAlert applies the full configuration automatically.</p>
+            <p>This means a tech-savvy family member can set everything up without needing to be present — you just tap
+                a link.</p>
         </section>
 
         <!-- 14. Premium Upgrade -->
@@ -737,12 +1016,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Recipients</td><td>1</td><td>Up to 50</td></tr>
-                    <tr><td>Alert history</td><td>20 entries</td><td>200 entries</td></tr>
-                    <tr><td>Check-in Timer</td><td>—</td><td>✓</td></tr>
+                    <tr>
+                        <td>Recipients</td>
+                        <td>1</td>
+                        <td>Up to 50</td>
+                    </tr>
+                    <tr>
+                        <td>Alert history</td>
+                        <td>20 entries</td>
+                        <td>200 entries</td>
+                    </tr>
+                    <tr>
+                        <td>Check-in Timer</td>
+                        <td>—</td>
+                        <td>✓</td>
+                    </tr>
                 </tbody>
             </table>
-            <p>Tap Upgrade from the recipients screen or the timer page. If you have already purchased Premium on another device, tap Restore Purchases.</p>
+            <p>Tap Upgrade from the recipients screen or the timer page. If you have already purchased Premium on
+                another device, tap Restore Purchases.</p>
         </section>
 
         <!-- 15. Troubleshooting -->
@@ -756,14 +1048,38 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Alert not sending (Direct SMS)</td><td>Check cellular signal and SIM credits</td></tr>
-                    <tr><td>Alert not sending (Twilio)</td><td>Check internet connection and Twilio credentials in Settings</td></tr>
-                    <tr><td>Location missing</td><td>Enable GPS in system settings and grant Location permission to TapAlert</td></tr>
-                    <tr><td>Address not showing</td><td>Enable Include Address in Settings; requires internet for geocoding</td></tr>
-                    <tr><td>Contacts not appearing (iOS)</td><td>Settings > Privacy > Contacts > TapAlert > All Contacts</td></tr>
-                    <tr><td>Contacts not appearing (Android)</td><td>Settings > Apps > TapAlert > Permissions > enable Contacts</td></tr>
-                    <tr><td>Timer not firing (iOS)</td><td>Keep TapAlert open in the background; the timer may not fire if the app is force-closed</td></tr>
-                    <tr><td>Wrong language shown</td><td>Settings > App Language — select your preferred language manually</td></tr>
+                    <tr>
+                        <td>Alert not sending (Direct SMS)</td>
+                        <td>Check cellular signal and SIM credits</td>
+                    </tr>
+                    <tr>
+                        <td>Alert not sending (Twilio)</td>
+                        <td>Check internet connection and Twilio credentials in Settings</td>
+                    </tr>
+                    <tr>
+                        <td>Location missing</td>
+                        <td>Enable GPS in system settings and grant Location permission to TapAlert</td>
+                    </tr>
+                    <tr>
+                        <td>Address not showing</td>
+                        <td>Enable Include Address in Settings; requires internet for geocoding</td>
+                    </tr>
+                    <tr>
+                        <td>Contacts not appearing (iOS)</td>
+                        <td>Settings > Privacy > Contacts > TapAlert > All Contacts</td>
+                    </tr>
+                    <tr>
+                        <td>Contacts not appearing (Android)</td>
+                        <td>Settings > Apps > TapAlert > Permissions > enable Contacts</td>
+                    </tr>
+                    <tr>
+                        <td>Timer not firing (iOS)</td>
+                        <td>Keep TapAlert open in the background; the timer may not fire if the app is force-closed</td>
+                    </tr>
+                    <tr>
+                        <td>Wrong language shown</td>
+                        <td>Settings > App Language — select your preferred language manually</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -801,7 +1117,8 @@
                     <h3>Support</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by Step Guides</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Step by
+                                Step Guides</a></li>
                         <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
                         <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
@@ -810,7 +1127,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made
+                    with ❤️ for your safety</p>
             </div>
         </div>
     </footer>

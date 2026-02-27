@@ -418,48 +418,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
-        
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">EU</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
-            <a href="../de/one_tap_alert.html" hreflang="de">DE</a>
-            <a href="../one_tap_alert.html" hreflang="en">EN</a>
-            <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
-            <a href="../eu/one_tap_alert.html" hreflang="eu" class="active">EU</a>
-            <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
-            <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
-            <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
-            <a href="../nl/one_tap_alert.html" hreflang="nl">NL</a>
-            <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">EU</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
+                        <a href="../de/one_tap_alert.html" hreflang="de">DE</a>
+                        <a href="../one_tap_alert.html" hreflang="en">EN</a>
+                        <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
+                        <a href="../eu/one_tap_alert.html" hreflang="eu" class="active">EU</a>
+                        <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
+                        <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
+                        <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
+                        <a href="../nl/one_tap_alert.html" hreflang="nl">NL</a>
+                        <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -467,98 +559,132 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Itzuli Gidetara</a>
 
-        <h1 class="guide-title">Kolpe bakarreko alerta: <span class="notranslate" translate="no">TapAlert</span> berehala abiarazteko modu guztiak</h1>
+        <h1 class="guide-title">Kolpe bakarreko alerta: <span class="notranslate" translate="no">TapAlert</span>
+            berehala abiarazteko modu guztiak</h1>
 
-        <p><span class="notranslate" translate="no">TapAlert</span> berehalako ukitu bakarreko larrialdi-alertak egiteko konfigura daiteke hainbat metodo erabiliz. Gida honek aukera guztiak biltzen ditu, hasierako pantailako widgetetatik hasi etabotoia fisikoetara eta tenporizadore automatizatuetara.</p>
+        <p><span class="notranslate" translate="no">TapAlert</span> berehalako ukitu bakarreko larrialdi-alertak egiteko
+            konfigura daiteke hainbat metodo erabiliz. Gida honek aukera guztiak biltzen ditu, hasierako pantailako
+            widgetetatik hasi etabotoia fisikoetara eta tenporizadore automatizatuetara.</p>
 
         <section class="guide-section">
             <h2>1. 📱 Android Hasierako pantailaren widgeta</h2>
             <p><strong>Plataforma:</strong> Android only</p>
-            <p>Alerta bat abiarazteko modurik azkarrena. Widget dedikatu bat zure hasierako pantailan dago: sakatu bat eta atzerako kontaketa berehala hasiko da.</p>
+            <p>Alerta bat abiarazteko modurik azkarrena. Widget dedikatu bat zure hasierako pantailan dago: sakatu bat
+                eta atzerako kontaketa berehala hasiko da.</p>
 
             <h3>Nola Konfiguratu</h3>
             <ol>
-                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> → sakatu <strong>⚙️ Ezarpenak</strong> ikonoa.</li>
+                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> → sakatu <strong>⚙️
+                        Ezarpenak</strong> ikonoa.</li>
                 <li>Joan <strong>Widget</strong> atalera.</li>
-                <li>Sakatu <strong>"Gehitu"</strong> → sistemak widget-a hasierako pantailan jartzeko eskatuko dizu.</li>
+                <li>Sakatu <strong>"Gehitu"</strong> → sistemak widget-a hasierako pantailan jartzeko eskatuko dizu.
+                </li>
                 <li>Arrastatu nahi duzun tokira (egokiena zure pantaila nagusian sarbide azkarra izateko).</li>
             </ol>
 
             <h3>Nola Funtzionatzen Du</h3>
             <ul>
-                <li><strong>Ukitu bakarra</strong> widget-ean → <span class="notranslate" translate="no">TapAlert</span> irekitzen da eta <strong>atzerako kontaketa berehala hasiko da</strong>.</li>
-                <li>Atzerako kontaketa elkarrizketa-koadroa ikusiko duzu eta <strong>bertan behera utzi</strong> dezakezu a gisahala bada.</li>
+                <li><strong>Ukitu bakarra</strong> widget-ean → <span class="notranslate" translate="no">TapAlert</span>
+                    irekitzen da eta <strong>atzerako kontaketa berehala hasiko da</strong>.</li>
+                <li>Atzerako kontaketa elkarrizketa-koadroa ikusiko duzu eta <strong>bertan behera utzi</strong>
+                    dezakezu a gisahala bada.</li>
                 <li>Atzerako kontaketa egin ondoren, alerta bidaliko da eta aplikazioa automatikoki ixten da.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Jarri widget-a blokeo-pantailan (zure Android bertsioak onartzen badu) edo hasierako pantailako lehen orrialdean sarbide azkarrena izateko.</p>
+                <p>Jarri widget-a blokeo-pantailan (zure Android bertsioak onartzen badu) edo hasierako pantailako lehen
+                    orrialdean sarbide azkarrena izateko.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
             <p><strong>Plataforma:</strong> Android & iPhone</p>
-            <p>Mapeatu <strong>fisikobotoia</strong> telefonoan (piztekobotoia, bolumen-tekla edo atzera ukitzeko keinua) <span class="notranslate" translate="no">TapAlert</span> abiarazteko. <strong>Abiaraztean abiarazte automatikoa</strong>rekin batera, kolpe bakarreko benetako izua sortzen du botoia.</p>
+            <p>Mapeatu <strong>fisikobotoia</strong> telefonoan (piztekobotoia, bolumen-tekla edo atzera ukitzeko
+                keinua) <span class="notranslate" translate="no">TapAlert</span> abiarazteko. <strong>Abiaraztean
+                    abiarazte automatikoa</strong>rekin batera, kolpe bakarreko benetako izua sortzen du botoia.</p>
 
             <h3>1. urratsa: gaitu abiarazte automatikoa <span class="notranslate" translate="no">TapAlert</span>-n</h3>
             <ol>
-                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️ Ezarpenak</strong>.</li>
+                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️
+                        Ezarpenak</strong>.</li>
                 <li>Gaitu <strong>"Abiaraztean automatikoki abiarazi"</strong>.</li>
             </ol>
 
             <div class="alert-box warning">
                 <h4>⚠️ KONTUZ</h4>
-                <p>Hasiera automatikoa gaituta dagoenean, atzerako kontaketa aplikazioa irekitzen duzun <strong>aldiro</strong> abiaraziko da, baita aplikazioen tiraderatik normalean irekitzen duzunean ere. Gaitu hau batez erebotoia lasterbide fisiko baten bidez abiarazten baduzu.</p>
+                <p>Hasiera automatikoa gaituta dagoenean, atzerako kontaketa aplikazioa irekitzen duzun
+                    <strong>aldiro</strong> abiaraziko da, baita aplikazioen tiraderatik normalean irekitzen duzunean
+                    ere. Gaitu hau batez erebotoia lasterbide fisiko baten bidez abiarazten baduzu.
+                </p>
             </div>
 
             <h3>2. urratsa: Konfiguratu zure telefonoaren botoia</h3>
 
             <h4>Samsung Galaxy (alboko tekla)</h4>
             <ol>
-                <li><strong>Ezarpenak</strong> → <strong>ezaugarriak aurreratua</strong> → <strong>Alboko tekla</strong>.</li>
-                <li>Gaitu <strong>Sakatu bikoitza</strong> → <strong>Ireki aplikazioa</strong> → hautatu <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Ezarpenak</strong> → <strong>ezaugarriak aurreratua</strong> → <strong>Alboko
+                        tekla</strong>.</li>
+                <li>Gaitu <strong>Sakatu bikoitza</strong> → <strong>Ireki aplikazioa</strong> → hautatu <strong><span
+                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Sakatu birritan botereabotoia abiarazteko.</li>
             </ol>
 
             <h4>Google Pixel (sakatu azkarra)</h4>
             <ol>
-                <li><strong>Ezarpenak</strong> → <strong>Sistema</strong> → <strong>Keinuak</strong> → <strong>Sakatu azkar ekintzak hasteko</strong>.</li>
-                <li>Gaitu <strong>Erabili Quick Tap</strong> → <strong>Ireki aplikazioa</strong> → hautatu <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Ezarpenak</strong> → <strong>Sistema</strong> → <strong>Keinuak</strong> → <strong>Sakatu
+                        azkar ekintzak hasteko</strong>.</li>
+                <li>Gaitu <strong>Erabili Quick Tap</strong> → <strong>Ireki aplikazioa</strong> → hautatu <strong><span
+                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Sakatu birritan telefonoaren atzealdea abiarazteko.</li>
             </ol>
 
             <h4>iPhone 15 Pro+ (Ekintza botoia)</h4>
             <ol>
-                <li><strong>Ezarpenak</strong> → <strong>Ekintza botoia</strong> → irristatu hatza <strong>Lasterbidera</strong>ra.</li>
-                <li>Ukitu hautatzailea → <strong>Ireki aplikazioa</strong> → aukeratu <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Ezarpenak</strong> → <strong>Ekintza botoia</strong> → irristatu hatza
+                    <strong>Lasterbidera</strong>ra.
+                </li>
+                <li>Ukitu hautatzailea → <strong>Ireki aplikazioa</strong> → aukeratu <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong>.</li>
                 <li>Eduki sakatuta Ekintza botoia abiarazteko.</li>
             </ol>
 
             <h4>iPhone — Eredu guztiak (Itzuli sakatu)</h4>
             <ol>
-                <li><strong>Ezarpenak</strong> → <strong>Irisgarritasuna</strong> → <strong>Ukitu</strong> → <strong>Atzeko sakatu</strong>.</li>
+                <li><strong>Ezarpenak</strong> → <strong>Irisgarritasuna</strong> → <strong>Ukitu</strong> →
+                    <strong>Atzeko sakatu</strong>.
+                </li>
                 <li>Aukeratu <strong>Ukitu bikoitza</strong> edo <strong>Ukitu hirukoitza</strong>.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span>-rekin estekatzeko, lehenik eta behin sortu lasterbide bat:
+                <li><span class="notranslate" translate="no">TapAlert</span>-rekin estekatzeko, lehenik eta behin sortu
+                    lasterbide bat:
                     <ul>
-                        <li>Ireki <strong>Lasterbideak</strong> aplikazioa → <strong>+</strong> → <strong>Gehitu ekintza</strong> → <strong>Ireki aplikazioa</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                        <li>Ireki <strong>Lasterbideak</strong> aplikazioa → <strong>+</strong> → <strong>Gehitu
+                                ekintza</strong> → <strong>Ireki aplikazioa</strong> → <strong><span class="notranslate"
+                                    translate="no">TapAlert</span></strong>.</li>
                         <li>Izena "Ireki <span class="notranslate" translate="no">TapAlert</span>".</li>
                     </ul>
                 </li>
-                <li>Itzuli <strong>Atzera Sakatu</strong> ezarpenetara → hautatu "Ireki <span class="notranslate" translate="no">TapAlert</span>" lasterbidea.</li>
+                <li>Itzuli <strong>Atzera Sakatu</strong> ezarpenetara → hautatu "Ireki <span class="notranslate"
+                        translate="no">TapAlert</span>" lasterbidea.</li>
             </ol>
 
             <h4>Edozein Android (Button Mapper aplikazioak)</h4>
-            <p>Zure gailuak barneratuabotoia birmapatzerik ez badu, instalatu <strong>"Button Mapper"</strong> edo <strong>"MacroDroid"</strong> Play Store-tik:</p>
+            <p>Zure gailuak barneratuabotoia birmapatzerik ez badu, instalatu <strong>"Button Mapper"</strong> edo
+                <strong>"MacroDroid"</strong> Play Store-tik:
+            </p>
             <ul>
-                <li>Birsortu edozein hardware-gako (bolumenabotoias, etab.) <strong>Ireki aplikazioa</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Birsortu edozein hardware-gako (bolumenabotoias, etab.) <strong>Ireki aplikazioa</strong> →
+                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
+                </li>
             </ul>
 
             <h3>Nola Funtzionatzen Du</h3>
             <ol>
                 <li>Sakatu konfiguratutakobotoia/keinua.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> irekitzen da → atzerako kontaketa <strong>automatikoki</strong> hasten da (Abiarazte automatikoa gaituta badago).</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> irekitzen da → atzerako kontaketa
+                    <strong>automatikoki</strong> hasten da (Abiarazte automatikoa gaituta badago).
+                </li>
                 <li>Alerta bidaliko da eta aplikazioa automatikoki ixten da.</li>
                 <li>Blokeatutako pantailatik ere funtzionatzen du (bateria optimizazio egokiarekin, ikusi behean).</li>
             </ol>
@@ -568,25 +694,34 @@
             <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
                     translate="no">SOS</span> / OK)</h2>
             <p><strong>Plataforma:</strong> Android & iOS</p>
-            <p><span class="notranslate" translate="no">Panic Mode</span>-k pantaila osoa bi botoia erraldoi bihurtzen du — <strong><span class="notranslate" translate="no">SOS</span></strong> eta <strong>Ondo nago</strong> — galtzea ia ezinezkoa da.</p>
+            <p><span class="notranslate" translate="no">Panic Mode</span>-k pantaila osoa bi botoia erraldoi bihurtzen
+                du — <strong><span class="notranslate" translate="no">SOS</span></strong> eta <strong>Ondo nago</strong>
+                — galtzea ia ezinezkoa da.</p>
 
             <h3>Nola gaitu</h3>
             <ol>
-                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> eta lehenespenez irekiko da <span class="notranslate" translate="no">Panic Mode</span>.</li>
-                <li>Gogoratu: Konfiguratutako mezuen alertak <span class="notranslate" translate="no">Panic mode</span> hasierako pantailan ezkerrera/eskuinera pasa dezakezula edo ukitu goiko barrako moduaren ikonoa.</li>
+                <li>Ireki <strong><span class="notranslate" translate="no">TapAlert</span></strong> eta lehenespenez
+                    irekiko da <span class="notranslate" translate="no">Panic Mode</span>.</li>
+                <li>Gogoratu: Konfiguratutako mezuen alertak <span class="notranslate" translate="no">Panic mode</span>
+                    hasierako pantailan ezkerrera/eskuinera pasa dezakezula edo ukitu goiko barrako moduaren ikonoa.
+                </li>
             </ol>
 
             <h3>Nola Funtzionatzen Du</h3>
             <ul>
-                <li><strong>Sakatu <span class="notranslate" translate="no">SOS</span>botoia gorri handia</strong> → atzerako kontaketa hasten da larrialdi-alertarako.</li>
+                <li><strong>Sakatu <span class="notranslate" translate="no">SOS</span>botoia gorri handia</strong> →
+                    atzerako kontaketa hasten da larrialdi-alertarako.</li>
                 <li><strong>Sakatu Ondo nagobotoia berdea</strong> → lasaitasun-mezu bat bidaltzen du.</li>
-                <li><strong>Larrialdi-deiakbotoia</strong> behealdean zure tokiko larrialdi-zenbakia markatzen du (112, 911, etab.).</li>
+                <li><strong>Larrialdi-deiakbotoia</strong> behealdean zure tokiko larrialdi-zenbakia markatzen du (112,
+                    911, etab.).</li>
             </ul>
 
             <h3>Abiarazte metodoa: sakatu eta eutsi</h3>
-            <p>Segurtasun gehiago lortzeko, <strong>5 segundo sakatuta eduki</strong> eska dezakezu ukitu bakarra egin beharrean:</p>
+            <p>Segurtasun gehiago lortzeko, <strong>5 segundo sakatuta eduki</strong> eska dezakezu ukitu bakarra egin
+                beharrean:</p>
             <ul>
-                <li><strong>Ezarpenak</strong> → <strong>Abiarazte metodoa</strong> → <strong>Eutsi sakatuta (5 segundo)</strong>.</li>
+                <li><strong>Ezarpenak</strong> → <strong>Abiarazte metodoa</strong> → <strong>Eutsi sakatuta (5
+                        segundo)</strong>.</li>
                 <li>Horrek ustekabeko abiarazteak saihesten ditu larrialdietan nahikoa azkarra izanik ere.</li>
             </ul>
         </section>
@@ -594,19 +729,23 @@
         <section class="guide-section">
             <h2>4. 🎙️ Voice Quick Alert</h2>
             <p><strong>Plataforma:</strong> Android & iOS</p>
-            <p><span class="notranslate" translate="no">Panic mode</span>-n ere <strong>ahotsak agindutako mezua</strong> duen alerta bat bidal dezakezu ekintza bakarrean; ezin hobea idatzi ezin duzunean.</p>
+            <p><span class="notranslate" translate="no">Panic mode</span>-n ere <strong>ahotsak agindutako
+                    mezua</strong> duen alerta bat bidal dezakezu ekintza bakarrean; ezin hobea idatzi ezin duzunean.
+            </p>
             <ol>
                 <li>Tap the <strong>🎤 Microphone</strong>botoia next to <span class="notranslate"
                         translate="no">SOS</span> or I'm OK.</li>
                 <li>Esan zure mezua.</li>
-                <li>Hitz egin ondoren atzerako kontaketa automatikoki hasiko da transkribatutako ahots-mezua erantsita.</li>
+                <li>Hitz egin ondoren atzerako kontaketa automatikoki hasiko da transkribatutako ahots-mezua erantsita.
+                </li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>5. ⏳ Check-in tenporizadorea (Dead Man's Switch)</h2>
             <p><strong>Plataforma:</strong> Android & iOS</p>
-            <p>Tenporizadoreak alerta bat bidaltzen du <strong>automatikoki</strong> erregistratzen ez baduzu, ez da sakatu behar batere.</p>
+            <p>Tenporizadoreak alerta bat bidaltzen du <strong>automatikoki</strong> erregistratzen ez baduzu, ez da
+                sakatu behar batere.</p>
 
             <h3>Nola Konfiguratu</h3>
             <ol>
@@ -619,26 +758,34 @@
             <h3>Nola Funtzionatzen Du</h3>
             <ul>
                 <li>Jakinarazpen iraunkor batek geratzen den denbora atzerako zenbatzen du.</li>
-                <li>Egiaztatzen baduzu (sakatu <strong>"Ongi nago / Berrezarri"</strong>) → tenporizadorea berrezartzen da, ez da alertarik bidali.</li>
-                <li>Ez baduzu erregistratzen → <span class="notranslate" translate="no">TapAlert</span>-k automatikoki bidaltzen die zure alerta kokapenarekin hartzaile guztiei.</li>
+                <li>Egiaztatzen baduzu (sakatu <strong>"Ongi nago / Berrezarri"</strong>) → tenporizadorea berrezartzen
+                    da, ez da alertarik bidali.</li>
+                <li>Ez baduzu erregistratzen → <span class="notranslate" translate="no">TapAlert</span>-k automatikoki
+                    bidaltzen die zure alerta kokapenarekin hartzaile guztiei.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Bakarkako jardueretarako aproposa: mendi-ibilaldiak, gauez etxera ibiltzea, ezezagunekin elkartzea edo bakarrik bidaiatzea.</p>
+                <p>Bakarkako jardueretarako aproposa: mendi-ibilaldiak, gauez etxera ibiltzea, ezezagunekin elkartzea
+                    edo bakarrik bidaiatzea.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
-            <p><strong>botoia</strong> eta <strong>widget</strong> abiarazleek modu fidagarrian funtziona dezaten (batez ere pantaila blokeatuta edo lotan dagoenetik) behar desgaitu <span class="notranslate" translate="no">TapAlert</span> bateriaren optimizazioa.</p>
+            <p><strong>botoia</strong> eta <strong>widget</strong> abiarazleek modu fidagarrian funtziona dezaten (batez
+                ere pantaila blokeatuta edo lotan dagoenetik) behar desgaitu <span class="notranslate"
+                    translate="no">TapAlert</span> bateriaren optimizazioa.</p>
 
             <h3>Zergatik?</h3>
-            <p>Android fabrikatzaileek modu oldarkorrean hiltzen dituzte atzeko planoko aplikazioak bateria aurrezteko. Honek <span class="notranslate" translate="no">TapAlert</span>-k telefonoa esnatzea eragotzi dezake pantaila itzalita dagoenean.</p>
+            <p>Android fabrikatzaileek modu oldarkorrean hiltzen dituzte atzeko planoko aplikazioak bateria aurrezteko.
+                Honek <span class="notranslate" translate="no">TapAlert</span>-k telefonoa esnatzea eragotzi dezake
+                pantaila itzalita dagoenean.</p>
 
             <h3>Urrats azkarrak (gailu guztiak)</h3>
             <ol>
-                <li><strong>Ezarpenak</strong> → <strong>Aplikazioak</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>Bateria</strong>.</li>
+                <li><strong>Ezarpenak</strong> → <strong>Aplikazioak</strong> → <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong> → <strong>Bateria</strong>.</li>
                 <li>Hautatu <strong>"Ez optimizatu"</strong> edo <strong>"Mugarik gabe"</strong>.</li>
                 <li>Gaitu <strong>"Baimendu atzeko planoko jarduerak"</strong>.</li>
             </ol>
@@ -647,7 +794,8 @@
             <ol>
                 <li>Blokeatu telefonoa eta itxaron 1-2 minutu (pantaila guztiz itzalita).</li>
                 <li>Sakatu konfiguratutakobotoia fisikoa edo ukitu widgeta.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> ireki eta atzerako kontaketa berehala hasi beharko luke.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> ireki eta atzerako kontaketa berehala hasi
+                    beharko luke.</li>
             </ol>
         </section>
 
@@ -679,7 +827,8 @@
                         <td>Moderatua</td>
                     </tr>
                     <tr>
-                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span>botoia)</td>
+                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
+                                translate="no">SOS</span>botoia)</td>
                         <td>Android & iOS</td>
                         <td>2 (ireki aplikazioa + sakatu)</td>
                         <td>None</td>
@@ -701,7 +850,8 @@
                     </tr>
                 </tbody>
             </table>
-            <p><small>*Widget blokeatzeko pantailaren laguntza aldatu egiten da Android bertsioaren eta fabrikatzailearen arabera.</small></p>
+            <p><small>*Widget blokeatzeko pantailaren laguntza aldatu egiten da Android bertsioaren eta
+                    fabrikatzailearen arabera.</small></p>
         </section>
 
         <section class="guide-section">
@@ -709,25 +859,31 @@
 
             <h3>👴 For Senior Users</h3>
             <ul>
-                <li>Erabili <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (<span class="notranslate" translate="no">SOS</span> handia / Ondo nagobotoias).</li>
+                <li>Erabili <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (<span
+                        class="notranslate" translate="no">SOS</span> handia / Ondo nagobotoias).</li>
                 <li>Ezarri <strong>Trigger metodoa</strong> <strong>Tap</strong> gisa (interakziorik errazena).</li>
                 <li>Gehitu <strong>Android widget</strong> hasierako pantailan.</li>
-                <li>Ezarri atzerako kontaketa <strong>10-15 segundo</strong>n (akatsak bertan behera uzteko denbora).</li>
+                <li>Ezarri atzerako kontaketa <strong>10-15 segundo</strong>n (akatsak bertan behera uzteko denbora).
+                </li>
             </ul>
 
             <h3>🏃 For Active / Solo Users</h3>
             <ul>
                 <li>Konfiguratu <strong>Fakturatzeko tenporizadorea</strong> jardueren aurretik.</li>
-                <li>Konfiguratu <strong>fisikoabotoia</strong> berehalako <span class="notranslate" translate="no">SOS</span>.</li>
-                <li>Gaitu <strong><span class="notranslate" translate="no">Erredundantzia adimenduna</span></strong> (auto-<span class="notranslate" translate="no">fallback</span> SMS metodoen artean).</li>
+                <li>Konfiguratu <strong>fisikoabotoia</strong> berehalako <span class="notranslate"
+                        translate="no">SOS</span>.</li>
+                <li>Gaitu <strong><span class="notranslate" translate="no">Erredundantzia adimenduna</span></strong>
+                    (auto-<span class="notranslate" translate="no">fallback</span> SMS metodoen artean).</li>
                 <li>Gaitu <strong>Posta elektronikoaren erredundantzia</strong> wifia soilik duten eremuetarako.</li>
             </ul>
 
             <h3>🔒 For Maximum Security</h3>
             <ul>
                 <li>Konfiguratu <strong>fisikoabotoia</strong> <strong>Abiarazte automatikoa</strong>rekin.</li>
-                <li>Ezarri <strong>Abiarazte metodoa</strong> <strong>Eutsi sakatuta (5 s)</strong> gisa, ustekabeko abiarazteak saihesteko.</li>
-                <li>Gaitu <strong>biak</strong> <span class="notranslate" translate="no">Erredundantzia adimenduna</span> eta posta elektronikoaren erredundantzia.</li>
+                <li>Ezarri <strong>Abiarazte metodoa</strong> <strong>Eutsi sakatuta (5 s)</strong> gisa, ustekabeko
+                    abiarazteak saihesteko.</li>
+                <li>Gaitu <strong>biak</strong> <span class="notranslate" translate="no">Erredundantzia
+                        adimenduna</span> eta posta elektronikoaren erredundantzia.</li>
                 <li>Desgaitu bateriaren optimizazioa eta proba blokeatutako pantailatik.</li>
             </ul>
         </section>
@@ -740,7 +896,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik
+                        ez.</p>
                 </div>
 
                 <div class="footer-section">
@@ -765,7 +922,8 @@
                     <h3>Laguntza</h3>
                     <ul>
                         <li><a href="#">Ohiko galderak</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez
+                                urrats Gidak</a></li>
                         <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
                         <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
                         <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
@@ -774,7 +932,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta.
+                    | ❤️rekin egina zure segurtasunerako</p>
             </div>
         </div>
     </footer>

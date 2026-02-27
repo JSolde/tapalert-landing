@@ -165,7 +165,8 @@
             color: #4a5568;
         }
 
-        ul, ol {
+        ul,
+        ol {
             margin-bottom: 20px;
             padding-left: 20px;
             color: #4a5568;
@@ -187,7 +188,7 @@
             margin-bottom: 0;
         }
 
-        blockquote p + p {
+        blockquote p+p {
             margin-top: 10px;
         }
 
@@ -301,46 +302,188 @@
         }
 
         @media (max-width: 768px) {
-            body { font-size: 14px; }
-            .brand-logo { font-size: 1.2rem; }
-            .btn { padding: 8px 16px; font-size: 0.85rem; }
-            .guide-container { padding: 20px; margin: 20px; }
-            .guide-title { font-size: 1.8rem; padding-bottom: 15px; margin-bottom: 15px; }
-            .guide-intro { font-size: 1.05rem; margin-bottom: 30px; }
-            h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; }
-            h3 { font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px; }
-            h4 { font-size: 1rem; }
-            p, li { font-size: 0.9rem; }
-            blockquote { padding: 15px; margin: 15px 0; }
-            code { font-size: 0.85rem; }
-            .guide-section { margin-bottom: 30px; }
-            table { font-size: 0.85rem; }
-            th, td { padding: 8px 10px; }
-            footer { padding: 40px 15px 20px; margin-top: 40px; }
-            .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-            .footer-section h3 { font-size: 1rem; margin-bottom: 12px; }
-            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.85rem; }
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.8rem;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .guide-intro {
+                font-size: 1.05rem;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            blockquote {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            code {
+                font-size: 0.85rem;
+            }
+
+            .guide-section {
+                margin-bottom: 30px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th,
+            td {
+                padding: 8px 10px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
         }
 
         @media (max-width: 430px) {
-            body { font-size: 13px; }
-            .brand-logo { font-size: 1.1rem; }
-            .btn { padding: 7px 14px; font-size: 0.8rem; }
-            .guide-container { padding: 15px; margin: 12px; }
-            .guide-title { font-size: 1.5rem; padding-bottom: 12px; }
-            .guide-intro { font-size: 0.95rem; margin-bottom: 25px; }
-            h2 { font-size: 1.3rem; margin-top: 25px; padding-left: 10px; border-left-width: 4px; }
-            h3 { font-size: 1.05rem; }
-            h4 { font-size: 0.95rem; }
-            p, li { font-size: 0.85rem; }
-            blockquote { padding: 12px; }
-            code { font-size: 0.8rem; }
-            table { font-size: 0.8rem; }
-            th, td { padding: 6px 8px; }
-            footer { padding: 30px 12px 15px; margin-top: 30px; }
-            .footer-content { gap: 20px; grid-template-columns: 1fr; }
-            .footer-section h3 { font-size: 0.95rem; margin-bottom: 10px; }
-            .footer-section a, .footer-section p, .footer-bottom p { font-size: 0.8rem; }
+            body {
+                font-size: 13px;
+            }
+
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.5rem;
+                padding-bottom: 12px;
+            }
+
+            .guide-intro {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 25px;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            h4 {
+                font-size: 0.95rem;
+            }
+
+            p,
+            li {
+                font-size: 0.85rem;
+            }
+
+            blockquote {
+                padding: 12px;
+            }
+
+            code {
+                font-size: 0.8rem;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section h3 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-section a,
+            .footer-section p,
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -351,11 +494,11 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <img src="media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">{{ guide_back }}</a>
-        {{ lang_switcher }}
+            {{ lang_switcher }}
         </div>
     </header>
 
@@ -400,12 +543,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td><strong>{{ ugn_s1_r1c1 }}</strong></td><td>{{ ugn_s1_r1c2 }}</td></tr>
-                    <tr><td><strong>{{ ugn_s1_r2c1 }}</strong></td><td>{{ ugn_s1_r2c2 }}</td></tr>
-                    <tr><td><strong>{{ ugn_s1_r3c1 }}</strong></td><td>{{ ugn_s1_r3c2 }}</td></tr>
-                    <tr><td><strong>{{ ugn_s1_r4c1 }}</strong></td><td>{{ ugn_s1_r4c2 }}</td></tr>
-                    <tr><td><strong>{{ ugn_s1_r5c1 }}</strong></td><td>{{ ugn_s1_r5c2 }}</td></tr>
-                    <tr><td><strong>{{ ugn_s1_r6c1 }}</strong></td><td>{{ ugn_s1_r6c2 }}</td></tr>
+                    <tr>
+                        <td><strong>{{ ugn_s1_r1c1 }}</strong></td>
+                        <td>{{ ugn_s1_r1c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>{{ ugn_s1_r2c1 }}</strong></td>
+                        <td>{{ ugn_s1_r2c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>{{ ugn_s1_r3c1 }}</strong></td>
+                        <td>{{ ugn_s1_r3c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>{{ ugn_s1_r4c1 }}</strong></td>
+                        <td>{{ ugn_s1_r4c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>{{ ugn_s1_r5c1 }}</strong></td>
+                        <td>{{ ugn_s1_r5c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>{{ ugn_s1_r6c1 }}</strong></td>
+                        <td>{{ ugn_s1_r6c2 }}</td>
+                    </tr>
                 </tbody>
             </table>
             <p>{{ ugn_s1_p2 }}</p>
@@ -690,9 +851,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>{{ ugn_s14_r1c1 }}</td><td>{{ ugn_s14_r1c2 }}</td><td>{{ ugn_s14_r1c3 }}</td></tr>
-                    <tr><td>{{ ugn_s14_r2c1 }}</td><td>{{ ugn_s14_r2c2 }}</td><td>{{ ugn_s14_r2c3 }}</td></tr>
-                    <tr><td>{{ ugn_s14_r3c1 }}</td><td>{{ ugn_s14_r3c2 }}</td><td>✓</td></tr>
+                    <tr>
+                        <td>{{ ugn_s14_r1c1 }}</td>
+                        <td>{{ ugn_s14_r1c2 }}</td>
+                        <td>{{ ugn_s14_r1c3 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s14_r2c1 }}</td>
+                        <td>{{ ugn_s14_r2c2 }}</td>
+                        <td>{{ ugn_s14_r2c3 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s14_r3c1 }}</td>
+                        <td>{{ ugn_s14_r3c2 }}</td>
+                        <td>✓</td>
+                    </tr>
                 </tbody>
             </table>
             <p>{{ ugn_s14_p2 }}</p>
@@ -709,14 +882,38 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>{{ ugn_s15_r1c1 }}</td><td>{{ ugn_s15_r1c2 }}</td></tr>
-                    <tr><td>{{ ugn_s15_r2c1 }}</td><td>{{ ugn_s15_r2c2 }}</td></tr>
-                    <tr><td>{{ ugn_s15_r3c1 }}</td><td>{{ ugn_s15_r3c2 }}</td></tr>
-                    <tr><td>{{ ugn_s15_r4c1 }}</td><td>{{ ugn_s15_r4c2 }}</td></tr>
-                    <tr><td>{{ ugn_s15_r5c1 }}</td><td>{{ ugn_s15_r5c2 }}</td></tr>
-                    <tr><td>{{ ugn_s15_r6c1 }}</td><td>{{ ugn_s15_r6c2 }}</td></tr>
-                    <tr><td>{{ ugn_s15_r7c1 }}</td><td>{{ ugn_s15_r7c2 }}</td></tr>
-                    <tr><td>{{ ugn_s15_r8c1 }}</td><td>{{ ugn_s15_r8c2 }}</td></tr>
+                    <tr>
+                        <td>{{ ugn_s15_r1c1 }}</td>
+                        <td>{{ ugn_s15_r1c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s15_r2c1 }}</td>
+                        <td>{{ ugn_s15_r2c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s15_r3c1 }}</td>
+                        <td>{{ ugn_s15_r3c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s15_r4c1 }}</td>
+                        <td>{{ ugn_s15_r4c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s15_r5c1 }}</td>
+                        <td>{{ ugn_s15_r5c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s15_r6c1 }}</td>
+                        <td>{{ ugn_s15_r6c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s15_r7c1 }}</td>
+                        <td>{{ ugn_s15_r7c2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ugn_s15_r8c1 }}</td>
+                        <td>{{ ugn_s15_r8c2 }}</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -754,7 +951,8 @@
                     <h3>{{ footer_support }}</h3>
                     <ul>
                         <li><a href="#">{{ footer_faq }}</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>{{ footer_guides }}</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>{{
+                                footer_guides }}</a></li>
                         <li><a href="accessibility_guide.html">{{ footer_a11y }}</a></li>
                         <li><a href="troubleshooting.html">{{ nav_troubleshooting }}</a></li>
                         <li><a href="contact.html">{{ footer_contact_support }}</a></li>

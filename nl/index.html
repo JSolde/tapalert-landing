@@ -15,7 +15,8 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/index.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/index.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" translate="no">TapAlert</span> - Eenvoudige noodwaarschuwingen. Geen maandelijkse kosten.</title>
+    <title><span class="notranslate" translate="no">TapAlert</span> - Eenvoudige noodwaarschuwingen. Geen maandelijkse
+        kosten.</title>
     <style>
         * {
             margin: 0;
@@ -1094,7 +1095,8 @@
     <!-- Top Navigation -->
     <header>
         <a href="#download" class="nav-logo">
-            <img src="../media/app_icon.png" alt="TapAlert"> <span class="notranslate" translate="no">TapAlert</span>
+            <img src="../media/tapalert-icon-web.png" alt="TapAlert"> <span class="notranslate"
+                translate="no">TapAlert</span>
         </a>
         <nav style="display: flex; align-items: center;">
             <ul class="nav-links">
@@ -1106,44 +1108,136 @@
                 <li><a href="#pricing" class="nav-link" data-section="pricing">Prijzen</a></li>
                 <li><a href="#guides" class="nav-link" data-section="guides">Gidsen</a></li>
             </ul>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">NL</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/index.html" hreflang="ca">CA</a>
-            <a href="../de/index.html" hreflang="de">DE</a>
-            <a href="../index.html" hreflang="en">EN</a>
-            <a href="../es/index.html" hreflang="es">ES</a>
-            <a href="../eu/index.html" hreflang="eu">EU</a>
-            <a href="../fr/index.html" hreflang="fr">FR</a>
-            <a href="../gl/index.html" hreflang="gl">GL</a>
-            <a href="../it/index.html" hreflang="it">IT</a>
-            <a href="../nl/index.html" hreflang="nl" class="active">NL</a>
-            <a href="../pt/index.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">NL</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/index.html" hreflang="ca">CA</a>
+                        <a href="../de/index.html" hreflang="de">DE</a>
+                        <a href="../index.html" hreflang="en">EN</a>
+                        <a href="../es/index.html" hreflang="es">ES</a>
+                        <a href="../eu/index.html" hreflang="eu">EU</a>
+                        <a href="../fr/index.html" hreflang="fr">FR</a>
+                        <a href="../gl/index.html" hreflang="gl">GL</a>
+                        <a href="../it/index.html" hreflang="it">IT</a>
+                        <a href="../nl/index.html" hreflang="nl" class="active">NL</a>
+                        <a href="../pt/index.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">
             <div class="bar"></div>
@@ -1154,19 +1248,29 @@
     <!-- Hero Section -->
     <section class="hero" id="download">
         <div class="hero-content fade-in-up">
-            <h1><img src="../media/app_icon.png" alt="TapAlert"
+            <h1><img src="../media/tapalert-icon-web.png" alt="TapAlert"
                     style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                     translate="no">TapAlert</span></h1>
-            <p class="tagline">Gemakkelijke waarschuwingen met één tik. Privacy-Eerst.<br> Ontworpen met senioren in gedachten: eenvoudig, veilig, geen maandelijkse kosten.<br> Wrijvingsloze (op afstand ondersteunde) initiële configuratie voor senioren.<br></p>
+            <p class="tagline">Gemakkelijke waarschuwingen met één tik. Privacy-Eerst.<br> Ontworpen met senioren in
+                gedachten: eenvoudig, veilig, geen maandelijkse kosten.<br> Wrijvingsloze (op afstand ondersteunde)
+                initiële configuratie voor senioren.<br></p>
             <p class="tagline">Voor je ouders, grootouders en ouderen.</p>
             <p class="tagline">Voor uw gemoedsrust.</p>
             <div class="summary-box">
                 <p class="subtitle">Bescherm uw oudere volwassenen en dierbaren met één tik.</p>
                 <p class="subtitle">Neeabonnementen, geen tracking, geen accounts vereist, geen advertenties.</p>
-                <p class="subtitle">Tool voor persoonlijke veiligheidswaarschuwingen, ontworpen voor senioren, gezinnen, reizigers en iedereen die een snelle manier wil om vertrouwde contacten op de hoogte te stellen als er iets niet klopt - zonder abonnementen, accounts of tracking.</p>
-                <p class="subtitle"><strong>In een wereld waar het onverwachte het nieuwe normaal is – van plotselinge overstromingen tot stroomstoringen – zorg ervoor dat je nooit echt alleen bent. Laat uw dierbaren met één tik weten dat u veilig bent of een helpende hand nodig heeft, wat de dag ook brengt.</strong></p>
+                <p class="subtitle">Tool voor persoonlijke veiligheidswaarschuwingen, ontworpen voor senioren, gezinnen,
+                    reizigers en iedereen die een snelle manier wil om vertrouwde contacten op de hoogte te stellen als
+                    er iets niet klopt - zonder abonnementen, accounts of tracking.</p>
+                <p class="subtitle"><strong>In een wereld waar het onverwachte het nieuwe normaal is – van plotselinge
+                        overstromingen tot stroomstoringen – zorg ervoor dat je nooit echt alleen bent. Laat uw
+                        dierbaren met één tik weten dat u veilig bent of een helpende hand nodig heeft, wat de dag ook
+                        brengt.</strong></p>
                 <p class="subtitle">
-                    Onze app verzendt waarschuwingen via sms, niet op basis van gegevens, zodat uw bericht doorkomt wanneer apps, wifi en pushmeldingen dat niet doen. Of uw ontvangers nu smartphones, featurephones of beperkte connectiviteit hebben, SMS levert het. Omzeil de filters Stil/Niet storen om uw contacten te wekken, wanneer het er toe doet. Werkt zelfs zonder internettoegang.
+                    Onze app verzendt waarschuwingen via sms, niet op basis van gegevens, zodat uw bericht doorkomt
+                    wanneer apps, wifi en pushmeldingen dat niet doen. Of uw ontvangers nu smartphones, featurephones of
+                    beperkte connectiviteit hebben, SMS levert het. Omzeil de filters Stil/Niet storen om uw contacten
+                    te wekken, wanneer het er toe doet. Werkt zelfs zonder internettoegang.
                 </p>
             </div>
             <div class="cta-buttons">
@@ -1190,41 +1294,69 @@
                             — de app werkt volledig lokaal, geen aanmelding of login</li>
                         <li><span class="check">✅</span> <strong>Neetracking of analyse</strong>
                             — er worden geen gegevens over gebruikersgedrag verzameld of verzonden</li>
-                        <li><span class="check">✅</span> <strong>Neeadvertenties</strong> — de app is advertentievrij en er worden alleen inkomsten gegenereerd via een eenmalige in-app-aankoop voor premiumfuncties</li>
-                        <li><span class="check">✅</span> <strong>Neeabonnementen</strong> — gebruikers betalen eenmalig (of helemaal niet voor het gratis niveau), geen terugkerende kosten</li>
-                        <li><span class="check">✅</span> <strong>Locatie is alleen toegankelijk bij het verzenden van een waarschuwing</strong> — nooit op de achtergrond</li>
+                        <li><span class="check">✅</span> <strong>Neeadvertenties</strong> — de app is advertentievrij en
+                            er worden alleen inkomsten gegenereerd via een eenmalige in-app-aankoop voor premiumfuncties
+                        </li>
+                        <li><span class="check">✅</span> <strong>Neeabonnementen</strong> — gebruikers betalen eenmalig
+                            (of helemaal niet voor het gratis niveau), geen terugkerende kosten</li>
+                        <li><span class="check">✅</span> <strong>Locatie is alleen toegankelijk bij het verzenden van
+                                een waarschuwing</strong> — nooit op de achtergrond</li>
                     </ul>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">📡</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">SMS-First-architectuur</h3>
-                    <p style="font-size: 0.9em; margin-bottom: 15px;">De app geeft voorrang aan sms boven op data gebaseerde berichten (pushmeldingen, WhatsApp, enz.) omdat:</p>
+                    <p style="font-size: 0.9em; margin-bottom: 15px;">De app geeft voorrang aan sms boven op data
+                        gebaseerde berichten (pushmeldingen, WhatsApp, enz.) omdat:</p>
                     <ul class="feature-list" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
-                        <li><span class="check">✅</span> Sms werkt als internet/Wi-Fi uitvalt (zendmasten hebben batterijback-up)</li>
-                        <li><span class="check">✅</span> Ontvangers hebben geen smartphones nodig; featurephones en basistelefoons ontvangen sms</li>
+                        <li><span class="check">✅</span> Sms werkt als internet/Wi-Fi uitvalt (zendmasten hebben
+                            batterijback-up)</li>
+                        <li><span class="check">✅</span> Ontvangers hebben geen smartphones nodig; featurephones en
+                            basistelefoons ontvangen sms</li>
                         <li><span class="check">✅</span> Neeapp-installatie vereist aan de kant van de ontvanger</li>
-                        <li><span class="check">✅</span> SMS wordt afgeleverd op carrierniveau en is niet afhankelijk van de online aanwezigheid van servers van derden</li>
+                        <li><span class="check">✅</span> SMS wordt afgeleverd op carrierniveau en is niet afhankelijk
+                            van de online aanwezigheid van servers van derden</li>
                     </ul>
                     <p style="font-size: 0.9em;"><strong><span class="notranslate" translate="no">Smart
-                                Redundancy</span>:</strong> Als er geen mobiele service beschikbaar is, valt de app terug op het eerst verzenden van sms-berichten via Bellen via Wi-Fi (indien beschikbaar, afhankelijk van telefoon/provider) of, als dat niet het geval is, via <span class="notranslate" translate="no">Twilio</span> (indien geconfigureerd). Dit biedt een secundair bezorgingspad wanneer het primaire sms-kanaal niet beschikbaar is. Op dezelfde manier, in een situatie met alleen een mobiele service (geen Wi-Fi en geen internet), als de <span class="notranslate" translate="no">Directe SMS</span> om welke reden dan ook mislukt (defecte of geen SIM,...), zal <span class="notranslate" translate="no">Twilio</span> (indien geconfigureerd) fungeren als failback, omdat het ook het mobiele netwerk (via 4G/5G) kan gebruiken om het bericht als laatste redmiddel te verzenden.</p>
+                                Redundancy</span>:</strong> Als er geen mobiele service beschikbaar is, valt de app
+                        terug op het eerst verzenden van sms-berichten via Bellen via Wi-Fi (indien beschikbaar,
+                        afhankelijk van telefoon/provider) of, als dat niet het geval is, via <span class="notranslate"
+                            translate="no">Twilio</span> (indien geconfigureerd). Dit biedt een secundair bezorgingspad
+                        wanneer het primaire sms-kanaal niet beschikbaar is. Op dezelfde manier, in een situatie met
+                        alleen een mobiele service (geen Wi-Fi en geen internet), als de <span class="notranslate"
+                            translate="no">Directe SMS</span> om welke reden dan ook mislukt (defecte of geen SIM,...),
+                        zal <span class="notranslate" translate="no">Twilio</span> (indien geconfigureerd) fungeren als
+                        failback, omdat het ook het mobiele netwerk (via 4G/5G) kan gebruiken om het bericht als laatste
+                        redmiddel te verzenden.</p>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">👴</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">Seniorvriendelijk ontwerp</h3>
                     <ul class="feature-list" style="list-style-type: none; padding: 0;">
-                        <li><span class="check">✅</span> Grote knoppen met hoog contrast (één <span class="notranslate" translate="no">SOS</span> en ik ben in orde)</li>
+                        <li><span class="check">✅</span> Grote knoppen met hoog contrast (één <span class="notranslate"
+                                translate="no">SOS</span> en ik ben in orde)</li>
                         <li><span class="check">✅</span> Minimal navigation and cognitive load</li>
                         <li><span class="check">✅</span> Voice-to-text, zodat gebruikers niet hoeven te typen</li>
-                        <li><span class="check">✅</span> Configureerbare afteltimer of Hold-to-send-bevestiging voorkomt onbedoelde waarschuwingen</li>
+                        <li><span class="check">✅</span> Configureerbare afteltimer of Hold-to-send-bevestiging voorkomt
+                            onbedoelde waarschuwingen</li>
                         <li><span class="check">✅</span> Begeleide onboarding met stapsgewijze installatie</li>
-                        <li><span class="check">✅</span> Bij alle UI-beslissingen wordt prioriteit gegeven aan duidelijkheid en eenvoud boven functiedichtheid</li>
-                        <li><span class="check">✅</span> Configuratie zonder frictie met magische link die kan worden verzonden via WhatsApp, sms, e-mail, enz. Met een enkele klik kan uw senior de app configureren en gebruiken.</li>
-                        <li><span class="check">✅</span> Schermflits – 3 heldere flitsen bevestigen elke waarschuwing, zodat gebruikers met gehoorverlies deze nooit meer missen</li>
-                        <li><span class="check">✅</span> Tonen met een lagere frequentie – standaard waarschuwingsgeluiden op 500–600 Hz, gemakkelijker te horen bij leeftijdsgerelateerd gehoorverlies</li>
-                        <li><span class="check">✅</span> Haptisch aftellen: de telefoon pulseert één keer per seconde tijdens het aftellen, je hoeft niet naar het scherm te kijken</li>
-                        <li><span class="check">✅</span> Ondersteuning voor schermlezers: volledig compatibel met TalkBack (Android) en VoiceOver (iOS); knoppen zijn gelabeld en de resultaten worden hardop aangekondigd</li>
+                        <li><span class="check">✅</span> Bij alle UI-beslissingen wordt prioriteit gegeven aan
+                            duidelijkheid en eenvoud boven functiedichtheid</li>
+                        <li><span class="check">✅</span> Configuratie zonder frictie met magische link die kan worden
+                            verzonden via WhatsApp, sms, e-mail, enz. Met een enkele klik kan uw senior de app
+                            configureren en gebruiken.</li>
+                        <li><span class="check">✅</span> Schermflits – 3 heldere flitsen bevestigen elke waarschuwing,
+                            zodat gebruikers met gehoorverlies deze nooit meer missen</li>
+                        <li><span class="check">✅</span> Tonen met een lagere frequentie – standaard
+                            waarschuwingsgeluiden op 500–600 Hz, gemakkelijker te horen bij leeftijdsgerelateerd
+                            gehoorverlies</li>
+                        <li><span class="check">✅</span> Haptisch aftellen: de telefoon pulseert één keer per seconde
+                            tijdens het aftellen, je hoeft niet naar het scherm te kijken</li>
+                        <li><span class="check">✅</span> Ondersteuning voor schermlezers: volledig compatibel met
+                            TalkBack (Android) en VoiceOver (iOS); knoppen zijn gelabeld en de resultaten worden hardop
+                            aangekondigd</li>
                     </ul>
                 </div>
 
@@ -1236,81 +1368,109 @@
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">Krachtige functies voor uw veiligheid</h2>
-            <p class="section-subtitle">Alles wat u nodig heeft om verbonden te blijven met uw contacten voor noodgevallen, ontworpen met het oog op eenvoud en betrouwbaarheid.</p>
+            <p class="section-subtitle">Alles wat u nodig heeft om verbonden te blijven met uw contacten voor
+                noodgevallen, ontworpen met het oog op eenvoud en betrouwbaarheid.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🆘</div>
                     <h3><span class="notranslate" translate="no">SOS</span>- en OK-knoppen</h3>
-                    <p>Verzend een vooraf gedefinieerde <span class="notranslate" translate="no">SOS</span> "Ik heb hulp nodig!" of 'Alles gaat goed'-berichten direct met één tik. Berichten bevatten uw exacte GPS-locatie en adres.</p>
+                    <p>Verzend een vooraf gedefinieerde <span class="notranslate" translate="no">SOS</span> "Ik heb hulp
+                        nodig!" of 'Alles gaat goed'-berichten direct met één tik. Berichten bevatten uw exacte
+                        GPS-locatie en adres.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📶</div>
                     <h3>Slimme bezorging van berichten</h3>
-                    <p>Werkt offline met <span class="notranslate" translate="no">Directe sms</span>. Automatische <span class="notranslate" translate="no">terugval</span> tussen mobiel netwerk en wifi om ervoor te zorgen dat uw boodschap overkomt.</p>
+                    <p>Werkt offline met <span class="notranslate" translate="no">Directe sms</span>. Automatische <span
+                            class="notranslate" translate="no">terugval</span> tussen mobiel netwerk en wifi om ervoor
+                        te zorgen dat uw boodschap overkomt.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Inchecktimer</h3>
-                    <p>Stel een afteltimer in. Als u niet op tijd incheckt, wordt er automatisch een waarschuwing naar uw contacten gestuurd. Perfect voor solo-activiteiten.</p>
+                    <p>Stel een afteltimer in. Als u niet op tijd incheckt, wordt er automatisch een waarschuwing naar
+                        uw contacten gestuurd. Perfect voor solo-activiteiten.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
                     <h3>Spraak-naar-tekstwaarschuwingen</h3>
-                    <p>Creëer handsfree berichten met behulp van spraakinvoer. Handig in stressvolle situaties of situaties met beperkte mobiliteit waarin typen niet mogelijk is.</p>
+                    <p>Creëer handsfree berichten met behulp van spraakinvoer. Handig in stressvolle situaties of
+                        situaties met beperkte mobiliteit waarin typen niet mogelijk is.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">👴</div>
                     <h3>Seniorenvriendelijk ontwerp</h3>
-                    <p>Grote tekst, hoog contrast, instelbare geluidshoogte voor slechthorenden en een duidelijke, afleidingsvrije interface. Gemakkelijk voor senioren en niet-technische gebruikers.</p>
+                    <p>Grote tekst, hoog contrast, instelbare geluidshoogte voor slechthorenden en een duidelijke,
+                        afleidingsvrije interface. Gemakkelijk voor senioren en niet-technische gebruikers.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
                     <h3>Familieondersteunde opstelling</h3>
-                    <p>Familieleden kunnen senioren helpen met het opzetten van de app en contacten op afstand via een configuratielink. Configureer de app op uw eigen apparaat en stuur hen de link om de app met slechts één klik te installeren en configureren.</p>
+                    <p>Familieleden kunnen senioren helpen met het opzetten van de app en contacten op afstand via een
+                        configuratielink. Configureer de app op uw eigen apparaat en stuur hen de link om de app met
+                        slechts één klik te installeren en configureren.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <h3>Meerdere talen</h3>
-                    <p>Ondersteunt meerdere talen voor bredere toegankelijkheid. Gebruik <span class="notranslate" translate="no">TapAlert</span> in uw voorkeurstaal.
+                    <p>Ondersteunt meerdere talen voor bredere toegankelijkheid. Gebruik <span class="notranslate"
+                            translate="no">TapAlert</span> in uw voorkeurstaal.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📍</div>
                     <h3>Slimme locatiecontext</h3>
-                    <p>Bevat zowel nauwkeurige GPS-coördinaten als een voor mensen leesbaar adres. Werkt zelfs als ontvangers offline zijn of standaardtelefoons gebruiken.</p>
+                    <p>Bevat zowel nauwkeurige GPS-coördinaten als een voor mensen leesbaar adres. Werkt zelfs als
+                        ontvangers offline zijn of standaardtelefoons gebruiken.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">✉️</div>
                     <h3>E-mailredundantie</h3>
-                    <p>Kan e-mailwaarschuwingen verzenden als versterkende berichtgevingsmethode of om waarschuwingsredundantie te bieden als <span class="notranslate" translate="no">Twilio</span> niet beschikbaar is.</p>
+                    <p>Kan e-mailwaarschuwingen verzenden als versterkende berichtgevingsmethode of om
+                        waarschuwingsredundantie te bieden als <span class="notranslate" translate="no">Twilio</span>
+                        niet beschikbaar is.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon"><img src="../media/twilio.png" alt="Twilio"
                             style="height: 1em; vertical-align: bottom;"></div>
                     <h3><span class="notranslate" translate="no">Twilio</span> als SMS-failback</h3>
-                    <p><strong>Android:</strong> de app verzendt sms rechtstreeks vanaf je telefoon, geen <span class="notranslate" translate="no">Twilio</span> nodig, maar wordt aanbevolen. <span class="notranslate" translate="no">Twilio</span> is optioneel en wordt gebruikt als Wi-Fi-back-up wanneer mobiel netwerk niet beschikbaar of kapot is, maar het kan ook worden gebruikt als failback in situaties waarin alleen mobiel is als uw <span class="notranslate" translate="no">Directe sms</span> niet werkt of niet beschikbaar is.</p>
-                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple blokkeert dat apps rechtstreeks sms-berichten kunnen verzenden. Dit is een Apple-beperking, geen <span class="notranslate" translate="no">TapAlert</span>-beperking. <span class="notranslate" translate="no">Twilio</span> is de brug waarmee de app automatisch namens u sms-berichten kan verzenden. Zonder dit is de enige optie handmatig opnieuw op 'Verzenden' tikken in de Berichten-app - niet ideaal in een noodgeval.
+                    <p><strong>Android:</strong> de app verzendt sms rechtstreeks vanaf je telefoon, geen <span
+                            class="notranslate" translate="no">Twilio</span> nodig, maar wordt aanbevolen. <span
+                            class="notranslate" translate="no">Twilio</span> is optioneel en wordt gebruikt als
+                        Wi-Fi-back-up wanneer mobiel netwerk niet beschikbaar of kapot is, maar het kan ook worden
+                        gebruikt als failback in situaties waarin alleen mobiel is als uw <span class="notranslate"
+                            translate="no">Directe sms</span> niet werkt of niet beschikbaar is.</p>
+                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple blokkeert dat apps rechtstreeks
+                        sms-berichten kunnen verzenden. Dit is een Apple-beperking, geen <span class="notranslate"
+                            translate="no">TapAlert</span>-beperking. <span class="notranslate"
+                            translate="no">Twilio</span> is de brug waarmee de app automatisch namens u sms-berichten
+                        kan verzenden. Zonder dit is de enige optie handmatig opnieuw op 'Verzenden' tikken in de
+                        Berichten-app - niet ideaal in een noodgeval.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🆘📋</div>
                     <h3>Paniekstand & Situatiemeldingen</h3>
-                    <p>De Paniekstand verstuurt directe SOS- en ‘Alles OK’-meldingen met één tik. Veeg naar links voor Situatiemeldingen — 3 aanpasbare berichtknoppen voor elke niet-urgente situatie, met optionele spraakopname per melding.</p>
+                    <p>De Paniekstand verstuurt directe SOS- en ‘Alles OK’-meldingen met één tik. Veeg naar links voor
+                        Situatiemeldingen — 3 aanpasbare berichtknoppen voor elke niet-urgente situatie, met optionele
+                        spraakopname per melding.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Startschermwidget</h3>
-                    <p><strong>Android alleen:</strong> Voeg een noodwidget met één tik toe aan uw startscherm voor directe toegang zonder de app te openen. Instructies voor het gebruik ervan met een fysieke knop of gebaar vindt u ook in de app.</p>
+                    <p><strong>Android alleen:</strong> Voeg een noodwidget met één tik toe aan uw startscherm voor
+                        directe toegang zonder de app te openen. Instructies voor het gebruik ervan met een fysieke knop
+                        of gebaar vindt u ook in de app.</p>
                 </div>
             </div>
         </div>
@@ -1376,7 +1536,9 @@
         <div class="container">
             <div class="android-content">
                 <h2 class="section-title">🤖 Android Eerst</h2>
-                <p class="section-subtitle">Terwijl wij steunen iOS voor platformonafhankelijke families beschikt ons vlaggenschip over hefboomwerking Android mogelijkheden voor het verzenden van geautomatiseerde native SMS-waarschuwingen.</p>
+                <p class="section-subtitle">Terwijl wij steunen iOS voor platformonafhankelijke families beschikt ons
+                    vlaggenschip over hefboomwerking Android mogelijkheden voor het verzenden van geautomatiseerde
+                    native SMS-waarschuwingen.</p>
                 <div class="comparison-table-wrapper">
                     <h3 style="margin-bottom: 20px; color: #2c3e50;">Samenvatting: wat elk platform kan doen</h3>
                     <table class="comparison-table">
@@ -1390,34 +1552,43 @@
                         <tbody>
                             <tr>
                                 <td><strong>Stuur gratis een sms</strong></td>
-                                <td><span class="check">✅</span> Ja (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Directe sms</span></span>, altijd)</td>
+                                <td><span class="check">✅</span> Ja (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Directe sms</span></span>, altijd)</td>
                                 <td><span class="check">✅</span> Ja (iOS Messages, vereist gebruikersinteractie)</td>
                             </tr>
                             <tr>
                                 <td><strong>Sms automatisch versturen</strong></td>
-                                <td><span class="check">✅</span> Ja (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Directe sms</span></span>, altijd)</td>
-                                <td><span class="cross">❌</span> Alleen met <span class="notranslate" translate="no">Twilio</span> (betaald)</td>
+                                <td><span class="check">✅</span> Ja (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Directe sms</span></span>, altijd)</td>
+                                <td><span class="cross">❌</span> Alleen met <span class="notranslate"
+                                        translate="no">Twilio</span> (betaald)</td>
                             </tr>
                             <tr>
                                 <td><strong>Werkt zonder internet</strong></td>
-                                <td><span class="check">✅</span> Ja (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Directe sms</span></span> maakt gebruik van een mobiel netwerk)</td>
-                                <td><span class="check">✅</span> Ja (iOS Messages maakt gebruik van een mobiel netwerk)</td>
+                                <td><span class="check">✅</span> Ja (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Directe sms</span></span> maakt gebruik
+                                    van een mobiel netwerk)</td>
+                                <td><span class="check">✅</span> Ja (iOS Messages maakt gebruik van een mobiel netwerk)
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>Volautomatische Dead Man Timer</strong></td>
                                 <td><span class="check">✅</span> Ja</td>
-                                <td><span class="cross">❌</span> Alleen bij <span class="notranslate" translate="no">Twilio</span> (betaald). Zonder <span class="notranslate" translate="no">Twilio</span> wordt de Berichten-app geopend en moet de gebruiker op Verzenden tikken</td>
+                                <td><span class="cross">❌</span> Alleen bij <span class="notranslate"
+                                        translate="no">Twilio</span> (betaald). Zonder <span class="notranslate"
+                                        translate="no">Twilio</span> wordt de Berichten-app geopend en moet de gebruiker
+                                    op Verzenden tikken</td>
                             </tr>
                             <tr>
                                 <td><strong>Neegebruikersinteractie nodig</strong></td>
                                 <td><span class="check">✅</span> Ja</td>
-                                <td><span class="cross">❌</span> Alleen met <span class="notranslate" translate="no">Twilio</span>. Voor iOS-berichten moet je altijd op Verzenden tikken</td>
+                                <td><span class="cross">❌</span> Alleen met <span class="notranslate"
+                                        translate="no">Twilio</span>. Voor iOS-berichten moet je altijd op Verzenden
+                                    tikken</td>
                             </tr>
                             <tr>
-                                <td><strong>E-mail <span class="notranslate" translate="no">fallback</span></strong></td>
+                                <td><strong>E-mail <span class="notranslate" translate="no">fallback</span></strong>
+                                </td>
                                 <td><span class="check">✅</span> Ja (wanneer internet beschikbaar)</td>
                                 <td><span class="check">✅</span> Ja (wanneer internet beschikbaar)</td>
                             </tr>
@@ -1429,10 +1600,15 @@
                         <h3>iOS Beperkingen</h3>
                         <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(vergeleken met Android)</p>
                         <ul class="feature-list">
-                            <li><span class="cross">❌</span> Kan geen sms programmatisch verzenden (Apple-beperking)</li>
-                            <li><span class="cross">❌</span> Voor volledig automatische sms is <span class="notranslate" translate="no">Twilio</span> vereist</li>
-                            <li><span class="cross">❌</span> Dead Man Timer kan geen sms-berichten stil verzenden zonder <span class="notranslate" translate="no">Twilio</span></li>
-                            <li><span class="cross">⚠️</span> iOS Messages voorkeur vereist dat de gebruiker fysiek op Verzenden tikt
+                            <li><span class="cross">❌</span> Kan geen sms programmatisch verzenden (Apple-beperking)
+                            </li>
+                            <li><span class="cross">❌</span> Voor volledig automatische sms is <span class="notranslate"
+                                    translate="no">Twilio</span> vereist</li>
+                            <li><span class="cross">❌</span> Dead Man Timer kan geen sms-berichten stil verzenden zonder
+                                <span class="notranslate" translate="no">Twilio</span>
+                            </li>
+                            <li><span class="cross">⚠️</span> iOS Messages voorkeur vereist dat de gebruiker fysiek op
+                                Verzenden tikt
                             </li>
                         </ul>
                     </div>
@@ -1440,18 +1616,24 @@
                     <div class="platform-card android">
                         <h3>Android Voordelen</h3>
                         <ul class="feature-list">
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Directe sms</span></span> is altijd gratis en automatisch</li>
-                            <li><span class="check">✅</span> Nee<span class="notranslate"
-                                    translate="no">Twilio</span> nodig voor basisfunctionaliteit</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span
+                                        class="notranslate" translate="no">Directe sms</span></span> is altijd gratis en
+                                automatisch</li>
+                            <li><span class="check">✅</span> Nee<span class="notranslate" translate="no">Twilio</span>
+                                nodig voor basisfunctionaliteit</li>
                             <li><span class="check">✅</span> Dead Man Timer is altijd volledig automatisch</li>
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> voegt redundantie toe (tweede methode), geen vereiste (zolang uw telefoon/provider wifi-oproepen toestaat)</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span>
+                                voegt redundantie toe (tweede methode), geen vereiste (zolang uw telefoon/provider
+                                wifi-oproepen toestaat)</li>
                         </ul>
                     </div>
 
                     <div class="platform-card" style="border-top: 4px solid #667eea;">
                         <h3>Wanneer beide platforms zich hetzelfde gedragen</h3>
                         <ul class="feature-list">
-                            <li><span class="check">ℹ️</span> Alleen wifi (geen mobiel): Beide gebruiken Wifi Call indien beschikbaar, <span class="notranslate" translate="no">Twilio</span> of e-mail - identiek gedrag</li>
+                            <li><span class="check">ℹ️</span> Alleen wifi (geen mobiel): Beide gebruiken Wifi Call
+                                indien beschikbaar, <span class="notranslate" translate="no">Twilio</span> of e-mail -
+                                identiek gedrag</li>
                             <li><span class="check">✅</span> E-mailredundantie: Werkt hetzelfde op beide platforms</li>
                         </ul>
                     </div>
@@ -1464,7 +1646,8 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Eenvoudige, eerlijke prijzen</h2>
-            <p class="section-subtitle">Geen abonnementen. Geen verborgen kosten.<br>Eén keer betalen, voor altijd gebruiken.</p>
+            <p class="section-subtitle">Geen abonnementen. Geen verborgen kosten.<br>Eén keer betalen, voor altijd
+                gebruiken.</p>
 
             <div class="pricing-cards">
                 <div class="pricing-card">
@@ -1474,7 +1657,8 @@
                     <ul class="features-list">
                         <li>✅ Maximaal 1 ontvanger</li>
                         <li>✅ <span class="notranslate" translate="no">SOS</span>- en OK-knoppen</li>
-                        <li>✅ <span class="notranslate" translate="no">Rapportagemodus</span> met vooraf ingestelde berichten</li>
+                        <li>✅ <span class="notranslate" translate="no">Rapportagemodus</span> met vooraf ingestelde
+                            berichten</li>
                         <li>✅ Meldingsgeschiedenis: laatste 50 berichten</li>
                         <li>✅ Slimme redundantie (SMS + Wifi)</li>
                         <li>✅ E-mail als <span class="notranslate" translate="no">fallback</span> of redundantie</li>
@@ -1493,21 +1677,28 @@
                         <li>✅ Inchecktimer</li>
                         <li>✅ Nog steeds geen maandelijkse kosten!</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Ontgrendel <span class="notranslate" translate="no">Premium</span></a>
+                    <a href="#" class="btn btn-primary">Ontgrendel <span class="notranslate"
+                            translate="no">Premium</span></a>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS heeft een prijs, maar uw gemoedsrust niet</h3>
+                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS heeft een prijs, maar uw
+                    gemoedsrust niet</h3>
                 <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
-                    <span class="notranslate" translate="no">TapAlert</span> brengt geen kosten in rekening voor de verzonden berichten. De enige kosten die u mogelijk maakt, zijn de kosten die uw eigen mobiele provider in rekening brengt voor standaard-sms – net als elk normaal sms-bericht – en, als u ervoor kiest om te configureren
+                    <span class="notranslate" translate="no">TapAlert</span> brengt geen kosten in rekening voor de
+                    verzonden berichten. De enige kosten die u mogelijk maakt, zijn de kosten die uw eigen mobiele
+                    provider in rekening brengt voor standaard-sms – net als elk normaal sms-bericht – en, als u ervoor
+                    kiest om te configureren
                     <span class="notranslate" translate="no">Twilio</span> als failback of alternatieve service,
                     <a href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
-                        style="color: #667eea; text-decoration: underline;">de kosten per bericht die zijn vastgesteld door <span
-                            class="notranslate" translate="no">Twilio</span></a>
+                        style="color: #667eea; text-decoration: underline;">de kosten per bericht die zijn vastgesteld
+                        door <span class="notranslate" translate="no">Twilio</span></a>
                     (Let op: er is een
                     <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
-                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;">gratis <span class="notranslate" translate="no">Twilio</span> proefaccount</a>
+                        target="_blank" rel="noopener noreferrer"
+                        style="color: #667eea; text-decoration: underline;">gratis <span class="notranslate"
+                            translate="no">Twilio</span> proefaccount</a>
                     maar we raden het gebruik ervan niet aan). De app zelf voegt daar geen extra kosten aan toe.
                 </p>
             </div>
@@ -1518,7 +1709,8 @@
     <section class="privacy">
         <div class="container">
             <h2 class="section-title" style="color: white;">🔒 Privacy door ontwerp</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Uw veiligheidsgegevens blijven van u. Geen accounts, geen tracking, geen toezicht.</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Uw veiligheidsgegevens blijven van u. Geen
+                accounts, geen tracking, geen toezicht.</p>
 
             <div class="privacy-grid">
                 <div class="privacy-item">
@@ -1552,13 +1744,15 @@
             <div class="use-case-highlight" style="max-width: 600px; margin: 0 auto 40px auto; transform: scale(1.05);">
                 <div class="use-case" style="border: 2px solid #667eea; background: white;">
                     <h3 style="font-size: 1.4rem;">👴 Oudere volwassenen & Zorgverleners</h3>
-                    <p style="font-size: 1.1rem;">Een paniekknop voor alleenwonende of zelfstandig reizende senioren. Met één tik worden alle gezinsleden op de hoogte gebracht van de exacte locatie.</p>
+                    <p style="font-size: 1.1rem;">Een paniekknop voor alleenwonende of zelfstandig reizende senioren.
+                        Met één tik worden alle gezinsleden op de hoogte gebracht van de exacte locatie.</p>
                 </div>
             </div>
 
             <div class="section-divider" style="text-align: center; margin-bottom: 40px; position: relative;">
                 <span
-                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">maar ook voor...</span>
+                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">maar
+                    ook voor...</span>
                 <div
                     style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #e2e8f0; z-index: 0;">
                 </div>
@@ -1568,27 +1762,32 @@
 
                 <div class="use-case">
                     <h3>🥾 Solo-avonturiers</h3>
-                    <p>Wandelaars of fietsers die aan het begin/einde van een route of in geval van nood op een betrouwbare manier hun locatie naar familie willen sturen.</p>
+                    <p>Wandelaars of fietsers die aan het begin/einde van een route of in geval van nood op een
+                        betrouwbare manier hun locatie naar familie willen sturen.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>🌙 Persoonlijke veiligheid</h3>
-                    <p>'s Avonds laat naar huis lopen of ritjes gebruiken? Stuur een discrete "Let op mijn terug"-waarschuwing naar vrienden en familie.</p>
+                    <p>'s Avonds laat naar huis lopen of ritjes gebruiken? Stuur een discrete "Let op mijn
+                        terug"-waarschuwing naar vrienden en familie.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>💼 Kleine bedrijven</h3>
-                    <p>Veldwerkers of alleenstaande medewerkers (makelaars, bezorgers) die een eenvoudig incheck- of noodsignaal nodig hebben.</p>
+                    <p>Veldwerkers of alleenstaande medewerkers (makelaars, bezorgers) die een eenvoudig incheck- of
+                        noodsignaal nodig hebben.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>✈️ Internationale reizigers</h3>
-                    <p>Gebruik Wi-Fi-berichten om dure roaming-sms-kosten te omzeilen terwijl u uw familie op de hoogte houdt van uw verblijfplaats.</p>
+                    <p>Gebruik Wi-Fi-berichten om dure roaming-sms-kosten te omzeilen terwijl u uw familie op de hoogte
+                        houdt van uw verblijfplaats.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>👨‍👩‍👧‍👦 Gezinnen blijven verbonden</h3>
-                    <p>Houd familieleden in de gaten met snelle 'Ik ben oké'-check-ins zonder dat u voortdurend hoeft te bellen of sms'en.</p>
+                    <p>Houd familieleden in de gaten met snelle 'Ik ben oké'-check-ins zonder dat u voortdurend hoeft te
+                        bellen of sms'en.</p>
                 </div>
             </div>
         </div>
@@ -1598,14 +1797,16 @@
     <section class="guides" id="guides" style="padding: 80px 20px; background: white;">
         <div class="container">
             <h2 class="section-title">Stapsgewijze handleidingen</h2>
-            <p class="section-subtitle">Beheers <span class="notranslate" translate="no">TapAlert</span> met onze eenvoudig te volgen handleidingen</p>
+            <p class="section-subtitle">Beheers <span class="notranslate" translate="no">TapAlert</span> met onze
+                eenvoudig te volgen handleidingen</p>
 
             <div class="features-grid">
                 <a href="user_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📖</div>
                         <h3>TapAlert-gebruikershandleiding</h3>
-                        <p>Volledige referentie voor alle app-functies: machtigingen, modi, instellingen, ontvangers, waarschuwingen en meer.</p>
+                        <p>Volledige referentie voor alle app-functies: machtigingen, modi, instellingen, ontvangers,
+                            waarschuwingen en meer.</p>
                     </div>
                 </a>
 
@@ -1650,7 +1851,8 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📧</div>
                         <h3>E-mailredundantie configureren</h3>
-                        <p>Configureer e-mail als <span class="notranslate" translate="no">fallback</span> of redundantiewaarschuwingsberichten.</p>
+                        <p>Configureer e-mail als <span class="notranslate" translate="no">fallback</span> of
+                            redundantiewaarschuwingsberichten.</p>
                     </div>
                 </a>
                 <a href="accessibility_guide.html" style="text-decoration: none; color: inherit;">
@@ -1669,8 +1871,11 @@
         <div class="notice-content">
             <div class="notice-icon">⚠️</div>
             <h2>Belangrijke veiligheidsmededeling</h2>
-            <p><strong><span class="notranslate" translate="no">TapAlert</span> is GEEN vervanging voor hulpdiensten zoals 911 of 112.</strong></p>
-            <p style="margin-top: 15px;">De bezorging van berichten is afhankelijk van de netwerkbeschikbaarheid en de actie van de ontvanger. Deze app biedt geen monitoring, noodhulp of gegarandeerde levering. Neem bij echte noodsituaties altijd rechtstreeks contact op met de hulpdiensten.</p>
+            <p><strong><span class="notranslate" translate="no">TapAlert</span> is GEEN vervanging voor hulpdiensten
+                    zoals 911 of 112.</strong></p>
+            <p style="margin-top: 15px;">De bezorging van berichten is afhankelijk van de netwerkbeschikbaarheid en de
+                actie van de ontvanger. Deze app biedt geen monitoring, noodhulp of gegarandeerde levering. Neem bij
+                echte noodsituaties altijd rechtstreeks contact op met de hulpdiensten.</p>
         </div>
     </section>
 
@@ -1680,7 +1885,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -1705,7 +1911,8 @@
                     <h3>Steun</h3>
                     <ul>
                         <li><a href="#">Veelgestelde vragen</a></li>
-                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Stapsgewijze handleidingen</a></li>
+                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Stapsgewijze
+                                handleidingen</a></li>
                         <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
                         <li><a href="troubleshooting.html">Problemen oplossen</a></li>
                         <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
@@ -1714,7 +1921,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. |
+                    Gemaakt met ❤️ voor uw veiligheid</p>
             </div>
         </div>
     </footer>

@@ -370,48 +370,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Retour à la maison</a>
-        
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">FR</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
-            <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
-            <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
-            <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-            <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
-            <a href="../fr/email_redundancy_guide.html" hreflang="fr" class="active">FR</a>
-            <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
-            <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
-            <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
-            <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">FR</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
+                        <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
+                        <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
+                        <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
+                        <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
+                        <a href="../fr/email_redundancy_guide.html" hreflang="fr" class="active">FR</a>
+                        <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
+                        <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
+                        <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
+                        <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -423,88 +515,136 @@
 
         <section class="guide-section">
             <h2>💡 Qu'est-ce que la redondance des e-mails Fonctionnalité ?</h2>
-            <p>Redondance des e-mails dans <span class="notranslate" translate="no">TapAlert</span> permet à l'application d'envoyer des alertes d'urgence et des messages de rapport à vos contacts désignés par e-mail, en plus ou à la place des SMS.</p>
+            <p>Redondance des e-mails dans <span class="notranslate" translate="no">TapAlert</span> permet à
+                l'application d'envoyer des alertes d'urgence et des messages de rapport à vos contacts désignés par
+                e-mail, en plus ou à la place des SMS.</p>
 
             <h2>🎯 Quel est son objectif ?</h2>
-            <p>L'objectif principal de la redondance des e-mails est de garantir que votre message soit livré même si les canaux SMS principaux échouent ou sont indisponibles.</p>
+            <p>L'objectif principal de la redondance des e-mails est de garantir que votre message soit livré même si
+                les canaux SMS principaux échouent ou sont indisponibles.</p>
             <ul>
-                <li>✅ <strong>Chemin de livraison secondaire :</strong> Si vous êtes connecté au Wi-Fi mais que vous n'avez pas de service cellulaire (et que les appels Wi-Fi sont désactivés ou non pris en charge), l'e-mail agit comme unperfect <span class="notranslate" translate="no">fallback</span>.</li>
-                <li>✅ <strong>Voyages internationaux</strong> : lorsque vous voyagez à l'étranger où les SMS peuvent être extrêmement coûteux ou peu fiables, vous pouvez compter uniquement sur le Wi-Fi et envoyer des alertes par e-mail gratuitement.</li>
-                <li>✅ <strong>Tranquillité d'esprit supplémentaire :</strong> L'envoi simultané d'alertes par SMS et par e-mail garantit que si un contact d'urgence manque un SMS, il pourra toujours voir la notification par e-mail.</li>
+                <li>✅ <strong>Chemin de livraison secondaire :</strong> Si vous êtes connecté au Wi-Fi mais que vous
+                    n'avez pas de service cellulaire (et que les appels Wi-Fi sont désactivés ou non pris en charge),
+                    l'e-mail agit comme unperfect <span class="notranslate" translate="no">fallback</span>.</li>
+                <li>✅ <strong>Voyages internationaux</strong> : lorsque vous voyagez à l'étranger où les SMS peuvent
+                    être extrêmement coûteux ou peu fiables, vous pouvez compter uniquement sur le Wi-Fi et envoyer des
+                    alertes par e-mail gratuitement.</li>
+                <li>✅ <strong>Tranquillité d'esprit supplémentaire :</strong> L'envoi simultané d'alertes par SMS et par
+                    e-mail garantit que si un contact d'urgence manque un SMS, il pourra toujours voir la notification
+                    par e-mail.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ Comment configurer la redondance des e-mails</h2>
             <ol>
-                <li>Ouvrez le <span class="notranslate" translate="no">TapAlert</span> et accédez à <strong>Paramètres</strong>.</li>
-                <li>Faites défiler jusqu'à la section <strong>Alertes par e-mail</strong> et activez <strong>Activer les alertes par e-mail</strong>.</li>
-                <li>Sélectionner votre <strong>fournisseur de messagerie</strong> à partir des bouton prédéfinis (Gmail, Outlook, Yahoo, iCloud) pour remplir automatiquement l'hôte et le port SMTP.</li>
+                <li>Ouvrez le <span class="notranslate" translate="no">TapAlert</span> et accédez à
+                    <strong>Paramètres</strong>.
+                </li>
+                <li>Faites défiler jusqu'à la section <strong>Alertes par e-mail</strong> et activez <strong>Activer les
+                        alertes par e-mail</strong>.</li>
+                <li>Sélectionner votre <strong>fournisseur de messagerie</strong> à partir des bouton prédéfinis (Gmail,
+                    Outlook, Yahoo, iCloud) pour remplir automatiquement l'hôte et le port SMTP.</li>
                 <li>Saisissez votre <strong>adresse e-mail</strong> complète.</li>
-                <li>Entrez votre <strong>Mot de passe d'application</strong> (voir la section ci-dessous pour savoir de quoi il s'agit et comment en obtenir un).</li>
-                <li>Appuyez sur <strong>"Enregistrer les paramètres"</strong> et utilisez le "Test Email" bouton pour vous assurer qu'il est correctement configuré.</li>
+                <li>Entrez votre <strong>Mot de passe d'application</strong> (voir la section ci-dessous pour savoir de
+                    quoi il s'agit et comment en obtenir un).</li>
+                <li>Appuyez sur <strong>"Enregistrer les paramètres"</strong> et utilisez le "Test Email" bouton pour
+                    vous assurer qu'il est correctement configuré.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>🔑 Qu'est-ce qu'un mot de passe d'application ?</h2>
-            <p>Un <strong>Mot de passe d'application</strong> est un code d'authentification généré aléatoirement qui autorise une application tierce (telle que <span class="notranslate" translate="no">TapAlert</span>) à accéder à votre messagerie compte pour envoyer des messages en votre nom.</p>
+            <p>Un <strong>Mot de passe d'application</strong> est un code d'authentification généré aléatoirement qui
+                autorise une application tierce (telle que <span class="notranslate" translate="no">TapAlert</span>) à
+                accéder à votre messagerie compte pour envoyer des messages en votre nom.</p>
 
             <h3>Pourquoi ai-je besoin d'un mot de passe plutôt que de mon vrai mot de passe ?</h3>
-            <p>Les fournisseurs de messagerie modernes bloquent les connexions par mot de passe de base pour protéger votre compte des pirates. Un mot de passe d'application contourne l'authentification à deux facteurs (2FA) pour cette application spécifique <em>sans</em> en donnant à l'application votre mot de passe compte réel. Si jamais vous souhaitez révoquer l'accès de <span class="notranslate" translate="no">TapAlert</span>, supprimez simplement le mot de passe de l'application dans vos paramètres de messagerie et votre mot de passe principal compte reste sûr et inchangé.</p>
+            <p>Les fournisseurs de messagerie modernes bloquent les connexions par mot de passe de base pour protéger
+                votre compte des pirates. Un mot de passe d'application contourne l'authentification à deux facteurs
+                (2FA) pour cette application spécifique <em>sans</em> en donnant à l'application votre mot de passe
+                compte réel. Si jamais vous souhaitez révoquer l'accès de <span class="notranslate"
+                    translate="no">TapAlert</span>, supprimez simplement le mot de passe de l'application dans vos
+                paramètres de messagerie et votre mot de passe principal compte reste sûr et inchangé.</p>
 
             <div class="alert-box">
                 <h4>⚠️ Remarque importante</h4>
-                <p>Pour générer un mot de passe d'application, presque tous les fournisseurs de messagerie exigent que vous ayez d'abord activé l'<strong>Authentification à deux facteurs (2FA)</strong> sur votre compte.</p>
+                <p>Pour générer un mot de passe d'application, presque tous les fournisseurs de messagerie exigent que
+                    vous ayez d'abord activé l'<strong>Authentification à deux facteurs (2FA)</strong> sur votre compte.
+                </p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>📝 Comment créer un mot de passe d'application</h2>
-            <p>Voici des instructions claires, étape par étape, pour les fournisseurs de messagerie les plus courants.</p>
+            <p>Voici des instructions claires, étape par étape, pour les fournisseurs de messagerie les plus courants.
+            </p>
 
             <h3>1. Gmail (compte Google)</h3>
             <ol>
-                <li>Accédez à votre <a href="https://mycompte.google.com/" target="_blank">page de gestion de compte Google</a> et connectez-vous.</li>
+                <li>Accédez à votre <a href="https://mycompte.google.com/" target="_blank">page de gestion de compte
+                        Google</a> et connectez-vous.</li>
                 <li>Dans le panneau de navigation de gauche, cliquez sur <strong>Sécurité</strong>.</li>
-                <li>Dans la section "Comment vous connecter à Google", assurez-vous que la <strong>vérification en deux étapes</strong> est <strong>activée</strong>. (S'il est éteint, vous doit l'allumez en premier).</li>
-                <li>Cliquez sur <strong>Vérification en deux étapes</strong>. Faites défiler la page jusqu'en bas et cliquez sur <strong>Mots de passe d'application</strong>.</li>
-                <li>Dans la liste déroulante « Sélectionner app », choisissez <em>Autre (nom personnalisé)</em> et saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Dans la section "Comment vous connecter à Google", assurez-vous que la <strong>vérification en deux
+                        étapes</strong> est <strong>activée</strong>. (S'il est éteint, vous doit l'allumez en premier).
+                </li>
+                <li>Cliquez sur <strong>Vérification en deux étapes</strong>. Faites défiler la page jusqu'en bas et
+                    cliquez sur <strong>Mots de passe d'application</strong>.</li>
+                <li>Dans la liste déroulante « Sélectionner app », choisissez <em>Autre (nom personnalisé)</em> et
+                    saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Cliquez sur <strong>Générer</strong>.</li>
-                <li>Une boîte jaune apparaîtra avec un code à 16 caractères. Copiez ce code et collez-le dans le champ « Mot de passe de l'application » de l'application <span class="notranslate" translate="no">TapAlert</span> (vous n'avez pas besoin d'inclure les espaces).</li>
+                <li>Une boîte jaune apparaîtra avec un code à 16 caractères. Copiez ce code et collez-le dans le champ «
+                    Mot de passe de l'application » de l'application <span class="notranslate"
+                        translate="no">TapAlert</span> (vous n'avez pas besoin d'inclure les espaces).</li>
                 <li>Cliquez sur <strong>Terminé</strong>.</li>
             </ol>
 
             <h3>2. Hotmail/Outlook (compte Microsoft)</h3>
             <ol>
-                <li>Accédez à la <a href="https://compte.microsoft.com/security" target="_blank">page Sécurité du compte Microsoft</a> et connectez-vous.</li>
+                <li>Accédez à la <a href="https://compte.microsoft.com/security" target="_blank">page Sécurité du compte
+                        Microsoft</a> et connectez-vous.</li>
                 <li>Cliquez sur <strong>Options de sécurité avancées</strong>.</li>
-                <li>Dans la section "Sécurité supplémentaire", assurez-vous que la <strong>Vérification en deux étapes</strong> est <strong>Activée</strong>.</li>
+                <li>Dans la section "Sécurité supplémentaire", assurez-vous que la <strong>Vérification en deux
+                        étapes</strong> est <strong>Activée</strong>.</li>
                 <li>Faites défiler jusqu'à la section <strong>Mots de passe d'application</strong>.</li>
                 <li>Cliquez sur <strong>Créer un nouveau mot de passe d'application</strong>.</li>
                 <li>Un nouvel écran apparaîtra affichant votre mot de passe d'application unique.</li>
-                <li>Copiez ce mot de passe et collez-le dans <span class="notranslate" translate="no">TapAlert</span>, puis cliquez sur <strong>Terminé</strong>.</li>
+                <li>Copiez ce mot de passe et collez-le dans <span class="notranslate" translate="no">TapAlert</span>,
+                    puis cliquez sur <strong>Terminé</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Accédez à votre <a href="https://login.yahoo.com/compte/security" target="_blank">page de sécurité du compte Yahoo</a> et connectez-vous.</li>
-                <li>Faites défiler la page vers le bas et cliquez sur <strong>Générer et gérer les mots de passe des applications</strong>.</li>
-                <li>Une fenêtre modale apparaîtra. Saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong> comme nom de l'application.</li>
+                <li>Accédez à votre <a href="https://login.yahoo.com/compte/security" target="_blank">page de sécurité
+                        du compte Yahoo</a> et connectez-vous.</li>
+                <li>Faites défiler la page vers le bas et cliquez sur <strong>Générer et gérer les mots de passe des
+                        applications</strong>.</li>
+                <li>Une fenêtre modale apparaîtra. Saisissez <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong> comme nom de l'application.</li>
                 <li>Cliquez sur <strong>Générer un mot de passe</strong>.</li>
-                <li>Copiez le mot de passe à 16 caractères affiché à l'écran et collez-le dans <span class="notranslate" translate="no">TapAlert</span> (en omettant les espaces).</li>
+                <li>Copiez le mot de passe à 16 caractères affiché à l'écran et collez-le dans <span class="notranslate"
+                        translate="no">TapAlert</span> (en omettant les espaces).</li>
                 <li>Cliquez sur <strong>Terminé</strong>.</li>
             </ol>
 
             <h3>4. iCloud (identifiant Apple)</h3>
             <ol>
-                <li>Accédez à <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> et connectez-vous avec votre identifiant Apple.</li>
-                <li>Dans la section <strong>Connexion et sécurité</strong>, cliquez sur <strong>Mots de passe spécifiques à l'application</strong>.</li>
-                <li>Cliquez sur <strong>Générer un mot de passe spécifique à l'application</strong> ou sur <strong>Ajouter (+)</strong>bouton.</li>
-                <li>Saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong> lorsque vous êtes invité à saisir un nom d'application, puis cliquez sur Créer.</li>
-                <li>Il vous sera peut-être demandé de saisir à nouveau le mot de passe de votre identifiant Apple pour confirmer.</li>
-                <li>Un mot de passe unique spécifique à l'application sera généré et affiché (généralement au format <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
-                <li>Copiez l'intégralité de ce mot de passe et collez-le dans <span class="notranslate" translate="no">TapAlert</span>, puis cliquez sur <strong>Terminé</strong>.</li>
+                <li>Accédez à <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> et
+                    connectez-vous avec votre identifiant Apple.</li>
+                <li>Dans la section <strong>Connexion et sécurité</strong>, cliquez sur <strong>Mots de passe
+                        spécifiques à l'application</strong>.</li>
+                <li>Cliquez sur <strong>Générer un mot de passe spécifique à l'application</strong> ou sur
+                    <strong>Ajouter (+)</strong>bouton.
+                </li>
+                <li>Saisissez <strong><span class="notranslate" translate="no">TapAlert</span></strong> lorsque vous
+                    êtes invité à saisir un nom d'application, puis cliquez sur Créer.</li>
+                <li>Il vous sera peut-être demandé de saisir à nouveau le mot de passe de votre identifiant Apple pour
+                    confirmer.</li>
+                <li>Un mot de passe unique spécifique à l'application sera généré et affiché (généralement au format
+                    <code>xxxx-xxxx-xxxx-xxxx</code>).
+                </li>
+                <li>Copiez l'intégralité de ce mot de passe et collez-le dans <span class="notranslate"
+                        translate="no">TapAlert</span>, puis cliquez sur <strong>Terminé</strong>.</li>
             </ol>
         </section>
 
@@ -516,7 +656,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Des alertes d'urgence simples pour tout le monde. Pas d'abonnement, pas de suivi, juste de la sécurité.</p>
+                    <p>Des alertes d'urgence simples pour tout le monde. Pas d'abonnement, pas de suivi, juste de la
+                        sécurité.</p>
                 </div>
 
                 <div class="footer-section">
@@ -541,7 +682,8 @@
                     <h3>Soutien</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guides étape par étape</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guides
+                                étape par étape</a></li>
                         <li><a href="accessibility_guide.html">Guide d'accessibilité</a></li>
                         <li><a href="troubleshooting.html">Dépannage</a></li>
                         <li><a href="contact.html">Contacter l'assistance</a></li>
@@ -550,7 +692,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tous droits réservés. | Fabriqué avec ❤️ pour votre sécurité</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tous droits réservés. |
+                    Fabriqué avec ❤️ pour votre sécurité</p>
             </div>
         </div>
     </footer>

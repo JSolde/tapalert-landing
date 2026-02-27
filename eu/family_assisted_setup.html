@@ -17,56 +17,351 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👨‍👩‍👧 Familiaren laguntzarekin konfiguratzeko gida - TapAlert</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn { padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; display: inline-block; border: none; cursor: pointer; }
-        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-        .guide-header { background: white; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .guide-nav { display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { display: flex; align-items: center; font-weight: 800; font-size: 1.5rem; color: #333; text-decoration: none; }
-        .guide-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .guide-title { font-size: 2.2rem; color: #2c3e50; margin-bottom: 10px; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .guide-subtitle { text-align: center; color: #667eea; font-size: 1.05rem; margin-bottom: 30px; }
-        .guide-section { margin-bottom: 40px; }
-        h2 { font-size: 1.8rem; color: #2c3e50; margin-top: 40px; margin-bottom: 20px; border-left: 5px solid #667eea; padding-left: 15px; }
-        h3 { font-size: 1.3rem; color: #4a5568; margin-top: 25px; margin-bottom: 12px; }
-        p { margin-bottom: 15px; color: #4a5568; }
-        ul, ol { margin-bottom: 20px; padding-left: 25px; color: #4a5568; }
-        li { margin-bottom: 8px; }
-        a { color: #667eea; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .tip-box { background-color: #f0f4ff; border-left: 4px solid #667eea; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .tip-box strong { color: #2c3e50; }
-        .warn-box { background-color: #fffaf0; border-left: 4px solid #ed8936; padding: 15px 18px; margin: 20px 0; border-radius: 4px; color: #4a5568; }
-        .warn-box strong { color: #c05621; }
-        pre { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin: 20px 0; line-height: 1.5; }
-        code { background: #eef1f8; color: #667eea; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-        pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
-        .checklist { list-style: none; padding-left: 5px; }
-        .checklist li::before { content: "☐ "; color: #667eea; font-size: 1.1em; }
-        footer { background: #1a1a1a; color: white; padding: 60px 20px 30px; margin-top: 60px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h3 { margin-bottom: 20px; color: #667eea; }
-        .footer-section ul { list-style: none; padding-left: 0; }
-        .footer-section ul li { padding: 8px 0; }
-        .footer-section a { color: #ccc; text-decoration: none; transition: color 0.3s ease; }
-        .footer-section a:hover { color: white; text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; }
-        @media (max-width: 768px) {
-            body { font-size: 14px; } .brand-logo { font-size: 1.2rem; } .btn { padding: 8px 16px; font-size: 0.85rem; }
-            .guide-container { padding: 20px; margin: 20px; } .guide-title { font-size: 1.7rem; }
-            h2 { font-size: 1.4rem; margin-top: 30px; padding-left: 12px; } h3 { font-size: 1.15rem; }
-            p, li { font-size: 0.9rem; } pre { font-size: 0.75rem; padding: 14px; }
-            footer { padding: 40px 15px 20px; margin-top: 40px; } .footer-content { gap: 25px; margin-bottom: 25px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .guide-header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .guide-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-subtitle {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .guide-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tip-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .tip-box strong {
+            color: #2c3e50;
+        }
+
+        .warn-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #4a5568;
+        }
+
+        .warn-box strong {
+            color: #c05621;
+        }
+
+        pre {
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #eef1f8;
+            color: #667eea;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .checklist li::before {
+            content: "☐ ";
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .brand-logo {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .guide-container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .guide-title {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 30px;
+                padding-left: 12px;
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+
+            p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            pre {
+                font-size: 0.75rem;
+                padding: 14px;
+            }
+
+            footer {
+                padding: 40px 15px 20px;
+                margin-top: 40px;
+            }
+
+            .footer-content {
+                gap: 25px;
+                margin-bottom: 25px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
         @media (max-width: 430px) {
-            body { font-size: 13px; } .btn { padding: 7px 14px; font-size: 0.8rem; }
-            .guide-container { padding: 15px; margin: 12px; } .guide-title { font-size: 1.45rem; }
-            h2 { font-size: 1.2rem; padding-left: 10px; border-left-width: 4px; } h3 { font-size: 1.05rem; }
-            pre { font-size: 0.7rem; padding: 10px; } footer { padding: 30px 12px 15px; margin-top: 30px; }
-            .footer-content { gap: 20px; grid-template-columns: 1fr; }
+            body {
+                font-size: 13px;
+            }
+
+            .btn {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .guide-container {
+                padding: 15px;
+                margin: 12px;
+            }
+
+            .guide-title {
+                font-size: 1.45rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                padding-left: 10px;
+                border-left-width: 4px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            pre {
+                font-size: 0.7rem;
+                padding: 10px;
+            }
+
+            footer {
+                padding: 30px 12px 15px;
+                margin-top: 30px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -76,48 +371,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">EU</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
-            <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
-            <a href="../family_assisted_setup.html" hreflang="en">EN</a>
-            <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
-            <a href="../eu/family_assisted_setup.html" hreflang="eu" class="active">EU</a>
-            <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
-            <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
-            <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
-            <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
-            <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">EU</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
+                        <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
+                        <a href="../family_assisted_setup.html" hreflang="en">EN</a>
+                        <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
+                        <a href="../eu/family_assisted_setup.html" hreflang="eu" class="active">EU</a>
+                        <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
+                        <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
+                        <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
+                        <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
+                        <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -127,13 +514,19 @@
         <h1 class="guide-title">👨‍👩‍👧 Familiaren laguntzarekin konfiguratzeko gida</h1>
         <p class="guide-subtitle">TapAlert konfiguratu pertsona heldu batentzat Magic Link erabiliz</p>
 
-        <p>Gida hau senidoentzat, zaintzaileentzat eta pertsona heldu edo teknologia gutxiago ezagutzen duen norbaiti TapAlert konfiguratzen laguntzen ari den edonorentzat da. Magic Link funtzioaren bidez, aplikazio osoa zure gailutik konfiguratu eta erabiltzaileari prest dagoen konfigurazio bat eman diezaiokezu ukitu bakar batekin.</p>
+        <p>Gida hau senidoentzat, zaintzaileentzat eta pertsona heldu edo teknologia gutxiago ezagutzen duen norbaiti
+            TapAlert konfiguratzen laguntzen ari den edonorentzat da. Magic Link funtzioaren bidez, aplikazio osoa zure
+            gailutik konfiguratu eta erabiltzaileari prest dagoen konfigurazio bat eman diezaiokezu ukitu bakar batekin.
+        </p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
             <h2>Ikuspegi orokorra: Magic Link nola funtzionatzen duen</h2>
-            <p>Magic Link funtzioak pertsona teknologiko batek ("administratzaileak") konfigurazio lan guztia egin eta esteka berezi gisa partekatzeko aukera ematen du. Pertsona helduak bere telefonoan esteka hori sakatzean, TapAlert-ek automatikoki konfigurazio osoa aplikatzen du — kontaktuak, mezuak, ezarpenak eta dena — urrats bakar batean.</p>
-<pre>Admin's phone                         Senior's phone
+            <p>Magic Link funtzioak pertsona teknologiko batek ("administratzaileak") konfigurazio lan guztia egin eta
+                esteka berezi gisa partekatzeko aukera ematen du. Pertsona helduak bere telefonoan esteka hori
+                sakatzean, TapAlert-ek automatikoki konfigurazio osoa aplikatzen du — kontaktuak, mezuak, ezarpenak eta
+                dena — urrats bakar batean.</p>
+            <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
 2. Fill in all configuration
@@ -157,20 +550,26 @@
             </ul>
 
             <h3>Aukerazkoa: Twilio bidezko SMS automatikoak egiteko</h3>
-            <p>Alertak automatikoki bidali nahi badituzu pertsona helduaren telefonoan inongo aplikaziorik ireki gabe:</p>
+            <p>Alertak automatikoki bidali nahi badituzu pertsona helduaren telefonoan inongo aplikaziorik ireki gabe:
+            </p>
             <ul class="checklist">
                 <li>Twilio kontu bat (doako proba twilio.com-en eskuragarri)</li>
                 <li>Twilio Account SID (Twilio Console paneletik)</li>
                 <li>Twilio Auth Token (Twilio Console paneletik)</li>
-                <li>Twilio telefono zenbaki bat, EDO igorle izen alfanumeriko bat (adib., "TapAlert") zure herrialdeak onartzen badu</li>
-                <li>Zure telefono zenbakia — aplikazioak proba SMS bat bidaliko du Twilio funtzionatzen duela egiaztatzeko</li>
+                <li>Twilio telefono zenbaki bat, EDO igorle izen alfanumeriko bat (adib., "TapAlert") zure herrialdeak
+                    onartzen badu</li>
+                <li>Zure telefono zenbakia — aplikazioak proba SMS bat bidaliko du Twilio funtzionatzen duela
+                    egiaztatzeko</li>
             </ul>
-            <div class="warn-box">iOS erabiltzaileentzako oharra: iPhonean, SMS automatikoak Twilio-k behar ditu. Gabe, aplikazioak SMS natiboko aplikazioa irekitzen du eta pertsona helduak Bidali sakatu behar du eskuz. Fidagarria da oraindik, baina ukitu gehigarri bat behar du.</div>
+            <div class="warn-box">iOS erabiltzaileentzako oharra: iPhonean, SMS automatikoak Twilio-k behar ditu. Gabe,
+                aplikazioak SMS natiboko aplikazioa irekitzen du eta pertsona helduak Bidali sakatu behar du eskuz.
+                Fidagarria da oraindik, baina ukitu gehigarri bat behar du.</div>
 
             <h3>Aukerazkoa: Posta elektronikoaren erredundantziarako</h3>
             <p>Alertak SMS ez ezik posta elektroniko bidez ere bidali nahi badituzu:</p>
             <ul class="checklist">
-                <li>Bidaltzeko posta elektroniko helbide dedikatu bat (Gmail, Outlook, iCloud, Yahoo edo pertsonalizatua)</li>
+                <li>Bidaltzeko posta elektroniko helbide dedikatu bat (Gmail, Outlook, iCloud, Yahoo edo
+                    pertsonalizatua)</li>
                 <li>Kontu horretarako App Pasahitz bat (ikusi 4. urratsa behean)</li>
             </ul>
         </section>
@@ -181,10 +580,13 @@
             <ol>
                 <li>Instalatu TapAlert zure telefonoan (Magic Link sortzeko aplikazioa behar duzu).</li>
                 <li>Ireki TapAlert.</li>
-                <li>Oraindik onboardinga osatu ez baduzu, baimenaren pantailak egin. Azken pantailan, sakatu "Beste norbaitzarako konfiguratu".</li>
-                <li>TapAlert dagoeneko instalatuta badago, joan Ezarpenak → joan behera → sakatu "Admin konfigurazioa / Magic Link".</li>
+                <li>Oraindik onboardinga osatu ez baduzu, baimenaren pantailak egin. Azken pantailan, sakatu "Beste
+                    norbaitzarako konfiguratu".</li>
+                <li>TapAlert dagoeneko instalatuta badago, joan Ezarpenak → joan behera → sakatu "Admin konfigurazioa /
+                    Magic Link".</li>
             </ol>
-            <p>Admin konfigurazio pantaila irekiko da. Ibili sekzioen artean — beheko urratseetan bakoitza beteko duzu.</p>
+            <p>Admin konfigurazio pantaila irekiko da. Ibili sekzioen artean — beheko urratseetan bakoitza beteko duzu.
+            </p>
         </section>
 
         <!-- Step 2 -->
@@ -192,9 +594,11 @@
             <h2>2. urratsa: Pertsona helduaren izena sartu</h2>
             <p>"Erabiltzaile informazioa" atalean, pantailaren goialdean:</p>
             <ul>
-                <li>Pertsona helduaren izena — Idatzi bere izena (adib., "Maria"). Izen hau alerta mezuetan agertuko da hartzaileek nor bidali duen jakiteko.</li>
+                <li>Pertsona helduaren izena — Idatzi bere izena (adib., "Maria"). Izen hau alerta mezuetan agertuko da
+                    hartzaileek nor bidali duen jakiteko.</li>
             </ul>
-            <div class="tip-box">Adibidea: "Maria" idazten baduzu, hartzaileek jasoko dute: "ALERTA Maria-rengandik: Laguntza behar dut. Kokapena: …"</div>
+            <div class="tip-box">Adibidea: "Maria" idazten baduzu, hartzaileek jasoko dute: "ALERTA Maria-rengandik:
+                Laguntza behar dut. Kokapena: …"</div>
         </section>
 
         <!-- Step 3 -->
@@ -205,7 +609,8 @@
             <p>Utzi "Twilio SMS gaitu" txandakatzailea itzalita.</p>
             <ul>
                 <li>Androiden, aplikazioak SMS bidaltzen ditu zuzenean SIM txartela erabiliz — ez da Twilio behar.</li>
-                <li>iPhonean, aplikazioak Mezuak aplikazioa beteta irekitzen du eta pertsona helduak Bidali behin sakatu behar du. Sinplea baina urrats gehigarri bat.</li>
+                <li>iPhonean, aplikazioak Mezuak aplikazioa beteta irekitzen du eta pertsona helduak Bidali behin sakatu
+                    behar du. Sinplea baina urrats gehigarri bat.</li>
             </ul>
 
             <h3>B aukera: Twilio-rekin (automatizazio osoa lortzeko gomendatua)</h3>
@@ -215,28 +620,37 @@
                 <li>Sartu zure Twilio kontsola-ko Auth Token (begi ikonoa sakatu erakusteko/ezkutatzeko).</li>
                 <li>Aukeratu igorlea nola identifikatu:
                     <ul>
-                        <li>Twilio zenbakia — Sartu Twilio zenbakia (adib., +12015551234). Aukeratu lehenik herrialde bandera.</li>
-                        <li>Igorle izena — Piztu "Igorle izen alfanumerikoa" eta idatzi izen labur bat (adib., "TapAlert"). Oharra: ez da herrialde guztietan onartzen (adib., EEBB).</li>
+                        <li>Twilio zenbakia — Sartu Twilio zenbakia (adib., +12015551234). Aukeratu lehenik herrialde
+                            bandera.</li>
+                        <li>Igorle izena — Piztu "Igorle izen alfanumerikoa" eta idatzi izen labur bat (adib.,
+                            "TapAlert"). Oharra: ez da herrialde guztietan onartzen (adib., EEBB).</li>
                     </ul>
                 </li>
-                <li>Zure zenbakia — Sartu zure zenbakia. Aplikazioak proba SMS bat bidaliko du esteka sortu aurretik Twilio funtzionatzen duela berresteko.</li>
+                <li>Zure zenbakia — Sartu zure zenbakia. Aplikazioak proba SMS bat bidaliko du esteka sortu aurretik
+                    Twilio funtzionatzen duela berresteko.</li>
             </ol>
-            <div class="tip-box">Twilio kredentzialak non aurkitu: Hasi saioa console.twilio.com-en. Account SID eta Auth Token paneleko orri nagusian. Zure zenbakia Telefono Zenbakiak → Kudeatu → Zenbaki Aktiboak atalean.</div>
+            <div class="tip-box">Twilio kredentzialak non aurkitu: Hasi saioa console.twilio.com-en. Account SID eta
+                Auth Token paneleko orri nagusian. Zure zenbakia Telefono Zenbakiak → Kudeatu → Zenbaki Aktiboak
+                atalean.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
             <h2>4. urratsa: Posta elektronikoaren alertak konfiguratu (aukerazkoa)</h2>
-            <p>Posta elektronikoko alertak alerta bakoitzaren kopia bidaltzen du posta helbidea duten hartzaileei. SMS huts egiten badu lagungarria da.</p>
+            <p>Posta elektronikoko alertak alerta bakoitzaren kopia bidaltzen du posta helbidea duten hartzaileei. SMS
+                huts egiten badu lagungarria da.</p>
             <ol>
                 <li>Piztu "Posta elektronikoaren erredundantzia gaitu" txandakatzailea.</li>
-                <li>Aukeratu zure posta hornitzailea: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (ezarpenak automatikoki beteta) edo SMTP pertsonalizatua.</li>
-                <li>Sartu bidaltzeko posta helbidea — ahal bada, helbide dedikatu bat, ez pertsona helduaren posta pertsonala.</li>
+                <li>Aukeratu zure posta hornitzailea: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (ezarpenak
+                    automatikoki beteta) edo SMTP pertsonalizatua.</li>
+                <li>Sartu bidaltzeko posta helbidea — ahal bada, helbide dedikatu bat, ez pertsona helduaren posta
+                    pertsonala.</li>
                 <li>Sartu kontu horretarako App Pasahitza.</li>
             </ol>
 
             <h3>Nola lortu App Pasahitz bat</h3>
-            <p>Ohiko posta pasahitzak ez dira funtzionatuko. Posta hornitzaileek App Pasahitzak eskatzen dituzte SMTP bidez konektatzen diren aplikazioetarako.</p>
+            <p>Ohiko posta pasahitzak ez dira funtzionatuko. Posta hornitzaileek App Pasahitzak eskatzen dituzte SMTP
+                bidez konektatzen diren aplikazioetarako.</p>
 
             <h3>Gmail</h3>
             <ol>
@@ -273,10 +687,12 @@
                 <li>Sartu bere izena Izen eremuan (adib., "Carlos" edo "Dr. García").</li>
                 <li>Sartu bere telefono zenbakia — aukeratu lehenik herrialde bandera egokia eta idatzi zenbakia.</li>
                 <li>Sakatu + botoi urdina zerrendara gehitzeko.</li>
-                <li>Errepikatu kontaktu bakoitzarentzat. Behar adina gehitu dezakezu (50 arte premium-arekin; doako bertsioak 1 onartzen du).</li>
+                <li>Errepikatu kontaktu bakoitzarentzat. Behar adina gehitu dezakezu (50 arte premium-arekin; doako
+                    bertsioak 1 onartzen du).</li>
             </ol>
             <p>Kontaktu bat kentzeko, sakatu bere izenaren ondoko zakarrontzi gorri ikonoa.</p>
-            <div class="tip-box">Aholkua: Gehitu gutxienez 2 kontaktu erredundantziarako — pertsona bat eskuraezin dagoen kasurako.</div>
+            <div class="tip-box">Aholkua: Gehitu gutxienez 2 kontaktu erredundantziarako — pertsona bat eskuraezin
+                dagoen kasurako.</div>
         </section>
 
         <!-- Step 6 -->
@@ -284,11 +700,14 @@
             <h2>6. urratsa: Aurrez konfiguratutako alerta-mezuak idatzi</h2>
             <p><strong>«Alerta-mezuak»</strong> atalean, erabilerako prest dauden 3 mezu idatz ditzakezu:</p>
             <ul>
-                <li><strong>1. mezua</strong> — Larrialdietako mezu nagusia (adib., «Laguntza behar dut, deitu iezadazu»)</li>
-                <li><strong>2. mezua</strong> — «Ongi nago» edo egiaztapen-mezu bat (adib., «Ongi nago, ez kezkatu»)</li>
+                <li><strong>1. mezua</strong> — Larrialdietako mezu nagusia (adib., «Laguntza behar dut, deitu
+                    iezadazu»)</li>
+                <li><strong>2. mezua</strong> — «Ongi nago» edo egiaztapen-mezu bat (adib., «Ongi nago, ez kezkatu»)
+                </li>
                 <li><strong>3. mezua</strong> — Beste mezu pertsonalizatu bat (adib., «Erori naiz, mesedez etorri»)</li>
             </ul>
-            <p>Hauek botoi handi gisa agertuko dira nagusiaren pantaila nagusian, behin ukituz alerta bidal dezan, ezer idatzi gabe.</p>
+            <p>Hauek botoi handi gisa agertuko dira nagusiaren pantaila nagusian, behin ukituz alerta bidal dezan, ezer
+                idatzi gabe.</p>
             <div class="tip-box">
                 <strong>Mezu onetarako aholkuak:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
@@ -302,20 +721,24 @@
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
             <h2>7. urratsa: Aplikazioaren ezarpenak aukeratu</h2>
-            <p><strong>«Aplikazioaren ezarpenak»</strong> atalean, konfiguratu nola jokatzen duen aplikazioak nagusiarentzat:</p>
+            <p><strong>«Aplikazioaren ezarpenak»</strong> atalean, konfiguratu nola jokatzen duen aplikazioak
+                nagusiarentzat:</p>
 
             <h3>Alertaren atzerako kontaketa</h3>
             <p>Nagusiak alerta-botoia sakonduta, zenbat segundu itxaron bidalketa egin baino lehen.</p>
             <ul>
                 <li><strong>0 segundo</strong> — berehala bidaltzen du, ezin da bertan behera utzi</li>
-                <li><strong>3–10 segundo</strong> — nagusi gehienentzat gomendatua; denbora ematen du bertan behera uzteko oker sakonduz gero</li>
+                <li><strong>3–10 segundo</strong> — nagusi gehienentzat gomendatua; denbora ematen du bertan behera
+                    uzteko oker sakonduz gero</li>
                 <li><strong>15–30 segundo</strong> — nagusiak ustekabean ukitzeko joera badu</li>
             </ul>
 
             <h3>Aktibazio-modua</h3>
             <ul>
-                <li><strong>Ukitu bakarra</strong> — behin ukitu atzerako kontaketa hasteko (errazagoa mugikortasun mugatua duten nagusientzat)</li>
-                <li><strong>Eutsita mantendu</strong> — eutsita mantendu botoia berresteko (ustekabean bidaltzea ekiditzen du)</li>
+                <li><strong>Ukitu bakarra</strong> — behin ukitu atzerako kontaketa hasteko (errazagoa mugikortasun
+                    mugatua duten nagusientzat)</li>
+                <li><strong>Eutsita mantendu</strong> — eutsita mantendu botoia berresteko (ustekabean bidaltzea
+                    ekiditzen du)</li>
             </ul>
 
             <h3>Itxura</h3>
@@ -326,8 +749,10 @@
             </ul>
 
             <h3>Hizkuntza</h3>
-            <p>Hautatu aplikazioaren interfazerako hizkuntza. Erabilgarri: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
-            <div class="tip-box">Aholkua: Ezarri hizkuntza nagusiak hitz egiten duenaren arabera, nahiz eta beste hizkuntza batean konfiguratu.</div>
+            <p>Hautatu aplikazioaren interfazerako hizkuntza. Erabilgarri: English, Español, Català, Français, Deutsch,
+                Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Aholkua: Ezarri hizkuntza nagusiak hitz egiten duenaren arabera, nahiz eta beste
+                hizkuntza batean konfiguratu.</div>
         </section>
 
         <!-- Step 8 -->
@@ -342,16 +767,24 @@
             <h3>Jarraian zer gertatzen den:</h3>
             <p><strong>Proba-fasea</strong> (segundo batzuk behar ditu):</p>
             <ul>
-                <li>Twilio gaituta badago: aplikazioak proba-SMS bat bidaltzen du <strong>zure telefono-zenbakira</strong> funtzionatzen duela egiaztatzeko. SMS hau segundu gutxitan jaso beharko zenuke.</li>
-                <li>Posta elektronikoa gaituta badago: aplikazioak proba-mezu bat bidaltzen du sartu duzun posta-helbidera. Egiaztatu zure sarrerako ontzia.</li>
-                <li>Probak huts egiten badute, errore-mezu bat agertzen da. Egiaztatu zure egiaztagiriak eta saiatu berriro.</li>
+                <li>Twilio gaituta badago: aplikazioak proba-SMS bat bidaltzen du <strong>zure
+                        telefono-zenbakira</strong> funtzionatzen duela egiaztatzeko. SMS hau segundu gutxitan jaso
+                    beharko zenuke.</li>
+                <li>Posta elektronikoa gaituta badago: aplikazioak proba-mezu bat bidaltzen du sartu duzun
+                    posta-helbidera. Egiaztatu zure sarrerako ontzia.</li>
+                <li>Probak huts egiten badute, errore-mezu bat agertzen da. Egiaztatu zure egiaztagiriak eta saiatu
+                    berriro.</li>
             </ul>
             <p><strong>Partekatzeko fasea:</strong></p>
             <ul>
                 <li>Sistemaren partekatzeko orria automatikoki irekitzen da.</li>
-                <li>Bidali Magic Link nagusiari <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>posta elektroniko</strong>, <strong>SMS</strong> edo erabiltzen duzun mezularitza-app baten bidez.</li>
+                <li>Bidali Magic Link nagusiari <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>posta
+                        elektroniko</strong>, <strong>SMS</strong> edo erabiltzen duzun mezularitza-app baten bidez.
+                </li>
             </ul>
-            <div class="warn-box">Esteka partekatzeko segurua da — baina pasahitz bezala tratatu. Nagusiaren konfigurazioa dauka, kontaktuak eta (konfiguratuta badago) zure Twilio/posta egiaztagiriak barne. Partekatu nagusiarekin bakarrik.</div>
+            <div class="warn-box">Esteka partekatzeko segurua da — baina pasahitz bezala tratatu. Nagusiaren
+                konfigurazioa dauka, kontaktuak eta (konfiguratuta badago) zure Twilio/posta egiaztagiriak barne.
+                Partekatu nagusiarekin bakarrik.</div>
         </section>
 
         <!-- Step 9 -->
@@ -361,10 +794,12 @@
             <ol>
                 <li>Nagusiak bidali zenion mezua jasotzen du.</li>
                 <li>Esteka sakatzen du.</li>
-                <li>TapAlert automatikoki irekitzen da eta baieztapen-pantaila bat erakusten du: <em>«Prest [Izena]rentzat TapAlert konfiguratzeko?»</em> konfiguratuko denaren laburpenarekin.</li>
+                <li>TapAlert automatikoki irekitzen da eta baieztapen-pantaila bat erakusten du: <em>«Prest
+                        [Izena]rentzat TapAlert konfiguratzeko?»</em> konfiguratuko denaren laburpenarekin.</li>
                 <li>Nagusiak <strong>«Bai, konfiguratu»</strong> sakatzen du (edo baliokidea den botoia).</li>
                 <li>Aplikazioak konfigurazio osoa momentuan aplikatzen du.</li>
-                <li>Arrakasta-mezu bat agertzen da eta aplikazioa pantaila nagusira irekitzen da — erabiltzeko prest.</li>
+                <li>Arrakasta-mezu bat agertzen da eta aplikazioa pantaila nagusira irekitzen da — erabiltzeko prest.
+                </li>
             </ol>
             <p><strong>Hori da dena. Nagusiak ez du ezarpen, egiaztagiri edo aukerarik sartu behar.</strong></p>
 
@@ -385,20 +820,24 @@
                 <li>Nagusiaren izena hasierako pantailan ikusi beharko zenuke.</li>
                 <li>Sakatu alerta-botoietako bat.</li>
                 <li>Itxaron atzerako kontaketari (edo bidali berehala kontaketa 0 bada).</li>
-                <li>Egiaztatu konfiguratutako kontaktu guztiek SMS jasotzen dutela (eta posta elektronikoa, konfiguratuta badago).</li>
+                <li>Egiaztatu konfiguratutako kontaktu guztiek SMS jasotzen dutela (eta posta elektronikoa,
+                    konfiguratuta badago).</li>
                 <li>Egiaztatu mezuaren testua eta kokapen-esteka zuzenak direla.</li>
             </ol>
-            <div class="tip-box">Zerbait gaizki badago, Magic Link berriz sortu dezakezu zuzenketekin eta berriro bidali — esteka berri bat aplikatzeak aurreko konfigurazioa gainidazten du.</div>
+            <div class="tip-box">Zerbait gaizki badago, Magic Link berriz sortu dezakezu zuzenketekin eta berriro bidali
+                — esteka berri bat aplikatzeak aurreko konfigurazioa gainidazten du.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
             <h2>Konfigurazio ostean: Nagusiak zer ikusten duen</h2>
-            <p>Nagusiaren aplikazioa zuzenean <strong>Izualdeko Moduaren</strong> pantailara irekitzen da — pantaila osoko larrialdi-botoi sinplea. Interfazea irakurri gabe erabiltzeko diseinatuta dago:</p>
+            <p>Nagusiaren aplikazioa zuzenean <strong>Izualdeko Moduaren</strong> pantailara irekitzen da — pantaila
+                osoko larrialdi-botoi sinplea. Interfazea irakurri gabe erabiltzeko diseinatuta dago:</p>
             <ul>
                 <li><strong>Botoi gorri handi SOS</strong> erdian — sakatu larrialdi-alerta bidaltzeko</li>
                 <li><strong>Botoi berde handi OK</strong> behean — sakatu «Ongi nago» mezu bat bidaltzeko</li>
-                <li><strong>Irristatu ezkerrerantz</strong> aurrez konfiguratutako mezu-botoiak ikusteko (mezuak konfiguratu baziren)</li>
+                <li><strong>Irristatu ezkerrerantz</strong> aurrez konfiguratutako mezu-botoiak ikusteko (mezuak
+                    konfiguratu baziren)</li>
             </ul>
             <p>Nagusiak ez du inoiz Ezarpenetan sartu behar ez eta ezer nola funtzionatzen duen ulertu.</p>
         </section>
@@ -408,8 +847,10 @@
             <h2>Hainbat nagusi konfiguratu</h2>
             <p>TapAlert hainbat nagusirentzat konfiguratu dezakezu, aldiro hasieratik hasi gabe:</p>
             <ol>
-                <li>Lehen Magic Link sortu ondoren, sakatu <strong>«Beste nagusi bat konfiguratu»</strong> bukaera-elkarrizketan.</li>
-                <li>Inprimakiak nagusiaren izena eta kontaktuak garbitzen ditu, baina <strong>zure Twilio egiaztagiriak, posta ezarpenak eta aplikazioaren hobespenak gordetzen ditu</strong>.</li>
+                <li>Lehen Magic Link sortu ondoren, sakatu <strong>«Beste nagusi bat konfiguratu»</strong>
+                    bukaera-elkarrizketan.</li>
+                <li>Inprimakiak nagusiaren izena eta kontaktuak garbitzen ditu, baina <strong>zure Twilio egiaztagiriak,
+                        posta ezarpenak eta aplikazioaren hobespenak gordetzen ditu</strong>.</li>
                 <li>Aldatu soilik desberdina dena (izena, kontaktuak, mezuak) hurrengo nagusiarentzat.</li>
                 <li>Sortu eta partekatu Magic Link berri bat.</li>
             </ol>
@@ -423,34 +864,44 @@
             <ul>
                 <li>Egiaztatu beharrezko eremu guztiak beterik daudela (mezu gorri batekin markatuta).</li>
                 <li>Twilio gaituta badago, ziurtatu Account SID, Auth Token eta telefono-zenbakia zuzenak direla.</li>
-                <li>Posta elektronikoa gaituta badago, egiaztatu App Pasahitza — kontu-pasahitz arruntek ez dute funtzionatuko.</li>
+                <li>Posta elektronikoa gaituta badago, egiaztatu App Pasahitza — kontu-pasahitz arruntek ez dute
+                    funtzionatuko.</li>
             </ul>
 
             <h3>Nagusiak ez du proba-SMS jaso</h3>
             <ul>
-                <li>Egiaztatu Twilio telefono-zenbakia aktibo dagoela eta ez dela proba-zenbaki bat egiaztatu gabeko zenbakietara bidaltzen.</li>
-                <li>Twilio-ren doako probaldian, Twilio Kontsolan egiaztatu dituzun telefono-zenbakietara soilik bidali dezakezu. Gehitu nagusiaren kontaktuak egiaztaturiko zenbaki gisa, edo igo kontu ordainpekora.</li>
+                <li>Egiaztatu Twilio telefono-zenbakia aktibo dagoela eta ez dela proba-zenbaki bat egiaztatu gabeko
+                    zenbakietara bidaltzen.</li>
+                <li>Twilio-ren doako probaldian, Twilio Kontsolan egiaztatu dituzun telefono-zenbakietara soilik bidali
+                    dezakezu. Gehitu nagusiaren kontaktuak egiaztaturiko zenbaki gisa, edo igo kontu ordainpekora.</li>
                 <li>Egiaztatu telefono-zenbakiaren formatua zuzena dela (herrialdeko kodea barne).</li>
             </ul>
 
             <h3>Magic Link-ek ez du TapAlert irekitzen</h3>
             <ul>
                 <li>Ziurtatu TapAlert nagusiaren telefonoan instalatuta dagoela.</li>
-                <li>Android telefono batzuetan, eutsita sakatu esteka eta hautatu "Ireki TapAlert-ekin" nabigatzaile baten ordez.</li>
-                <li>Horren ordez nabigatzaile bat irekitzen bada, kopiatu URL osoa eta itsatsi berriro nabigatzailean — bigarren saiakeran, sistemak normalean TapAlert aukera eskaintzen du.</li>
+                <li>Android telefono batzuetan, eutsita sakatu esteka eta hautatu "Ireki TapAlert-ekin" nabigatzaile
+                    baten ordez.</li>
+                <li>Horren ordez nabigatzaile bat irekitzen bada, kopiatu URL osoa eta itsatsi berriro nabigatzailean —
+                    bigarren saiakeran, sistemak normalean TapAlert aukera eskaintzen du.</li>
             </ul>
 
             <h3>Nagusiak ustekabean botoi okerra sakatzen du</h3>
             <ul>
-                <li>Handitu <strong>Alertaren atzerako kontaketa</strong> 10–15 segundura — honek bidaltzeko denbora eman baino lehen bertan behera uzteko denbora ematen du.</li>
-                <li>Edo aldatu <strong>Eutsita mantentze modura</strong> (aktibazio-modua = eutsita mantendu) botoiak nahita sakatzea eskatzen duen.</li>
-                <li>Ezarpen hauek eguneratu ditzakezu zuzendutako ezarpenekin Magic Link berri bat sortuz eta nagusiaren telefonora bidaliz.</li>
+                <li>Handitu <strong>Alertaren atzerako kontaketa</strong> 10–15 segundura — honek bidaltzeko denbora
+                    eman baino lehen bertan behera uzteko denbora ematen du.</li>
+                <li>Edo aldatu <strong>Eutsita mantentze modura</strong> (aktibazio-modua = eutsita mantendu) botoiak
+                    nahita sakatzea eskatzen duen.</li>
+                <li>Ezarpen hauek eguneratu ditzakezu zuzendutako ezarpenekin Magic Link berri bat sortuz eta nagusiaren
+                    telefonora bidaliz.</li>
             </ul>
 
             <h3>Twilio SMS funtzionatzen du baina ez posta elektronikoa</h3>
             <ul>
-                <li>Kausa ohikoena: hartzaileek ez dute posta-helbiderik gordeta. Egiaztatu hartzaileak aplikazioaren Hartzaileak pantailan.</li>
-                <li>Ziurtatu App Pasahitza zuzena dela eta ez dela iraungitu. Gmail eta Outlook-en App Pasahitzak baliogabetu daitezke — sortu berri bat behar izanez gero.</li>
+                <li>Kausa ohikoena: hartzaileek ez dute posta-helbiderik gordeta. Egiaztatu hartzaileak aplikazioaren
+                    Hartzaileak pantailan.</li>
+                <li>Ziurtatu App Pasahitza zuzena dela eta ez dela iraungitu. Gmail eta Outlook-en App Pasahitzak
+                    baliogabetu daitezke — sortu berri bat behar izanez gero.</li>
             </ul>
         </section>
 
@@ -458,17 +909,22 @@
         <section class="guide-section" id="security">
             <h2>Segurtasun eta pribatutasun oharrak</h2>
             <ul>
-                <li><strong>Magic Link-aren karga</strong> kodetuta dago baina ez enkriptatuta. Atzeman dezakeen edonork konfigurazioa irakur dezake, Twilio egiaztagiriak barne. Partekatu zuzenean nagusiarekin soilik.</li>
-                <li><strong>TapAlert-ek ez ditu zerbitzaririk</strong> — Magic Link nagusiaren gailuan prozesatzen da guztiz. Ez da daturik TapAlert zerbitzura bidaltzen.</li>
-                <li><strong>Twilio egiaztagiriak estekaren barruan</strong> nagusiaren gailuan lokalki gordetzen dira biltegiratze seguruan (enkriptatua) aplikatu ostean.</li>
-                <li>Magic Link bat atzeman dutela uste baduzu, <strong>biratu zure Twilio Auth Token</strong> Twilio Kontsolan berehala eta sortu Magic Link berri bat.</li>
+                <li><strong>Magic Link-aren karga</strong> kodetuta dago baina ez enkriptatuta. Atzeman dezakeen edonork
+                    konfigurazioa irakur dezake, Twilio egiaztagiriak barne. Partekatu zuzenean nagusiarekin soilik.
+                </li>
+                <li><strong>TapAlert-ek ez ditu zerbitzaririk</strong> — Magic Link nagusiaren gailuan prozesatzen da
+                    guztiz. Ez da daturik TapAlert zerbitzura bidaltzen.</li>
+                <li><strong>Twilio egiaztagiriak estekaren barruan</strong> nagusiaren gailuan lokalki gordetzen dira
+                    biltegiratze seguruan (enkriptatua) aplikatu ostean.</li>
+                <li>Magic Link bat atzeman dutela uste baduzu, <strong>biratu zure Twilio Auth Token</strong> Twilio
+                    Kontsolan berehala eta sortu Magic Link berri bat.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
             <h2>Erreferentzia azkarreko txartela (nagusiarentzat inprimatzeko)</h2>
-<pre>┌─────────────────────────────────────────────┐
+            <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
 │  🔴  Big red button  →  Send EMERGENCY      │
@@ -495,7 +951,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik
+                        ez.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Produktua</h3>
@@ -516,17 +973,20 @@
                 <div class="footer-section">
                     <h3>Laguntza</h3>
                     <ul>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez
+                                urrats Gidak</a></li>
                         <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
                         <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta.
+                    | ❤️rekin egina zure segurtasunerako</p>
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>

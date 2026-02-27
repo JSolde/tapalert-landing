@@ -443,48 +443,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Volver á casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">GL</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/quickstart_android.html" hreflang="ca">CA</a>
-            <a href="../de/quickstart_android.html" hreflang="de">DE</a>
-            <a href="../quickstart_android.html" hreflang="en">EN</a>
-            <a href="../es/quickstart_android.html" hreflang="es">ES</a>
-            <a href="../eu/quickstart_android.html" hreflang="eu">EU</a>
-            <a href="../fr/quickstart_android.html" hreflang="fr">FR</a>
-            <a href="../gl/quickstart_android.html" hreflang="gl" class="active">GL</a>
-            <a href="../it/quickstart_android.html" hreflang="it">IT</a>
-            <a href="../nl/quickstart_android.html" hreflang="nl">NL</a>
-            <a href="../pt/quickstart_android.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">GL</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/quickstart_android.html" hreflang="ca">CA</a>
+                        <a href="../de/quickstart_android.html" hreflang="de">DE</a>
+                        <a href="../quickstart_android.html" hreflang="en">EN</a>
+                        <a href="../es/quickstart_android.html" hreflang="es">ES</a>
+                        <a href="../eu/quickstart_android.html" hreflang="eu">EU</a>
+                        <a href="../fr/quickstart_android.html" hreflang="fr">FR</a>
+                        <a href="../gl/quickstart_android.html" hreflang="gl" class="active">GL</a>
+                        <a href="../it/quickstart_android.html" hreflang="it">IT</a>
+                        <a href="../nl/quickstart_android.html" hreflang="nl">NL</a>
+                        <a href="../pt/quickstart_android.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -501,7 +593,9 @@
                         <div class="step-icon">✅</div>
                         <h3>1. Conceder permisos esenciais</h3>
                     </div>
-                    <p>Durante a incorporación da aplicación, acepte todos os permisos (SMS, localización, contactos). Se se omiten, solicitaranse máis tarde cando sexan necesarios, pero recomendamos aceptalos agora para unha experiencia perfecta.</p>
+                    <p>Durante a incorporación da aplicación, acepte todos os permisos (SMS, localización, contactos).
+                        Se se omiten, solicitaranse máis tarde cando sexan necesarios, pero recomendamos aceptalos agora
+                        para unha experiencia perfecta.</p>
                 </div>
 
                 <div class="step-card">
@@ -512,9 +606,11 @@
                     <p>No paso de configuración de incorporación, recomendamos encarecidamente:</p>
                     <ul>
                         <li><strong>Engadir destinatarios</strong> á súa lista de alertas de emerxencia.</li>
-                        <li><strong>Engade o widget da aplicación</strong> á súa pantalla de inicio para acceder instantáneamente.</li>
+                        <li><strong>Engade o widget da aplicación</strong> á súa pantalla de inicio para acceder
+                            instantáneamente.</li>
                     </ul>
-                    <p style="margin-top: 10px;"><small><em>Nota: Estes tamén se poden xestionar en Configuración despois da incorporación.</em></small></p>
+                    <p style="margin-top: 10px;"><small><em>Nota: Estes tamén se poden xestionar en Configuración
+                                despois da incorporación.</em></small></p>
                 </div>
 
                 <div class="step-card">
@@ -522,8 +618,14 @@
                         <div class="step-icon">📡</div>
                         <h3>3. Conectividade e <span class="notranslate" translate="no">fallback</span>s</h3>
                     </div>
-                    <p>Verifica se as <strong>chamadas wifi</strong> están activadas no teu teléfono. Se o teu operador non o admite, considera usar unha <strong><span class="notranslate" translate="no">Twilio</span> conta</strong> como <span class="notranslate" translate="no">fallback</span> para situacións só con wifi. <span class="notranslate" translate="no">Twilio</span> é gratuíto para comezar e ofrece unha entrega fiable de SMS sen sinal de móbil.</p>
-                    <p style="margin-top: 10px;">Tamén podes activar a <strong>redundancia de correo electrónico</strong> en <span class="notranslate" translate="no">TapAlert</span> para asegurarte de que os teus seres queridos reciban notificacións a través de varias canles.</p>
+                    <p>Verifica se as <strong>chamadas wifi</strong> están activadas no teu teléfono. Se o teu operador
+                        non o admite, considera usar unha <strong><span class="notranslate" translate="no">Twilio</span>
+                            conta</strong> como <span class="notranslate" translate="no">fallback</span> para situacións
+                        só con wifi. <span class="notranslate" translate="no">Twilio</span> é gratuíto para comezar e
+                        ofrece unha entrega fiable de SMS sen sinal de móbil.</p>
+                    <p style="margin-top: 10px;">Tamén podes activar a <strong>redundancia de correo
+                            electrónico</strong> en <span class="notranslate" translate="no">TapAlert</span> para
+                        asegurarte de que os teus seres queridos reciban notificacións a través de varias canles.</p>
                 </div>
 
                 <div class="step-card">
@@ -531,7 +633,10 @@
                         <div class="step-icon">🧪</div>
                         <h3>4. Realiza unha alerta de proba</h3>
                     </div>
-                    <p>Proba a túa configuración enviando unha mensaxe de <strong>"Estou ben"</strong>. Toca o botón unha vez (ou mantén premido durante 5 segundos se está configurado). Aparecerá unha conta atrás, dándolle tempo para cancelar ou enviar inmediatamente. Deixalo caducar envía a alerta automaticamente!</p>
+                    <p>Proba a túa configuración enviando unha mensaxe de <strong>"Estou ben"</strong>. Toca o botón
+                        unha vez (ou mantén premido durante 5 segundos se está configurado). Aparecerá unha conta atrás,
+                        dándolle tempo para cancelar ou enviar inmediatamente. Deixalo caducar envía a alerta
+                        automaticamente!</p>
                 </div>
 
                 <div class="step-card">
@@ -539,7 +644,10 @@
                         <div class="step-icon">↔️</div>
                         <h3>5. Explorar a navegación</h3>
                     </div>
-                    <p>Pasa o dedo á <strong>esquerda</strong> para acceder ás túas mensaxes personalizadas preconfiguradas para situacións específicas. Pasa o dedo á <strong>dereita</strong> para activar o <strong>temporizador de rexistro</strong> (Dead Man's Switch), que avisa automaticamente se non realizas o check-in nun determinado momento.</p>
+                    <p>Pasa o dedo á <strong>esquerda</strong> para acceder ás túas mensaxes personalizadas
+                        preconfiguradas para situacións específicas. Pasa o dedo á <strong>dereita</strong> para activar
+                        o <strong>temporizador de rexistro</strong> (Dead Man's Switch), que avisa automaticamente se
+                        non realizas o check-in nun determinado momento.</p>
                 </div>
 
                 <div class="step-card">
@@ -547,7 +655,9 @@
                         <div class="step-icon">🤝</div>
                         <h3>6. Configuración para outros</h3>
                     </div>
-                    <p>Se estás configurando este teléfono para outra persoa (como un parente maior), toma un momento para preconfigurar as súas alertas personalizadas (pase o dedo cara á esquerda) para que teña as mensaxes máis relevantes listas ao seu alcance.</p>
+                    <p>Se estás configurando este teléfono para outra persoa (como un parente maior), toma un momento
+                        para preconfigurar as súas alertas personalizadas (pase o dedo cara á esquerda) para que teña as
+                        mensaxes máis relevantes listas ao seu alcance.</p>
                 </div>
             </div>
         </section>
@@ -561,7 +671,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertas de emerxencia sinxelas para todos. Sen subscricións, sen seguimento, só con seguridade.</p>
+                    <p>Alertas de emerxencia sinxelas para todos. Sen subscricións, sen seguimento, só con seguridade.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -586,7 +697,8 @@
                     <h3>Apoio</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías paso a paso</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías
+                                paso a paso</a></li>
                         <li><a href="accessibility_guide.html">Guía de accesibilidade</a></li>
                         <li><a href="troubleshooting.html">Resolución de problemas</a></li>
                         <li><a href="contact.html">Contacte con Soporte</a></li>
@@ -595,7 +707,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os dereitos reservados. | Feito con ❤️ para a túa seguridade</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os dereitos reservados. |
+                    Feito con ❤️ para a túa seguridade</p>
             </div>
         </div>
     </footer>

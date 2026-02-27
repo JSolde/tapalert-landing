@@ -418,48 +418,140 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/app_icon.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;"> <span
-                    class="notranslate" translate="no">TapAlert</span>
+                <img src="../media/tapalert-icon-web.png" alt="TapAlert" style="height: 1.5em; margin-right: 0.5em;">
+                <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
-        
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">NL</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
-            <a href="../de/one_tap_alert.html" hreflang="de">DE</a>
-            <a href="../one_tap_alert.html" hreflang="en">EN</a>
-            <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
-            <a href="../eu/one_tap_alert.html" hreflang="eu">EU</a>
-            <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
-            <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
-            <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
-            <a href="../nl/one_tap_alert.html" hreflang="nl" class="active">NL</a>
-            <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">NL</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
+                        <a href="../de/one_tap_alert.html" hreflang="de">DE</a>
+                        <a href="../one_tap_alert.html" hreflang="en">EN</a>
+                        <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
+                        <a href="../eu/one_tap_alert.html" hreflang="eu">EU</a>
+                        <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
+                        <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
+                        <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
+                        <a href="../nl/one_tap_alert.html" hreflang="nl" class="active">NL</a>
+                        <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -467,98 +559,133 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Terug naar Gidsen</a>
 
-        <h1 class="guide-title">Waarschuwing met één tik: alle manieren om <span class="notranslate" translate="no">TapAlert</span> onmiddellijk te activeren</h1>
+        <h1 class="guide-title">Waarschuwing met één tik: alle manieren om <span class="notranslate"
+                translate="no">TapAlert</span> onmiddellijk te activeren</h1>
 
-        <p><span class="notranslate" translation="no">TapAlert</span> kan op verschillende manieren worden geconfigureerd voor onmiddellijke noodwaarschuwingen met één tik. Deze handleiding behandelt alle opties, van widgets op het startscherm tot fysiekeknops en geautomatiseerde timers.</p>
+        <p><span class="notranslate" translation="no">TapAlert</span> kan op verschillende manieren worden
+            geconfigureerd voor onmiddellijke noodwaarschuwingen met één tik. Deze handleiding behandelt alle opties,
+            van widgets op het startscherm tot fysiekeknops en geautomatiseerde timers.</p>
 
         <section class="guide-section">
             <h2>1. 📱 Android Startschermwidget</h2>
             <p><strong>Platform:</strong> Android only</p>
-            <p>De snelste manier om een ​​waarschuwing te activeren. Er staat een speciale widget op uw startscherm: één tik en het aftellen begint onmiddellijk.</p>
+            <p>De snelste manier om een ​​waarschuwing te activeren. Er staat een speciale widget op uw startscherm: één
+                tik en het aftellen begint onmiddellijk.</p>
 
             <h3>Hoe in te stellen</h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → tik op het pictogram <strong>⚙️ Instellingen</strong>.</li>
+                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → tik op het
+                    pictogram <strong>⚙️ Instellingen</strong>.</li>
                 <li>Scroll naar het gedeelte <strong>Widget</strong>.</li>
-                <li>Tik op <strong>"Toevoegen"</strong> → het systeem zal u vragen de widget op uw startscherm te plaatsen.</li>
+                <li>Tik op <strong>"Toevoegen"</strong> → het systeem zal u vragen de widget op uw startscherm te
+                    plaatsen.</li>
                 <li>Sleep het naar de gewenste plek (idealiter op uw hoofdscherm voor snelle toegang).</li>
             </ol>
 
             <h3>Hoe het werkt</h3>
             <ul>
-                <li><strong>Enkele tik</strong> op de widget → <span class="notranslate" translate="no">TapAlert</span> wordt geopend en het <strong>aftellen begint onmiddellijk</strong>.</li>
-                <li>U ziet het afteldialoogvenster en kunt <strong>annuleren</strong> als dit als eenper ongeluk gebeurt.</li>
+                <li><strong>Enkele tik</strong> op de widget → <span class="notranslate" translate="no">TapAlert</span>
+                    wordt geopend en het <strong>aftellen begint onmiddellijk</strong>.</li>
+                <li>U ziet het afteldialoogvenster en kunt <strong>annuleren</strong> als dit als eenper ongeluk
+                    gebeurt.</li>
                 <li>Na het aftellen wordt de waarschuwing verzonden en wordt de app automatisch gesloten.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Plaats de widget op uw vergrendelscherm (indien ondersteund door uw Android versie) of op de allereerste startschermpagina voor de snelste toegang.</p>
+                <p>Plaats de widget op uw vergrendelscherm (indien ondersteund door uw Android versie) of op de
+                    allereerste startschermpagina voor de snelste toegang.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
             <p><strong>Platform:</strong> Android & iPhone</p>
-            <p>Wijs een <strong>fysiekknop</strong> op uw telefoon toe (aan/uitknop, volumetoets of terugtikgebaar) om <span class="notranslate" translate="no">TapAlert</span> te starten. Gecombineerd met <strong>Auto-Start bij starten</strong> zorgt dit voor een echte paniek met één tik knop.</p>
+            <p>Wijs een <strong>fysiekknop</strong> op uw telefoon toe (aan/uitknop, volumetoets of terugtikgebaar) om
+                <span class="notranslate" translate="no">TapAlert</span> te starten. Gecombineerd met <strong>Auto-Start
+                    bij starten</strong> zorgt dit voor een echte paniek met één tik knop.
+            </p>
 
             <h3>Stap 1: Auto-Start inschakelen in <span class="notranslate" translate="no">TapAlert</span></h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️ Instellingen</strong>.</li>
+                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️
+                        Instellingen</strong>.</li>
                 <li>Schakel <strong>'Automatisch starten bij starten'</strong> in.</li>
             </ol>
 
             <div class="alert-box warning">
                 <h4>⚠️ WAARSCHUWING</h4>
-                <p>Wanneer Auto-Start is ingeschakeld, wordt het aftellen <strong>elke keer</strong> geactiveerd als u de app opent, ook als u deze normaal opent vanuit de app-lade. Schakel dit alleen in als u voornamelijk start via een fysieke knop snelkoppeling.</p>
+                <p>Wanneer Auto-Start is ingeschakeld, wordt het aftellen <strong>elke keer</strong> geactiveerd als u
+                    de app opent, ook als u deze normaal opent vanuit de app-lade. Schakel dit alleen in als u
+                    voornamelijk start via een fysieke knop snelkoppeling.</p>
             </div>
 
             <h3>Stap 2: Configureer de knop van uw telefoon</h3>
 
             <h4>Samsung Galaxy (zijtoets)</h4>
             <ol>
-                <li><strong>Instellingen</strong> → <strong>Geavanceerd functies</strong> → <strong>Zijtoets</strong>.</li>
-                <li>Schakel <strong>Dubbeldrukken</strong> in → <strong>App openen</strong> → selecteer <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Instellingen</strong> → <strong>Geavanceerd functies</strong> → <strong>Zijtoets</strong>.
+                </li>
+                <li>Schakel <strong>Dubbeldrukken</strong> in → <strong>App openen</strong> → selecteer <strong><span
+                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Druk tweemaal op de aan/uit-knopknop om te activeren.</li>
             </ol>
 
             <h4>Google Pixel (snel tikken)</h4>
             <ol>
-                <li><strong>Instellingen</strong> → <strong>Systeem</strong> → <strong>Gebaren</strong> → <strong>Snel tikken om acties te starten</strong>.</li>
-                <li>Schakel <strong>Snelle tik gebruiken</strong> in → <strong>App openen</strong> → selecteer <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Instellingen</strong> → <strong>Systeem</strong> → <strong>Gebaren</strong> → <strong>Snel
+                        tikken om acties te starten</strong>.</li>
+                <li>Schakel <strong>Snelle tik gebruiken</strong> in → <strong>App openen</strong> → selecteer
+                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
+                </li>
                 <li>Dubbeltik op de achterkant van uw telefoon om te activeren.</li>
             </ol>
 
             <h4>iPhone 15 Pro+ (actieknop)</h4>
             <ol>
-                <li><strong>Instellingen</strong> → <strong>Actieknop</strong> → veeg naar <strong>Snelkoppeling</strong>.</li>
-                <li>Tik op de kiezer → <strong>App openen</strong> → kies <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Instellingen</strong> → <strong>Actieknop</strong> → veeg naar
+                    <strong>Snelkoppeling</strong>.
+                </li>
+                <li>Tik op de kiezer → <strong>App openen</strong> → kies <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong>.</li>
                 <li>Houd de actieknop ingedrukt om te activeren.</li>
             </ol>
 
             <h4>iPhone — Alle modellen (Back Tap)</h4>
             <ol>
-                <li><strong>Instellingen</strong> → <strong>Toegankelijkheid</strong> → <strong>Aanraken</strong> → <strong>Terugtikken</strong>.</li>
+                <li><strong>Instellingen</strong> → <strong>Toegankelijkheid</strong> → <strong>Aanraken</strong> →
+                    <strong>Terugtikken</strong>.
+                </li>
                 <li>Kies <strong>Dubbeltikken</strong> of <strong>Drievoudig tikken</strong>.</li>
-                <li>Om te linken naar <span class="notranslate" translate="no">TapAlert</span>, moet u eerst een snelkoppeling maken:
+                <li>Om te linken naar <span class="notranslate" translate="no">TapAlert</span>, moet u eerst een
+                    snelkoppeling maken:
                     <ul>
-                        <li>Open de app <strong>Shortcuts</strong> → <strong>+</strong> → <strong>Actie toevoegen</strong> → <strong>App openen</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                        <li>Open de app <strong>Shortcuts</strong> → <strong>+</strong> → <strong>Actie
+                                toevoegen</strong> → <strong>App openen</strong> → <strong><span class="notranslate"
+                                    translate="no">TapAlert</span></strong>.</li>
                         <li>Noem het "Open <span class="notranslate" translate="no">TapAlert</span>".</li>
                     </ul>
                 </li>
-                <li>Ga terug naar de <strong>Back Tap</strong>-instellingen → selecteer de snelkoppeling "Open <span class="notranslate" translate="no">TapAlert</span>".</li>
+                <li>Ga terug naar de <strong>Back Tap</strong>-instellingen → selecteer de snelkoppeling "Open <span
+                        class="notranslate" translate="no">TapAlert</span>".</li>
             </ol>
 
             <h4>Elke Android (Button Mapper-apps)</h4>
-            <p>Als uw apparaat geen ingebouwdknop remapping heeft, installeer dan <strong>"Button Mapper"</strong> of <strong>"MacroDroid"</strong> vanuit de Play Store:</p>
+            <p>Als uw apparaat geen ingebouwdknop remapping heeft, installeer dan <strong>"Button Mapper"</strong> of
+                <strong>"MacroDroid"</strong> vanuit de Play Store:
+            </p>
             <ul>
-                <li>Wijs elke hardwaresleutel (volumeknops, etc.) opnieuw toe aan <strong>Open Applicatie</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Wijs elke hardwaresleutel (volumeknops, etc.) opnieuw toe aan <strong>Open Applicatie</strong> →
+                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
+                </li>
             </ul>
 
             <h3>Hoe het werkt</h3>
             <ol>
                 <li>Druk op uw geconfigureerdeknop/gesture.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> wordt geopend → het aftellen begint <strong>automatisch</strong> (als Auto-Start is ingeschakeld).</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> wordt geopend → het aftellen begint
+                    <strong>automatisch</strong> (als Auto-Start is ingeschakeld).
+                </li>
                 <li>De waarschuwing wordt verzonden en de app wordt automatisch gesloten.</li>
                 <li>Werkt zelfs vanaf een vergrendeld scherm (met de juiste batterijoptimalisatie – zie hieronder).</li>
             </ol>
@@ -568,25 +695,33 @@
             <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
                     translate="no">SOS</span> / OK)</h2>
             <p><strong>Platform:</strong> Android & iOS</p>
-            <p><span class="notranslate" translate="no">Panic Mode</span> transformeert het hele scherm in twee gigantische knops — <strong><span class="notranslate" translate="no">SOS</span></strong> en <strong>Ik ben oké</strong> — waardoor het vrijwel onmogelijk is om het te missen.</p>
+            <p><span class="notranslate" translate="no">Panic Mode</span> transformeert het hele scherm in twee
+                gigantische knops — <strong><span class="notranslate" translate="no">SOS</span></strong> en <strong>Ik
+                    ben oké</strong> — waardoor het vrijwel onmogelijk is om het te missen.</p>
 
             <h3>Hoe in te schakelen</h3>
             <ol>
-                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> en het wordt standaard geopend in <span class="notranslate" translate="no">Paniekmodus</span>.</li>
-                <li>Let op: u kunt overschakelen van geconfigureerde berichtwaarschuwingen naar de <span class="notranslate" translate="no">Paniekmodus</span> door naar links/rechts te vegen op het startscherm of door op het moduspictogram in de bovenste balk te tikken.</li>
+                <li>Open <strong><span class="notranslate" translate="no">TapAlert</span></strong> en het wordt
+                    standaard geopend in <span class="notranslate" translate="no">Paniekmodus</span>.</li>
+                <li>Let op: u kunt overschakelen van geconfigureerde berichtwaarschuwingen naar de <span
+                        class="notranslate" translate="no">Paniekmodus</span> door naar links/rechts te vegen op het
+                    startscherm of door op het moduspictogram in de bovenste balk te tikken.</li>
             </ol>
 
             <h3>Hoe het werkt</h3>
             <ul>
-                <li><strong>Tik op de grote rode <span class="notranslate" translate="no">SOS</span>knop</strong> → het aftellen begint voor een noodwaarschuwing.</li>
+                <li><strong>Tik op de grote rode <span class="notranslate" translate="no">SOS</span>knop</strong> → het
+                    aftellen begint voor een noodwaarschuwing.</li>
                 <li><strong>Tik op het groene, ik ben okéknop</strong> → stuurt een geruststellend bericht.</li>
                 <li><strong>Noodoproepknop</strong> onderaan belt uw lokale alarmnummer (112, 911, enz.).</li>
             </ul>
 
             <h3>Triggermethode: tikken versus vasthouden</h3>
-            <p>Voor extra veiligheid kunt u <strong>vijf seconden ingedrukt houden</strong> vereisen in plaats van één keer tikken:</p>
+            <p>Voor extra veiligheid kunt u <strong>vijf seconden ingedrukt houden</strong> vereisen in plaats van één
+                keer tikken:</p>
             <ul>
-                <li><strong>Instellingen</strong> → <strong>Triggermethode</strong> → <strong>Ingedrukt houden (5s)</strong>.</li>
+                <li><strong>Instellingen</strong> → <strong>Triggermethode</strong> → <strong>Ingedrukt houden
+                        (5s)</strong>.</li>
                 <li>Dit voorkomt onbedoelde triggers en is toch snel genoeg in noodgevallen.</li>
             </ul>
         </section>
@@ -594,19 +729,22 @@
         <section class="guide-section">
             <h2>4. 🎙️ Voice Quick Alert</h2>
             <p><strong>Platform:</strong> Android & iOS</p>
-            <p>In de <span class="notranslate" translate="no">Paniekmodus</span> kun je ook in één handeling een waarschuwing sturen met een <strong>spraakgestuurd bericht</strong> - ideaal als je niet kunt typen.</p>
+            <p>In de <span class="notranslate" translate="no">Paniekmodus</span> kun je ook in één handeling een
+                waarschuwing sturen met een <strong>spraakgestuurd bericht</strong> - ideaal als je niet kunt typen.</p>
             <ol>
                 <li>Tap the <strong>🎤 Microphone</strong>knop next to <span class="notranslate"
                         translate="no">SOS</span> or I'm OK.</li>
                 <li>Spreek uw boodschap uit.</li>
-                <li>Nadat u hebt gesproken, begint het aftellen automatisch met uw getranscribeerde spraakbericht als bijlage.</li>
+                <li>Nadat u hebt gesproken, begint het aftellen automatisch met uw getranscribeerde spraakbericht als
+                    bijlage.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>5. ⏳ Inchecktimer (dodemansschakelaar)</h2>
             <p><strong>Platform:</strong> Android & iOS</p>
-            <p>De timer stuurt <strong>automatisch</strong> een waarschuwing als u niet incheckt. U hoeft helemaal niet te tikken.</p>
+            <p>De timer stuurt <strong>automatisch</strong> een waarschuwing als u niet incheckt. U hoeft helemaal niet
+                te tikken.</p>
 
             <h3>Hoe in te stellen</h3>
             <ol>
@@ -619,26 +757,34 @@
             <h3>Hoe het werkt</h3>
             <ul>
                 <li>Een aanhoudende melding telt de resterende tijd af.</li>
-                <li>Als je incheckt (tik op <strong>"Ik ben in orde / Reset"</strong>) → timer wordt gereset, er wordt geen waarschuwing verzonden.</li>
-                <li>Als u niet incheckt → <span class="notranslate" translate="no">TapAlert</span> verzendt automatisch uw melding met locatie naar alle ontvangers.</li>
+                <li>Als je incheckt (tik op <strong>"Ik ben in orde / Reset"</strong>) → timer wordt gereset, er wordt
+                    geen waarschuwing verzonden.</li>
+                <li>Als u niet incheckt → <span class="notranslate" translate="no">TapAlert</span> verzendt automatisch
+                    uw melding met locatie naar alle ontvangers.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Perfect voor solo-activiteiten: wandelen, 's nachts naar huis lopen, vreemden ontmoeten of alleen reizen.</p>
+                <p>Perfect voor solo-activiteiten: wandelen, 's nachts naar huis lopen, vreemden ontmoeten of alleen
+                    reizen.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
-            <p>Om ervoor te zorgen dat <strong>fysiekeknop</strong> en <strong>widget</strong> triggers betrouwbaar werken (vooral vanuit een vergrendeld/slapend scherm) moet je moeten de batterijoptimalisatie uitschakelen voor <span class="notranslate" translate="no">TapAlert</span>.</p>
+            <p>Om ervoor te zorgen dat <strong>fysiekeknop</strong> en <strong>widget</strong> triggers betrouwbaar
+                werken (vooral vanuit een vergrendeld/slapend scherm) moet je moeten de batterijoptimalisatie
+                uitschakelen voor <span class="notranslate" translate="no">TapAlert</span>.</p>
 
             <h3>Waarom?</h3>
-            <p>Android fabrikanten doden achtergrondapps agressief om de batterij te sparen. Dit kan voorkomen dat <span class="notranslate" translation="no">TapAlert</span> je telefoon activeert wanneer het scherm is uitgeschakeld.</p>
+            <p>Android fabrikanten doden achtergrondapps agressief om de batterij te sparen. Dit kan voorkomen dat <span
+                    class="notranslate" translation="no">TapAlert</span> je telefoon activeert wanneer het scherm is
+                uitgeschakeld.</p>
 
             <h3>Snelle stappen (alle apparaten)</h3>
             <ol>
-                <li><strong>Instellingen</strong> → <strong>Apps</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>Batterij</strong>.</li>
+                <li><strong>Instellingen</strong> → <strong>Apps</strong> → <strong><span class="notranslate"
+                            translate="no">TapAlert</span></strong> → <strong>Batterij</strong>.</li>
                 <li>Selecteer <strong>"Niet optimaliseren"</strong> of <strong>"Onbeperkt"</strong>.</li>
                 <li>Schakel <strong>'Achtergrondactiviteit toestaan'</strong> in.</li>
             </ol>
@@ -647,7 +793,8 @@
             <ol>
                 <li>Vergrendel uw telefoon en wacht 1 à 2 minuten (scherm volledig uitgeschakeld).</li>
                 <li>Druk op uw geconfigureerde fysiekeknop of tik op de widget.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> zou moeten openen en het aftellen onmiddellijk moeten starten.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> zou moeten openen en het aftellen
+                    onmiddellijk moeten starten.</li>
             </ol>
         </section>
 
@@ -679,7 +826,8 @@
                         <td>Gematigd</td>
                     </tr>
                     <tr>
-                        <td><span class="notranslate" translate="no">Paniekmodus</span> (<span class="notranslate" translate="no">SOS</span>knop)</td>
+                        <td><span class="notranslate" translate="no">Paniekmodus</span> (<span class="notranslate"
+                                translate="no">SOS</span>knop)</td>
                         <td>Android & iOS</td>
                         <td>2 (app openen + tikken)</td>
                         <td>None</td>
@@ -701,7 +849,8 @@
                     </tr>
                 </tbody>
             </table>
-            <p><small>*Ondersteuning voor het vergrendelscherm van widgets varieert per Android versie en fabrikant.</small></p>
+            <p><small>*Ondersteuning voor het vergrendelscherm van widgets varieert per Android versie en
+                    fabrikant.</small></p>
         </section>
 
         <section class="guide-section">
@@ -709,7 +858,8 @@
 
             <h3>👴 For Senior Users</h3>
             <ul>
-                <li>Gebruik de <strong><span class="notranslate" translate="no">paniekmodus</span></strong> (grote <span class="notranslate" translate="no">SOS</span> / met mij gaat hetknops).</li>
+                <li>Gebruik de <strong><span class="notranslate" translate="no">paniekmodus</span></strong> (grote <span
+                        class="notranslate" translate="no">SOS</span> / met mij gaat hetknops).</li>
                 <li>Stel <strong>Triggermethode</strong> in op <strong>Tikken</strong> (eenvoudigste interactie).</li>
                 <li>Voeg de <strong>Android widget</strong> toe aan het startscherm.</li>
                 <li>Stel het aftellen in op <strong>10 - 15 seconden</strong> (tijd om fouten te annuleren).</li>
@@ -718,16 +868,20 @@
             <h3>🏃 For Active / Solo Users</h3>
             <ul>
                 <li>Stel de <strong>Check-in Timer</strong> in vóór activiteiten.</li>
-                <li>Configureer een <strong>fysiekeknop</strong> voor onmiddellijke <span class="notranslate" translate="no">SOS</span>.</li>
-                <li>Schakel <strong><span class="notranslate" translate="no">Slimme redundantie</span></strong> in (automatische <span class="notranslate" translate="no">terugval</span> tussen sms-methoden).</li>
+                <li>Configureer een <strong>fysiekeknop</strong> voor onmiddellijke <span class="notranslate"
+                        translate="no">SOS</span>.</li>
+                <li>Schakel <strong><span class="notranslate" translate="no">Slimme redundantie</span></strong> in
+                    (automatische <span class="notranslate" translate="no">terugval</span> tussen sms-methoden).</li>
                 <li>Schakel <strong>E-mailredundantie</strong> alleen in voor gebieden met wifi.</li>
             </ul>
 
             <h3>🔒 For Maximum Security</h3>
             <ul>
                 <li>Configureer <strong>fysiekknop</strong> met <strong>Auto-Start</strong>.</li>
-                <li>Stel <strong>Triggermethode</strong> in op <strong>Ingedrukt houden (5s)</strong> om onbedoelde triggers te voorkomen.</li>
-                <li>Schakel <strong>zowel</strong> <span class="notranslate" translate="no">Slimme redundantie</span> en e-mailredundantie in.</li>
+                <li>Stel <strong>Triggermethode</strong> in op <strong>Ingedrukt houden (5s)</strong> om onbedoelde
+                    triggers te voorkomen.</li>
+                <li>Schakel <strong>zowel</strong> <span class="notranslate" translate="no">Slimme redundantie</span> en
+                    e-mailredundantie in.</li>
                 <li>Schakel batterijoptimalisatie uit en test vanaf het vergrendelde scherm.</li>
             </ul>
         </section>
@@ -740,7 +894,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -765,7 +920,8 @@
                     <h3>Steun</h3>
                     <ul>
                         <li><a href="#">Veelgestelde vragen</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate"
+                                    translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
                         <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
                         <li><a href="troubleshooting.html">Problemen oplossen</a></li>
                         <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
@@ -774,7 +930,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. |
+                    Gemaakt met ❤️ voor uw veiligheid</p>
             </div>
         </div>
     </footer>
