@@ -15,7 +15,7 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/family_assisted_setup.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/family_assisted_setup.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨‍👩‍👧 Family-Assisted Setup Guide - TapAlert</title>
+    <title>👨‍👩‍👧 Guía de configuración asistida por familia - TapAlert</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
@@ -124,15 +124,15 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Volver a las Guías</a>
 
-        <h1 class="guide-title">👨‍👩‍👧 Family-Assisted Setup Guide</h1>
-        <p class="guide-subtitle">Configuring TapAlert for a Senior Using Magic Link</p>
+        <h1 class="guide-title">👨‍👩‍👧 Guía de configuración asistida por familia</h1>
+        <p class="guide-subtitle">Configurar TapAlert para una persona mayor usando Magic Link</p>
 
-        <p>{{ fas_intro_p }}</p>
+        <p>Esta guía es para familiares, cuidadores y cualquier persona que ayude a una persona mayor o con menos experiencia tecnológica a configurar TapAlert por completo. Con la función Magic Link, puedes configurar toda la aplicación desde tu propio dispositivo y entregar una configuración lista para usar con un solo toque.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
-            <h2>{{ fas_overview_h2 }}</h2>
-            <p>{{ fas_overview_p1 }}</p>
+            <h2>Descripción general: Cómo funciona Magic Link</h2>
+            <p>La función Magic Link permite que una persona con conocimientos técnicos ("el administrador") haga todo el trabajo de configuración y luego lo comparta como un enlace especial. Cuando la persona mayor toca ese enlace en su teléfono, TapAlert aplica automáticamente la configuración completa — contactos, mensajes, ajustes y todo — en un solo paso.</p>
 <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
@@ -142,332 +142,332 @@
                                        5. Senior taps the link
                                        6. TapAlert opens and asks to confirm
                                        7. Senior taps "Apply" → app is ready!</pre>
-            <p><strong>{{ fas_overview_p2 }}</strong></p>
+            <p><strong>La persona mayor nunca necesita escribir nada ni navegar por ningún ajuste.</strong></p>
         </section>
 
         <!-- Before You Begin -->
         <section class="guide-section" id="before-you-begin">
-            <h2>{{ fas_before_h2 }}</h2>
-            <p>{{ fas_before_p1 }}</p>
+            <h2>Antes de empezar: Lo que necesitarás</h2>
+            <p>Según cómo quieras configurar la entrega de alertas, ten a mano lo siguiente antes de empezar:</p>
 
-            <h3>{{ fas_always_h3 }}</h3>
+            <h3>Siempre necesario</h3>
             <ul class="checklist">
-                <li>{{ fas_always_li1 }}</li>
-                <li>{{ fas_always_li2 }}</li>
+                <li>El nombre de pila de la persona mayor (para personalizar los mensajes de alerta)</li>
+                <li>Números de teléfono de las personas que deben recibir las alertas (familia, vecinos, etc.)</li>
             </ul>
 
-            <h3>{{ fas_twilio_req_h3 }}</h3>
-            <p>{{ fas_twilio_req_p }}</p>
+            <h3>Opcional: Para SMS automatizados mediante Twilio</h3>
+            <p>Si quieres que las alertas se envíen automáticamente sin necesidad de tener ninguna aplicación abierta en el teléfono de la persona mayor:</p>
             <ul class="checklist">
-                <li>{{ fas_twilio_req_li1 }}</li>
-                <li>{{ fas_twilio_req_li2 }}</li>
-                <li>{{ fas_twilio_req_li3 }}</li>
-                <li>{{ fas_twilio_req_li4 }}</li>
-                <li>{{ fas_twilio_req_li5 }}</li>
+                <li>Una cuenta de Twilio (prueba gratuita disponible en twilio.com)</li>
+                <li>SID de cuenta de Twilio (del panel de la consola de Twilio)</li>
+                <li>Token de autenticación de Twilio (del panel de la consola de Twilio)</li>
+                <li>Un número de teléfono de Twilio, O un nombre de remitente alfanumérico (p. ej., "TapAlert") si tu país lo admite</li>
+                <li>Tu propio número de teléfono — la aplicación enviará un SMS de prueba para verificar que Twilio funciona</li>
             </ul>
-            <div class="warn-box">{{ fas_ios_note }}</div>
+            <div class="warn-box">Nota para usuarios de iOS: En iPhone, los SMS automatizados requieren Twilio. Sin él, la aplicación abre la app nativa de Mensajes y la persona mayor pulsa Enviar manualmente. Sigue siendo fiable, pero requiere un toque adicional.</div>
 
-            <h3>{{ fas_email_req_h3 }}</h3>
-            <p>{{ fas_email_req_p }}</p>
+            <h3>Opcional: Para redundancia de correo electrónico</h3>
+            <p>Si quieres que las alertas también se envíen por correo electrónico además de por SMS:</p>
             <ul class="checklist">
-                <li>{{ fas_email_req_li1 }}</li>
-                <li>{{ fas_email_req_li2 }}</li>
+                <li>Una dirección de correo electrónico dedicada para el envío (Gmail, Outlook, iCloud, Yahoo o personalizada)</li>
+                <li>Una contraseña de aplicación para esa cuenta (ver el Paso 4 más abajo)</li>
             </ul>
         </section>
 
         <!-- Step 1 -->
         <section class="guide-section" id="step-1">
-            <h2>{{ fas_s1_h2 }}</h2>
+            <h2>Paso 1: Abrir la configuración de administrador en tu teléfono</h2>
             <ol>
-                <li>{{ fas_s1_li1 }}</li>
-                <li>{{ fas_s1_li2 }}</li>
-                <li>{{ fas_s1_li3 }}</li>
-                <li>{{ fas_s1_li4 }}</li>
+                <li>Instala TapAlert en tu propio teléfono (necesitas la aplicación para generar el Magic Link).</li>
+                <li>Abre TapAlert.</li>
+                <li>Si aún no has completado la configuración inicial, pasa por las pantallas de permisos. En la última pantalla, toca «Configurar para otra persona».</li>
+                <li>Si TapAlert ya está instalado y configurado, ve a Ajustes → desplázate hasta el final → toca «Configuración de administrador / Magic Link».</li>
             </ol>
-            <p>{{ fas_s1_p2 }}</p>
+            <p>Se abrirá la pantalla de configuración de administrador. Desplázate por las secciones: las irás completando en los pasos siguientes.</p>
         </section>
 
         <!-- Step 2 -->
         <section class="guide-section" id="step-2">
-            <h2>{{ fas_s2_h2 }}</h2>
-            <p>{{ fas_s2_p1 }}</p>
+            <h2>Paso 2: Introducir el nombre de la persona mayor</h2>
+            <p>En la sección «Información del usuario» en la parte superior de la pantalla:</p>
             <ul>
-                <li>{{ fas_s2_li1 }}</li>
+                <li>Nombre de la persona mayor — Escribe su nombre de pila (p. ej., «María»). Este nombre aparece en los mensajes de alerta para que los destinatarios sepan quién la envió.</li>
             </ul>
-            <div class="tip-box">{{ fas_s2_tip }}</div>
+            <div class="tip-box">Ejemplo: Si escribes «María», los destinatarios recibirán: «ALERTA de María: Necesito ayuda. Ubicación: …»</div>
         </section>
 
         <!-- Step 3 -->
         <section class="guide-section" id="step-3">
-            <h2>{{ fas_s3_h2 }}</h2>
+            <h2>Paso 3: Configurar el envío de SMS (Twilio)</h2>
 
-            <h3>{{ fas_s3_optA_h3 }}</h3>
-            <p>{{ fas_s3_optA_p }}</p>
+            <h3>Opción A: Sin Twilio (la más sencilla)</h3>
+            <p>Deja el interruptor «Activar SMS de Twilio» desactivado.</p>
             <ul>
-                <li>{{ fas_s3_optA_li1 }}</li>
-                <li>{{ fas_s3_optA_li2 }}</li>
+                <li>En Android, la aplicación envía SMS directamente usando la SIM del teléfono, sin necesidad de Twilio.</li>
+                <li>En iPhone, la aplicación abre la app Mensajes con el texto ya escrito y la persona mayor toca Enviar una vez. Sencillo pero requiere un paso adicional.</li>
             </ul>
 
-            <h3>{{ fas_s3_optB_h3 }}</h3>
+            <h3>Opción B: Con Twilio (recomendado para automatización completa)</h3>
             <ol>
-                <li>{{ fas_s3_optB_li1 }}</li>
-                <li>{{ fas_s3_optB_li2 }}</li>
-                <li>{{ fas_s3_optB_li3 }}</li>
-                <li>{{ fas_s3_optB_li4 }}
+                <li>Activa el interruptor «Activar SMS de Twilio».</li>
+                <li>Introduce el SID de cuenta de tu consola de Twilio (empieza por «AC…»).</li>
+                <li>Introduce el Auth Token de tu consola de Twilio (toca el icono de ojo para mostrar/ocultar).</li>
+                <li>Elige cómo identificar al remitente:
                     <ul>
-                        <li>{{ fas_s3_optB_li4a }}</li>
-                        <li>{{ fas_s3_optB_li4b }}</li>
+                        <li>Número de Twilio — Introduce el número de Twilio (p. ej., +12015551234). Selecciona primero la bandera del país.</li>
+                        <li>Nombre del remitente — Activa «Usar nombre alfanumérico» y escribe un nombre corto (p. ej., «TapAlert»). Nota: no disponible en todos los países (p. ej., EE. UU.).</li>
                     </ul>
                 </li>
-                <li>{{ fas_s3_optB_li5 }}</li>
+                <li>Tu número — Introduce tu propio número. La aplicación envía un SMS de prueba para confirmar que Twilio funciona antes de generar el enlace.</li>
             </ol>
-            <div class="tip-box">{{ fas_s3_tip }}</div>
+            <div class="tip-box">Cómo encontrar las credenciales de Twilio: Inicia sesión en console.twilio.com. El Account SID y el Auth Token aparecen en el panel principal. El número está en Números de teléfono → Administrar → Números activos.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
-            <h2>{{ fas_s4_h2 }}</h2>
-            <p>{{ fas_s4_p1 }}</p>
+            <h2>Paso 4: Configurar alertas por correo electrónico (opcional)</h2>
+            <p>Las alertas por correo envían una copia de cada alerta a los destinatarios que tienen dirección de correo. Es una copia de seguridad útil si el SMS falla.</p>
             <ol>
-                <li>{{ fas_s4_li1 }}</li>
-                <li>{{ fas_s4_li2 }}</li>
-                <li>{{ fas_s4_li3 }}</li>
-                <li>{{ fas_s4_li4 }}</li>
+                <li>Activa el interruptor «Activar redundancia de correo».</li>
+                <li>Selecciona tu proveedor de correo: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (configuración automática) o SMTP personalizado.</li>
+                <li>Introduce la dirección de correo desde la que se enviará, idealmente una dirección dedicada y no el buzón personal de la persona mayor.</li>
+                <li>Introduce la contraseña de aplicación para esa cuenta.</li>
             </ol>
 
-            <h3>{{ fas_s4_apppwd_h3 }}</h3>
-            <p>{{ fas_s4_apppwd_p }}</p>
+            <h3>Cómo obtener una contraseña de aplicación</h3>
+            <p>Las contraseñas habituales de correo no funcionan. Los proveedores de correo requieren contraseñas de aplicación para apps que se conectan por SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
-                <li>{{ fas_s4_gmail_li1 }}</li>
-                <li>{{ fas_s4_gmail_li2 }}</li>
-                <li>{{ fas_s4_gmail_li3 }}</li>
-                <li>{{ fas_s4_gmail_li4 }}</li>
+                <li>Ve a myaccount.google.com → Seguridad</li>
+                <li>Activa la verificación en 2 pasos si aún no está activada</li>
+                <li>Vuelve a Seguridad → «Contraseñas de aplicaciones»</li>
+                <li>Crea una nueva contraseña de aplicación, nómbrala «TapAlert» y copia el código de 16 caracteres</li>
             </ol>
 
             <h3>Outlook / Hotmail</h3>
             <ol>
-                <li>{{ fas_s4_outlook_li1 }}</li>
-                <li>{{ fas_s4_outlook_li2 }}</li>
+                <li>Ve a account.live.com/proofs/manage</li>
+                <li>En «Contraseñas de aplicaciones», crea una nueva llamada «TapAlert»</li>
             </ol>
 
             <h3>Yahoo Mail</h3>
             <ol>
-                <li>{{ fas_s4_yahoo_li1 }}</li>
-                <li>{{ fas_s4_yahoo_li2 }}</li>
+                <li>Ve a account.yahoo.com/security</li>
+                <li>En «Contraseñas de aplicaciones», genera una llamada «TapAlert»</li>
             </ol>
 
             <h3>iCloud Mail</h3>
             <ol>
-                <li>{{ fas_s4_icloud_li1 }}</li>
-                <li>{{ fas_s4_icloud_li2 }}</li>
+                <li>Ve a appleid.apple.com → Inicio de sesión y seguridad → Contraseñas específicas de apps</li>
+                <li>Haz clic en el botón +, nómbralo «TapAlert» y copia la contraseña</li>
             </ol>
         </section>
 
         <!-- Step 5 -->
         <section class="guide-section" id="step-5">
-            <h2>{{ fas_s5_h2 }}</h2>
-            <p>{{ fas_s5_p1 }}</p>
+            <h2>Paso 5: Añadir contactos de emergencia</h2>
+            <p>En la sección «Contactos de emergencia», por cada persona que debe recibir las alertas de la persona mayor:</p>
             <ol>
-                <li>{{ fas_s5_li1 }}</li>
-                <li>{{ fas_s5_li2 }}</li>
-                <li>{{ fas_s5_li3 }}</li>
-                <li>{{ fas_s5_li4 }}</li>
+                <li>Introduce su nombre en el campo Nombre (p. ej., «Carlos» o «Dr. García»).</li>
+                <li>Introduce su número de teléfono: selecciona primero la bandera del país correcto y luego escribe el número.</li>
+                <li>Toca el botón + azul para añadirlos a la lista.</li>
+                <li>Repite para cada contacto. Puedes añadir todos los que necesites (hasta 50 con premium; la versión gratuita admite 1).</li>
             </ol>
-            <p>{{ fas_s5_p2 }}</p>
-            <div class="tip-box">{{ fas_s5_tip }}</div>
+            <p>Para eliminar un contacto, toca el icono de papelera roja junto a su nombre.</p>
+            <div class="tip-box">Consejo: Añade al menos 2 contactos para mayor redundancia, por si uno de ellos no está disponible.</div>
         </section>
 
         <!-- Step 6 -->
         <section class="guide-section" id="step-6">
-            <h2>{{ fas_s6_h2 }}</h2>
-            <p>{{ fas_s6_p1 }}</p>
+            <h2>Paso 6: Escribir mensajes de alerta preconfigurados</h2>
+            <p>En la sección <strong>«Mensajes de alerta»</strong>, puedes escribir hasta 3 mensajes listos para usar:</p>
             <ul>
-                <li>{{ fas_s6_li1 }}</li>
-                <li>{{ fas_s6_li2 }}</li>
-                <li>{{ fas_s6_li3 }}</li>
+                <li><strong>Mensaje 1</strong> — El mensaje principal de emergencia (p. ej., «Necesito ayuda, llámame»)</li>
+                <li><strong>Mensaje 2</strong> — Un mensaje de «estoy bien» o de registro (p. ej., «Estoy bien, no os preocupéis»)</li>
+                <li><strong>Mensaje 3</strong> — Otro mensaje personalizado (p. ej., «Me he caído, ven por favor»)</li>
             </ul>
-            <p>{{ fas_s6_p2 }}</p>
+            <p>Estos aparecerán como botones grandes en la pantalla principal del mayor para que pueda enviar una alerta con un solo toque, sin escribir nada.</p>
             <div class="tip-box">
-                <strong>{{ fas_s6_tips_h3 }}</strong>
+                <strong>Consejos para buenos mensajes:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
-                    <li>{{ fas_s6_tip_li1 }}</li>
-                    <li>{{ fas_s6_tip_li2 }}</li>
-                    <li>{{ fas_s6_tip_li3 }}</li>
+                    <li>Mantenlos cortos y claros — los SMS tienen un límite de 160 caracteres por segmento</li>
+                    <li>Escríbelos en el idioma que el mayor y sus contactos utilizan</li>
+                    <li>Deja un mensaje en blanco si no necesitas los 3 espacios</li>
                 </ul>
             </div>
         </section>
 
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
-            <h2>{{ fas_s7_h2 }}</h2>
-            <p>{{ fas_s7_p1 }}</p>
+            <h2>Paso 7: Elegir la configuración de la app</h2>
+            <p>En la sección <strong>«Configuración de la app»</strong>, configura cómo se comporta la app para el mayor:</p>
 
-            <h3>{{ fas_s7_cd_h3 }}</h3>
-            <p>{{ fas_s7_cd_p }}</p>
+            <h3>Cuenta atrás de la alerta</h3>
+            <p>Cuántos segundos esperar después de que el mayor toque el botón de alerta antes de que se envíe realmente.</p>
             <ul>
-                <li>{{ fas_s7_cd_li1 }}</li>
-                <li>{{ fas_s7_cd_li2 }}</li>
-                <li>{{ fas_s7_cd_li3 }}</li>
+                <li><strong>0 segundos</strong> — envía inmediatamente, sin posibilidad de cancelar</li>
+                <li><strong>3–10 segundos</strong> — recomendado para la mayoría de los mayores; da tiempo para cancelar si se pulsa por error</li>
+                <li><strong>15–30 segundos</strong> — si el mayor tiende a tocar accidentalmente</li>
             </ul>
 
-            <h3>{{ fas_s7_am_h3 }}</h3>
+            <h3>Modo de activación</h3>
             <ul>
-                <li>{{ fas_s7_am_li1 }}</li>
-                <li>{{ fas_s7_am_li2 }}</li>
+                <li><strong>Toque único</strong> — toca una vez para iniciar la cuenta atrás (más fácil para mayores con movilidad limitada)</li>
+                <li><strong>Mantener pulsado</strong> — mantén el botón pulsado para confirmar (evita envíos accidentales)</li>
             </ul>
 
-            <h3>{{ fas_s7_ap_h3 }}</h3>
+            <h3>Apariencia</h3>
             <ul>
-                <li>{{ fas_s7_ap_li1 }}</li>
-                <li>{{ fas_s7_ap_li2 }}</li>
-                <li>{{ fas_s7_ap_li3 }}</li>
+                <li><strong>Predeterminado del sistema</strong> — sigue la configuración de modo claro/oscuro del teléfono</li>
+                <li><strong>Modo claro</strong> — fondo siempre claro</li>
+                <li><strong>Modo oscuro</strong> — fondo siempre oscuro (más cómodo para los ojos con poca luz)</li>
             </ul>
 
-            <h3>{{ fas_s7_lang_h3 }}</h3>
-            <p>{{ fas_s7_lang_p }}</p>
-            <div class="tip-box">{{ fas_s7_lang_tip }}</div>
+            <h3>Idioma</h3>
+            <p>Selecciona el idioma para la interfaz de la app. Disponible: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Consejo: Establece el idioma para que coincida con el que habla el mayor, aunque lo estés configurando en un idioma diferente.</div>
         </section>
 
         <!-- Step 8 -->
         <section class="guide-section" id="step-8">
-            <h2>{{ fas_s8_h2 }}</h2>
-            <p>{{ fas_s8_p1 }}</p>
+            <h2>Paso 8: Generar y compartir el Magic Link</h2>
+            <p>Una vez que todas las secciones estén completadas:</p>
             <ol>
-                <li>{{ fas_s8_li1 }}</li>
-                <li>{{ fas_s8_li2 }}</li>
+                <li>Desplázate hasta la parte inferior de la pantalla.</li>
+                <li>Toca el botón <strong>"Generar y compartir Magic Link"</strong> (botón azul grande).</li>
             </ol>
 
-            <h3>{{ fas_s8_next_h3 }}</h3>
-            <p>{{ fas_s8_test_p }}</p>
+            <h3>Qué ocurre a continuación:</h3>
+            <p><strong>Fase de prueba</strong> (tarda unos segundos):</p>
             <ul>
-                <li>{{ fas_s8_test_li1 }}</li>
-                <li>{{ fas_s8_test_li2 }}</li>
-                <li>{{ fas_s8_test_li3 }}</li>
+                <li>Si Twilio está activado: la app envía un SMS de prueba real a <strong>tu número de teléfono</strong> para verificar que funciona. Deberías recibirlo en segundos.</li>
+                <li>Si el correo electrónico está activado: la app envía un correo de prueba a la dirección de correo que introdujiste. Comprueba tu bandeja de entrada.</li>
+                <li>Si las pruebas fallan, aparece un mensaje de error. Comprueba tus credenciales e inténtalo de nuevo.</li>
             </ul>
-            <p>{{ fas_s8_share_p }}</p>
+            <p><strong>Fase de compartir:</strong></p>
             <ul>
-                <li>{{ fas_s8_share_li1 }}</li>
-                <li>{{ fas_s8_share_li2 }}</li>
+                <li>La hoja de compartir del sistema se abre automáticamente.</li>
+                <li>Envía el Magic Link al mayor por <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>correo electrónico</strong>, <strong>SMS</strong> o cualquier app de mensajería que uses.</li>
             </ul>
-            <div class="warn-box">{{ fas_s8_warn }}</div>
+            <div class="warn-box">El enlace es seguro para compartir — pero trátalo como una contraseña. Contiene la configuración del mayor, incluidos los contactos y (si están configuradas) tus credenciales de Twilio/correo. Compártelo solo con el mayor.</div>
         </section>
 
         <!-- Step 9 -->
         <section class="guide-section" id="step-9">
-            <h2>{{ fas_s9_h2 }}</h2>
-            <p>{{ fas_s9_p1 }}</p>
+            <h2>Paso 9: El mayor abre el Magic Link</h2>
+            <p><strong>En el teléfono del mayor (con TapAlert instalado):</strong></p>
             <ol>
-                <li>{{ fas_s9_li1 }}</li>
-                <li>{{ fas_s9_li2 }}</li>
-                <li>{{ fas_s9_li3 }}</li>
-                <li>{{ fas_s9_li4 }}</li>
-                <li>{{ fas_s9_li5 }}</li>
-                <li>{{ fas_s9_li6 }}</li>
+                <li>El mayor recibe el mensaje que enviaste.</li>
+                <li>Toca el enlace.</li>
+                <li>TapAlert se abre automáticamente y muestra una pantalla de confirmación: <em>"¿Listo para configurar TapAlert para [Nombre]?"</em> con un resumen de lo que se configurará.</li>
+                <li>El mayor toca <strong>"Sí, configurarlo"</strong> (o el botón equivalente).</li>
+                <li>La app aplica toda la configuración al instante.</li>
+                <li>Aparece un mensaje de éxito y la app se abre en la pantalla principal — lista para usar.</li>
             </ol>
-            <p><strong>{{ fas_s9_p2 }}</strong></p>
+            <p><strong>Eso es todo. El mayor no necesita introducir ninguna configuración, escribir ninguna credencial ni tomar ninguna decisión.</strong></p>
 
-            <h3>{{ fas_s9_notinst_h3 }}</h3>
+            <h3>Si TapAlert no está instalado aún en el teléfono del mayor</h3>
             <ol>
-                <li>{{ fas_s9_notinst_li1 }}</li>
-                <li>{{ fas_s9_notinst_li2 }}</li>
-                <li>{{ fas_s9_notinst_li3 }}</li>
+                <li>Primero instala TapAlert desde la App Store (iOS) o Google Play (Android).</li>
+                <li>Pasa por la pantalla de permisos (ubicación, micrófono, contactos, notificaciones).</li>
+                <li>Luego toca el Magic Link — se aplicará durante el proceso de incorporación.</li>
             </ol>
         </section>
 
         <!-- Step 10 -->
         <section class="guide-section" id="step-10">
-            <h2>{{ fas_s10_h2 }}</h2>
-            <p>{{ fas_s10_p1 }}</p>
+            <h2>Paso 10: Verificar que todo funciona</h2>
+            <p>Después de aplicar el Magic Link, haz una prueba rápida:</p>
             <ol>
-                <li>{{ fas_s10_li1 }}</li>
-                <li>{{ fas_s10_li2 }}</li>
-                <li>{{ fas_s10_li3 }}</li>
-                <li>{{ fas_s10_li4 }}</li>
-                <li>{{ fas_s10_li5 }}</li>
-                <li>{{ fas_s10_li6 }}</li>
+                <li>Abre TapAlert en el teléfono del mayor.</li>
+                <li>Deberías ver el nombre del mayor en la pantalla principal.</li>
+                <li>Toca uno de los botones de alerta.</li>
+                <li>Espera la cuenta atrás (o envía inmediatamente si la cuenta atrás es 0).</li>
+                <li>Confirma que todos los contactos configurados reciben el SMS (y el correo electrónico, si está configurado).</li>
+                <li>Comprueba que el texto del mensaje y el enlace de ubicación son correctos.</li>
             </ol>
-            <div class="tip-box">{{ fas_s10_tip }}</div>
+            <div class="tip-box">Si algo no está bien, puedes regenerar el Magic Link con correcciones y enviarlo de nuevo — aplicar un nuevo enlace sobreescribe la configuración anterior.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
-            <h2>{{ fas_after_h2 }}</h2>
-            <p>{{ fas_after_p1 }}</p>
+            <h2>Después de la configuración: Lo que ve el mayor</h2>
+            <p>La app del mayor se abre directamente en la pantalla del <strong>Modo Pánico</strong> — un botón de emergencia simple a pantalla completa. La interfaz está diseñada para usarse sin leer nada:</p>
             <ul>
-                <li>{{ fas_after_li1 }}</li>
-                <li>{{ fas_after_li2 }}</li>
-                <li>{{ fas_after_li3 }}</li>
+                <li><strong>Botón rojo SOS grande</strong> en el centro — toca para enviar una alerta de emergencia</li>
+                <li><strong>Botón verde OK grande</strong> abajo — toca para enviar un mensaje de «Estoy bien»</li>
+                <li><strong>Desliza a la izquierda</strong> para ver los botones de mensajes preconfigurados (si se configuraron mensajes)</li>
             </ul>
-            <p>{{ fas_after_p2 }}</p>
+            <p>El mayor nunca necesita entrar en Configuración ni entender cómo funciona nada.</p>
         </section>
 
         <!-- Multiple Seniors -->
         <section class="guide-section" id="multiple-seniors">
-            <h2>{{ fas_multi_h2 }}</h2>
-            <p>{{ fas_multi_p1 }}</p>
+            <h2>Configurar varios mayores</h2>
+            <p>Puedes configurar TapAlert para varios mayores sin empezar desde cero cada vez:</p>
             <ol>
-                <li>{{ fas_multi_li1 }}</li>
-                <li>{{ fas_multi_li2 }}</li>
-                <li>{{ fas_multi_li3 }}</li>
-                <li>{{ fas_multi_li4 }}</li>
+                <li>Después de generar el primer Magic Link, toca <strong>"Configurar otro mayor"</strong> en el diálogo de finalización.</li>
+                <li>El formulario borra el nombre y los contactos del mayor, pero <strong>conserva tus credenciales de Twilio, la configuración de correo y las preferencias de la app</strong>.</li>
+                <li>Cambia solo lo que es diferente (nombre, contactos, mensajes) para el próximo mayor.</li>
+                <li>Genera y comparte un nuevo Magic Link.</li>
             </ol>
         </section>
 
         <!-- Troubleshooting -->
         <section class="guide-section" id="troubleshooting">
-            <h2>{{ fas_ts_h2 }}</h2>
+            <h2>Solución de problemas</h2>
 
-            <h3>{{ fas_ts1_h3 }}</h3>
+            <h3>Error de «validación fallida» al generar el enlace</h3>
             <ul>
-                <li>{{ fas_ts1_li1 }}</li>
-                <li>{{ fas_ts1_li2 }}</li>
-                <li>{{ fas_ts1_li3 }}</li>
+                <li>Comprueba que todos los campos obligatorios estén completados (marcados con un mensaje de error rojo).</li>
+                <li>Si Twilio está activado, asegúrate de que el Account SID, el Auth Token y el número de teléfono son correctos.</li>
+                <li>Si el correo electrónico está activado, verifica la Contraseña de la App — las contraseñas de cuenta normales no funcionarán.</li>
             </ul>
 
-            <h3>{{ fas_ts2_h3 }}</h3>
+            <h3>El mayor no recibió el SMS de prueba</h3>
             <ul>
-                <li>{{ fas_ts2_li1 }}</li>
-                <li>{{ fas_ts2_li2 }}</li>
-                <li>{{ fas_ts2_li3 }}</li>
+                <li>Verifica que el número de teléfono de Twilio esté activo y no sea un número de prueba enviando a números no verificados.</li>
+                <li>En la prueba gratuita de Twilio, solo puedes enviar a números de teléfono que hayas verificado en la Consola de Twilio. Añade los contactos del mayor como números verificados, o actualiza a una cuenta de pago.</li>
+                <li>Comprueba que el formato del número de teléfono es correcto (código de país incluido).</li>
             </ul>
 
-            <h3>{{ fas_ts3_h3 }}</h3>
+            <h3>El Magic Link no abre TapAlert</h3>
             <ul>
-                <li>{{ fas_ts3_li1 }}</li>
-                <li>{{ fas_ts3_li2 }}</li>
-                <li>{{ fas_ts3_li3 }}</li>
+                <li>Asegúrate de que TapAlert esté instalado en el teléfono del mayor.</li>
+                <li>En algunos teléfonos Android, mantén pulsado el enlace y elige "Abrir con TapAlert" en lugar de un navegador.</li>
+                <li>Si en su lugar se abre un navegador, copia la URL completa y pégala de nuevo en el navegador — en el segundo intento, el sistema suele ofrecer TapAlert como opción.</li>
             </ul>
 
-            <h3>{{ fas_ts4_h3 }}</h3>
+            <h3>El mayor toca accidentalmente el botón equivocado</h3>
             <ul>
-                <li>{{ fas_ts4_li1 }}</li>
-                <li>{{ fas_ts4_li2 }}</li>
-                <li>{{ fas_ts4_li3 }}</li>
+                <li>Aumenta la <strong>Cuenta atrás de la alerta</strong> a 10–15 segundos — esto da tiempo para cancelar antes de enviar.</li>
+                <li>O cambia al <strong>Modo mantener pulsado</strong> (modo de activación = mantener) para que el botón requiera una pulsación deliberada.</li>
+                <li>Puedes actualizar estos ajustes generando un nuevo Magic Link con los ajustes corregidos y enviándolo al teléfono del mayor.</li>
             </ul>
 
-            <h3>{{ fas_ts5_h3 }}</h3>
+            <h3>El SMS de Twilio funciona pero el correo electrónico no</h3>
             <ul>
-                <li>{{ fas_ts5_li1 }}</li>
-                <li>{{ fas_ts5_li2 }}</li>
+                <li>Causa más común: los destinatarios no tienen dirección de correo electrónico guardada. Comprueba los destinatarios en la pantalla de Destinatarios de la app.</li>
+                <li>Asegúrate de que la Contraseña de la App es correcta y no ha caducado. Las Contraseñas de App de Gmail y Outlook pueden ser revocadas — genera una nueva si es necesario.</li>
             </ul>
         </section>
 
         <!-- Security -->
         <section class="guide-section" id="security">
-            <h2>{{ fas_sec_h2 }}</h2>
+            <h2>Notas de seguridad y privacidad</h2>
             <ul>
-                <li>{{ fas_sec_li1 }}</li>
-                <li>{{ fas_sec_li2 }}</li>
-                <li>{{ fas_sec_li3 }}</li>
-                <li>{{ fas_sec_li4 }}</li>
+                <li><strong>El contenido del Magic Link</strong> está codificado pero no cifrado. Cualquiera que lo intercepte puede leer la configuración, incluidas las credenciales de Twilio. Compártelo solo directamente con el mayor.</li>
+                <li><strong>TapAlert no tiene servidores</strong> — el Magic Link se procesa íntegramente en el dispositivo del mayor. No se envían datos al servicio TapAlert.</li>
+                <li><strong>Las credenciales de Twilio en el enlace</strong> se almacenan localmente en el dispositivo del mayor en almacenamiento seguro (cifrado) una vez aplicadas.</li>
+                <li>Si crees que un Magic Link ha sido interceptado, <strong>rota tu Auth Token de Twilio</strong> en la Consola de Twilio inmediatamente y genera un nuevo Magic Link.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
-            <h2>{{ fas_ref_h2 }}</h2>
+            <h2>Tarjeta de referencia rápida (para imprimir para el mayor)</h2>
 <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
@@ -485,7 +485,7 @@
 │  to cancel before it sends.                 │
 │  Just press the X button to cancel.         │
 └─────────────────────────────────────────────┘</pre>
-            <p>{{ fas_ref_note }}</p>
+            <p>Rellena el tiempo de cuenta atrás que configuraste (p. ej., «10 segundos»).</p>
         </section>
 
     </main>

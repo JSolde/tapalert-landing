@@ -15,7 +15,7 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/family_assisted_setup.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/family_assisted_setup.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨‍👩‍👧 Family-Assisted Setup Guide - TapAlert</title>
+    <title>👨‍👩‍👧 Guia de configuració assistida per la família - TapAlert</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
@@ -124,15 +124,15 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Torna a Guies</a>
 
-        <h1 class="guide-title">👨‍👩‍👧 Family-Assisted Setup Guide</h1>
-        <p class="guide-subtitle">Configuring TapAlert for a Senior Using Magic Link</p>
+        <h1 class="guide-title">👨‍👩‍👧 Guia de configuració assistida per la família</h1>
+        <p class="guide-subtitle">Configurar TapAlert per a una persona gran amb Magic Link</p>
 
-        <p>{{ fas_intro_p }}</p>
+        <p>Aquesta guia és per a familiars, cuidadors i qualsevol persona que ajudi una persona gran o amb menys experiència tecnològica a configurar TapAlert completament. Amb la funció Magic Link, podeu configurar tota l'aplicació des del vostre dispositiu i lliurar una configuració llesta per usar-se amb un sol toc.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
-            <h2>{{ fas_overview_h2 }}</h2>
-            <p>{{ fas_overview_p1 }}</p>
+            <h2>Descripció general: Com funciona Magic Link</h2>
+            <p>La funció Magic Link permet que una persona amb coneixements tècnics ("l'administrador") faci tota la feina de configuració i la comparteixi com un enllaç especial. Quan la persona gran toca aquest enllaç al seu telèfon, TapAlert aplica automàticament la configuració completa — contactes, missatges, ajustos i tot — en un sol pas.</p>
 <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
@@ -142,332 +142,332 @@
                                        5. Senior taps the link
                                        6. TapAlert opens and asks to confirm
                                        7. Senior taps "Apply" → app is ready!</pre>
-            <p><strong>{{ fas_overview_p2 }}</strong></p>
+            <p><strong>La persona gran mai ha d'escriure res ni navegar per cap ajust.</strong></p>
         </section>
 
         <!-- Before You Begin -->
         <section class="guide-section" id="before-you-begin">
-            <h2>{{ fas_before_h2 }}</h2>
-            <p>{{ fas_before_p1 }}</p>
+            <h2>Abans de començar: El que necessitareu</h2>
+            <p>Segons com vulgueu configurar l'entrega d'alertes, teniu a mà el següent abans de començar:</p>
 
-            <h3>{{ fas_always_h3 }}</h3>
+            <h3>Sempre necessari</h3>
             <ul class="checklist">
-                <li>{{ fas_always_li1 }}</li>
-                <li>{{ fas_always_li2 }}</li>
+                <li>El nom de la persona gran (per personalitzar els missatges d'alerta)</li>
+                <li>Números de telèfon de les persones que han de rebre les alertes (família, veïns, etc.)</li>
             </ul>
 
-            <h3>{{ fas_twilio_req_h3 }}</h3>
-            <p>{{ fas_twilio_req_p }}</p>
+            <h3>Opcional: Per a SMS automatitzats mitjançant Twilio</h3>
+            <p>Si voleu que les alertes s'enviïn automàticament sense necessitat de tenir cap aplicació oberta al telèfon de la persona gran:</p>
             <ul class="checklist">
-                <li>{{ fas_twilio_req_li1 }}</li>
-                <li>{{ fas_twilio_req_li2 }}</li>
-                <li>{{ fas_twilio_req_li3 }}</li>
-                <li>{{ fas_twilio_req_li4 }}</li>
-                <li>{{ fas_twilio_req_li5 }}</li>
+                <li>Un compte de Twilio (prova gratuïta disponible a twilio.com)</li>
+                <li>SID del compte de Twilio (del tauler de la consola de Twilio)</li>
+                <li>Token d'autenticació de Twilio (del tauler de la consola de Twilio)</li>
+                <li>Un número de telèfon de Twilio, O un nom de remitent alfanumèric (p. ex., "TapAlert") si el vostre país ho admet</li>
+                <li>El vostre propi número de telèfon — l'aplicació enviarà un SMS de prova per verificar que Twilio funciona</li>
             </ul>
-            <div class="warn-box">{{ fas_ios_note }}</div>
+            <div class="warn-box">Nota per a usuaris d'iOS: A l'iPhone, els SMS automatitzats requereixen Twilio. Sense ell, l'aplicació obre l'app nativa de Missatges i la persona gran toca Enviar manualment. Continua sent fiable, però requereix un toc addicional.</div>
 
-            <h3>{{ fas_email_req_h3 }}</h3>
-            <p>{{ fas_email_req_p }}</p>
+            <h3>Opcional: Per a redundància de correu electrònic</h3>
+            <p>Si voleu que les alertes també s'enviïn per correu electrònic a més dels SMS:</p>
             <ul class="checklist">
-                <li>{{ fas_email_req_li1 }}</li>
-                <li>{{ fas_email_req_li2 }}</li>
+                <li>Una adreça de correu electrònic dedicada per a l'enviament (Gmail, Outlook, iCloud, Yahoo o personalitzada)</li>
+                <li>Una contrasenya d'aplicació per a aquell compte (vegeu el Pas 4 més avall)</li>
             </ul>
         </section>
 
         <!-- Step 1 -->
         <section class="guide-section" id="step-1">
-            <h2>{{ fas_s1_h2 }}</h2>
+            <h2>Pas 1: Obrir la configuració d'administrador al vostre telèfon</h2>
             <ol>
-                <li>{{ fas_s1_li1 }}</li>
-                <li>{{ fas_s1_li2 }}</li>
-                <li>{{ fas_s1_li3 }}</li>
-                <li>{{ fas_s1_li4 }}</li>
+                <li>Instal·leu TapAlert al vostre propi telèfon (necessiteu l'aplicació per generar el Magic Link).</li>
+                <li>Obriu TapAlert.</li>
+                <li>Si encara no heu completat la configuració inicial, passeu per les pantalles de permisos. A l'última pantalla, toqueu «Configurar per a una altra persona».</li>
+                <li>Si TapAlert ja està instal·lat i configurat, aneu a Configuració → desplaceu-vos fins al final → toqueu «Configuració d'administrador / Magic Link».</li>
             </ol>
-            <p>{{ fas_s1_p2 }}</p>
+            <p>S'obrirà la pantalla de configuració d'administrador. Desplaceu-vos per les seccions: les anireu completant als passos següents.</p>
         </section>
 
         <!-- Step 2 -->
         <section class="guide-section" id="step-2">
-            <h2>{{ fas_s2_h2 }}</h2>
-            <p>{{ fas_s2_p1 }}</p>
+            <h2>Pas 2: Introduir el nom de la persona gran</h2>
+            <p>A la secció «Informació de l'usuari» a la part superior de la pantalla:</p>
             <ul>
-                <li>{{ fas_s2_li1 }}</li>
+                <li>Nom de la persona gran — Escriviu el seu nom (p. ex., «Maria»). Aquest nom apareix als missatges d'alerta perquè els destinataris sàpiguen qui l'ha enviada.</li>
             </ul>
-            <div class="tip-box">{{ fas_s2_tip }}</div>
+            <div class="tip-box">Exemple: Si escriviu «Maria», els destinataris rebran: «ALERTA de Maria: Necessito ajuda. Ubicació: …»</div>
         </section>
 
         <!-- Step 3 -->
         <section class="guide-section" id="step-3">
-            <h2>{{ fas_s3_h2 }}</h2>
+            <h2>Pas 3: Configurar l'enviament de SMS (Twilio)</h2>
 
-            <h3>{{ fas_s3_optA_h3 }}</h3>
-            <p>{{ fas_s3_optA_p }}</p>
+            <h3>Opció A: Sense Twilio (la més senzilla)</h3>
+            <p>Deixeu el commutador «Activa SMS de Twilio» desactivat.</p>
             <ul>
-                <li>{{ fas_s3_optA_li1 }}</li>
-                <li>{{ fas_s3_optA_li2 }}</li>
+                <li>A Android, l'aplicació envia SMS directament amb la SIM del telèfon, sense necessitat de Twilio.</li>
+                <li>A l'iPhone, l'aplicació obre l'app Missatges amb el text ja escrit i la persona gran toca Enviar una vegada. Senzill però requereix un pas addicional.</li>
             </ul>
 
-            <h3>{{ fas_s3_optB_h3 }}</h3>
+            <h3>Opció B: Amb Twilio (recomanat per a l'automatització completa)</h3>
             <ol>
-                <li>{{ fas_s3_optB_li1 }}</li>
-                <li>{{ fas_s3_optB_li2 }}</li>
-                <li>{{ fas_s3_optB_li3 }}</li>
-                <li>{{ fas_s3_optB_li4 }}
+                <li>Activeu el commutador «Activa SMS de Twilio».</li>
+                <li>Introduïu el SID del compte de la consola de Twilio (comença per «AC…»).</li>
+                <li>Introduïu l'Auth Token de la consola de Twilio (toqueu la icona de l'ull per mostrar/ocultar).</li>
+                <li>Trieu com identificar el remitent:
                     <ul>
-                        <li>{{ fas_s3_optB_li4a }}</li>
-                        <li>{{ fas_s3_optB_li4b }}</li>
+                        <li>Número de Twilio — Introduïu el número de Twilio (p. ex., +12015551234). Seleccioneu primer la bandera del país.</li>
+                        <li>Nom del remitent — Activeu «Usa nom alfanumèric» i escriviu un nom curt (p. ex., «TapAlert»). Nota: no disponible a tots els països (p. ex., EUA).</li>
                     </ul>
                 </li>
-                <li>{{ fas_s3_optB_li5 }}</li>
+                <li>El vostre número — Introduïu el vostre propi número. L'aplicació envia un SMS de prova per confirmar que Twilio funciona abans de generar l'enllaç.</li>
             </ol>
-            <div class="tip-box">{{ fas_s3_tip }}</div>
+            <div class="tip-box">On trobar les credencials de Twilio: Inicieu sessió a console.twilio.com. L'Account SID i el Auth Token es mostren al tauler principal. El número es troba a Números de telèfon → Gestionar → Números actius.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
-            <h2>{{ fas_s4_h2 }}</h2>
-            <p>{{ fas_s4_p1 }}</p>
+            <h2>Pas 4: Configurar alertes per correu electrònic (opcional)</h2>
+            <p>Les alertes per correu envien una còpia de cada alerta als destinataris que tenen adreça de correu. És una còpia de seguretat útil si el SMS falla.</p>
             <ol>
-                <li>{{ fas_s4_li1 }}</li>
-                <li>{{ fas_s4_li2 }}</li>
-                <li>{{ fas_s4_li3 }}</li>
-                <li>{{ fas_s4_li4 }}</li>
+                <li>Activeu el commutador «Activa redundància de correu».</li>
+                <li>Seleccioneu el vostre proveïdor de correu: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (configuració automàtica) o SMTP personalitzat.</li>
+                <li>Introduïu l'adreça de correu des de la qual s'enviarà, idealment una adreça dedicada i no el bústia personal de la persona gran.</li>
+                <li>Introduïu la contrasenya d'aplicació per a aquell compte.</li>
             </ol>
 
-            <h3>{{ fas_s4_apppwd_h3 }}</h3>
-            <p>{{ fas_s4_apppwd_p }}</p>
+            <h3>Com obtenir una contrasenya d'aplicació</h3>
+            <p>Les contrasenyes de correu habituals no funcionen. Els proveïdors de correu requereixen contrasenyes d'aplicació per a apps que es connecten per SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
-                <li>{{ fas_s4_gmail_li1 }}</li>
-                <li>{{ fas_s4_gmail_li2 }}</li>
-                <li>{{ fas_s4_gmail_li3 }}</li>
-                <li>{{ fas_s4_gmail_li4 }}</li>
+                <li>Aneu a myaccount.google.com → Seguretat</li>
+                <li>Activeu la verificació en 2 passos si encara no està activada</li>
+                <li>Torneu a Seguretat → «Contrasenyes d'aplicació»</li>
+                <li>Creeu una nova contrasenya d'aplicació, anomeneu-la «TapAlert» i copieu el codi de 16 caràcters</li>
             </ol>
 
             <h3>Outlook / Hotmail</h3>
             <ol>
-                <li>{{ fas_s4_outlook_li1 }}</li>
-                <li>{{ fas_s4_outlook_li2 }}</li>
+                <li>Aneu a account.live.com/proofs/manage</li>
+                <li>A «Contrasenyes d'aplicació», creeu-ne una de nova anomenada «TapAlert»</li>
             </ol>
 
             <h3>Yahoo Mail</h3>
             <ol>
-                <li>{{ fas_s4_yahoo_li1 }}</li>
-                <li>{{ fas_s4_yahoo_li2 }}</li>
+                <li>Aneu a account.yahoo.com/security</li>
+                <li>A «Contrasenyes d'aplicació», genereu-ne una anomenada «TapAlert»</li>
             </ol>
 
             <h3>iCloud Mail</h3>
             <ol>
-                <li>{{ fas_s4_icloud_li1 }}</li>
-                <li>{{ fas_s4_icloud_li2 }}</li>
+                <li>Aneu a appleid.apple.com → Inici de sessió i seguretat → Contrasenyes específiques d'apps</li>
+                <li>Feu clic al botó +, anomeneu-lo «TapAlert» i copieu la contrasenya</li>
             </ol>
         </section>
 
         <!-- Step 5 -->
         <section class="guide-section" id="step-5">
-            <h2>{{ fas_s5_h2 }}</h2>
-            <p>{{ fas_s5_p1 }}</p>
+            <h2>Pas 5: Afegir contactes d'emergència</h2>
+            <p>A la secció «Contactes d'emergència», per a cada persona que ha de rebre les alertes de la persona gran:</p>
             <ol>
-                <li>{{ fas_s5_li1 }}</li>
-                <li>{{ fas_s5_li2 }}</li>
-                <li>{{ fas_s5_li3 }}</li>
-                <li>{{ fas_s5_li4 }}</li>
+                <li>Introduïu el seu nom al camp Nom (p. ex., «Carlos» o «Dr. García»).</li>
+                <li>Introduïu el seu número de telèfon: seleccioneu primer la bandera del país correcte i després escriviu el número.</li>
+                <li>Toqueu el botó + blau per afegir-los a la llista.</li>
+                <li>Repetiu per a cada contacte. Podeu afegir-ne tants com calgui (fins a 50 amb premium; la versió gratuïta n'admet 1).</li>
             </ol>
-            <p>{{ fas_s5_p2 }}</p>
-            <div class="tip-box">{{ fas_s5_tip }}</div>
+            <p>Per eliminar un contacte, toqueu la icona de paperera vermella al costat del seu nom.</p>
+            <div class="tip-box">Consell: Afegiu almenys 2 contactes per a major redundància, per si un no està disponible.</div>
         </section>
 
         <!-- Step 6 -->
         <section class="guide-section" id="step-6">
-            <h2>{{ fas_s6_h2 }}</h2>
-            <p>{{ fas_s6_p1 }}</p>
+            <h2>Pas 6: Escriure missatges d'alerta preconfigurats</h2>
+            <p>A la secció <strong>«Missatges d'alerta»</strong>, podeu escriure fins a 3 missatges llests per usar:</p>
             <ul>
-                <li>{{ fas_s6_li1 }}</li>
-                <li>{{ fas_s6_li2 }}</li>
-                <li>{{ fas_s6_li3 }}</li>
+                <li><strong>Missatge 1</strong> — El missatge principal d'emergència (p. ex., «Necessito ajuda, truqueu-me»)</li>
+                <li><strong>Missatge 2</strong> — Un missatge «estic bé» o de comprovació (p. ex., «Estic bé, no us preocupeu»)</li>
+                <li><strong>Missatge 3</strong> — Un altre missatge personalitzat (p. ex., «M'he caigut, veniu si us plau»)</li>
             </ul>
-            <p>{{ fas_s6_p2 }}</p>
+            <p>Apareixeràn com a botons grans a la pantalla principal de la persona gran perquè pugui enviar una alerta amb un sol toc, sense escriure res.</p>
             <div class="tip-box">
-                <strong>{{ fas_s6_tips_h3 }}</strong>
+                <strong>Consells per a bons missatges:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
-                    <li>{{ fas_s6_tip_li1 }}</li>
-                    <li>{{ fas_s6_tip_li2 }}</li>
-                    <li>{{ fas_s6_tip_li3 }}</li>
+                    <li>Manteniu-los curts i clars — els SMS tenen un límit de 160 caràcters per segment</li>
+                    <li>Escriviu-los en l'idioma que la persona gran i els seus contactes utilitzen</li>
+                    <li>Deixeu un missatge en blanc si no necessiteu els 3 espais</li>
                 </ul>
             </div>
         </section>
 
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
-            <h2>{{ fas_s7_h2 }}</h2>
-            <p>{{ fas_s7_p1 }}</p>
+            <h2>Pas 7: Triar la configuració de l'app</h2>
+            <p>A la secció <strong>«Configuració de l'app»</strong>, configureu com es comporta l'app per a la persona gran:</p>
 
-            <h3>{{ fas_s7_cd_h3 }}</h3>
-            <p>{{ fas_s7_cd_p }}</p>
+            <h3>Compte enrere de l'alerta</h3>
+            <p>Quants segons esperar després que la persona gran toqui el botó d'alerta abans que s'enviï realment.</p>
             <ul>
-                <li>{{ fas_s7_cd_li1 }}</li>
-                <li>{{ fas_s7_cd_li2 }}</li>
-                <li>{{ fas_s7_cd_li3 }}</li>
+                <li><strong>0 segons</strong> — s'envia immediatament, sense possibilitat de cancel·lar</li>
+                <li><strong>3–10 segons</strong> — recomanat per a la majoria de persones grans; dóna temps per cancel·lar si es prem per error</li>
+                <li><strong>15–30 segons</strong> — si la persona gran tendeix a tocar accidentalment</li>
             </ul>
 
-            <h3>{{ fas_s7_am_h3 }}</h3>
+            <h3>Mode d'activació</h3>
             <ul>
-                <li>{{ fas_s7_am_li1 }}</li>
-                <li>{{ fas_s7_am_li2 }}</li>
+                <li><strong>Toc únic</strong> — toqueu una vegada per iniciar el compte enrere (més fàcil per a persones grans amb mobilitat limitada)</li>
+                <li><strong>Mantenir premut</strong> — manteniu el botó premut per confirmar (evita enviaments accidentals)</li>
             </ul>
 
-            <h3>{{ fas_s7_ap_h3 }}</h3>
+            <h3>Aparença</h3>
             <ul>
-                <li>{{ fas_s7_ap_li1 }}</li>
-                <li>{{ fas_s7_ap_li2 }}</li>
-                <li>{{ fas_s7_ap_li3 }}</li>
+                <li><strong>Predeterminat del sistema</strong> — segueix la configuració de mode clar/fosc del telèfon</li>
+                <li><strong>Mode clar</strong> — fons sempre clar</li>
+                <li><strong>Mode fosc</strong> — fons sempre fosc (més còmode per als ulls amb poca llum)</li>
             </ul>
 
-            <h3>{{ fas_s7_lang_h3 }}</h3>
-            <p>{{ fas_s7_lang_p }}</p>
-            <div class="tip-box">{{ fas_s7_lang_tip }}</div>
+            <h3>Idioma</h3>
+            <p>Seleccioneu l'idioma per a la interfície de l'app. Disponible: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Consell: Establiu l'idioma perquè coincideixi amb el que parla la persona gran, encara que l'estigueu configurant en un idioma diferent.</div>
         </section>
 
         <!-- Step 8 -->
         <section class="guide-section" id="step-8">
-            <h2>{{ fas_s8_h2 }}</h2>
-            <p>{{ fas_s8_p1 }}</p>
+            <h2>Pas 8: Generar i compartir el Magic Link</h2>
+            <p>Un cop totes les seccions estiguin emplenades:</p>
             <ol>
-                <li>{{ fas_s8_li1 }}</li>
-                <li>{{ fas_s8_li2 }}</li>
+                <li>Desplaceu-vos fins a la part inferior de la pantalla.</li>
+                <li>Toqueu el botó <strong>"Genera i comparteix el Magic Link"</strong> (botó blau gran).</li>
             </ol>
 
-            <h3>{{ fas_s8_next_h3 }}</h3>
-            <p>{{ fas_s8_test_p }}</p>
+            <h3>Què passa a continuació:</h3>
+            <p><strong>Fase de prova</strong> (triga uns segons):</p>
             <ul>
-                <li>{{ fas_s8_test_li1 }}</li>
-                <li>{{ fas_s8_test_li2 }}</li>
-                <li>{{ fas_s8_test_li3 }}</li>
+                <li>Si Twilio està activat: l'app envia un SMS de prova real al <strong>vostre número de telèfon</strong> per verificar que funciona. Haureu de rebre'l en qestió de segons.</li>
+                <li>Si el correu electrònic està activat: l'app envia un correu de prova a l'adreça de correu que heu introduit. Comproveu la vostra bústia d'entrada.</li>
+                <li>Si les proves fallen, apareix un missatge d'error. Comproveu les vostres credencials i torneu-ho a intentar.</li>
             </ul>
-            <p>{{ fas_s8_share_p }}</p>
+            <p><strong>Fase de compartir:</strong></p>
             <ul>
-                <li>{{ fas_s8_share_li1 }}</li>
-                <li>{{ fas_s8_share_li2 }}</li>
+                <li>El full de compartir del sistema s'obre automàticament.</li>
+                <li>Envieu el Magic Link a la persona gran per <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>correu electrònic</strong>, <strong>SMS</strong> o qualsevol app de missatgeria que feu servir.</li>
             </ul>
-            <div class="warn-box">{{ fas_s8_warn }}</div>
+            <div class="warn-box">L'enllaç és segur per compartir — però tracteu-lo com una contrasenya. Conté la configuració de la persona gran, inclòs els contactes i (si està configurat) les vostres credencials de Twilio/correu. Compartiu-lo només amb la persona gran.</div>
         </section>
 
         <!-- Step 9 -->
         <section class="guide-section" id="step-9">
-            <h2>{{ fas_s9_h2 }}</h2>
-            <p>{{ fas_s9_p1 }}</p>
+            <h2>Pas 9: La persona gran obre el Magic Link</h2>
+            <p><strong>Al telèfon de la persona gran (amb TapAlert instal·lat):</strong></p>
             <ol>
-                <li>{{ fas_s9_li1 }}</li>
-                <li>{{ fas_s9_li2 }}</li>
-                <li>{{ fas_s9_li3 }}</li>
-                <li>{{ fas_s9_li4 }}</li>
-                <li>{{ fas_s9_li5 }}</li>
-                <li>{{ fas_s9_li6 }}</li>
+                <li>La persona gran rep el missatge que heu enviat.</li>
+                <li>Toca l'enllaç.</li>
+                <li>TapAlert s'obre automàticament i mostra una pantalla de confirmació: <em>«Preparats per configurar TapAlert per a [Nom]?»</em> amb un resum del que es configurarà.</li>
+                <li>La persona gran toca <strong>"Sí, configura-ho"</strong> (o el botó equivalent).</li>
+                <li>L'app aplica tota la configuració al moment.</li>
+                <li>Apareix un missatge d'èxit i l'app s'obre a la pantalla principal — a punt per usar.</li>
             </ol>
-            <p><strong>{{ fas_s9_p2 }}</strong></p>
+            <p><strong>Això és tot. La persona gran no necessita introduir cap configuració, escriure cap credencial ni prendre cap decisió.</strong></p>
 
-            <h3>{{ fas_s9_notinst_h3 }}</h3>
+            <h3>Si TapAlert no està instal·lat encara al telèfon de la persona gran</h3>
             <ol>
-                <li>{{ fas_s9_notinst_li1 }}</li>
-                <li>{{ fas_s9_notinst_li2 }}</li>
-                <li>{{ fas_s9_notinst_li3 }}</li>
+                <li>Primer instal·leu TapAlert des de l'App Store (iOS) o Google Play (Android).</li>
+                <li>Passeu per la pantalla de permisos (ubicació, micròfon, contactes, notificacions).</li>
+                <li>Després toqueu el Magic Link — s'aplicarà durant el procés d'incorporació.</li>
             </ol>
         </section>
 
         <!-- Step 10 -->
         <section class="guide-section" id="step-10">
-            <h2>{{ fas_s10_h2 }}</h2>
-            <p>{{ fas_s10_p1 }}</p>
+            <h2>Pas 10: Verificar que tot funciona</h2>
+            <p>Després d'aplicar el Magic Link, feu una prova ràpida:</p>
             <ol>
-                <li>{{ fas_s10_li1 }}</li>
-                <li>{{ fas_s10_li2 }}</li>
-                <li>{{ fas_s10_li3 }}</li>
-                <li>{{ fas_s10_li4 }}</li>
-                <li>{{ fas_s10_li5 }}</li>
-                <li>{{ fas_s10_li6 }}</li>
+                <li>Obriu TapAlert al telèfon de la persona gran.</li>
+                <li>Haureu de veure el nom de la persona gran a la pantalla d'inici.</li>
+                <li>Toqueu un dels botons d'alerta.</li>
+                <li>Espereu el compte enrere (o envieu immediatament si el compte enrere és 0).</li>
+                <li>Confirmeu que tots els contactes configurats reben el SMS (i el correu electrònic, si està configurat).</li>
+                <li>Comproveu que el text del missatge i l'enllaç d'ubicació són correctes.</li>
             </ol>
-            <div class="tip-box">{{ fas_s10_tip }}</div>
+            <div class="tip-box">Si alguna cosa no està bé, podeu regenerar el Magic Link amb correccions i enviar-lo de nou — aplicar un nou enllaç sobreescriu la configuració anterior.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
-            <h2>{{ fas_after_h2 }}</h2>
-            <p>{{ fas_after_p1 }}</p>
+            <h2>Després de la configuració: El que veu la persona gran</h2>
+            <p>L'app de la persona gran s'obre directament a la pantalla del <strong>Mode Pànic</strong> — un botó d'emergència simple a pantalla completa. La interfaz està dissenyada per usar-se sense llegir res:</p>
             <ul>
-                <li>{{ fas_after_li1 }}</li>
-                <li>{{ fas_after_li2 }}</li>
-                <li>{{ fas_after_li3 }}</li>
+                <li><strong>Botó vermell SOS gran</strong> al centre — toqueu per enviar una alerta d'emergència</li>
+                <li><strong>Botó verd OK gran</strong> a sota — toqueu per enviar un missatge «Estic bé»</li>
+                <li><strong>Llisca cap a l'esquerra</strong> per veure els botons de missatges preconfigurats (si es van configurar missatges)</li>
             </ul>
-            <p>{{ fas_after_p2 }}</p>
+            <p>La persona gran mai necessita entrar a Configuració ni entendre com funciona res.</p>
         </section>
 
         <!-- Multiple Seniors -->
         <section class="guide-section" id="multiple-seniors">
-            <h2>{{ fas_multi_h2 }}</h2>
-            <p>{{ fas_multi_p1 }}</p>
+            <h2>Configurar diverses persones grans</h2>
+            <p>Podeu configurar TapAlert per a diverses persones grans sense començar des de zero cada vegada:</p>
             <ol>
-                <li>{{ fas_multi_li1 }}</li>
-                <li>{{ fas_multi_li2 }}</li>
-                <li>{{ fas_multi_li3 }}</li>
-                <li>{{ fas_multi_li4 }}</li>
+                <li>Després de generar el primer Magic Link, toqueu <strong>"Configura una altra persona gran"</strong> al diàleg de finalització.</li>
+                <li>El formulari esborra el nom i els contactes de la persona gran, però <strong>conserva les vostres credencials de Twilio, la configuració de correu i les preferències de l'app</strong>.</li>
+                <li>Canvieu només el que sigui diferent (nom, contactes, missatges) per a la següent persona gran.</li>
+                <li>Genereu i compartiu un nou Magic Link.</li>
             </ol>
         </section>
 
         <!-- Troubleshooting -->
         <section class="guide-section" id="troubleshooting">
-            <h2>{{ fas_ts_h2 }}</h2>
+            <h2>Resolució de problemes</h2>
 
-            <h3>{{ fas_ts1_h3 }}</h3>
+            <h3>Error de «validació fallida» en generar l'enllaç</h3>
             <ul>
-                <li>{{ fas_ts1_li1 }}</li>
-                <li>{{ fas_ts1_li2 }}</li>
-                <li>{{ fas_ts1_li3 }}</li>
+                <li>Comproveu que tots els camps obligatoris estiguin completats (marcats amb un missatge d'error vermell).</li>
+                <li>Si Twilio està activat, assegureu-vos que l'Account SID, el Auth Token i el número de telèfon són correctes.</li>
+                <li>Si el correu electrònic està activat, verifiqueu la Contrasenya de l'App — les contrasenyes de compte normals no funcionaran.</li>
             </ul>
 
-            <h3>{{ fas_ts2_h3 }}</h3>
+            <h3>La persona gran no va rebre el SMS de prova</h3>
             <ul>
-                <li>{{ fas_ts2_li1 }}</li>
-                <li>{{ fas_ts2_li2 }}</li>
-                <li>{{ fas_ts2_li3 }}</li>
+                <li>Verifiqueu que el número de telèfon de Twilio estigui actiu i no sigui un número de prova que enviï a números no verificats.</li>
+                <li>A la prova gratuita de Twilio, només podeu enviar a números de telèfon que hagueu verificat a la Consola de Twilio. Afegiu els contactes de la persona gran com a números verificats, o actualitzeu a un compte de pagament.</li>
+                <li>Comproveu que el format del número de telèfon és correcte (codi de país inclòs).</li>
             </ul>
 
-            <h3>{{ fas_ts3_h3 }}</h3>
+            <h3>El Magic Link no obre TapAlert</h3>
             <ul>
-                <li>{{ fas_ts3_li1 }}</li>
-                <li>{{ fas_ts3_li2 }}</li>
-                <li>{{ fas_ts3_li3 }}</li>
+                <li>Assegureu-vos que TapAlert estigui instal·lat al telèfon de la persona gran.</li>
+                <li>En alguns telèfons Android, manteniu premut l'enllaç i trieu "Obrir amb TapAlert" en lloc d'un navegador.</li>
+                <li>Si en canvi s'obre un navegador, copieu la URL completa i enganxeu-la de nou al navegador — en el segon intent, el sistema normalment ofereix TapAlert com a opció.</li>
             </ul>
 
-            <h3>{{ fas_ts4_h3 }}</h3>
+            <h3>La persona gran toca accidentalment el botó equivocat</h3>
             <ul>
-                <li>{{ fas_ts4_li1 }}</li>
-                <li>{{ fas_ts4_li2 }}</li>
-                <li>{{ fas_ts4_li3 }}</li>
+                <li>Augmenteu el <strong>Compte enrere de l'alerta</strong> a 10–15 segons — això dóna temps per cancel·lar abans d'enviar.</li>
+                <li>O canvieu al <strong>Mode mantenir premut</strong> (mode d'activació = mantenir) perquè el botó requereixi una pulsació deliberada.</li>
+                <li>Podeu actualitzar aquests ajustos generant un nou Magic Link amb els ajustos corregits i enviant-lo al telèfon de la persona gran.</li>
             </ul>
 
-            <h3>{{ fas_ts5_h3 }}</h3>
+            <h3>El SMS de Twilio funciona però el correu electrònic no</h3>
             <ul>
-                <li>{{ fas_ts5_li1 }}</li>
-                <li>{{ fas_ts5_li2 }}</li>
+                <li>Causa més freqüent: els destinataris no tenen adreça de correu electrònic desada. Comproveu els destinataris a la pantalla de Destinataris de l'app.</li>
+                <li>Assegureu-vos que la Contrasenya de l'App és correcta i no ha caducat. Les Contrasenyes d'App de Gmail i Outlook poden ser revocades — genereu-ne una de nova si cal.</li>
             </ul>
         </section>
 
         <!-- Security -->
         <section class="guide-section" id="security">
-            <h2>{{ fas_sec_h2 }}</h2>
+            <h2>Notes de seguretat i privadesa</h2>
             <ul>
-                <li>{{ fas_sec_li1 }}</li>
-                <li>{{ fas_sec_li2 }}</li>
-                <li>{{ fas_sec_li3 }}</li>
-                <li>{{ fas_sec_li4 }}</li>
+                <li><strong>El contingut del Magic Link</strong> està codificat però no xifrat. Qualsevol que l'intercepti pot llegir la configuració, inclòs les credencials de Twilio. Compartiu-lo només directament amb la persona gran.</li>
+                <li><strong>TapAlert no té servidors</strong> — el Magic Link es processa íntegrament al dispositiu de la persona gran. No s'envien dades al servei TapAlert.</li>
+                <li><strong>Les credencials de Twilio a l'enllaç</strong> s'emmagatzemen localment al dispositiu de la persona gran en emmagatzematge segur (xifrat) un cop aplicades.</li>
+                <li>Si creieu que un Magic Link ha estat interceptat, <strong>roteu el vostre Auth Token de Twilio</strong> a la Consola de Twilio immediatament i genereu un nou Magic Link.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
-            <h2>{{ fas_ref_h2 }}</h2>
+            <h2>Targeta de referència ràpida (per imprimir per a la persona gran)</h2>
 <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
@@ -485,7 +485,7 @@
 │  to cancel before it sends.                 │
 │  Just press the X button to cancel.         │
 └─────────────────────────────────────────────┘</pre>
-            <p>{{ fas_ref_note }}</p>
+            <p>Ompliu el temps de compte enrere que heu configurat (p. ex., «10 segons»).</p>
         </section>
 
     </main>

@@ -15,7 +15,7 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/family_assisted_setup.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/family_assisted_setup.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨‍👩‍👧 Family-Assisted Setup Guide - TapAlert</title>
+    <title>👨‍👩‍👧 Gids voor door familie ondersteunde installatie - TapAlert</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
@@ -124,15 +124,15 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Terug naar Gidsen</a>
 
-        <h1 class="guide-title">👨‍👩‍👧 Family-Assisted Setup Guide</h1>
-        <p class="guide-subtitle">Configuring TapAlert for a Senior Using Magic Link</p>
+        <h1 class="guide-title">👨‍👩‍👧 Gids voor door familie ondersteunde installatie</h1>
+        <p class="guide-subtitle">TapAlert instellen voor een senior met Magic Link</p>
 
-        <p>{{ fas_intro_p }}</p>
+        <p>Deze gids is bestemd voor familieleden, verzorgers en iedereen die een oudere of minder tech-savvy persoon helpt TapAlert volledig in te stellen. Met de Magic Link-functie kunt u de volledige app op uw eigen apparaat instellen en de gebruiker met één tik een gebruiksklare configuratie overhandigen.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
-            <h2>{{ fas_overview_h2 }}</h2>
-            <p>{{ fas_overview_p1 }}</p>
+            <h2>Overzicht: Hoe Magic Link werkt</h2>
+            <p>Met de Magic Link-functie kan een techsavvy persoon ("de beheerder") al het configuratiewerk doen en dit delen als een speciale link. Wanneer de senior op die link tikt op zijn telefoon, past TapAlert automatisch de volledige configuratie toe — contacten, berichten, instellingen en alles — in één stap.</p>
 <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
@@ -142,332 +142,332 @@
                                        5. Senior taps the link
                                        6. TapAlert opens and asks to confirm
                                        7. Senior taps "Apply" → app is ready!</pre>
-            <p><strong>{{ fas_overview_p2 }}</strong></p>
+            <p><strong>De senior hoeft nooit iets te typen of door instellingen te navigeren.</strong></p>
         </section>
 
         <!-- Before You Begin -->
         <section class="guide-section" id="before-you-begin">
-            <h2>{{ fas_before_h2 }}</h2>
-            <p>{{ fas_before_p1 }}</p>
+            <h2>Voordat u begint: Wat u nodig heeft</h2>
+            <p>Afhankelijk van hoe u de bezorging van meldingen wilt instellen, verzamel dit van tevoren:</p>
 
-            <h3>{{ fas_always_h3 }}</h3>
+            <h3>Altijd vereist</h3>
             <ul class="checklist">
-                <li>{{ fas_always_li1 }}</li>
-                <li>{{ fas_always_li2 }}</li>
+                <li>De voornaam van de senior (gebruikt om meldingsberichten te personaliseren)</li>
+                <li>Telefoonnummers van de mensen die meldingen moeten ontvangen (familie, buren, enz.)</li>
             </ul>
 
-            <h3>{{ fas_twilio_req_h3 }}</h3>
-            <p>{{ fas_twilio_req_p }}</p>
+            <h3>Optioneel: Voor geautomatiseerde sms via Twilio</h3>
+            <p>Als u wilt dat meldingen automatisch worden verzonden zonder dat een app op de telefoon van de senior open hoeft te zijn:</p>
             <ul class="checklist">
-                <li>{{ fas_twilio_req_li1 }}</li>
-                <li>{{ fas_twilio_req_li2 }}</li>
-                <li>{{ fas_twilio_req_li3 }}</li>
-                <li>{{ fas_twilio_req_li4 }}</li>
-                <li>{{ fas_twilio_req_li5 }}</li>
+                <li>Een Twilio-account (gratis proefperiode beschikbaar op twilio.com)</li>
+                <li>Twilio Account SID (van het Twilio Console-dashboard)</li>
+                <li>Twilio Auth Token (van het Twilio Console-dashboard)</li>
+                <li>Een Twilio-telefoonnummer, OF een alfanumerische afzendernaam (bijv. "TapAlert") als uw land dit ondersteunt</li>
+                <li>Uw eigen telefoonnummer — de app stuurt een test-sms om te controleren of Twilio werkt</li>
             </ul>
-            <div class="warn-box">{{ fas_ios_note }}</div>
+            <div class="warn-box">Opmerking voor iOS-gebruikers: Op de iPhone vereisen geautomatiseerde sms'jes Twilio. Zonder Twilio opent de app de native Berichten-app en tikt de senior handmatig op Verzenden. Dit is nog steeds betrouwbaar maar vereist één extra tik.</div>
 
-            <h3>{{ fas_email_req_h3 }}</h3>
-            <p>{{ fas_email_req_p }}</p>
+            <h3>Optioneel: Voor e-mailredundantie</h3>
+            <p>Als u wilt dat meldingen naast sms ook per e-mail worden verzonden:</p>
             <ul class="checklist">
-                <li>{{ fas_email_req_li1 }}</li>
-                <li>{{ fas_email_req_li2 }}</li>
+                <li>Een speciaal e-mailadres om vanaf te verzenden (Gmail, Outlook, iCloud, Yahoo of aangepast)</li>
+                <li>Een app-wachtwoord voor dat account (zie stap 4 hieronder)</li>
             </ul>
         </section>
 
         <!-- Step 1 -->
         <section class="guide-section" id="step-1">
-            <h2>{{ fas_s1_h2 }}</h2>
+            <h2>Stap 1: Admin-setup openen op uw telefoon</h2>
             <ol>
-                <li>{{ fas_s1_li1 }}</li>
-                <li>{{ fas_s1_li2 }}</li>
-                <li>{{ fas_s1_li3 }}</li>
-                <li>{{ fas_s1_li4 }}</li>
+                <li>Installeer TapAlert op uw eigen telefoon (u heeft de app nodig om de Magic Link te genereren).</li>
+                <li>Open TapAlert.</li>
+                <li>Als u de onboarding nog niet heeft voltooid, doorloop dan de toestemmingsschermen. Tik op het laatste scherm op "Instellen voor iemand anders".</li>
+                <li>Als TapAlert al geïnstalleerd is, ga naar Instellingen → scroll helemaal naar beneden → tik op "Admin-setup / Magic Link".</li>
             </ol>
-            <p>{{ fas_s1_p2 }}</p>
+            <p>Het admin-instellingsscherm wordt geopend. Scroll door de secties — u vult elke sectie in bij de stappen hieronder.</p>
         </section>
 
         <!-- Step 2 -->
         <section class="guide-section" id="step-2">
-            <h2>{{ fas_s2_h2 }}</h2>
-            <p>{{ fas_s2_p1 }}</p>
+            <h2>Stap 2: De naam van de senior invoeren</h2>
+            <p>In het gedeelte "Gebruikersinformatie" bovenaan het scherm:</p>
             <ul>
-                <li>{{ fas_s2_li1 }}</li>
+                <li>Naam van de senior — Typ zijn/haar voornaam (bijv. "Maria"). Deze naam verschijnt in meldingsberichten zodat ontvangers weten wie de melding heeft verzonden.</li>
             </ul>
-            <div class="tip-box">{{ fas_s2_tip }}</div>
+            <div class="tip-box">Voorbeeld: Als u "Maria" typt, ontvangen ontvangers: "MELDING van Maria: Ik heb hulp nodig. Locatie: …"</div>
         </section>
 
         <!-- Step 3 -->
         <section class="guide-section" id="step-3">
-            <h2>{{ fas_s3_h2 }}</h2>
+            <h2>Stap 3: Sms-bezorging configureren (Twilio)</h2>
 
-            <h3>{{ fas_s3_optA_h3 }}</h3>
-            <p>{{ fas_s3_optA_p }}</p>
+            <h3>Optie A: Zonder Twilio (eenvoudigst)</h3>
+            <p>Laat de schakelaar "Twilio SMS inschakelen" uit.</p>
             <ul>
-                <li>{{ fas_s3_optA_li1 }}</li>
-                <li>{{ fas_s3_optA_li2 }}</li>
+                <li>Op Android stuurt de app sms'jes rechtstreeks via de simkaart — geen Twilio nodig.</li>
+                <li>Op de iPhone opent de app de Berichten-app vooraf ingevuld en tikt de senior eenmaal op Verzenden. Eenvoudig maar één extra stap.</li>
             </ul>
 
-            <h3>{{ fas_s3_optB_h3 }}</h3>
+            <h3>Optie B: Met Twilio (aanbevolen voor volledige automatisering)</h3>
             <ol>
-                <li>{{ fas_s3_optB_li1 }}</li>
-                <li>{{ fas_s3_optB_li2 }}</li>
-                <li>{{ fas_s3_optB_li3 }}</li>
-                <li>{{ fas_s3_optB_li4 }}
+                <li>Zet "Twilio SMS inschakelen" aan.</li>
+                <li>Voer de Account SID in van uw Twilio Console (begint met "AC…").</li>
+                <li>Voer het Auth Token in van uw Twilio Console (tik op het oogpictogram om te tonen/verbergen).</li>
+                <li>Kies hoe u de afzender wilt identificeren:
                     <ul>
-                        <li>{{ fas_s3_optB_li4a }}</li>
-                        <li>{{ fas_s3_optB_li4b }}</li>
+                        <li>Twilio-nummer — Voer het Twilio-nummer in (bijv. +12015551234). Selecteer eerst de landvlag.</li>
+                        <li>Afzendernaam — Zet "Alfanumerische afzendernaam" aan en typ een korte naam (bijv. "TapAlert"). Let op: niet in alle landen ondersteund (bijv. VS).</li>
                     </ul>
                 </li>
-                <li>{{ fas_s3_optB_li5 }}</li>
+                <li>Uw nummer — Voer uw eigen nummer in. De app stuurt een test-sms om te bevestigen dat Twilio werkt voordat de link wordt gegenereerd.</li>
             </ol>
-            <div class="tip-box">{{ fas_s3_tip }}</div>
+            <div class="tip-box">Waar u Twilio-inloggegevens vindt: Log in op console.twilio.com. Account SID en Auth Token staan op de hoofdpagina van het dashboard. Uw nummer staat onder Telefoonnummers → Beheren → Actieve nummers.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
-            <h2>{{ fas_s4_h2 }}</h2>
-            <p>{{ fas_s4_p1 }}</p>
+            <h2>Stap 4: E-mailmeldingen configureren (optioneel)</h2>
+            <p>E-mailmeldingen sturen een kopie van elke melding naar ontvangers met een e-mailadres. Dit is een nuttige backup als sms mislukt.</p>
             <ol>
-                <li>{{ fas_s4_li1 }}</li>
-                <li>{{ fas_s4_li2 }}</li>
-                <li>{{ fas_s4_li3 }}</li>
-                <li>{{ fas_s4_li4 }}</li>
+                <li>Zet "E-mailredundantie inschakelen" aan.</li>
+                <li>Selecteer uw e-mailprovider: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (serverinstellingen automatisch ingevuld) of Aangepaste SMTP.</li>
+                <li>Voer het e-mailadres in om vanaf te verzenden — bij voorkeur een speciaal adres, niet de persoonlijke inbox van de senior.</li>
+                <li>Voer het app-wachtwoord in voor dat account.</li>
             </ol>
 
-            <h3>{{ fas_s4_apppwd_h3 }}</h3>
-            <p>{{ fas_s4_apppwd_p }}</p>
+            <h3>Hoe u een app-wachtwoord krijgt</h3>
+            <p>Gewone e-mailwachtwoorden werken niet. E-mailproviders vereisen app-wachtwoorden voor apps die verbinding maken via SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
-                <li>{{ fas_s4_gmail_li1 }}</li>
-                <li>{{ fas_s4_gmail_li2 }}</li>
-                <li>{{ fas_s4_gmail_li3 }}</li>
-                <li>{{ fas_s4_gmail_li4 }}</li>
+                <li>Ga naar myaccount.google.com → Beveiliging</li>
+                <li>Schakel verificatie in 2 stappen in als dat nog niet het geval is</li>
+                <li>Ga terug naar Beveiliging → "App-wachtwoorden"</li>
+                <li>Maak een nieuw app-wachtwoord aan, noem het "TapAlert", kopieer de 16-tekens code</li>
             </ol>
 
             <h3>Outlook / Hotmail</h3>
             <ol>
-                <li>{{ fas_s4_outlook_li1 }}</li>
-                <li>{{ fas_s4_outlook_li2 }}</li>
+                <li>Ga naar account.live.com/proofs/manage</li>
+                <li>Maak onder "App-wachtwoorden" een nieuw aan met de naam "TapAlert"</li>
             </ol>
 
             <h3>Yahoo Mail</h3>
             <ol>
-                <li>{{ fas_s4_yahoo_li1 }}</li>
-                <li>{{ fas_s4_yahoo_li2 }}</li>
+                <li>Ga naar account.yahoo.com/security</li>
+                <li>Genereer onder "App-wachtwoorden" een wachtwoord genaamd "TapAlert"</li>
             </ol>
 
             <h3>iCloud Mail</h3>
             <ol>
-                <li>{{ fas_s4_icloud_li1 }}</li>
-                <li>{{ fas_s4_icloud_li2 }}</li>
+                <li>Ga naar appleid.apple.com → Aanmelden en beveiliging → App-specifieke wachtwoorden</li>
+                <li>Klik op de + knop, noem het "TapAlert" en kopieer het wachtwoord</li>
             </ol>
         </section>
 
         <!-- Step 5 -->
         <section class="guide-section" id="step-5">
-            <h2>{{ fas_s5_h2 }}</h2>
-            <p>{{ fas_s5_p1 }}</p>
+            <h2>Stap 5: Noodcontacten toevoegen</h2>
+            <p>In het gedeelte "Noodcontacten", voor elke persoon die meldingen van de senior moet ontvangen:</p>
             <ol>
-                <li>{{ fas_s5_li1 }}</li>
-                <li>{{ fas_s5_li2 }}</li>
-                <li>{{ fas_s5_li3 }}</li>
-                <li>{{ fas_s5_li4 }}</li>
+                <li>Voer hun naam in het Naam-veld in (bijv. "Carlos" of "Dr. García").</li>
+                <li>Voer hun telefoonnummer in — selecteer eerst de juiste landvlag en typ dan het nummer.</li>
+                <li>Tik op de blauwe + knop om ze aan de lijst toe te voegen.</li>
+                <li>Herhaal voor elk contact. U kunt er zoveel toevoegen als nodig (tot 50 met premium; gratis versie ondersteunt 1).</li>
             </ol>
-            <p>{{ fas_s5_p2 }}</p>
-            <div class="tip-box">{{ fas_s5_tip }}</div>
+            <p>Om een contact te verwijderen, tikt u op het rode prullenbak-pictogram naast hun naam.</p>
+            <div class="tip-box">Tip: Voeg minimaal 2 contacten toe voor redundantie — voor het geval iemand niet bereikbaar is.</div>
         </section>
 
         <!-- Step 6 -->
         <section class="guide-section" id="step-6">
-            <h2>{{ fas_s6_h2 }}</h2>
-            <p>{{ fas_s6_p1 }}</p>
+            <h2>Stap 6: Vooraf geconfigureerde waarschuwingsberichten schrijven</h2>
+            <p>In de sectie <strong>"Waarschuwingsberichten"</strong> kunt u maximaal 3 kant-en-klare berichten schrijven:</p>
             <ul>
-                <li>{{ fas_s6_li1 }}</li>
-                <li>{{ fas_s6_li2 }}</li>
-                <li>{{ fas_s6_li3 }}</li>
+                <li><strong>Bericht 1</strong> — Het hoofdbericht voor noodgevallen (bijv. "Ik heb hulp nodig, bel me")</li>
+                <li><strong>Bericht 2</strong> — Een "Ik ben OK"-bericht (bijv. "Alles goed, maak je geen zorgen")</li>
+                <li><strong>Bericht 3</strong> — Een ander aangepast bericht (bijv. "Ik ben gevallen, kom alsjeblieft")</li>
             </ul>
-            <p>{{ fas_s6_p2 }}</p>
+            <p>Deze verschijnen als grote knoppen op het hoofdscherm van de oudere zodat ze met één tik een melding kunnen sturen, zonder iets te hoeven typen.</p>
             <div class="tip-box">
-                <strong>{{ fas_s6_tips_h3 }}</strong>
+                <strong>Tips voor goede berichten:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
-                    <li>{{ fas_s6_tip_li1 }}</li>
-                    <li>{{ fas_s6_tip_li2 }}</li>
-                    <li>{{ fas_s6_tip_li3 }}</li>
+                    <li>Houd ze kort en duidelijk — SMS heeft een limiet van 160 tekens per segment</li>
+                    <li>Schrijf in de taal die de oudere en hun contacten gebruiken</li>
+                    <li>Laat een bericht leeg als u niet alle 3 sloten nodig heeft</li>
                 </ul>
             </div>
         </section>
 
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
-            <h2>{{ fas_s7_h2 }}</h2>
-            <p>{{ fas_s7_p1 }}</p>
+            <h2>Stap 7: App-instellingen kiezen</h2>
+            <p>In de sectie <strong>"App-instellingen"</strong> configureert u hoe de app zich gedraagt voor de oudere:</p>
 
-            <h3>{{ fas_s7_cd_h3 }}</h3>
-            <p>{{ fas_s7_cd_p }}</p>
+            <h3>Waarschuwingsaftelling</h3>
+            <p>Hoeveel seconden na het tikken op de waarschuwingsknop gewacht wordt voordat het daadwerkelijk verstuurd wordt.</p>
             <ul>
-                <li>{{ fas_s7_cd_li1 }}</li>
-                <li>{{ fas_s7_cd_li2 }}</li>
-                <li>{{ fas_s7_cd_li3 }}</li>
+                <li><strong>0 seconden</strong> — verzendt onmiddellijk, annulering niet mogelijk</li>
+                <li><strong>3–10 seconden</strong> — aanbevolen voor de meeste ouderen; geeft tijd om te annuleren als per ongeluk ingedrukt</li>
+                <li><strong>15–30 seconden</strong> — als de oudere de neiging heeft om per ongeluk te tikken</li>
             </ul>
 
-            <h3>{{ fas_s7_am_h3 }}</h3>
+            <h3>Activatiemodus</h3>
             <ul>
-                <li>{{ fas_s7_am_li1 }}</li>
-                <li>{{ fas_s7_am_li2 }}</li>
+                <li><strong>Enkele tik</strong> — eenmaal tikken om de aftelling te starten (makkelijker voor ouderen met beperkte mobiliteit)</li>
+                <li><strong>Ingedrukt houden</strong> — houd de knop ingedrukt om te bevestigen (voorkomt onbedoeld verzenden)</li>
             </ul>
 
-            <h3>{{ fas_s7_ap_h3 }}</h3>
+            <h3>Weergave</h3>
             <ul>
-                <li>{{ fas_s7_ap_li1 }}</li>
-                <li>{{ fas_s7_ap_li2 }}</li>
-                <li>{{ fas_s7_ap_li3 }}</li>
+                <li><strong>Systeemstandaard</strong> — volgt de licht/donker-modus instelling van de telefoon</li>
+                <li><strong>Lichte modus</strong> — altijd lichte achtergrond</li>
+                <li><strong>Donkere modus</strong> — altijd donkere achtergrond (zachter voor de ogen bij weinig licht)</li>
             </ul>
 
-            <h3>{{ fas_s7_lang_h3 }}</h3>
-            <p>{{ fas_s7_lang_p }}</p>
-            <div class="tip-box">{{ fas_s7_lang_tip }}</div>
+            <h3>Taal</h3>
+            <p>Selecteer de taal voor de app-interface. Beschikbaar: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Tip: Stel de taal in zodat die overeenkomt met wat de oudere spreekt, ook als u het instelt in een andere taal.</div>
         </section>
 
         <!-- Step 8 -->
         <section class="guide-section" id="step-8">
-            <h2>{{ fas_s8_h2 }}</h2>
-            <p>{{ fas_s8_p1 }}</p>
+            <h2>Stap 8: De Magic Link genereren en delen</h2>
+            <p>Zodra alle secties zijn ingevuld:</p>
             <ol>
-                <li>{{ fas_s8_li1 }}</li>
-                <li>{{ fas_s8_li2 }}</li>
+                <li>Scroll naar de onderkant van het scherm.</li>
+                <li>Tik op de knop <strong>"Magic Link genereren en delen"</strong> (grote blauwe knop).</li>
             </ol>
 
-            <h3>{{ fas_s8_next_h3 }}</h3>
-            <p>{{ fas_s8_test_p }}</p>
+            <h3>Wat er vervolgens gebeurt:</h3>
+            <p><strong>Testfase</strong> (duurt een paar seconden):</p>
             <ul>
-                <li>{{ fas_s8_test_li1 }}</li>
-                <li>{{ fas_s8_test_li2 }}</li>
-                <li>{{ fas_s8_test_li3 }}</li>
+                <li>Als Twilio is ingeschakeld: de app stuurt een echte test-SMS naar <strong>uw telefoonnummer</strong> om te controleren of het werkt. U zou deze SMS binnen seconden moeten ontvangen.</li>
+                <li>Als e-mail is ingeschakeld: de app stuurt een test-e-mail naar het e-mailadres dat u hebt ingevoerd. Controleer uw inbox.</li>
+                <li>Als tests mislukken, verschijnt er een foutmelding. Controleer uw inloggegevens en probeer het opnieuw.</li>
             </ul>
-            <p>{{ fas_s8_share_p }}</p>
+            <p><strong>Deelfase:</strong></p>
             <ul>
-                <li>{{ fas_s8_share_li1 }}</li>
-                <li>{{ fas_s8_share_li2 }}</li>
+                <li>Het systeemdeel-venster opent automatisch.</li>
+                <li>Stuur de Magic Link naar de oudere via <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>e-mail</strong>, <strong>SMS</strong> of een andere berichtenapp.</li>
             </ul>
-            <div class="warn-box">{{ fas_s8_warn }}</div>
+            <div class="warn-box">De link is veilig om te delen — maar behandel hem als een wachtwoord. Het bevat de configuratie van de oudere inclusief contacten en (indien geconfigureerd) uw Twilio/e-mail-inloggegevens. Deel het alleen met de oudere.</div>
         </section>
 
         <!-- Step 9 -->
         <section class="guide-section" id="step-9">
-            <h2>{{ fas_s9_h2 }}</h2>
-            <p>{{ fas_s9_p1 }}</p>
+            <h2>Stap 9: De oudere opent de Magic Link</h2>
+            <p><strong>Op de telefoon van de oudere (met TapAlert geïnstalleerd):</strong></p>
             <ol>
-                <li>{{ fas_s9_li1 }}</li>
-                <li>{{ fas_s9_li2 }}</li>
-                <li>{{ fas_s9_li3 }}</li>
-                <li>{{ fas_s9_li4 }}</li>
-                <li>{{ fas_s9_li5 }}</li>
-                <li>{{ fas_s9_li6 }}</li>
+                <li>De oudere ontvangt het bericht dat u heeft gestuurd.</li>
+                <li>Ze tikken op de link.</li>
+                <li>TapAlert opent automatisch en toont een bevestigingsscherm: <em>"Klaar om TapAlert te configureren voor [Naam]?"</em> met een samenvatting van wat wordt ingesteld.</li>
+                <li>De oudere tikt op <strong>"Ja, instellen"</strong> (of vergelijkbare knop).</li>
+                <li>De app past de volledige configuratie onmiddellijk toe.</li>
+                <li>Er verschijnt een succesbericht en de app opent het hoofdscherm — klaar voor gebruik.</li>
             </ol>
-            <p><strong>{{ fas_s9_p2 }}</strong></p>
+            <p><strong>Dat is alles. De oudere hoeft geen instellingen in te voeren, geen inloggegevens te typen of keuzes te maken.</strong></p>
 
-            <h3>{{ fas_s9_notinst_h3 }}</h3>
+            <h3>Als TapAlert nog niet is geïnstalleerd op de telefoon van de oudere</h3>
             <ol>
-                <li>{{ fas_s9_notinst_li1 }}</li>
-                <li>{{ fas_s9_notinst_li2 }}</li>
-                <li>{{ fas_s9_notinst_li3 }}</li>
+                <li>Installeer eerst TapAlert via de App Store (iOS) of Google Play (Android).</li>
+                <li>Doorloop het machtigingsscherm (locatie, microfoon, contacten, meldingen).</li>
+                <li>Tik dan op de Magic Link — deze wordt toegepast tijdens de onboarding.</li>
             </ol>
         </section>
 
         <!-- Step 10 -->
         <section class="guide-section" id="step-10">
-            <h2>{{ fas_s10_h2 }}</h2>
-            <p>{{ fas_s10_p1 }}</p>
+            <h2>Stap 10: Alles controleren</h2>
+            <p>Nadat de Magic Link is toegepast, doe een snelle test:</p>
             <ol>
-                <li>{{ fas_s10_li1 }}</li>
-                <li>{{ fas_s10_li2 }}</li>
-                <li>{{ fas_s10_li3 }}</li>
-                <li>{{ fas_s10_li4 }}</li>
-                <li>{{ fas_s10_li5 }}</li>
-                <li>{{ fas_s10_li6 }}</li>
+                <li>Open TapAlert op de telefoon van de oudere.</li>
+                <li>U zou de naam van de oudere op het beginscherm moeten zien.</li>
+                <li>Tik op een van de waarschuwingsknoppen.</li>
+                <li>Wacht op de aftelling (of stuur onmiddellijk als aftelling 0 is).</li>
+                <li>Bevestig dat alle geconfigureerde contacten de SMS ontvangen (en e-mail, indien geconfigureerd).</li>
+                <li>Controleer of de berichttekst en de locatielink correct zijn.</li>
             </ol>
-            <div class="tip-box">{{ fas_s10_tip }}</div>
+            <div class="tip-box">Als er iets mis is, kunt u de Magic Link opnieuw genereren met correcties en opnieuw verzenden — het toepassen van een nieuwe link overschrijft de vorige configuratie.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
-            <h2>{{ fas_after_h2 }}</h2>
-            <p>{{ fas_after_p1 }}</p>
+            <h2>Na de instelling: Wat de oudere ziet</h2>
+            <p>De app van de oudere opent direct naar het <strong>Paniek modus</strong>-scherm — een eenvoudige noodknop op volledig scherm. De interface is ontworpen om te gebruiken zonder iets te lezen:</p>
             <ul>
-                <li>{{ fas_after_li1 }}</li>
-                <li>{{ fas_after_li2 }}</li>
-                <li>{{ fas_after_li3 }}</li>
+                <li><strong>Grote rode SOS-knop</strong> in het midden — tik om een noodmelding te sturen</li>
+                <li><strong>Grote groene OK-knop</strong> eronder — tik om een "Ik ben OK"-bericht te sturen</li>
+                <li><strong>Veeg naar links</strong> om vooraf geconfigureerde berichtknoppen te zien (als berichten zijn ingesteld)</li>
             </ul>
-            <p>{{ fas_after_p2 }}</p>
+            <p>De oudere hoeft nooit naar Instellingen te gaan of te begrijpen hoe iets werkt.</p>
         </section>
 
         <!-- Multiple Seniors -->
         <section class="guide-section" id="multiple-seniors">
-            <h2>{{ fas_multi_h2 }}</h2>
-            <p>{{ fas_multi_p1 }}</p>
+            <h2>Meerdere ouderen instellen</h2>
+            <p>U kunt TapAlert voor meerdere ouderen instellen zonder elke keer opnieuw te beginnen:</p>
             <ol>
-                <li>{{ fas_multi_li1 }}</li>
-                <li>{{ fas_multi_li2 }}</li>
-                <li>{{ fas_multi_li3 }}</li>
-                <li>{{ fas_multi_li4 }}</li>
+                <li>Na het genereren van de eerste Magic Link tikt u op <strong>"Nog een oudere instellen"</strong> in het voltooiingsdialoogvenster.</li>
+                <li>Het formulier wist de naam en contacten van de oudere, maar <strong>behoudt uw Twilio-inloggegevens, e-mailinstellingen en app-voorkeuren</strong>.</li>
+                <li>Wijzig alleen wat anders is (naam, contacten, berichten) voor de volgende oudere.</li>
+                <li>Genereer en deel een nieuwe Magic Link.</li>
             </ol>
         </section>
 
         <!-- Troubleshooting -->
         <section class="guide-section" id="troubleshooting">
-            <h2>{{ fas_ts_h2 }}</h2>
+            <h2>Problemen oplossen</h2>
 
-            <h3>{{ fas_ts1_h3 }}</h3>
+            <h3>Fout "Validatie mislukt" bij het genereren van de link</h3>
             <ul>
-                <li>{{ fas_ts1_li1 }}</li>
-                <li>{{ fas_ts1_li2 }}</li>
-                <li>{{ fas_ts1_li3 }}</li>
+                <li>Controleer of alle verplichte velden zijn ingevuld (gemarkeerd met een rode foutmelding).</li>
+                <li>Als Twilio is ingeschakeld, zorg er dan voor dat Account SID, Auth Token en telefoonnummer correct zijn.</li>
+                <li>Als e-mail is ingeschakeld, verifieer het App-wachtwoord — normale accountwachtwoorden werken niet.</li>
             </ul>
 
-            <h3>{{ fas_ts2_h3 }}</h3>
+            <h3>De oudere heeft de test-SMS niet ontvangen</h3>
             <ul>
-                <li>{{ fas_ts2_li1 }}</li>
-                <li>{{ fas_ts2_li2 }}</li>
-                <li>{{ fas_ts2_li3 }}</li>
+                <li>Verifieer dat het Twilio-telefoonnummer actief is en geen proefnummer is dat naar niet-geverifieerde nummers stuurt.</li>
+                <li>Bij de gratis proef van Twilio kunt u alleen verzenden naar telefoonnummers die u heeft geverifieerd in de Twilio Console. Voeg de contacten van de oudere toe als geverifieerde nummers, of upgrade naar een betaald account.</li>
+                <li>Controleer of het telefoonnummerformaat correct is (landcode inbegrepen).</li>
             </ul>
 
-            <h3>{{ fas_ts3_h3 }}</h3>
+            <h3>De Magic Link opent TapAlert niet</h3>
             <ul>
-                <li>{{ fas_ts3_li1 }}</li>
-                <li>{{ fas_ts3_li2 }}</li>
-                <li>{{ fas_ts3_li3 }}</li>
+                <li>Zorg ervoor dat TapAlert is geïnstalleerd op de telefoon van de oudere.</li>
+                <li>Op sommige Android-telefoons tikt u lang op de link en kiest u "Openen met TapAlert" in plaats van een browser.</li>
+                <li>Als er in plaats daarvan een browser opent, kopieer dan de volledige URL en plak deze opnieuw in de browser — bij de tweede poging biedt het systeem gewoonlijk TapAlert als optie.</li>
             </ul>
 
-            <h3>{{ fas_ts4_h3 }}</h3>
+            <h3>De oudere tikt per ongeluk op de verkeerde knop</h3>
             <ul>
-                <li>{{ fas_ts4_li1 }}</li>
-                <li>{{ fas_ts4_li2 }}</li>
-                <li>{{ fas_ts4_li3 }}</li>
+                <li>Vergroot de <strong>Waarschuwingsaftelling</strong> naar 10–15 seconden — dit geeft tijd om te annuleren voor het verzenden.</li>
+                <li>Of schakel over naar de <strong>Ingedrukt houden-modus</strong> (activatiemodus = ingedrukt houden) zodat de knop een bewuste lang indrukken vereist.</li>
+                <li>U kunt deze instellingen bijwerken door een nieuwe Magic Link te genereren met gecorrigeerde instellingen en deze naar de telefoon van de oudere te sturen.</li>
             </ul>
 
-            <h3>{{ fas_ts5_h3 }}</h3>
+            <h3>Twilio SMS werkt maar e-mail niet</h3>
             <ul>
-                <li>{{ fas_ts5_li1 }}</li>
-                <li>{{ fas_ts5_li2 }}</li>
+                <li>Meest voorkomende oorzaak: ontvangers hebben geen e-mailadressen opgeslagen. Controleer ontvangers in het Ontvangers-scherm van de app.</li>
+                <li>Zorg ervoor dat het App-wachtwoord correct is en niet is verlopen. App-wachtwoorden van Gmail en Outlook kunnen worden ingetrokken — genereer een nieuw als dat nodig is.</li>
             </ul>
         </section>
 
         <!-- Security -->
         <section class="guide-section" id="security">
-            <h2>{{ fas_sec_h2 }}</h2>
+            <h2>Beveiligings- en privacyopmerkingen</h2>
             <ul>
-                <li>{{ fas_sec_li1 }}</li>
-                <li>{{ fas_sec_li2 }}</li>
-                <li>{{ fas_sec_li3 }}</li>
-                <li>{{ fas_sec_li4 }}</li>
+                <li><strong>De Magic Link-payload</strong> is gecodeerd maar niet versleuteld. Iedereen die het onderschept kan de configuratie lezen, inclusief Twilio-inloggegevens. Deel het alleen rechtstreeks met de oudere.</li>
+                <li><strong>TapAlert heeft geen servers</strong> — de Magic Link wordt volledig verwerkt op het apparaat van de oudere. Er worden geen gegevens naar de TapAlert-service gestuurd.</li>
+                <li><strong>Twilio-inloggegevens in de link</strong> worden lokaal opgeslagen op het apparaat van de oudere in beveiligde (versleutelde) opslag zodra ze zijn toegepast.</li>
+                <li>Als u denkt dat een Magic Link is onderschept, <strong>roteer uw Twilio Auth Token</strong> in de Twilio Console onmiddellijk en genereer een nieuwe Magic Link.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
-            <h2>{{ fas_ref_h2 }}</h2>
+            <h2>Snelle naslagkaart (om af te drukken voor de oudere)</h2>
 <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
@@ -485,7 +485,7 @@
 │  to cancel before it sends.                 │
 │  Just press the X button to cancel.         │
 └─────────────────────────────────────────────┘</pre>
-            <p>{{ fas_ref_note }}</p>
+            <p>Vul de aftelltijd in die u heeft geconfigureerd (bijv. "10 seconden").</p>
         </section>
 
     </main>

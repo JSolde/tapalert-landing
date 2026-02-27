@@ -15,7 +15,7 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/family_assisted_setup.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/family_assisted_setup.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨‍👩‍👧 Family-Assisted Setup Guide - TapAlert</title>
+    <title>👨‍👩‍👧 Leitfaden zur familiengestützten Einrichtung - TapAlert</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f8f9fa; }
@@ -124,15 +124,15 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Zurück zu Anleitungen</a>
 
-        <h1 class="guide-title">👨‍👩‍👧 Family-Assisted Setup Guide</h1>
-        <p class="guide-subtitle">Configuring TapAlert for a Senior Using Magic Link</p>
+        <h1 class="guide-title">👨‍👩‍👧 Leitfaden zur familiengestützten Einrichtung</h1>
+        <p class="guide-subtitle">TapAlert für Senioren mit Magic Link einrichten</p>
 
-        <p>{{ fas_intro_p }}</p>
+        <p>Dieser Leitfaden richtet sich an Familienmitglieder, Pflegepersonen und alle, die einer älteren oder weniger technikaffinen Person helfen, TapAlert vollständig einzurichten. Mit der Magic-Link-Funktion können Sie die gesamte App auf Ihrem Gerät konfigurieren und dem Nutzer mit einem einzigen Tippen eine fertig eingerichtete Konfiguration bereitstellen.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
-            <h2>{{ fas_overview_h2 }}</h2>
-            <p>{{ fas_overview_p1 }}</p>
+            <h2>Übersicht: So funktioniert Magic Link</h2>
+            <p>Die Magic-Link-Funktion ermöglicht es einer technikaffinen Person ("dem Admin"), die gesamte Konfigurationsarbeit zu erledigen und sie dann als speziellen Link zu teilen. Wenn der Senior diesen Link auf seinem Telefon antippt, wendet TapAlert automatisch die vollständige Konfiguration an — Kontakte, Nachrichten, Einstellungen und alles — in einem einzigen Schritt.</p>
 <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
@@ -142,332 +142,332 @@
                                        5. Senior taps the link
                                        6. TapAlert opens and asks to confirm
                                        7. Senior taps "Apply" → app is ready!</pre>
-            <p><strong>{{ fas_overview_p2 }}</strong></p>
+            <p><strong>Der Senior muss nie etwas eintippen oder durch Einstellungen navigieren.</strong></p>
         </section>
 
         <!-- Before You Begin -->
         <section class="guide-section" id="before-you-begin">
-            <h2>{{ fas_before_h2 }}</h2>
-            <p>{{ fas_before_p1 }}</p>
+            <h2>Bevor Sie beginnen: Was Sie benötigen</h2>
+            <p>Je nachdem, wie Sie die Alarmazustellung einrichten möchten, bereiten Sie folgendes vor:</p>
 
-            <h3>{{ fas_always_h3 }}</h3>
+            <h3>Immer erforderlich</h3>
             <ul class="checklist">
-                <li>{{ fas_always_li1 }}</li>
-                <li>{{ fas_always_li2 }}</li>
+                <li>Der Vorname des Seniors (zur Personalisierung der Alarmnachrichten)</li>
+                <li>Telefonnummern der Personen, die Alarme erhalten sollen (Familie, Nachbarn usw.)</li>
             </ul>
 
-            <h3>{{ fas_twilio_req_h3 }}</h3>
-            <p>{{ fas_twilio_req_p }}</p>
+            <h3>Optional: Für automatische SMS über Twilio</h3>
+            <p>Wenn Alarme automatisch gesendet werden sollen, ohne dass eine App auf dem Telefon des Seniors geöffnet sein muss:</p>
             <ul class="checklist">
-                <li>{{ fas_twilio_req_li1 }}</li>
-                <li>{{ fas_twilio_req_li2 }}</li>
-                <li>{{ fas_twilio_req_li3 }}</li>
-                <li>{{ fas_twilio_req_li4 }}</li>
-                <li>{{ fas_twilio_req_li5 }}</li>
+                <li>Ein Twilio-Konto (kostenlose Testversion auf twilio.com verfügbar)</li>
+                <li>Twilio Account SID (aus dem Twilio-Konsolen-Dashboard)</li>
+                <li>Twilio Auth Token (aus dem Twilio-Konsolen-Dashboard)</li>
+                <li>Eine Twilio-Telefonnummer ODER ein alphanumerischer Absendername (z. B. "TapAlert"), wenn Ihr Land dies unterstützt</li>
+                <li>Ihre eigene Telefonnummer — die App sendet eine Test-SMS, um zu überprüfen, ob Twilio funktioniert</li>
             </ul>
-            <div class="warn-box">{{ fas_ios_note }}</div>
+            <div class="warn-box">Hinweis für iOS-Nutzer: Auf dem iPhone erfordern automatische SMS Twilio. Ohne Twilio öffnet die App die native Nachrichten-App und der Senior tippt manuell auf Senden. Das ist weiterhin zuverlässig, erfordert aber einen zusätzlichen Tipp.</div>
 
-            <h3>{{ fas_email_req_h3 }}</h3>
-            <p>{{ fas_email_req_p }}</p>
+            <h3>Optional: Für E-Mail-Redundanz</h3>
+            <p>Wenn Alarme zusätzlich zu SMS auch per E-Mail gesendet werden sollen:</p>
             <ul class="checklist">
-                <li>{{ fas_email_req_li1 }}</li>
-                <li>{{ fas_email_req_li2 }}</li>
+                <li>Eine dedizierte E-Mail-Adresse zum Senden (Gmail, Outlook, iCloud, Yahoo oder benutzerdefiniert)</li>
+                <li>Ein App-Passwort für dieses Konto (siehe Schritt 4 unten)</li>
             </ul>
         </section>
 
         <!-- Step 1 -->
         <section class="guide-section" id="step-1">
-            <h2>{{ fas_s1_h2 }}</h2>
+            <h2>Schritt 1: Admin-Einrichtung auf Ihrem Telefon öffnen</h2>
             <ol>
-                <li>{{ fas_s1_li1 }}</li>
-                <li>{{ fas_s1_li2 }}</li>
-                <li>{{ fas_s1_li3 }}</li>
-                <li>{{ fas_s1_li4 }}</li>
+                <li>Installieren Sie TapAlert auf Ihrem eigenen Telefon (Sie benötigen die App, um den Magic Link zu generieren).</li>
+                <li>Öffnen Sie TapAlert.</li>
+                <li>Falls Sie das Onboarding noch nicht abgeschlossen haben, gehen Sie die Berechtigungsbildschirme durch. Tippen Sie auf dem letzten Bildschirm auf "Für jemand anderen einrichten".</li>
+                <li>Falls TapAlert bereits installiert ist, gehen Sie zu Einstellungen → scrollen Sie ganz nach unten → tippen Sie auf "Admin-Einrichtung / Magic Link".</li>
             </ol>
-            <p>{{ fas_s1_p2 }}</p>
+            <p>Der Admin-Einrichtungsbildschirm öffnet sich. Scrollen Sie durch die Abschnitte — Sie füllen jeden in den folgenden Schritten aus.</p>
         </section>
 
         <!-- Step 2 -->
         <section class="guide-section" id="step-2">
-            <h2>{{ fas_s2_h2 }}</h2>
-            <p>{{ fas_s2_p1 }}</p>
+            <h2>Schritt 2: Den Namen des Seniors eingeben</h2>
+            <p>Im Abschnitt "Benutzerinformationen" oben auf dem Bildschirm:</p>
             <ul>
-                <li>{{ fas_s2_li1 }}</li>
+                <li>Name des Seniors — Geben Sie seinen Vornamen ein (z. B. "Maria"). Dieser Name erscheint in Alarmnachrichten, damit die Empfänger wissen, wer den Alarm gesendet hat.</li>
             </ul>
-            <div class="tip-box">{{ fas_s2_tip }}</div>
+            <div class="tip-box">Beispiel: Wenn Sie "Maria" eingeben, erhalten Empfänger: "ALARM von Maria: Ich brauche Hilfe. Standort: …"</div>
         </section>
 
         <!-- Step 3 -->
         <section class="guide-section" id="step-3">
-            <h2>{{ fas_s3_h2 }}</h2>
+            <h2>Schritt 3: SMS-Versand konfigurieren (Twilio)</h2>
 
-            <h3>{{ fas_s3_optA_h3 }}</h3>
-            <p>{{ fas_s3_optA_p }}</p>
+            <h3>Option A: Ohne Twilio (am einfachsten)</h3>
+            <p>Lassen Sie den Schalter "Twilio SMS aktivieren" ausgeschaltet.</p>
             <ul>
-                <li>{{ fas_s3_optA_li1 }}</li>
-                <li>{{ fas_s3_optA_li2 }}</li>
+                <li>Auf Android sendet die App SMS direkt über die SIM-Karte — kein Twilio erforderlich.</li>
+                <li>Auf iPhone öffnet die App die Nachrichten-App bereits ausgefüllt, und der Senior tippt einmal auf Senden. Einfach, aber ein zusätzlicher Schritt.</li>
             </ul>
 
-            <h3>{{ fas_s3_optB_h3 }}</h3>
+            <h3>Option B: Mit Twilio (empfohlen für vollständige Automatisierung)</h3>
             <ol>
-                <li>{{ fas_s3_optB_li1 }}</li>
-                <li>{{ fas_s3_optB_li2 }}</li>
-                <li>{{ fas_s3_optB_li3 }}</li>
-                <li>{{ fas_s3_optB_li4 }}
+                <li>Schalten Sie "Twilio SMS aktivieren" ein.</li>
+                <li>Geben Sie die Account SID aus Ihrer Twilio-Konsole ein (beginnt mit "AC…").</li>
+                <li>Geben Sie das Auth Token aus Ihrer Twilio-Konsole ein (Auge-Symbol zum Ein-/Ausblenden).</li>
+                <li>Wählen Sie, wie der Absender identifiziert werden soll:
                     <ul>
-                        <li>{{ fas_s3_optB_li4a }}</li>
-                        <li>{{ fas_s3_optB_li4b }}</li>
+                        <li>Twilio-Nummer — Geben Sie die Twilio-Nummer ein (z. B. +12015551234). Wählen Sie zuerst die Landesflagge.</li>
+                        <li>Absendername — Aktivieren Sie "Alphanumerischen Absendernamen verwenden" und geben Sie einen kurzen Namen ein (z. B. "TapAlert"). Hinweis: Nicht in allen Ländern unterstützt (z. B. nicht in den USA).</li>
                     </ul>
                 </li>
-                <li>{{ fas_s3_optB_li5 }}</li>
+                <li>Ihre Nummer — Geben Sie Ihre eigene Nummer ein. Die App sendet eine Test-SMS, um zu bestätigen, dass Twilio funktioniert.</li>
             </ol>
-            <div class="tip-box">{{ fas_s3_tip }}</div>
+            <div class="tip-box">Twilio-Zugangsdaten: Melden Sie sich bei console.twilio.com an. Account SID und Auth Token auf der Haupt-Dashboard-Seite. Ihre Nummer unter Telefonnummern → Verwalten → Aktive Nummern.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
-            <h2>{{ fas_s4_h2 }}</h2>
-            <p>{{ fas_s4_p1 }}</p>
+            <h2>Schritt 4: E-Mail-Alarme konfigurieren (optional)</h2>
+            <p>E-Mail-Alarme senden eine Kopie jedes Alarms an Empfänger mit E-Mail-Adresse. Das ist ein nützliches Backup, falls SMS fehlschlägt.</p>
             <ol>
-                <li>{{ fas_s4_li1 }}</li>
-                <li>{{ fas_s4_li2 }}</li>
-                <li>{{ fas_s4_li3 }}</li>
-                <li>{{ fas_s4_li4 }}</li>
+                <li>Schalten Sie "E-Mail-Redundanz aktivieren" ein.</li>
+                <li>Wählen Sie Ihren E-Mail-Anbieter: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (Einstellungen automatisch ausgefüllt) oder benutzerdefiniertes SMTP.</li>
+                <li>Geben Sie die Absender-E-Mail-Adresse ein — idealerweise eine dedizierte Adresse, nicht das persönliche Postfach des Seniors.</li>
+                <li>Geben Sie das App-Passwort für dieses Konto ein.</li>
             </ol>
 
-            <h3>{{ fas_s4_apppwd_h3 }}</h3>
-            <p>{{ fas_s4_apppwd_p }}</p>
+            <h3>So erhalten Sie ein App-Passwort</h3>
+            <p>Normale E-Mail-Passwörter funktionieren nicht. E-Mail-Anbieter erfordern App-Passwörter für Apps, die sich über SMTP verbinden.</p>
 
             <h3>Gmail</h3>
             <ol>
-                <li>{{ fas_s4_gmail_li1 }}</li>
-                <li>{{ fas_s4_gmail_li2 }}</li>
-                <li>{{ fas_s4_gmail_li3 }}</li>
-                <li>{{ fas_s4_gmail_li4 }}</li>
+                <li>Gehen Sie zu myaccount.google.com → Sicherheit</li>
+                <li>Aktivieren Sie die 2-Schritt-Verifizierung, falls noch nicht aktiv</li>
+                <li>Zurück zu Sicherheit → "App-Passwörter"</li>
+                <li>Erstellen Sie ein neues App-Passwort, nennen Sie es "TapAlert", kopieren Sie den 16-stelligen Code</li>
             </ol>
 
             <h3>Outlook / Hotmail</h3>
             <ol>
-                <li>{{ fas_s4_outlook_li1 }}</li>
-                <li>{{ fas_s4_outlook_li2 }}</li>
+                <li>Gehen Sie zu account.live.com/proofs/manage</li>
+                <li>Unter "App-Passwörter" ein neues mit dem Namen "TapAlert" erstellen</li>
             </ol>
 
             <h3>Yahoo Mail</h3>
             <ol>
-                <li>{{ fas_s4_yahoo_li1 }}</li>
-                <li>{{ fas_s4_yahoo_li2 }}</li>
+                <li>Gehen Sie zu account.yahoo.com/security</li>
+                <li>Unter "App-Passwörter" eines mit dem Namen "TapAlert" generieren</li>
             </ol>
 
             <h3>iCloud Mail</h3>
             <ol>
-                <li>{{ fas_s4_icloud_li1 }}</li>
-                <li>{{ fas_s4_icloud_li2 }}</li>
+                <li>Gehen Sie zu appleid.apple.com → Anmelden und Sicherheit → App-spezifische Passwörter</li>
+                <li>Klicken Sie auf +, nennen Sie es "TapAlert" und kopieren Sie das Passwort</li>
             </ol>
         </section>
 
         <!-- Step 5 -->
         <section class="guide-section" id="step-5">
-            <h2>{{ fas_s5_h2 }}</h2>
-            <p>{{ fas_s5_p1 }}</p>
+            <h2>Schritt 5: Notfallkontakte hinzufügen</h2>
+            <p>Im Abschnitt "Notfallkontakte" für jede Person, die Alarme des Seniors erhalten soll:</p>
             <ol>
-                <li>{{ fas_s5_li1 }}</li>
-                <li>{{ fas_s5_li2 }}</li>
-                <li>{{ fas_s5_li3 }}</li>
-                <li>{{ fas_s5_li4 }}</li>
+                <li>Geben Sie den Namen im Namensfeld ein (z. B. "Carlos" oder "Dr. García").</li>
+                <li>Geben Sie die Telefonnummer ein — wählen Sie zuerst die richtige Landesflagge, dann tippen Sie die Nummer.</li>
+                <li>Tippen Sie auf den blauen + Knopf, um sie zur Liste hinzuzufügen.</li>
+                <li>Wiederholen für jeden Kontakt. Sie können so viele hinzufügen, wie benötigt (bis zu 50 mit Premium; Free-Tier unterstützt 1).</li>
             </ol>
-            <p>{{ fas_s5_p2 }}</p>
-            <div class="tip-box">{{ fas_s5_tip }}</div>
+            <p>Um einen Kontakt zu entfernen, tippen Sie auf das rote Papierkorb-Symbol neben seinem Namen.</p>
+            <div class="tip-box">Tipp: Fügen Sie mindestens 2 Kontakte für Redundanz hinzu — falls eine Person nicht erreichbar ist.</div>
         </section>
 
         <!-- Step 6 -->
         <section class="guide-section" id="step-6">
-            <h2>{{ fas_s6_h2 }}</h2>
-            <p>{{ fas_s6_p1 }}</p>
+            <h2>Schritt 6: Vorkonfigurierte Alarmmeldungen verfassen</h2>
+            <p>Im Abschnitt <strong>„Alarmmeldungen“</strong> können Sie bis zu 3 gebrauchsfertige Nachrichten eingeben:</p>
             <ul>
-                <li>{{ fas_s6_li1 }}</li>
-                <li>{{ fas_s6_li2 }}</li>
-                <li>{{ fas_s6_li3 }}</li>
+                <li><strong>Nachricht 1</strong> — Die wichtigste Notfallnachricht (z. B. „Ich brauche Hilfe, ruf mich an“)</li>
+                <li><strong>Nachricht 2</strong> — Eine „Es geht mir gut“-Nachricht (z. B. „Ich bin okay, keine Sorge“)</li>
+                <li><strong>Nachricht 3</strong> — Eine weitere individuelle Nachricht (z. B. „Ich bin gestürzt, bitte komm“)</li>
             </ul>
-            <p>{{ fas_s6_p2 }}</p>
+            <p>Sie erscheinen als große Schaltflächen auf dem Hauptbildschirm des Seniors, damit er mit einem einzigen Tippen eine Meldung senden kann, ohne etwas eintippen zu müssen.</p>
             <div class="tip-box">
-                <strong>{{ fas_s6_tips_h3 }}</strong>
+                <strong>Tipps für gute Nachrichten:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
-                    <li>{{ fas_s6_tip_li1 }}</li>
-                    <li>{{ fas_s6_tip_li2 }}</li>
-                    <li>{{ fas_s6_tip_li3 }}</li>
+                    <li>Kurz und klar halten — SMS haben ein Limit von 160 Zeichen pro Segment</li>
+                    <li>Schreibe in der Sprache, die der Senior und seine Kontakte verwenden</li>
+                    <li>Lassen Sie ein Nachrichtenfeld leer, wenn Sie nicht alle 3 Felder benötigen</li>
                 </ul>
             </div>
         </section>
 
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
-            <h2>{{ fas_s7_h2 }}</h2>
-            <p>{{ fas_s7_p1 }}</p>
+            <h2>Schritt 7: App-Einstellungen wählen</h2>
+            <p>Konfigurieren Sie im Abschnitt <strong>„App-Einstellungen“</strong>, wie sich die App für den Senior verhält:</p>
 
-            <h3>{{ fas_s7_cd_h3 }}</h3>
-            <p>{{ fas_s7_cd_p }}</p>
+            <h3>Alarm-Countdown</h3>
+            <p>Wie viele Sekunden nach dem Antippen des Alarmknopfs gewartet wird, bevor die Meldung tatsächlich gesendet wird.</p>
             <ul>
-                <li>{{ fas_s7_cd_li1 }}</li>
-                <li>{{ fas_s7_cd_li2 }}</li>
-                <li>{{ fas_s7_cd_li3 }}</li>
+                <li><strong>0 Sekunden</strong> — sendet sofort, keine Stornierung möglich</li>
+                <li><strong>3–10 Sekunden</strong> — für die meisten Senioren empfohlen; gibt Zeit zum Abbrechen, falls versehentlich gedrückt</li>
+                <li><strong>15–30 Sekunden</strong> — wenn der Senior dazu neigt, versehentlich zu tippen</li>
             </ul>
 
-            <h3>{{ fas_s7_am_h3 }}</h3>
+            <h3>Aktivierungsmodus</h3>
             <ul>
-                <li>{{ fas_s7_am_li1 }}</li>
-                <li>{{ fas_s7_am_li2 }}</li>
+                <li><strong>Einmaliges Tippen</strong> — einmal tippen, um den Countdown zu starten (einfacher für Senioren mit eingeschränkter Mobilität)</li>
+                <li><strong>Gedrückt halten</strong> — Knopf gedrückt halten, um zu bestätigen (verhindert versehentliches Senden)</li>
             </ul>
 
-            <h3>{{ fas_s7_ap_h3 }}</h3>
+            <h3>Erscheinungsbild</h3>
             <ul>
-                <li>{{ fas_s7_ap_li1 }}</li>
-                <li>{{ fas_s7_ap_li2 }}</li>
-                <li>{{ fas_s7_ap_li3 }}</li>
+                <li><strong>Systemstandard</strong> — folgt der Hell-/Dunkel-Modus-Einstellung des Telefons</li>
+                <li><strong>Hell-Modus</strong> — immer heller Hintergrund</li>
+                <li><strong>Dunkel-Modus</strong> — immer dunkler Hintergrund (angenehmer für die Augen bei wenig Licht)</li>
             </ul>
 
-            <h3>{{ fas_s7_lang_h3 }}</h3>
-            <p>{{ fas_s7_lang_p }}</p>
-            <div class="tip-box">{{ fas_s7_lang_tip }}</div>
+            <h3>Sprache</h3>
+            <p>Wählen Sie die Sprache der App-Oberfläche. Verfügbar: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Tipp: Stellen Sie die Sprache so ein, dass sie der Sprache des Seniors entspricht, auch wenn Sie die App in einer anderen Sprache einrichten.</div>
         </section>
 
         <!-- Step 8 -->
         <section class="guide-section" id="step-8">
-            <h2>{{ fas_s8_h2 }}</h2>
-            <p>{{ fas_s8_p1 }}</p>
+            <h2>Schritt 8: Den Magic Link erstellen und teilen</h2>
+            <p>Sobald alle Abschnitte ausgefüllt sind:</p>
             <ol>
-                <li>{{ fas_s8_li1 }}</li>
-                <li>{{ fas_s8_li2 }}</li>
+                <li>Scrollen Sie zum unteren Rand des Bildschirms.</li>
+                <li>Tippen Sie auf die Schaltfläche <strong>„Magic Link erstellen und teilen“</strong> (großer blauer Knopf).</li>
             </ol>
 
-            <h3>{{ fas_s8_next_h3 }}</h3>
-            <p>{{ fas_s8_test_p }}</p>
+            <h3>Was als Nächstes passiert:</h3>
+            <p><strong>Testphase</strong> (dauert einige Sekunden):</p>
             <ul>
-                <li>{{ fas_s8_test_li1 }}</li>
-                <li>{{ fas_s8_test_li2 }}</li>
-                <li>{{ fas_s8_test_li3 }}</li>
+                <li>Wenn Twilio aktiviert ist: Die App sendet eine echte Test-SMS an <strong>Ihre Telefonnummer</strong>, um zu prüfen, ob es funktioniert. Sie sollten diese SMS innerhalb von Sekunden erhalten.</li>
+                <li>Wenn E-Mail aktiviert ist: Die App sendet eine Test-E-Mail an die eingegebene E-Mail-Adresse. Überprüfen Sie Ihren Posteingang.</li>
+                <li>Wenn Tests fehlschlagen, wird eine Fehlermeldung angezeigt. Überprüfen Sie Ihre Anmeldedaten und versuchen Sie es erneut.</li>
             </ul>
-            <p>{{ fas_s8_share_p }}</p>
+            <p><strong>Teilungsphase:</strong></p>
             <ul>
-                <li>{{ fas_s8_share_li1 }}</li>
-                <li>{{ fas_s8_share_li2 }}</li>
+                <li>Das System-Freigabefenster öffnet sich automatisch.</li>
+                <li>Senden Sie den Magic Link an den Senior per <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>E-Mail</strong>, <strong>SMS</strong> oder einer anderen Messaging-App.</li>
             </ul>
-            <div class="warn-box">{{ fas_s8_warn }}</div>
+            <div class="warn-box">Der Link kann sicher geteilt werden — behandeln Sie ihn aber wie ein Passwort. Er enthält die Konfiguration des Seniors einschließlich Kontakten und (falls konfiguriert) Ihrer Twilio-/E-Mail-Zugangsdaten. Teilen Sie ihn nur mit dem Senior.</div>
         </section>
 
         <!-- Step 9 -->
         <section class="guide-section" id="step-9">
-            <h2>{{ fas_s9_h2 }}</h2>
-            <p>{{ fas_s9_p1 }}</p>
+            <h2>Schritt 9: Der Senior öffnet den Magic Link</h2>
+            <p><strong>Auf dem Telefon des Seniors (mit installiertem TapAlert):</strong></p>
             <ol>
-                <li>{{ fas_s9_li1 }}</li>
-                <li>{{ fas_s9_li2 }}</li>
-                <li>{{ fas_s9_li3 }}</li>
-                <li>{{ fas_s9_li4 }}</li>
-                <li>{{ fas_s9_li5 }}</li>
-                <li>{{ fas_s9_li6 }}</li>
+                <li>Der Senior erhält die Nachricht, die Sie gesendet haben.</li>
+                <li>Er tippt auf den Link.</li>
+                <li>TapAlert öffnet sich automatisch und zeigt einen Bestätigungsbildschirm: <em>„TapAlert für [Name] konfigurieren?“</em> mit einer Übersicht, was eingerichtet wird.</li>
+                <li>Der Senior tippt auf <strong>„Ja, einrichten“</strong> (oder die entsprechende Schaltfläche).</li>
+                <li>Die App übernimmt sofort die gesamte Konfiguration.</li>
+                <li>Eine Erfolgsmeldung erscheint und die App öffnet den Hauptbildschirm — einsatzbereit.</li>
             </ol>
-            <p><strong>{{ fas_s9_p2 }}</strong></p>
+            <p><strong>Das ist alles. Der Senior muss keine Einstellungen eingeben, keine Zugangsdaten eintippen oder Entscheidungen treffen.</strong></p>
 
-            <h3>{{ fas_s9_notinst_h3 }}</h3>
+            <h3>Wenn TapAlert noch nicht auf dem Telefon des Seniors installiert ist</h3>
             <ol>
-                <li>{{ fas_s9_notinst_li1 }}</li>
-                <li>{{ fas_s9_notinst_li2 }}</li>
-                <li>{{ fas_s9_notinst_li3 }}</li>
+                <li>Installieren Sie zuerst TapAlert aus dem App Store (iOS) oder Google Play (Android).</li>
+                <li>Gehen Sie den Berechtigungsbildschirm durch (Standort, Mikrofon, Kontakte, Benachrichtigungen).</li>
+                <li>Tippen Sie dann auf den Magic Link — er wird während des Einrichtungsprozesses angewendet.</li>
             </ol>
         </section>
 
         <!-- Step 10 -->
         <section class="guide-section" id="step-10">
-            <h2>{{ fas_s10_h2 }}</h2>
-            <p>{{ fas_s10_p1 }}</p>
+            <h2>Schritt 10: Alles überprüfen</h2>
+            <p>Nachdem der Magic Link angewendet wurde, führen Sie einen schnellen Test durch:</p>
             <ol>
-                <li>{{ fas_s10_li1 }}</li>
-                <li>{{ fas_s10_li2 }}</li>
-                <li>{{ fas_s10_li3 }}</li>
-                <li>{{ fas_s10_li4 }}</li>
-                <li>{{ fas_s10_li5 }}</li>
-                <li>{{ fas_s10_li6 }}</li>
+                <li>Öffnen Sie TapAlert auf dem Telefon des Seniors.</li>
+                <li>Sie sollten den Namen des Seniors auf dem Startbildschirm sehen.</li>
+                <li>Tippen Sie auf eine der Alarmschaltflächen.</li>
+                <li>Warten Sie den Countdown ab (oder senden Sie sofort, wenn der Countdown 0 ist).</li>
+                <li>Bestätigen Sie, dass alle konfigurierten Kontakte die SMS erhalten (und E-Mail, falls konfiguriert).</li>
+                <li>Überprüfen Sie, ob der Nachrichtentext und der Standortlink korrekt sind.</li>
             </ol>
-            <div class="tip-box">{{ fas_s10_tip }}</div>
+            <div class="tip-box">Wenn etwas nicht stimmt, können Sie den Magic Link mit Korrekturen neu erstellen und erneut senden — das Anwenden eines neuen Links überschreibt die vorherige Konfiguration.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
-            <h2>{{ fas_after_h2 }}</h2>
-            <p>{{ fas_after_p1 }}</p>
+            <h2>Nach der Einrichtung: Was der Senior sieht</h2>
+            <p>Die App des Seniors öffnet sich direkt zum <strong>Panik-Modus</strong>-Bildschirm — ein einfacher Vollbild-Notfallknopf. Die Oberfläche ist so gestaltet, dass sie ohne Lesen bedient werden kann:</p>
             <ul>
-                <li>{{ fas_after_li1 }}</li>
-                <li>{{ fas_after_li2 }}</li>
-                <li>{{ fas_after_li3 }}</li>
+                <li><strong>Großer roter SOS-Knopf</strong> in der Mitte — tippen, um einen Notfallalarm zu senden</li>
+                <li><strong>Großer grüner OK-Knopf</strong> unten — tippen, um eine „Alles okay“-Nachricht zu senden</li>
+                <li><strong>Nach links wischen</strong>, um vorkonfigurierte Nachrichtenschaltflächen zu sehen (wenn Nachrichten eingerichtet wurden)</li>
             </ul>
-            <p>{{ fas_after_p2 }}</p>
+            <p>Der Senior muss nie in die Einstellungen gehen oder verstehen, wie irgendetwas funktioniert.</p>
         </section>
 
         <!-- Multiple Seniors -->
         <section class="guide-section" id="multiple-seniors">
-            <h2>{{ fas_multi_h2 }}</h2>
-            <p>{{ fas_multi_p1 }}</p>
+            <h2>Mehrere Senioren einrichten</h2>
+            <p>Sie können TapAlert für mehrere Senioren einrichten, ohne jedes Mal von vorne anzufangen:</p>
             <ol>
-                <li>{{ fas_multi_li1 }}</li>
-                <li>{{ fas_multi_li2 }}</li>
-                <li>{{ fas_multi_li3 }}</li>
-                <li>{{ fas_multi_li4 }}</li>
+                <li>Nachdem Sie den ersten Magic Link erstellt haben, tippen Sie auf <strong>„Weiteren Senior einrichten“</strong> im Abschlussdialog.</li>
+                <li>Das Formular löscht den Namen und die Kontakte des Seniors, behält aber <strong>Ihre Twilio-Zugangsdaten, E-Mail-Einstellungen und App-Einstellungen</strong>.</li>
+                <li>Ändern Sie nur, was sich unterscheidet (Name, Kontakte, Nachrichten) für den nächsten Senior.</li>
+                <li>Erstellen und teilen Sie einen neuen Magic Link.</li>
             </ol>
         </section>
 
         <!-- Troubleshooting -->
         <section class="guide-section" id="troubleshooting">
-            <h2>{{ fas_ts_h2 }}</h2>
+            <h2>Fehlerbehebung</h2>
 
-            <h3>{{ fas_ts1_h3 }}</h3>
+            <h3>Fehler „Validierung fehlgeschlagen“ beim Erstellen des Links</h3>
             <ul>
-                <li>{{ fas_ts1_li1 }}</li>
-                <li>{{ fas_ts1_li2 }}</li>
-                <li>{{ fas_ts1_li3 }}</li>
+                <li>Überprüfen Sie, ob alle Pflichtfelder ausgefüllt sind (mit einer roten Fehlermeldung markiert).</li>
+                <li>Wenn Twilio aktiviert ist, stellen Sie sicher, dass Account SID, Auth Token und Telefonnummer korrekt sind.</li>
+                <li>Wenn E-Mail aktiviert ist, überprüfen Sie das App-Passwort — normale Kontokennwörter funktionieren nicht.</li>
             </ul>
 
-            <h3>{{ fas_ts2_h3 }}</h3>
+            <h3>Der Senior hat die Test-SMS nicht erhalten</h3>
             <ul>
-                <li>{{ fas_ts2_li1 }}</li>
-                <li>{{ fas_ts2_li2 }}</li>
-                <li>{{ fas_ts2_li3 }}</li>
+                <li>Überprüfen Sie, ob die Twilio-Telefonnummer aktiv ist und kein Testnummer ist, die an nicht verifizierte Nummern sendet.</li>
+                <li>Im kostenlosen Test von Twilio können Sie nur an Telefonnummern senden, die Sie in der Twilio-Konsole verifiziert haben. Fügen Sie die Kontakte des Seniors als verifizierte Nummern hinzu oder aktualisieren Sie auf ein kostenpflichtiges Konto.</li>
+                <li>Überprüfen Sie, ob das Telefonnummernformat korrekt ist (Ländervorwahl enthalten).</li>
             </ul>
 
-            <h3>{{ fas_ts3_h3 }}</h3>
+            <h3>Der Magic Link öffnet TapAlert nicht</h3>
             <ul>
-                <li>{{ fas_ts3_li1 }}</li>
-                <li>{{ fas_ts3_li2 }}</li>
-                <li>{{ fas_ts3_li3 }}</li>
+                <li>Stellen Sie sicher, dass TapAlert auf dem Telefon des Seniors installiert ist.</li>
+                <li>Bei einigen Android-Telefonen halten Sie den Link gedrückt und wählen „Mit TapAlert öffnen“ statt eines Browsers.</li>
+                <li>Wenn stattdessen ein Browser öffnet, kopieren Sie die vollständige URL und fügen Sie sie erneut in den Browser ein — beim zweiten Versuch bietet das System normalerweise TapAlert als Option an.</li>
             </ul>
 
-            <h3>{{ fas_ts4_h3 }}</h3>
+            <h3>Der Senior tippt versehentlich auf den falschen Knopf</h3>
             <ul>
-                <li>{{ fas_ts4_li1 }}</li>
-                <li>{{ fas_ts4_li2 }}</li>
-                <li>{{ fas_ts4_li3 }}</li>
+                <li>Erhöhen Sie den <strong>Alarm-Countdown</strong> auf 10–15 Sekunden — das gibt Zeit zum Abbrechen vor dem Senden.</li>
+                <li>Oder wechseln Sie zum <strong>Haltemodus</strong> (Aktivierungsmodus = Halten), damit der Knopf ein bewusstes Gedrükthalten erfordert.</li>
+                <li>Sie können diese Einstellungen aktualisieren, indem Sie einen neuen Magic Link mit korrigierten Einstellungen erstellen und ihn an das Telefon des Seniors senden.</li>
             </ul>
 
-            <h3>{{ fas_ts5_h3 }}</h3>
+            <h3>Twilio-SMS funktioniert, aber E-Mail nicht</h3>
             <ul>
-                <li>{{ fas_ts5_li1 }}</li>
-                <li>{{ fas_ts5_li2 }}</li>
+                <li>Häufigste Ursache: Empfänger haben keine E-Mail-Adressen gespeichert. Überprüfen Sie die Empfänger im Empfänger-Bildschirm der App.</li>
+                <li>Stellen Sie sicher, dass das App-Passwort korrekt ist und nicht abgelaufen ist. App-Passwort von Gmail und Outlook können widerrufen werden — generieren Sie bei Bedarf ein neues.</li>
             </ul>
         </section>
 
         <!-- Security -->
         <section class="guide-section" id="security">
-            <h2>{{ fas_sec_h2 }}</h2>
+            <h2>Sicherheits- und Datenschutzhinweise</h2>
             <ul>
-                <li>{{ fas_sec_li1 }}</li>
-                <li>{{ fas_sec_li2 }}</li>
-                <li>{{ fas_sec_li3 }}</li>
-                <li>{{ fas_sec_li4 }}</li>
+                <li><strong>Die Magic-Link-Nutzlast</strong> ist kodiert, aber nicht verschlüsselt. Jeder, der sie abfängt, kann die Konfiguration lesen, einschließlich Twilio-Zugangsdaten. Teilen Sie ihn nur direkt mit dem Senior.</li>
+                <li><strong>TapAlert hat keine Server</strong> — der Magic Link wird vollständig auf dem Gerät des Seniors verarbeitet. Es werden keine Daten an den TapAlert-Dienst gesendet.</li>
+                <li><strong>Twilio-Zugangsdaten im Link</strong> werden nach der Anwendung lokal auf dem Gerät des Seniors in sicherem (verschlüsseltem) Speicher gespeichert.</li>
+                <li>Wenn Sie glauben, dass ein Magic Link abgefangen wurde, <strong>rotieren Sie Ihr Twilio Auth Token</strong> in der Twilio-Konsole sofort und erstellen Sie einen neuen Magic Link.</li>
             </ul>
         </section>
 
         <!-- Quick Reference Card -->
         <section class="guide-section" id="reference-card">
-            <h2>{{ fas_ref_h2 }}</h2>
+            <h2>Schnellreferenzkarte (Zum Ausdrucken für den Senior)</h2>
 <pre>┌─────────────────────────────────────────────┐
 │            YOUR TAPALERT BUTTONS            │
 │                                             │
@@ -485,7 +485,7 @@
 │  to cancel before it sends.                 │
 │  Just press the X button to cancel.         │
 └─────────────────────────────────────────────┘</pre>
-            <p>{{ fas_ref_note }}</p>
+            <p>Tragen Sie die von Ihnen konfigurierte Countdown-Zeit ein (z. B. „10 Sekunden“).</p>
         </section>
 
     </main>
