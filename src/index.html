@@ -921,6 +921,173 @@
             }
         }
 
+        /* Carousel Section */
+        .car-section {
+            padding: 60px 0;
+            background: #0f172a;
+        }
+
+        .car-heading {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #e2e8f0;
+            margin-bottom: 24px;
+            padding: 0 20px;
+            letter-spacing: -0.02em;
+        }
+
+        /* overflow-x clips side slides; overflow-y visible keeps box-shadows */
+        .car-outer {
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+
+        .car-track {
+            display: flex;
+            align-items: center;   /* vertically centres scaled-down neighbours */
+            gap: 24px;
+            padding: 48px 0;       /* vertical room so scaled-up centre isn't clipped */
+            will-change: transform;
+            transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .car-slide {
+            flex-shrink: 0;
+            width: 52%;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.45;
+            transform: scale(0.84);
+            transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .car-slide.center {
+            opacity: 1;
+            transform: scale(1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(255, 255, 255, 0.35);
+            cursor: zoom-in;
+        }
+
+        /* Carousel embedded in hero */
+        .hero .car-outer {
+            margin-top: 36px;
+        }
+
+        .hero .car-progress-wrap {
+            margin-top: 12px;
+        }
+
+        .car-slide img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .car-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .car-btn:hover {
+            background: rgba(255, 255, 255, 0.32);
+        }
+
+        .car-btn--prev { left: 16px; }
+        .car-btn--next { right: 16px; }
+
+        /* Progress bar */
+        .car-progress-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .car-progress-track {
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .car-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #667eea, #818cf8);
+            border-radius: 3px;
+        }
+
+        .car-progress-bar.running {
+            transition: width 10s linear;
+            width: 100%;
+        }
+
+        /* Lightbox */
+        .car-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        .car-lightbox.active {
+            display: flex;
+        }
+
+        .car-lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 16px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+            animation: carPop 0.18s ease-out;
+        }
+
+        @keyframes carPop {
+            from { transform: scale(0.93); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .car-slide { width: 68%; }
+        }
+
+        @media (max-width: 600px) {
+            .car-section { padding: 44px 0; }
+            .car-heading { font-size: 1.5rem; margin-bottom: 16px; }
+            .car-slide { width: 84%; }
+            .car-track { gap: 16px; padding: 36px 0; }
+            .car-btn { width: 38px; height: 38px; font-size: 1.3rem; }
+            .car-btn--prev { left: 8px; }
+            .car-btn--next { right: 8px; }
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -1115,15 +1282,137 @@
                 }}<br> {{ hero_designed_for_2 }}<br></p>
             <p class="tagline">{{ hero_for_family }}</p>
             <p class="tagline">{{ hero_for_peace }}</p>
-            <div class="summary-box">
-                <p class="subtitle">{{ hero_protect }}</p>
-                <p class="subtitle">{{ android_adv2 }}{{ hero_no_subs }}</p>
-                <p class="subtitle">{{ hero_personal_safety }}</p>
-                <p class="subtitle"><strong>{{ hero_world_quote }}</strong></p>
-                <p class="subtitle">
-                    {{ hero_sms_text }} {{ hero_sub_text }}
-                </p>
+            <div class="car-outer" id="carOuter">
+                <div class="car-track" id="carTrack">
+                    <div class="car-slide"><img src="media/slide_01.png" alt="" loading="eager"></div>
+                    <div class="car-slide"><img src="media/slide_02.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_03.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_04.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_05.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_06.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_07.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_08.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_09.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_10.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_11.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="media/slide_12.png" alt="" loading="lazy"></div>
+                </div>
+                <button class="car-btn car-btn--prev" id="carPrev" aria-label="Previous">&#8249;</button>
+                <button class="car-btn car-btn--next" id="carNext" aria-label="Next">&#8250;</button>
             </div>
+            <div class="car-progress-wrap">
+                <div class="car-progress-track">
+                    <div class="car-progress-bar" id="carProgress"></div>
+                </div>
+            </div>
+
+            <!-- Lightbox: click centre slide to enlarge -->
+            <div class="car-lightbox" id="carLightbox">
+                <img src="" id="carLightboxImg" alt="">
+            </div>
+
+            <script>
+                (function () {
+                    var outer      = document.getElementById('carOuter');
+                    var track      = document.getElementById('carTrack');
+                    var btnPrev    = document.getElementById('carPrev');
+                    var btnNext    = document.getElementById('carNext');
+                    var progress   = document.getElementById('carProgress');
+                    var overlay    = document.getElementById('carLightbox');
+                    var overlayImg = document.getElementById('carLightboxImg');
+
+                    var slides  = Array.from(track.querySelectorAll('.car-slide'));
+                    var n       = slides.length;
+                    var current = 0;
+                    var autoTimer;
+
+                    slides.forEach(function (slide, i) {
+                        slide.addEventListener('click', function () {
+                            if (i === current) {
+                                overlayImg.src = slide.querySelector('img').src;
+                                overlay.classList.add('active');
+                            } else {
+                                current = i;
+                                update();
+                                startAuto();
+                            }
+                        });
+                    });
+                    overlay.addEventListener('click', function () {
+                        overlay.classList.remove('active');
+                    });
+
+                    function getGap() {
+                        return parseFloat(getComputedStyle(track).gap) || 24;
+                    }
+
+                    function update() {
+                        slides.forEach(function (s, i) {
+                            s.classList.toggle('center', i === current);
+                        });
+                        var slideW = slides[0].offsetWidth;
+                        var outerW = outer.offsetWidth;
+                        var offset = (outerW / 2) - (slideW / 2) - (current * (slideW + getGap()));
+                        track.style.transform = 'translateX(' + offset + 'px)';
+                    }
+
+                    function goNext() { current = (current + 1) % n; update(); }
+                    function goPrev() { current = (current - 1 + n) % n; update(); }
+
+                    function resetProgress() {
+                        progress.classList.remove('running');
+                        void progress.offsetWidth;
+                        progress.classList.add('running');
+                    }
+
+                    function startAuto() {
+                        clearInterval(autoTimer);
+                        resetProgress();
+                        autoTimer = setInterval(function () { goNext(); resetProgress(); }, 10000);
+                    }
+
+                    function pauseAuto() {
+                        clearInterval(autoTimer);
+                        var w = getComputedStyle(progress).width;
+                        progress.classList.remove('running');
+                        progress.style.transition = 'none';
+                        progress.style.width = w;
+                    }
+
+                    function resumeAuto() {
+                        progress.style.width = '';
+                        progress.style.transition = '';
+                        startAuto();
+                    }
+
+                    btnNext.addEventListener('click', function () { goNext(); startAuto(); });
+                    btnPrev.addEventListener('click', function () { goPrev(); startAuto(); });
+
+                    outer.addEventListener('mouseenter', pauseAuto);
+                    outer.addEventListener('mouseleave', resumeAuto);
+
+                    var txStart = 0, tyStart = 0;
+                    outer.addEventListener('touchstart', function (e) {
+                        txStart = e.touches[0].clientX;
+                        tyStart = e.touches[0].clientY;
+                        pauseAuto();
+                    }, { passive: true });
+
+                    outer.addEventListener('touchend', function (e) {
+                        var dx = txStart - e.changedTouches[0].clientX;
+                        var dy = tyStart - e.changedTouches[0].clientY;
+                        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+                            dx > 0 ? goNext() : goPrev();
+                        }
+                        resumeAuto();
+                    }, { passive: true });
+
+                    window.addEventListener('resize', update);
+
+                    update();
+                    startAuto();
+                })();
+            </script>
             <div class="cta-buttons">
                 <a href="#" class="btn btn-primary">{{ btn_play_soon }}</a>
                 <a href="#features" class="btn btn-secondary">{{ btn_learn_more }}</a>

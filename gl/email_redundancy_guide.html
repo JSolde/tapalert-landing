@@ -375,136 +375,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Volver á casa</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">GL</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
-                        <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
-                        <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
-                        <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/email_redundancy_guide.html" hreflang="gl" class="active">GL</a>
-                        <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
-                        <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
-                        <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">GL</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
+            <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
+            <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
+            <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
+            <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/email_redundancy_guide.html" hreflang="gl" class="active">GL</a>
+            <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
+            <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
+            <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -516,63 +424,39 @@
 
         <section class="guide-section">
             <h2>💡 Que é a redundancia de correo electrónico Característica?</h2>
-            <p>Redundancia de correo electrónico en <span class="notranslate" translate="no">TapAlert</span> permite que
-                a aplicación envíe alertas de emerxencia e informe de mensaxes aos teus contactos designados por correo
-                electrónico, ademais de ou en lugar de SMS.</p>
+            <p>Redundancia de correo electrónico en <span class="notranslate" translate="no">TapAlert</span> permite que a aplicación envíe alertas de emerxencia e informe de mensaxes aos teus contactos designados por correo electrónico, ademais de ou en lugar de SMS.</p>
 
             <h2>🎯 Cal é a súa finalidade?</h2>
-            <p>O obxectivo principal da redundancia do correo electrónico é garantir que a túa mensaxe se entregue aínda
-                que as canles de SMS principais fallan ou non estean dispoñibles.</p>
+            <p>O obxectivo principal da redundancia do correo electrónico é garantir que a túa mensaxe se entregue aínda que as canles de SMS principais fallan ou non estean dispoñibles.</p>
             <ul>
-                <li>✅ <strong>Ruta de entrega secundaria:</strong> se estás conectado a unha wifi pero non tes servizo
-                    móbil (e as chamadas por wifi están desactivadas ou non son compatibles), o correo electrónico
-                    actúacomo aperfecto <span class="notranslate" translate="no">fallback</span>.</li>
-                <li>✅ <strong>Viaxes internacionais:</strong> cando viaxas ao estranxeiro onde as SMS poden ser moi
-                    caras ou pouco fiables, podes confiar exclusivamente na wifi e enviar alertas por correo electrónico
-                    de balde.</li>
-                <li>✅ <strong>Tranquilidade adicional:</strong> o envío de alertas por SMS e correo electrónico ao mesmo
-                    tempo garante que se un contacto de emerxencia perde un texto, aínda pode ver a notificación por
-                    correo electrónico.</li>
+                <li>✅ <strong>Ruta de entrega secundaria:</strong> se estás conectado a unha wifi pero non tes servizo móbil (e as chamadas por wifi están desactivadas ou non son compatibles), o correo electrónico actúacomo aperfecto <span class="notranslate" translate="no">fallback</span>.</li>
+                <li>✅ <strong>Viaxes internacionais:</strong> cando viaxas ao estranxeiro onde as SMS poden ser moi caras ou pouco fiables, podes confiar exclusivamente na wifi e enviar alertas por correo electrónico de balde.</li>
+                <li>✅ <strong>Tranquilidade adicional:</strong> o envío de alertas por SMS e correo electrónico ao mesmo tempo garante que se un contacto de emerxencia perde un texto, aínda pode ver a notificación por correo electrónico.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ Como configurar a redundancia de correo electrónico</h2>
             <ol>
-                <li>Abre o <span class="notranslate" translate="no">TapAlert</span> e vai a
-                    <strong>Configuración</strong>.
-                </li>
-                <li>Desprázate ata a sección <strong>Alertas por correo electrónico</strong> e activa <strong>Activar
-                        alertas por correo electrónico</strong>.</li>
-                <li>Seleccione o teu <strong>proveedor de correo electrónico</strong> desde osbotóns preestablecidos
-                    (Gmail, Outlook, Yahoo, iCloud) para encher automaticamente o anfitrión e o porto SMTP.</li>
+                <li>Abre o <span class="notranslate" translate="no">TapAlert</span> e vai a <strong>Configuración</strong>.</li>
+                <li>Desprázate ata a sección <strong>Alertas por correo electrónico</strong> e activa <strong>Activar alertas por correo electrónico</strong>.</li>
+                <li>Seleccione o teu <strong>proveedor de correo electrónico</strong> desde osbotóns preestablecidos (Gmail, Outlook, Yahoo, iCloud) para encher automaticamente o anfitrión e o porto SMTP.</li>
                 <li>Introduce o teu <strong>enderezo de correo electrónico</strong> completo.</li>
-                <li>Introduce o teu <strong>contrasinal da aplicación</strong> (consulta a sección a continuación sobre
-                    que é isto e como obtelo).</li>
-                <li>Toca <strong>"Gardar configuración"</strong> e utiliza o "Correo electrónico de proba"botón para
-                    asegurarte de que está configurado correctamente.</li>
+                <li>Introduce o teu <strong>contrasinal da aplicación</strong> (consulta a sección a continuación sobre que é isto e como obtelo).</li>
+                <li>Toca <strong>"Gardar configuración"</strong> e utiliza o "Correo electrónico de proba"botón para asegurarte de que está configurado correctamente.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>🔑 Que é un contrasinal de aplicación?</h2>
-            <p>Un <strong>contrasinal de aplicación</strong> é un código de acceso xerado aleatoriamente que dá permiso
-                a unha aplicación de terceiros (como <span class="notranslate" translate="no">TapAlert</span>) para
-                acceder ao teu correo electrónico conta para enviar mensaxes no teu nome.</p>
+            <p>Un <strong>contrasinal de aplicación</strong> é un código de acceso xerado aleatoriamente que dá permiso a unha aplicación de terceiros (como <span class="notranslate" translate="no">TapAlert</span>) para acceder ao teu correo electrónico conta para enviar mensaxes no teu nome.</p>
 
             <h3>Por que necesito un en lugar do meu contrasinal real?</h3>
-            <p>Os provedores de correo electrónico modernos bloquean os inicios de sesión básicos de contrasinais para
-                protexer o teu conta dos piratas informáticos. Un contrasinal de aplicación ignora a autenticación de
-                dous factores (2FA) para esa aplicación específica <em>sen</em> dándolle á aplicación o teu contrasinal
-                conta real. Se algunha vez queres revogar o acceso de <span class="notranslate"
-                    translate="no">TapAlert</span>, simplemente eliminas o contrasinal da aplicación da túa
-                configuración de correo electrónico e o teu contrasinal conta principal permanecerá seguro e sen
-                cambios.</p>
+            <p>Os provedores de correo electrónico modernos bloquean os inicios de sesión básicos de contrasinais para protexer o teu conta dos piratas informáticos. Un contrasinal de aplicación ignora a autenticación de dous factores (2FA) para esa aplicación específica <em>sen</em> dándolle á aplicación o teu contrasinal conta real. Se algunha vez queres revogar o acceso de <span class="notranslate" translate="no">TapAlert</span>, simplemente eliminas o contrasinal da aplicación da túa configuración de correo electrónico e o teu contrasinal conta principal permanecerá seguro e sen cambios.</p>
 
             <div class="alert-box">
                 <h4>⚠️ Nota importante</h4>
-                <p>Para xerar un contrasinal de aplicación, case todos os provedores de correo electrónico requiren que
-                    teñas activada a <strong>autenticación de dous factores (2FA)</strong> no teu conta primeiro.</p>
+                <p>Para xerar un contrasinal de aplicación, case todos os provedores de correo electrónico requiren que teñas activada a <strong>autenticación de dous factores (2FA)</strong> no teu conta primeiro.</p>
             </div>
         </section>
 
@@ -582,68 +466,46 @@
 
             <h3>1. Gmail (Conta de Google)</h3>
             <ol>
-                <li>Accede á túa <a href="https://myconta.google.com/" target="_blank">páxina de xestión da conta de
-                        Google</a> e inicia sesión.</li>
+                <li>Accede á túa <a href="https://myconta.google.com/" target="_blank">páxina de xestión da conta de Google</a> e inicia sesión.</li>
                 <li>No panel de navegación esquerdo, fai clic en <strong>Seguridade</strong>.</li>
-                <li>Na sección "Como iniciar sesión en Google", asegúrate de que a <strong>Verificación en dous
-                        pasos</strong> estea <strong>Activada</strong>. (Se está desactivado, primeiro debe acendes).
-                </li>
-                <li>Fai clic en <strong>Verificación en dous pasos</strong>. Desprázate ata a parte inferior da páxina e
-                    fai clic en <strong>Contrasinales das aplicacións</strong>.</li>
-                <li>No menú despregable "Seleccione app", escolle <em>Outro (nome personalizado)</em> e escribe
-                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
-                </li>
+                <li>Na sección "Como iniciar sesión en Google", asegúrate de que a <strong>Verificación en dous pasos</strong> estea <strong>Activada</strong>. (Se está desactivado, primeiro debe acendes).</li>
+                <li>Fai clic en <strong>Verificación en dous pasos</strong>. Desprázate ata a parte inferior da páxina e fai clic en <strong>Contrasinales das aplicacións</strong>.</li>
+                <li>No menú despregable "Seleccione app", escolle <em>Outro (nome personalizado)</em> e escribe <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Fai clic en <strong>Xerar</strong>.</li>
-                <li>Aparecerá unha caixa amarela cun código de 16 caracteres. Copia este código e pégao no campo
-                    "Contrasinal da aplicación" da aplicación <span class="notranslate" translate="no">TapAlert</span>
-                    (non é necesario incluír os espazos).</li>
+                <li>Aparecerá unha caixa amarela cun código de 16 caracteres. Copia este código e pégao no campo "Contrasinal da aplicación" da aplicación <span class="notranslate" translate="no">TapAlert</span> (non é necesario incluír os espazos).</li>
                 <li>Fai clic en <strong>Feito</strong>.</li>
             </ol>
 
             <h3>2. Hotmail/Outlook (Conta de Microsoft)</h3>
             <ol>
-                <li>Vaia á <a href="https://conta.microsoft.com/security" target="_blank">páxina de Seguridade da conta
-                        de Microsoft</a> e inicie sesión.</li>
+                <li>Vaia á <a href="https://conta.microsoft.com/security" target="_blank">páxina de Seguridade da conta de Microsoft</a> e inicie sesión.</li>
                 <li>Fai clic en <strong>Opcións de seguranza avanzadas</strong>.</li>
-                <li>Na sección "Seguridade adicional", asegúrate de que a <strong>verificación en dous pasos</strong>
-                    estea <strong>activada</strong>.</li>
+                <li>Na sección "Seguridade adicional", asegúrate de que a <strong>verificación en dous pasos</strong> estea <strong>activada</strong>.</li>
                 <li>Desprázate ata a sección <strong>Contrasinales das aplicacións</strong>.</li>
                 <li>Fai clic en <strong>Crear un novo contrasinal de aplicación</strong>.</li>
                 <li>Aparecerá unha nova pantalla que mostra o seu contrasinal de aplicación único.</li>
-                <li>Copia este contrasinal e pégao en <span class="notranslate" translate="no">TapAlert</span> e fai
-                    clic en <strong>Feito</strong>.</li>
+                <li>Copia este contrasinal e pégao en <span class="notranslate" translate="no">TapAlert</span> e fai clic en <strong>Feito</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Vai á túa <a href="https://login.yahoo.com/conta/security" target="_blank">páxina de seguranza da
-                        conta de Yahoo</a> e inicia sesión.</li>
-                <li>Desprázate ata a parte inferior da páxina e fai clic en <strong>Xerar e xestionar contrasinais das
-                        aplicacións</strong>.</li>
-                <li>Aparecerá unha xanela modal. Introduce <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong> como nome da aplicación.</li>
+                <li>Vai á túa <a href="https://login.yahoo.com/conta/security" target="_blank">páxina de seguranza da conta de Yahoo</a> e inicia sesión.</li>
+                <li>Desprázate ata a parte inferior da páxina e fai clic en <strong>Xerar e xestionar contrasinais das aplicacións</strong>.</li>
+                <li>Aparecerá unha xanela modal. Introduce <strong><span class="notranslate" translate="no">TapAlert</span></strong> como nome da aplicación.</li>
                 <li>Fai clic en <strong>Xerar contrasinal</strong>.</li>
-                <li>Copia o contrasinal de 16 caracteres que aparece na pantalla e pégao en <span class="notranslate"
-                        translate="no">TapAlert</span> (omitindo os espazos).</li>
+                <li>Copia o contrasinal de 16 caracteres que aparece na pantalla e pégao en <span class="notranslate" translate="no">TapAlert</span> (omitindo os espazos).</li>
                 <li>Fai clic en <strong>Feito</strong>.</li>
             </ol>
 
             <h3>4. iCloud (ID de Apple)</h3>
             <ol>
-                <li>Vai a <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> e inicia sesión co
-                    teu ID de Apple.</li>
-                <li>Na sección <strong>Iniciar sesión e seguranza</strong>, faga clic en <strong>Contrasinales
-                        específicos da aplicación</strong>.</li>
-                <li>Fai clic en <strong>Xerar un contrasinal específico da aplicación</strong> ou en <strong>Engadir
-                        (+)</strong>botón.</li>
-                <li>Introduce <strong><span class="notranslate" translate="no">TapAlert</span></strong> cando se lle
-                    solicite o nome da aplicación e fai clic en Crear.</li>
+                <li>Vai a <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> e inicia sesión co teu ID de Apple.</li>
+                <li>Na sección <strong>Iniciar sesión e seguranza</strong>, faga clic en <strong>Contrasinales específicos da aplicación</strong>.</li>
+                <li>Fai clic en <strong>Xerar un contrasinal específico da aplicación</strong> ou en <strong>Engadir (+)</strong>botón.</li>
+                <li>Introduce <strong><span class="notranslate" translate="no">TapAlert</span></strong> cando se lle solicite o nome da aplicación e fai clic en Crear.</li>
                 <li>É posible que se che pida que introduza de novo o contrasinal do ID de Apple para confirmalo.</li>
-                <li>Xerarase e mostrarase un contrasinal único específico da aplicación (normalmente no formato
-                    <code>xxxx-xxxx-xxxx-xxxx</code>).
-                </li>
-                <li>Copia este contrasinal completo e pégao en <span class="notranslate" translate="no">TapAlert</span>
-                    e fai clic en <strong>Feito</strong>.</li>
+                <li>Xerarase e mostrarase un contrasinal único específico da aplicación (normalmente no formato <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
+                <li>Copia este contrasinal completo e pégao en <span class="notranslate" translate="no">TapAlert</span> e fai clic en <strong>Feito</strong>.</li>
             </ol>
         </section>
 
@@ -655,8 +517,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertas de emerxencia sinxelas para todos. Sen subscricións, sen seguimento, só con seguridade.
-                    </p>
+                    <p>Alertas de emerxencia sinxelas para todos. Sen subscricións, sen seguimento, só con seguridade.</p>
                 </div>
 
                 <div class="footer-section">
@@ -681,8 +542,7 @@
                     <h3>Apoio</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías
-                                paso a paso</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías paso a paso</a></li>
                         <li><a href="accessibility_guide.html">Guía de accesibilidade</a></li>
                         <li><a href="troubleshooting.html">Resolución de problemas</a></li>
                         <li><a href="contact.html">Contacte con Soporte</a></li>
@@ -691,8 +551,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os dereitos reservados. |
-                    Feito con ❤️ para a túa seguridade</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os dereitos reservados. | Feito con ❤️ para a túa seguridade</p>
             </div>
         </div>
     </footer>

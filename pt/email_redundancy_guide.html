@@ -375,136 +375,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">De volta para casa</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">PT</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
-                        <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
-                        <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
-                        <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
-                        <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
-                        <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
-                        <a href="../pt/email_redundancy_guide.html" hreflang="pt" class="active">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">PT</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
+            <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
+            <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
+            <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
+            <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
+            <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
+            <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
+            <a href="../pt/email_redundancy_guide.html" hreflang="pt" class="active">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -516,61 +424,39 @@
 
         <section class="guide-section">
             <h2>💡 O que é redundância de e-mail Recurso?</h2>
-            <p>Redundância de e-mail em <span class="notranslate" translate="no">TapAlert</span> permite que o
-                aplicativo envie alertas de emergência e mensagens de relatório para seus contatos designados por
-                e-mail, além ou em vez de SMS.</p>
+            <p>Redundância de e-mail em <span class="notranslate" translate="no">TapAlert</span> permite que o aplicativo envie alertas de emergência e mensagens de relatório para seus contatos designados por e-mail, além ou em vez de SMS.</p>
 
             <h2>🎯Qual é o seu propósito?</h2>
-            <p>O objetivo principal da redundância de e-mail é garantir que sua mensagem seja entregue mesmo se os
-                canais primários de SMS falharem ou estiverem indisponíveis.</p>
+            <p>O objetivo principal da redundância de e-mail é garantir que sua mensagem seja entregue mesmo se os canais primários de SMS falharem ou estiverem indisponíveis.</p>
             <ul>
-                <li>✅ <strong>Caminho de entrega secundário:</strong> se você estiver conectado ao Wi-Fi, mas não tiver
-                    serviço de celular (e as chamadas por Wi-Fi estiverem desativadas ou não forem suportadas), o e-mail
-                    funciona comocomo umum <span class="notranslate" translate="no">substituto</span> perfeito.</li>
-                <li>✅ <strong>Viagens Internacionais:</strong> Ao viajar para o exterior, onde o SMS pode ser
-                    extremamente caro ou não confiável, você pode confiar apenas no Wi-Fi e enviar alertas por e-mail
-                    gratuitamente.</li>
-                <li>✅ <strong>Tranquilidade adicional:</strong> o envio de alertas por SMS e e-mail simultaneamente
-                    garante que, se um contato de emergência perder uma mensagem de texto, ele ainda poderá ver a
-                    notificação por e-mail.</li>
+                <li>✅ <strong>Caminho de entrega secundário:</strong> se você estiver conectado ao Wi-Fi, mas não tiver serviço de celular (e as chamadas por Wi-Fi estiverem desativadas ou não forem suportadas), o e-mail funciona comocomo umum <span class="notranslate" translate="no">substituto</span> perfeito.</li>
+                <li>✅ <strong>Viagens Internacionais:</strong> Ao viajar para o exterior, onde o SMS pode ser extremamente caro ou não confiável, você pode confiar apenas no Wi-Fi e enviar alertas por e-mail gratuitamente.</li>
+                <li>✅ <strong>Tranquilidade adicional:</strong> o envio de alertas por SMS e e-mail simultaneamente garante que, se um contato de emergência perder uma mensagem de texto, ele ainda poderá ver a notificação por e-mail.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ Como configurar a redundância de e-mail</h2>
             <ol>
-                <li>Abra o <span class="notranslate" translate="no">TapAlert</span> e acesse
-                    <strong>Configurações</strong>.
-                </li>
-                <li>Role até a seção <strong>Alertas por e-mail</strong> e ative <strong>Ativar alertas por
-                        e-mail</strong>.</li>
-                <li>Selecione seu <strong>provedor de e-mail</strong> dosbotãos predefinidos (Gmail, Outlook, Yahoo,
-                    iCloud) para preencher automaticamente o host e a porta SMTP.</li>
+                <li>Abra o <span class="notranslate" translate="no">TapAlert</span> e acesse <strong>Configurações</strong>.</li>
+                <li>Role até a seção <strong>Alertas por e-mail</strong> e ative <strong>Ativar alertas por e-mail</strong>.</li>
+                <li>Selecione seu <strong>provedor de e-mail</strong> dosbotãos predefinidos (Gmail, Outlook, Yahoo, iCloud) para preencher automaticamente o host e a porta SMTP.</li>
                 <li>Digite seu <strong>endereço de e-mail</strong> completo.</li>
-                <li>Digite sua <strong>senha do aplicativo</strong> (veja a seção abaixo sobre o que é e como obtê-la).
-                </li>
-                <li>Toque em <strong>"Salvar configurações"</strong> e use o "E-mail de teste"botão para garantir que
-                    esteja configurado corretamente.</li>
+                <li>Digite sua <strong>senha do aplicativo</strong> (veja a seção abaixo sobre o que é e como obtê-la).</li>
+                <li>Toque em <strong>"Salvar configurações"</strong> e use o "E-mail de teste"botão para garantir que esteja configurado corretamente.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>🔑 O que é uma senha de aplicativo?</h2>
-            <p>Uma <strong>senha de aplicativo</strong> é uma senha gerada aleatoriamente que dá permissão a um
-                aplicativo de terceiros (como <span class="notranslate" translate="no">TapAlert</span>) para acessar seu
-                e-mail conta para enviar mensagens em seu nome.</p>
+            <p>Uma <strong>senha de aplicativo</strong> é uma senha gerada aleatoriamente que dá permissão a um aplicativo de terceiros (como <span class="notranslate" translate="no">TapAlert</span>) para acessar seu e-mail conta para enviar mensagens em seu nome.</p>
 
             <h3>Por que preciso de uma em vez da minha senha real?</h3>
-            <p>Os provedores de e-mail modernos bloqueiam logins com senhas básicas para proteger seu conta contra
-                hackers. Uma senha de aplicativo ignora a autenticação de dois fatores (2FA) para esse aplicativo
-                específico <em>sem</em>, fornecendo ao aplicativo sua senha conta real. Se você quiser revogar o acesso
-                do <span class="notranslate" translate="no">TapAlert</span>, basta excluir a senha do aplicativo nas
-                configurações de e-mail e sua senha principal do conta permanecerá segura e inalterada.</p>
+            <p>Os provedores de e-mail modernos bloqueiam logins com senhas básicas para proteger seu conta contra hackers. Uma senha de aplicativo ignora a autenticação de dois fatores (2FA) para esse aplicativo específico <em>sem</em>, fornecendo ao aplicativo sua senha conta real. Se você quiser revogar o acesso do <span class="notranslate" translate="no">TapAlert</span>, basta excluir a senha do aplicativo nas configurações de e-mail e sua senha principal do conta permanecerá segura e inalterada.</p>
 
             <div class="alert-box">
                 <h4>⚠️ Nota importante</h4>
-                <p>Para gerar uma senha de aplicativo, quase todos os provedores de e-mail exigem que você primeiro
-                    tenha a <strong>autenticação de dois fatores (2FA)</strong> ativada em seu conta.</p>
+                <p>Para gerar uma senha de aplicativo, quase todos os provedores de e-mail exigem que você primeiro tenha a <strong>autenticação de dois fatores (2FA)</strong> ativada em seu conta.</p>
             </div>
         </section>
 
@@ -580,70 +466,46 @@
 
             <h3>1. Gmail (Conta Google)</h3>
             <ol>
-                <li>Acesse a <a href="https://myconta.google.com/" target="_blank">página de gerenciamento da Conta do
-                        Google</a> e faça login.</li>
+                <li>Acesse a <a href="https://myconta.google.com/" target="_blank">página de gerenciamento da Conta do Google</a> e faça login.</li>
                 <li>No painel de navegação esquerdo, clique em <strong>Segurança</strong>.</li>
-                <li>Na seção "Como você faz login no Google", certifique-se de que a <strong>verificação em duas
-                        etapas</strong> esteja <strong>ativada</strong>. (Se estiver desligado, deve ligue-o primeiro).
-                </li>
-                <li>Clique em <strong>Verificação em duas etapas</strong>. Role até o final da página e clique em
-                    <strong>Senhas de aplicativos</strong>.
-                </li>
-                <li>No menu suspenso "Selecione app", escolha <em>Outro (nome personalizado)</em> e digite <strong><span
-                            class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Na seção "Como você faz login no Google", certifique-se de que a <strong>verificação em duas etapas</strong> esteja <strong>ativada</strong>. (Se estiver desligado, deve ligue-o primeiro).</li>
+                <li>Clique em <strong>Verificação em duas etapas</strong>. Role até o final da página e clique em <strong>Senhas de aplicativos</strong>.</li>
+                <li>No menu suspenso "Selecione app", escolha <em>Outro (nome personalizado)</em> e digite <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Clique em <strong>Gerar</strong>.</li>
-                <li>Uma caixa amarela aparecerá com um código de 16 caracteres. Copie este código e cole-o no campo "App
-                    Password" do aplicativo <span class="notranslate" translate="no">TapAlert</span> (não é necessário
-                    incluir espaços).</li>
+                <li>Uma caixa amarela aparecerá com um código de 16 caracteres. Copie este código e cole-o no campo "App Password" do aplicativo <span class="notranslate" translate="no">TapAlert</span> (não é necessário incluir espaços).</li>
                 <li>Clique em <strong>Concluído</strong>.</li>
             </ol>
 
             <h3>2. Hotmail/Outlook (conta Microsoft)</h3>
             <ol>
-                <li>Acesse a <a href="https://conta.microsoft.com/security" target="_blank">página Segurança da conta da
-                        Microsoft</a> e faça login.</li>
+                <li>Acesse a <a href="https://conta.microsoft.com/security" target="_blank">página Segurança da conta da Microsoft</a> e faça login.</li>
                 <li>Clique em <strong>Opções de segurança avançadas</strong>.</li>
-                <li>Na seção "Segurança adicional", certifique-se de que a <strong>verificação em duas etapas</strong>
-                    esteja <strong>ativada</strong>.</li>
+                <li>Na seção "Segurança adicional", certifique-se de que a <strong>verificação em duas etapas</strong> esteja <strong>ativada</strong>.</li>
                 <li>Role para baixo até a seção <strong>Senhas de aplicativos</strong>.</li>
                 <li>Clique em <strong>Criar uma nova senha de aplicativo</strong>.</li>
                 <li>Uma nova tela aparecerá exibindo sua senha de aplicativo exclusiva.</li>
-                <li>Copie esta senha e cole-a em <span class="notranslate" translate="no">TapAlert</span> e clique em
-                    <strong>Concluído</strong>.
-                </li>
+                <li>Copie esta senha e cole-a em <span class="notranslate" translate="no">TapAlert</span> e clique em <strong>Concluído</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Acesse a <a href="https://login.yahoo.com/conta/security" target="_blank">página de segurança da
-                        conta do Yahoo</a> e faça login.</li>
-                <li>Role até o final da página e clique em <strong>Gerar e gerenciar senhas de aplicativos</strong>.
-                </li>
-                <li>Uma janela modal aparecerá. Digite <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong> como o nome do aplicativo.</li>
+                <li>Acesse a <a href="https://login.yahoo.com/conta/security" target="_blank">página de segurança da conta do Yahoo</a> e faça login.</li>
+                <li>Role até o final da página e clique em <strong>Gerar e gerenciar senhas de aplicativos</strong>.</li>
+                <li>Uma janela modal aparecerá. Digite <strong><span class="notranslate" translate="no">TapAlert</span></strong> como o nome do aplicativo.</li>
                 <li>Clique em <strong>Gerar senha</strong>.</li>
-                <li>Copie a senha de 16 caracteres exibida na tela e cole-a em <span class="notranslate"
-                        translate="no">TapAlert</span> (omitindo quaisquer espaços).</li>
+                <li>Copie a senha de 16 caracteres exibida na tela e cole-a em <span class="notranslate" translate="no">TapAlert</span> (omitindo quaisquer espaços).</li>
                 <li>Clique em <strong>Concluído</strong>.</li>
             </ol>
 
             <h3>4. iCloud (ID Apple)</h3>
             <ol>
-                <li>Acesse <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> e faça login com
-                    seu ID Apple.</li>
-                <li>Na seção <strong>Login e segurança</strong>, clique em <strong>Senhas específicas do
-                        aplicativo</strong>.</li>
-                <li>Clique em <strong>Gerar uma senha específica do aplicativo</strong> ou em <strong>Adicionar
-                        (+)</strong>botão.</li>
-                <li>Digite <strong><span class="notranslate" translate="no">TapAlert</span></strong> quando for
-                    solicitado um nome de aplicativo e clique em Criar.</li>
+                <li>Acesse <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> e faça login com seu ID Apple.</li>
+                <li>Na seção <strong>Login e segurança</strong>, clique em <strong>Senhas específicas do aplicativo</strong>.</li>
+                <li>Clique em <strong>Gerar uma senha específica do aplicativo</strong> ou em <strong>Adicionar (+)</strong>botão.</li>
+                <li>Digite <strong><span class="notranslate" translate="no">TapAlert</span></strong> quando for solicitado um nome de aplicativo e clique em Criar.</li>
                 <li>Pode ser necessário inserir a senha do seu ID Apple novamente para confirmar.</li>
-                <li>Uma senha exclusiva específica do aplicativo será gerada e exibida (normalmente no formato
-                    <code>xxxx-xxxx-xxxx-xxxx</code>).
-                </li>
-                <li>Copie toda a senha e cole-a em <span class="notranslate" translate="no">TapAlert</span> e clique em
-                    <strong>Concluído</strong>.
-                </li>
+                <li>Uma senha exclusiva específica do aplicativo será gerada e exibida (normalmente no formato <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
+                <li>Copie toda a senha e cole-a em <span class="notranslate" translate="no">TapAlert</span> e clique em <strong>Concluído</strong>.</li>
             </ol>
         </section>
 
@@ -655,8 +517,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertas de emergência simples para todos. Sem assinaturas, sem rastreamento, apenas segurança.
-                    </p>
+                    <p>Alertas de emergência simples para todos. Sem assinaturas, sem rastreamento, apenas segurança.</p>
                 </div>
 
                 <div class="footer-section">
@@ -681,8 +542,7 @@
                     <h3>Apoiar</h3>
                     <ul>
                         <li><a href="#">Perguntas frequentes</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guias
-                                passo a passo</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guias passo a passo</a></li>
                         <li><a href="accessibility_guide.html">Guia de acessibilidade</a></li>
                         <li><a href="troubleshooting.html">Solução de problemas</a></li>
                         <li><a href="contact.html">Contate o suporte</a></li>
@@ -691,8 +551,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os direitos reservados. |
-                    Feito com ❤️ para sua segurança</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os direitos reservados. | Feito com ❤️ para sua segurança</p>
             </div>
         </div>
     </footer>

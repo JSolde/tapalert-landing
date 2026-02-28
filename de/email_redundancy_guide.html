@@ -375,136 +375,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Zurück nach Hause</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">DE</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/email_redundancy_guide.html" hreflang="de" class="active">DE</a>
-                        <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
-                        <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
-                        <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
-                        <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
-                        <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
-                        <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">DE</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
+            <a href="../de/email_redundancy_guide.html" hreflang="de" class="active">DE</a>
+            <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
+            <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
+            <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
+            <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
+            <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
+            <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -516,64 +424,39 @@
 
         <section class="guide-section">
             <h2>💡 Was ist die E-Mail-Redundanz Besonderheit?</h2>
-            <p>E-Mail-Redundanz in <span class="notranslate" translator="no">TapAlert</span> ermöglicht der App,
-                zusätzlich zu oder anstelle von SMS Notfallwarnungen und Meldemeldungen per E-Mail an Ihre angegebenen
-                Kontakte zu senden.</p>
+            <p>E-Mail-Redundanz in <span class="notranslate" translator="no">TapAlert</span> ermöglicht der App, zusätzlich zu oder anstelle von SMS Notfallwarnungen und Meldemeldungen per E-Mail an Ihre angegebenen Kontakte zu senden.</p>
 
             <h2>🎯 Was ist sein Zweck?</h2>
-            <p>Der Hauptzweck der E-Mail-Redundanz besteht darin, sicherzustellen, dass Ihre Nachricht auch dann
-                zugestellt wird, wenn primäre SMS-Kanäle ausfallen oder nicht verfügbar sind.</p>
+            <p>Der Hauptzweck der E-Mail-Redundanz besteht darin, sicherzustellen, dass Ihre Nachricht auch dann zugestellt wird, wenn primäre SMS-Kanäle ausfallen oder nicht verfügbar sind.</p>
             <ul>
-                <li>✅ <strong>Sekundärer Zustellungspfad:</strong> Wenn Sie mit WLAN verbunden sind, aber keinen
-                    Mobilfunkdienst haben (und WLAN-Anrufe deaktiviert sind oder nicht unterstützt werden), fungiert
-                    E-Mail als perfekter <span class="notranslate" translator="no">Fallback</span>.</li>
-                <li>✅ <strong>Internationale Reisen:</strong> Wenn Sie ins Ausland reisen, wo SMS extrem teuer oder
-                    unzuverlässig sein können, können Sie sich ausschließlich auf WLAN verlassen und Benachrichtigungen
-                    kostenlos per E-Mail versenden.</li>
-                <li>✅ <strong>Zusätzliche Sicherheit:</strong> Durch das gleichzeitige Versenden von Benachrichtigungen
-                    per SMS und E-Mail wird sichergestellt, dass ein Notfallkontakt die E-Mail-Benachrichtigung
-                    möglicherweise trotzdem sieht, wenn er eine SMS verpasst.</li>
+                <li>✅ <strong>Sekundärer Zustellungspfad:</strong> Wenn Sie mit WLAN verbunden sind, aber keinen Mobilfunkdienst haben (und WLAN-Anrufe deaktiviert sind oder nicht unterstützt werden), fungiert E-Mail als perfekter <span class="notranslate" translator="no">Fallback</span>.</li>
+                <li>✅ <strong>Internationale Reisen:</strong> Wenn Sie ins Ausland reisen, wo SMS extrem teuer oder unzuverlässig sein können, können Sie sich ausschließlich auf WLAN verlassen und Benachrichtigungen kostenlos per E-Mail versenden.</li>
+                <li>✅ <strong>Zusätzliche Sicherheit:</strong> Durch das gleichzeitige Versenden von Benachrichtigungen per SMS und E-Mail wird sichergestellt, dass ein Notfallkontakt die E-Mail-Benachrichtigung möglicherweise trotzdem sieht, wenn er eine SMS verpasst.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ So konfigurieren Sie E-Mail-Redundanz</h2>
             <ol>
-                <li>Öffnen Sie die <span class="notranslate" translator="no">TapAlert</span>-App und gehen Sie zu
-                    <strong>Einstellungen</strong>.
-                </li>
-                <li>Scrollen Sie zum Abschnitt <strong>E-Mail-Benachrichtigungen</strong> und schalten Sie
-                    <strong>E-Mail-Benachrichtigungen aktivieren</strong> ein.
-                </li>
-                <li>Wählen Ihren <strong>E-Mail-Anbieter</strong> aus den voreingestelltenTastes (Gmail, Outlook, Yahoo,
-                    iCloud), um den SMTP-Host und -Port automatisch auszufüllen.</li>
+                <li>Öffnen Sie die <span class="notranslate" translator="no">TapAlert</span>-App und gehen Sie zu <strong>Einstellungen</strong>.</li>
+                <li>Scrollen Sie zum Abschnitt <strong>E-Mail-Benachrichtigungen</strong> und schalten Sie <strong>E-Mail-Benachrichtigungen aktivieren</strong> ein.</li>
+                <li>Wählen Ihren <strong>E-Mail-Anbieter</strong> aus den voreingestelltenTastes (Gmail, Outlook, Yahoo, iCloud), um den SMTP-Host und -Port automatisch auszufüllen.</li>
                 <li>Geben Sie Ihre vollständige <strong>E-Mail-Adresse</strong> ein.</li>
-                <li>Geben Sie Ihr <strong>App-Passwort</strong> ein (siehe Abschnitt unten, was das ist und wie Sie
-                    eines erhalten).</li>
-                <li>Tippen Sie auf <strong>„Einstellungen speichern“</strong> und verwenden Sie die „Test-E-Mail“Taste,
-                    um sicherzustellen, dass sie richtig konfiguriert ist.</li>
+                <li>Geben Sie Ihr <strong>App-Passwort</strong> ein (siehe Abschnitt unten, was das ist und wie Sie eines erhalten).</li>
+                <li>Tippen Sie auf <strong>„Einstellungen speichern“</strong> und verwenden Sie die „Test-E-Mail“Taste, um sicherzustellen, dass sie richtig konfiguriert ist.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>🔑 Was ist ein App-Passwort?</h2>
-            <p>Ein <strong>App-Passwort</strong> ist ein zufällig generierter Passcode, der einer Drittanbieter-App (wie
-                <span class="notranslate" translator="no">TapAlert</span>) die Berechtigung erteilt, auf Ihre E-Mails
-                zuzugreifen Konto, um in Ihrem Namen Nachrichten zu senden.
-            </p>
+            <p>Ein <strong>App-Passwort</strong> ist ein zufällig generierter Passcode, der einer Drittanbieter-App (wie <span class="notranslate" translator="no">TapAlert</span>) die Berechtigung erteilt, auf Ihre E-Mails zuzugreifen Konto, um in Ihrem Namen Nachrichten zu senden.</p>
 
             <h3>Warum benötige ich eines anstelle meines echten Passworts?</h3>
-            <p>Moderne E-Mail-Anbieter blockieren einfache Passwortanmeldungen, um Ihr Konto vor Hackern zu schützen.
-                Ein App-Passwort umgeht die Zwei-Faktor-Authentifizierung (2FA) für diese bestimmte App <em>ohne</em>
-                und gibt der App Ihr ​​tatsächliches Konto Passwort. Wenn Sie den Zugriff von <span class="notranslate"
-                    translator="no">TapAlert</span> jemals widerrufen möchten, löschen Sie einfach das App-Passwort in
-                Ihren E-Mail-Einstellungen und Ihr Hauptpasswort Konto bleibt sicher und unverändert.</p>
+            <p>Moderne E-Mail-Anbieter blockieren einfache Passwortanmeldungen, um Ihr Konto vor Hackern zu schützen. Ein App-Passwort umgeht die Zwei-Faktor-Authentifizierung (2FA) für diese bestimmte App <em>ohne</em> und gibt der App Ihr ​​tatsächliches Konto Passwort. Wenn Sie den Zugriff von <span class="notranslate" translator="no">TapAlert</span> jemals widerrufen möchten, löschen Sie einfach das App-Passwort in Ihren E-Mail-Einstellungen und Ihr Hauptpasswort Konto bleibt sicher und unverändert.</p>
 
             <div class="alert-box">
                 <h4>⚠️ Wichtiger Hinweis</h4>
-                <p>Um ein App-Passwort zu generieren, müssen Sie bei fast allen E-Mail-Anbietern zunächst die
-                    <strong>Zwei-Faktor-Authentifizierung (2FA)</strong> auf Ihrem Konto aktiviert haben.
-                </p>
+                <p>Um ein App-Passwort zu generieren, müssen Sie bei fast allen E-Mail-Anbietern zunächst die <strong>Zwei-Faktor-Authentifizierung (2FA)</strong> auf Ihrem Konto aktiviert haben.</p>
             </div>
         </section>
 
@@ -583,68 +466,46 @@
 
             <h3>1. Gmail (Google-Konto)</h3>
             <ol>
-                <li>Gehen Sie zu Ihrer <a href="https://myKonto.google.com/"
-                        target="_blank">Google-Kontoverwaltungsseite</a> und melden Sie sich an.</li>
+                <li>Gehen Sie zu Ihrer <a href="https://myKonto.google.com/" target="_blank">Google-Kontoverwaltungsseite</a> und melden Sie sich an.</li>
                 <li>Klicken Sie im linken Navigationsbereich auf <strong>Sicherheit</strong>.</li>
-                <li>Stellen Sie sicher, dass im Abschnitt „So melden Sie sich bei Google an“ die <strong>Bestätigung in
-                        zwei Schritten</strong> aktiviert ist. (Wenn es ausgeschaltet ist, muss schalten Sie es zuerst
-                    ein).</li>
-                <li>Klicken Sie auf <strong>Bestätigung in zwei Schritten</strong>. Scrollen Sie ganz nach unten auf der
-                    Seite und klicken Sie auf <strong>App-Passwörter</strong>.</li>
-                <li>Wählen Sie im Dropdown-Menü „Wählen App“ die Option „Andere (benutzerdefinierter Name)“ aus und
-                    geben Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> ein.</li>
+                <li>Stellen Sie sicher, dass im Abschnitt „So melden Sie sich bei Google an“ die <strong>Bestätigung in zwei Schritten</strong> aktiviert ist. (Wenn es ausgeschaltet ist, muss schalten Sie es zuerst ein).</li>
+                <li>Klicken Sie auf <strong>Bestätigung in zwei Schritten</strong>. Scrollen Sie ganz nach unten auf der Seite und klicken Sie auf <strong>App-Passwörter</strong>.</li>
+                <li>Wählen Sie im Dropdown-Menü „Wählen App“ die Option „Andere (benutzerdefinierter Name)“ aus und geben Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> ein.</li>
                 <li>Klicken Sie auf <strong>Generieren</strong>.</li>
-                <li>Es erscheint ein gelbes Feld mit einem 16-stelligen Code. Kopieren Sie diesen Code und fügen Sie ihn
-                    in das Feld „App-Passwort“ in der <span class="notranslate" translator="no">TapAlert</span>-App ein
-                    (Sie müssen die Leerzeichen nicht einfügen).</li>
+                <li>Es erscheint ein gelbes Feld mit einem 16-stelligen Code. Kopieren Sie diesen Code und fügen Sie ihn in das Feld „App-Passwort“ in der <span class="notranslate" translator="no">TapAlert</span>-App ein (Sie müssen die Leerzeichen nicht einfügen).</li>
                 <li>Klicken Sie auf <strong>Fertig</strong>.</li>
             </ol>
 
             <h3>2. Hotmail / Outlook (Microsoft-Konto)</h3>
             <ol>
-                <li>Gehen Sie zur <a href="https://Konto.microsoft.com/security" target="_blank">Seite
-                        „Microsoft-Kontosicherheit“</a> und melden Sie sich an.</li>
+                <li>Gehen Sie zur <a href="https://Konto.microsoft.com/security" target="_blank">Seite „Microsoft-Kontosicherheit“</a> und melden Sie sich an.</li>
                 <li>Klicken Sie auf <strong>Erweiterte Sicherheitsoptionen</strong>.</li>
-                <li>Stellen Sie im Abschnitt „Zusätzliche Sicherheit“ sicher, dass die <strong>Bestätigung in zwei
-                        Schritten</strong> aktiviert ist.</li>
+                <li>Stellen Sie im Abschnitt „Zusätzliche Sicherheit“ sicher, dass die <strong>Bestätigung in zwei Schritten</strong> aktiviert ist.</li>
                 <li>Scrollen Sie nach unten zum Abschnitt <strong>App-Passwörter</strong>.</li>
                 <li>Klicken Sie auf <strong>Neues App-Passwort erstellen</strong>.</li>
                 <li>Es erscheint ein neuer Bildschirm mit Ihrem eindeutigen App-Passwort.</li>
-                <li>Kopieren Sie dieses Passwort und fügen Sie es in <span class="notranslate"
-                        translator="no">TapAlert</span> ein. Klicken Sie dann auf <strong>Fertig</strong>.</li>
+                <li>Kopieren Sie dieses Passwort und fügen Sie es in <span class="notranslate" translator="no">TapAlert</span> ein. Klicken Sie dann auf <strong>Fertig</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Gehen Sie zu Ihrer <a href="https://login.yahoo.com/Konto/security"
-                        target="_blank">Yahoo-Kontosicherheitsseite</a> und melden Sie sich an.</li>
-                <li>Scrollen Sie nach unten zum Ende der Seite und klicken Sie auf <strong>App-Passwörter generieren und
-                        verwalten</strong>.</li>
-                <li>Es erscheint ein modales Fenster. Geben Sie <strong><span class="notranslate"
-                            translator="no">TapAlert</span></strong> als Namen der App ein.</li>
+                <li>Gehen Sie zu Ihrer <a href="https://login.yahoo.com/Konto/security" target="_blank">Yahoo-Kontosicherheitsseite</a> und melden Sie sich an.</li>
+                <li>Scrollen Sie nach unten zum Ende der Seite und klicken Sie auf <strong>App-Passwörter generieren und verwalten</strong>.</li>
+                <li>Es erscheint ein modales Fenster. Geben Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> als Namen der App ein.</li>
                 <li>Klicken Sie auf <strong>Passwort generieren</strong>.</li>
-                <li>Kopieren Sie das auf dem Bildschirm angezeigte 16-stellige Passwort und fügen Sie es in <span
-                        class="notranslate" translator="no">TapAlert</span> ein (ohne Leerzeichen).</li>
+                <li>Kopieren Sie das auf dem Bildschirm angezeigte 16-stellige Passwort und fügen Sie es in <span class="notranslate" translator="no">TapAlert</span> ein (ohne Leerzeichen).</li>
                 <li>Klicken Sie auf <strong>Fertig</strong>.</li>
             </ol>
 
             <h3>4. iCloud (Apple-ID)</h3>
             <ol>
-                <li>Gehen Sie zu <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> und melden
-                    Sie sich mit Ihrer Apple-ID an.</li>
-                <li>Klicken Sie im Abschnitt <strong>Anmeldung und Sicherheit</strong> auf <strong>App-spezifische
-                        Passwörter</strong>.</li>
-                <li>Klicken Sie auf <strong>App-spezifisches Passwort generieren</strong> oder auf <strong>Hinzufügen
-                        (+)</strong>Taste.</li>
-                <li>Geben Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> ein, wenn Sie
-                    zur Eingabe eines App-Namens aufgefordert werden, und klicken Sie auf Erstellen.</li>
-                <li>Möglicherweise werden Sie aufgefordert, Ihr Apple-ID-Passwort zur Bestätigung erneut einzugeben.
-                </li>
-                <li>Es wird ein eindeutiges App-spezifisches Passwort generiert und angezeigt (normalerweise im Format
-                    <code>xxxx-xxxx-xxxx-xxxx</code>).
-                </li>
-                <li>Kopieren Sie das gesamte Passwort, fügen Sie es in <span class="notranslate"
-                        translator="no">TapAlert</span> ein und klicken Sie dann auf <strong>Fertig</strong>.</li>
+                <li>Gehen Sie zu <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> und melden Sie sich mit Ihrer Apple-ID an.</li>
+                <li>Klicken Sie im Abschnitt <strong>Anmeldung und Sicherheit</strong> auf <strong>App-spezifische Passwörter</strong>.</li>
+                <li>Klicken Sie auf <strong>App-spezifisches Passwort generieren</strong> oder auf <strong>Hinzufügen (+)</strong>Taste.</li>
+                <li>Geben Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> ein, wenn Sie zur Eingabe eines App-Namens aufgefordert werden, und klicken Sie auf Erstellen.</li>
+                <li>Möglicherweise werden Sie aufgefordert, Ihr Apple-ID-Passwort zur Bestätigung erneut einzugeben.</li>
+                <li>Es wird ein eindeutiges App-spezifisches Passwort generiert und angezeigt (normalerweise im Format <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
+                <li>Kopieren Sie das gesamte Passwort, fügen Sie es in <span class="notranslate" translator="no">TapAlert</span> ein und klicken Sie dann auf <strong>Fertig</strong>.</li>
             </ol>
         </section>
 
@@ -681,8 +542,7 @@
                     <h3>Unterstützung</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate"
-                                    translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
                         <li><a href="accessibility_guide.html">Leitfaden zur Barrierefreiheit</a></li>
                         <li><a href="troubleshooting.html">Fehlerbehebung</a></li>
                         <li><a href="contact.html">Kontaktieren Sie den Support</a></li>
@@ -691,8 +551,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. |
-                    Hergestellt mit ❤️ für Ihre Sicherheit</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. | Hergestellt mit ❤️ für Ihre Sicherheit</p>
             </div>
         </div>
     </footer>

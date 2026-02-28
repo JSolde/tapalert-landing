@@ -447,136 +447,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">NL</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/sms_stand_out.html" hreflang="ca">CA</a>
-                        <a href="../de/sms_stand_out.html" hreflang="de">DE</a>
-                        <a href="../sms_stand_out.html" hreflang="en">EN</a>
-                        <a href="../es/sms_stand_out.html" hreflang="es">ES</a>
-                        <a href="../eu/sms_stand_out.html" hreflang="eu">EU</a>
-                        <a href="../fr/sms_stand_out.html" hreflang="fr">FR</a>
-                        <a href="../gl/sms_stand_out.html" hreflang="gl">GL</a>
-                        <a href="../it/sms_stand_out.html" hreflang="it">IT</a>
-                        <a href="../nl/sms_stand_out.html" hreflang="nl" class="active">NL</a>
-                        <a href="../pt/sms_stand_out.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">NL</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/sms_stand_out.html" hreflang="ca">CA</a>
+            <a href="../de/sms_stand_out.html" hreflang="de">DE</a>
+            <a href="../sms_stand_out.html" hreflang="en">EN</a>
+            <a href="../es/sms_stand_out.html" hreflang="es">ES</a>
+            <a href="../eu/sms_stand_out.html" hreflang="eu">EU</a>
+            <a href="../fr/sms_stand_out.html" hreflang="fr">FR</a>
+            <a href="../gl/sms_stand_out.html" hreflang="gl">GL</a>
+            <a href="../it/sms_stand_out.html" hreflang="it">IT</a>
+            <a href="../nl/sms_stand_out.html" hreflang="nl" class="active">NL</a>
+            <a href="../pt/sms_stand_out.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -586,9 +494,7 @@
 
         <h1 class="guide-title">Laat waarschuwings-sms opvallen</h1>
 
-        <p>Om ervoor te zorgen dat uw contacten voor noodgevallen uw waarschuwingsbericht en andere meldingen niet
-            missen, raden we u aan hun telefoons zo te configureren dat berichten van uw <span class="notranslate"
-                translation="no">TapAlert</span>-nummer anders worden behandeld.</p>
+        <p>Om ervoor te zorgen dat uw contacten voor noodgevallen uw waarschuwingsbericht en andere meldingen niet missen, raden we u aan hun telefoons zo te configureren dat berichten van uw <span class="notranslate" translation="no">TapAlert</span>-nummer anders worden behandeld.</p>
 
         <section class="guide-section">
             <div class="step-list">
@@ -600,9 +506,9 @@
                     <ol>
                         <li><strong>Open Contacten:</strong> Selecteer uw contactinvoer.</li>
                         <li><strong>Noodbypass toewijzen:</strong> Tap <strong>Bewerking</strong> >
-                            <strong>Beltoon</strong> (of Teksttoon) en schakelen <strong>Noodbypass</strong> ON.
-                            Hierdoor zijn geluiden/trillingen mogelijk, zelfs als de telefoon op Stil of Niet storen
-                            staat.
+                            <strong>Beltoon</strong> (of Teksttoon) en schakelen <strong>Noodbypass</strong>
+                            ON.
+                            Hierdoor zijn geluiden/trillingen mogelijk, zelfs als de telefoon op Stil of Niet storen staat.
                         </li>
                         <li><strong>Aangepaste toon:</strong> Choose a loud, distinct sound for your messages.</li>
                     </ol>
@@ -631,15 +537,15 @@
 
             <div class="alert-box note">
                 <h4>ℹ️LET OP</h4>
-                <p><strong>Using <span class="notranslate" translate="no"><span class="notranslate"
-                                translate="no">Twilio</span></span>?</strong> Als u waarschuwingen verzendt via
-                    <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span>, your contacts will receive the message
-                    from your <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span> number or an Alphanumeric ID (e.g.,
+                <p><strong>Using <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong> Als u waarschuwingen verzendt via
+                    <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, your contacts will receive the
+                    message
+                    from your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> number or an
+                    Alphanumeric ID (e.g.,
                     "<span class="notranslate" translate="no">TapAlert</span>"). Zij <strong>moeten</strong> add
                     this number/ID to their contacts list for the settings above to work correctly. Otherwise, the
-                    message will still be delivered butals eenstandard SMS zonder any priority notifications.
+                    message will still be delivered butals eenstandard SMS zonder any priority
+                    notifications.
                 </p>
             </div>
         </section>
@@ -652,8 +558,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.
-                    </p>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
                 </div>
 
                 <div class="footer-section">
@@ -678,8 +583,7 @@
                     <h3>Steun</h3>
                     <ul>
                         <li><a href="#">Veelgestelde vragen</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate"
-                                    translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
                         <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
                         <li><a href="troubleshooting.html">Problemen oplossen</a></li>
                         <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
@@ -688,8 +592,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. |
-                    Gemaakt met ❤️ voor uw veiligheid</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
             </div>
         </div>
     </footer>

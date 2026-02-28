@@ -376,136 +376,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">De volta para casa</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">PT</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
-                        <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
-                        <a href="../family_assisted_setup.html" hreflang="en">EN</a>
-                        <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
-                        <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
-                        <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
-                        <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
-                        <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
-                        <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
-                        <a href="../pt/family_assisted_setup.html" hreflang="pt" class="active">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">PT</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
+            <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
+            <a href="../family_assisted_setup.html" hreflang="en">EN</a>
+            <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
+            <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
+            <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
+            <a href="../gl/family_assisted_setup.html" hreflang="gl">GL</a>
+            <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
+            <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
+            <a href="../pt/family_assisted_setup.html" hreflang="pt" class="active">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -515,18 +423,12 @@
         <h1 class="guide-title">👨‍👩‍👧 Guia de configuração assistida pela família</h1>
         <p class="guide-subtitle">Configurar o TapAlert para um idoso usando Magic Link</p>
 
-        <p>Este guia é para familiares, cuidadores e qualquer pessoa que ajude um idoso ou alguém com menos
-            familiaridade com tecnologia a configurar o TapAlert completamente. Com a funcionalidade Magic Link, pode
-            configurar toda a aplicação no seu próprio dispositivo e entregar uma configuração pronta a usar com um
-            único toque.</p>
+        <p>Este guia é para familiares, cuidadores e qualquer pessoa que ajude um idoso ou alguém com menos familiaridade com tecnologia a configurar o TapAlert completamente. Com a funcionalidade Magic Link, pode configurar toda a aplicação no seu próprio dispositivo e entregar uma configuração pronta a usar com um único toque.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
             <h2>Visão geral: Como funciona o Magic Link</h2>
-            <p>A funcionalidade Magic Link permite que uma pessoa com conhecimentos tecnológicos ("o administrador")
-                faça todo o trabalho de configuração e o partilhe como um link especial. Quando o idoso toca nesse link
-                no seu telemóvel, o TapAlert aplica automaticamente a configuração completa — contactos, mensagens,
-                definições e tudo — num único passo.</p>
+            <p>A funcionalidade Magic Link permite que uma pessoa com conhecimentos tecnológicos ("o administrador") faça todo o trabalho de configuração e o partilhe como um link especial. Quando o idoso toca nesse link no seu telemóvel, o TapAlert aplica automaticamente a configuração completa — contactos, mensagens, definições e tudo — num único passo.</p>
             <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
@@ -551,20 +453,15 @@
             </ul>
 
             <h3>Opcional: Para SMS automatizados via Twilio</h3>
-            <p>Se pretende que os alertas sejam enviados automaticamente sem que qualquer app no telemóvel do idoso
-                precise estar aberta:</p>
+            <p>Se pretende que os alertas sejam enviados automaticamente sem que qualquer app no telemóvel do idoso precise estar aberta:</p>
             <ul class="checklist">
                 <li>Uma conta Twilio (versão de avaliação gratuita disponível em twilio.com)</li>
                 <li>Account SID do Twilio (do painel da consola Twilio)</li>
                 <li>Auth Token do Twilio (do painel da consola Twilio)</li>
-                <li>Um número de telefone Twilio, OU um nome de remetente alfanumérico (ex.: "TapAlert") se o seu país o
-                    suportar</li>
-                <li>O seu próprio número de telefone — a app enviará um SMS de teste para verificar que o Twilio
-                    funciona</li>
+                <li>Um número de telefone Twilio, OU um nome de remetente alfanumérico (ex.: "TapAlert") se o seu país o suportar</li>
+                <li>O seu próprio número de telefone — a app enviará um SMS de teste para verificar que o Twilio funciona</li>
             </ul>
-            <div class="warn-box">Nota para utilizadores iOS: No iPhone, os SMS automatizados requerem Twilio. Sem ele,
-                a app abre a app Mensagens nativa e o idoso toca em Enviar manualmente. Continua a ser fiável mas requer
-                um toque extra.</div>
+            <div class="warn-box">Nota para utilizadores iOS: No iPhone, os SMS automatizados requerem Twilio. Sem ele, a app abre a app Mensagens nativa e o idoso toca em Enviar manualmente. Continua a ser fiável mas requer um toque extra.</div>
 
             <h3>Opcional: Para redundância de e-mail</h3>
             <p>Se pretende que os alertas sejam enviados também por e-mail para além de SMS:</p>
@@ -580,13 +477,10 @@
             <ol>
                 <li>Instale o TapAlert no seu próprio telemóvel (precisa da app para gerar o Magic Link).</li>
                 <li>Abra o TapAlert.</li>
-                <li>Se ainda não concluiu o onboarding, percorra os ecrãs de permissões. No último ecrã, toque em
-                    «Configurar para outra pessoa».</li>
-                <li>Se o TapAlert já está instalado, vá a Definições → role até ao fim → toque em «Configuração admin /
-                    Magic Link».</li>
+                <li>Se ainda não concluiu o onboarding, percorra os ecrãs de permissões. No último ecrã, toque em «Configurar para outra pessoa».</li>
+                <li>Se o TapAlert já está instalado, vá a Definições → role até ao fim → toque em «Configuração admin / Magic Link».</li>
             </ol>
-            <p>O ecrã de configuração de administrador abrirá. Percorra as secções — preencherá cada uma nos passos
-                seguintes.</p>
+            <p>O ecrã de configuração de administrador abrirá. Percorra as secções — preencherá cada uma nos passos seguintes.</p>
         </section>
 
         <!-- Step 2 -->
@@ -594,11 +488,9 @@
             <h2>Passo 2: Introduzir o nome do idoso</h2>
             <p>Na secção «Informação do utilizador» no topo do ecrã:</p>
             <ul>
-                <li>Nome do idoso — Escreva o seu primeiro nome (ex.: «Maria»). Este nome aparece nas mensagens de
-                    alerta para que os destinatários saibam quem a enviou.</li>
+                <li>Nome do idoso — Escreva o seu primeiro nome (ex.: «Maria»). Este nome aparece nas mensagens de alerta para que os destinatários saibam quem a enviou.</li>
             </ul>
-            <div class="tip-box">Exemplo: Se escrever «Maria», os destinatários recebem: «ALERTA de Maria: Preciso de
-                ajuda. Localização: …»</div>
+            <div class="tip-box">Exemplo: Se escrever «Maria», os destinatários recebem: «ALERTA de Maria: Preciso de ajuda. Localização: …»</div>
         </section>
 
         <!-- Step 3 -->
@@ -609,8 +501,7 @@
             <p>Deixe o botão «Ativar SMS do Twilio» desativado.</p>
             <ul>
                 <li>No Android, a app envia SMS diretamente com o cartão SIM — sem necessidade de Twilio.</li>
-                <li>No iPhone, a app abre a app Mensagens já preenchida e o idoso toca em Enviar uma vez. Simples mas
-                    requer um passo extra.</li>
+                <li>No iPhone, a app abre a app Mensagens já preenchida e o idoso toca em Enviar uma vez. Simples mas requer um passo extra.</li>
             </ul>
 
             <h3>Opção B: Com Twilio (recomendado para automação completa)</h3>
@@ -620,37 +511,28 @@
                 <li>Introduza o Auth Token da consola Twilio (toque no icone de olho para mostrar/ocultar).</li>
                 <li>Escolha como identificar o remetente:
                     <ul>
-                        <li>Numero Twilio — Introduza o numero Twilio (ex. +12015551234). Selecione primeiro a bandeira
-                            do pais.</li>
-                        <li>Nome remetente — Ative «Usar nome alfanumerico» e escreva um nome curto (ex. «TapAlert»).
-                            Nota: nao suportado em todos os paises (ex. EUA).</li>
+                        <li>Numero Twilio — Introduza o numero Twilio (ex. +12015551234). Selecione primeiro a bandeira do pais.</li>
+                        <li>Nome remetente — Ative «Usar nome alfanumerico» e escreva um nome curto (ex. «TapAlert»). Nota: nao suportado em todos os paises (ex. EUA).</li>
                     </ul>
                 </li>
-                <li>O seu numero — Introduza o seu numero. A app envia um SMS de teste para confirmar que o Twilio
-                    funciona antes de gerar o link.</li>
+                <li>O seu numero — Introduza o seu numero. A app envia um SMS de teste para confirmar que o Twilio funciona antes de gerar o link.</li>
             </ol>
-            <div class="tip-box">Onde encontrar as credenciais Twilio: Aceda a console.twilio.com. Account SID e Auth
-                Token estao na pagina principal do painel. O numero esta em Numeros de telefone → Gerir → Numeros
-                ativos.</div>
+            <div class="tip-box">Onde encontrar as credenciais Twilio: Aceda a console.twilio.com. Account SID e Auth Token estao na pagina principal do painel. O numero esta em Numeros de telefone → Gerir → Numeros ativos.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
             <h2>Passo 4: Configurar alertas por e-mail (opcional)</h2>
-            <p>Os alertas por e-mail enviam uma cópia de cada alerta para os destinatários com endereço de e-mail. É uma
-                cópia de segurança útil se o SMS falhar.</p>
+            <p>Os alertas por e-mail enviam uma cópia de cada alerta para os destinatários com endereço de e-mail. É uma cópia de segurança útil se o SMS falhar.</p>
             <ol>
                 <li>Ative «Ativar redundância de e-mail».</li>
-                <li>Selecione o seu fornecedor de e-mail: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (definições
-                    preenchidas automaticamente) ou SMTP personalizado.</li>
-                <li>Introduza o endereço de e-mail de envio — idealmente um endereço dedicado, não a caixa pessoal do
-                    idoso.</li>
+                <li>Selecione o seu fornecedor de e-mail: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (definições preenchidas automaticamente) ou SMTP personalizado.</li>
+                <li>Introduza o endereço de e-mail de envio — idealmente um endereço dedicado, não a caixa pessoal do idoso.</li>
                 <li>Introduza a palavra-passe de aplicação para essa conta.</li>
             </ol>
 
             <h3>Como obter uma palavra-passe de aplicação</h3>
-            <p>As palavras-passe de e-mail normais nao funcionam. Os fornecedores de e-mail requerem palavras-passe de
-                aplicacao para apps que se ligam via SMTP.</p>
+            <p>As palavras-passe de e-mail normais nao funcionam. Os fornecedores de e-mail requerem palavras-passe de aplicacao para apps que se ligam via SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
@@ -685,15 +567,12 @@
             <p>Na secção «Contactos de emergência», para cada pessoa que deve receber os alertas do idoso:</p>
             <ol>
                 <li>Introduza o nome no campo Nome (ex.: «Carlos» ou «Dr. García»).</li>
-                <li>Introduza o número de telefone — selecione primeiro a bandeira do país correto e depois escreva o
-                    número.</li>
+                <li>Introduza o número de telefone — selecione primeiro a bandeira do país correto e depois escreva o número.</li>
                 <li>Toque no botão + azul para os adicionar à lista.</li>
-                <li>Repita para cada contacto. Pode adicionar quantos precisar (até 50 com premium; a versao gratuita
-                    suporta 1).</li>
+                <li>Repita para cada contacto. Pode adicionar quantos precisar (até 50 com premium; a versao gratuita suporta 1).</li>
             </ol>
             <p>Para remover um contacto, toque no ícone da lata do lixo vermelha junto ao nome.</p>
-            <div class="tip-box">Dica: Adicione pelo menos 2 contactos para redundancia — caso uma pessoa nao esteja
-                disponível.</div>
+            <div class="tip-box">Dica: Adicione pelo menos 2 contactos para redundancia — caso uma pessoa nao esteja disponível.</div>
         </section>
 
         <!-- Step 6 -->
@@ -701,14 +580,11 @@
             <h2>Passo 6: Escrever mensagens de alerta pré-configuradas</h2>
             <p>Na secção <strong>"Mensagens de alerta"</strong>, pode escrever até 3 mensagens prontas a usar:</p>
             <ul>
-                <li><strong>Mensagem 1</strong> — A mensagem de emergência principal (ex.: "Preciso de ajuda, ligue para
-                    mim")</li>
-                <li><strong>Mensagem 2</strong> — Uma mensagem "Estou bem" ou de check-in (ex.: "Estou bem, não se
-                    preocupem")</li>
+                <li><strong>Mensagem 1</strong> — A mensagem de emergência principal (ex.: "Preciso de ajuda, ligue para mim")</li>
+                <li><strong>Mensagem 2</strong> — Uma mensagem "Estou bem" ou de check-in (ex.: "Estou bem, não se preocupem")</li>
                 <li><strong>Mensagem 3</strong> — Outra mensagem personalizada (ex.: "Caí, por favor venham")</li>
             </ul>
-            <p>Estes aparecerão como botões grandes no ecrã principal do idoso para que possa enviar um alerta com um
-                único toque, sem escrever nada.</p>
+            <p>Estes aparecerão como botões grandes no ecrã principal do idoso para que possa enviar um alerta com um único toque, sem escrever nada.</p>
             <div class="tip-box">
                 <strong>Dicas para boas mensagens:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
@@ -728,17 +604,14 @@
             <p>Quantos segundos aguardar após o idoso tocar no botão de alerta antes de enviar realmente.</p>
             <ul>
                 <li><strong>0 segundos</strong> — envia imediatamente, sem possibilidade de cancelamento</li>
-                <li><strong>3–10 segundos</strong> — recomendado para a maioria dos idosos; dá tempo para cancelar se
-                    premido por engano</li>
+                <li><strong>3–10 segundos</strong> — recomendado para a maioria dos idosos; dá tempo para cancelar se premido por engano</li>
                 <li><strong>15–30 segundos</strong> — se o idoso tende a tocar acidentalmente</li>
             </ul>
 
             <h3>Modo de ativação</h3>
             <ul>
-                <li><strong>Toque único</strong> — toque uma vez para iniciar a contagem decrescente (mais fácil para
-                    idosos com mobilidade limitada)</li>
-                <li><strong>Manter premido</strong> — mantenha o botão premido para confirmar (evita envios acidentais)
-                </li>
+                <li><strong>Toque único</strong> — toque uma vez para iniciar a contagem decrescente (mais fácil para idosos com mobilidade limitada)</li>
+                <li><strong>Manter premido</strong> — mantenha o botão premido para confirmar (evita envios acidentais)</li>
             </ul>
 
             <h3>Aparência</h3>
@@ -749,10 +622,8 @@
             </ul>
 
             <h3>Idioma</h3>
-            <p>Selecione o idioma para a interface da app. Disponível: English, Español, Català, Français, Deutsch,
-                Italiano, Nederlands, Português, Euskara, Galego.</p>
-            <div class="tip-box">Dica: Defina o idioma para corresponder ao que o idoso fala, mesmo que esteja a
-                configurar numa língua diferente.</div>
+            <p>Selecione o idioma para a interface da app. Disponível: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Dica: Defina o idioma para corresponder ao que o idoso fala, mesmo que esteja a configurar numa língua diferente.</div>
         </section>
 
         <!-- Step 8 -->
@@ -767,23 +638,16 @@
             <h3>O que acontece a seguir:</h3>
             <p><strong>Fase de teste</strong> (demora alguns segundos):</p>
             <ul>
-                <li>Se o Twilio estiver ativado: a app envia um SMS de teste real para o <strong>seu número de
-                        telmóvel</strong> para verificar que funciona. Deve recebê-lo em segundos.</li>
-                <li>Se o e-mail estiver ativado: a app envia um e-mail de teste para o endereço de e-mail que
-                    introduziu. Verifique a sua caixa de entrada.</li>
-                <li>Se os testes falharem, aparece uma mensagem de erro. Verifique as suas credenciais e tente
-                    novamente.</li>
+                <li>Se o Twilio estiver ativado: a app envia um SMS de teste real para o <strong>seu número de telmóvel</strong> para verificar que funciona. Deve recebê-lo em segundos.</li>
+                <li>Se o e-mail estiver ativado: a app envia um e-mail de teste para o endereço de e-mail que introduziu. Verifique a sua caixa de entrada.</li>
+                <li>Se os testes falharem, aparece uma mensagem de erro. Verifique as suas credenciais e tente novamente.</li>
             </ul>
             <p><strong>Fase de partilha:</strong></p>
             <ul>
                 <li>A folha de partilha do sistema abre automaticamente.</li>
-                <li>Envie o Magic Link ao idoso via <strong>WhatsApp</strong>, <strong>iMessage</strong>,
-                    <strong>e-mail</strong>, <strong>SMS</strong> ou qualquer app de mensagens que use.
-                </li>
+                <li>Envie o Magic Link ao idoso via <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>e-mail</strong>, <strong>SMS</strong> ou qualquer app de mensagens que use.</li>
             </ul>
-            <div class="warn-box">O link é seguro para partilhar — mas trate-o como uma palavra-passe. Contém a
-                configuração do idoso, incluindo contactos e (se configuradas) as suas credenciais Twilio/e-mail.
-                Partilhe-o apenas com o idoso.</div>
+            <div class="warn-box">O link é seguro para partilhar — mas trate-o como uma palavra-passe. Contém a configuração do idoso, incluindo contactos e (se configuradas) as suas credenciais Twilio/e-mail. Partilhe-o apenas com o idoso.</div>
         </section>
 
         <!-- Step 9 -->
@@ -793,14 +657,12 @@
             <ol>
                 <li>O idoso recebe a mensagem que enviou.</li>
                 <li>Toca no link.</li>
-                <li>O TapAlert abre automaticamente e mostra um ecrã de confirmação: <em>"Pronto para configurar o
-                        TapAlert para [Nome]?"</em> com um resumo do que será configurado.</li>
+                <li>O TapAlert abre automaticamente e mostra um ecrã de confirmação: <em>"Pronto para configurar o TapAlert para [Nome]?"</em> com um resumo do que será configurado.</li>
                 <li>O idoso toca em <strong>"Sim, configurar"</strong> (ou botão equivalente).</li>
                 <li>A app aplica toda a configuração instantaneamente.</li>
                 <li>Aparece uma mensagem de sucesso e a app abre no ecrã principal — pronta a usar.</li>
             </ol>
-            <p><strong>Só isso. O idoso não precisa de introduzir definições, escrever credenciais nem tomar
-                    decisões.</strong></p>
+            <p><strong>Só isso. O idoso não precisa de introduzir definições, escrever credenciais nem tomar decisões.</strong></p>
 
             <h3>Se o TapAlert ainda não estiver instalado no telmóvel do idoso</h3>
             <ol>
@@ -822,21 +684,17 @@
                 <li>Confirme que todos os contactos configurados recebem o SMS (e o e-mail, se configurado).</li>
                 <li>Verifique que o texto da mensagem e o link de localização estão corretos.</li>
             </ol>
-            <div class="tip-box">Se algo estiver errado, pode regenerar o Magic Link com correções e enviá-lo novamente
-                — aplicar um novo link substitui a configuração anterior.</div>
+            <div class="tip-box">Se algo estiver errado, pode regenerar o Magic Link com correções e enviá-lo novamente — aplicar um novo link substitui a configuração anterior.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
             <h2>Após a Configuração: O que o idoso vê</h2>
-            <p>A app do idoso abre diretamente no ecrã do <strong>Modo Pânico</strong> — um botão de emergência simples
-                em ecrã inteiro. A interface é concebida para ser usada sem ler nada:</p>
+            <p>A app do idoso abre diretamente no ecrã do <strong>Modo Pânico</strong> — um botão de emergência simples em ecrã inteiro. A interface é concebida para ser usada sem ler nada:</p>
             <ul>
-                <li><strong>Grande botão vermelho SOS</strong> ao centro — toque para enviar um alerta de emergência
-                </li>
+                <li><strong>Grande botão vermelho SOS</strong> ao centro — toque para enviar um alerta de emergência</li>
                 <li><strong>Grande botão verde OK</strong> abaixo — toque para enviar uma mensagem "Estou bem"</li>
-                <li><strong>Deslize para a esquerda</strong> para ver os botões de mensagens pré-configuradas (se as
-                    mensagens foram configuradas)</li>
+                <li><strong>Deslize para a esquerda</strong> para ver os botões de mensagens pré-configuradas (se as mensagens foram configuradas)</li>
             </ul>
             <p>O idoso nunca precisa de ir às Definições ou compreender como funciona.</p>
         </section>
@@ -846,10 +704,8 @@
             <h2>Configurar vários idosos</h2>
             <p>Pode configurar o TapAlert para vários idosos sem começar do zero de cada vez:</p>
             <ol>
-                <li>Após gerar o primeiro Magic Link, toque em <strong>"Configurar outro idoso"</strong> na caixa de
-                    diálogo de conclusão.</li>
-                <li>O formulário limpa o nome e os contactos do idoso, mas <strong>mantém as suas credenciais Twilio,
-                        definições de e-mail e preferências da app</strong>.</li>
+                <li>Após gerar o primeiro Magic Link, toque em <strong>"Configurar outro idoso"</strong> na caixa de diálogo de conclusão.</li>
+                <li>O formulário limpa o nome e os contactos do idoso, mas <strong>mantém as suas credenciais Twilio, definições de e-mail e preferências da app</strong>.</li>
                 <li>Altere apenas o que é diferente (nome, contactos, mensagens) para o próximo idoso.</li>
                 <li>Gere e partilhe um novo Magic Link.</li>
             </ol>
@@ -861,49 +717,36 @@
 
             <h3>Erro "Validação falhada" ao gerar o link</h3>
             <ul>
-                <li>Verifique que todos os campos obrigatórios estão preenchidos (assinalados com uma mensagem de erro
-                    vermelha).</li>
-                <li>Se o Twilio estiver ativado, certifique-se de que o Account SID, Auth Token e número de telmóvel
-                    estão corretos.</li>
-                <li>Se o e-mail estiver ativado, verifique a Senha da App — as senhas de conta normais não funcionam.
-                </li>
+                <li>Verifique que todos os campos obrigatórios estão preenchidos (assinalados com uma mensagem de erro vermelha).</li>
+                <li>Se o Twilio estiver ativado, certifique-se de que o Account SID, Auth Token e número de telmóvel estão corretos.</li>
+                <li>Se o e-mail estiver ativado, verifique a Senha da App — as senhas de conta normais não funcionam.</li>
             </ul>
 
             <h3>O idoso não recebeu o SMS de teste</h3>
             <ul>
-                <li>Verifique que o número de telmóvel do Twilio está ativo e não é um número de teste enviando para
-                    números não verificados.</li>
-                <li>No trial gratuito do Twilio, só pode enviar para números de telmóvel que verificou na Consola
-                    Twilio. Adicione os contactos do idoso como números verificados, ou atualize para uma conta paga.
-                </li>
+                <li>Verifique que o número de telmóvel do Twilio está ativo e não é um número de teste enviando para números não verificados.</li>
+                <li>No trial gratuito do Twilio, só pode enviar para números de telmóvel que verificou na Consola Twilio. Adicione os contactos do idoso como números verificados, ou atualize para uma conta paga.</li>
                 <li>Verifique que o formato do número de telmóvel está correto (código de país incluído).</li>
             </ul>
 
             <h3>O Magic Link não abre o TapAlert</h3>
             <ul>
                 <li>Certifique-se de que o TapAlert está instalado no telmóvel do idoso.</li>
-                <li>Em alguns telmóveis Android, mantenha o link premido e escolha "Abrir com TapAlert" em vez de um
-                    browser.</li>
-                <li>Se um browser abrir, copie o URL completo e cole-o novamente no browser — na segunda tentativa, o
-                    sistema geralmente oferece o TapAlert como opção.</li>
+                <li>Em alguns telmóveis Android, mantenha o link premido e escolha "Abrir com TapAlert" em vez de um browser.</li>
+                <li>Se um browser abrir, copie o URL completo e cole-o novamente no browser — na segunda tentativa, o sistema geralmente oferece o TapAlert como opção.</li>
             </ul>
 
             <h3>O idoso toca acidentalmente no botão errado</h3>
             <ul>
-                <li>Aumente a <strong>Contagem decrescente da alerta</strong> para 10–15 segundos — isso dá tempo para
-                    cancelar antes de enviar.</li>
-                <li>Ou mude para o <strong>Modo manter premido</strong> (modo de ativação = manter) para que o botão
-                    requeira uma pressão deliberada.</li>
-                <li>Pode atualizar estas definições gerando um novo Magic Link com as definições corrigidas e enviá-lo
-                    para o telmóvel do idoso.</li>
+                <li>Aumente a <strong>Contagem decrescente da alerta</strong> para 10–15 segundos — isso dá tempo para cancelar antes de enviar.</li>
+                <li>Ou mude para o <strong>Modo manter premido</strong> (modo de ativação = manter) para que o botão requeira uma pressão deliberada.</li>
+                <li>Pode atualizar estas definições gerando um novo Magic Link com as definições corrigidas e enviá-lo para o telmóvel do idoso.</li>
             </ul>
 
             <h3>O SMS Twilio funciona mas o e-mail não</h3>
             <ul>
-                <li>Causa mais comum: os destinatários não têm endereços de e-mail guardados. Verifique os destinatários
-                    no ecrã de Destinatários da app.</li>
-                <li>Certifique-se de que a Senha da App está correta e não expirou. As Senhas de App do Gmail e Outlook
-                    podem ser revogadas — gere uma nova se necessário.</li>
+                <li>Causa mais comum: os destinatários não têm endereços de e-mail guardados. Verifique os destinatários no ecrã de Destinatários da app.</li>
+                <li>Certifique-se de que a Senha da App está correta e não expirou. As Senhas de App do Gmail e Outlook podem ser revogadas — gere uma nova se necessário.</li>
             </ul>
         </section>
 
@@ -911,15 +754,10 @@
         <section class="guide-section" id="security">
             <h2>Notas de segurança e privacidade</h2>
             <ul>
-                <li><strong>O payload do Magic Link</strong> está codificado mas não encriptado. Qualquer pessoa que o
-                    intercepte pode ler a configuração, incluindo credenciais Twilio. Partilhe-o apenas diretamente ao
-                    idoso.</li>
-                <li><strong>TapAlert não tem servidores</strong> — o Magic Link é processado inteiramente no dispositivo
-                    do idoso. Nenhum dado é enviado para o serviço TapAlert.</li>
-                <li><strong>As credenciais Twilio no link</strong> são armazenadas localmente no dispositivo do idoso em
-                    armazenamento seguro (encriptado) após serem aplicadas.</li>
-                <li>Se acredita que um Magic Link foi interceptado, <strong>rode o seu Auth Token do Twilio</strong> na
-                    Consola Twilio imediatamente e gere um novo Magic Link.</li>
+                <li><strong>O payload do Magic Link</strong> está codificado mas não encriptado. Qualquer pessoa que o intercepte pode ler a configuração, incluindo credenciais Twilio. Partilhe-o apenas diretamente ao idoso.</li>
+                <li><strong>TapAlert não tem servidores</strong> — o Magic Link é processado inteiramente no dispositivo do idoso. Nenhum dado é enviado para o serviço TapAlert.</li>
+                <li><strong>As credenciais Twilio no link</strong> são armazenadas localmente no dispositivo do idoso em armazenamento seguro (encriptado) após serem aplicadas.</li>
+                <li>Se acredita que um Magic Link foi interceptado, <strong>rode o seu Auth Token do Twilio</strong> na Consola Twilio imediatamente e gere um novo Magic Link.</li>
             </ul>
         </section>
 
@@ -953,8 +791,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertas de emergência simples para todos. Sem assinaturas, sem rastreamento, apenas segurança.
-                    </p>
+                    <p>Alertas de emergência simples para todos. Sem assinaturas, sem rastreamento, apenas segurança.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Produto</h3>
@@ -975,16 +812,14 @@
                 <div class="footer-section">
                     <h3>Apoiar</h3>
                     <ul>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guias
-                                passo a passo</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guias passo a passo</a></li>
                         <li><a href="troubleshooting.html">Solução de problemas</a></li>
                         <li><a href="contact.html">Contate o suporte</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os direitos reservados. |
-                    Feito com ❤️ para sua segurança</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os direitos reservados. | Feito com ❤️ para sua segurança</p>
             </div>
         </div>
     </footer>

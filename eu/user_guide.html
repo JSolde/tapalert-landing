@@ -509,136 +509,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">EU</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/user_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/user_guide.html" hreflang="de">DE</a>
-                        <a href="../user_guide.html" hreflang="en">EN</a>
-                        <a href="../es/user_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/user_guide.html" hreflang="eu" class="active">EU</a>
-                        <a href="../fr/user_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/user_guide.html" hreflang="gl">GL</a>
-                        <a href="../it/user_guide.html" hreflang="it">IT</a>
-                        <a href="../nl/user_guide.html" hreflang="nl">NL</a>
-                        <a href="../pt/user_guide.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">EU</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/user_guide.html" hreflang="ca">CA</a>
+            <a href="../de/user_guide.html" hreflang="de">DE</a>
+            <a href="../user_guide.html" hreflang="en">EN</a>
+            <a href="../es/user_guide.html" hreflang="es">ES</a>
+            <a href="../eu/user_guide.html" hreflang="eu" class="active">EU</a>
+            <a href="../fr/user_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/user_guide.html" hreflang="gl">GL</a>
+            <a href="../it/user_guide.html" hreflang="it">IT</a>
+            <a href="../nl/user_guide.html" hreflang="nl">NL</a>
+            <a href="../pt/user_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -647,8 +555,7 @@
         <a href="index.html#guides" class="back-link">← Itzuli Gidetara</a>
 
         <h1 class="guide-title">Erabiltzailearen Gida: <span class="notranslate" translate="no">TapAlert</span></h1>
-        <p class="guide-intro">Zure GPS kokapenarekin SMS eta posta elektronikoko alertak bidaltzen dituen
-            segurtasun-aplikazio pertsonala, ukitu bakar batekin.</p>
+        <p class="guide-intro">Zure GPS kokapenarekin SMS eta posta elektronikoko alertak bidaltzen dituen segurtasun-aplikazio pertsonala, ukitu bakar batekin.</p>
 
         <!-- Table of Contents -->
         <nav class="toc">
@@ -675,8 +582,7 @@
         <!-- 1. Permissions -->
         <section class="guide-section" id="permissions">
             <h2>1. 🔐 Lehen abiarazte: Baimenak</h2>
-            <p>Lehen abiaraztean, TapAlert-ek baimenen konfigurazio-pantailan zehar gidatuko zaitu. Eman honako hau
-                funtzionaltasun osoa lortzeko:</p>
+            <p>Lehen abiaraztean, TapAlert-ek baimenen konfigurazio-pantailan zehar gidatuko zaitu. Eman honako hau funtzionaltasun osoa lortzeko:</p>
             <table>
                 <thead>
                     <tr>
@@ -711,8 +617,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p>Konfigurazioan zehar edozein baimen eman edo salta dezakezu eta geroago doi ditzakezu zure gailuaren
-                sistemaren ezarpenetan.</p>
+            <p>Konfigurazioan zehar edozein baimen eman edo salta dezakezu eta geroago doi ditzakezu zure gailuaren sistemaren ezarpenetan.</p>
         </section>
 
         <!-- 2. Home Screen Overview -->
@@ -751,28 +656,22 @@
         <!-- 3. Panic Mode -->
         <section class="guide-section" id="panic-mode">
             <h2>3. 🆘 Izu modua</h2>
-            <p>Orrialde nagusia erraztasun handiena lortzeko diseinatuta dago, larrialdietarako eta erabiltzaile
-                nagusientzat aproposa.</p>
+            <p>Orrialde nagusia erraztasun handiena lortzeko diseinatuta dago, larrialdietarako eta erabiltzaile nagusientzat aproposa.</p>
             <ul>
                 <li>SOS botoia — "SOS, laguntza behar dut" alerta bidaltzen du zure kokapenarekin.</li>
                 <li>Ados nago botoia — "Ongi nago" egoera lasaigarria bidaltzen die kontaktu guztiei.</li>
-                <li>Ahots-botoiak — sakatu SOS alboko mikrofonoaren ikonoa edo Ados nago ahots-mezu bat grabatzeko. Zure
-                    diskurtsoa testura transkribatzen da eta alertan sartzen da.</li>
-                <li>Larrialdi-deiak botoia — zure tokiko larrialdi-zenbakia (adibidez, 112, 911) markatzen du berehala,
-                    zure herrialdeko ezarpenaren arabera.</li>
+                <li>Ahots-botoiak — sakatu SOS alboko mikrofonoaren ikonoa edo Ados nago ahots-mezu bat grabatzeko. Zure diskurtsoa testura transkribatzen da eta alertan sartzen da.</li>
+                <li>Larrialdi-deiak botoia — zure tokiko larrialdi-zenbakia (adibidez, 112, 911) markatzen du berehala, zure herrialdeko ezarpenaren arabera.</li>
             </ul>
         </section>
 
         <!-- 4. Situation Alerts Mode -->
         <section class="guide-section" id="situation-alerts-mode">
             <h2>4. 📋 Egoera Alerta Modua</h2>
-            <p>Irristatu ezkerrerantz Izu-modutik Egoera Alerta Moduara sartzeko. Orrialde honek 3 aurrez
-                konfiguratutako alerta botoi zerrenda erakusten du.</p>
-            <p>Egoera alertaren testua pantailaren beheko aldeko editatu botoiaz edita dezakezu eta, ondoren, editatu
-                nahi duzun mezua hautatuz.</p>
+            <p>Irristatu ezkerrerantz Izu-modutik Egoera Alerta Moduara sartzeko. Orrialde honek 3 aurrez konfiguratutako alerta botoi zerrenda erakusten du.</p>
+            <p>Egoera alertaren testua pantailaren beheko aldeko editatu botoiaz edita dezakezu eta, ondoren, editatu nahi duzun mezua hautatuz.</p>
             <p>Mezuak dagokion botoia sakatuz bidaltzen dira.</p>
-            <p>Botoi testuari ahots-mezu bat gehitu nahi baduzu, dagokion alertaren ondoan dagoen mikrofono botoia
-                erabil dezakezu.</p>
+            <p>Botoi testuari ahots-mezu bat gehitu nahi baduzu, dagokion alertaren ondoan dagoen mikrofono botoia erabil dezakezu.</p>
         </section>
 
         <!-- 5. Managing Recipients -->
@@ -780,18 +679,14 @@
             <h2>5. 👥 Hartzaileak kudeatzea</h2>
             <p>Sakatu goiko tresna-barrako jendearen ikonoa Hartzaileak pantaila irekitzeko.</p>
             <ul>
-                <li>Gehitu eskuz: ukitu Gehitu eta idatzi telefono-zenbaki bat nazioarteko formatuan (adibidez,
-                    +31600000000).</li>
-                <li>Gehitu Kontaktuetatik — sakatu kontaktuen ikonoa telefonoaren helbide-liburutik zuzenean hautatzeko.
-                </li>
-                <li>Gehitu posta elektronikoa — aukeran gehitu helbide elektroniko bat hartzaile bakoitzari, posta
-                    elektronikoa erredundatzeko.</li>
+                <li>Gehitu eskuz: ukitu Gehitu eta idatzi telefono-zenbaki bat nazioarteko formatuan (adibidez, +31600000000).</li>
+                <li>Gehitu Kontaktuetatik — sakatu kontaktuen ikonoa telefonoaren helbide-liburutik zuzenean hautatzeko.</li>
+                <li>Gehitu posta elektronikoa — aukeran gehitu helbide elektroniko bat hartzaile bakoitzari, posta elektronikoa erredundatzeko.</li>
                 <li>Kendu — irristatu hatza edo ukitu edozein kontaktuen ondoan dagoen ezabatzeko ikonoa.</li>
             </ul>
             <blockquote class="alert-note">
                 <p>Doako maila: hartzaile bat gehienez. Premium: 50 hartzaile gehienez.</p>
-                <p>iOS aholkua: Kontaktu batzuk bakarrik ikusten badituzu, joan Ezarpenak > Pribatutasuna > Kontaktuak >
-                    TapAlert eta hautatu Kontaktu guztiak.</p>
+                <p>iOS aholkua: Kontaktu batzuk bakarrik ikusten badituzu, joan Ezarpenak > Pribatutasuna > Kontaktuak > TapAlert eta hautatu Kontaktu guztiak.</p>
             </blockquote>
         </section>
 
@@ -801,8 +696,7 @@
             <ol>
                 <li>Ireki aplikazioa (edo sakatu hasierako pantailako widget-a).</li>
                 <li>Sakatu alerta-botoia (SOS, Ondo nago edo Modu Estandarreko zirrikitua).</li>
-                <li>Atzerako kontaketa konfiguratuta badago, elkarrizketa-koadro bat agertuko da bertan behera uzteko
-                    denbora emango dizu.</li>
+                <li>Atzerako kontaketa konfiguratuta badago, elkarrizketa-koadro bat agertuko da bertan behera uzteko denbora emango dizu.</li>
                 <li>Aplikazioak zure uneko GPS kokapena lortzen du eta mezua eraikitzen du.</li>
                 <li>Alerta-soinua bidaltzen duzun bitartean erreproduzitzen da.</li>
                 <li>Egoera-txosten bat erakusten da hartzaile bakoitzeko arrakasta edo hutsegite xehetasunekin.</li>
@@ -821,8 +715,7 @@
             <h2>7. ⏱️ Atzerako kontaketa elkarrizketa</h2>
             <p>Bidali aurretik, TapAlert-ek atzerako kontaketa bat erakusten du ustekabeko alertak saihesteko.</p>
             <ul>
-                <li>Iraupena lehenetsia: 10 segundo. 0tik (berehala) 30 segundora doi daiteke Ezarpenak > Atzerako
-                    kontuaren iraupena atalean.</li>
+                <li>Iraupena lehenetsia: 10 segundo. 0tik (berehala) 30 segundora doi daiteke Ezarpenak > Atzerako kontuaren iraupena atalean.</li>
                 <li>Utzi: ukitu UTZEZ Atzerako kontaketa zehar edozein unetan bertan behera uzteko.</li>
                 <li>Bidali berehala: sakatu BIDALI ORAIN geratzen den atzerapena saltatzeko.</li>
             </ul>
@@ -831,9 +724,7 @@
         <!-- 8. Check-in Timer -->
         <section class="guide-section" id="checkin-timer">
             <h2>8. ⏰ Check-in tenporizadorea (Premium)</h2>
-            <p>Check-in tenporizadorea hildakoen etengailua da: ez baduzu bertan behera uzten garaiz, TapAlert-ek
-                automatikoki alerta bat bidaltzen du. Baliagarria ibilaldietarako, bakarrik bidaiatzeko edo erantzutea
-                uzten baduzu norbait jakinaraztea nahi duzun edozein egoeratan.</p>
+            <p>Check-in tenporizadorea hildakoen etengailua da: ez baduzu bertan behera uzten garaiz, TapAlert-ek automatikoki alerta bat bidaltzen du. Baliagarria ibilaldietarako, bakarrik bidaiatzeko edo erantzutea uzten baduzu norbait jakinaraztea nahi duzun edozein egoeratan.</p>
 
             <h3>Hasteko:</h3>
             <ol>
@@ -846,23 +737,19 @@
             <h3>Korrika bitartean:</h3>
             <ul>
                 <li>Tenporizadoreak atzerako kontaketa egiten du pantailan.</li>
-                <li>5 minutu baino gutxiago geratzen direnean, TapAlert-ek abisu-soinu bat erreproduzitzen du eta
-                    elkarrizketa-koadro bat erakusten du:
+                <li>5 minutu baino gutxiago geratzen direnean, TapAlert-ek abisu-soinu bat erreproduzitzen du eta elkarrizketa-koadro bat erakusten du:
                     <ul>
                         <li>Utzi — baztertu abisua eta utzi tenporizadoreak aurrera egiten.</li>
                         <li>Gelditu — bertan behera utzi tenporizadorea (ez da alertarik bidaliko).</li>
                         <li>Berrabiarazi — berrezarri tenporizadorea jatorrizko iraupenera.</li>
                     </ul>
                 </li>
-                <li>Tenporizadorea zerora iristen bada gelditu edo berrezarri gabe, alerta automatikoki bidaliko da.
-                </li>
+                <li>Tenporizadorea zerora iristen bada gelditu edo berrezarri gabe, alerta automatikoki bidaliko da.</li>
             </ul>
 
             <blockquote class="alert-warning">
-                <p>Android: tenporizadorea lehen planoko zerbitzu gisa exekutatzen da eta aktibo jarraitzen du
-                    aplikazioa atzeko planoan dagoenean edo pantaila itzalita dagoenean.</p>
-                <p>iOS: baliteke tenporizadorea ez abiatzea aplikazioa indarrez ixten bada. Mantendu aplikazioa atzeko
-                    planoan martxan.</p>
+                <p>Android: tenporizadorea lehen planoko zerbitzu gisa exekutatzen da eta aktibo jarraitzen du aplikazioa atzeko planoan dagoenean edo pantaila itzalita dagoenean.</p>
+                <p>iOS: baliteke tenporizadorea ez abiatzea aplikazioa indarrez ixten bada. Mantendu aplikazioa atzeko planoan martxan.</p>
             </blockquote>
         </section>
 
@@ -872,8 +759,7 @@
             <p>Sakatu goiko tresna-barrako erlojuaren ikonoa zure alerta-historia ikusteko.</p>
             <ul>
                 <li>Alerta bakoitzaren denbora-zigilua, mezua eta entrega-metodoa erakusten ditu.</li>
-                <li>Sakatu edozein sarrera hartzaile bakoitzeko arrakasta/hutsegiteko xehetasunak eta erroreen
-                    informazioa lortzeko.</li>
+                <li>Sakatu edozein sarrera hartzaile bakoitzeko arrakasta/hutsegiteko xehetasunak eta erroreen informazioa lortzeko.</li>
                 <li>Doako maila: azken 20 alertak gordetzen ditu. Premium: 200 denda gehienez.</li>
                 <li>Ezabatu banakako sarrerak edo garbitu historia guztia zakarrontziaren ikonotik.</li>
             </ul>
@@ -887,15 +773,12 @@
             <h3>SMS metodoa</h3>
             <h4>Android:</h4>
             <ul>
-                <li>Zuzeneko SMSa — zure SIM txartelaren bidez bidaltzen du, ez da Internet behar. Mugikorra erabilgarri
-                    dagoenean hobesten da.</li>
-                <li>Twilio — Twilio APIaren bidez bidaltzen du Internet bidez (Wi-Fi edo datuak). Errepide automatiko
-                    gisa erabiltzen da SMS zuzenak huts egiten badu.</li>
+                <li>Zuzeneko SMSa — zure SIM txartelaren bidez bidaltzen du, ez da Internet behar. Mugikorra erabilgarri dagoenean hobesten da.</li>
+                <li>Twilio — Twilio APIaren bidez bidaltzen du Internet bidez (Wi-Fi edo datuak). Errepide automatiko gisa erabiltzen da SMS zuzenak huts egiten badu.</li>
             </ul>
             <h4>iOS:</h4>
             <ul>
-                <li>iOS Mezuak (eskuz) — aurrez betetako jatorrizko Mezuak aplikazioa irekitzen du. Bidali eskuz ukitzen
-                    duzu. Ez da Twilio konturik behar.</li>
+                <li>iOS Mezuak (eskuz) — aurrez betetako jatorrizko Mezuak aplikazioa irekitzen du. Bidali eskuz ukitzen duzu. Ez da Twilio konturik behar.</li>
                 <li>Twilio (Automatikoa) - Twilio APIaren bidez automatikoki bidaltzen du. Twilio kontua behar du.</li>
             </ul>
             <blockquote class="alert-note">
@@ -903,15 +786,12 @@
             </blockquote>
 
             <h3>Posta elektronikoaren erredundantzia</h3>
-            <p>Konfiguratu SMTP posta elektronikoa SMSez gain posta elektroniko bidez alertak bidaltzeko. Erabilgarria
-                SMS erabilgarri ez dagoenean baina Wi-Fi konektatuta dagoenean.</p>
+            <p>Konfiguratu SMTP posta elektronikoa SMSez gain posta elektroniko bidez alertak bidaltzeko. Erabilgarria SMS erabilgarri ez dagoenean baina Wi-Fi konektatuta dagoenean.</p>
             <ol>
                 <li>Joan Ezarpenak > Posta elektronikoaren erredundantzia.</li>
                 <li>Gaitu posta elektronikoaren erredundantzia.</li>
-                <li>Hautatu aurrez ezarritako hornitzaile bat (Gmail, Outlook, Yahoo, iCloud) edo idatzi SMTP xehetasun
-                    pertsonalizatuak.</li>
-                <li>Sartu zure helbide elektronikoa eta aplikazioaren pasahitz bat (pasahitz nagusiaren gainetik
-                    gomendatua).</li>
+                <li>Hautatu aurrez ezarritako hornitzaile bat (Gmail, Outlook, Yahoo, iCloud) edo idatzi SMTP xehetasun pertsonalizatuak.</li>
+                <li>Sartu zure helbide elektronikoa eta aplikazioaren pasahitz bat (pasahitz nagusiaren gainetik gomendatua).</li>
                 <li>Ukitu Probatu posta elektronikoaren konexioa egiaztatzeko, bertan fidatu aurretik.</li>
             </ol>
             <p>Mezuak helbide elektroniko bat gordeta duen zure zerrendako edozein hartzaileri bidaltzen dira.</p>
@@ -925,19 +805,16 @@
             <h3>Trigger metodoa</h3>
             <ul>
                 <li>Ukitu bidaltzeko — ukitu bakar batek atzerako kontaketa hasten du.</li>
-                <li>Eduki sakatuta (5s) — botoia 5 segundoz eduki behar duzu. Ustekabeko bidalketak saihesteko
-                    gomendatua.</li>
+                <li>Eduki sakatuta (5s) — botoia 5 segundoz eduki behar duzu. Ustekabeko bidalketak saihesteko gomendatua.</li>
             </ul>
 
             <h3>Alerta atzerako kontaketa</h3>
-            <p>Ezarri alerta bidali aurretik atzerapena (0-30 segundo). Atzerako kontaketa luzeago batek denbora gehiago
-                ematen dizu bertan behera uzteko, akats baten ondorioz abiarazten bada.</p>
+            <p>Ezarri alerta bidali aurretik atzerapena (0-30 segundo). Atzerako kontaketa luzeago batek denbora gehiago ematen dizu bertan behera uzteko, akats baten ondorioz abiarazten bada.</p>
 
             <h3>Soinu ezarpenak</h3>
             <ul>
                 <li>Aukeratu Soinu arruntak edo Soinu aberatsak (edo Bat ere ez).</li>
-                <li>Soinu-eredua: hautatu alerta azkarra, bip laburrak, txirrin musikala, sirena deigarria,
-                    pultsu-dei-jotzea, tutu organoa, eraztun metalikoa edo erlauntza elektronikoa.</li>
+                <li>Soinu-eredua: hautatu alerta azkarra, bip laburrak, txirrin musikala, sirena deigarria, pultsu-dei-jotzea, tutu organoa, eraztun metalikoa edo erlauntza elektronikoa.</li>
                 <li>Soinuaren tonua: baxua, estandarra edo altua.</li>
                 <li>Bolumena — egokitu graduatzailearekin.</li>
                 <li>SOS eta I'm OK alertek soinu eredu independenteak dituzte.</li>
@@ -948,8 +825,7 @@
                 <li>Zure izena — irteerako mezuetan sartzen da hartzaileek alerta nork bidali duen jakin dezaten.</li>
                 <li>Atzerako kontuaren iraupena — bidali aurretik atzeratzea (ikus goian).</li>
                 <li>Konfiguratutako alerta-kopurua: modu estandarrean zenbat testu-tarte agertzen diren (3–7).</li>
-                <li>Abiarazi automatikoki abiaraztean: atzerako kontaketa berehala abiarazten du aplikazioa irekitzen
-                    denean. Gaitu hau TapAlert lasterbide fisiko baten bidez abiarazten baduzu soilik.</li>
+                <li>Abiarazi automatikoki abiaraztean: atzerako kontaketa berehala abiarazten du aplikazioa irekitzen denean. Gaitu hau TapAlert lasterbide fisiko baten bidez abiarazten baduzu soilik.</li>
                 <li>Flash on Alert — Pantaila eta linterna keinu egiten ditu alerta bat bidaltzen denean.</li>
                 <li>Jatorrizko herrialdea: tokiko telefono-zenbakiak behar bezala formateatu direla ziurtatzen du.</li>
                 <li>Aplikazioaren hizkuntza — gainidatzi interfazearen hizkuntza (lehenetsia: gailuaren hizkuntza).</li>
@@ -960,30 +836,26 @@
         <!-- 11. Home Screen Widget -->
         <section class="guide-section" id="widget">
             <h2>11. 🧩 Hasierako pantailaren widgeta (Android)</h2>
-            <p>Gehitu TapAlert widget bat zure Android-en hasierako pantailan ukitu bakarrean sartzeko aplikazioa ireki
-                gabe.</p>
+            <p>Gehitu TapAlert widget bat zure Android-en hasierako pantailan ukitu bakarrean sartzeko aplikazioa ireki gabe.</p>
 
             <h3>Gehitzeko:</h3>
             <ol>
                 <li>Joan Ezarpenak > Widget > Gehitu widget-era.</li>
-                <li>Aukeratu Estandarra (1x1) ikono trinko baterako edo Handia (2x2) ikusgarritasun handiagoa izateko.
-                </li>
+                <li>Aukeratu Estandarra (1x1) ikono trinko baterako edo Handia (2x2) ikusgarritasun handiagoa izateko.</li>
                 <li>Jarraitu pantailako argibideei hasierako pantailan jartzeko.</li>
             </ol>
 
             <h3>Nola funtzionatzen du:</h3>
             <ul>
                 <li>Widgeta sakatuz gero, aplikazioa irekitzen da eta berehala hasten da alerta atzerako kontaketa.</li>
-                <li>Soinua erreproduzitzen da eta atzerako kontaketa elkarrizketa-koadroa agertzen da; hala ere, bertan
-                    behera utz dezakezu akats baten ondorioz abiarazten bada.</li>
+                <li>Soinua erreproduzitzen da eta atzerako kontaketa elkarrizketa-koadroa agertzen da; hala ere, bertan behera utz dezakezu akats baten ondorioz abiarazten bada.</li>
             </ul>
         </section>
 
         <!-- 12. Making Alerts Stand Out -->
         <section class="guide-section" id="stand-out">
             <h2>12. 🔔 Hartzaileen telefonoetan alertak nabarmentzea</h2>
-            <p>Hartzaileek telefonoak konfigura ditzakete TapAlert mezuei dei-tonu berezi bat emateko edo Ez molestatu
-                saihesteko.</p>
+            <p>Hartzaileek telefonoak konfigura ditzakete TapAlert mezuei dei-tonu berezi bat emateko edo Ez molestatu saihesteko.</p>
 
             <h3>iPhone hartzaileak:</h3>
             <ol>
@@ -1002,23 +874,16 @@
             </ol>
 
             <blockquote class="alert-tip">
-                <p>Twilio erabiltzen? Zure kontaktuek zure Twilio zenbakitik edo igorlearen IDtik (adibidez, TapAlert)
-                    mezuak jasoko dituzte. Zenbaki/ID hori bere kontaktuetan gehitu beharko lukete goiko ezarpenak
-                    aplikatzeko.</p>
+                <p>Twilio erabiltzen? Zure kontaktuek zure Twilio zenbakitik edo igorlearen IDtik (adibidez, TapAlert) mezuak jasoko dituzte. Zenbaki/ID hori bere kontaktuetan gehitu beharko lukete goiko ezarpenak aplikatzeko.</p>
             </blockquote>
         </section>
 
         <!-- 13. Remote Setup (Magic Link) -->
         <section class="guide-section" id="magic-link">
             <h2>13. 🔗 Urruneko konfigurazioa (Magic Link)</h2>
-            <p>Familiako kide edo zaintzaileak TapAlert zure gailuan urrunetik konfiguratu dezake Magic Link bat
-                erabiliz.</p>
-            <p>Zaintzaileak TapAlert irekitzen du, Konfiguratu beste norbaitentzat hautatzen du, kontaktuak,
-                mezu-txantiloiak eta Twilio/posta elektronikoaren aukerako kredentzialak betetzen ditu, eta
-                konfigurazio-esteka bat sortzen du. Zure gailuan esteka hori ukitzen duzunean, TapAlert-ek automatikoki
-                aplikatzen du konfigurazio osoa.</p>
-            <p>Horrek esan nahi du teknologian aditua den familiako kide batek dena konfigura dezakeela bertan egon
-                beharrik gabe; esteka bat sakatu besterik ez duzu.</p>
+            <p>Familiako kide edo zaintzaileak TapAlert zure gailuan urrunetik konfiguratu dezake Magic Link bat erabiliz.</p>
+            <p>Zaintzaileak TapAlert irekitzen du, Konfiguratu beste norbaitentzat hautatzen du, kontaktuak, mezu-txantiloiak eta Twilio/posta elektronikoaren aukerako kredentzialak betetzen ditu, eta konfigurazio-esteka bat sortzen du. Zure gailuan esteka hori ukitzen duzunean, TapAlert-ek automatikoki aplikatzen du konfigurazio osoa.</p>
+            <p>Horrek esan nahi du teknologian aditua den familiako kide batek dena konfigura dezakeela bertan egon beharrik gabe; esteka bat sakatu besterik ez duzu.</p>
         </section>
 
         <!-- 14. Premium Upgrade -->
@@ -1051,8 +916,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p>Ukitu Berritu hartzaileen pantailan edo tenporizadorearen orrian. Beste gailu batean Premium erosi
-                baduzu, sakatu Berrezarri erosketak.</p>
+            <p>Ukitu Berritu hartzaileen pantailan edo tenporizadorearen orrian. Beste gailu batean Premium erosi baduzu, sakatu Berrezarri erosketak.</p>
         </section>
 
         <!-- 15. Troubleshooting -->
@@ -1092,8 +956,7 @@
                     </tr>
                     <tr>
                         <td>Tenporizadorea ez da pizten (iOS)</td>
-                        <td>Mantendu TapAlert irekita atzeko planoan; baliteke tenporizadorea ez abiatzea aplikazioa
-                            indarrez ixten bada</td>
+                        <td>Mantendu TapAlert irekita atzeko planoan; baliteke tenporizadorea ez abiatzea aplikazioa indarrez ixten bada</td>
                     </tr>
                     <tr>
                         <td>Erakutsitako hizkuntza okerra</td>
@@ -1111,8 +974,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik
-                        ez.</p>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
                 </div>
 
                 <div class="footer-section">
@@ -1137,8 +999,7 @@
                     <h3>Laguntza</h3>
                     <ul>
                         <li><a href="#">Ohiko galderak</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez
-                                urrats Gidak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
                         <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
                         <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
                         <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
@@ -1147,8 +1008,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta.
-                    | ❤️rekin egina zure segurtasunerako</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
             </div>
         </div>
     </footer>

@@ -448,136 +448,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Zurück nach Hause</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">DE</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/quickstart_android.html" hreflang="ca">CA</a>
-                        <a href="../de/quickstart_android.html" hreflang="de" class="active">DE</a>
-                        <a href="../quickstart_android.html" hreflang="en">EN</a>
-                        <a href="../es/quickstart_android.html" hreflang="es">ES</a>
-                        <a href="../eu/quickstart_android.html" hreflang="eu">EU</a>
-                        <a href="../fr/quickstart_android.html" hreflang="fr">FR</a>
-                        <a href="../gl/quickstart_android.html" hreflang="gl">GL</a>
-                        <a href="../it/quickstart_android.html" hreflang="it">IT</a>
-                        <a href="../nl/quickstart_android.html" hreflang="nl">NL</a>
-                        <a href="../pt/quickstart_android.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">DE</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/quickstart_android.html" hreflang="ca">CA</a>
+            <a href="../de/quickstart_android.html" hreflang="de" class="active">DE</a>
+            <a href="../quickstart_android.html" hreflang="en">EN</a>
+            <a href="../es/quickstart_android.html" hreflang="es">ES</a>
+            <a href="../eu/quickstart_android.html" hreflang="eu">EU</a>
+            <a href="../fr/quickstart_android.html" hreflang="fr">FR</a>
+            <a href="../gl/quickstart_android.html" hreflang="gl">GL</a>
+            <a href="../it/quickstart_android.html" hreflang="it">IT</a>
+            <a href="../nl/quickstart_android.html" hreflang="nl">NL</a>
+            <a href="../pt/quickstart_android.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -594,9 +502,7 @@
                         <div class="step-icon">✅</div>
                         <h3>1. Erteilen Sie wesentliche Berechtigungen</h3>
                     </div>
-                    <p>Akzeptieren Sie während des Bewerbungs-Onboardings alle Berechtigungen (SMS, Standort, Kontakte).
-                        Wenn Sie sie überspringen, werden sie bei Bedarf später angefordert. Für ein reibungsloses
-                        Erlebnis empfehlen wir jedoch, sie jetzt zu akzeptieren.</p>
+                    <p>Akzeptieren Sie während des Bewerbungs-Onboardings alle Berechtigungen (SMS, Standort, Kontakte). Wenn Sie sie überspringen, werden sie bei Bedarf später angefordert. Für ein reibungsloses Erlebnis empfehlen wir jedoch, sie jetzt zu akzeptieren.</p>
                 </div>
 
                 <div class="step-card">
@@ -607,11 +513,9 @@
                     <p>Im Onboarding-Konfigurationsschritt empfehlen wir dringend:</p>
                     <ul>
                         <li><strong>Empfänger hinzufügen</strong> zu Ihrer Notfallalarmliste hinzufügen.</li>
-                        <li><strong>Fügen Sie das App-Widget hinzu</strong> auf Ihren Startbildschirm für sofortigen
-                            Zugriff.</li>
+                        <li><strong>Fügen Sie das App-Widget hinzu</strong> auf Ihren Startbildschirm für sofortigen Zugriff.</li>
                     </ul>
-                    <p style="margin-top: 10px;"><small><em>Hinweis: Diese können nach dem Onboarding auch in den
-                                Einstellungen verwaltet werden.</em></small></p>
+                    <p style="margin-top: 10px;"><small><em>Hinweis: Diese können nach dem Onboarding auch in den Einstellungen verwaltet werden.</em></small></p>
                 </div>
 
                 <div class="step-card">
@@ -619,15 +523,8 @@
                         <div class="step-icon">📡</div>
                         <h3>3. Konnektivität und <span class="notranslate" translator="no">Fallbacks</span>s</h3>
                     </div>
-                    <p>Überprüfen Sie, ob <strong>WLAN-Anrufe</strong> auf Ihrem Telefon aktiviert sind. Wenn Ihr
-                        Mobilfunkanbieter dies nicht unterstützt, sollten Sie die Verwendung eines <strong><span
-                                class="notranslate" translator="no">Twilio</span>-Kontos</strong> als <span
-                            class="notranslate" translator="no">Fallback</span> für reine WLAN-Situationen in Betracht
-                        ziehen. <span class="notranslate" translator="no">Twilio</span> kann kostenlos gestartet werden
-                        und bietet eine zuverlässige SMS-Zustellung ohne Mobilfunksignal.</p>
-                    <p style="margin-top: 10px;">Sie können auch <strong>E-Mail-Redundanz</strong> in <span
-                            class="notranslate" translator="no">TapAlert</span> aktivieren, um sicherzustellen, dass
-                        Ihre Lieben über mehrere Kanäle benachrichtigt werden.</p>
+                    <p>Überprüfen Sie, ob <strong>WLAN-Anrufe</strong> auf Ihrem Telefon aktiviert sind. Wenn Ihr Mobilfunkanbieter dies nicht unterstützt, sollten Sie die Verwendung eines <strong><span class="notranslate" translator="no">Twilio</span>-Kontos</strong> als <span class="notranslate" translator="no">Fallback</span> für reine WLAN-Situationen in Betracht ziehen. <span class="notranslate" translator="no">Twilio</span> kann kostenlos gestartet werden und bietet eine zuverlässige SMS-Zustellung ohne Mobilfunksignal.</p>
+                    <p style="margin-top: 10px;">Sie können auch <strong>E-Mail-Redundanz</strong> in <span class="notranslate" translator="no">TapAlert</span> aktivieren, um sicherzustellen, dass Ihre Lieben über mehrere Kanäle benachrichtigt werden.</p>
                 </div>
 
                 <div class="step-card">
@@ -635,11 +532,7 @@
                         <div class="step-icon">🧪</div>
                         <h3>4. Führen Sie einen Testalarm durch</h3>
                     </div>
-                    <p>Testen Sie Ihr Setup, indem Sie eine <strong>„Mir geht es gut“-Nachricht senden. Tippen Sie
-                            einmal auf die Schaltfläche (oder halten Sie sie 5 Sekunden lang gedrückt, falls
-                            konfiguriert). Es erscheint ein Countdown, der Ihnen Zeit zum Abbrechen oder sofortigen
-                            Senden gibt. Wenn Sie es ablaufen lassen, wird die Benachrichtigung automatisch gesendet!
-                    </p>
+                    <p>Testen Sie Ihr Setup, indem Sie eine <strong>„Mir geht es gut“-Nachricht senden. Tippen Sie einmal auf die Schaltfläche (oder halten Sie sie 5 Sekunden lang gedrückt, falls konfiguriert). Es erscheint ein Countdown, der Ihnen Zeit zum Abbrechen oder sofortigen Senden gibt. Wenn Sie es ablaufen lassen, wird die Benachrichtigung automatisch gesendet!</p>
                 </div>
 
                 <div class="step-card">
@@ -647,10 +540,7 @@
                         <div class="step-icon">↔️</div>
                         <h3>5. Entdecken Sie die Navigation</h3>
                     </div>
-                    <p>Wischen Sie <strong>nach links</strong>, um auf Ihre vorkonfigurierten benutzerdefinierten
-                        Nachrichten für bestimmte Situationen zuzugreifen. Wischen Sie <strong>nach rechts</strong>, um
-                        den <strong>Check-in-Timer</strong> (Dead Man's Switch) zu aktivieren, der automatisch
-                        benachrichtigt, wenn Sie nicht bis zu einer bestimmten Zeit einchecken.</p>
+                    <p>Wischen Sie <strong>nach links</strong>, um auf Ihre vorkonfigurierten benutzerdefinierten Nachrichten für bestimmte Situationen zuzugreifen. Wischen Sie <strong>nach rechts</strong>, um den <strong>Check-in-Timer</strong> (Dead Man's Switch) zu aktivieren, der automatisch benachrichtigt, wenn Sie nicht bis zu einer bestimmten Zeit einchecken.</p>
                 </div>
 
                 <div class="step-card">
@@ -658,10 +548,7 @@
                         <div class="step-icon">🤝</div>
                         <h3>6. Einrichtung für andere</h3>
                     </div>
-                    <p>Wenn Sie dieses Telefon für eine andere Person einrichten (z. B. einen älteren Verwandten),
-                        nehmen Sie sich einen Moment Zeit, um deren benutzerdefinierte Benachrichtigungen
-                        vorzukonfigurieren (nach links wischen), damit diese Person die relevantesten Nachrichten immer
-                        zur Hand hat.</p>
+                    <p>Wenn Sie dieses Telefon für eine andere Person einrichten (z. B. einen älteren Verwandten), nehmen Sie sich einen Moment Zeit, um deren benutzerdefinierte Benachrichtigungen vorzukonfigurieren (nach links wischen), damit diese Person die relevantesten Nachrichten immer zur Hand hat.</p>
                 </div>
             </div>
         </section>
@@ -700,8 +587,7 @@
                     <h3>Unterstützung</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate"
-                                    translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
                         <li><a href="accessibility_guide.html">Leitfaden zur Barrierefreiheit</a></li>
                         <li><a href="troubleshooting.html">Fehlerbehebung</a></li>
                         <li><a href="contact.html">Kontaktieren Sie den Support</a></li>
@@ -710,8 +596,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. |
-                    Hergestellt mit ❤️ für Ihre Sicherheit</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. | Hergestellt mit ❤️ für Ihre Sicherheit</p>
             </div>
         </div>
     </footer>

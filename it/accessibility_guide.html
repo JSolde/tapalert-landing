@@ -374,136 +374,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Ritorno a casa</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">IT</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
-                        <a href="../accessibility_guide.html" hreflang="en">EN</a>
-                        <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
-                        <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
-                        <a href="../it/accessibility_guide.html" hreflang="it" class="active">IT</a>
-                        <a href="../nl/accessibility_guide.html" hreflang="nl">NL</a>
-                        <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">IT</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
+            <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
+            <a href="../accessibility_guide.html" hreflang="en">EN</a>
+            <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
+            <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
+            <a href="../it/accessibility_guide.html" hreflang="it" class="active">IT</a>
+            <a href="../nl/accessibility_guide.html" hreflang="nl">NL</a>
+            <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -513,26 +421,16 @@
 
         <div class="guide-header">
             <h1 class="guide-title">Funzionalità di accessibilità per gli anziani</h1>
-            <p class="guide-meta"><span class="notranslate" Translate="no">TapAlert</span> è progettato per essere
-                utilizzabile da tutti, comprese le persone con perdita dell'udito, ipovisione, tremori o altre
-                condizioni legate all'età. Questa guida spiega ciascuna funzionalità di accessibilità e come sfruttarla
-                al meglio.</p>
+            <p class="guide-meta"><span class="notranslate" Translate="no">TapAlert</span> è progettato per essere utilizzabile da tutti, comprese le persone con perdita dell'udito, ipovisione, tremori o altre condizioni legate all'età. Questa guida spiega ciascuna funzionalità di accessibilità e come sfruttarla al meglio.</p>
         </div>
 
         <section class="guide-section" id="step-1">
             <h2>1. Supporto per testo di grandi dimensioni</h2>
-            <p><strong>Chi aiuta:</strong> Persone con problemi di vista o difficoltà nella lettura di testi di piccole
-                dimensioni.</p>
-            <p><span class="notranslate" Translate="no">TapAlert</span> rispetta la dimensione del carattere impostata
-                nelle impostazioni di sistema del telefono. Se aumenti le dimensioni del testo in <strong>Impostazioni >
-                    Display > Dimensioni carattere</strong> (Android) o <strong>Impostazioni > Accessibilità >
-                    Dimensioni display e testo > Testo più grande</strong> (iOS), tutto il testo in <span
-                    class="notranslate" Translate="no">TapAlert</span> aumenterà di conseguenza: pulsanti, etichette,
-                menu e messaggi.</p>
+            <p><strong>Chi aiuta:</strong> Persone con problemi di vista o difficoltà nella lettura di testi di piccole dimensioni.</p>
+            <p><span class="notranslate" Translate="no">TapAlert</span> rispetta la dimensione del carattere impostata nelle impostazioni di sistema del telefono. Se aumenti le dimensioni del testo in <strong>Impostazioni > Display > Dimensioni carattere</strong> (Android) o <strong>Impostazioni > Accessibilità > Dimensioni display e testo > Testo più grande</strong> (iOS), tutto il testo in <span class="notranslate" Translate="no">TapAlert</span> aumenterà di conseguenza: pulsanti, etichette, menu e messaggi.</p>
             <div class="alert-box">
                 <h4>💡 Nessuna azione necessaria all'interno dell'app</h4>
-                <p>Imposta semplicemente la dimensione del carattere preferita nelle impostazioni del telefono e <span
-                        class="notranslate" Translate="no">TapAlert</span> la seguirà automaticamente.</p>
+                <p>Imposta semplicemente la dimensione del carattere preferita nelle impostazioni del telefono e <span class="notranslate" Translate="no">TapAlert</span> la seguirà automaticamente.</p>
             </div>
         </section>
 
@@ -546,25 +444,16 @@
             </ul>
             <p>Quando uno screen reader è attivo:</p>
             <ul>
-                <li>I pulsanti <strong><span class="notranslate" Translate="no">SOS</span></strong> e <strong>Sto
-                        bene</strong> vengono annunciati con i loro nomi e lo stato attuale (abilitato o disabilitato).
-                </li>
-                <li>Quando si avvia un conto alla rovescia prima di inviare un avviso, l'utilità per la lettura dello
-                    schermo conta ad alta voce i secondi rimanenti in modo da sapere sempre quanto tempo rimane prima
-                    che l'avviso venga inviato.</li>
-                <li>Dopo l'invio di un avviso, lo screen reader annuncia <strong>"Avviso inviato"</strong> o
-                    <strong>"Avviso non riuscito"</strong> in modo da conoscere il risultato senza dover guardare lo
-                    schermo.
-                </li>
+                <li>I pulsanti <strong><span class="notranslate" Translate="no">SOS</span></strong> e <strong>Sto bene</strong> vengono annunciati con i loro nomi e lo stato attuale (abilitato o disabilitato).</li>
+                <li>Quando si avvia un conto alla rovescia prima di inviare un avviso, l'utilità per la lettura dello schermo conta ad alta voce i secondi rimanenti in modo da sapere sempre quanto tempo rimane prima che l'avviso venga inviato.</li>
+                <li>Dopo l'invio di un avviso, lo screen reader annuncia <strong>"Avviso inviato"</strong> o <strong>"Avviso non riuscito"</strong> in modo da conoscere il risultato senza dover guardare lo schermo.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-3">
             <h2>3. Feedback tattile (vibrazione del telefono)</h2>
-            <p><strong>Chi aiuta:</strong> Persone con perdita dell'udito che non riescono a sentire il suono del conto
-                alla rovescia o chiunque preferisca la conferma tattile.</p>
-            <p><span class="notranslate" Translate="no">TapAlert</span> utilizza il motore di vibrazione del tuo
-                telefono per darti un feedback fisico nei momenti chiave:</p>
+            <p><strong>Chi aiuta:</strong> Persone con perdita dell'udito che non riescono a sentire il suono del conto alla rovescia o chiunque preferisca la conferma tattile.</p>
+            <p><span class="notranslate" Translate="no">TapAlert</span> utilizza il motore di vibrazione del tuo telefono per darti un feedback fisico nei momenti chiave:</p>
             <table>
                 <thead>
                     <tr>
@@ -597,111 +486,78 @@
             </table>
             <div class="alert-box">
                 <h4>💡 Nessuna azione necessaria</h4>
-                <p>Il feedback tattile funziona automaticamente finché la vibrazione è abilitata sul telefono (controlla
-                    l'interruttore silenzioso/vibrazione del telefono).</p>
+                <p>Il feedback tattile funziona automaticamente finché la vibrazione è abilitata sul telefono (controlla l'interruttore silenzioso/vibrazione del telefono).</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-4">
             <h2>4. Avvisi sonori</h2>
-            <p><strong>Chi aiuta:</strong> Persone che hanno bisogno di sentire quando viene inviato un avviso, compresi
-                quelli con perdita uditiva moderata.</p>
-            <p>Quando viene inviato un avviso, <span class="notranslate" Translate="no">TapAlert</span> riproduce un
-                suono sul <strong>tuo dispositivo</strong> per confermare che l'avviso è stato inviato. Puoi
-                personalizzare il suono in <strong>Impostazioni > Suono di notifica</strong>:</p>
+            <p><strong>Chi aiuta:</strong> Persone che hanno bisogno di sentire quando viene inviato un avviso, compresi quelli con perdita uditiva moderata.</p>
+            <p>Quando viene inviato un avviso, <span class="notranslate" Translate="no">TapAlert</span> riproduce un suono sul <strong>tuo dispositivo</strong> per confermare che l'avviso è stato inviato. Puoi personalizzare il suono in <strong>Impostazioni > Suono di notifica</strong>:</p>
             <ul>
                 <li><strong>Nessuno</strong>: nessun suono</li>
-                <li><strong>Suoni semplici</strong>: toni semplici e chiari (buoni per la maggior parte degli utenti)
-                </li>
+                <li><strong>Suoni semplici</strong>: toni semplici e chiari (buoni per la maggior parte degli utenti)</li>
                 <li><strong>Suoni ricchi</strong>: toni più pieni e musicali</li>
             </ul>
             <p>All'interno di ogni stile audio, puoi anche regolare:</p>
             <ul>
-                <li><strong>Tono suono</strong>: scorri verso sinistra per ottenere un tono più basso e profondo. I
-                    suoni più bassi (intorno a 500 Hz) sono più facili da sentire per le persone con perdita dell'udito
-                    alle alte frequenze legata all'età. Per questo motivo il valore predefinito è già impostato su un
-                    tono più basso.</li>
+                <li><strong>Tono suono</strong>: scorri verso sinistra per ottenere un tono più basso e profondo. I suoni più bassi (intorno a 500 Hz) sono più facili da sentire per le persone con perdita dell'udito alle alte frequenze legata all'età. Per questo motivo il valore predefinito è già impostato su un tono più basso.</li>
                 <li><strong>Volume</strong>: imposta il volume del suono di conferma.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-5">
             <h2>5. Flash dello schermo e flash della torcia</h2>
-            <p><strong>Chi aiuta:</strong> Persone con perdita dell'udito che potrebbero non sentire il suono o chiunque
-                si trovi in ​​un ambiente rumoroso. Utile anche quando il telefono è rivolto verso il basso o in tasca.
-            </p>
-            <p>Quando un avviso viene inviato con successo, <span class="notranslate" Translate="no">TapAlert</span>
-                produce:</p>
+            <p><strong>Chi aiuta:</strong> Persone con perdita dell'udito che potrebbero non sentire il suono o chiunque si trovi in ​​un ambiente rumoroso. Utile anche quando il telefono è rivolto verso il basso o in tasca.</p>
+            <p>Quando un avviso viene inviato con successo, <span class="notranslate" Translate="no">TapAlert</span> produce:</p>
             <ol>
-                <li><strong>Schermo flash</strong>: l'intero schermo si illumina di bianco tre volte in rapida
-                    successione.</li>
-                <li><strong>Torcia</strong>: il LED della fotocamera sul retro del telefono lampeggia tre volte
-                    contemporaneamente, visibile anche quando lo schermo è rivolto verso il basso.</li>
+                <li><strong>Schermo flash</strong>: l'intero schermo si illumina di bianco tre volte in rapida successione.</li>
+                <li><strong>Torcia</strong>: il LED della fotocamera sul retro del telefono lampeggia tre volte contemporaneamente, visibile anche quando lo schermo è rivolto verso il basso.</li>
             </ol>
             <p>Entrambi i flash vengono eseguiti contemporaneamente e si completano in meno di un secondo.</p>
             <div class="alert-box warning">
                 <h4>⚠️ Come disattivarlo</h4>
-                <p>Se soffri di fotosensibilità, vai su <strong>Impostazioni → Suono di notifica → Avviso flash</strong>
-                    e disattivalo.</p>
+                <p>Se soffri di fotosensibilità, vai su <strong>Impostazioni → Suono di notifica → Avviso flash</strong> e disattivalo.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-6">
             <h2>6. Scorri per annullare il conto alla rovescia</h2>
-            <p><strong>Chi aiuta:</strong> Chiunque avvia accidentalmente un conto alla rovescia e ha bisogno di
-                annullarlo rapidamente.</p>
-            <p>Quando tocchi il pulsante <span class="notranslate" Translate="no">SOS</span>, viene visualizzata una
-                finestra di dialogo per il conto alla rovescia prima dell'invio dell'avviso. Puoi cancellarlo in due
-                modi:</p>
+            <p><strong>Chi aiuta:</strong> Chiunque avvia accidentalmente un conto alla rovescia e ha bisogno di annullarlo rapidamente.</p>
+            <p>Quando tocchi il pulsante <span class="notranslate" Translate="no">SOS</span>, viene visualizzata una finestra di dialogo per il conto alla rovescia prima dell'invio dell'avviso. Puoi cancellarlo in due modi:</p>
             <ul>
                 <li>Tocca il pulsante <strong>Annulla</strong> nella parte inferiore della finestra di dialogo.</li>
-                <li><strong>Scorri la finestra di dialogo verso sinistra o verso destra</strong>: la finestra di dialogo
-                    scorre con il dito e si chiude quando lo rilasci abbastanza.</li>
+                <li><strong>Scorri la finestra di dialogo verso sinistra o verso destra</strong>: la finestra di dialogo scorre con il dito e si chiude quando lo rilasci abbastanza.</li>
             </ul>
-            <p>In ogni caso, sentirai due brevi vibrazioni che confermano che l'avviso è stato cancellato e non è stato
-                inviato nulla.</p>
+            <p>In ogni caso, sentirai due brevi vibrazioni che confermano che l'avviso è stato cancellato e non è stato inviato nulla.</p>
         </section>
 
         <section class="guide-section" id="step-7">
             <h2>7. Composizione del messaggio vocale</h2>
-            <p><strong>Chi aiuta:</strong> Persone con tremori, artrite o altre condizioni che rendono difficile la
-                digitazione.</p>
-            <p>Invece di digitare un messaggio personalizzato prima di inviare un avviso, puoi pronunciarlo. Tocca
-                l'<strong>icona del microfono</strong> nel campo del messaggio e pronuncia il messaggio. L'app
-                trascriverà automaticamente le tue parole. Il silenzio per 3 secondi interrompe la registrazione.</p>
-            <p>Funziona sull'immissione dei messaggi nella schermata iniziale e nella finestra di dialogo del timer
-                dell'uomo morto.</p>
+            <p><strong>Chi aiuta:</strong> Persone con tremori, artrite o altre condizioni che rendono difficile la digitazione.</p>
+            <p>Invece di digitare un messaggio personalizzato prima di inviare un avviso, puoi pronunciarlo. Tocca l'<strong>icona del microfono</strong> nel campo del messaggio e pronuncia il messaggio. L'app trascriverà automaticamente le tue parole. Il silenzio per 3 secondi interrompe la registrazione.</p>
+            <p>Funziona sull'immissione dei messaggi nella schermata iniziale e nella finestra di dialogo del timer dell'uomo morto.</p>
         </section>
 
         <section class="guide-section" id="step-8">
             <h2>8. Modalità attesa per invio</h2>
-            <p><strong>Chi aiuta:</strong> Persone che tendono a toccare accidentalmente il pulsante <span
-                    class="notranslate" Translate="no">SOS</span>.</p>
-            <p>Per impostazione predefinita, il pulsante <span class="notranslate" Translate="no">SOS</span> richiede un
-                solo tocco. Se le pressioni accidentali rappresentano un problema, puoi passare alla modalità
-                <strong>Mantieni per inviare</strong>:
-            </p>
+            <p><strong>Chi aiuta:</strong> Persone che tendono a toccare accidentalmente il pulsante <span class="notranslate" Translate="no">SOS</span>.</p>
+            <p>Per impostazione predefinita, il pulsante <span class="notranslate" Translate="no">SOS</span> richiede un solo tocco. Se le pressioni accidentali rappresentano un problema, puoi passare alla modalità <strong>Mantieni per inviare</strong>:</p>
             <p>Vai a <strong>Impostazioni → Metodo di attivazione → Mantieni per inviare</strong>.</p>
-            <p>In questa modalità, è necessario tenere premuto il pulsante per l'intera durata di attesa prima che venga
-                attivato l'avviso, evitando invii accidentali.</p>
+            <p>In questa modalità, è necessario tenere premuto il pulsante per l'intera durata di attesa prima che venga attivato l'avviso, evitando invii accidentali.</p>
         </section>
 
         <section class="guide-section" id="step-9">
             <h2>9. Widget della schermata iniziale (Android)</h2>
-            <p><strong>Chi aiuta:</strong> Chiunque abbia difficoltà a sbloccare il telefono e ad aprire l'app in caso
-                di emergenza.</p>
-            <p>Su Android, puoi aggiungere un widget <span class="notranslate" Translate="no">TapAlert</span> alla
-                schermata Home in modo che il pulsante <span class="notranslate" Translate="no">SOS</span> sia sempre a
-                portata di tocco, senza aprire l'app.</p>
-            <p>Per aggiungere il widget: <strong>Impostazioni → Widget schermata iniziale → Aggiungi widget</strong>.
-            </p>
+            <p><strong>Chi aiuta:</strong> Chiunque abbia difficoltà a sbloccare il telefono e ad aprire l'app in caso di emergenza.</p>
+            <p>Su Android, puoi aggiungere un widget <span class="notranslate" Translate="no">TapAlert</span> alla schermata Home in modo che il pulsante <span class="notranslate" Translate="no">SOS</span> sia sempre a portata di tocco, senza aprire l'app.</p>
+            <p>Per aggiungere il widget: <strong>Impostazioni → Widget schermata iniziale → Aggiungi widget</strong>.</p>
         </section>
 
         <div class="next-steps">
             <h3>Hai bisogno di ulteriore aiuto?</h3>
             <p>If you have any questions about configuring these caratteristiche or need assistance, check our <a
-                    href="troubleshooting.html">Guida alla risoluzione dei problemi</a> or <a
-                    href="contact.html">Contatta l'assistenza</a>.</p>
+                    href="troubleshooting.html">Guida alla risoluzione dei problemi</a> or <a href="contact.html">Contatta l'assistenza</a>.</p>
         </div>
     </main>
 
@@ -711,8 +567,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.
-                    </p>
+                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.</p>
                 </div>
 
                 <div class="footer-section">
@@ -737,8 +592,7 @@
                     <h3>Supporto</h3>
                     <ul>
                         <li><a href="#">Domande frequenti</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide
-                                passo passo</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide passo passo</a></li>
                         <li><a href="accessibility_guide.html">Guida all'accessibilità</a></li>
                         <li><a href="troubleshooting.html">Risoluzione dei problemi</a></li>
                         <li><a href="contact.html">Contatta l'assistenza</a></li>
@@ -747,8 +601,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. |
-                    Fatto con ❤️ per la tua sicurezza</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. | Fatto con ❤️ per la tua sicurezza</p>
             </div>
         </div>
     </footer>

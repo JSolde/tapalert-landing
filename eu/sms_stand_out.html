@@ -447,136 +447,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">EU</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/sms_stand_out.html" hreflang="ca">CA</a>
-                        <a href="../de/sms_stand_out.html" hreflang="de">DE</a>
-                        <a href="../sms_stand_out.html" hreflang="en">EN</a>
-                        <a href="../es/sms_stand_out.html" hreflang="es">ES</a>
-                        <a href="../eu/sms_stand_out.html" hreflang="eu" class="active">EU</a>
-                        <a href="../fr/sms_stand_out.html" hreflang="fr">FR</a>
-                        <a href="../gl/sms_stand_out.html" hreflang="gl">GL</a>
-                        <a href="../it/sms_stand_out.html" hreflang="it">IT</a>
-                        <a href="../nl/sms_stand_out.html" hreflang="nl">NL</a>
-                        <a href="../pt/sms_stand_out.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">EU</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/sms_stand_out.html" hreflang="ca">CA</a>
+            <a href="../de/sms_stand_out.html" hreflang="de">DE</a>
+            <a href="../sms_stand_out.html" hreflang="en">EN</a>
+            <a href="../es/sms_stand_out.html" hreflang="es">ES</a>
+            <a href="../eu/sms_stand_out.html" hreflang="eu" class="active">EU</a>
+            <a href="../fr/sms_stand_out.html" hreflang="fr">FR</a>
+            <a href="../gl/sms_stand_out.html" hreflang="gl">GL</a>
+            <a href="../it/sms_stand_out.html" hreflang="it">IT</a>
+            <a href="../nl/sms_stand_out.html" hreflang="nl">NL</a>
+            <a href="../pt/sms_stand_out.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -586,9 +494,7 @@
 
         <h1 class="guide-title">Alerta SMSak nabarmentzea</h1>
 
-        <p>Zure larrialdietako kontaktuek beste jakinarazpenen artean zure alerta-mezua galdu ez dezaten, haien
-            telefonoak konfiguratzea gomendatzen dugu zure <span class="notranslate" translate="no">TapAlert</span>
-            zenbakiko mezuak modu ezberdinean tratatzeko.</p>
+        <p>Zure larrialdietako kontaktuek beste jakinarazpenen artean zure alerta-mezua galdu ez dezaten, haien telefonoak konfiguratzea gomendatzen dugu zure <span class="notranslate" translate="no">TapAlert</span> zenbakiko mezuak modu ezberdinean tratatzeko.</p>
 
         <section class="guide-section">
             <div class="step-list">
@@ -600,8 +506,8 @@
                     <ol>
                         <li><strong>Open Kontaktuak:</strong> Hautatu zure kontaktuaren sarrera.</li>
                         <li><strong>Esleitu Larrialdi Saihesbidea:</strong> Tap <strong>Editatu</strong> >
-                            <strong>Dei-tonua</strong> (edo Testu-tonua) eta txandakatu <strong>Larrialdi
-                                Saihesbidea</strong> ON.
+                            <strong>Dei-tonua</strong> (edo Testu-tonua) eta txandakatu <strong>Larrialdi Saihesbidea</strong>
+                            ON.
                             Honek soinuak/bibrazioak ahalbidetzen ditu, nahiz eta telefonoa Isilik edo Ez molestatu.
                         </li>
                         <li><strong>Tonu pertsonalizatua:</strong> Choose a loud, distinct sound for your messages.</li>
@@ -631,15 +537,15 @@
 
             <div class="alert-box note">
                 <h4>ℹ️ OHARRA</h4>
-                <p><strong>Using <span class="notranslate" translate="no"><span class="notranslate"
-                                translate="no">Twilio</span></span>?</strong> Alertak bidaltzen badituzu
-                    <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span>, your contacts will receive the message
-                    from your <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span> number or an Alphanumeric ID (e.g.,
+                <p><strong>Using <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong> Alertak bidaltzen badituzu
+                    <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>, your contacts will receive the
+                    message
+                    from your <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> number or an
+                    Alphanumeric ID (e.g.,
                     "<span class="notranslate" translate="no">TapAlert</span>"). Haiek <strong>behar</strong> add
                     this number/ID to their contacts list for the settings above to work correctly. Otherwise, the
-                    message will still be delivered buta gisastandard SMS gabe any priority notifications.
+                    message will still be delivered buta gisastandard SMS gabe any priority
+                    notifications.
                 </p>
             </div>
         </section>
@@ -652,8 +558,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik
-                        ez.</p>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
                 </div>
 
                 <div class="footer-section">
@@ -678,8 +583,7 @@
                     <h3>Laguntza</h3>
                     <ul>
                         <li><a href="#">Ohiko galderak</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez
-                                urrats Gidak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
                         <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
                         <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
                         <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
@@ -688,8 +592,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta.
-                    | ❤️rekin egina zure segurtasunerako</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
             </div>
         </div>
     </footer>

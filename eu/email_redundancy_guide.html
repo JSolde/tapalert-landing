@@ -375,136 +375,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">EU</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
-                        <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
-                        <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/email_redundancy_guide.html" hreflang="eu" class="active">EU</a>
-                        <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
-                        <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
-                        <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
-                        <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">EU</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
+            <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
+            <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
+            <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
+            <a href="../eu/email_redundancy_guide.html" hreflang="eu" class="active">EU</a>
+            <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
+            <a href="../it/email_redundancy_guide.html" hreflang="it">IT</a>
+            <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
+            <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -516,62 +424,39 @@
 
         <section class="guide-section">
             <h2>💡 Zer da posta elektronikoaren erredundantzia Ezaugarri?</h2>
-            <p><span class="notranslate" translate="no">TapAlert</span>-n Posta elektronikoaren erredundantzia-k aukera
-                ematen die aplikazioari posta elektroniko bidez izendatutako kontaktuei larrialdi-abisuak eta
-                jakinarazpen-mezuak bidaltzeko, SMSez gain edo ordez.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span>-n Posta elektronikoaren erredundantzia-k aukera ematen die aplikazioari posta elektroniko bidez izendatutako kontaktuei larrialdi-abisuak eta jakinarazpen-mezuak bidaltzeko, SMSez gain edo ordez.</p>
 
             <h2>🎯 Zein da bere helburua?</h2>
-            <p>Posta elektronikoaren erredundantziaren helburu nagusia zure mezua bidaltzen dela ziurtatzea da, nahiz
-                eta SMS kanal nagusiak huts egin edo erabilgarri ez egon.</p>
+            <p>Posta elektronikoaren erredundantziaren helburu nagusia zure mezua bidaltzen dela ziurtatzea da, nahiz eta SMS kanal nagusiak huts egin edo erabilgarri ez egon.</p>
             <ul>
-                <li>✅ <strong>Bidalketa-bidea:</strong> Wi-Fira konektatuta bazaude, baina zerbitzu mugikorrik ez baduzu
-                    (eta Wi-Fi deiak desgaituta edo onartzen ez badituzu), posta elektronikoaa gisaperfektua <span
-                        class="notranslate" translate="no">fallback</span> da.</li>
-                <li>✅ <strong>Nazioarteko bidaiak:</strong> SMSak oso garestiak edo fidagarriak izan daitezkeen
-                    atzerrira bidaiatzen duzunean, Wi-Fi hutsean fidatu zaitezke eta mezu elektroniko bidez alertak
-                    bidal ditzakezu doan.</li>
-                <li>✅ <strong>Lasaitasun gehigarria:</strong> alertak SMS eta posta elektroniko bidez aldi berean
-                    bidaltzeak bermatzen du larrialdietako kontaktu batek testu bat galtzen badu, baliteke mezu
-                    elektronikoaren jakinarazpena ikustea.</li>
+                <li>✅ <strong>Bidalketa-bidea:</strong> Wi-Fira konektatuta bazaude, baina zerbitzu mugikorrik ez baduzu (eta Wi-Fi deiak desgaituta edo onartzen ez badituzu), posta elektronikoaa gisaperfektua <span class="notranslate" translate="no">fallback</span> da.</li>
+                <li>✅ <strong>Nazioarteko bidaiak:</strong> SMSak oso garestiak edo fidagarriak izan daitezkeen atzerrira bidaiatzen duzunean, Wi-Fi hutsean fidatu zaitezke eta mezu elektroniko bidez alertak bidal ditzakezu doan.</li>
+                <li>✅ <strong>Lasaitasun gehigarria:</strong> alertak SMS eta posta elektroniko bidez aldi berean bidaltzeak bermatzen du larrialdietako kontaktu batek testu bat galtzen badu, baliteke mezu elektronikoaren jakinarazpena ikustea.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ Nola konfiguratu posta elektronikoaren erredundantzia</h2>
             <ol>
-                <li>Ireki <span class="notranslate" translate="no">TapAlert</span> aplikazioa eta joan
-                    <strong>Ezarpenak</strong>ra.
-                </li>
-                <li>Joan <strong>Posta elektronikoko alertak</strong> atalera eta aktibatu <strong>Gaitu posta
-                        elektronikoko alertak</strong>.</li>
-                <li>Hautatu zure <strong>Posta elektronikoaren hornitzailea</strong> aurrez ezarritakobotoiaetatik
-                    (Gmail, Outlook, Yahoo, iCloud) SMTP ostalaria eta ataka automatikoki betetzeko.</li>
+                <li>Ireki <span class="notranslate" translate="no">TapAlert</span> aplikazioa eta joan <strong>Ezarpenak</strong>ra.</li>
+                <li>Joan <strong>Posta elektronikoko alertak</strong> atalera eta aktibatu <strong>Gaitu posta elektronikoko alertak</strong>.</li>
+                <li>Hautatu zure <strong>Posta elektronikoaren hornitzailea</strong> aurrez ezarritakobotoiaetatik (Gmail, Outlook, Yahoo, iCloud) SMTP ostalaria eta ataka automatikoki betetzeko.</li>
                 <li>Sartu zure <strong>helbide elektroniko osoa</strong>.</li>
                 <li>Sartu zure <strong>Aplikazioaren pasahitza</strong> (Ikus beheko atala zer den eta nola lortu).</li>
-                <li>Sakatu <strong>"Gorde ezarpenak"</strong> eta erabili "Probako posta elektronikoa"botoia behar
-                    bezala konfiguratuta dagoela ziurtatzeko.</li>
+                <li>Sakatu <strong>"Gorde ezarpenak"</strong> eta erabili "Probako posta elektronikoa"botoia behar bezala konfiguratuta dagoela ziurtatzeko.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>🔑 Zer da aplikazioaren pasahitza?</h2>
-            <p><strong>Aplikazioaren pasahitza</strong> ausaz sortutako pasahitza da, hirugarrenen aplikazio bati (<span
-                    class="notranslate" translate="no">TapAlert</span> adibidez) zure posta elektronikora sartzeko
-                baimena ematen diona kontua zure izenean mezuak bidaltzeko.</p>
+            <p><strong>Aplikazioaren pasahitza</strong> ausaz sortutako pasahitza da, hirugarrenen aplikazio bati (<span class="notranslate" translate="no">TapAlert</span> adibidez) zure posta elektronikora sartzeko baimena ematen diona kontua zure izenean mezuak bidaltzeko.</p>
 
             <h3>Zergatik behar dut bat nire benetako pasahitza ordez?</h3>
-            <p>Posta elektronikoko hornitzaile modernoek oinarrizko pasahitzaren saioak blokeatzen dituzte zure kontua
-                hackerengandik babesteko. Aplikazioaren pasahitz batek <em>gabe</em> aplikazio zehatz horren bi
-                faktoreen autentifikazioa (2FA) saihesten du aplikazioari zure benetako kontua pasahitza emanez. Inoiz
-                <span class="notranslate" translate="no">TapAlert</span>-ren sarbidea baliogabetu nahi baduzu,
-                aplikazioaren pasahitza ezabatu besterik ez duzu zure posta elektronikoaren ezarpenetan, eta zure kontua
-                pasahitz nagusiak seguru eta aldatu gabe jarraituko du.
-            </p>
+            <p>Posta elektronikoko hornitzaile modernoek oinarrizko pasahitzaren saioak blokeatzen dituzte zure kontua hackerengandik babesteko. Aplikazioaren pasahitz batek <em>gabe</em> aplikazio zehatz horren bi faktoreen autentifikazioa (2FA) saihesten du aplikazioari zure benetako kontua pasahitza emanez. Inoiz <span class="notranslate" translate="no">TapAlert</span>-ren sarbidea baliogabetu nahi baduzu, aplikazioaren pasahitza ezabatu besterik ez duzu zure posta elektronikoaren ezarpenetan, eta zure kontua pasahitz nagusiak seguru eta aldatu gabe jarraituko du.</p>
 
             <div class="alert-box">
                 <h4>⚠️ Ohar garrantzitsua</h4>
-                <p>Aplikazioaren pasahitza sortzeko, ia posta-hornitzaile guztiek <strong>Bi faktoreko autentifikazioa
-                        (2FA)</strong> gaituta izan behar duzu zure kontua lehenik.</p>
+                <p>Aplikazioaren pasahitza sortzeko, ia posta-hornitzaile guztiek <strong>Bi faktoreko autentifikazioa (2FA)</strong> gaituta izan behar duzu zure kontua lehenik.</p>
             </div>
         </section>
 
@@ -581,70 +466,46 @@
 
             <h3>1. Gmail (Google kontua)</h3>
             <ol>
-                <li>Joan <a href="https://mykontua.google.com/" target="_blank">Google kontua kudeatzeko orrira</a> eta
-                    hasi saioa.</li>
+                <li>Joan <a href="https://mykontua.google.com/" target="_blank">Google kontua kudeatzeko orrira</a> eta hasi saioa.</li>
                 <li>Ezkerreko nabigazio-panelean, sakatu <strong>Segurtasuna</strong>.</li>
-                <li>"Nola hasi saioa Google-n" atalean, ziurtatu <strong>bi urratseko egiaztapena</strong>
-                    <strong>aktibatuta</strong> dagoela. (Desaktibatuta badago, behar piztuko duzu lehenik).
-                </li>
-                <li>Egin klik <strong>Bi urratseko egiaztapena</strong> aukeran. Joan orriaren behealdera eta egin klik
-                    <strong>Aplikazioen pasahitzak</strong> aukeran.
-                </li>
-                <li>"Hautatu aplikazioa" goitibeherako menuan, aukeratu <em>Beste (Izen pertsonalizatua)</em> eta idatzi
-                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
-                </li>
+                <li>"Nola hasi saioa Google-n" atalean, ziurtatu <strong>bi urratseko egiaztapena</strong> <strong>aktibatuta</strong> dagoela. (Desaktibatuta badago, behar piztuko duzu lehenik).</li>
+                <li>Egin klik <strong>Bi urratseko egiaztapena</strong> aukeran. Joan orriaren behealdera eta egin klik <strong>Aplikazioen pasahitzak</strong> aukeran.</li>
+                <li>"Hautatu aplikazioa" goitibeherako menuan, aukeratu <em>Beste (Izen pertsonalizatua)</em> eta idatzi <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Sakatu <strong>Sortu</strong>.</li>
-                <li>Lauki horia agertuko da 16 karaktereko kode batekin. Kopiatu kode hau eta itsatsi <span
-                        class="notranslate" translate="no">TapAlert</span> aplikazioko "Aplikazioaren pasahitza" eremuan
-                    (ez duzu zuriunerik sartu behar).</li>
+                <li>Lauki horia agertuko da 16 karaktereko kode batekin. Kopiatu kode hau eta itsatsi <span class="notranslate" translate="no">TapAlert</span> aplikazioko "Aplikazioaren pasahitza" eremuan (ez duzu zuriunerik sartu behar).</li>
                 <li>Sakatu <strong>Eginda</strong>.</li>
             </ol>
 
             <h3>2. Hotmail / Outlook (Microsoft kontua)</h3>
             <ol>
-                <li>Joan <a href="https://kontua.microsoft.com/security" target="_blank">Microsoft kontuaren segurtasun
-                        orrira</a> eta hasi saioa.</li>
+                <li>Joan <a href="https://kontua.microsoft.com/security" target="_blank">Microsoft kontuaren segurtasun orrira</a> eta hasi saioa.</li>
                 <li>Egin klik <strong>Segurtasun-aukera aurreratuak</strong> aukeran.</li>
-                <li>"Segurtasun gehigarria" atalean, ziurtatu <strong>Bi urratseko egiaztapena</strong>
-                    <strong>aktibatuta</strong> dagoela.
-                </li>
+                <li>"Segurtasun gehigarria" atalean, ziurtatu <strong>Bi urratseko egiaztapena</strong> <strong>aktibatuta</strong> dagoela.</li>
                 <li>Joan behera <strong>Aplikazioen pasahitzak</strong> atalera.</li>
                 <li>Sakatu <strong>Sortu aplikazioaren pasahitz berria</strong>.</li>
                 <li>Pantaila berri bat agertuko da zure aplikazioaren pasahitz bakarra erakusten duena.</li>
-                <li>Kopiatu pasahitz hau eta itsatsi <span class="notranslate" translate="no">TapAlert</span>-n, eta
-                    sakatu <strong>Eginda</strong>.</li>
+                <li>Kopiatu pasahitz hau eta itsatsi <span class="notranslate" translate="no">TapAlert</span>-n, eta sakatu <strong>Eginda</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Joan zure <a href="https://login.yahoo.com/kontua/security" target="_blank">Yahoo kontuaren
-                        segurtasun orrira</a> eta hasi saioa.</li>
-                <li>Joan behera orriaren behealdera eta egin klik <strong>Sortu eta kudeatu aplikazioen
-                        pasahitzak</strong> aukeran.</li>
-                <li>Leiho modala agertuko da. Sartu <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong> aplikazioaren izen gisa.</li>
+                <li>Joan zure <a href="https://login.yahoo.com/kontua/security" target="_blank">Yahoo kontuaren segurtasun orrira</a> eta hasi saioa.</li>
+                <li>Joan behera orriaren behealdera eta egin klik <strong>Sortu eta kudeatu aplikazioen pasahitzak</strong> aukeran.</li>
+                <li>Leiho modala agertuko da. Sartu <strong><span class="notranslate" translate="no">TapAlert</span></strong> aplikazioaren izen gisa.</li>
                 <li>Sakatu <strong>Sortu pasahitza</strong>.</li>
-                <li>Kopiatu pantailan bistaratzen den 16 karaktereko pasahitza eta itsatsi <span class="notranslate"
-                        translate="no">TapAlert</span>-n (espazio guztiak kenduta).</li>
+                <li>Kopiatu pantailan bistaratzen den 16 karaktereko pasahitza eta itsatsi <span class="notranslate" translate="no">TapAlert</span>-n (espazio guztiak kenduta).</li>
                 <li>Sakatu <strong>Eginda</strong>.</li>
             </ol>
 
             <h3>4. iCloud (Apple ID)</h3>
             <ol>
-                <li>Joan <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> helbidera eta hasi
-                    saioa zure Apple IDarekin.</li>
-                <li><strong>Saioa eta segurtasuna</strong> atalean, egin klik <strong>Aplikazioen pasahitzak</strong>
-                    aukeran.</li>
-                <li>Sakatu <strong>Sortu aplikazioaren pasahitz zehatz bat</strong> edo <strong>Gehitu
-                        (+)</strong>botoia aukeran.</li>
-                <li>Sartu <strong><span class="notranslate" translate="no">TapAlert</span></strong> aplikazioaren izena
-                    eskatzen diozunean eta sakatu Sortu.</li>
+                <li>Joan <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> helbidera eta hasi saioa zure Apple IDarekin.</li>
+                <li><strong>Saioa eta segurtasuna</strong> atalean, egin klik <strong>Aplikazioen pasahitzak</strong> aukeran.</li>
+                <li>Sakatu <strong>Sortu aplikazioaren pasahitz zehatz bat</strong> edo <strong>Gehitu (+)</strong>botoia aukeran.</li>
+                <li>Sartu <strong><span class="notranslate" translate="no">TapAlert</span></strong> aplikazioaren izena eskatzen diozunean eta sakatu Sortu.</li>
                 <li>Baliteke zure Apple IDaren pasahitza berriro sartzeko eskatuko dizula berresteko.</li>
-                <li>Aplikazioaren pasahitz esklusibo bat sortu eta bistaratuko da (normalean
-                    <code>xxxx-xxxx-xxxx-xxxx</code> formatuan).
-                </li>
-                <li>Kopiatu pasahitz osoa eta itsatsi <span class="notranslate" translate="no">TapAlert</span>-n, eta
-                    sakatu <strong>Eginda</strong>.</li>
+                <li>Aplikazioaren pasahitz esklusibo bat sortu eta bistaratuko da (normalean <code>xxxx-xxxx-xxxx-xxxx</code> formatuan).</li>
+                <li>Kopiatu pasahitz osoa eta itsatsi <span class="notranslate" translate="no">TapAlert</span>-n, eta sakatu <strong>Eginda</strong>.</li>
             </ol>
         </section>
 
@@ -656,8 +517,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik
-                        ez.</p>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
                 </div>
 
                 <div class="footer-section">
@@ -682,8 +542,7 @@
                     <h3>Laguntza</h3>
                     <ul>
                         <li><a href="#">Ohiko galderak</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez
-                                urrats Gidak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
                         <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
                         <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
                         <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
@@ -692,8 +551,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta.
-                    | ❤️rekin egina zure segurtasunerako</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
             </div>
         </div>
     </footer>

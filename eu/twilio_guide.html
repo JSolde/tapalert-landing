@@ -15,8 +15,7 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/twilio_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/twilio_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-        Konfigurazio gida - TapAlert</title>
+    <title><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Konfigurazio gida - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -375,136 +374,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Itzuli hasierara</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">EU</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/twilio_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/twilio_guide.html" hreflang="de">DE</a>
-                        <a href="../twilio_guide.html" hreflang="en">EN</a>
-                        <a href="../es/twilio_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/twilio_guide.html" hreflang="eu" class="active">EU</a>
-                        <a href="../fr/twilio_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/twilio_guide.html" hreflang="gl">GL</a>
-                        <a href="../it/twilio_guide.html" hreflang="it">IT</a>
-                        <a href="../nl/twilio_guide.html" hreflang="nl">NL</a>
-                        <a href="../pt/twilio_guide.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">EU</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/twilio_guide.html" hreflang="ca">CA</a>
+            <a href="../de/twilio_guide.html" hreflang="de">DE</a>
+            <a href="../twilio_guide.html" hreflang="en">EN</a>
+            <a href="../es/twilio_guide.html" hreflang="es">ES</a>
+            <a href="../eu/twilio_guide.html" hreflang="eu" class="active">EU</a>
+            <a href="../fr/twilio_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/twilio_guide.html" hreflang="gl">GL</a>
+            <a href="../it/twilio_guide.html" hreflang="it">IT</a>
+            <a href="../nl/twilio_guide.html" hreflang="nl">NL</a>
+            <a href="../pt/twilio_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -512,104 +419,48 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Itzuli Gidetara</a>
 
-        <h1 class="guide-title"><span class="notranslate" translate="no"><span class="notranslate"
-                    translate="no">Twilio</span></span> Konfigurazio gida</h1>
+        <h1 class="guide-title"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Konfigurazio gida</h1>
 
         <section class="guide-section">
-            <h2>💡 Zer da <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> Konfigurazioa?</h2>
+            <h2>💡 Zer da <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Konfigurazioa?</h2>
 
-            <p><strong>Zer konfiguratuko duzun:</strong> <span class="notranslate" translate="no"><span
-                        class="notranslate" translate="no">Twilio</span></span> konfigurazioak <span class="notranslate"
-                    translate="no">TapAlert</span> <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span>-ren hodeiko SMS zerbitzura konektatzen du, aplikazioari SMS
-                mezuak bidaltzeko aukera ematen dio telefonoaren zerbitzu mugikorra erabilgarri ez dagoenean ere (baina
-                Wi-Fi baduzu).</p>
+            <p><strong>Zer konfiguratuko duzun:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> konfigurazioak <span class="notranslate" translate="no">TapAlert</span> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>-ren hodeiko SMS zerbitzura konektatzen du, aplikazioari SMS mezuak bidaltzeko aukera ematen dio telefonoaren zerbitzu mugikorra erabilgarri ez dagoenean ere (baina Wi-Fi baduzu).</p>
 
-            <p><strong>Zergatik du garrantzia:</strong> <span class="notranslate" translate="no"><span
-                        class="notranslate" translate="no">Twilio</span></span> kredentzialak aplikazioan konfiguratuz,
-                alertak bidaltzeko <span class="notranslate" translate="no">fallback</span> metodo fidagarria gaituko
-                duzu. Hau bereziki garrantzitsua da nazioarteko bidaietan, telefono mugikorraren harrera eskasa duten
-                eraikinetan, edo aplikazioetatik zuzenean SMSak bidali ezin dituzten iPhone erabiltzaileentzata
-                gisaderrigorrezko aukera.</p>
+            <p><strong>Zergatik du garrantzia:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> kredentzialak aplikazioan konfiguratuz, alertak bidaltzeko <span class="notranslate" translate="no">fallback</span> metodo fidagarria gaituko duzu. Hau bereziki garrantzitsua da nazioarteko bidaietan, telefono mugikorraren harrera eskasa duten eraikinetan, edo aplikazioetatik zuzenean SMSak bidali ezin dituzten iPhone erabiltzaileentzata gisaderrigorrezko aukera.</p>
 
-            <p><strong>Zergatik <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span>?</strong><br> <span class="notranslate"
-                    translate="no">TapAlert</span>-k <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> erabiltzen du, munduan gehien erabiltzen den SMS zerbitzua
-                delako — Uber eta Airbnb bezalako enpresek konfiantza dute. Ez dago hileroko kuotarik: benetan
-                bidalitako mezu bakoitzeko zentimo batzuk besterik ez dituzu ordaintzen. Alertak gutxitan bidaltzen
-                dituen larrialdi-aplikazio baterako, horrek ia zero kostua esan nahi du. Konfigurazioak aplikazioan hiru
-                balio besterik ez ditu kopiatzea eskatzen, eta laguntza behar baduzu lineako milaka tutorial daude.</p>
+            <p><strong>Zergatik <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>?</strong><br> <span class="notranslate" translate="no">TapAlert</span>-k <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> erabiltzen du, munduan gehien erabiltzen den SMS zerbitzua delako — Uber eta Airbnb bezalako enpresek konfiantza dute. Ez dago hileroko kuotarik: benetan bidalitako mezu bakoitzeko zentimo batzuk besterik ez dituzu ordaintzen. Alertak gutxitan bidaltzen dituen larrialdi-aplikazio baterako, horrek ia zero kostua esan nahi du. Konfigurazioak aplikazioan hiru balio besterik ez ditu kopiatzea eskatzen, eta laguntza behar baduzu lineako milaka tutorial daude.</p>
 
-            <p><strong>Behar duzuna:</strong> <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> kontua autentifikazio-kredentzialak dituena (kontuaren SID
-                eta autentifikazio-tokena) eta igorlearen ID alfanumerikoa edo erositako <span class="notranslate"
-                    translate="no"><span class="notranslate" translate="no">Twilio</span></span> telefono-zenbakia.</p>
+            <p><strong>Behar duzuna:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> kontua autentifikazio-kredentzialak dituena (kontuaren SID eta autentifikazio-tokena) eta igorlearen ID alfanumerikoa edo erositako <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> telefono-zenbakia.</p>
             <ul>
-                <li>✅ <strong>Proba kontua benetako SMSak bidaltzen ditu:</strong> senide batek konfigurazio osoa
-                    probatu dezake <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span>ren doako probaldiarekin (egiaztatuta zenbakietara
-                    bidaltzen du) dirua gastatu aurretik.</li>
+                <li>✅ <strong>Proba kontua benetako SMSak bidaltzen ditu:</strong> senide batek konfigurazio osoa probatu dezake <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>ren doako probaldiarekin (egiaztatuta zenbakietara bidaltzen du) dirua gastatu aurretik.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>📖 Zerbitzuari buruz</h2>
-            <p>SMSak bidaltzeko <span class="notranslate" translate="no">TapAlert</span>-n <span class="notranslate"
-                    translate="no"><span class="notranslate" translate="no">Twilio</span></span> (hodeia)a
-                gisamekanismoa erabiltzeko eskaintzen den aukerak fidagarritasun handiena eskaintzen du, batez ere
-                nazioarteko bidaietan, non ibiltaritzako SMSak sarritan huts egiten duen. <span class="notranslate"
-                    translate="no"><span class="notranslate" translate="no">Twilio</span></span>k 180 herrialde baino
-                gehiagotara bidal ditzake SMSak. Hala ere, erabil dezakezun metodoa aldatu egiten da herrialdearen
-                arabera. Herrialde batzuek <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> telefono-zenbakiak onartzen dituzte, beste batzuek igorleen
-                ID alfanumerikoak soilik onartzen dituzte eta batzuek tokiko araudi zehatzak bete behar dituzte.</p>
+            <p>SMSak bidaltzeko <span class="notranslate" translate="no">TapAlert</span>-n <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (hodeia)a gisamekanismoa erabiltzeko eskaintzen den aukerak fidagarritasun handiena eskaintzen du, batez ere nazioarteko bidaietan, non ibiltaritzako SMSak sarritan huts egiten duen. <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>k 180 herrialde baino gehiagotara bidal ditzake SMSak. Hala ere, erabil dezakezun metodoa aldatu egiten da herrialdearen arabera. Herrialde batzuek <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> telefono-zenbakiak onartzen dituzte, beste batzuek igorleen ID alfanumerikoak soilik onartzen dituzte eta batzuek tokiko araudi zehatzak bete behar dituzte.</p>
 
-            <h3>Zergatik erabili <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> Android-n? (<span class="notranslate"
-                    translate="no">Erredundantzia adimenduna</span>)</h3>
-            <p>SIM txartela baduzu ere, <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> konfiguratzea oso gomendagarria da
-                <strong>erredundantzia</strong>rako:
-            </p>
+            <h3>Zergatik erabili <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Android-n? (<span class="notranslate" translate="no">Erredundantzia adimenduna</span>)</h3>
+            <p>SIM txartela baduzu ere, <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> konfiguratzea oso gomendagarria da <strong>erredundantzia</strong>rako:</p>
             <ul>
-                <li><strong>Agertokia:</strong> Wi-Fi konexioa duen eraikin batean zaude, baina <strong>zero seinale
-                        mugikorra</strong>.</li>
-                <li><strong>Emaitza:</strong> <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Direct SMS</span></span> huts egin du.</li>
-                <li><strong>Irtenbidea:</strong> <span class="notranslate" translate="no">TapAlert</span> automatikoki
-                    aldatuko da <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span> eta alerta Wi-Fi bidez bidaliko du.</li>
+                <li><strong>Agertokia:</strong> Wi-Fi konexioa duen eraikin batean zaude, baina <strong>zero seinale mugikorra</strong>.</li>
+                <li><strong>Emaitza:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> huts egin du.</li>
+                <li><strong>Irtenbidea:</strong> <span class="notranslate" translate="no">TapAlert</span> automatikoki aldatuko da <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> eta alerta Wi-Fi bidez bidaliko du.</li>
             </ul>
-            <p>Kontuan izan iPhone erabiltzaileentzat derrigorrezkoa den eginbide hau erabiltzeko, <span
-                    class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                kontua ID bat izan beharko duzula. Mezuak bidaltzeko kostua <span class="notranslate"
-                    translate="no"><span class="notranslate" translate="no">Twilio</span></span>-tik eskuz egingo
-                bazenuen berdina izango da. Aplikazioak ez du kostu gehigarririk gehituko.</p>
+            <p>Kontuan izan iPhone erabiltzaileentzat derrigorrezkoa den eginbide hau erabiltzeko, <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> kontua ID bat izan beharko duzula. Mezuak bidaltzeko kostua <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>-tik eskuz egingo bazenuen berdina izango da. Aplikazioak ez du kostu gehigarririk gehituko.</p>
 
-            <h3><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                Bidaltzailearen aukerak</h3>
-            <p><span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span>-rekin SMSak bidaltzeko bi aukeren artean aukeratu dezakezu:
-            </p>
+            <h3><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Bidaltzailearen aukerak</h3>
+            <p><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>-rekin SMSak bidaltzeko bi aukeren artean aukeratu dezakezu:</p>
 
             <p><strong>A AUKERA: Erabili igorlearen ID alfanumerikoa (Europarako gomendatua)</strong></p>
             <ul>
-                <li>✅ <strong>Abantaila:</strong> Ez da telefono-zenbakirik erosi behar (Aurreztu hileroko kostuak!
-                    Bidaltzen dituzun mezu kopuruaren arabera).</li>
-                <li>✅ <strong>Abantaila:</strong> hartzaileek izen bat ikusten dute (adibidez, "<span
-                        class="notranslate" translate="no">TapAlert</span>" edo zure izena) ausazko zenbaki baten ordez.
-                </li>
-                <li>⚠️ <strong>Oharra:</strong> norabide bakarrekoa (erantzunrik gabe) eta herrialde batzuetan ez da
-                    onartzen (AEB, esaterako).</li>
-                <li>ℹ️ <a
-                        href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS"
-                        target="_blank">Lortu informazio gehiago igorle alfanumerikoaren IDari buruz</a></li>
+                <li>✅ <strong>Abantaila:</strong> Ez da telefono-zenbakirik erosi behar (Aurreztu hileroko kostuak! Bidaltzen dituzun mezu kopuruaren arabera).</li>
+                <li>✅ <strong>Abantaila:</strong> hartzaileek izen bat ikusten dute (adibidez, "<span class="notranslate" translate="no">TapAlert</span>" edo zure izena) ausazko zenbaki baten ordez.</li>
+                <li>⚠️ <strong>Oharra:</strong> norabide bakarrekoa (erantzunrik gabe) eta herrialde batzuetan ez da onartzen (AEB, esaterako).</li>
+                <li>ℹ️ <a href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS" target="_blank">Lortu informazio gehiago igorle alfanumerikoaren IDari buruz</a></li>
             </ul>
 
-            <p><strong>B AUKERA: erosi <span class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span> telefono-zenbakia</strong></p>
+            <p><strong>B AUKERA: erosi <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> telefono-zenbakia</strong></p>
             <ul>
                 <li>✅ <strong>Abantaila:</strong> mundu osoan funtzionatzen du (AEB barne).</li>
                 <li>⚠️ <strong>Kostua:</strong> zenbaki bat erosi behar da (gutxi gorabehera $ 1 hilean).</li>
@@ -618,31 +469,20 @@
 
         <section class="guide-section">
             <h2>💰 Ezkutuko kostu potentzialak eta Prezioak faktoreak</h2>
-            <p><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>-k,
-                oro har, kostu baxuko mezularitza eskaintzen duen arren, SMS bakoitzeko azken prezioa oinarrizko tarifa
-                baino handiagoa izan daiteke hainbat faktore direla eta. Garrantzitsua da hauek berrikustea ustekabeko
-                karguak ekiditeko.</p>
+            <p><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>-k, oro har, kostu baxuko mezularitza eskaintzen duen arren, SMS bakoitzeko azken prezioa oinarrizko tarifa baino handiagoa izan daiteke hainbat faktore direla eta. Garrantzitsua da hauek berrikustea ustekabeko karguak ekiditeko.</p>
 
             <h3>1. Helmugako herrialdea Prezioak</h3>
-            <p><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                prezioak nabarmen aldatzen dira mezuaren <strong>helmuga herrialde</strong>ren arabera.</p>
+            <p><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> prezioak nabarmen aldatzen dira mezuaren <strong>helmuga herrialde</strong>ren arabera.</p>
             <ul>
-                <li>Iragartzen diren prezio baxuenak (adibidez, 0,0075 dolar ingurukoak) <strong>AEB</strong>ra
-                    bidalitako mezuei aplikatzen zaizkie maiz.</li>
-                <li>Beste herrialde batzuetara bidaltzea (adibidez, Europara edo Asiara) nabarmen garestiagoa izan
-                    daiteke.</li>
-                <li><strong>Ekintza:</strong> egiaztatu beti alertak bidali nahi dituzun herrialdeko prezio zehatzak.
-                </li>
+                <li>Iragartzen diren prezio baxuenak (adibidez, 0,0075 dolar ingurukoak) <strong>AEB</strong>ra bidalitako mezuei aplikatzen zaizkie maiz.</li>
+                <li>Beste herrialde batzuetara bidaltzea (adibidez, Europara edo Asiara) nabarmen garestiagoa izan daiteke.</li>
+                <li><strong>Ekintza:</strong> egiaztatu beti alertak bidali nahi dituzun herrialdeko prezio zehatzak.</li>
             </ul>
 
             <h3>2. Garraiolari eta arauzko tasak</h3>
-            <p><span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span>-ren oinarrizko prezioaz gain, herrialde eta tokiko
-                garraiolari askok <strong>errekarguak</strong> edo "komisioak" ezartzen dituzte.</p>
+            <p><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>-ren oinarrizko prezioaz gain, herrialde eta tokiko garraiolari askok <strong>errekarguak</strong> edo "komisioak" ezartzen dituzte.</p>
             <ul>
-                <li>Telekomunikazio-hornitzaileek gehitzen dituzten saihestezinak diren kuotak dira, ez <span
-                        class="notranslate" translate="no"><span class="notranslate"
-                            translate="no">Twilio</span></span>.</li>
+                <li>Telekomunikazio-hornitzaileek gehitzen dituzten saihestezinak diren kuotak dira, ez <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</li>
                 <li>Haiek batzuetan mezu bakoitzeko kostu eraginkorra bikoiztu dezake zenbait eskualdetan.</li>
             </ul>
 
@@ -650,91 +490,56 @@
             <p>SMS fakturazioa "segmentuetan" oinarritzen da.</p>
             <ul>
                 <li>SMSaren segmentu estandarrak <strong>160 karaktere</strong> ditu.</li>
-                <li>Zure mezuak muga hori gainditzen badu, hainbat zatitan banatuko da eta <strong>segmentu
-                        bakoitza</strong> kobratuko zaizu. <span class="notranslate" translate="no">TapAlert</span>
-                    <strong>Kokapena informazioa</strong> duten SMS mezuek muga hori gainditzen dute. <span
-                        class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                    kostuak minimizatzeko, saihestu <strong>Kokapena Ezarpenak</strong> gaitzea (edo desgaitu
-                    ezarpenetan <strong>Sartu helbidea</strong> aukera). Bidalitako mezu bakoitzaren benetako mezuaren
-                    luzera egiazta dezakezu <strong>Alertaren historia</strong> pantailan.
-                </li>
-                <li><strong>Garrantzitsua:</strong> emojiak edo latinak ez diren karaktere bereziak (Unicode)
-                    erabiltzeak <strong>70 karaktere</strong>ra murrizten du segmentuaren muga, eta alerta bakarraren
-                    kostua hirukoiztu daiteke.</li>
+                <li>Zure mezuak muga hori gainditzen badu, hainbat zatitan banatuko da eta <strong>segmentu bakoitza</strong> kobratuko zaizu. <span class="notranslate" translate="no">TapAlert</span> <strong>Kokapena informazioa</strong> duten SMS mezuek muga hori gainditzen dute. <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> kostuak minimizatzeko, saihestu <strong>Kokapena Ezarpenak</strong> gaitzea (edo desgaitu ezarpenetan <strong>Sartu helbidea</strong> aukera). Bidalitako mezu bakoitzaren benetako mezuaren luzera egiazta dezakezu <strong>Alertaren historia</strong> pantailan.</li>
+                <li><strong>Garrantzitsua:</strong> emojiak edo latinak ez diren karaktere bereziak (Unicode) erabiltzeak <strong>70 karaktere</strong>ra murrizten du segmentuaren muga, eta alerta bakarraren kostua hirukoiztu daiteke.</li>
             </ul>
 
             <h3>4. Telefono-zenbakia alokatzeko tasak</h3>
             <p>Telefono-zenbaki bat erostea aukeratzen baduzu (goiko B aukera):</p>
             <ul>
-                <li><strong>Hileroko alokairu-kuota</strong> ordaintzen duzu zenbakia beragatik (normalean $ 1,00 - $
-                    4,00 USD/hileko herrialdearen arabera).</li>
+                <li><strong>Hileroko alokairu-kuota</strong> ordaintzen duzu zenbakia beragatik (normalean $ 1,00 - $ 4,00 USD/hileko herrialdearen arabera).</li>
                 <li>Hau kostu finko errepikakorra da, mezuak bidaltzen dituzun ala ez.</li>
-                <li>Zenbaki zehatz batzuk (esaterako, SMSak egiteko gai diren Espainiako mugikorrak) "esklusiboak" dira
-                    eta eskuz eskatzeko prozesua eta kuota handiagoak behar dituzte.</li>
+                <li>Zenbaki zehatz batzuk (esaterako, SMSak egiteko gai diren Espainiako mugikorrak) "esklusiboak" dira eta eskuz eskatzeko prozesua eta kuota handiagoak behar dituzte.</li>
             </ul>
 
             <h3>5. Moneta Bihurketa eta Zergak</h3>
             <p>Zure azken fakturak tokiko zergak izan ditzake (BEZa, esaterako).</p>
-            <p>Zure txartela zure <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> kontua ez den beste moneta batean badago, baliteke zure
-                bankuak edo <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span>k dibisa bihurtzeko tasak aplikatzea.</p>
+            <p>Zure txartela zure <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> kontua ez den beste moneta batean badago, baliteke zure bankuak edo <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>k dibisa bihurtzeko tasak aplikatzea.</p>
 
             <div class="alert-box">
                 <h4>💡 Gomendioa</h4>
-                <p>Gomendatzen dugu <a href="https://www.twilio.com/sms/pricing" target="_blank"><span
-                            class="notranslate" translate="no"><span class="notranslate"
-                                translate="no">Twilio</span></span> Prezioak orri ofiziala</a> egiaztatzea eta helburuko
-                    herrialdea hautatzea kostuen banaketa osoa ikusteko.</p>
+                <p>Gomendatzen dugu <a href="https://www.twilio.com/sms/pricing" target="_blank"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Prezioak orri ofiziala</a> egiaztatzea eta helburuko herrialdea hautatzea kostuen banaketa osoa ikusteko.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ Konfigurazio urratsak</h2>
-            <p>Aplikazioan <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> konfiguratzeko, jarraitu urrats hauek:</p>
+            <p>Aplikazioan <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> konfiguratzeko, jarraitu urrats hauek:</p>
 
-            <h3>1️⃣ 1. urratsa: Lortu zure <span class="notranslate" translate="no"><span class="notranslate"
-                        translate="no">Twilio</span></span> Kredentzialak</h3>
+            <h3>1️⃣ 1. urratsa: Lortu zure <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Kredentzialak</h3>
             <ol>
-                <li>Sortu kontua bat <a href="https://www.twilio.com/" target="_blank"><span class="notranslate"
-                            translate="no"><span class="notranslate" translate="no">Twilio</span></span>.com</a>
-                    helbidean.</li>
-                <li>Joan <a href="https://console.twilio.com/" target="_blank"><span class="notranslate"
-                            translate="no"><span class="notranslate" translate="no">Twilio</span></span> Kontsola</a>ra
-                    <strong>Kontuaren SID</strong> eta <strong>Auth Token</strong> aurkitzeko.
-                </li>
+                <li>Sortu kontua bat <a href="https://www.twilio.com/" target="_blank"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.com</a> helbidean.</li>
+                <li>Joan <a href="https://console.twilio.com/" target="_blank"><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Kontsola</a>ra <strong>Kontuaren SID</strong> eta <strong>Auth Token</strong> aurkitzeko.</li>
                 <li><strong>Aukeratu zure igorle-metodoa</strong> (Goiko A edo B aukera).</li>
             </ol>
 
             <h3>2️⃣ 2. urratsa: Sartu kredentzialak aplikazioan</h3>
             <ol>
                 <li>Ireki Aplikazioaren <strong>Ezarpenak</strong>.</li>
-                <li>Gaitu <strong>"Erabili <span class="notranslate" translate="no"><span class="notranslate"
-                                translate="no">Twilio</span></span>"</strong> etengailua.</li>
+                <li>Gaitu <strong>"Erabili <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>"</strong> etengailua.</li>
                 <li>Sartu <strong>Kontuaren SID</strong> eta <strong>Auth Token</strong>.</li>
                 <li><strong>Konfiguratu bidaltzailea:</strong>
                     <ul>
-                        <li><strong>A aukera (izena) erabiltzen baduzu:</strong> gaitu <strong>"Erabili igorlearen ID
-                                alfanumerikoa"</strong>, eta idatzi nahi duzun izena (gehienez 11 karaktere)
-                            <strong>Igorlearen izena</strong> eremuan.
-                        </li>
-                        <li><strong>B aukera (Zenbakia) erabiltzen baduzu:</strong> Utzi "Erabili igorlearen ID
-                            alfanumerikoa" <strong>Desaktibatuta</strong> eta idatzi erosi duzun <span
-                                class="notranslate" translate="no"><span class="notranslate"
-                                    translate="no">Twilio</span></span> zenbakia <strong><span class="notranslate"
-                                    translate="no"><span class="notranslate" translate="no">Twilio</span></span>
-                                Telefono-zenbakia</strong> eremuan.</li>
+                        <li><strong>A aukera (izena) erabiltzen baduzu:</strong> gaitu <strong>"Erabili igorlearen ID alfanumerikoa"</strong>, eta idatzi nahi duzun izena (gehienez 11 karaktere) <strong>Igorlearen izena</strong> eremuan.</li>
+                        <li><strong>B aukera (Zenbakia) erabiltzen baduzu:</strong> Utzi "Erabili igorlearen ID alfanumerikoa" <strong>Desaktibatuta</strong> eta idatzi erosi duzun <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> zenbakia <strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> Telefono-zenbakia</strong> eremuan.</li>
                     </ul>
                 </li>
             </ol>
 
             <h3>3️⃣ 3. urratsa: Igorlearen ID alfanumerikoaren laburpena</h3>
             <ul>
-                <li><strong>Zer da?</strong> Zenbaki baten ordez izen bat erabiltzeko aukera ematen dizu ("MyHomeAlert"
-                    adibidez).</li>
-                <li><strong>Konfiantza:</strong> Hartzaileek zure izena berehala ikusten dute, eta horrek zure alerta
-                    nabarmentzen du.</li>
+                <li><strong>Zer da?</strong> Zenbaki baten ordez izen bat erabiltzeko aukera ematen dizu ("MyHomeAlert" adibidez).</li>
+                <li><strong>Konfiantza:</strong> Hartzaileek zure izena berehala ikusten dute, eta horrek zure alerta nabarmentzen du.</li>
                 <li><strong>Ez dago erantzunik:</strong> Kontuan izan hartzaileek ezin diotela izen bati erantzun.</li>
             </ul>
         </section>
@@ -747,8 +552,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik
-                        ez.</p>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
                 </div>
 
                 <div class="footer-section">
@@ -773,8 +577,7 @@
                     <h3>Laguntza</h3>
                     <ul>
                         <li><a href="#">Ohiko galderak</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez
-                                urrats Gidak</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Urratsez urrats Gidak</a></li>
                         <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
                         <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
                         <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
@@ -783,8 +586,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta.
-                    | ❤️rekin egina zure segurtasunerako</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
             </div>
         </div>
     </footer>

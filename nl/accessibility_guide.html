@@ -374,136 +374,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">NL</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
-                        <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
-                        <a href="../accessibility_guide.html" hreflang="en">EN</a>
-                        <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
-                        <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
-                        <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
-                        <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
-                        <a href="../it/accessibility_guide.html" hreflang="it">IT</a>
-                        <a href="../nl/accessibility_guide.html" hreflang="nl" class="active">NL</a>
-                        <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">NL</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
+            <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
+            <a href="../accessibility_guide.html" hreflang="en">EN</a>
+            <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
+            <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
+            <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
+            <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
+            <a href="../it/accessibility_guide.html" hreflang="it">IT</a>
+            <a href="../nl/accessibility_guide.html" hreflang="nl" class="active">NL</a>
+            <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -513,32 +421,22 @@
 
         <div class="guide-header">
             <h1 class="guide-title">Toegankelijkheidsvoorzieningen voor senioren</h1>
-            <p class="guide-meta"><span class="notranslate" translation="no">TapAlert</span> is ontworpen om door
-                iedereen gebruikt te kunnen worden, inclusief mensen met gehoorverlies, slechtziendheid, trillingen of
-                andere leeftijdsgerelateerde aandoeningen. In deze handleiding wordt elke toegankelijkheidsfunctie
-                uitgelegd en hoe u er het maximale uit kunt halen.</p>
+            <p class="guide-meta"><span class="notranslate" translation="no">TapAlert</span> is ontworpen om door iedereen gebruikt te kunnen worden, inclusief mensen met gehoorverlies, slechtziendheid, trillingen of andere leeftijdsgerelateerde aandoeningen. In deze handleiding wordt elke toegankelijkheidsfunctie uitgelegd en hoe u er het maximale uit kunt halen.</p>
         </div>
 
         <section class="guide-section" id="step-1">
             <h2>1. Ondersteuning voor grote tekst</h2>
-            <p><strong>Wie helpt het:</strong> Mensen met slechtziendheid of moeite met het lezen van kleine teksten.
-            </p>
-            <p><span class="notranslate" translate="no">TapAlert</span> respecteert de lettergrootte die u instelt in de
-                systeeminstellingen van uw telefoon. Als u de tekstgrootte vergroot in <strong>Instellingen > Weergave >
-                    Lettergrootte</strong> (Android) of <strong>Instellingen > Toegankelijkheid > Weergave- en
-                    tekstgrootte > Grotere tekst</strong> (iOS), wordt alle tekst in <span class="notranslate"
-                    translate="no">TapAlert</span> dienovereenkomstig groter: knoppen, labels, menu's en berichten.</p>
+            <p><strong>Wie helpt het:</strong> Mensen met slechtziendheid of moeite met het lezen van kleine teksten.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> respecteert de lettergrootte die u instelt in de systeeminstellingen van uw telefoon. Als u de tekstgrootte vergroot in <strong>Instellingen > Weergave > Lettergrootte</strong> (Android) of <strong>Instellingen > Toegankelijkheid > Weergave- en tekstgrootte > Grotere tekst</strong> (iOS), wordt alle tekst in <span class="notranslate" translate="no">TapAlert</span> dienovereenkomstig groter: knoppen, labels, menu's en berichten.</p>
             <div class="alert-box">
                 <h4>💡 Geen actie nodig in de app</h4>
-                <p>Stel gewoon de gewenste lettergrootte in uw telefooninstellingen in en <span class="notranslate"
-                        translate="no">TapAlert</span> zal deze automatisch volgen.</p>
+                <p>Stel gewoon de gewenste lettergrootte in uw telefooninstellingen in en <span class="notranslate" translate="no">TapAlert</span> zal deze automatisch volgen.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-2">
             <h2>2. Ondersteuning voor schermlezers (TalkBack / VoiceOver)</h2>
-            <p><strong>Wie helpt het:</strong> Mensen met een ernstige visuele beperking die een schermlezer gebruiken.
-            </p>
+            <p><strong>Wie helpt het:</strong> Mensen met een ernstige visuele beperking die een schermlezer gebruiken.</p>
             <p><span class="notranslate" translate="no">TapAlert</span> werkt standaard met:</p>
             <ul>
                 <li><strong>TalkBack</strong> op Android (Instellingen > Toegankelijkheid > TalkBack)</li>
@@ -546,24 +444,16 @@
             </ul>
             <p>Wanneer een schermlezer actief is:</p>
             <ul>
-                <li>De knoppen <strong><span class="notranslate" translate="no">SOS</span></strong> en <strong>Ik ben
-                        oké</strong> worden aangekondigd met hun naam en huidige status (ingeschakeld of uitgeschakeld).
-                </li>
-                <li>Wanneer u begint met aftellen voordat u een waarschuwing verzendt, telt de schermlezer de resterende
-                    seconden hardop af, zodat u altijd weet hoe lang het nog duurt voordat de waarschuwing wordt
-                    verzonden.</li>
-                <li>Nadat een waarschuwing is verzonden, kondigt de schermlezer <strong>"Waarschuwing
-                        verzonden"</strong> of <strong>"Waarschuwing mislukt"</strong> aan, zodat u de uitkomst kent
-                    zonder naar het scherm te hoeven kijken.</li>
+                <li>De knoppen <strong><span class="notranslate" translate="no">SOS</span></strong> en <strong>Ik ben oké</strong> worden aangekondigd met hun naam en huidige status (ingeschakeld of uitgeschakeld).</li>
+                <li>Wanneer u begint met aftellen voordat u een waarschuwing verzendt, telt de schermlezer de resterende seconden hardop af, zodat u altijd weet hoe lang het nog duurt voordat de waarschuwing wordt verzonden.</li>
+                <li>Nadat een waarschuwing is verzonden, kondigt de schermlezer <strong>"Waarschuwing verzonden"</strong> of <strong>"Waarschuwing mislukt"</strong> aan, zodat u de uitkomst kent zonder naar het scherm te hoeven kijken.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-3">
             <h2>3. Haptische feedback (telefoontrillingen)</h2>
-            <p><strong>Wie helpt het:</strong> Mensen met gehoorverlies die het aftelgeluid niet kunnen horen, of
-                iedereen die de voorkeur geeft aan tactiele bevestiging.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> gebruikt de trilmotor van je telefoon om je
-                fysieke feedback te geven op belangrijke momenten:</p>
+            <p><strong>Wie helpt het:</strong> Mensen met gehoorverlies die het aftelgeluid niet kunnen horen, of iedereen die de voorkeur geeft aan tactiele bevestiging.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> gebruikt de trilmotor van je telefoon om je fysieke feedback te geven op belangrijke momenten:</p>
             <table>
                 <thead>
                     <tr>
@@ -596,19 +486,14 @@
             </table>
             <div class="alert-box">
                 <h4>💡 Geen actie nodig</h4>
-                <p>Haptische feedback werkt automatisch zolang vibratie is ingeschakeld op uw telefoon (controleer de
-                    stil-/vibratieschakelaar van uw telefoon).</p>
+                <p>Haptische feedback werkt automatisch zolang vibratie is ingeschakeld op uw telefoon (controleer de stil-/vibratieschakelaar van uw telefoon).</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-4">
             <h2>4. Geluidswaarschuwingen</h2>
-            <p><strong>Wie helpt het:</strong> Mensen die moeten horen wanneer er een waarschuwing wordt verzonden,
-                inclusief mensen met matig gehoorverlies.</p>
-            <p>Wanneer een waarschuwing wordt verzonden, speelt <span class="notranslate"
-                    translation="no">TapAlert</span> een geluid af op <strong>uw eigen apparaat</strong> om te
-                bevestigen dat de waarschuwing is uitgegaan. Je kunt het geluid aanpassen in <strong>Instellingen >
-                    Meldingsgeluid</strong>:</p>
+            <p><strong>Wie helpt het:</strong> Mensen die moeten horen wanneer er een waarschuwing wordt verzonden, inclusief mensen met matig gehoorverlies.</p>
+            <p>Wanneer een waarschuwing wordt verzonden, speelt <span class="notranslate" translation="no">TapAlert</span> een geluid af op <strong>uw eigen apparaat</strong> om te bevestigen dat de waarschuwing is uitgegaan. Je kunt het geluid aanpassen in <strong>Instellingen > Meldingsgeluid</strong>:</p>
             <ul>
                 <li><strong>Geen</strong> — geen geluid</li>
                 <li><strong>Gewone geluiden</strong> — eenvoudige, heldere tonen (goed voor de meeste gebruikers)</li>
@@ -616,84 +501,63 @@
             </ul>
             <p>Binnen elke geluidsstijl kunt u ook het volgende aanpassen:</p>
             <ul>
-                <li><strong>Geluidshoogte</strong> — schuif naar links voor een lagere, diepere toon. Lagere tonen (rond
-                    de 500 Hz) zijn gemakkelijker te horen voor mensen met leeftijdsgebonden gehoorverlies voor hoge
-                    frequenties. Om deze reden is de standaardinstelling al ingesteld op een lagere toonhoogte.</li>
+                <li><strong>Geluidshoogte</strong> — schuif naar links voor een lagere, diepere toon. Lagere tonen (rond de 500 Hz) zijn gemakkelijker te horen voor mensen met leeftijdsgebonden gehoorverlies voor hoge frequenties. Om deze reden is de standaardinstelling al ingesteld op een lagere toonhoogte.</li>
                 <li><strong>Volume</strong> — stel in hoe luid het bevestigingsgeluid wordt afgespeeld.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-5">
             <h2>5. Schermflits en zaklampflits</h2>
-            <p><strong>Wie helpt het:</strong> Mensen met gehoorverlies die het geluid mogelijk missen, of iedereen in
-                een luide omgeving. Ook handig als de telefoon met de voorkant naar beneden ligt of in een zak zit.</p>
-            <p>Wanneer een waarschuwing succesvol is verzonden, produceert <span class="notranslate"
-                    translate="no">TapAlert</span> het volgende:</p>
+            <p><strong>Wie helpt het:</strong> Mensen met gehoorverlies die het geluid mogelijk missen, of iedereen in een luide omgeving. Ook handig als de telefoon met de voorkant naar beneden ligt of in een zak zit.</p>
+            <p>Wanneer een waarschuwing succesvol is verzonden, produceert <span class="notranslate" translate="no">TapAlert</span> het volgende:</p>
             <ol>
                 <li><strong>Schermflits</strong>: het hele scherm licht drie keer snel achter elkaar wit op.</li>
-                <li><strong>Zaklampflits</strong> — de camera-LED aan de achterkant van de telefoon knippert drie keer
-                    tegelijk, zelfs zichtbaar als het scherm naar beneden is gericht.</li>
+                <li><strong>Zaklampflits</strong> — de camera-LED aan de achterkant van de telefoon knippert drie keer tegelijk, zelfs zichtbaar als het scherm naar beneden is gericht.</li>
             </ol>
             <p>Beide flitsen worden tegelijkertijd uitgevoerd en duren minder dan een seconde.</p>
             <div class="alert-box warning">
                 <h4>⚠️ Hoe u dit kunt uitschakelen</h4>
-                <p>Als u een lichtgevoelige aandoening heeft, ga dan naar <strong>Instellingen → Meldingsgeluid →
-                        Flitser bij waarschuwing</strong> en schakel dit uit.</p>
+                <p>Als u een lichtgevoelige aandoening heeft, ga dan naar <strong>Instellingen → Meldingsgeluid → Flitser bij waarschuwing</strong> en schakel dit uit.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-6">
             <h2>6. Veeg om het aftellen te annuleren</h2>
-            <p><strong>Wie helpt het:</strong> Iedereen die per ongeluk een aftelling start en deze snel moet annuleren.
-            </p>
-            <p>Wanneer u op de knop <span class="notranslate" translate="no">SOS</span> tikt, verschijnt er een
-                aftelvenster voordat de waarschuwing wordt verzonden. Je kunt het op twee manieren opzeggen:</p>
+            <p><strong>Wie helpt het:</strong> Iedereen die per ongeluk een aftelling start en deze snel moet annuleren.</p>
+            <p>Wanneer u op de knop <span class="notranslate" translate="no">SOS</span> tikt, verschijnt er een aftelvenster voordat de waarschuwing wordt verzonden. Je kunt het op twee manieren opzeggen:</p>
             <ul>
                 <li>Tik op de knop <strong>Annuleren</strong> onder aan het dialoogvenster.</li>
-                <li><strong>Veeg het dialoogvenster naar links of rechts</strong>: het dialoogvenster schuift met uw
-                    vinger en verdwijnt zodra u het ver genoeg loslaat.</li>
+                <li><strong>Veeg het dialoogvenster naar links of rechts</strong>: het dialoogvenster schuift met uw vinger en verdwijnt zodra u het ver genoeg loslaat.</li>
             </ul>
-            <p>Hoe dan ook, u zult twee korte trillingen voelen ter bevestiging dat de waarschuwing is geannuleerd en
-                dat er niets is verzonden.</p>
+            <p>Hoe dan ook, u zult twee korte trillingen voelen ter bevestiging dat de waarschuwing is geannuleerd en dat er niets is verzonden.</p>
         </section>
 
         <section class="guide-section" id="step-7">
             <h2>7. Samenstelling van gesproken berichten</h2>
-            <p><strong>Wie helpt het:</strong> Mensen met trillingen, artritis of andere aandoeningen die typen moeilijk
-                maken.</p>
-            <p>In plaats van een aangepast bericht te typen voordat u een waarschuwing verzendt, kunt u dit inspreken.
-                Tik op het <strong>microfoonpictogram</strong> in het berichtveld en spreek uw bericht in. De app
-                transcribeert uw woorden automatisch. Stilte gedurende 3 seconden stopt de opname.</p>
+            <p><strong>Wie helpt het:</strong> Mensen met trillingen, artritis of andere aandoeningen die typen moeilijk maken.</p>
+            <p>In plaats van een aangepast bericht te typen voordat u een waarschuwing verzendt, kunt u dit inspreken. Tik op het <strong>microfoonpictogram</strong> in het berichtveld en spreek uw bericht in. De app transcribeert uw woorden automatisch. Stilte gedurende 3 seconden stopt de opname.</p>
             <p>Dit werkt bij de berichtinvoer op het startscherm en in het dodemanstimerdialoogvenster.</p>
         </section>
 
         <section class="guide-section" id="step-8">
             <h2>8. Hold-to-Send-modus</h2>
-            <p><strong>Wie helpt het:</strong> Mensen die geneigd zijn per ongeluk op de <span class="notranslate"
-                    translate="no">SOS</span>-knop te tikken.</p>
-            <p>Standaard vereist de <span class="notranslate" translate="no">SOS</span>-knop slechts één tik. Als per
-                ongeluk drukken een probleem is, kunt u overschakelen naar de modus <strong>Houden om te
-                    verzenden</strong>:</p>
+            <p><strong>Wie helpt het:</strong> Mensen die geneigd zijn per ongeluk op de <span class="notranslate" translate="no">SOS</span>-knop te tikken.</p>
+            <p>Standaard vereist de <span class="notranslate" translate="no">SOS</span>-knop slechts één tik. Als per ongeluk drukken een probleem is, kunt u overschakelen naar de modus <strong>Houden om te verzenden</strong>:</p>
             <p>Ga naar <strong>Instellingen → Triggermethode → Vasthouden om te verzenden</strong>.</p>
-            <p>In deze modus moet u de knop volledig ingedrukt houden voordat de waarschuwing wordt geactiveerd, om
-                onbedoelde verzendingen te voorkomen.</p>
+            <p>In deze modus moet u de knop volledig ingedrukt houden voordat de waarschuwing wordt geactiveerd, om onbedoelde verzendingen te voorkomen.</p>
         </section>
 
         <section class="guide-section" id="step-9">
             <h2>9. Widget op het startscherm (Android)</h2>
-            <p><strong>Wie helpt het:</strong> Iedereen die het lastig vindt om in geval van nood zijn telefoon te
-                ontgrendelen en de app te openen.</p>
-            <p>Op Android kun je een <span class="notranslate" translate="no">TapAlert</span>-widget aan je startscherm
-                toevoegen, zodat je de <span class="notranslate" translate="no">SOS</span>-knop altijd met één tik
-                verwijderd hebt, zonder dat je de app hoeft te openen.</p>
+            <p><strong>Wie helpt het:</strong> Iedereen die het lastig vindt om in geval van nood zijn telefoon te ontgrendelen en de app te openen.</p>
+            <p>Op Android kun je een <span class="notranslate" translate="no">TapAlert</span>-widget aan je startscherm toevoegen, zodat je de <span class="notranslate" translate="no">SOS</span>-knop altijd met één tik verwijderd hebt, zonder dat je de app hoeft te openen.</p>
             <p>Om de widget toe te voegen: <strong>Instellingen → Startschermwidget → Widget toevoegen</strong>.</p>
         </section>
 
         <div class="next-steps">
             <h3>Meer hulp nodig?</h3>
             <p>If you have any questions about configuring these functies or need assistance, check our <a
-                    href="troubleshooting.html">Gids voor probleemoplossing</a> or <a href="contact.html">Neem contact
-                    op met ondersteuning</a>.</p>
+                    href="troubleshooting.html">Gids voor probleemoplossing</a> or <a href="contact.html">Neem contact op met ondersteuning</a>.</p>
         </div>
     </main>
 
@@ -703,8 +567,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.
-                    </p>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
                 </div>
 
                 <div class="footer-section">
@@ -729,8 +592,7 @@
                     <h3>Steun</h3>
                     <ul>
                         <li><a href="#">Veelgestelde vragen</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate"
-                                    translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
                         <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
                         <li><a href="troubleshooting.html">Problemen oplossen</a></li>
                         <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
@@ -739,8 +601,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. |
-                    Gemaakt met ❤️ voor uw veiligheid</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
             </div>
         </div>
     </footer>

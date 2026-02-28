@@ -15,8 +15,7 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/index.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/index.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" translate="no">TapAlert</span> - Larrialdi-alerta sinpleak. Hileko kuotak ez.
-    </title>
+    <title><span class="notranslate" translate="no">TapAlert</span> - Larrialdi-alerta sinpleak. Hileko kuotak ez.</title>
     <style>
         * {
             margin: 0;
@@ -932,6 +931,173 @@
             }
         }
 
+        /* Carousel Section */
+        .car-section {
+            padding: 60px 0;
+            background: #0f172a;
+        }
+
+        .car-heading {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #e2e8f0;
+            margin-bottom: 24px;
+            padding: 0 20px;
+            letter-spacing: -0.02em;
+        }
+
+        /* overflow-x clips side slides; overflow-y visible keeps box-shadows */
+        .car-outer {
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+
+        .car-track {
+            display: flex;
+            align-items: center;   /* vertically centres scaled-down neighbours */
+            gap: 24px;
+            padding: 48px 0;       /* vertical room so scaled-up centre isn't clipped */
+            will-change: transform;
+            transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .car-slide {
+            flex-shrink: 0;
+            width: 52%;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.45;
+            transform: scale(0.84);
+            transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .car-slide.center {
+            opacity: 1;
+            transform: scale(1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(255, 255, 255, 0.35);
+            cursor: zoom-in;
+        }
+
+        /* Carousel embedded in hero */
+        .hero .car-outer {
+            margin-top: 36px;
+        }
+
+        .hero .car-progress-wrap {
+            margin-top: 12px;
+        }
+
+        .car-slide img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .car-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .car-btn:hover {
+            background: rgba(255, 255, 255, 0.32);
+        }
+
+        .car-btn--prev { left: 16px; }
+        .car-btn--next { right: 16px; }
+
+        /* Progress bar */
+        .car-progress-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .car-progress-track {
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .car-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #667eea, #818cf8);
+            border-radius: 3px;
+        }
+
+        .car-progress-bar.running {
+            transition: width 10s linear;
+            width: 100%;
+        }
+
+        /* Lightbox */
+        .car-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        .car-lightbox.active {
+            display: flex;
+        }
+
+        .car-lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 16px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+            animation: carPop 0.18s ease-out;
+        }
+
+        @keyframes carPop {
+            from { transform: scale(0.93); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .car-slide { width: 68%; }
+        }
+
+        @media (max-width: 600px) {
+            .car-section { padding: 44px 0; }
+            .car-heading { font-size: 1.5rem; margin-bottom: 16px; }
+            .car-slide { width: 84%; }
+            .car-track { gap: 16px; padding: 36px 0; }
+            .car-btn { width: 38px; height: 38px; font-size: 1.3rem; }
+            .car-btn--prev { left: 8px; }
+            .car-btn--next { right: 8px; }
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -1108,136 +1274,44 @@
                 <li><a href="#pricing" class="nav-link" data-section="pricing">Prezioak</a></li>
                 <li><a href="#guides" class="nav-link" data-section="guides">Gidak</a></li>
             </ul>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">EU</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/index.html" hreflang="ca">CA</a>
-                        <a href="../de/index.html" hreflang="de">DE</a>
-                        <a href="../index.html" hreflang="en">EN</a>
-                        <a href="../es/index.html" hreflang="es">ES</a>
-                        <a href="../eu/index.html" hreflang="eu" class="active">EU</a>
-                        <a href="../fr/index.html" hreflang="fr">FR</a>
-                        <a href="../gl/index.html" hreflang="gl">GL</a>
-                        <a href="../it/index.html" hreflang="it">IT</a>
-                        <a href="../nl/index.html" hreflang="nl">NL</a>
-                        <a href="../pt/index.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">EU</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/index.html" hreflang="ca">CA</a>
+            <a href="../de/index.html" hreflang="de">DE</a>
+            <a href="../index.html" hreflang="en">EN</a>
+            <a href="../es/index.html" hreflang="es">ES</a>
+            <a href="../eu/index.html" hreflang="eu" class="active">EU</a>
+            <a href="../fr/index.html" hreflang="fr">FR</a>
+            <a href="../gl/index.html" hreflang="gl">GL</a>
+            <a href="../it/index.html" hreflang="it">IT</a>
+            <a href="../nl/index.html" hreflang="nl">NL</a>
+            <a href="../pt/index.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">
             <div class="bar"></div>
@@ -1251,28 +1325,140 @@
             <h1><img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
                     style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                     translate="no">TapAlert</span></h1>
-            <p class="tagline">Erraz, sakatu bakarreko alertak. Pribatutasuna-lehenik.<br> Adinekoak kontuan hartuta
-                diseinatuta: sinplea, segurua, hileroko kuotarik gabe.<br> Marruskadurarik gabeko (urrunetik lagunduta)
-                hasierako konfigurazioa adinekoentzat.<br></p>
+            <p class="tagline">Erraz, sakatu bakarreko alertak. Pribatutasuna-lehenik.<br> Adinekoak kontuan hartuta diseinatuta: sinplea, segurua, hileroko kuotarik gabe.<br> Marruskadurarik gabeko (urrunetik lagunduta) hasierako konfigurazioa adinekoentzat.<br></p>
             <p class="tagline">Zure gurasoentzat, aiton-amonentzat eta helduentzat.</p>
             <p class="tagline">Zure lasaitasunerako.</p>
-            <div class="summary-box">
-                <p class="subtitle">Babestu zure helduak eta maiteak ukitu batekin.</p>
-                <p class="subtitle">Ezharpidetzak, ez jarraipenik, ez konturik behar, ez iragarkirik.</p>
-                <p class="subtitle">Segurtasun pertsonaleko alerta-tresna adinekoentzat, familiei, bidaiarientzat eta
-                    konfiantzazko kontaktuei zerbait ondo ez dagoenean jakinarazteko modu azkar bat nahi duen
-                    edonorentzat diseinatua, harpidetzarik, konturik edo jarraipenarik gabe.</p>
-                <p class="subtitle"><strong>Ezustekoa normal berria den munduan —bat-bateko uholdeetatik hasi eta
-                        argindar etenetaraino— ziurtatu inoiz ez zaudela benetan bakarrik. Ukitu bakarrarekin, esan zure
-                        maiteei seguru zaudela edo laguntza behar duzula, egunak zer esanik ez.</strong></p>
-                <p class="subtitle">
-                    Gure aplikazioak alertak bidaltzen ditu SMS bidez, ez datuetan oinarritutako mezuen bidez; beraz,
-                    zure mezua aplikazioek, Wi-Fi eta push jakinarazpenek ez dutenean jasotzen dute. Zure hartzaileek
-                    telefono mugikorra, funtzionalitateko telefonoa edo konexio mugatua duten ala ez, SMSak bidaltzen
-                    ditu. Saihestu Isiltasuna / Ez molestatu iragazkiak zure kontaktuak esnatzeko, garrantzitsua denean.
-                    Interneterako sarbidea gabe ere funtzionatzen du.
-                </p>
+            <div class="car-outer" id="carOuter">
+                <div class="car-track" id="carTrack">
+                    <div class="car-slide"><img src="../media/slide_01.png" alt="" loading="eager"></div>
+                    <div class="car-slide"><img src="../media/slide_02.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_03.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_04.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_05.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_06.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_07.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_08.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_09.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_10.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_11.png" alt="" loading="lazy"></div>
+                    <div class="car-slide"><img src="../media/slide_12.png" alt="" loading="lazy"></div>
+                </div>
+                <button class="car-btn car-btn--prev" id="carPrev" aria-label="Previous">&#8249;</button>
+                <button class="car-btn car-btn--next" id="carNext" aria-label="Next">&#8250;</button>
             </div>
+            <div class="car-progress-wrap">
+                <div class="car-progress-track">
+                    <div class="car-progress-bar" id="carProgress"></div>
+                </div>
+            </div>
+
+            <!-- Lightbox: click centre slide to enlarge -->
+            <div class="car-lightbox" id="carLightbox">
+                <img src="" id="carLightboxImg" alt="">
+            </div>
+
+            <script>
+                (function () {
+                    var outer      = document.getElementById('carOuter');
+                    var track      = document.getElementById('carTrack');
+                    var btnPrev    = document.getElementById('carPrev');
+                    var btnNext    = document.getElementById('carNext');
+                    var progress   = document.getElementById('carProgress');
+                    var overlay    = document.getElementById('carLightbox');
+                    var overlayImg = document.getElementById('carLightboxImg');
+
+                    var slides  = Array.from(track.querySelectorAll('.car-slide'));
+                    var n       = slides.length;
+                    var current = 0;
+                    var autoTimer;
+
+                    slides.forEach(function (slide, i) {
+                        slide.addEventListener('click', function () {
+                            if (i === current) {
+                                overlayImg.src = slide.querySelector('img').src;
+                                overlay.classList.add('active');
+                            } else {
+                                current = i;
+                                update();
+                                startAuto();
+                            }
+                        });
+                    });
+                    overlay.addEventListener('click', function () {
+                        overlay.classList.remove('active');
+                    });
+
+                    function getGap() {
+                        return parseFloat(getComputedStyle(track).gap) || 24;
+                    }
+
+                    function update() {
+                        slides.forEach(function (s, i) {
+                            s.classList.toggle('center', i === current);
+                        });
+                        var slideW = slides[0].offsetWidth;
+                        var outerW = outer.offsetWidth;
+                        var offset = (outerW / 2) - (slideW / 2) - (current * (slideW + getGap()));
+                        track.style.transform = 'translateX(' + offset + 'px)';
+                    }
+
+                    function goNext() { current = (current + 1) % n; update(); }
+                    function goPrev() { current = (current - 1 + n) % n; update(); }
+
+                    function resetProgress() {
+                        progress.classList.remove('running');
+                        void progress.offsetWidth;
+                        progress.classList.add('running');
+                    }
+
+                    function startAuto() {
+                        clearInterval(autoTimer);
+                        resetProgress();
+                        autoTimer = setInterval(function () { goNext(); resetProgress(); }, 10000);
+                    }
+
+                    function pauseAuto() {
+                        clearInterval(autoTimer);
+                        var w = getComputedStyle(progress).width;
+                        progress.classList.remove('running');
+                        progress.style.transition = 'none';
+                        progress.style.width = w;
+                    }
+
+                    function resumeAuto() {
+                        progress.style.width = '';
+                        progress.style.transition = '';
+                        startAuto();
+                    }
+
+                    btnNext.addEventListener('click', function () { goNext(); startAuto(); });
+                    btnPrev.addEventListener('click', function () { goPrev(); startAuto(); });
+
+                    outer.addEventListener('mouseenter', pauseAuto);
+                    outer.addEventListener('mouseleave', resumeAuto);
+
+                    var txStart = 0, tyStart = 0;
+                    outer.addEventListener('touchstart', function (e) {
+                        txStart = e.touches[0].clientX;
+                        tyStart = e.touches[0].clientY;
+                        pauseAuto();
+                    }, { passive: true });
+
+                    outer.addEventListener('touchend', function (e) {
+                        var dx = txStart - e.changedTouches[0].clientX;
+                        var dy = tyStart - e.changedTouches[0].clientY;
+                        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+                            dx > 0 ? goNext() : goPrev();
+                        }
+                        resumeAuto();
+                    }, { passive: true });
+
+                    window.addEventListener('resize', update);
+
+                    update();
+                    startAuto();
+                })();
+            </script>
             <div class="cta-buttons">
                 <a href="#" class="btn btn-primary">📱 Laster eskuragarri Google Play-n!</a>
                 <a href="#features" class="btn btn-secondary">Argibide gehiago</a>
@@ -1294,70 +1480,41 @@
                             — Aplikazioak guztiz lokalean funtzionatzen du, ez erregistratu edo saioa hasi gabe</li>
                         <li><span class="check">✅</span> <strong>Ezjarraipena edo analisia</strong>
                             — ez da erabiltzailearen portaera daturik jasotzen edo transmititzen</li>
-                        <li><span class="check">✅</span> <strong>Eziragarkiak</strong> — aplikazioa iragarkirik gabekoa
-                            da, dirua irabazteko aukera ematen du premium funtzioetarako aplikazioan behin-behineko
-                            erosketa baten bidez</li>
-                        <li><span class="check">✅</span> <strong>Ezharpidetzak</strong> — erabiltzaileek behin
-                            ordaintzen dute (edo inolaz ere ez doako mailarako), ez dago behin eta berriz kuotarik</li>
-                        <li><span class="check">✅</span> <strong>Kokapena alerta bat bidaltzean soilik atzitzen
-                                da</strong> — inoiz ez atzealdean</li>
+                        <li><span class="check">✅</span> <strong>Eziragarkiak</strong> — aplikazioa iragarkirik gabekoa da, dirua irabazteko aukera ematen du premium funtzioetarako aplikazioan behin-behineko erosketa baten bidez</li>
+                        <li><span class="check">✅</span> <strong>Ezharpidetzak</strong> — erabiltzaileek behin ordaintzen dute (edo inolaz ere ez doako mailarako), ez dago behin eta berriz kuotarik</li>
+                        <li><span class="check">✅</span> <strong>Kokapena alerta bat bidaltzean soilik atzitzen da</strong> — inoiz ez atzealdean</li>
                     </ul>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">📡</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">SMS-Lehen Arkitektura</h3>
-                    <p style="font-size: 0.9em; margin-bottom: 15px;">Aplikazioak SMSak lehenesten ditu datuetan
-                        oinarritutako mezuen aurrean (push jakinarazpenak, WhatsApp, etab.), zeren eta:</p>
+                    <p style="font-size: 0.9em; margin-bottom: 15px;">Aplikazioak SMSak lehenesten ditu datuetan oinarritutako mezuen aurrean (push jakinarazpenak, WhatsApp, etab.), zeren eta:</p>
                     <ul class="feature-list" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
-                        <li><span class="check">✅</span> SMSak Internet/WiFi-a itzalita dagoenean funtzionatzen du
-                            (dorre mugikorrek bateriaren babeskopia dute)</li>
-                        <li><span class="check">✅</span> Hartzaileek ez dute telefono mugikorrik behar:
-                            funtzionalitatezko telefonoek eta oinarrizko telefonoek SMSak jasotzen dituzte</li>
-                        <li><span class="check">✅</span> Ezaplikazioa instalatzea beharrezkoa da hartzailearen amaieran
-                        </li>
-                        <li><span class="check">✅</span> SMSak garraiolarien mailako bidalketa da, ez dago hirugarrenen
-                            zerbitzariak konektatuta egotearen menpe</li>
+                        <li><span class="check">✅</span> SMSak Internet/WiFi-a itzalita dagoenean funtzionatzen du (dorre mugikorrek bateriaren babeskopia dute)</li>
+                        <li><span class="check">✅</span> Hartzaileek ez dute telefono mugikorrik behar: funtzionalitatezko telefonoek eta oinarrizko telefonoek SMSak jasotzen dituzte</li>
+                        <li><span class="check">✅</span> Ezaplikazioa instalatzea beharrezkoa da hartzailearen amaieran</li>
+                        <li><span class="check">✅</span> SMSak garraiolarien mailako bidalketa da, ez dago hirugarrenen zerbitzariak konektatuta egotearen menpe</li>
                     </ul>
                     <p style="font-size: 0.9em;"><strong><span class="notranslate" translate="no">Smart
-                                Redundancy</span>:</strong> Zerbitzu mugikorrik erabilgarri ez dagoenean, aplikazioa
-                        SMSak bidaltzera itzultzen da lehenik Wi-Fi dei bidez (eskuragarri badago,
-                        telefonoaren/hornitzailearen araberakoa) edo, ez bada, <span class="notranslate"
-                            translate="no">Twilio</span> bidez (konfiguratuta badago). Honek bigarren mailako bidalketa
-                        bide bat eskaintzen du SMS kanal nagusia erabilgarri ez dagoenean. Era berean, zerbitzu
-                        mugikorra soilik dagoen egoera batean (Wi-Fi eta internetik gabe), <span class="notranslate"
-                            translate="no">Direct SMS</span>-k arrazoiren batengatik huts egiten badu (akatsa edo SIM
-                        ez,...), <span class="notranslate" translate="no">Twilio</span> (konfiguratuta badago) hutsegite
-                        gisa jardungo du, sare mugikorra ere erabil dezakeelako (4G/5G bidez) mezua azken aukera gisa
-                        bidaltzeko.</p>
+                                Redundancy</span>:</strong> Zerbitzu mugikorrik erabilgarri ez dagoenean, aplikazioa SMSak bidaltzera itzultzen da lehenik Wi-Fi dei bidez (eskuragarri badago, telefonoaren/hornitzailearen araberakoa) edo, ez bada, <span class="notranslate" translate="no">Twilio</span> bidez (konfiguratuta badago). Honek bigarren mailako bidalketa bide bat eskaintzen du SMS kanal nagusia erabilgarri ez dagoenean. Era berean, zerbitzu mugikorra soilik dagoen egoera batean (Wi-Fi eta internetik gabe), <span class="notranslate" translate="no">Direct SMS</span>-k arrazoiren batengatik huts egiten badu (akatsa edo SIM ez,...), <span class="notranslate" translate="no">Twilio</span> (konfiguratuta badago) hutsegite gisa jardungo du, sare mugikorra ere erabil dezakeelako (4G/5G bidez) mezua azken aukera gisa bidaltzeko.</p>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">👴</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">Seniorrentzako Diseinua</h3>
                     <ul class="feature-list" style="list-style-type: none; padding: 0;">
-                        <li><span class="check">✅</span> Botoi handiak eta kontraste handikoak (<span
-                                class="notranslate" translate="no">SOS</span> bakarra eta ondo nago)</li>
+                        <li><span class="check">✅</span> Botoi handiak eta kontraste handikoak (<span class="notranslate" translate="no">SOS</span> bakarra eta ondo nago)</li>
                         <li><span class="check">✅</span> Gutxieneko nabigazioa eta karga kognitiboa</li>
                         <li><span class="check">✅</span> Ahotsetik testura, erabiltzaileek idatzi behar ez izateko</li>
-                        <li><span class="check">✅</span> Atzerako kontaketaren tenporizadore konfiguragarriak edo Eutsi
-                            bidaltzeko baieztapenak ustekabeko alertak saihesten ditu</li>
+                        <li><span class="check">✅</span> Atzerako kontaketaren tenporizadore konfiguragarriak edo Eutsi bidaltzeko baieztapenak ustekabeko alertak saihesten ditu</li>
                         <li><span class="check">✅</span> Sartzea gidatua urratsez urrats konfigurazioarekin</li>
-                        <li><span class="check">✅</span> Interfazearen erabaki guztiek argitasuna eta sinpletasuna
-                            lehenesten dituzte ezaugarrien dentsitatearen gainetik</li>
-                        <li><span class="check">✅</span> Zero marruskadura konfigurazioa WhatsApp, SMS, Posta
-                            elektronikoa, etab. bidez bidal daitekeen esteka magikoarekin. Klik bakar batekin zure
-                            seniorrak aplikazioa konfiguratu eta erabiltzen has daiteke.</li>
-                        <li><span class="check">✅</span> Pantaila-distira — 3 flash distiratsuek alerta bakoitza
-                            berresten dute, entzumen-galera duten erabiltzaileek ez dute inoiz galduko</li>
-                        <li><span class="check">✅</span> Maiztasun baxuagoko tonuak — 500-600 Hz-ko abisu-soinu
-                            lehenetsiak entzuten dira, adinarekin lotutako entzumen galeretarako errazago entzuten da.
-                        </li>
-                        <li><span class="check">✅</span> Atzerako kontaketa haptikoa — telefonoak segundoan behin jotzen
-                            du atzerako kontaketa zehar, ez da pantailara begiratu beharrik</li>
-                        <li><span class="check">✅</span> Pantaila-irakurgailuaren laguntza: guztiz bateragarria
-                            TalkBack-ekin (Android) eta VoiceOver (iOS); botoiak etiketatuta daude eta emaitzak ozenki
-                            iragartzen dira</li>
+                        <li><span class="check">✅</span> Interfazearen erabaki guztiek argitasuna eta sinpletasuna lehenesten dituzte ezaugarrien dentsitatearen gainetik</li>
+                        <li><span class="check">✅</span> Zero marruskadura konfigurazioa WhatsApp, SMS, Posta elektronikoa, etab. bidez bidal daitekeen esteka magikoarekin. Klik bakar batekin zure seniorrak aplikazioa konfiguratu eta erabiltzen has daiteke.</li>
+                        <li><span class="check">✅</span> Pantaila-distira — 3 flash distiratsuek alerta bakoitza berresten dute, entzumen-galera duten erabiltzaileek ez dute inoiz galduko</li>
+                        <li><span class="check">✅</span> Maiztasun baxuagoko tonuak — 500-600 Hz-ko abisu-soinu lehenetsiak entzuten dira, adinarekin lotutako entzumen galeretarako errazago entzuten da.</li>
+                        <li><span class="check">✅</span> Atzerako kontaketa haptikoa — telefonoak segundoan behin jotzen du atzerako kontaketa zehar, ez da pantailara begiratu beharrik</li>
+                        <li><span class="check">✅</span> Pantaila-irakurgailuaren laguntza: guztiz bateragarria TalkBack-ekin (Android) eta VoiceOver (iOS); botoiak etiketatuta daude eta emaitzak ozenki iragartzen dira</li>
                     </ul>
                 </div>
 
@@ -1369,111 +1526,81 @@
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">Ezaugarri indartsuak zure segurtasunerako</h2>
-            <p class="section-subtitle">Zure larrialdietako kontaktuekin konektatuta egoteko behar duzun guztia,
-                sinpletasun eta fidagarritasunerako diseinatuta.</p>
+            <p class="section-subtitle">Zure larrialdietako kontaktuekin konektatuta egoteko behar duzun guztia, sinpletasun eta fidagarritasunerako diseinatuta.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🆘</div>
                     <h3><span class="notranslate" translate="no">SOS</span> & Ados botoiak</h3>
-                    <p>Bidali aurrez zehaztutako <span class="notranslate" translate="no">SOS</span> "Laguntza behar
-                        dut!" edo "Ongi nago" mezuak berehala ukitu batekin. Mezuetan zure GPS kokapen eta helbidea
-                        zehatzak daude.</p>
+                    <p>Bidali aurrez zehaztutako <span class="notranslate" translate="no">SOS</span> "Laguntza behar dut!" edo "Ongi nago" mezuak berehala ukitu batekin. Mezuetan zure GPS kokapen eta helbidea zehatzak daude.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📶</div>
                     <h3>Mezuen Bidalketa Adimenduna</h3>
-                    <p>Lineaz kanpo funtzionatzen du <span class="notranslate" translate="no">Direct SMS</span>-rekin.
-                        <span class="notranslate" translate="no">fallback</span> <span class="notranslate"
-                            translate="no">fallback</span> automatikoki mugikorra eta Wi-Fi artean zure mezua iristen
-                        dela ziurtatzeko.
-                    </p>
+                    <p>Lineaz kanpo funtzionatzen du <span class="notranslate" translate="no">Direct SMS</span>-rekin. <span class="notranslate" translate="no">fallback</span> <span class="notranslate" translate="no">fallback</span> automatikoki mugikorra eta Wi-Fi artean zure mezua iristen dela ziurtatzeko.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Check-in tenporizadorea</h3>
-                    <p>Ezarri atzerako kontaketa tenporizadore bat. Ez baduzu erregistratzen garaiz, alerta automatiko
-                        bat bidaliko zaie kontaktuei. Bakarkako jardueretarako ezin hobea.</p>
+                    <p>Ezarri atzerako kontaketa tenporizadore bat. Ez baduzu erregistratzen garaiz, alerta automatiko bat bidaliko zaie kontaktuei. Bakarkako jardueretarako ezin hobea.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
                     <h3>Ahotsetik testurako alertak</h3>
-                    <p>Sortu mezuak esku librean ahots bidezko sarrera erabiliz. Lagungarria estres edo mugikortasun
-                        mugatuko egoeretan idaztea posible ez denean.</p>
+                    <p>Sortu mezuak esku librean ahots bidezko sarrera erabiliz. Lagungarria estres edo mugikortasun mugatuko egoeretan idaztea posible ez denean.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">👴</div>
                     <h3>Adinekoentzako Diseinua</h3>
-                    <p>Testu handia, kontraste handia, soinu-altuera doigarria entzumen-urritasuna dutenentzat eta
-                        distrakziorik gabeko interfaze argia. Erraza adinekoentzat eta erabiltzaile ez teknikoentzat.
-                    </p>
+                    <p>Testu handia, kontraste handia, soinu-altuera doigarria entzumen-urritasuna dutenentzat eta distrakziorik gabeko interfaze argia. Erraza adinekoentzat eta erabiltzaile ez teknikoentzat.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
                     <h3>Familiak lagundutako konfigurazioa</h3>
-                    <p>Familiako kideek adinekoei aplikazioa eta kontaktuak urrunetik konfiguratzen lagun diezaiekete
-                        konfigurazio-esteka bat erabiliz. Konfiguratu aplikazioa zure gailuan eta bidali esteka klik
-                        bakarrarekin aplikazioa instalatzeko eta konfiguratzeko.</p>
+                    <p>Familiako kideek adinekoei aplikazioa eta kontaktuak urrunetik konfiguratzen lagun diezaiekete konfigurazio-esteka bat erabiliz. Konfiguratu aplikazioa zure gailuan eta bidali esteka klik bakarrarekin aplikazioa instalatzeko eta konfiguratzeko.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <h3>Hizkuntza Anitzak</h3>
-                    <p>Hainbat hizkuntza onartzen ditu irisgarritasun handiagoa lortzeko. Erabili <span
-                            class="notranslate" translate="no">TapAlert</span> nahiago duzun hizkuntzan.
+                    <p>Hainbat hizkuntza onartzen ditu irisgarritasun handiagoa lortzeko. Erabili <span class="notranslate" translate="no">TapAlert</span> nahiago duzun hizkuntzan.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📍</div>
                     <h3>Kokapen adimenduna testuingurua</h3>
-                    <p>GPS koordenatu zehatzak eta gizakiek irakur daitekeen kale-helbidea barne hartzen ditu.
-                        Hartzaileak lineaz kanpo edo oinarrizko telefonoak erabiltzen baditu ere funtzionatzen du.</p>
+                    <p>GPS koordenatu zehatzak eta gizakiek irakur daitekeen kale-helbidea barne hartzen ditu. Hartzaileak lineaz kanpo edo oinarrizko telefonoak erabiltzen baditu ere funtzionatzen du.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">✉️</div>
                     <h3>Posta elektronikoaren erredundantzia</h3>
-                    <p>Posta elektronikoko alertak bidal ditzake indartzeko mezularitza-metodo gisa edo alertak
-                        erredundantzia emateko <span class="notranslate" translate="no">Twilio</span> erabilgarri ez
-                        badago.</p>
+                    <p>Posta elektronikoko alertak bidal ditzake indartzeko mezularitza-metodo gisa edo alertak erredundantzia emateko <span class="notranslate" translate="no">Twilio</span> erabilgarri ez badago.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon"><img src="../media/twilio.png" alt="Twilio"
                             style="height: 1em; vertical-align: bottom;"></div>
                     <h3><span class="notranslate" translate="no">Twilio</span> SMS hutsegite gisa</h3>
-                    <p><strong>Android:</strong> aplikazioak SMSak zuzenean bidaltzen ditu zure telefonotik, ez da
-                        beharrezkoa <span class="notranslate" translate="no">Twilio</span> baina gomendagarria da. <span
-                            class="notranslate" translate="no">Twilio</span> aukerakoa da, Wi-Fi babeskopia gisa
-                        erabiltzen da mugikorra erabilgarri ez dagoenean edo hondatuta dagoenean, baina hutsegite gisa
-                        ere erabil daiteke mugikorretarako soilik den egoeretan <span class="notranslate"
-                            translate="no">Direct SMS</span> funtzionatzen ez badu edo erabilgarri ez badago.</p>
-                    <p style="margin-top: 10px;"><strong>iOS:</strong> Applek blokeatzen ditu aplikazioak zuzenean SMSak
-                        bidaltzea. Hau Apple-ren murrizketa da, ez <span class="notranslate"
-                            translate="no">TapAlert</span> muga. <span class="notranslate" translate="no">Twilio</span>
-                        aplikazioari zure izenean SMSak automatikoki bidaltzen uzten dion zubia da. Hori gabe, aukera
-                        bakarra "Bidali" eskuz sakatzea da berriro Mezuak aplikazioan, ez da aproposa larrialdietan.
+                    <p><strong>Android:</strong> aplikazioak SMSak zuzenean bidaltzen ditu zure telefonotik, ez da beharrezkoa <span class="notranslate" translate="no">Twilio</span> baina gomendagarria da. <span class="notranslate" translate="no">Twilio</span> aukerakoa da, Wi-Fi babeskopia gisa erabiltzen da mugikorra erabilgarri ez dagoenean edo hondatuta dagoenean, baina hutsegite gisa ere erabil daiteke mugikorretarako soilik den egoeretan <span class="notranslate" translate="no">Direct SMS</span> funtzionatzen ez badu edo erabilgarri ez badago.</p>
+                    <p style="margin-top: 10px;"><strong>iOS:</strong> Applek blokeatzen ditu aplikazioak zuzenean SMSak bidaltzea. Hau Apple-ren murrizketa da, ez <span class="notranslate" translate="no">TapAlert</span> muga. <span class="notranslate" translate="no">Twilio</span> aplikazioari zure izenean SMSak automatikoki bidaltzen uzten dion zubia da. Hori gabe, aukera bakarra "Bidali" eskuz sakatzea da berriro Mezuak aplikazioan, ez da aproposa larrialdietan.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🆘📋</div>
                     <h3>Larrialdi Modua eta Egoera Alertak</h3>
-                    <p>Larrialdi Moduak SOS eta «Ondo nago» alertak bidaltzen ditu ukitu bakar batekin. Ezkerrerantz
-                        lerratu Egoera Alertetara — 3 mezu botoi pertsonalizagarri larrialdi ez diren egoerei aurre
-                        egiteko, alerta bakoitzeko ahots grabazio aukerarekin.</p>
+                    <p>Larrialdi Moduak SOS eta «Ondo nago» alertak bidaltzen ditu ukitu bakar batekin. Ezkerrerantz lerratu Egoera Alertetara — 3 mezu botoi pertsonalizagarri larrialdi ez diren egoerei aurre egiteko, alerta bakoitzeko ahots grabazio aukerarekin.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Hasierako pantailaren widgeta</h3>
-                    <p><strong>Android bakarrik:</strong> Gehitu ukitu bakarreko larrialdi-widget bat zure hasierako
-                        pantailan berehala sartzeko aplikazioa ireki gabe. Botoi edo keinu fisiko batekin erabiltzeko
-                        jarraibideak ere ematen dira aplikazioan.</p>
+                    <p><strong>Android bakarrik:</strong> Gehitu ukitu bakarreko larrialdi-widget bat zure hasierako pantailan berehala sartzeko aplikazioa ireki gabe. Botoi edo keinu fisiko batekin erabiltzeko jarraibideak ere ematen dira aplikazioan.</p>
                 </div>
             </div>
         </div>
@@ -1539,9 +1666,7 @@
         <div class="container">
             <div class="android-content">
                 <h2 class="section-title">🤖 Android Lehenengoa</h2>
-                <p class="section-subtitle">Guk onartzen dugun bitartean iOS plataforma anitzeko familientzat, gure
-                    enblematikoek palanka eskaintzen dute Android jatorrizko SMS alerta automatizatuak bidaltzeko
-                    gaitasunak.</p>
+                <p class="section-subtitle">Guk onartzen dugun bitartean iOS plataforma anitzeko familientzat, gure enblematikoek palanka eskaintzen dute Android jatorrizko SMS alerta automatizatuak bidaltzeko gaitasunak.</p>
                 <div class="comparison-table-wrapper">
                     <h3 style="margin-bottom: 20px; color: #2c3e50;">Laburpena: Plataforma bakoitzak egin dezakeena</h3>
                     <table class="comparison-table">
@@ -1555,43 +1680,34 @@
                         <tbody>
                             <tr>
                                 <td><strong>Bidali SMS doan</strong></td>
-                                <td><span class="check">✅</span> Bai (<span class="notranslate" translate="no"><span
-                                            class="notranslate" translate="no">Direct SMS</span></span>, beti)</td>
-                                <td><span class="check">✅</span> Bai (iOS Messages, erabiltzailearen interakzioa behar
-                                    du)</td>
+                                <td><span class="check">✅</span> Bai (<span class="notranslate"
+                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>, beti)</td>
+                                <td><span class="check">✅</span> Bai (iOS Messages, erabiltzailearen interakzioa behar du)</td>
                             </tr>
                             <tr>
                                 <td><strong>Bidali SMS automatikoki</strong></td>
-                                <td><span class="check">✅</span> Bai (<span class="notranslate" translate="no"><span
-                                            class="notranslate" translate="no">Direct SMS</span></span>, beti)</td>
-                                <td><span class="cross">❌</span> <span class="notranslate"
-                                        translate="no">Twilio</span>rekin bakarrik (ordaindua)</td>
+                                <td><span class="check">✅</span> Bai (<span class="notranslate"
+                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>, beti)</td>
+                                <td><span class="cross">❌</span> <span class="notranslate" translate="no">Twilio</span>rekin bakarrik (ordaindua)</td>
                             </tr>
                             <tr>
                                 <td><strong>Internet gabe funtzionatzen du</strong></td>
-                                <td><span class="check">✅</span> Bai (<span class="notranslate" translate="no"><span
-                                            class="notranslate" translate="no">Direct SMS</span></span> zelula-sarea
-                                    erabiltzen du)</td>
+                                <td><span class="check">✅</span> Bai (<span class="notranslate"
+                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> zelula-sarea erabiltzen du)</td>
                                 <td><span class="check">✅</span> Bai (iOS Messages zelula-sarea erabiltzen du)</td>
                             </tr>
                             <tr>
                                 <td><strong>Dead Man tenporizadore guztiz automatikoa</strong></td>
                                 <td><span class="check">✅</span> Bai</td>
-                                <td><span class="cross">❌</span> <span class="notranslate"
-                                        translate="no">Twilio</span>rekin bakarrik (ordaindua). <span
-                                        class="notranslate" translate="no">Twilio</span> gabe, Mezuak aplikazioa
-                                    irekitzen da eta erabiltzaileak Bidali sakatu behar du</td>
+                                <td><span class="cross">❌</span> <span class="notranslate" translate="no">Twilio</span>rekin bakarrik (ordaindua). <span class="notranslate" translate="no">Twilio</span> gabe, Mezuak aplikazioa irekitzen da eta erabiltzaileak Bidali sakatu behar du</td>
                             </tr>
                             <tr>
                                 <td><strong>Ezerabiltzailearen interakzioa behar da</strong></td>
                                 <td><span class="check">✅</span> Bai</td>
-                                <td><span class="cross">❌</span> <span class="notranslate"
-                                        translate="no">Twilio</span>rekin bakarrik. iOS Messages-ek Bidali sakatzea
-                                    eskatzen du beti</td>
+                                <td><span class="cross">❌</span> <span class="notranslate" translate="no">Twilio</span>rekin bakarrik. iOS Messages-ek Bidali sakatzea eskatzen du beti</td>
                             </tr>
                             <tr>
-                                <td><strong>Posta elektronikoa <span class="notranslate"
-                                            translate="no">fallback</span></strong></td>
+                                <td><strong>Posta elektronikoa <span class="notranslate" translate="no">fallback</span></strong></td>
                                 <td><span class="check">✅</span> Bai (Internet eskuragarri dagoenean)</td>
                                 <td><span class="check">✅</span> Bai (Internet eskuragarri dagoenean)</td>
                             </tr>
@@ -1604,12 +1720,9 @@
                         <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(ekin alderatuta Android)</p>
                         <ul class="feature-list">
                             <li><span class="cross">❌</span> Ezin da SMSak programatikoki bidali (Apple murrizketa)</li>
-                            <li><span class="cross">❌</span> SMS guztiz automatikoak <span class="notranslate"
-                                    translate="no">Twilio</span> behar ditu</li>
-                            <li><span class="cross">❌</span> Dead Man Timer-ek ezin du SMS isilik bidali <span
-                                    class="notranslate" translate="no">Twilio</span> gabe</li>
-                            <li><span class="cross">⚠️</span> iOS Messages hobespenak erabiltzaileak fisikoki Bidali
-                                ukitzea eskatzen du
+                            <li><span class="cross">❌</span> SMS guztiz automatikoak <span class="notranslate" translate="no">Twilio</span> behar ditu</li>
+                            <li><span class="cross">❌</span> Dead Man Timer-ek ezin du SMS isilik bidali <span class="notranslate" translate="no">Twilio</span> gabe</li>
+                            <li><span class="cross">⚠️</span> iOS Messages hobespenak erabiltzaileak fisikoki Bidali ukitzea eskatzen du
                             </li>
                         </ul>
                     </div>
@@ -1617,26 +1730,19 @@
                     <div class="platform-card android">
                         <h3>Android Abantailak</h3>
                         <ul class="feature-list">
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span
-                                        class="notranslate" translate="no">Direct SMS</span></span> beti da doakoa eta
-                                automatikoa</li>
-                            <li><span class="check">✅</span> Ez<span class="notranslate" translate="no">Twilio</span>
-                                oinarrizko funtzionalitaterako beharrezkoak</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> beti da doakoa eta automatikoa</li>
+                            <li><span class="check">✅</span> Ez<span class="notranslate"
+                                    translate="no">Twilio</span> oinarrizko funtzionalitaterako beharrezkoak</li>
                             <li><span class="check">✅</span> Dead Man Timer automatikoa da beti</li>
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span>
-                                erredundantzia gehitzen du (bigarren metodoa), ez da baldintza bat (betiere zure
-                                telefonoak/operadoreak Wifi deiak onartzen baditu)</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> erredundantzia gehitzen du (bigarren metodoa), ez da baldintza bat (betiere zure telefonoak/operadoreak Wifi deiak onartzen baditu)</li>
                         </ul>
                     </div>
 
                     <div class="platform-card" style="border-top: 4px solid #667eea;">
                         <h3>Bi plataformak berdin jokatzen dutenean</h3>
                         <ul class="feature-list">
-                            <li><span class="check">ℹ️</span> WiFi soilik (zelularik gabe): biek erabiltzen dute Wifi
-                                Deia eskuragarri badago, <span class="notranslate" translate="no">Twilio</span> edo
-                                posta elektronikoa — portaera berdina</li>
-                            <li><span class="check">✅</span> Posta elektronikoaren erredundantzia: berdin funtzionatzen
-                                du bi plataformetan</li>
+                            <li><span class="check">ℹ️</span> WiFi soilik (zelularik gabe): biek erabiltzen dute Wifi Deia eskuragarri badago, <span class="notranslate" translate="no">Twilio</span> edo posta elektronikoa — portaera berdina</li>
+                            <li><span class="check">✅</span> Posta elektronikoaren erredundantzia: berdin funtzionatzen du bi plataformetan</li>
                         </ul>
                     </div>
                 </div>
@@ -1648,8 +1754,7 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Prezio sinple eta zintzoa</h2>
-            <p class="section-subtitle">Ez dago harpidetzarik. Ezkutuko kuotarik ez.<br>Ordaindu behin, erabili betiko.
-            </p>
+            <p class="section-subtitle">Ez dago harpidetzarik. Ezkutuko kuotarik ez.<br>Ordaindu behin, erabili betiko.</p>
 
             <div class="pricing-cards">
                 <div class="pricing-card">
@@ -1659,12 +1764,10 @@
                     <ul class="features-list">
                         <li>✅ Hartzaile bat gehienez</li>
                         <li>✅ <span class="notranslate" translate="no">SOS</span> & Ados botoiak</li>
-                        <li>✅ <span class="notranslate" translate="no">Reporting mode</span> aurrez ezarritako mezuekin
-                        </li>
+                        <li>✅ <span class="notranslate" translate="no">Reporting mode</span> aurrez ezarritako mezuekin</li>
                         <li>✅ Alertaren historia: azken 50 mezuak</li>
                         <li>✅ Erredundantzia adimenduna (SMS + Wifi)</li>
-                        <li>✅ Posta elektronikoa <span class="notranslate" translate="no">fallback</span> edo
-                            erredundantzia gisa</li>
+                        <li>✅ Posta elektronikoa <span class="notranslate" translate="no">fallback</span> edo erredundantzia gisa</li>
                     </ul>
                     <a href="#" class="btn btn-secondary">Hasi Doan</a>
                 </div>
@@ -1680,27 +1783,21 @@
                         <li>✅ Check-in tenporizadorea</li>
                         <li>✅ Oraindik ez dago hileko kuotarik!</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Desblokeatu <span class="notranslate"
-                            translate="no">Premium</span></a>
+                    <a href="#" class="btn btn-primary">Desblokeatu <span class="notranslate" translate="no">Premium</span></a>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMSek prezioa dute, baina zure
-                    lasaitasuna ez</h3>
+                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMSek prezioa dute, baina zure lasaitasuna ez</h3>
                 <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
-                    <span class="notranslate" translate="no">TapAlert</span> ez du kobratzen bidalitako mezuengatik. Sor
-                    ditzakezun kostu bakarrak zure mugikorreko operadoreak SMS estandarretan aplikatzen dituenak dira
-                    —ohiko testu-mezuetan bezala— eta, konfiguratzea aukeratzen baduzu
+                    <span class="notranslate" translate="no">TapAlert</span> ez du kobratzen bidalitako mezuengatik. Sor ditzakezun kostu bakarrak zure mugikorreko operadoreak SMS estandarretan aplikatzen dituenak dira —ohiko testu-mezuetan bezala— eta, konfiguratzea aukeratzen baduzu
                     <span class="notranslate" translate="no">Twilio</span> hutsegite edo zerbitzu alternatibo gisa,
                     <a href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
                         style="color: #667eea; text-decoration: underline;">ezarritako mezu bakoitzeko kuotak <span
                             class="notranslate" translate="no">Twilio</span></a>
                     (Oharra: bat dago
                     <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
-                        target="_blank" rel="noopener noreferrer"
-                        style="color: #667eea; text-decoration: underline;">doako <span class="notranslate"
-                            translate="no">Twilio</span> probako kontua</a>
+                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;">doako <span class="notranslate" translate="no">Twilio</span> probako kontua</a>
                     baina ez dugu erabiltzea gomendatzen). Aplikazioak berak zero kostu gehigarri gehitzen du gainean.
                 </p>
             </div>
@@ -1711,8 +1808,7 @@
     <section class="privacy">
         <div class="container">
             <h2 class="section-title" style="color: white;">🔒 Pribatutasuna Diseinuaren eskutik</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Zure segurtasun-datuak zureak dira. Ez
-                konturik, ez jarraipenik, ez zaintzarik.</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Zure segurtasun-datuak zureak dira. Ez konturik, ez jarraipenik, ez zaintzarik.</p>
 
             <div class="privacy-grid">
                 <div class="privacy-item">
@@ -1746,16 +1842,13 @@
             <div class="use-case-highlight" style="max-width: 600px; margin: 0 auto 40px auto; transform: scale(1.05);">
                 <div class="use-case" style="border: 2px solid #667eea; background: white;">
                     <h3 style="font-size: 1.4rem;">👴 Adineko Helduak & Zaintzaileak</h3>
-                    <p style="font-size: 1.1rem;">Bakarrik bizi diren edo modu independentean bidaiatzen duten
-                        adinekoentzako izu-botoia. Ukitu batek familiako kide guztiei kokapen zehatza jakinarazten die.
-                    </p>
+                    <p style="font-size: 1.1rem;">Bakarrik bizi diren edo modu independentean bidaiatzen duten adinekoentzako izu-botoia. Ukitu batek familiako kide guztiei kokapen zehatza jakinarazten die.</p>
                 </div>
             </div>
 
             <div class="section-divider" style="text-align: center; margin-bottom: 40px; position: relative;">
                 <span
-                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">baina
-                    baita...</span>
+                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">baina baita...</span>
                 <div
                     style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #e2e8f0; z-index: 0;">
                 </div>
@@ -1765,32 +1858,27 @@
 
                 <div class="use-case">
                     <h3>🥾 Bakarkako Abenturazaleak</h3>
-                    <p>Ibilbide baten hasieran/amaieran edo larrialdi kasuetan euren kokapena familiari bidaltzeko modu
-                        fidagarria nahi duten mendizaleak edo txirrindulariak.</p>
+                    <p>Ibilbide baten hasieran/amaieran edo larrialdi kasuetan euren kokapena familiari bidaltzeko modu fidagarria nahi duten mendizaleak edo txirrindulariak.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>🌙 Segurtasun pertsonala</h3>
-                    <p>Gauean berandu etxera oinez ala bidaia-bidaia erabili? Bidali "Ikusi nire bizkarra" alerta
-                        diskretu bat lagunei eta senideei.</p>
+                    <p>Gauean berandu etxera oinez ala bidaia-bidaia erabili? Bidali "Ikusi nire bizkarra" alerta diskretu bat lagunei eta senideei.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>💼 Enpresa Txikiak</h3>
-                    <p>Landa-langileak edo langile bakartiak (higiezinen agenteak, entrega-gidariak) fakturazio edo
-                        larrialdi-seinale sinple bat behar duten.</p>
+                    <p>Landa-langileak edo langile bakartiak (higiezinen agenteak, entrega-gidariak) fakturazio edo larrialdi-seinale sinple bat behar duten.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>✈️ Nazioarteko bidaiariak</h3>
-                    <p>Wi-Fi mezularitza erabiltzea SMS ibiltaritzako kuota garestiak saihesteko, familia zure nondik
-                        norakoen berri ematen duen bitartean.</p>
+                    <p>Wi-Fi mezularitza erabiltzea SMS ibiltaritzako kuota garestiak saihesteko, familia zure nondik norakoen berri ematen duen bitartean.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>👨‍👩‍👧‍👦 Familiak konektatuta mantentzen</h3>
-                    <p>Jarrai ezazu senitartekoei "Ongi nago" egiaztapen bizkor batekin, etengabeko telefono-deiak edo
-                        testu-mezuak behar izan gabe.</p>
+                    <p>Jarrai ezazu senitartekoei "Ongi nago" egiaztapen bizkor batekin, etengabeko telefono-deiak edo testu-mezuak behar izan gabe.</p>
                 </div>
             </div>
         </div>
@@ -1800,16 +1888,14 @@
     <section class="guides" id="guides" style="padding: 80px 20px; background: white;">
         <div class="container">
             <h2 class="section-title">Urratsez urrats Gidak</h2>
-            <p class="section-subtitle">Master <span class="notranslate" translate="no">TapAlert</span> jarraitzeko
-                errazak diren gure gidekin</p>
+            <p class="section-subtitle">Master <span class="notranslate" translate="no">TapAlert</span> jarraitzeko errazak diren gure gidekin</p>
 
             <div class="features-grid">
                 <a href="user_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📖</div>
                         <h3>TapAlert erabiltzailearen gida</h3>
-                        <p>Aplikazioen eginbide guztien erreferentzia osoa: baimenak, moduak, ezarpenak, hartzaileak,
-                            alertak eta abar.</p>
+                        <p>Aplikazioen eginbide guztien erreferentzia osoa: baimenak, moduak, ezarpenak, hartzaileak, alertak eta abar.</p>
                     </div>
                 </a>
 
@@ -1825,8 +1911,7 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">👨‍👩‍👧</div>
                         <h3>Familiaren laguntzarekin konfiguratzea</h3>
-                        <p>Konfiguratu TapAlert pertsona heldu batentzat Magic Link erabiliz — pertsonak ez du ezer
-                            idatzi behar.</p>
+                        <p>Konfiguratu TapAlert pertsona heldu batentzat Magic Link erabiliz — pertsonak ez du ezer idatzi behar.</p>
                     </div>
                 </a>
 
@@ -1855,8 +1940,7 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📧</div>
                         <h3>Posta elektronikoaren erredundantzia konfiguratzea</h3>
-                        <p>Konfiguratu posta elektronikoa <span class="notranslate" translate="no">fallback</span> edo
-                            erredundantzia alerta-mezu gisa.</p>
+                        <p>Konfiguratu posta elektronikoa <span class="notranslate" translate="no">fallback</span> edo erredundantzia alerta-mezu gisa.</p>
                     </div>
                 </a>
                 <a href="accessibility_guide.html" style="text-decoration: none; color: inherit;">
@@ -1875,12 +1959,8 @@
         <div class="notice-content">
             <div class="notice-icon">⚠️</div>
             <h2>Segurtasun-ohar garrantzitsua</h2>
-            <p><strong><span class="notranslate" translate="no">TapAlert</span> EZ da 911 edo 112 bezalako larrialdi
-                    zerbitzuen ordezkoa.</strong></p>
-            <p style="margin-top: 15px;">Mezuak bidaltzea sarearen erabilgarritasunaren eta hartzailearen ekintzaren
-                araberakoa da. Aplikazio honek ez du monitorizaziorik, larrialdietarako erantzunik edo entrega
-                bermaturik eskaintzen. Benetako larrialdietan, jarri harremanetan beti zuzenean larrialdi zerbitzuekin.
-            </p>
+            <p><strong><span class="notranslate" translate="no">TapAlert</span> EZ da 911 edo 112 bezalako larrialdi zerbitzuen ordezkoa.</strong></p>
+            <p style="margin-top: 15px;">Mezuak bidaltzea sarearen erabilgarritasunaren eta hartzailearen ekintzaren araberakoa da. Aplikazio honek ez du monitorizaziorik, larrialdietarako erantzunik edo entrega bermaturik eskaintzen. Benetako larrialdietan, jarri harremanetan beti zuzenean larrialdi zerbitzuekin.</p>
         </div>
     </section>
 
@@ -1890,8 +1970,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik
-                        ez.</p>
+                    <p>Larrialdi-alerta sinpleak guztientzako. Ez harpidetzarik, ez jarraipenik, segurtasuna besterik ez.</p>
                 </div>
 
                 <div class="footer-section">
@@ -1916,8 +1995,7 @@
                     <h3>Laguntza</h3>
                     <ul>
                         <li><a href="#">Ohiko galderak</a></li>
-                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Urratsez urrats
-                                Gidak</a></li>
+                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Urratsez urrats Gidak</a></li>
                         <li><a href="accessibility_guide.html">Irisgarritasun Gida</a></li>
                         <li><a href="troubleshooting.html">Arazoak konpontzea</a></li>
                         <li><a href="contact.html">Jarri harremanetan laguntzarekin</a></li>
@@ -1926,8 +2004,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta.
-                    | ❤️rekin egina zure segurtasunerako</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Eskubide guztiak erreserbatuta. | ❤️rekin egina zure segurtasunerako</p>
             </div>
         </div>
     </footer>

@@ -423,136 +423,44 @@
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Tornar a casa</a>
+            
+<style>
+.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
+.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
+.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
+.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
+.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
+.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
+.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
+.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
+.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
+.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
+.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
+@media (max-width: 768px) {
+    .lang-dropdown { margin-left: 10px; }
+    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
+    .lang-dropdown-content { right: -10px; }
+}
+</style>
 
-            <style>
-                .lang-dropdown {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-
-                .lang-dropbtn {
-                    background: rgba(255, 255, 255, 0.8);
-                    color: #2c3e50;
-                    padding: 8px 16px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    border: 1px solid rgba(102, 126, 234, 0.2);
-                    border-radius: 50px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropbtn:hover {
-                    background: white;
-                    border-color: #667eea;
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-                }
-
-                .lang-dropbtn::after {
-                    content: '▾';
-                    font-size: 0.7rem;
-                    opacity: 0.5;
-                }
-
-                .lang-dropdown-content {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    right: 0;
-                    top: 100%;
-                    width: 120px;
-                    z-index: 1001;
-                    transition: all 0.2s ease, visibility 0s linear 0.15s;
-                }
-
-                .lang-dropdown-inner {
-                    background-color: white;
-                    margin-top: 10px;
-                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                    border-radius: 12px;
-                    overflow: hidden;
-                    border: 1px solid rgba(0, 0, 0, 0.05);
-                    transform: translateY(-10px);
-                    transition: transform 0.2s ease;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transition-delay: 0s;
-                }
-
-                .lang-dropdown:hover .lang-dropdown-inner {
-                    transform: translateY(0);
-                }
-
-                .lang-dropdown-content a {
-                    color: #4a5568;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    transition: background 0.2s;
-                    text-transform: uppercase;
-                }
-
-                .lang-dropdown-content a:hover {
-                    background-color: #f7fafc;
-                    color: #667eea;
-                }
-
-                .lang-dropdown-content a.active {
-                    color: #667eea;
-                    background-color: #edf2f7;
-                }
-
-                .lang-dropdown-content a.active::after {
-                    content: '✓';
-                    color: #667eea;
-                    font-size: 0.8rem;
-                }
-
-                @media (max-width: 768px) {
-                    .lang-dropdown {
-                        margin-left: 10px;
-                    }
-
-                    .lang-dropbtn {
-                        padding: 6px 12px;
-                        font-size: 0.8rem;
-                    }
-
-                    .lang-dropdown-content {
-                        right: -10px;
-                    }
-                }
-            </style>
-
-            <div class="lang-dropdown">
-                <button class="lang-dropbtn">CA</button>
-                <div class="lang-dropdown-content">
-                    <div class="lang-dropdown-inner">
-                        <a href="../ca/one_tap_alert.html" hreflang="ca" class="active">CA</a>
-                        <a href="../de/one_tap_alert.html" hreflang="de">DE</a>
-                        <a href="../one_tap_alert.html" hreflang="en">EN</a>
-                        <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
-                        <a href="../eu/one_tap_alert.html" hreflang="eu">EU</a>
-                        <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
-                        <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
-                        <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
-                        <a href="../nl/one_tap_alert.html" hreflang="nl">NL</a>
-                        <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
-                    </div>
-                </div>
-            </div>
+<div class="lang-dropdown">
+    <button class="lang-dropbtn">CA</button>
+    <div class="lang-dropdown-content">
+        <div class="lang-dropdown-inner">
+            <a href="../ca/one_tap_alert.html" hreflang="ca" class="active">CA</a>
+            <a href="../de/one_tap_alert.html" hreflang="de">DE</a>
+            <a href="../one_tap_alert.html" hreflang="en">EN</a>
+            <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
+            <a href="../eu/one_tap_alert.html" hreflang="eu">EU</a>
+            <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
+            <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
+            <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
+            <a href="../nl/one_tap_alert.html" hreflang="nl">NL</a>
+            <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
+        </div>
+    </div>
+</div>
         </div>
     </header>
 
@@ -560,135 +468,100 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Torna a Guies</a>
 
-        <h1 class="guide-title">Alerta d'un sol toc: totes les maneres d'activar <span class="notranslate"
-                translate="no">TapAlert</span> a l'instant</h1>
+        <h1 class="guide-title">Alerta d'un sol toc: totes les maneres d'activar <span class="notranslate" translate="no">TapAlert</span> a l'instant</h1>
 
-        <p><span class="notranslate" translate="no">TapAlert</span> es pot configurar per a alertes d'emergència
-            instantànies d'un sol toc mitjançant diversos mètodes diferents. Aquesta guia cobreix totes les opcions, des
-            dels ginys de la pantalla d'inici fins alsbotós físics i els temporitzadors automatitzats.</p>
+        <p><span class="notranslate" translate="no">TapAlert</span> es pot configurar per a alertes d'emergència instantànies d'un sol toc mitjançant diversos mètodes diferents. Aquesta guia cobreix totes les opcions, des dels ginys de la pantalla d'inici fins alsbotós físics i els temporitzadors automatitzats.</p>
 
         <section class="guide-section">
             <h2>1. 📱 Android Giny de la pantalla d'inici</h2>
             <p><strong>Plataforma:</strong> Android only</p>
-            <p>La forma més ràpida d'activar una alerta. Un giny dedicat es troba a la pantalla d'inici: un toc i el
-                compte enrere comença immediatament.</p>
+            <p>La forma més ràpida d'activar una alerta. Un giny dedicat es troba a la pantalla d'inici: un toc i el compte enrere comença immediatament.</p>
 
             <h3>Com configurar</h3>
             <ol>
-                <li>Obriu <strong><span class="notranslate" translate="no">TapAlert</span></strong> → toqueu la icona
-                    <strong>⚙️ Configuració</strong>.
-                </li>
+                <li>Obriu <strong><span class="notranslate" translate="no">TapAlert</span></strong> → toqueu la icona <strong>⚙️ Configuració</strong>.</li>
                 <li>Desplaceu-vos fins a la secció <strong>Widget</strong>.</li>
-                <li>Toqueu <strong>"Afegeix"</strong> → el sistema us demanarà que col·loqueu el giny a la pantalla
-                    d'inici.</li>
-                <li>Arrossegueu-lo al vostre lloc preferit (idealment a la pantalla principal per accedir-hi
-                    ràpidament).</li>
+                <li>Toqueu <strong>"Afegeix"</strong> → el sistema us demanarà que col·loqueu el giny a la pantalla d'inici.</li>
+                <li>Arrossegueu-lo al vostre lloc preferit (idealment a la pantalla principal per accedir-hi ràpidament).</li>
             </ol>
 
             <h3>Com funciona</h3>
             <ul>
-                <li><strong>Un sol toc</strong> al giny → s'obre <span class="notranslate"
-                        translate="no">TapAlert</span> i el <strong>compte enrere comença immediatament</strong>.</li>
+                <li><strong>Un sol toc</strong> al giny → s'obre <span class="notranslate" translate="no">TapAlert</span> i el <strong>compte enrere comença immediatament</strong>.</li>
                 <li>Veuràs el diàleg del compte enrere i pots <strong>cancel·lar</strong> si és accidental.</li>
                 <li>Després del compte enrere, s'envia l'alerta i l'aplicació es tanca automàticament.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Col·loqueu el giny a la pantalla de bloqueig (si és compatible amb la vostra versió Android) o a la
-                    primera pàgina de la pantalla d'inici per accedir-hi més ràpidament.</p>
+                <p>Col·loqueu el giny a la pantalla de bloqueig (si és compatible amb la vostra versió Android) o a la primera pàgina de la pantalla d'inici per accedir-hi més ràpidament.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
             <p><strong>Plataforma:</strong> Android & iPhone</p>
-            <p>Assigna un <strong>físicbotó</strong> al teu telèfon (engegadabotó, tecla de volum o gest de toc enrere)
-                per iniciar <span class="notranslate" translate="no">TapAlert</span>. Combinat amb l'<strong>inici
-                    automàtic al llançament</strong>, això crea un veritable pànic amb un sol toc botó.</p>
+            <p>Assigna un <strong>físicbotó</strong> al teu telèfon (engegadabotó, tecla de volum o gest de toc enrere) per iniciar <span class="notranslate" translate="no">TapAlert</span>. Combinat amb l'<strong>inici automàtic al llançament</strong>, això crea un veritable pànic amb un sol toc botó.</p>
 
             <h3>Pas 1: activeu l'inici automàtic a <span class="notranslate" translate="no">TapAlert</span></h3>
             <ol>
-                <li>Obriu <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️
-                        Configuració</strong>.</li>
+                <li>Obriu <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>⚙️ Configuració</strong>.</li>
                 <li>Activeu <strong>"Inici automàtic a l'inici"</strong>.</li>
             </ol>
 
             <div class="alert-box warning">
                 <h4>⚠️ ADVERTIMENT</h4>
-                <p>Quan l'inici automàtic està activat, el compte enrere s'activarà <strong>cada cop</strong> que obriu
-                    l'aplicació, inclòs quan l'obriu normalment des del calaix d'aplicacions. Activeu-ho només si
-                    l'inicieu principalment mitjançant una drecera físicabotó.</p>
+                <p>Quan l'inici automàtic està activat, el compte enrere s'activarà <strong>cada cop</strong> que obriu l'aplicació, inclòs quan l'obriu normalment des del calaix d'aplicacions. Activeu-ho només si l'inicieu principalment mitjançant una drecera físicabotó.</p>
             </div>
 
             <h3>Pas 2: configureu el botó del vostre telèfon</h3>
 
             <h4>Samsung Galaxy (tecla lateral)</h4>
             <ol>
-                <li><strong>Configuració</strong> → <strong>Avançada característiques</strong> → <strong>Tecla
-                        lateral</strong>.</li>
-                <li>Activa <strong>Prem doblement</strong> → <strong>Obre l'aplicació</strong> → selecciona
-                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
-                </li>
+                <li><strong>Configuració</strong> → <strong>Avançada característiques</strong> → <strong>Tecla lateral</strong>.</li>
+                <li>Activa <strong>Prem doblement</strong> → <strong>Obre l'aplicació</strong> → selecciona <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Premeu dues vegades la potènciabotó per activar-lo.</li>
             </ol>
 
             <h4>Google Pixel (toc ràpid)</h4>
             <ol>
-                <li><strong>Configuració</strong> → <strong>Sistema</strong> → <strong>Gestos</strong> → <strong>Toqueu
-                        ràpid per iniciar accions</strong>.</li>
-                <li>Activa <strong>Utilitza el toc ràpid</strong> → <strong>Obre l'aplicació</strong> → selecciona
-                    <strong><span class="notranslate" translate="no">TapAlert</span></strong>.
-                </li>
+                <li><strong>Configuració</strong> → <strong>Sistema</strong> → <strong>Gestos</strong> → <strong>Toqueu ràpid per iniciar accions</strong>.</li>
+                <li>Activa <strong>Utilitza el toc ràpid</strong> → <strong>Obre l'aplicació</strong> → selecciona <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Fes doble toc a la part posterior del telèfon per activar-lo.</li>
             </ol>
 
             <h4>iPhone 15 Pro+ (botó d'acció)</h4>
             <ol>
-                <li><strong>Configuració</strong> → <strong>Botó d'acció</strong> → llisca cap a
-                    <strong>Drecera</strong>.
-                </li>
-                <li>Toca el selector → <strong>Obre l'aplicació</strong> → tria <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong>.</li>
+                <li><strong>Configuració</strong> → <strong>Botó d'acció</strong> → llisca cap a <strong>Drecera</strong>.</li>
+                <li>Toca el selector → <strong>Obre l'aplicació</strong> → tria <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                 <li>Manteniu premut el botó d'acció per activar-lo.</li>
             </ol>
 
             <h4>iPhone: tots els models (toc enrere)</h4>
             <ol>
-                <li><strong>Configuració</strong> → <strong>Accessibilitat</strong> → <strong>Toqueu</strong> →
-                    <strong>Toqueu enrere</strong>.
-                </li>
+                <li><strong>Configuració</strong> → <strong>Accessibilitat</strong> → <strong>Toqueu</strong> → <strong>Toqueu enrere</strong>.</li>
                 <li>Trieu <strong>Doble toc</strong> o <strong>Triple toc</strong>.</li>
                 <li>Per enllaçar a <span class="notranslate" translate="no">TapAlert</span>, primer creeu una drecera:
                     <ul>
-                        <li>Obriu l'aplicació <strong>Dreceres</strong> → <strong>+</strong> → <strong>Afegeix una
-                                acció</strong> → <strong>Obre l'aplicació</strong> → <strong><span class="notranslate"
-                                    translate="no">TapAlert</span></strong>.</li>
+                        <li>Obriu l'aplicació <strong>Dreceres</strong> → <strong>+</strong> → <strong>Afegeix una acció</strong> → <strong>Obre l'aplicació</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
                         <li>Anomena'l "Obre <span class="notranslate" translate="no">TapAlert</span>".</li>
                     </ul>
                 </li>
-                <li>Torna a la configuració de <strong>Toc enrere</strong> → selecciona la drecera "Obre <span
-                        class="notranslate" translate="no">TapAlert</span>".</li>
+                <li>Torna a la configuració de <strong>Toc enrere</strong> → selecciona la drecera "Obre <span class="notranslate" translate="no">TapAlert</span>".</li>
             </ol>
 
             <h4>Qualsevol Android (aplicacions de mapeador de botons)</h4>
-            <p>Si el vostre dispositiu no té incorporatbotó reasignació, instal·leu <strong>"Button Mapper"</strong> o
-                <strong>"MacroDroid"</strong> des de Play Store:
-            </p>
+            <p>Si el vostre dispositiu no té incorporatbotó reasignació, instal·leu <strong>"Button Mapper"</strong> o <strong>"MacroDroid"</strong> des de Play Store:</p>
             <ul>
-                <li>Torneu a assignar qualsevol clau de maquinari (volumbotós, etc.) a <strong>Obre l'aplicació</strong>
-                    → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
+                <li>Torneu a assignar qualsevol clau de maquinari (volumbotós, etc.) a <strong>Obre l'aplicació</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong>.</li>
             </ul>
 
             <h3>Com funciona</h3>
             <ol>
                 <li>Premeu el vostre botó/gestu configurat.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> s'obre → el compte enrere comença
-                    <strong>automàticament</strong> (si l'inici automàtic està habilitat).
-                </li>
+                <li><span class="notranslate" translate="no">TapAlert</span> s'obre → el compte enrere comença <strong>automàticament</strong> (si l'inici automàtic està habilitat).</li>
                 <li>S'envia l'alerta i l'aplicació es tanca automàticament.</li>
-                <li>Funciona fins i tot des d'una pantalla bloquejada (amb una optimització adequada de la bateria,
-                    vegeu a continuació).</li>
+                <li>Funciona fins i tot des d'una pantalla bloquejada (amb una optimització adequada de la bateria, vegeu a continuació).</li>
             </ol>
         </section>
 
@@ -696,59 +569,45 @@
             <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
                     translate="no">SOS</span> / OK)</h2>
             <p><strong>Plataforma:</strong> Android & iOS</p>
-            <p><span class="notranslate" translate="no">Panic Mode</span> transforma tota la pantalla en dos botós
-                gegants: <strong><span class="notranslate" translate="no">SOS</span></strong> i <strong>Estic
-                    bé</strong>, cosa que fa que sigui pràcticament impossible de perdre's.</p>
+            <p><span class="notranslate" translate="no">Panic Mode</span> transforma tota la pantalla en dos botós gegants: <strong><span class="notranslate" translate="no">SOS</span></strong> i <strong>Estic bé</strong>, cosa que fa que sigui pràcticament impossible de perdre's.</p>
 
             <h3>Com habilitar</h3>
             <ol>
-                <li>Obriu <strong><span class="notranslate" translate="no">TapAlert</span></strong> i s'obrirà de manera
-                    predeterminada a <span class="notranslate" translate="no">Panic Mode</span>.</li>
-                <li>Recordeu: podeu canviar d'Alertes de missatges configurats a <span class="notranslate"
-                        translate="no">Panic mode</span> fent lliscar cap a l'esquerra/dreta a la pantalla d'inici o
-                    tocar la icona de mode a la barra superior.</li>
+                <li>Obriu <strong><span class="notranslate" translate="no">TapAlert</span></strong> i s'obrirà de manera predeterminada a <span class="notranslate" translate="no">Panic Mode</span>.</li>
+                <li>Recordeu: podeu canviar d'Alertes de missatges configurats a <span class="notranslate" translate="no">Panic mode</span> fent lliscar cap a l'esquerra/dreta a la pantalla d'inici o tocar la icona de mode a la barra superior.</li>
             </ol>
 
             <h3>Com funciona</h3>
             <ul>
-                <li><strong>Toqueu el gran vermell <span class="notranslate" translate="no">SOS</span>botó</strong> →
-                    comença el compte enrere per a una alerta d'emergència.</li>
+                <li><strong>Toqueu el gran vermell <span class="notranslate" translate="no">SOS</span>botó</strong> → comença el compte enrere per a una alerta d'emergència.</li>
                 <li><strong>Toqueu el botó verd Estic bébotó</strong> → envia un missatge de tranquil·litat.</li>
-                <li>La <strong>Trucada d'emergènciabotó</strong> a la part inferior marca el vostre número d'emergència
-                    local (112, 911, etc.).</li>
+                <li>La <strong>Trucada d'emergènciabotó</strong> a la part inferior marca el vostre número d'emergència local (112, 911, etc.).</li>
             </ul>
 
             <h3>Mètode d'activació: Toc vs Mantén premut</h3>
-            <p>Per a més seguretat, podeu requerir <strong>prem i manteniu premut durant 5 segons</strong> en lloc d'un
-                sol toc:</p>
+            <p>Per a més seguretat, podeu requerir <strong>prem i manteniu premut durant 5 segons</strong> en lloc d'un sol toc:</p>
             <ul>
-                <li><strong>Configuració</strong> → <strong>Mètode d'activació</strong> → <strong>Premeu i manteniu
-                        premut (5 s)</strong>.</li>
-                <li>D'aquesta manera, s'evita els desencadenants accidentals tot i que és prou ràpid en cas
-                    d'emergència.</li>
+                <li><strong>Configuració</strong> → <strong>Mètode d'activació</strong> → <strong>Premeu i manteniu premut (5 s)</strong>.</li>
+                <li>D'aquesta manera, s'evita els desencadenants accidentals tot i que és prou ràpid en cas d'emergència.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>4. 🎙️ Voice Quick Alert</h2>
             <p><strong>Plataforma:</strong> Android & iOS</p>
-            <p>A <span class="notranslate" translate="no">Panic mode</span> també podeu enviar una alerta amb un
-                <strong>missatge dictat per veu</strong> en una acció, ideal quan no podeu escriure.
-            </p>
+            <p>A <span class="notranslate" translate="no">Panic mode</span> també podeu enviar una alerta amb un <strong>missatge dictat per veu</strong> en una acció, ideal quan no podeu escriure.</p>
             <ol>
                 <li>Tap the <strong>🎤 Microphone</strong>botó next to <span class="notranslate"
                         translate="no">SOS</span> or I'm OK.</li>
                 <li>Digues el teu missatge.</li>
-                <li>Després de parlar, el compte enrere comença automàticament amb el missatge de veu transcrit adjunt.
-                </li>
+                <li>Després de parlar, el compte enrere comença automàticament amb el missatge de veu transcrit adjunt.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>5. ⏳ Temporitzador de registre (interruptor de l'home mort)</h2>
             <p><strong>Plataforma:</strong> Android & iOS</p>
-            <p>El temporitzador envia una alerta <strong>automàticament</strong> si no registreu l'entrada; no cal que
-                toqueu res.</p>
+            <p>El temporitzador envia una alerta <strong>automàticament</strong> si no registreu l'entrada; no cal que toqueu res.</p>
 
             <h3>Com configurar</h3>
             <ol>
@@ -761,35 +620,26 @@
             <h3>Com funciona</h3>
             <ul>
                 <li>Una notificació persistent compta enrere el temps restant.</li>
-                <li>Si registreu l'entrada (toqueu <strong>"Estic bé / Restableix"</strong>) → el temporitzador es
-                    restableix, no s'ha enviat cap alerta.</li>
-                <li>Si no registreu l'entrada → <span class="notranslate" translate="no">TapAlert</span> envia
-                    automàticament la vostra alerta amb la ubicació a tots els destinataris.</li>
+                <li>Si registreu l'entrada (toqueu <strong>"Estic bé / Restableix"</strong>) → el temporitzador es restableix, no s'ha enviat cap alerta.</li>
+                <li>Si no registreu l'entrada → <span class="notranslate" translate="no">TapAlert</span> envia automàticament la vostra alerta amb la ubicació a tots els destinataris.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Perfecte per a activitats en solitari: caminar, caminar a casa a la nit, conèixer desconeguts o
-                    viatjar sol.</p>
+                <p>Perfecte per a activitats en solitari: caminar, caminar a casa a la nit, conèixer desconeguts o viatjar sol.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
-            <p>Perquè els activadors <strong>físicsbotó</strong> i <strong>widget</strong> funcionin de manera fiable
-                (especialment des d'una pantalla bloquejada/reactiva), deu desactiveu l'optimització de la bateria per a
-                <span class="notranslate" translate="no">TapAlert</span>.
-            </p>
+            <p>Perquè els activadors <strong>físicsbotó</strong> i <strong>widget</strong> funcionin de manera fiable (especialment des d'una pantalla bloquejada/reactiva), deu desactiveu l'optimització de la bateria per a <span class="notranslate" translate="no">TapAlert</span>.</p>
 
             <h3>Per què?</h3>
-            <p>Els fabricants Android maten de manera agressiva les aplicacions en segon pla per estalviar bateria. Això
-                pot evitar que <span class="notranslate" translate="no">TapAlert</span> desperti el telèfon quan la
-                pantalla està apagada.</p>
+            <p>Els fabricants Android maten de manera agressiva les aplicacions en segon pla per estalviar bateria. Això pot evitar que <span class="notranslate" translate="no">TapAlert</span> desperti el telèfon quan la pantalla està apagada.</p>
 
             <h3>Passos ràpids (tots els dispositius)</h3>
             <ol>
-                <li><strong>Configuració</strong> → <strong>Aplicacions</strong> → <strong><span class="notranslate"
-                            translate="no">TapAlert</span></strong> → <strong>Bateria</strong>.</li>
+                <li><strong>Configuració</strong> → <strong>Aplicacions</strong> → <strong><span class="notranslate" translate="no">TapAlert</span></strong> → <strong>Bateria</strong>.</li>
                 <li>Seleccioneu <strong>"No optimitzis"</strong> o <strong>"Sense restriccions"</strong>.</li>
                 <li>Activa <strong>"Permet l'activitat en segon pla"</strong>.</li>
             </ol>
@@ -798,8 +648,7 @@
             <ol>
                 <li>Bloqueja el telèfon i espera entre 1 i 2 minuts (pantalla completament apagada).</li>
                 <li>Premeu el vostre físicbotó configurat o toqueu el giny.</li>
-                <li><span class="notranslate" translate="no">TapAlert</span> s'ha d'obrir i començar el compte enrere a
-                    l'instant.</li>
+                <li><span class="notranslate" translate="no">TapAlert</span> s'ha d'obrir i començar el compte enrere a l'instant.</li>
             </ol>
         </section>
 
@@ -831,8 +680,7 @@
                         <td>Moderat</td>
                     </tr>
                     <tr>
-                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
-                                translate="no">SOS</span>botó)</td>
+                        <td><span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate" translate="no">SOS</span>botó)</td>
                         <td>Android & iOS</td>
                         <td>2 (obre l'aplicació + toca)</td>
                         <td>—</td>
@@ -854,8 +702,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p><small>*La compatibilitat amb la pantalla de bloqueig del widget varia segons la versió Android i el
-                    fabricant.</small></p>
+            <p><small>*La compatibilitat amb la pantalla de bloqueig del widget varia segons la versió Android i el fabricant.</small></p>
         </section>
 
         <section class="guide-section">
@@ -863,31 +710,25 @@
 
             <h3>👴 For Senior Users</h3>
             <ul>
-                <li>Utilitza <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (gran <span
-                        class="notranslate" translate="no">SOS</span> / estic bébotós).</li>
+                <li>Utilitza <strong><span class="notranslate" translate="no">Panic Mode</span></strong> (gran <span class="notranslate" translate="no">SOS</span> / estic bébotós).</li>
                 <li>Estableix <strong>Mètode d'activació</strong> a <strong>Toc</strong> (interacció més senzilla).</li>
                 <li>Afegiu el <strong>Android giny</strong> a la pantalla d'inici.</li>
-                <li>Estableix el compte enrere entre <strong>10 i 15 segons</strong> (temps per cancel·lar els errors).
-                </li>
+                <li>Estableix el compte enrere entre <strong>10 i 15 segons</strong> (temps per cancel·lar els errors).</li>
             </ul>
 
             <h3>🏃 For Active / Solo Users</h3>
             <ul>
                 <li>Configura el <strong>temporitzador de registre</strong> abans de les activitats.</li>
-                <li>Configura un <strong>físicbotó</strong> per a l'instant <span class="notranslate"
-                        translate="no">SOS</span>.</li>
-                <li>Activa <strong><span class="notranslate" translate="no">Redundància intel·ligent</span></strong>
-                    (auto-<span class="notranslate" translate="no">fallback</span> entre mètodes d'SMS).</li>
+                <li>Configura un <strong>físicbotó</strong> per a l'instant <span class="notranslate" translate="no">SOS</span>.</li>
+                <li>Activa <strong><span class="notranslate" translate="no">Redundància intel·ligent</span></strong> (auto-<span class="notranslate" translate="no">fallback</span> entre mètodes d'SMS).</li>
                 <li>Activa la <strong>redundància del correu electrònic</strong> només per a les àrees amb Wi-Fi.</li>
             </ul>
 
             <h3>🔒 For Maximum Security</h3>
             <ul>
                 <li>Configura <strong>physicalbotó</strong> amb <strong>Auto-Start</strong>.</li>
-                <li>Estableix <strong>Mètode d'activació</strong> a <strong>Prem i mantén premut (5 s)</strong> per
-                    evitar activacions accidentals.</li>
-                <li>Activeu <strong>tant</strong> <span class="notranslate" translate="no">Redundància
-                        intel·ligent</span> com la redundància de correu electrònic.</li>
+                <li>Estableix <strong>Mètode d'activació</strong> a <strong>Prem i mantén premut (5 s)</strong> per evitar activacions accidentals.</li>
+                <li>Activeu <strong>tant</strong> <span class="notranslate" translate="no">Redundància intel·ligent</span> com la redundància de correu electrònic.</li>
                 <li>Desactiva l'optimització de la bateria i prova des de la pantalla bloquejada.</li>
             </ul>
         </section>
@@ -900,8 +741,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només
-                        seguretat.</p>
+                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només seguretat.</p>
                 </div>
 
                 <div class="footer-section">
@@ -926,8 +766,7 @@
                     <h3>Suport</h3>
                     <ul>
                         <li><a href="#">Preguntes freqüents</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies
-                                pas a pas</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies pas a pas</a></li>
                         <li><a href="accessibility_guide.html">Guia d'accessibilitat</a></li>
                         <li><a href="troubleshooting.html">Resolució de problemes</a></li>
                         <li><a href="contact.html">Contacta amb l'assistència</a></li>
@@ -936,8 +775,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet
-                    amb ❤️ per la teva seguretat</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet amb ❤️ per la teva seguretat</p>
             </div>
         </div>
     </footer>
