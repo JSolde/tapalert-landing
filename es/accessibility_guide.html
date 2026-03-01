@@ -369,49 +369,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">ES</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
-            <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
-            <a href="../accessibility_guide.html" hreflang="en">EN</a>
-            <a href="../es/accessibility_guide.html" hreflang="es" class="active">ES</a>
-            <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
-            <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
-            <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
-            <a href="../it/accessibility_guide.html" hreflang="it">IT</a>
-            <a href="../nl/accessibility_guide.html" hreflang="nl">NL</a>
-            <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">ES</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/accessibility_guide.html" hreflang="ca">CA</a>
+                        <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
+                        <a href="../accessibility_guide.html" hreflang="en">EN</a>
+                        <a href="../es/accessibility_guide.html" hreflang="es" class="active">ES</a>
+                        <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
+                        <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
+                        <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
+                        <a href="../it/accessibility_guide.html" hreflang="it">IT</a>
+                        <a href="../nl/accessibility_guide.html" hreflang="nl">NL</a>
+                        <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -421,22 +513,31 @@
 
         <div class="guide-header">
             <h1 class="guide-title">Funciones de accesibilidad para personas mayores</h1>
-            <p class="guide-meta"><span class="notranslate" translate="no">TapAlert</span> está diseñado para ser utilizable por todos, incluyendo personas con pérdida de audición, baja visión, temblores u otras afecciones relacionadas con la edad. Esta guía explica cada función de accesibilidad y cómo sacarle el máximo provecho.</p>
+            <p class="guide-meta"><span class="notranslate" translate="no">TapAlert</span> está diseñado para ser
+                utilizable por todos, incluyendo personas con pérdida de audición, baja visión, temblores u otras
+                afecciones relacionadas con la edad. Esta guía explica cada función de accesibilidad y cómo sacarle el
+                máximo provecho.</p>
         </div>
 
         <section class="guide-section" id="step-1">
             <h2>1. Soporte de texto grande</h2>
             <p><strong>A quién ayuda:</strong> Personas con baja visión o dificultad para leer texto pequeño.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> respeta el tamaño de fuente que configure en la configuración del sistema de su teléfono. Si aumenta el tamaño del texto en <strong>Configuración > Pantalla > Tamaño de fuente</strong> (Android) o <strong>Configuración > Accesibilidad > Pantalla y tamaño de texto > Texto más grande</strong> (iOS), todo el texto en <span class="notranslate" translate="no">TapAlert</span> crecerá en consecuencia: botones, etiquetas, menús y mensajes.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> respeta el tamaño de fuente que configure en la
+                configuración del sistema de su teléfono. Si aumenta el tamaño del texto en <strong>Configuración >
+                    Pantalla > Tamaño de fuente</strong> (Android) o <strong>Configuración > Accesibilidad > Pantalla y
+                    tamaño de texto > Texto más grande</strong> (iOS), todo el texto en <span class="notranslate"
+                    translate="no">TapAlert</span> crecerá en consecuencia: botones, etiquetas, menús y mensajes.</p>
             <div class="alert-box">
                 <h4>💡 No es necesaria ninguna acción dentro de la aplicación</h4>
-                <p>Simplemente configure su tamaño de fuente preferido en la configuración de su teléfono y <span class="notranslate" translate="no">TapAlert</span> lo seguirá automáticamente.</p>
+                <p>Simplemente configure su tamaño de fuente preferido en la configuración de su teléfono y <span
+                        class="notranslate" translate="no">TapAlert</span> lo seguirá automáticamente.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-2">
             <h2>2. Compatibilidad con el lector de pantalla (TalkBack / VoiceOver)</h2>
-            <p><strong>A quién ayuda:</strong> Personas con discapacidad visual severa que utilizan un lector de pantalla.</p>
+            <p><strong>A quién ayuda:</strong> Personas con discapacidad visual severa que utilizan un lector de
+                pantalla.</p>
             <p><span class="notranslate" translate="no">TapAlert</span> funciona de forma nativa con:</p>
             <ul>
                 <li><strong>TalkBack</strong> en Android (Configuración > Accesibilidad > TalkBack)</li>
@@ -444,16 +545,23 @@
             </ul>
             <p>Cuando un lector de pantalla está activo:</p>
             <ul>
-                <li>Los botones <strong><span class="notranslate" translate="no">SOS</span></strong> y <strong>Estoy bien</strong> se anuncian con sus nombres y estado actual (activado o desactivado).</li>
-                <li>Cuando inicia una cuenta regresiva antes de enviar una alerta, el lector de pantalla cuenta los segundos restantes en voz alta para que siempre sepa cuánto tiempo le queda antes de que se envíe la alerta.</li>
-                <li>Después de que se envía una alerta, el lector de pantalla anuncia <strong>"Alerta enviada"</strong> o <strong>"Alerta fallida"</strong> para que conozca el resultado sin necesidad de mirar la pantalla.</li>
+                <li>Los botones <strong><span class="notranslate" translate="no">SOS</span></strong> y <strong>Estoy
+                        bien</strong> se anuncian con sus nombres y estado actual (activado o desactivado).</li>
+                <li>Cuando inicia una cuenta regresiva antes de enviar una alerta, el lector de pantalla cuenta los
+                    segundos restantes en voz alta para que siempre sepa cuánto tiempo le queda antes de que se envíe la
+                    alerta.</li>
+                <li>Después de que se envía una alerta, el lector de pantalla anuncia <strong>"Alerta enviada"</strong>
+                    o <strong>"Alerta fallida"</strong> para que conozca el resultado sin necesidad de mirar la
+                    pantalla.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-3">
             <h2>3. Retroalimentación háptica (Vibración del teléfono)</h2>
-            <p><strong>A quién ayuda:</strong> Personas con pérdida auditiva que no pueden escuchar el sonido de la cuenta regresiva, o cualquiera que prefiera la confirmación táctil.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> utiliza el motor de vibración de su teléfono para brindarle retroalimentación física en momentos clave:</p>
+            <p><strong>A quién ayuda:</strong> Personas con pérdida auditiva que no pueden escuchar el sonido de la
+                cuenta regresiva, o cualquiera que prefiera la confirmación táctil.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> utiliza el motor de vibración de su teléfono
+                para brindarle retroalimentación física en momentos clave:</p>
             <table>
                 <thead>
                     <tr>
@@ -486,78 +594,111 @@
             </table>
             <div class="alert-box">
                 <h4>💡 No se requiere acción</h4>
-                <p>La retroalimentación háptica funciona automáticamente siempre que la vibración esté activada en su teléfono (verifique el interruptor de silencio/vibración de su teléfono).</p>
+                <p>La retroalimentación háptica funciona automáticamente siempre que la vibración esté activada en su
+                    teléfono (verifique el interruptor de silencio/vibración de su teléfono).</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-4">
             <h2>4. Alertas de sonido</h2>
-            <p><strong>A quién ayuda:</strong> Personas que necesitan escuchar cuando se envía una alerta, incluidas aquellas con pérdida auditiva moderada.</p>
-            <p>Cuando se envía una alerta, <span class="notranslate" translate="no">TapAlert</span> reproduce un sonido en <strong>su propio dispositivo</strong> para confirmar que se emitió la alerta. Puede personalizar el sonido en <strong>Configuración > Sonido de notificación</strong>:</p>
+            <p><strong>A quién ayuda:</strong> Personas que necesitan escuchar cuando se envía una alerta, incluidas
+                aquellas con pérdida auditiva moderada.</p>
+            <p>Cuando se envía una alerta, <span class="notranslate" translate="no">TapAlert</span> reproduce un sonido
+                en <strong>su propio dispositivo</strong> para confirmar que se emitió la alerta. Puede personalizar el
+                sonido en <strong>Configuración > Sonido de notificación</strong>:</p>
             <ul>
                 <li><strong>Ninguno</strong>: sin sonido</li>
-                <li><strong>Sonidos simples</strong>: tonos simples y claros (buenos para la mayoría de los usuarios)</li>
+                <li><strong>Sonidos simples</strong>: tonos simples y claros (buenos para la mayoría de los usuarios)
+                </li>
                 <li><strong>Sonidos Ricos</strong>: tonos más completos y musicales</li>
             </ul>
             <p>Dentro de cada estilo de sonido, también puede ajustar:</p>
             <ul>
-                <li><strong>Tono de sonido</strong>: deslice el dedo hacia la izquierda para obtener un tono más bajo y profundo. Los sonidos de tono más grave (alrededor de 500 Hz) son más fáciles de escuchar para las personas con pérdida de audición de alta frecuencia relacionada con la edad. El valor predeterminado ya está configurado en un tono más bajo por este motivo.</li>
-                <li><strong>Volumen</strong>: establezca el volumen con el que se reproduce el sonido de confirmación.</li>
+                <li><strong>Tono de sonido</strong>: deslice el dedo hacia la izquierda para obtener un tono más bajo y
+                    profundo. Los sonidos de tono más grave (alrededor de 500 Hz) son más fáciles de escuchar para las
+                    personas con pérdida de audición de alta frecuencia relacionada con la edad. El valor predeterminado
+                    ya está configurado en un tono más bajo por este motivo.</li>
+                <li><strong>Volumen</strong>: establezca el volumen con el que se reproduce el sonido de confirmación.
+                </li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-5">
             <h2>5. Flash de pantalla y flash de linterna</h2>
-            <p><strong>A quién ayuda:</strong> Personas con pérdida de la audición que pueden omitir el sonido o cualquier persona en un entorno ruidoso. También es útil cuando el teléfono está boca abajo o en un bolsillo.</p>
-            <p>Cuando se envía una alerta con éxito, <span class="notranslate" translate="no">TapAlert</span> produce:</p>
+            <p><strong>A quién ayuda:</strong> Personas con pérdida de la audición que pueden omitir el sonido o
+                cualquier persona en un entorno ruidoso. También es útil cuando el teléfono está boca abajo o en un
+                bolsillo.</p>
+            <p>Cuando se envía una alerta con éxito, <span class="notranslate" translate="no">TapAlert</span> produce:
+            </p>
             <ol>
-                <li><strong>Destello de la pantalla</strong>: toda la pantalla se ilumina de blanco tres veces en rápida sucesión.</li>
-                <li><strong>Destellos de linterna</strong>: el LED de la cámara en la parte posterior del teléfono parpadea tres veces simultáneamente, visible incluso cuando la pantalla está boca abajo.</li>
+                <li><strong>Destello de la pantalla</strong>: toda la pantalla se ilumina de blanco tres veces en rápida
+                    sucesión.</li>
+                <li><strong>Destellos de linterna</strong>: el LED de la cámara en la parte posterior del teléfono
+                    parpadea tres veces simultáneamente, visible incluso cuando la pantalla está boca abajo.</li>
             </ol>
             <p>Ambos destellos se ejecutan al mismo tiempo y se completan en menos de un segundo.</p>
             <div class="alert-box warning">
                 <h4>⚠️ Como apagar esto</h4>
-                <p>Si tiene una condición fotosensible, vaya a <strong>Configuración → Sonido de notificación → Flash al recibir alerta</strong> y apáguelo.</p>
+                <p>Si tiene una condición fotosensible, vaya a <strong>Configuración → Sonido de notificación → Flash al
+                        recibir alerta</strong> y apáguelo.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-6">
             <h2>6. Desliza para cancelar la cuenta regresiva</h2>
-            <p><strong>A quién ayuda:</strong> Cualquier persona que inicie accidentalmente una cuenta regresiva y necesite cancelarla rápidamente.</p>
-            <p>Cuando toca el botón <span class="notranslate" translate="no">SOS</span>, aparece un cuadro de diálogo de cuenta regresiva antes de enviar la alerta. Puedes cancelarlo de dos maneras:</p>
+            <p><strong>A quién ayuda:</strong> Cualquier persona que inicie accidentalmente una cuenta regresiva y
+                necesite cancelarla rápidamente.</p>
+            <p>Cuando toca el botón <span class="notranslate" translate="no">SOS</span>, aparece un cuadro de diálogo de
+                cuenta regresiva antes de enviar la alerta. Puedes cancelarlo de dos maneras:</p>
             <ul>
                 <li>Pulse el botón <strong>Cancelar</strong> en la parte inferior del cuadro de diálogo.</li>
-                <li><strong>Desliza el dedo por el cuadro de diálogo hacia la izquierda o hacia la derecha</strong>: el cuadro de diálogo se desliza con el dedo y se descarta cuando lo sueltas lo suficiente.</li>
+                <li><strong>Desliza el dedo por el cuadro de diálogo hacia la izquierda o hacia la derecha</strong>: el
+                    cuadro de diálogo se desliza con el dedo y se descarta cuando lo sueltas lo suficiente.</li>
             </ul>
-            <p>De cualquier manera, sentirá dos pequeñas vibraciones confirmando que la alerta fue cancelada y no se envió nada.</p>
+            <p>De cualquier manera, sentirá dos pequeñas vibraciones confirmando que la alerta fue cancelada y no se
+                envió nada.</p>
         </section>
 
         <section class="guide-section" id="step-7">
             <h2>7. Composición de mensajes de voz</h2>
-            <p><strong>A quién ayuda:</strong> Personas con temblores, artritis u otras afecciones que dificultan la escritura.</p>
-            <p>En lugar de escribir un mensaje personalizado antes de enviar una alerta, puede hablarlo. Toque el <strong>icono del micrófono</strong> en el campo del mensaje y pronuncie su mensaje. La aplicación transcribirá sus palabras automáticamente. El silencio durante 3 segundos detiene la grabación.</p>
-            <p>Esto funciona en la entrada de mensajes de la pantalla de inicio y en el cuadro de diálogo del temporizador de control.</p>
+            <p><strong>A quién ayuda:</strong> Personas con temblores, artritis u otras afecciones que dificultan la
+                escritura.</p>
+            <p>En lugar de escribir un mensaje personalizado antes de enviar una alerta, puede hablarlo. Toque el
+                <strong>icono del micrófono</strong> en el campo del mensaje y pronuncie su mensaje. La aplicación
+                transcribirá sus palabras automáticamente. El silencio durante 3 segundos detiene la grabación.
+            </p>
+            <p>Esto funciona en la entrada de mensajes de la pantalla de inicio y en el cuadro de diálogo del
+                temporizador de control.</p>
         </section>
 
         <section class="guide-section" id="step-8">
             <h2>8. Modo mantener presionado para enviar</h2>
-            <p><strong>A quién ayuda:</strong> Personas propensas a pulsar accidentalmente el botón <span class="notranslate" translate="no">SOS</span>.</p>
-            <p>De forma predeterminada, el botón <span class="notranslate" translate="no">SOS</span> requiere un solo toque. Si los toques accidentales son una preocupación, puede cambiar al modo de <strong>Mantener pulsado para enviar</strong>:</p>
+            <p><strong>A quién ayuda:</strong> Personas propensas a pulsar accidentalmente el botón <span
+                    class="notranslate" translate="no">SOS</span>.</p>
+            <p>De forma predeterminada, el botón <span class="notranslate" translate="no">SOS</span> requiere un solo
+                toque. Si los toques accidentales son una preocupación, puede cambiar al modo de <strong>Mantener
+                    pulsado para enviar</strong>:</p>
             <p>Vaya a <strong>Configuración → Método de activación → Mantener presionado para enviar</strong>.</p>
-            <p>En este modo, debe presionar y mantener presionado el botón durante todo el tiempo de espera antes de que se active la alerta, lo que evita envíos accidentales.</p>
+            <p>En este modo, debe presionar y mantener presionado el botón durante todo el tiempo de espera antes de que
+                se active la alerta, lo que evita envíos accidentales.</p>
         </section>
 
         <section class="guide-section" id="step-9">
             <h2>9. Widget de pantalla de inicio (Android)</h2>
-            <p><strong>A quién ayuda:</strong> Cualquiera a quien le resulte difícil desbloquear su teléfono y abrir la aplicación en caso de emergencia.</p>
-            <p>En Android, puede agregar un widget de <span class="notranslate" translate="no">TapAlert</span> a su pantalla de inicio para que el botón <span class="notranslate" translate="no">SOS</span> esté siempre a un toque de distancia, sin abrir la aplicación en absoluto.</p>
-            <p>Para agregar el widget: <strong>Configuración → Widget de la pantalla de inicio → Agregar widget</strong>.</p>
+            <p><strong>A quién ayuda:</strong> Cualquiera a quien le resulte difícil desbloquear su teléfono y abrir la
+                aplicación en caso de emergencia.</p>
+            <p>En Android, puede agregar un widget de <span class="notranslate" translate="no">TapAlert</span> a su
+                pantalla de inicio para que el botón <span class="notranslate" translate="no">SOS</span> esté siempre a
+                un toque de distancia, sin abrir la aplicación en absoluto.</p>
+            <p>Para agregar el widget: <strong>Configuración → Widget de la pantalla de inicio → Agregar
+                    widget</strong>.</p>
         </section>
 
         <div class="next-steps">
             <h3>¿Necesitas más ayuda?</h3>
-            <p>If you have any questions about configuring these  or need assistance, check our <a
-                    href="troubleshooting.html">Guía de Solución de Problemas</a> or <a href="contact.html">Soporte de Contacto</a>.</p>
+            <p>If you have any questions about configuring these or need assistance, check our <a
+                    href="troubleshooting.html">Guía de Solución de Problemas</a> or <a href="contact.html">Soporte de
+                    Contacto</a>.</p>
         </div>
     </main>
 
@@ -592,7 +733,8 @@
                     <h3>Soporte</h3>
                     <ul>
                         <li><a href="#">Preguntas Frecuentes</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías Paso a Paso</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías
+                                Paso a Paso</a></li>
                         <li><a href="accessibility_guide.html">Guía de Accesibilidad</a></li>
                         <li><a href="troubleshooting.html">Solución de problemas</a></li>
                         <li><a href="contact.html">Soporte de Contacto</a></li>
@@ -601,7 +743,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos los derechos reservados. | Hecho con ❤️ para tu seguridad</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos los derechos reservados.
+                    | Hecho con ❤️ para tu seguridad</p>
             </div>
         </div>
     </footer>

@@ -442,49 +442,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Ritorno a casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">IT</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/sms_stand_out.html" hreflang="ca">CA</a>
-            <a href="../de/sms_stand_out.html" hreflang="de">DE</a>
-            <a href="../sms_stand_out.html" hreflang="en">EN</a>
-            <a href="../es/sms_stand_out.html" hreflang="es">ES</a>
-            <a href="../eu/sms_stand_out.html" hreflang="eu">EU</a>
-            <a href="../fr/sms_stand_out.html" hreflang="fr">FR</a>
-            <a href="../gl/sms_stand_out.html" hreflang="gl">GL</a>
-            <a href="../it/sms_stand_out.html" hreflang="it" class="active">IT</a>
-            <a href="../nl/sms_stand_out.html" hreflang="nl">NL</a>
-            <a href="../pt/sms_stand_out.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">IT</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/sms_stand_out.html" hreflang="ca">CA</a>
+                        <a href="../de/sms_stand_out.html" hreflang="de">DE</a>
+                        <a href="../sms_stand_out.html" hreflang="en">EN</a>
+                        <a href="../es/sms_stand_out.html" hreflang="es">ES</a>
+                        <a href="../eu/sms_stand_out.html" hreflang="eu">EU</a>
+                        <a href="../fr/sms_stand_out.html" hreflang="fr">FR</a>
+                        <a href="../gl/sms_stand_out.html" hreflang="gl">GL</a>
+                        <a href="../it/sms_stand_out.html" hreflang="it" class="active">IT</a>
+                        <a href="../nl/sms_stand_out.html" hreflang="nl">NL</a>
+                        <a href="../pt/sms_stand_out.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -494,7 +586,10 @@
 
         <h1 class="guide-title">Far risaltare gli SMS di avviso</h1>
 
-        <p>Per garantire che i tuoi contatti di emergenza non perdano il tuo messaggio di avviso tra le altre notifiche, ti consigliamo di configurare i loro telefoni in modo che trattino i messaggi provenienti dal tuo numero <span class="notranslate" Translate="no">TapAlert</span> in modo diverso.</p>
+        <p>Per garantire che i tuoi contatti di emergenza non perdano il tuo messaggio di avviso tra le altre notifiche,
+            ti consigliamo di configurare i loro telefoni in modo che trattino i messaggi provenienti dal tuo numero
+            <span class="notranslate" Translate="no">TapAlert</span> in modo diverso.
+        </p>
 
         <section class="guide-section">
             <div class="step-list">
@@ -506,9 +601,11 @@
                     <ol>
                         <li><strong>Open Contatti:</strong> Seleziona la voce del tuo contatto.</li>
                         <li><strong>Assegna bypass di emergenza:</strong> Tap <strong>Modificare</strong> >
-                            <strong>Suoneria</strong> (o tono testo) e attiva/disattiva <strong>Bypass di emergenza</strong>
+                            <strong>Suoneria</strong> (o tono testo) e attiva/disattiva <strong>Bypass di
+                                emergenza</strong>
                             ON.
-                            Ciò consente suoni/vibrazioni anche se il telefono è in modalità Silenzioso o Non disturbare.
+                            Ciò consente suoni/vibrazioni anche se il telefono è in modalità Silenzioso o Non
+                            disturbare.
                         </li>
                         <li><strong>Tono personalizzato:</strong> Choose a loud, distinct sound for your messages.</li>
                     </ol>
@@ -527,7 +624,8 @@
                         <li><strong>Set as "Urgente":</strong> Cambia la priorità in <strong>"Alto"</strong> or
                             <strong>"Urgente"</strong>.
                         </li>
-                        <li><strong>Ignora Non disturbare:</strong> Garantire <strong>"Ignora Non disturbare"</strong> is
+                        <li><strong>Ignora Non disturbare:</strong> Garantire <strong>"Ignora Non disturbare"</strong>
+                            is
                             enabled
                             for this conversation.</li>
                         <li><strong>Suono personalizzato:</strong> Scegli un suono di avviso ad alta priorità.</li>
@@ -537,10 +635,13 @@
 
             <div class="alert-box note">
                 <h4>ℹ️ NOTA</h4>
-                <p><strong>Using <span class="notranslate" translate="no"><span class="notranslate" Translate="no">Twilio</span></span>?</strong> Se invii avvisi tramite
-                    <span class="notranslate" translate="no"><span class="notranslate" Translate="no">Twilio</span></span>, your contacts will receive the
+                <p><strong>Using <span class="notranslate" translate="no"><span class="notranslate"
+                                Translate="no">Twilio</span></span>?</strong> Se invii avvisi tramite
+                    <span class="notranslate" translate="no"><span class="notranslate"
+                            Translate="no">Twilio</span></span>, your contacts will receive the
                     message
-                    from your <span class="notranslate" translate="no"><span class="notranslate" Translate="no">Twilio</span></span> number or an
+                    from your <span class="notranslate" translate="no"><span class="notranslate"
+                            Translate="no">Twilio</span></span> number or an
                     Alphanumeric ID (e.g.,
                     "<span class="notranslate" translate="no">TapAlert</span>"). Essi <strong>dovere</strong> add
                     this number/ID to their contacts list for the settings above to work correctly. Otherwise, the
@@ -558,7 +659,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.</p>
+                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -583,7 +685,8 @@
                     <h3>Supporto</h3>
                     <ul>
                         <li><a href="#">Domande frequenti</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide passo passo</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide
+                                passo passo</a></li>
                         <li><a href="accessibility_guide.html">Guida all'accessibilità</a></li>
                         <li><a href="troubleshooting.html">Risoluzione dei problemi</a></li>
                         <li><a href="contact.html">Contatta l'assistenza</a></li>
@@ -592,7 +695,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. | Fatto con ❤️ per la tua sicurezza</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. |
+                    Fatto con ❤️ per la tua sicurezza</p>
             </div>
         </div>
     </footer>

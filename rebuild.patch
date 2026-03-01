@@ -187,7 +187,7 @@
                  width: 95%;
 @@ -1212,17 +1085,16 @@
          <a href="#download" class="nav-logo">
-             <img src="media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"> <span class="notranslate" translate="no">TapAlert</span>
+             <img src="media/tapalert-new-app-icon-inside2.png" alt="TapAlert"> <span class="notranslate" translate="no">TapAlert</span>
          </a>
 -        <nav style="display: flex; align-items: center;">
 +        <nav>
@@ -212,7 +212,7 @@
          <div class="menu-toggle" id="mobile-menu">
              <div class="bar"></div>
 @@ -1236,79 +1108,119 @@
-             <h1><img src="media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+             <h1><img src="media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                      style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                      translate="no">TapAlert</span></h1>
 -            <p class="tagline">{{ hero_tagline_1 }}{{ table_r2c1 }}{{ hero_tagline_2 }}<br> {{ hero_designed_for_1

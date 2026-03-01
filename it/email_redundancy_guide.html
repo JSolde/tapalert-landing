@@ -370,49 +370,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Ritorno a casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">IT</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
-            <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
-            <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
-            <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
-            <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
-            <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
-            <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
-            <a href="../it/email_redundancy_guide.html" hreflang="it" class="active">IT</a>
-            <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
-            <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">IT</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/email_redundancy_guide.html" hreflang="ca">CA</a>
+                        <a href="../de/email_redundancy_guide.html" hreflang="de">DE</a>
+                        <a href="../email_redundancy_guide.html" hreflang="en">EN</a>
+                        <a href="../es/email_redundancy_guide.html" hreflang="es">ES</a>
+                        <a href="../eu/email_redundancy_guide.html" hreflang="eu">EU</a>
+                        <a href="../fr/email_redundancy_guide.html" hreflang="fr">FR</a>
+                        <a href="../gl/email_redundancy_guide.html" hreflang="gl">GL</a>
+                        <a href="../it/email_redundancy_guide.html" hreflang="it" class="active">IT</a>
+                        <a href="../nl/email_redundancy_guide.html" hreflang="nl">NL</a>
+                        <a href="../pt/email_redundancy_guide.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -424,39 +516,62 @@
 
         <section class="guide-section">
             <h2>💡 Cos'è la ridondanza e-mail Caratteristica?</h2>
-            <p>Ridondanza della posta elettronica in <span class="notranslate" Translate="no">TapAlert</span> consente all'app di inviare avvisi di emergenza e messaggi di segnalazione ai contatti designati tramite e-mail, in aggiunta o al posto degli SMS.</p>
+            <p>Ridondanza della posta elettronica in <span class="notranslate" Translate="no">TapAlert</span> consente
+                all'app di inviare avvisi di emergenza e messaggi di segnalazione ai contatti designati tramite e-mail,
+                in aggiunta o al posto degli SMS.</p>
 
             <h2>🎯 Qual è il suo scopo?</h2>
-            <p>Lo scopo principale della ridondanza della posta elettronica è garantire che il messaggio venga recapitato anche se i canali SMS primari falliscono o non sono disponibili.</p>
+            <p>Lo scopo principale della ridondanza della posta elettronica è garantire che il messaggio venga
+                recapitato anche se i canali SMS primari falliscono o non sono disponibili.</p>
             <ul>
-                <li>✅ <strong>Percorso di consegna secondario:</strong> se sei connesso al Wi-Fi ma non disponi di un servizio cellulare (e le chiamate Wi-Fi sono disabilitate o non supportate), l'email agiscecome aperfetto <span class="notranslate" Translate="no">fallback</span>.</li>
-                <li>✅ <strong>Viaggi internazionali:</strong> Quando viaggi all'estero, dove gli SMS potrebbero essere estremamente costosi o inaffidabili, puoi fare affidamento esclusivamente sul Wi-Fi e inviare avvisi via e-mail gratuitamente.</li>
-                <li>✅ <strong>Maggiore tranquillità:</strong> l'invio simultaneo di avvisi tramite SMS ed e-mail garantisce che, se un contatto di emergenza perde un messaggio, potrebbe comunque vedere la notifica e-mail.</li>
+                <li>✅ <strong>Percorso di consegna secondario:</strong> se sei connesso al Wi-Fi ma non disponi di un
+                    servizio cellulare (e le chiamate Wi-Fi sono disabilitate o non supportate), l'email agiscecome
+                    aperfetto <span class="notranslate" Translate="no">fallback</span>.</li>
+                <li>✅ <strong>Viaggi internazionali:</strong> Quando viaggi all'estero, dove gli SMS potrebbero essere
+                    estremamente costosi o inaffidabili, puoi fare affidamento esclusivamente sul Wi-Fi e inviare avvisi
+                    via e-mail gratuitamente.</li>
+                <li>✅ <strong>Maggiore tranquillità:</strong> l'invio simultaneo di avvisi tramite SMS ed e-mail
+                    garantisce che, se un contatto di emergenza perde un messaggio, potrebbe comunque vedere la notifica
+                    e-mail.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ Come configurare la ridondanza della posta elettronica</h2>
             <ol>
-                <li>Apri il App <span class="notranslate" Translate="no">TapAlert</span> e vai su <strong>Impostazioni</strong>.</li>
-                <li>Scorri fino alla sezione <strong>Avvisi email</strong> e attiva <strong>Abilita avvisi email</strong>.</li>
-                <li>Selezionare il tuo <strong>provider di posta elettronica</strong> tra quelli preimpostatipulsante (Gmail, Outlook, Yahoo, iCloud) per compilare automaticamente l'host e la porta SMTP.</li>
+                <li>Apri il App <span class="notranslate" Translate="no">TapAlert</span> e vai su
+                    <strong>Impostazioni</strong>.
+                </li>
+                <li>Scorri fino alla sezione <strong>Avvisi email</strong> e attiva <strong>Abilita avvisi
+                        email</strong>.</li>
+                <li>Selezionare il tuo <strong>provider di posta elettronica</strong> tra quelli preimpostatipulsante
+                    (Gmail, Outlook, Yahoo, iCloud) per compilare automaticamente l'host e la porta SMTP.</li>
                 <li>Inserisci il tuo <strong>indirizzo email</strong> completo.</li>
-                <li>Inserisci la tua <strong>password per l'app</strong> (vedi la sezione seguente su cos'è e come ottenerne una).</li>
-                <li>Tocca <strong>"Salva impostazioni"</strong> e utilizza "Email di prova"pulsante per assicurarti che sia configurato correttamente.</li>
+                <li>Inserisci la tua <strong>password per l'app</strong> (vedi la sezione seguente su cos'è e come
+                    ottenerne una).</li>
+                <li>Tocca <strong>"Salva impostazioni"</strong> e utilizza "Email di prova"pulsante per assicurarti che
+                    sia configurato correttamente.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>🔑 Cos'è una password per l'app?</h2>
-            <p>Una <strong>password per l'app</strong> è un passcode generato in modo casuale che concede a un'app di terze parti (come <span class="notranslate" Translate="no">TapAlert</span>) l'autorizzazione ad accedere alla tua email account per inviare messaggi per tuo conto.</p>
+            <p>Una <strong>password per l'app</strong> è un passcode generato in modo casuale che concede a un'app di
+                terze parti (come <span class="notranslate" Translate="no">TapAlert</span>) l'autorizzazione ad accedere
+                alla tua email account per inviare messaggi per tuo conto.</p>
 
             <h3>Perché ne ho bisogno di una invece della mia vera password?</h3>
-            <p>I moderni provider di posta elettronica bloccano gli accessi con password di base per proteggere il tuo account dagli hacker. Una password per l'app ignora l'autenticazione a due fattori (2FA) per quella specifica app <em>senza</em> fornendo all'app la tua password effettiva account. Se desideri revocare l'accesso a <span class="notranslate" Translate="no">TapAlert</span>, è sufficiente eliminare la password dell'app nelle impostazioni email e la tua password principale account rimarrà al sicuro e invariata.</p>
+            <p>I moderni provider di posta elettronica bloccano gli accessi con password di base per proteggere il tuo
+                account dagli hacker. Una password per l'app ignora l'autenticazione a due fattori (2FA) per quella
+                specifica app <em>senza</em> fornendo all'app la tua password effettiva account. Se desideri revocare
+                l'accesso a <span class="notranslate" Translate="no">TapAlert</span>, è sufficiente eliminare la
+                password dell'app nelle impostazioni email e la tua password principale account rimarrà al sicuro e
+                invariata.</p>
 
             <div class="alert-box">
                 <h4>⚠️ Nota importante</h4>
-                <p>Per generare una password per l'app, quasi tutti i provider di posta elettronica richiedono che tu abbia prima abilitato l'<strong>autenticazione a due fattori (2FA)</strong> sul tuo account.</p>
+                <p>Per generare una password per l'app, quasi tutti i provider di posta elettronica richiedono che tu
+                    abbia prima abilitato l'<strong>autenticazione a due fattori (2FA)</strong> sul tuo account.</p>
             </div>
         </section>
 
@@ -466,46 +581,67 @@
 
             <h3>1. Gmail (Account Google)</h3>
             <ol>
-                <li>Vai alla <a href="https://myaccount.google.com/" target="_blank">pagina di gestione dell'account Google</a> e accedi.</li>
+                <li>Vai alla <a href="https://myaccount.google.com/" target="_blank">pagina di gestione dell'account
+                        Google</a> e accedi.</li>
                 <li>Nel pannello di navigazione a sinistra, fai clic su <strong>Sicurezza</strong>.</li>
-                <li>Nella sezione "Come accedi a Google", assicurati che la <strong>verifica in due passaggi</strong> sia attivata <strong>attiva</strong>. (Se è spento, dovere lo accendi prima).</li>
-                <li>Fai clic su <strong>Verifica in due passaggi</strong>. Scorri fino alla fine della pagina e fai clic su <strong>Password per le app</strong>.</li>
-                <li>Nel menu a discesa "Selezionare app", scegli <em>Altro (nome personalizzato)</em> e digita <strong><span class="notranslate" Translate="no">TapAlert</span></strong>.</li>
+                <li>Nella sezione "Come accedi a Google", assicurati che la <strong>verifica in due passaggi</strong>
+                    sia attivata <strong>attiva</strong>. (Se è spento, dovere lo accendi prima).</li>
+                <li>Fai clic su <strong>Verifica in due passaggi</strong>. Scorri fino alla fine della pagina e fai clic
+                    su <strong>Password per le app</strong>.</li>
+                <li>Nel menu a discesa "Selezionare app", scegli <em>Altro (nome personalizzato)</em> e digita
+                    <strong><span class="notranslate" Translate="no">TapAlert</span></strong>.
+                </li>
                 <li>Fai clic su <strong>Genera</strong>.</li>
-                <li>Apparirà una casella gialla con un codice di 16 caratteri. Copia questo codice e incollalo nel campo "Password app" nell'app <span class="notranslate" Translate="no">TapAlert</span> (non è necessario includere gli spazi).</li>
+                <li>Apparirà una casella gialla con un codice di 16 caratteri. Copia questo codice e incollalo nel campo
+                    "Password app" nell'app <span class="notranslate" Translate="no">TapAlert</span> (non è necessario
+                    includere gli spazi).</li>
                 <li>Fai clic su <strong>Fine</strong>.</li>
             </ol>
 
             <h3>2. Hotmail/Outlook (account Microsoft)</h3>
             <ol>
-                <li>Vai alla <a href="https://account.microsoft.com/security" target="_blank">pagina Sicurezza dell'account Microsoft</a> e accedi.</li>
+                <li>Vai alla <a href="https://account.microsoft.com/security" target="_blank">pagina Sicurezza
+                        dell'account Microsoft</a> e accedi.</li>
                 <li>Fai clic su <strong>Opzioni di sicurezza avanzate</strong>.</li>
-                <li>Nella sezione "Sicurezza aggiuntiva", assicurati che la <strong>verifica in due passaggi</strong> sia attivata <strong>Attiva</strong>.</li>
+                <li>Nella sezione "Sicurezza aggiuntiva", assicurati che la <strong>verifica in due passaggi</strong>
+                    sia attivata <strong>Attiva</strong>.</li>
                 <li>Scorri verso il basso fino alla sezione <strong>Password per le app</strong>.</li>
                 <li>Fai clic su <strong>Crea una nuova password per l'app</strong>.</li>
                 <li>Apparirà una nuova schermata che mostra la tua password univoca per l'app.</li>
-                <li>Copia questa password e incollala in <span class="notranslate" Translate="no">TapAlert</span>, quindi fai clic su <strong>Fine</strong>.</li>
+                <li>Copia questa password e incollala in <span class="notranslate" Translate="no">TapAlert</span>,
+                    quindi fai clic su <strong>Fine</strong>.</li>
             </ol>
 
             <h3>3. Yahoo Mail</h3>
             <ol>
-                <li>Vai alla <a href="https://login.yahoo.com/account/security" target="_blank">pagina Sicurezza dell'account Yahoo</a> e accedi.</li>
-                <li>Scorri fino alla fine della pagina e fai clic su <strong>Genera e gestisci password per le app</strong>.</li>
-                <li>Apparirà una finestra modale. Inserisci <strong><span class="notranslate" Translate="no">TapAlert</span></strong> come nome dell'app.</li>
+                <li>Vai alla <a href="https://login.yahoo.com/account/security" target="_blank">pagina Sicurezza
+                        dell'account Yahoo</a> e accedi.</li>
+                <li>Scorri fino alla fine della pagina e fai clic su <strong>Genera e gestisci password per le
+                        app</strong>.</li>
+                <li>Apparirà una finestra modale. Inserisci <strong><span class="notranslate"
+                            Translate="no">TapAlert</span></strong> come nome dell'app.</li>
                 <li>Fai clic su <strong>Genera password</strong>.</li>
-                <li>Copia la password di 16 caratteri visualizzata sullo schermo e incollala in <span class="notranslate" Translate="no">TapAlert</span> (omettendo eventuali spazi).</li>
+                <li>Copia la password di 16 caratteri visualizzata sullo schermo e incollala in <span
+                        class="notranslate" Translate="no">TapAlert</span> (omettendo eventuali spazi).</li>
                 <li>Fai clic su <strong>Fine</strong>.</li>
             </ol>
 
             <h3>4. iCloud (ID Apple)</h3>
             <ol>
-                <li>Vai su <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> e accedi con il tuo ID Apple.</li>
-                <li>Nella sezione <strong>Accesso e sicurezza</strong>, fai clic su <strong>Password specifiche per le app</strong>.</li>
-                <li>Fai clic su <strong>Genera una password specifica per l'app</strong> o su <strong>Aggiungi (+)</strong>pulsante.</li>
-                <li>Inserisci <strong><span class="notranslate" Translate="no">TapAlert</span></strong> quando ti viene richiesto il nome dell'app e fai clic su Crea.</li>
+                <li>Vai su <a href="https://appleid.apple.com/" target="_blank">appleid.apple.com</a> e accedi con il
+                    tuo ID Apple.</li>
+                <li>Nella sezione <strong>Accesso e sicurezza</strong>, fai clic su <strong>Password specifiche per le
+                        app</strong>.</li>
+                <li>Fai clic su <strong>Genera una password specifica per l'app</strong> o su <strong>Aggiungi
+                        (+)</strong>pulsante.</li>
+                <li>Inserisci <strong><span class="notranslate" Translate="no">TapAlert</span></strong> quando ti viene
+                    richiesto il nome dell'app e fai clic su Crea.</li>
                 <li>Potrebbe esserti chiesto di inserire nuovamente la password dell'ID Apple per confermare.</li>
-                <li>Verrà generata e visualizzata una password univoca specifica per l'app (in genere nel formato <code>xxxx-xxxx-xxxx-xxxx</code>).</li>
-                <li>Copia l'intera password e incollala in <span class="notranslate" Translate="no">TapAlert</span>, quindi fai clic su <strong>Fine</strong>.</li>
+                <li>Verrà generata e visualizzata una password univoca specifica per l'app (in genere nel formato
+                    <code>xxxx-xxxx-xxxx-xxxx</code>).
+                </li>
+                <li>Copia l'intera password e incollala in <span class="notranslate" Translate="no">TapAlert</span>,
+                    quindi fai clic su <strong>Fine</strong>.</li>
             </ol>
         </section>
 
@@ -517,7 +653,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.</p>
+                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -542,7 +679,8 @@
                     <h3>Supporto</h3>
                     <ul>
                         <li><a href="#">Domande frequenti</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide passo passo</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide
+                                passo passo</a></li>
                         <li><a href="accessibility_guide.html">Guida all'accessibilità</a></li>
                         <li><a href="troubleshooting.html">Risoluzione dei problemi</a></li>
                         <li><a href="contact.html">Contatta l'assistenza</a></li>
@@ -551,7 +689,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. | Fatto con ❤️ per la tua sicurezza</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. |
+                    Fatto con ❤️ per la tua sicurezza</p>
             </div>
         </div>
     </footer>

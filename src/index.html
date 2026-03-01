@@ -946,9 +946,11 @@
 
         .car-track {
             display: flex;
-            align-items: center;   /* vertically centres scaled-down neighbours */
+            align-items: center;
+            /* vertically centres scaled-down neighbours */
             gap: 24px;
-            padding: 48px 0;       /* vertical room so scaled-up centre isn't clipped */
+            padding: 48px 0;
+            /* vertical room so scaled-up centre isn't clipped */
             will-change: transform;
             transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
@@ -1013,8 +1015,13 @@
             background: rgba(255, 255, 255, 0.32);
         }
 
-        .car-btn--prev { left: 16px; }
-        .car-btn--next { right: 16px; }
+        .car-btn--prev {
+            left: 16px;
+        }
+
+        .car-btn--next {
+            right: 16px;
+        }
 
         /* Progress bar */
         .car-progress-wrap {
@@ -1069,23 +1076,56 @@
         }
 
         @keyframes carPop {
-            from { transform: scale(0.93); opacity: 0; }
-            to   { transform: scale(1);    opacity: 1; }
+            from {
+                transform: scale(0.93);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         /* Responsive */
         @media (max-width: 900px) {
-            .car-slide { width: 68%; }
+            .car-slide {
+                width: 68%;
+            }
         }
 
         @media (max-width: 600px) {
-            .car-section { padding: 44px 0; }
-            .car-heading { font-size: 1.5rem; margin-bottom: 16px; }
-            .car-slide { width: 84%; }
-            .car-track { gap: 16px; padding: 36px 0; }
-            .car-btn { width: 38px; height: 38px; font-size: 1.3rem; }
-            .car-btn--prev { left: 8px; }
-            .car-btn--next { right: 8px; }
+            .car-section {
+                padding: 44px 0;
+            }
+
+            .car-heading {
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+
+            .car-slide {
+                width: 84%;
+            }
+
+            .car-track {
+                gap: 16px;
+                padding: 36px 0;
+            }
+
+            .car-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 1.3rem;
+            }
+
+            .car-btn--prev {
+                left: 8px;
+            }
+
+            .car-btn--next {
+                right: 8px;
+            }
         }
 
         /* Animations */
@@ -1251,7 +1291,7 @@
     <!-- Top Navigation -->
     <header>
         <a href="#download" class="nav-logo">
-            <img src="media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"> <span class="notranslate"
+            <img src="media/tapalert-new-app-icon-inside2.png" alt="TapAlert"> <span class="notranslate"
                 translate="no">TapAlert</span>
         </a>
         <nav style="display: flex; align-items: center;">
@@ -1275,7 +1315,7 @@
     <!-- Hero Section -->
     <section class="hero" id="download">
         <div class="hero-content fade-in-up">
-            <h1><img src="media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+            <h1><img src="media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                     translate="no">TapAlert</span></h1>
             <p class="tagline">{{ hero_tagline_1 }} {{ table_r2c1 }}{{ hero_tagline_2 }}<br> {{ hero_designed_for_1
@@ -1313,16 +1353,16 @@
 
             <script>
                 (function () {
-                    var outer      = document.getElementById('carOuter');
-                    var track      = document.getElementById('carTrack');
-                    var btnPrev    = document.getElementById('carPrev');
-                    var btnNext    = document.getElementById('carNext');
-                    var progress   = document.getElementById('carProgress');
-                    var overlay    = document.getElementById('carLightbox');
+                    var outer = document.getElementById('carOuter');
+                    var track = document.getElementById('carTrack');
+                    var btnPrev = document.getElementById('carPrev');
+                    var btnNext = document.getElementById('carNext');
+                    var progress = document.getElementById('carProgress');
+                    var overlay = document.getElementById('carLightbox');
                     var overlayImg = document.getElementById('carLightboxImg');
 
-                    var slides  = Array.from(track.querySelectorAll('.car-slide'));
-                    var n       = slides.length;
+                    var slides = Array.from(track.querySelectorAll('.car-slide'));
+                    var n = slides.length;
                     var current = 0;
                     var autoTimer;
 

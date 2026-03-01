@@ -15,7 +15,8 @@
     <link rel="alternate" hreflang="pt" href="https://tapalert.app/pt/twilio_guide.html">
     <link rel="alternate" hreflang="x-default" href="https://tapalert.app/twilio_guide.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Guida alla configurazione - TapAlert</title>
+    <title><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Guida
+        alla configurazione - TapAlert</title>
     <style>
         * {
             margin: 0;
@@ -369,49 +370,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Ritorno a casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">IT</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/twilio_guide.html" hreflang="ca">CA</a>
-            <a href="../de/twilio_guide.html" hreflang="de">DE</a>
-            <a href="../twilio_guide.html" hreflang="en">EN</a>
-            <a href="../es/twilio_guide.html" hreflang="es">ES</a>
-            <a href="../eu/twilio_guide.html" hreflang="eu">EU</a>
-            <a href="../fr/twilio_guide.html" hreflang="fr">FR</a>
-            <a href="../gl/twilio_guide.html" hreflang="gl">GL</a>
-            <a href="../it/twilio_guide.html" hreflang="it" class="active">IT</a>
-            <a href="../nl/twilio_guide.html" hreflang="nl">NL</a>
-            <a href="../pt/twilio_guide.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">IT</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/twilio_guide.html" hreflang="ca">CA</a>
+                        <a href="../de/twilio_guide.html" hreflang="de">DE</a>
+                        <a href="../twilio_guide.html" hreflang="en">EN</a>
+                        <a href="../es/twilio_guide.html" hreflang="es">ES</a>
+                        <a href="../eu/twilio_guide.html" hreflang="eu">EU</a>
+                        <a href="../fr/twilio_guide.html" hreflang="fr">FR</a>
+                        <a href="../gl/twilio_guide.html" hreflang="gl">GL</a>
+                        <a href="../it/twilio_guide.html" hreflang="it" class="active">IT</a>
+                        <a href="../nl/twilio_guide.html" hreflang="nl">NL</a>
+                        <a href="../pt/twilio_guide.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -419,48 +512,103 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Torna alle Guide</a>
 
-        <h1 class="guide-title"><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Guida alla configurazione</h1>
+        <h1 class="guide-title"><span class="notranslate" Translate="no"><span class="notranslate"
+                    Translate="no">Twilio</span></span> Guida alla configurazione</h1>
 
         <section class="guide-section">
-            <h2>💡 Cos'è la configurazione <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>?</h2>
+            <h2>💡 Cos'è la configurazione <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span>?</h2>
 
-            <p><strong>Cosa configurerai:</strong> la configurazione <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> collega <span class="notranslate" Translate="no">TapAlert</span> al servizio SMS cloud di <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>, consentendo all'app di inviare messaggi SMS anche quando il servizio cellulare del tuo telefono non è disponibile (ma non hai Wi-Fi).</p>
+            <p><strong>Cosa configurerai:</strong> la configurazione <span class="notranslate" Translate="no"><span
+                        class="notranslate" Translate="no">Twilio</span></span> collega <span class="notranslate"
+                    Translate="no">TapAlert</span> al servizio SMS cloud di <span class="notranslate"
+                    Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>, consentendo all'app di
+                inviare messaggi SMS anche quando il servizio cellulare del tuo telefono non è disponibile (ma non hai
+                Wi-Fi).</p>
 
-            <p><strong>Perché è importante:</strong> configurando le credenziali <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> nell'app, abiliti un metodo <span class="notranslate" Translate="no">fallback</span> affidabile per l'invio di avvisi. Ciò è particolarmente importante durante i viaggi internazionali, in edifici con scarsa ricezione cellulare ocome aopzione obbligatoria per gli utenti iPhone che non possono inviare SMS direttamente dalle app.</p>
+            <p><strong>Perché è importante:</strong> configurando le credenziali <span class="notranslate"
+                    Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> nell'app, abiliti un
+                metodo <span class="notranslate" Translate="no">fallback</span> affidabile per l'invio di avvisi. Ciò è
+                particolarmente importante durante i viaggi internazionali, in edifici con scarsa ricezione cellulare
+                ocome aopzione obbligatoria per gli utenti iPhone che non possono inviare SMS direttamente dalle app.
+            </p>
 
-            <p><strong>Perché <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>?</strong><br> <span class="notranslate" Translate="no">TapAlert</span> utilizza <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> perché è il servizio SMS più utilizzato al mondo, scelto da aziende come Uber e Airbnb. Non sono previsti canoni mensili: paghi solo pochi centesimi per ogni messaggio effettivamente inviato. Per un'app di emergenza che invia avvisi raramente, ciò significa un costo quasi zero. La configurazione richiede la copia di soli tre valori nell'app e se hai bisogno di aiuto esistono migliaia di tutorial online.</p>
+            <p><strong>Perché <span class="notranslate" Translate="no"><span class="notranslate"
+                            Translate="no">Twilio</span></span>?</strong><br> <span class="notranslate"
+                    Translate="no">TapAlert</span> utilizza <span class="notranslate" Translate="no"><span
+                        class="notranslate" Translate="no">Twilio</span></span> perché è il servizio SMS più utilizzato
+                al mondo, scelto da aziende come Uber e Airbnb. Non sono previsti canoni mensili: paghi solo pochi
+                centesimi per ogni messaggio effettivamente inviato. Per un'app di emergenza che invia avvisi raramente,
+                ciò significa un costo quasi zero. La configurazione richiede la copia di soli tre valori nell'app e se
+                hai bisogno di aiuto esistono migliaia di tutorial online.</p>
 
-            <p><strong>Cosa ti serve:</strong> un <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> account con credenziali di autenticazione (SID account e token di autenticazione) e un ID mittente alfanumerico o un numero di telefono <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> acquistato.</p>
+            <p><strong>Cosa ti serve:</strong> un <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span> account con credenziali di autenticazione (SID account e
+                token di autenticazione) e un ID mittente alfanumerico o un numero di telefono <span class="notranslate"
+                    Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> acquistato.</p>
             <ul>
-                <li>✅ <strong>La prova account invia veri SMS:</strong> un membro della famiglia può testare l'intera configurazione con la prova gratuita di <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> (invia a verificato numeri) prima di spendere soldi.</li>
+                <li>✅ <strong>La prova account invia veri SMS:</strong> un membro della famiglia può testare l'intera
+                    configurazione con la prova gratuita di <span class="notranslate" Translate="no"><span
+                            class="notranslate" Translate="no">Twilio</span></span> (invia a verificato numeri) prima di
+                    spendere soldi.</li>
             </ul>
         </section>
 
         <section class="guide-section">
             <h2>📖 Informazioni sul servizio</h2>
-            <p>L'opzione fornita in <span class="notranslate" Translate="no">TapAlert</span> di utilizzare il meccanismo <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> (cloud)come aper inviare SMS offre la massima affidabilità, in particolare nei viaggi internazionali dove gli SMS in roaming spesso falliscono. <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> può inviare SMS verso oltre 180 paesi. Tuttavia, il metodo che puoi utilizzare varia in base al Paese. Alcuni paesi supportano <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> numeri di telefono, altri supportano solo ID mittente alfanumerici e alcuni richiedono il rispetto di normative locali specifiche.</p>
+            <p>L'opzione fornita in <span class="notranslate" Translate="no">TapAlert</span> di utilizzare il meccanismo
+                <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>
+                (cloud)come aper inviare SMS offre la massima affidabilità, in particolare nei viaggi internazionali
+                dove gli SMS in roaming spesso falliscono. <span class="notranslate" Translate="no"><span
+                        class="notranslate" Translate="no">Twilio</span></span> può inviare SMS verso oltre 180 paesi.
+                Tuttavia, il metodo che puoi utilizzare varia in base al Paese. Alcuni paesi supportano <span
+                    class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>
+                numeri di telefono, altri supportano solo ID mittente alfanumerici e alcuni richiedono il rispetto di
+                normative locali specifiche.
+            </p>
 
-            <h3>Perché utilizzare <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> su Androide? (<span class="notranslate" Translate="no">Ridondanza intelligente</span>)</h3>
-            <p>Anche se disponi di una scheda SIM, la configurazione di <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> è altamente consigliata per la <strong>Ridondanza</strong>:</p>
+            <h3>Perché utilizzare <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span> su Androide? (<span class="notranslate"
+                    Translate="no">Ridondanza intelligente</span>)</h3>
+            <p>Anche se disponi di una scheda SIM, la configurazione di <span class="notranslate" Translate="no"><span
+                        class="notranslate" Translate="no">Twilio</span></span> è altamente consigliata per la
+                <strong>Ridondanza</strong>:
+            </p>
             <ul>
-                <li><strong>Scenario:</strong> ti trovi in ​​un edificio con Wi-Fi ma <strong>nessun segnale cellulare</strong>.</li>
-                <li><strong>Risultato:</strong> <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">SMS diretti</span></span> non riesce.</li>
-                <li><strong>Soluzione:</strong> <span class="notranslate" Translate="no">TapAlert</span> passerà automaticamente a <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> e invierà l'avviso tramite Wi-Fi.</li>
+                <li><strong>Scenario:</strong> ti trovi in ​​un edificio con Wi-Fi ma <strong>nessun segnale
+                        cellulare</strong>.</li>
+                <li><strong>Risultato:</strong> <span class="notranslate" Translate="no"><span class="notranslate"
+                            Translate="no">SMS diretti</span></span> non riesce.</li>
+                <li><strong>Soluzione:</strong> <span class="notranslate" Translate="no">TapAlert</span> passerà
+                    automaticamente a <span class="notranslate" Translate="no"><span class="notranslate"
+                            Translate="no">Twilio</span></span> e invierà l'avviso tramite Wi-Fi.</li>
             </ul>
-            <p>Tieni presente che per utilizzare questa funzione, obbligatoria per gli utenti iPhone, dovrai disporre di un ID <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> account. Il costo dell'invio dei messaggi sarà lo stesso che se lo inviassi manualmente da <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>. Nessun costo aggiuntivo verrà aggiunto dall'app.</p>
+            <p>Tieni presente che per utilizzare questa funzione, obbligatoria per gli utenti iPhone, dovrai disporre di
+                un ID <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span> account. Il costo dell'invio dei messaggi sarà lo stesso che
+                se lo inviassi manualmente da <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span>. Nessun costo aggiuntivo verrà aggiunto dall'app.</p>
 
-            <h3><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Opzioni mittente</h3>
-            <p>Puoi scegliere tra 2 opzioni per inviare SMS con <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>:</p>
+            <h3><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>
+                Opzioni mittente</h3>
+            <p>Puoi scegliere tra 2 opzioni per inviare SMS con <span class="notranslate" Translate="no"><span
+                        class="notranslate" Translate="no">Twilio</span></span>:</p>
 
             <p><strong>OPZIONE A: utilizza l'ID mittente alfanumerico (consigliato per l'Europa)</strong></p>
             <ul>
-                <li>✅ <strong>Vantaggio:</strong> Non è necessario acquistare un numero di telefono (risparmia sui costi mensili! A seconda del numero di messaggi inviati).</li>
-                <li>✅ <strong>Vantaggio:</strong> i destinatari vedono un nome (ad esempio, "<span class="notranslate" Translate="no">TapAlert</span>" o il tuo nome) invece di un numero casuale.</li>
-                <li>⚠️ <strong>Nota:</strong> solo unidirezionale (nessuna risposta) e non supportato in alcuni paesi (come gli Stati Uniti).</li>
-                <li>ℹ️ <a href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS" target="_blank">Ulteriori informazioni sull'ID mittente alfanumerico</a></li>
+                <li>✅ <strong>Vantaggio:</strong> Non è necessario acquistare un numero di telefono (risparmia sui costi
+                    mensili! A seconda del numero di messaggi inviati).</li>
+                <li>✅ <strong>Vantaggio:</strong> i destinatari vedono un nome (ad esempio, "<span class="notranslate"
+                        Translate="no">TapAlert</span>" o il tuo nome) invece di un numero casuale.</li>
+                <li>⚠️ <strong>Nota:</strong> solo unidirezionale (nessuna risposta) e non supportato in alcuni paesi
+                    (come gli Stati Uniti).</li>
+                <li>ℹ️ <a
+                        href="https://help.twilio.com/articles/223181348-Alphanumeric-Sender-ID-for-Twilio-Programmable-SMS"
+                        target="_blank">Ulteriori informazioni sull'ID mittente alfanumerico</a></li>
             </ul>
 
-            <p><strong>OPZIONE B: acquista un <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> numero di telefono</strong></p>
+            <p><strong>OPZIONE B: acquista un <span class="notranslate" Translate="no"><span class="notranslate"
+                            Translate="no">Twilio</span></span> numero di telefono</strong></p>
             <ul>
                 <li>✅ <strong>Vantaggio:</strong> Funziona in tutto il mondo (inclusi gli Stati Uniti).</li>
                 <li>⚠️ <strong>Costo:</strong> richiede l'acquisto di un numero (circa $ 1 al mese).</li>
@@ -469,20 +617,32 @@
 
         <section class="guide-section">
             <h2>💰 Potenziali costi nascosti e fattori Prezzi</h2>
-            <p>Sebbene <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> offra generalmente messaggi a basso costo, il prezzo finale per SMS può essere superiore alla tariffa base a causa di diversi fattori. È importante esaminarli per evitare addebiti imprevisti.</p>
+            <p>Sebbene <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span> offra generalmente messaggi a basso costo, il prezzo finale
+                per SMS può essere superiore alla tariffa base a causa di diversi fattori. È importante esaminarli per
+                evitare addebiti imprevisti.</p>
 
             <h3>1. Paese di destinazione Prezzi</h3>
-            <p>Il prezzo <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> varia in modo significativo a seconda del <strong>paese di destinazione</strong> del messaggio.</p>
+            <p>Il prezzo <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span> varia in modo significativo a seconda del <strong>paese di
+                    destinazione</strong> del messaggio.</p>
             <ul>
-                <li>Le tariffe più basse pubblicizzate (ad esempio, circa $ 0,0075) spesso si applicano ai messaggi inviati negli <strong>USA</strong>.</li>
+                <li>Le tariffe più basse pubblicizzate (ad esempio, circa $ 0,0075) spesso si applicano ai messaggi
+                    inviati negli <strong>USA</strong>.</li>
                 <li>L'invio ad altri paesi (ad esempio in Europa o in Asia) può essere notevolmente più costoso.</li>
-                <li><strong>Azione:</strong> controlla sempre i prezzi specifici per il Paese a cui intendi inviare avvisi.</li>
+                <li><strong>Azione:</strong> controlla sempre i prezzi specifici per il Paese a cui intendi inviare
+                    avvisi.</li>
             </ul>
 
             <h3>2. Commissioni del vettore e delle normative</h3>
-            <p>Oltre al prezzo base di <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>, molti paesi e operatori locali impongono <strong>supplementi</strong> o "commissioni di passaggio".</p>
+            <p>Oltre al prezzo base di <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span>, molti paesi e operatori locali impongono
+                <strong>supplementi</strong> o "commissioni di passaggio".
+            </p>
             <ul>
-                <li>Si tratta di tariffe inevitabili aggiunte dai fornitori di telecomunicazioni, non <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>.</li>
+                <li>Si tratta di tariffe inevitabili aggiunte dai fornitori di telecomunicazioni, non <span
+                        class="notranslate" Translate="no"><span class="notranslate"
+                            Translate="no">Twilio</span></span>.</li>
                 <li>Essi a volte può raddoppiare il costo effettivo per messaggio in alcune regioni.</li>
             </ul>
 
@@ -490,57 +650,91 @@
             <p>La fatturazione degli SMS è basata su "segmenti".</p>
             <ul>
                 <li>Un segmento SMS standard è di <strong>160 caratteri</strong>.</li>
-                <li>Se il tuo messaggio supera questo limite, viene suddiviso in più parti e ti viene addebitato un costo per <strong>ciascun segmento</strong>. I messaggi SMS <span class="notranslate" Translate="no">TapAlert</span> con <strong>Posizione informazioni</strong> superano questo limite. Per ridurre al minimo i costi di <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>, evita di abilitare le <strong>Posizione Impostazioni</strong> (o semplicemente disabilita l'opzione <strong>Includi indirizzo</strong> nelle impostazioni). Puoi controllare la lunghezza effettiva di ciascun messaggio inviato nella schermata <strong>Cronologia avvisi</strong>.</li>
-                <li><strong>Importante:</strong> l'utilizzo di emoji o caratteri speciali non latini (Unicode) riduce il limite del segmento a soli <strong>70 caratteri</strong>, triplicando potenzialmente il costo di un singolo avviso.</li>
+                <li>Se il tuo messaggio supera questo limite, viene suddiviso in più parti e ti viene addebitato un
+                    costo per <strong>ciascun segmento</strong>. I messaggi SMS <span class="notranslate"
+                        Translate="no">TapAlert</span> con <strong>Posizione informazioni</strong> superano questo
+                    limite. Per ridurre al minimo i costi di <span class="notranslate" Translate="no"><span
+                            class="notranslate" Translate="no">Twilio</span></span>, evita di abilitare le
+                    <strong>Posizione Impostazioni</strong> (o semplicemente disabilita l'opzione <strong>Includi
+                        indirizzo</strong> nelle impostazioni). Puoi controllare la lunghezza effettiva di ciascun
+                    messaggio inviato nella schermata <strong>Cronologia avvisi</strong>.
+                </li>
+                <li><strong>Importante:</strong> l'utilizzo di emoji o caratteri speciali non latini (Unicode) riduce il
+                    limite del segmento a soli <strong>70 caratteri</strong>, triplicando potenzialmente il costo di un
+                    singolo avviso.</li>
             </ul>
 
             <h3>4. Tariffe per l'affitto del numero di telefono</h3>
             <p>Se scegli di acquistare un numero di telefono (Opzione B sopra):</p>
             <ul>
-                <li>Paghi una <strong>tariffa di noleggio mensile</strong> per il numero stesso (in genere $ 1,00 - $ 4,00 USD/mese a seconda del Paese).</li>
+                <li>Paghi una <strong>tariffa di noleggio mensile</strong> per il numero stesso (in genere $ 1,00 - $
+                    4,00 USD/mese a seconda del Paese).</li>
                 <li>Si tratta di un costo fisso ricorrente, indipendentemente dal fatto che tu invii messaggi.</li>
-                <li>Alcuni numeri specifici (come i numeri di cellulare spagnoli in grado di inviare SMS) sono "Esclusivi" e richiedono un processo di richiesta manuale e tariffe più elevate.</li>
+                <li>Alcuni numeri specifici (come i numeri di cellulare spagnoli in grado di inviare SMS) sono
+                    "Esclusivi" e richiedono un processo di richiesta manuale e tariffe più elevate.</li>
             </ul>
 
             <h3>5. Conversione valutaria e tasse</h3>
             <p>La fattura finale potrebbe includere tasse locali (come l'IVA).</p>
-            <p>Se la tua carta è in una valuta diversa da quella della tua <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> account, la tua banca o <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> potrebbero applicare commissioni di conversione della valuta.</p>
+            <p>Se la tua carta è in una valuta diversa da quella della tua <span class="notranslate"
+                    Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> account, la tua banca o
+                <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>
+                potrebbero applicare commissioni di conversione della valuta.
+            </p>
 
             <div class="alert-box">
                 <h4>💡 Raccomandazione</h4>
-                <p>Ti consigliamo vivamente di controllare la <a href="https://www.twilio.com/sms/pricing" target="_blank">pagina ufficiale <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Prezzi</a> e di selezionare il paese di destinazione per visualizzare la ripartizione completa dei costi.</p>
+                <p>Ti consigliamo vivamente di controllare la <a href="https://www.twilio.com/sms/pricing"
+                        target="_blank">pagina ufficiale <span class="notranslate" Translate="no"><span
+                                class="notranslate" Translate="no">Twilio</span></span> Prezzi</a> e di selezionare il
+                    paese di destinazione per visualizzare la ripartizione completa dei costi.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>⚙️ Passaggi di configurazione</h2>
-            <p>Per configurare <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> nell'app, segui questi passaggi:</p>
+            <p>Per configurare <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span> nell'app, segui questi passaggi:</p>
 
-            <h3>1️⃣ Passaggio 1: ottieni le tue <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> credenziali</h3>
+            <h3>1️⃣ Passaggio 1: ottieni le tue <span class="notranslate" Translate="no"><span class="notranslate"
+                        Translate="no">Twilio</span></span> credenziali</h3>
             <ol>
-                <li>Crea un account su <a href="https://www.twilio.com/" target="_blank"><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>.com</a>.</li>
-                <li>Vai alla <a href="https://console.twilio.com/" target="_blank"><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Console</a> per trovare il tuo <strong>SID account</strong> e il <strong>Token di autenticazione</strong>.</li>
+                <li>Crea un account su <a href="https://www.twilio.com/" target="_blank"><span class="notranslate"
+                            Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>.com</a>.</li>
+                <li>Vai alla <a href="https://console.twilio.com/" target="_blank"><span class="notranslate"
+                            Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Console</a> per
+                    trovare il tuo <strong>SID account</strong> e il <strong>Token di autenticazione</strong>.</li>
                 <li><strong>Scegli il metodo del mittente</strong> (Opzione A o B sopra).</li>
             </ol>
 
             <h3>2️⃣ Passaggio 2: inserisci le credenziali nell'app</h3>
             <ol>
                 <li>Apri il <strong>Impostazioni</strong> dell'app.</li>
-                <li>Abilita l'interruttore <strong>"Utilizza <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span>"</strong>.</li>
+                <li>Abilita l'interruttore <strong>"Utilizza <span class="notranslate" Translate="no"><span
+                                class="notranslate" Translate="no">Twilio</span></span>"</strong>.</li>
                 <li>Inserisci il tuo <strong>SID account</strong> e il <strong>token di autenticazione</strong>.</li>
                 <li><strong>Configura il mittente:</strong>
                     <ul>
-                        <li><strong>Se utilizzi l'Opzione A (Nome):</strong> attiva <strong>"Utilizza ID mittente alfanumerico"</strong>, quindi digita il nome desiderato (massimo 11 caratteri) nel campo <strong>Nome mittente</strong>.</li>
-                        <li><strong>Se utilizzi l'opzione B (numero):</strong> lascia "Utilizza ID mittente alfanumerico" <strong>OFF</strong> e inserisci il numero <span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> acquistato nel campo <strong><span class="notranslate" Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> Numero di telefono</strong>.</li>
+                        <li><strong>Se utilizzi l'Opzione A (Nome):</strong> attiva <strong>"Utilizza ID mittente
+                                alfanumerico"</strong>, quindi digita il nome desiderato (massimo 11 caratteri) nel
+                            campo <strong>Nome mittente</strong>.</li>
+                        <li><strong>Se utilizzi l'opzione B (numero):</strong> lascia "Utilizza ID mittente
+                            alfanumerico" <strong>OFF</strong> e inserisci il numero <span class="notranslate"
+                                Translate="no"><span class="notranslate" Translate="no">Twilio</span></span> acquistato
+                            nel campo <strong><span class="notranslate" Translate="no"><span class="notranslate"
+                                        Translate="no">Twilio</span></span> Numero di telefono</strong>.</li>
                     </ul>
                 </li>
             </ol>
 
             <h3>3️⃣ Passaggio 3: riepilogo dell'ID mittente alfanumerico</h3>
             <ul>
-                <li><strong>Che cos'è?</strong> Ti consente di utilizzare un nome (come "MyHomeAlert") anziché un numero.</li>
-                <li><strong>Fiducia:</strong> i destinatari vedono immediatamente il tuo nome, il che garantisce che il tuo avviso venga risaltato.</li>
-                <li><strong>Nessuna risposta:</strong> tieni presente che i destinatari non possono rispondere a un nome.</li>
+                <li><strong>Che cos'è?</strong> Ti consente di utilizzare un nome (come "MyHomeAlert") anziché un
+                    numero.</li>
+                <li><strong>Fiducia:</strong> i destinatari vedono immediatamente il tuo nome, il che garantisce che il
+                    tuo avviso venga risaltato.</li>
+                <li><strong>Nessuna risposta:</strong> tieni presente che i destinatari non possono rispondere a un
+                    nome.</li>
             </ul>
         </section>
 
@@ -552,7 +746,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.</p>
+                    <p>Avvisi di emergenza semplici per tutti. Nessun abbonamento, nessun tracciamento, solo sicurezza.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -577,7 +772,8 @@
                     <h3>Supporto</h3>
                     <ul>
                         <li><a href="#">Domande frequenti</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide passo passo</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guide
+                                passo passo</a></li>
                         <li><a href="accessibility_guide.html">Guida all'accessibilità</a></li>
                         <li><a href="troubleshooting.html">Risoluzione dei problemi</a></li>
                         <li><a href="contact.html">Contatta l'assistenza</a></li>
@@ -586,7 +782,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. | Fatto con ❤️ per la tua sicurezza</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tutti i diritti riservati. |
+                    Fatto con ❤️ per la tua sicurezza</p>
             </div>
         </div>
     </footer>

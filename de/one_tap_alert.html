@@ -418,49 +418,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Zurück nach Hause</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">DE</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
-            <a href="../de/one_tap_alert.html" hreflang="de" class="active">DE</a>
-            <a href="../one_tap_alert.html" hreflang="en">EN</a>
-            <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
-            <a href="../eu/one_tap_alert.html" hreflang="eu">EU</a>
-            <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
-            <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
-            <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
-            <a href="../nl/one_tap_alert.html" hreflang="nl">NL</a>
-            <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">DE</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/one_tap_alert.html" hreflang="ca">CA</a>
+                        <a href="../de/one_tap_alert.html" hreflang="de" class="active">DE</a>
+                        <a href="../one_tap_alert.html" hreflang="en">EN</a>
+                        <a href="../es/one_tap_alert.html" hreflang="es">ES</a>
+                        <a href="../eu/one_tap_alert.html" hreflang="eu">EU</a>
+                        <a href="../fr/one_tap_alert.html" hreflang="fr">FR</a>
+                        <a href="../gl/one_tap_alert.html" hreflang="gl">GL</a>
+                        <a href="../it/one_tap_alert.html" hreflang="it">IT</a>
+                        <a href="../nl/one_tap_alert.html" hreflang="nl">NL</a>
+                        <a href="../pt/one_tap_alert.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -468,98 +560,137 @@
     <main class="guide-container">
         <a href="index.html#guides" class="back-link">← Zurück zu Anleitungen</a>
 
-        <h1 class="guide-title">One-Tap Alert: Alle Möglichkeiten, <span class="notranslate" translator="no">TapAlert</span> sofort auszulösen</h1>
+        <h1 class="guide-title">One-Tap Alert: Alle Möglichkeiten, <span class="notranslate"
+                translator="no">TapAlert</span> sofort auszulösen</h1>
 
-        <p><span class="notranslate" translator="no">TapAlert</span> kann mit verschiedenen Methoden für sofortige Notfallwarnungen mit nur einem Tastendruck konfiguriert werden. Dieser Leitfaden behandelt alle Optionen, von Startbildschirm-Widgets bis hin zu physischenTastes und automatisierten Timern.</p>
+        <p><span class="notranslate" translator="no">TapAlert</span> kann mit verschiedenen Methoden für sofortige
+            Notfallwarnungen mit nur einem Tastendruck konfiguriert werden. Dieser Leitfaden behandelt alle Optionen,
+            von Startbildschirm-Widgets bis hin zu physischenTastes und automatisierten Timern.</p>
 
         <section class="guide-section">
             <h2>1. 📱 Android Startbildschirm-Widget</h2>
             <p><strong>Plattform:</strong> Android only</p>
-            <p>Der schnellste Weg, eine Warnung auszulösen. Auf Ihrem Startbildschirm befindet sich ein spezielles Widget – ein Fingertipp und der Countdown startet sofort.</p>
+            <p>Der schnellste Weg, eine Warnung auszulösen. Auf Ihrem Startbildschirm befindet sich ein spezielles
+                Widget – ein Fingertipp und der Countdown startet sofort.</p>
 
             <h3>So richten Sie es ein</h3>
             <ol>
-                <li>Öffnen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> → tippen Sie auf das Symbol <strong>⚙️ Einstellungen</strong>.</li>
+                <li>Öffnen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> → tippen Sie
+                    auf das Symbol <strong>⚙️ Einstellungen</strong>.</li>
                 <li>Scrollen Sie zum Abschnitt <strong>Widget</strong>.</li>
-                <li>Tippen Sie auf <strong>„Hinzufügen“</strong> → das System fordert Sie auf, das Widget auf Ihrem Startbildschirm zu platzieren.</li>
-                <li>Ziehen Sie es an die gewünschte Stelle (idealerweise auf Ihrem Hauptbildschirm für schnellen Zugriff).</li>
+                <li>Tippen Sie auf <strong>„Hinzufügen“</strong> → das System fordert Sie auf, das Widget auf Ihrem
+                    Startbildschirm zu platzieren.</li>
+                <li>Ziehen Sie es an die gewünschte Stelle (idealerweise auf Ihrem Hauptbildschirm für schnellen
+                    Zugriff).</li>
             </ol>
 
             <h3>Wie es funktioniert</h3>
             <ul>
-                <li><strong>Einmaliges Tippen</strong> auf das Widget → <span class="notranslate" translator="no">TapAlert</span> wird geöffnet und der <strong>Countdown beginnt sofort</strong>.</li>
-                <li>Sie sehen das Countdown-Dialogfeld und können <strong>abbrechen</strong>, wenn es versehentlich passiert.</li>
+                <li><strong>Einmaliges Tippen</strong> auf das Widget → <span class="notranslate"
+                        translator="no">TapAlert</span> wird geöffnet und der <strong>Countdown beginnt sofort</strong>.
+                </li>
+                <li>Sie sehen das Countdown-Dialogfeld und können <strong>abbrechen</strong>, wenn es versehentlich
+                    passiert.</li>
                 <li>Nach dem Countdown wird die Benachrichtigung gesendet und die App automatisch geschlossen.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Platzieren Sie das Widget auf Ihrem Sperrbildschirm (sofern von Ihrer Android-Version unterstützt) oder auf der allerersten Startbildschirmseite, um den schnellsten Zugriff zu erhalten.</p>
+                <p>Platzieren Sie das Widget auf Ihrem Sperrbildschirm (sofern von Ihrer Android-Version unterstützt)
+                    oder auf der allerersten Startbildschirmseite, um den schnellsten Zugriff zu erhalten.</p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>2. 🔘 Physical Button / Hardware Gesture</h2>
             <p><strong>Plattform:</strong> Android & iPhone</p>
-            <p>Ordnen Sie eine <strong>physischeTaste</strong> Taste auf Ihrem Telefon zu (Ein/Aus-TasteTaste, Lautstärketaste oder Rückwärtstipp-Geste), um <span class="notranslate" translator="no">TapAlert</span> zu starten. In Kombination mit <strong>Auto-Start beim Start</strong> erzeugt dies eine echte One-Tap-Panik Taste.</p>
+            <p>Ordnen Sie eine <strong>physischeTaste</strong> Taste auf Ihrem Telefon zu (Ein/Aus-TasteTaste,
+                Lautstärketaste oder Rückwärtstipp-Geste), um <span class="notranslate" translator="no">TapAlert</span>
+                zu starten. In Kombination mit <strong>Auto-Start beim Start</strong> erzeugt dies eine echte
+                One-Tap-Panik Taste.</p>
 
-            <h3>Schritt 1: Aktivieren Sie den automatischen Start in <span class="notranslate" translator="no">TapAlert</span></h3>
+            <h3>Schritt 1: Aktivieren Sie den automatischen Start in <span class="notranslate"
+                    translator="no">TapAlert</span></h3>
             <ol>
-                <li>Öffnen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> → <strong>⚙️ Einstellungen</strong>.</li>
+                <li>Öffnen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> → <strong>⚙️
+                        Einstellungen</strong>.</li>
                 <li>Aktivieren Sie <strong>„Automatischer Start beim Start“</strong>.</li>
             </ol>
 
             <div class="alert-box warning">
                 <h4>⚠️ ACHTUNG</h4>
-                <p>Wenn Autostart aktiviert ist, wird der Countdown <strong>jedes Mal</strong> ausgelöst, wenn Sie die App öffnen – auch wenn Sie sie normal über die App-Schublade öffnen. Aktivieren Sie dies nur, wenn Sie hauptsächlich über eine physischeTaste Verknüpfung starten.</p>
+                <p>Wenn Autostart aktiviert ist, wird der Countdown <strong>jedes Mal</strong> ausgelöst, wenn Sie die
+                    App öffnen – auch wenn Sie sie normal über die App-Schublade öffnen. Aktivieren Sie dies nur, wenn
+                    Sie hauptsächlich über eine physischeTaste Verknüpfung starten.</p>
             </div>
 
             <h3>Schritt 2: Konfigurieren Sie die Taste Ihres Telefons</h3>
 
             <h4>Samsung Galaxy (Seitentaste)</h4>
             <ol>
-                <li><strong>Einstellungen</strong> → <strong>Erweitert Merkmale</strong> → <strong>Seitentaste</strong>.</li>
-                <li>Aktivieren Sie <strong>Doppeltes Drücken</strong> → <strong>App öffnen</strong> → wählen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong>.</li>
+                <li><strong>Einstellungen</strong> → <strong>Erweitert Merkmale</strong> → <strong>Seitentaste</strong>.
+                </li>
+                <li>Aktivieren Sie <strong>Doppeltes Drücken</strong> → <strong>App öffnen</strong> → wählen Sie
+                    <strong><span class="notranslate" translator="no">TapAlert</span></strong>.
+                </li>
                 <li>Drücken Sie zum Auslösen zweimal die Ein-/Aus-TasteTaste.</li>
             </ol>
 
             <h4>Google Pixel (Schnelltippen)</h4>
             <ol>
-                <li><strong>Einstellungen</strong> → <strong>System</strong> → <strong>Gesten</strong> → <strong>Schnelltippen, um Aktionen zu starten</strong>.</li>
-                <li>Aktivieren Sie <strong>Schnelltippen verwenden</strong> → <strong>App öffnen</strong> → wählen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong>.</li>
+                <li><strong>Einstellungen</strong> → <strong>System</strong> → <strong>Gesten</strong> →
+                    <strong>Schnelltippen, um Aktionen zu starten</strong>.
+                </li>
+                <li>Aktivieren Sie <strong>Schnelltippen verwenden</strong> → <strong>App öffnen</strong> → wählen Sie
+                    <strong><span class="notranslate" translator="no">TapAlert</span></strong>.
+                </li>
                 <li>Tippen Sie zum Auslösen zweimal auf die Rückseite Ihres Telefons.</li>
             </ol>
 
             <h4>iPhone 15 Pro+ (Aktionstaste)</h4>
             <ol>
-                <li><strong>Einstellungen</strong> → <strong>Aktionsschaltfläche</strong> → Wischen Sie zu <strong>Verknüpfung</strong>.</li>
-                <li>Tippen Sie auf die Auswahl → <strong>App öffnen</strong> → wählen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong>.</li>
+                <li><strong>Einstellungen</strong> → <strong>Aktionsschaltfläche</strong> → Wischen Sie zu
+                    <strong>Verknüpfung</strong>.
+                </li>
+                <li>Tippen Sie auf die Auswahl → <strong>App öffnen</strong> → wählen Sie <strong><span
+                            class="notranslate" translator="no">TapAlert</span></strong>.</li>
                 <li>Halten Sie zum Auslösen die Aktionstaste gedrückt.</li>
             </ol>
 
             <h4>iPhone – Alle Modelle (Zurücktippen)</h4>
             <ol>
-                <li><strong>Einstellungen</strong> → <strong>Bedienungshilfen</strong> → <strong>Berühren</strong> → <strong>Zurücktippen</strong>.</li>
+                <li><strong>Einstellungen</strong> → <strong>Bedienungshilfen</strong> → <strong>Berühren</strong> →
+                    <strong>Zurücktippen</strong>.
+                </li>
                 <li>Wählen Sie <strong>Doppeltippen</strong> oder <strong>Dreifachtippen</strong>.</li>
-                <li>Um eine Verknüpfung zu <span class="notranslate" translator="no">TapAlert</span> herzustellen, erstellen Sie zunächst eine Verknüpfung:
+                <li>Um eine Verknüpfung zu <span class="notranslate" translator="no">TapAlert</span> herzustellen,
+                    erstellen Sie zunächst eine Verknüpfung:
                     <ul>
-                        <li>Öffnen Sie die <strong>Shortcuts</strong>-App → <strong>+</strong> → <strong>Aktion hinzufügen</strong> → <strong>App öffnen</strong> → <strong><span class="notranslate" translator="no">TapAlert</span></strong>.</li>
+                        <li>Öffnen Sie die <strong>Shortcuts</strong>-App → <strong>+</strong> → <strong>Aktion
+                                hinzufügen</strong> → <strong>App öffnen</strong> → <strong><span class="notranslate"
+                                    translator="no">TapAlert</span></strong>.</li>
                         <li>Nennen Sie es „Öffnen Sie <span class="notranslate" translator="no">TapAlert</span>“.</li>
                     </ul>
                 </li>
-                <li>Gehen Sie zurück zu den <strong>Back Tap</strong>-Einstellungen → wählen Sie die Verknüpfung „<span class="notranslate" translator="no">TapAlert</span> öffnen“ aus.</li>
+                <li>Gehen Sie zurück zu den <strong>Back Tap</strong>-Einstellungen → wählen Sie die Verknüpfung „<span
+                        class="notranslate" translator="no">TapAlert</span> öffnen“ aus.</li>
             </ol>
 
             <h4>Beliebige Android (Button Mapper Apps)</h4>
-            <p>Wenn auf Ihrem Gerät die Neuzuordnung von eingebautTaste fehlt, installieren Sie <strong>"Button Mapper"</strong> oder <strong>"MacroDroid"</strong> aus dem Play Store:</p>
+            <p>Wenn auf Ihrem Gerät die Neuzuordnung von eingebautTaste fehlt, installieren Sie <strong>"Button
+                    Mapper"</strong> oder <strong>"MacroDroid"</strong> aus dem Play Store:</p>
             <ul>
-                <li>Ordnen Sie alle Hardwareschlüssel (VolumesTastes usw.) neu zu <strong>Open Application</strong> → <strong><span class="notranslate" translator="no">TapAlert</span></strong>.</li>
+                <li>Ordnen Sie alle Hardwareschlüssel (VolumesTastes usw.) neu zu <strong>Open Application</strong> →
+                    <strong><span class="notranslate" translator="no">TapAlert</span></strong>.
+                </li>
             </ul>
 
             <h3>Wie es funktioniert</h3>
             <ol>
                 <li>Drücken Sie Ihre konfigurierteTaste/Geste.</li>
-                <li><span class="notranslate" translator="no">TapAlert</span> öffnet sich → der Countdown startet <strong>automatisch</strong> (sofern Auto-Start aktiviert ist).</li>
+                <li><span class="notranslate" translator="no">TapAlert</span> öffnet sich → der Countdown startet
+                    <strong>automatisch</strong> (sofern Auto-Start aktiviert ist).
+                </li>
                 <li>Die Benachrichtigung wird gesendet und die App wird automatisch geschlossen.</li>
                 <li>Funktioniert auch bei gesperrtem Bildschirm (mit richtiger Batterieoptimierung – siehe unten).</li>
             </ol>
@@ -569,25 +700,36 @@
             <h2>3. 🆘 <span class="notranslate" translate="no">Panic Mode</span> (<span class="notranslate"
                     translate="no">SOS</span> / OK)</h2>
             <p><strong>Plattform:</strong> Android & iOS</p>
-            <p>Der <span class="notranslate" translator="no">Panikmodus</span> verwandelt den gesamten Bildschirm in zwei riesige Tastes – <strong><span class="notranslate" translator="no">SOS</span></strong> und <strong>I'm OK</strong> – sodass man ihn praktisch nicht übersehen kann.</p>
+            <p>Der <span class="notranslate" translator="no">Panikmodus</span> verwandelt den gesamten Bildschirm in
+                zwei riesige Tastes – <strong><span class="notranslate" translator="no">SOS</span></strong> und
+                <strong>I'm OK</strong> – sodass man ihn praktisch nicht übersehen kann.
+            </p>
 
             <h3>So aktivieren Sie</h3>
             <ol>
-                <li>Öffnen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> und es wird standardmäßig im <span class="notranslate" translator="no">Panikmodus</span> geöffnet.</li>
-                <li>Denken Sie daran: Sie können von den konfigurierten Nachrichtenwarnungen zum <span class="notranslate" translator="no">Panikmodus</span> wechseln, indem Sie auf dem Startbildschirm nach links/rechts wischen oder auf das Modussymbol in der oberen Leiste tippen.</li>
+                <li>Öffnen Sie <strong><span class="notranslate" translator="no">TapAlert</span></strong> und es wird
+                    standardmäßig im <span class="notranslate" translator="no">Panikmodus</span> geöffnet.</li>
+                <li>Denken Sie daran: Sie können von den konfigurierten Nachrichtenwarnungen zum <span
+                        class="notranslate" translator="no">Panikmodus</span> wechseln, indem Sie auf dem
+                    Startbildschirm nach links/rechts wischen oder auf das Modussymbol in der oberen Leiste tippen.</li>
             </ol>
 
             <h3>Wie es funktioniert</h3>
             <ul>
-                <li><strong>Tippen Sie auf das große rote <span class="notranslate" translator="no">SOS</span>Taste</strong> → der Countdown für einen Notfallalarm beginnt.</li>
-                <li><strong>Tippen Sie auf das grüne „Mir geht es gut“Taste</strong> → sendet eine beruhigende Nachricht.</li>
+                <li><strong>Tippen Sie auf das große rote <span class="notranslate"
+                            translator="no">SOS</span>Taste</strong> → der Countdown für einen Notfallalarm beginnt.
+                </li>
+                <li><strong>Tippen Sie auf das grüne „Mir geht es gut“Taste</strong> → sendet eine beruhigende
+                    Nachricht.</li>
                 <li><strong>NotrufTaste</strong> unten wählt Ihre örtliche Notrufnummer (112, 911 usw.).</li>
             </ul>
 
             <h3>Auslösemethode: Tippen oder Halten</h3>
-            <p>Für zusätzliche Sicherheit können Sie ein <strong>5-sekündiges Gedrückthalten</strong> anstelle eines einzelnen Tippens anfordern:</p>
+            <p>Für zusätzliche Sicherheit können Sie ein <strong>5-sekündiges Gedrückthalten</strong> anstelle eines
+                einzelnen Tippens anfordern:</p>
             <ul>
-                <li><strong>Einstellungen</strong> → <strong>Trigger-Methode</strong> → <strong>Drücken und Halten (5 Sekunden)</strong>.</li>
+                <li><strong>Einstellungen</strong> → <strong>Trigger-Methode</strong> → <strong>Drücken und Halten (5
+                        Sekunden)</strong>.</li>
                 <li>Dies verhindert unbeabsichtigte Auslösungen und ist im Notfall dennoch schnell genug.</li>
             </ul>
         </section>
@@ -595,19 +737,24 @@
         <section class="guide-section">
             <h2>4. 🎙️ Voice Quick Alert</h2>
             <p><strong>Plattform:</strong> Android & iOS</p>
-            <p>Im <span class="notranslate" translator="no">Panikmodus</span> können Sie auch eine Warnung mit einer <strong>sprachlich diktierten Nachricht</strong> in einer Aktion senden – ideal, wenn Sie nicht tippen können.</p>
+            <p>Im <span class="notranslate" translator="no">Panikmodus</span> können Sie auch eine Warnung mit einer
+                <strong>sprachlich diktierten Nachricht</strong> in einer Aktion senden – ideal, wenn Sie nicht tippen
+                können.
+            </p>
             <ol>
                 <li>Tap the <strong>🎤 Microphone</strong>Taste next to <span class="notranslate"
                         translate="no">SOS</span> or I'm OK.</li>
                 <li>Sprechen Sie Ihre Botschaft.</li>
-                <li>Nach dem Sprechen startet automatisch der Countdown mit Ihrer transkribierten Sprachnachricht im Anhang.</li>
+                <li>Nach dem Sprechen startet automatisch der Countdown mit Ihrer transkribierten Sprachnachricht im
+                    Anhang.</li>
             </ol>
         </section>
 
         <section class="guide-section">
             <h2>5. ⏳ Check-in-Timer (Totmannschalter)</h2>
             <p><strong>Plattform:</strong> Android & iOS</p>
-            <p>Der Timer sendet <strong>automatisch</strong> eine Benachrichtigung, wenn Sie nicht einchecken – ganz ohne Antippen.</p>
+            <p>Der Timer sendet <strong>automatisch</strong> eine Benachrichtigung, wenn Sie nicht einchecken – ganz
+                ohne Antippen.</p>
 
             <h3>So richten Sie es ein</h3>
             <ol>
@@ -620,26 +767,35 @@
             <h3>Wie es funktioniert</h3>
             <ul>
                 <li>Eine dauerhafte Benachrichtigung zählt die verbleibende Zeit herunter.</li>
-                <li>Wenn Sie einchecken (tippen Sie auf <strong>„Mir geht es gut / Zurücksetzen“</strong>) → wird der Timer zurückgesetzt, es wird keine Benachrichtigung gesendet.</li>
-                <li>Wenn Sie nicht einchecken → sendet <span class="notranslate" translator="no">TapAlert</span> automatisch Ihre Benachrichtigung mit Standort an alle Empfänger.</li>
+                <li>Wenn Sie einchecken (tippen Sie auf <strong>„Mir geht es gut / Zurücksetzen“</strong>) → wird der
+                    Timer zurückgesetzt, es wird keine Benachrichtigung gesendet.</li>
+                <li>Wenn Sie nicht einchecken → sendet <span class="notranslate" translator="no">TapAlert</span>
+                    automatisch Ihre Benachrichtigung mit Standort an alle Empfänger.</li>
             </ul>
 
             <div class="alert-box tip">
                 <h4>💡 TIP</h4>
-                <p>Perfekt für Solo-Aktivitäten: Wandern, nächtlicher Heimweg, Treffen mit Fremden oder Alleinreisen.</p>
+                <p>Perfekt für Solo-Aktivitäten: Wandern, nächtlicher Heimweg, Treffen mit Fremden oder Alleinreisen.
+                </p>
             </div>
         </section>
 
         <section class="guide-section">
             <h2>6. 🔋 Critical: Battery Optimization (Android)</h2>
-            <p>Damit <strong>physischeTaste</strong>- und <strong>Widget</strong>-Auslöser zuverlässig funktionieren – insbesondere bei einem gesperrten/ruhenden Bildschirm – muss deaktivieren Sie die Batterieoptimierung für <span class="notranslate" translator="no">TapAlert</span>.</p>
+            <p>Damit <strong>physischeTaste</strong>- und <strong>Widget</strong>-Auslöser zuverlässig funktionieren –
+                insbesondere bei einem gesperrten/ruhenden Bildschirm – muss deaktivieren Sie die Batterieoptimierung
+                für <span class="notranslate" translator="no">TapAlert</span>.</p>
 
             <h3>Warum?</h3>
-            <p>Android-Hersteller beenden aggressiv Hintergrund-Apps, um Batterie zu sparen. Dies kann verhindern, dass <span class="notranslate" translator="no">TapAlert</span> Ihr Telefon aufweckt, wenn der Bildschirm ausgeschaltet ist.</p>
+            <p>Android-Hersteller beenden aggressiv Hintergrund-Apps, um Batterie zu sparen. Dies kann verhindern, dass
+                <span class="notranslate" translator="no">TapAlert</span> Ihr Telefon aufweckt, wenn der Bildschirm
+                ausgeschaltet ist.
+            </p>
 
             <h3>Schnelle Schritte (alle Geräte)</h3>
             <ol>
-                <li><strong>Einstellungen</strong> → <strong>Apps</strong> → <strong><span class="notranslate" translator="no">TapAlert</span></strong> → <strong>Akku</strong>.</li>
+                <li><strong>Einstellungen</strong> → <strong>Apps</strong> → <strong><span class="notranslate"
+                            translator="no">TapAlert</span></strong> → <strong>Akku</strong>.</li>
                 <li>Wählen <strong>„Nicht optimieren“</strong> oder <strong>„Uneingeschränkt“</strong>.</li>
                 <li>Aktivieren Sie <strong>„Hintergrundaktivität zulassen“</strong>.</li>
             </ol>
@@ -648,7 +804,8 @@
             <ol>
                 <li>Sperren Sie Ihr Telefon und warten Sie 1–2 Minuten (Bildschirm vollständig aus).</li>
                 <li>Drücken Sie Ihre konfigurierte physische TasteTaste oder tippen Sie auf das Widget.</li>
-                <li><span class="notranslate" translator="no">TapAlert</span> sollte sich öffnen und den Countdown sofort starten.</li>
+                <li><span class="notranslate" translator="no">TapAlert</span> sollte sich öffnen und den Countdown
+                    sofort starten.</li>
             </ol>
         </section>
 
@@ -680,7 +837,8 @@
                         <td>Mäßig</td>
                     </tr>
                     <tr>
-                        <td><span class="notranslate" Translate="no">Panikmodus</span> (<span class="notranslate" Translate="no">SOS</span>Taste)</td>
+                        <td><span class="notranslate" Translate="no">Panikmodus</span> (<span class="notranslate"
+                                Translate="no">SOS</span>Taste)</td>
                         <td>Android & iOS</td>
                         <td>2 (App öffnen + tippen)</td>
                         <td>None</td>
@@ -702,7 +860,8 @@
                     </tr>
                 </tbody>
             </table>
-            <p><small>*Die Unterstützung des Widget-Sperrbildschirms variiert je nach Android-Version und Hersteller.</small></p>
+            <p><small>*Die Unterstützung des Widget-Sperrbildschirms variiert je nach Android-Version und
+                    Hersteller.</small></p>
         </section>
 
         <section class="guide-section">
@@ -710,25 +869,33 @@
 
             <h3>👴 For Senior Users</h3>
             <ul>
-                <li>Verwenden Sie den <strong><span class="notranslate" translator="no">Panikmodus</span></strong> (große <span class="notranslate" translator="no">SOS</span> / Mir geht es gutTastes).</li>
-                <li>Stellen Sie <strong>Trigger-Methode</strong> auf <strong>Tippen</strong> ein (einfachste Interaktion).</li>
+                <li>Verwenden Sie den <strong><span class="notranslate" translator="no">Panikmodus</span></strong>
+                    (große <span class="notranslate" translator="no">SOS</span> / Mir geht es gutTastes).</li>
+                <li>Stellen Sie <strong>Trigger-Methode</strong> auf <strong>Tippen</strong> ein (einfachste
+                    Interaktion).</li>
                 <li>Fügen Sie das <strong>Android-Widget</strong> zum Startbildschirm hinzu.</li>
-                <li>Stellen Sie den Countdown auf <strong>10–15 Sekunden</strong> ein (Zeit zum Korrigieren von Fehlern).</li>
+                <li>Stellen Sie den Countdown auf <strong>10–15 Sekunden</strong> ein (Zeit zum Korrigieren von
+                    Fehlern).</li>
             </ul>
 
             <h3>🏃 For Active / Solo Users</h3>
             <ul>
                 <li>Richten Sie den <strong>Check-in-Timer</strong> vor Aktivitäten ein.</li>
-                <li>Konfigurieren Sie ein <strong>physischesTaste</strong> für sofortiges <span class="notranslate" translator="no">SOS</span>.</li>
-                <li>Aktivieren Sie <strong><span class="notranslate" translator="no">Intelligente Redundanz</span></strong> (automatisches <span class="notranslate" translator="no">Fallback</span> zwischen SMS-Methoden).</li>
+                <li>Konfigurieren Sie ein <strong>physischesTaste</strong> für sofortiges <span class="notranslate"
+                        translator="no">SOS</span>.</li>
+                <li>Aktivieren Sie <strong><span class="notranslate" translator="no">Intelligente
+                            Redundanz</span></strong> (automatisches <span class="notranslate"
+                        translator="no">Fallback</span> zwischen SMS-Methoden).</li>
                 <li>Aktivieren Sie <strong>E-Mail-Redundanz</strong> nur für Bereiche mit WLAN.</li>
             </ul>
 
             <h3>🔒 For Maximum Security</h3>
             <ul>
                 <li>Konfigurieren Sie <strong>physischTaste</strong> mit <strong>Auto-Start</strong>.</li>
-                <li>Stellen Sie die <strong>Auslösemethode</strong> auf <strong>Drücken und Halten (5 Sekunden)</strong> ein, um versehentliche Auslöser zu verhindern.</li>
-                <li>Aktivieren Sie <strong>sowohl</strong> <span class="notranslate" translator="no">Intelligente Redundanz</span> als auch E-Mail-Redundanz.</li>
+                <li>Stellen Sie die <strong>Auslösemethode</strong> auf <strong>Drücken und Halten (5 Sekunden)</strong>
+                    ein, um versehentliche Auslöser zu verhindern.</li>
+                <li>Aktivieren Sie <strong>sowohl</strong> <span class="notranslate" translator="no">Intelligente
+                        Redundanz</span> als auch E-Mail-Redundanz.</li>
                 <li>Deaktivieren Sie die Batterieoptimierung und testen Sie sie über den gesperrten Bildschirm.</li>
             </ul>
         </section>
@@ -766,7 +933,8 @@
                     <h3>Unterstützung</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate"
+                                    translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
                         <li><a href="accessibility_guide.html">Leitfaden zur Barrierefreiheit</a></li>
                         <li><a href="troubleshooting.html">Fehlerbehebung</a></li>
                         <li><a href="contact.html">Kontaktieren Sie den Support</a></li>
@@ -775,7 +943,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. | Hergestellt mit ❤️ für Ihre Sicherheit</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. |
+                    Hergestellt mit ❤️ für Ihre Sicherheit</p>
             </div>
         </div>
     </footer>

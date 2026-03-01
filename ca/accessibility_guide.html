@@ -369,49 +369,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Tornar a casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">CA</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/accessibility_guide.html" hreflang="ca" class="active">CA</a>
-            <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
-            <a href="../accessibility_guide.html" hreflang="en">EN</a>
-            <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
-            <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
-            <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
-            <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
-            <a href="../it/accessibility_guide.html" hreflang="it">IT</a>
-            <a href="../nl/accessibility_guide.html" hreflang="nl">NL</a>
-            <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">CA</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/accessibility_guide.html" hreflang="ca" class="active">CA</a>
+                        <a href="../de/accessibility_guide.html" hreflang="de">DE</a>
+                        <a href="../accessibility_guide.html" hreflang="en">EN</a>
+                        <a href="../es/accessibility_guide.html" hreflang="es">ES</a>
+                        <a href="../eu/accessibility_guide.html" hreflang="eu">EU</a>
+                        <a href="../fr/accessibility_guide.html" hreflang="fr">FR</a>
+                        <a href="../gl/accessibility_guide.html" hreflang="gl">GL</a>
+                        <a href="../it/accessibility_guide.html" hreflang="it">IT</a>
+                        <a href="../nl/accessibility_guide.html" hreflang="nl">NL</a>
+                        <a href="../pt/accessibility_guide.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -421,22 +513,31 @@
 
         <div class="guide-header">
             <h1 class="guide-title">Funcions d'accessibilitat per a la gent gran</h1>
-            <p class="guide-meta"><span class="notranslate" translate="no">TapAlert</span> està dissenyat per ser utilitzat per tothom, incloses les persones amb pèrdua auditiva, baixa visió, tremolors o altres afeccions relacionades amb l'edat. Aquesta guia explica cada funció d'accessibilitat i com treure'n el màxim profit.</p>
+            <p class="guide-meta"><span class="notranslate" translate="no">TapAlert</span> està dissenyat per ser
+                utilitzat per tothom, incloses les persones amb pèrdua auditiva, baixa visió, tremolors o altres
+                afeccions relacionades amb l'edat. Aquesta guia explica cada funció d'accessibilitat i com treure'n el
+                màxim profit.</p>
         </div>
 
         <section class="guide-section" id="step-1">
             <h2>1. Suport de text gran</h2>
             <p><strong>A qui ajuda:</strong> Persones amb baixa visió o dificultat per llegir textos petits.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> respecta la mida de lletra que heu definit a la configuració del sistema del vostre telèfon. Si augmenteu la mida del text a <strong>Configuració > Pantalla > Mida del tipus de lletra</strong> (Android) o <strong>Configuració > Accessibilitat > Mida de pantalla i text > Text més gran</strong> (iOS), tot el text de <span class="notranslate" translate="no">TapAlert</span> augmentarà en conseqüència: botons, etiquetes, menús i missatges.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> respecta la mida de lletra que heu definit a la
+                configuració del sistema del vostre telèfon. Si augmenteu la mida del text a <strong>Configuració >
+                    Pantalla > Mida del tipus de lletra</strong> (Android) o <strong>Configuració > Accessibilitat >
+                    Mida de pantalla i text > Text més gran</strong> (iOS), tot el text de <span class="notranslate"
+                    translate="no">TapAlert</span> augmentarà en conseqüència: botons, etiquetes, menús i missatges.</p>
             <div class="alert-box">
                 <h4>💡 No cal cap acció dins de l'aplicació</h4>
-                <p>Només cal que configureu la vostra mida de lletra preferida a la configuració del telèfon i <span class="notranslate" translate="no">TapAlert</span> la seguirà automàticament.</p>
+                <p>Només cal que configureu la vostra mida de lletra preferida a la configuració del telèfon i <span
+                        class="notranslate" translate="no">TapAlert</span> la seguirà automàticament.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-2">
             <h2>2. Compatibilitat amb lectors de pantalla (TalkBack/VoiceOver)</h2>
-            <p><strong>A qui ajuda:</strong> Persones amb discapacitat visual greu que utilitzen un lector de pantalla.</p>
+            <p><strong>A qui ajuda:</strong> Persones amb discapacitat visual greu que utilitzen un lector de pantalla.
+            </p>
             <p><span class="notranslate" translate="no">TapAlert</span> funciona de manera nativa amb:</p>
             <ul>
                 <li><strong>TalkBack</strong> a Android (Configuració > Accessibilitat > TalkBack)</li>
@@ -444,16 +545,23 @@
             </ul>
             <p>Quan un lector de pantalla està actiu:</p>
             <ul>
-                <li>Els botons <strong><span class="notranslate" translate="no">SOS</span></strong> i <strong>Estic bé</strong> s'anuncien amb els seus noms i l'estat actual (activat o desactivat).</li>
-                <li>Quan inicieu un compte enrere abans d'enviar una alerta, el lector de pantalla compta enrere els segons que queden en veu alta perquè sempre sàpigueu quant de temps teniu abans que s'enviï l'alerta.</li>
-                <li>Després d'enviar una alerta, el lector de pantalla anuncia <strong>"Alerta enviada"</strong> o <strong>"Alerta fallada"</strong> perquè coneixeu el resultat sense haver de mirar la pantalla.</li>
+                <li>Els botons <strong><span class="notranslate" translate="no">SOS</span></strong> i <strong>Estic
+                        bé</strong> s'anuncien amb els seus noms i l'estat actual (activat o desactivat).</li>
+                <li>Quan inicieu un compte enrere abans d'enviar una alerta, el lector de pantalla compta enrere els
+                    segons que queden en veu alta perquè sempre sàpigueu quant de temps teniu abans que s'enviï
+                    l'alerta.</li>
+                <li>Després d'enviar una alerta, el lector de pantalla anuncia <strong>"Alerta enviada"</strong> o
+                    <strong>"Alerta fallada"</strong> perquè coneixeu el resultat sense haver de mirar la pantalla.
+                </li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-3">
             <h2>3. Feedback hàptic (vibració del telèfon)</h2>
-            <p><strong>A qui ajuda:</strong> Persones amb pèrdua auditiva que no poden escoltar el so del compte enrere o qualsevol persona que prefereix la confirmació tàctil.</p>
-            <p><span class="notranslate" translate="no">TapAlert</span> utilitza el motor de vibració del teu telèfon per donar-te comentaris físics en moments clau:</p>
+            <p><strong>A qui ajuda:</strong> Persones amb pèrdua auditiva que no poden escoltar el so del compte enrere
+                o qualsevol persona que prefereix la confirmació tàctil.</p>
+            <p><span class="notranslate" translate="no">TapAlert</span> utilitza el motor de vibració del teu telèfon
+                per donar-te comentaris físics en moments clau:</p>
             <table>
                 <thead>
                     <tr>
@@ -486,14 +594,19 @@
             </table>
             <div class="alert-box">
                 <h4>💡 No cal acció</h4>
-                <p>El feedback hàptic funciona automàticament sempre que la vibració estigui activada al telèfon (comproveu l'interruptor de silenci/vibració del telèfon).</p>
+                <p>El feedback hàptic funciona automàticament sempre que la vibració estigui activada al telèfon
+                    (comproveu l'interruptor de silenci/vibració del telèfon).</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-4">
             <h2>4. Alertes sonores</h2>
-            <p><strong>A qui ajuda:</strong> Persones que necessiten escoltar quan s'envia una alerta, incloses les persones amb pèrdua auditiva moderada.</p>
-            <p>Quan s'envia una alerta, <span class="notranslate" translate="no">TapAlert</span> reprodueix un so al <strong>teu propi dispositiu</strong> per confirmar que s'ha activat l'alerta. Podeu personalitzar el so a <strong>Configuració > So de notificació</strong>:</p>
+            <p><strong>A qui ajuda:</strong> Persones que necessiten escoltar quan s'envia una alerta, incloses les
+                persones amb pèrdua auditiva moderada.</p>
+            <p>Quan s'envia una alerta, <span class="notranslate" translate="no">TapAlert</span> reprodueix un so al
+                <strong>teu propi dispositiu</strong> per confirmar que s'ha activat l'alerta. Podeu personalitzar el so
+                a <strong>Configuració > So de notificació</strong>:
+            </p>
             <ul>
                 <li><strong>Cap</strong>: no hi ha so</li>
                 <li><strong>Sons senzills</strong>: tons senzills i clars (bons per a la majoria dels usuaris)</li>
@@ -501,63 +614,88 @@
             </ul>
             <p>Dins de cada estil de so, també podeu ajustar:</p>
             <ul>
-                <li><strong>To del so</strong>: fes lliscar cap a l'esquerra per obtenir un to més baix i profund. Els sons de to més greu (al voltant de 500 Hz) són més fàcils d'escoltar per a les persones amb pèrdua auditiva d'alta freqüència relacionada amb l'edat. El valor predeterminat ja està configurat en un to més baix per aquest motiu.</li>
+                <li><strong>To del so</strong>: fes lliscar cap a l'esquerra per obtenir un to més baix i profund. Els
+                    sons de to més greu (al voltant de 500 Hz) són més fàcils d'escoltar per a les persones amb pèrdua
+                    auditiva d'alta freqüència relacionada amb l'edat. El valor predeterminat ja està configurat en un
+                    to més baix per aquest motiu.</li>
                 <li><strong>Volum</strong>: defineix el volum del so de confirmació.</li>
             </ul>
         </section>
 
         <section class="guide-section" id="step-5">
             <h2>5. Flaix de pantalla i Flash de torxa</h2>
-            <p><strong>A qui ajuda:</strong> Persones amb pèrdua auditiva que poden perdre el so, o qualsevol persona en un entorn sorollós. També és útil quan el telèfon està boca avall o a la butxaca.</p>
-            <p>Quan una alerta s'envia correctament, <span class="notranslate" translate="no">TapAlert</span> produeix:</p>
+            <p><strong>A qui ajuda:</strong> Persones amb pèrdua auditiva que poden perdre el so, o qualsevol persona en
+                un entorn sorollós. També és útil quan el telèfon està boca avall o a la butxaca.</p>
+            <p>Quan una alerta s'envia correctament, <span class="notranslate" translate="no">TapAlert</span> produeix:
+            </p>
             <ol>
-                <li><strong>Flax de pantalla</strong>: tota la pantalla s'il·lumina en blanc tres vegades seguides ràpidament.</li>
-                <li><strong>Flaix de la torxa</strong>: el LED de la càmera a la part posterior del telèfon parpelleja tres vegades simultàniament, visible fins i tot quan la pantalla mira cap avall.</li>
+                <li><strong>Flax de pantalla</strong>: tota la pantalla s'il·lumina en blanc tres vegades seguides
+                    ràpidament.</li>
+                <li><strong>Flaix de la torxa</strong>: el LED de la càmera a la part posterior del telèfon parpelleja
+                    tres vegades simultàniament, visible fins i tot quan la pantalla mira cap avall.</li>
             </ol>
             <p>Els dos flaixos funcionen al mateix temps i es completen en menys d'un segon.</p>
             <div class="alert-box warning">
                 <h4>⚠️ Com desactivar això</h4>
-                <p>Si teniu una condició fotosensible, aneu a <strong>Configuració → So de notificació → Flaix en alerta</strong> i desactiveu-lo.</p>
+                <p>Si teniu una condició fotosensible, aneu a <strong>Configuració → So de notificació → Flaix en
+                        alerta</strong> i desactiveu-lo.</p>
             </div>
         </section>
 
         <section class="guide-section" id="step-6">
             <h2>6. Feu lliscar el dit per cancel·lar el compte enrere</h2>
-            <p><strong>A qui ajuda:</strong> Qualsevol persona que iniciï accidentalment un compte enrere i hagi de cancel·lar-lo ràpidament.</p>
-            <p>Quan toqueu el botó <span class="notranslate" translate="no">SOS</span>, apareix un diàleg de compte enrere abans que s'enviï l'alerta. Podeu cancel·lar-lo de dues maneres:</p>
+            <p><strong>A qui ajuda:</strong> Qualsevol persona que iniciï accidentalment un compte enrere i hagi de
+                cancel·lar-lo ràpidament.</p>
+            <p>Quan toqueu el botó <span class="notranslate" translate="no">SOS</span>, apareix un diàleg de compte
+                enrere abans que s'enviï l'alerta. Podeu cancel·lar-lo de dues maneres:</p>
             <ul>
                 <li>Toqueu el botó <strong>Cancel·la</strong> a la part inferior del quadre de diàleg.</li>
-                <li><strong>Fes lliscar el diàleg cap a l'esquerra o cap a la dreta</strong>: el diàleg llisca amb el dit i s'omet quan el deixes anar prou.</li>
+                <li><strong>Fes lliscar el diàleg cap a l'esquerra o cap a la dreta</strong>: el diàleg llisca amb el
+                    dit i s'omet quan el deixes anar prou.</li>
             </ul>
-            <p>De qualsevol manera, sentireu dues vibracions curtes que confirmen que l'alerta s'ha cancel·lat i no s'ha enviat res.</p>
+            <p>De qualsevol manera, sentireu dues vibracions curtes que confirmen que l'alerta s'ha cancel·lat i no s'ha
+                enviat res.</p>
         </section>
 
         <section class="guide-section" id="step-7">
             <h2>7. Composició del missatge de veu</h2>
-            <p><strong>A qui ajuda:</strong> Persones amb tremolors, artritis o altres afeccions que dificulten l'escriptura.</p>
-            <p>En lloc d'escriure un missatge personalitzat abans d'enviar una alerta, podeu pronunciar-lo. Toca la <strong>icona del micròfon</strong> al camp del missatge i pronuncia el teu missatge. L'aplicació transcriurà les teves paraules automàticament. El silenci durant 3 segons atura la gravació.</p>
-            <p>Això funciona a l'entrada de missatges de la pantalla d'inici i al diàleg del temporitzador de l'home mort.</p>
+            <p><strong>A qui ajuda:</strong> Persones amb tremolors, artritis o altres afeccions que dificulten
+                l'escriptura.</p>
+            <p>En lloc d'escriure un missatge personalitzat abans d'enviar una alerta, podeu pronunciar-lo. Toca la
+                <strong>icona del micròfon</strong> al camp del missatge i pronuncia el teu missatge. L'aplicació
+                transcriurà les teves paraules automàticament. El silenci durant 3 segons atura la gravació.
+            </p>
+            <p>Això funciona a l'entrada de missatges de la pantalla d'inici i al diàleg del temporitzador de l'home
+                mort.</p>
         </section>
 
         <section class="guide-section" id="step-8">
             <h2>8. Mode d'espera per enviar</h2>
-            <p><strong>A qui ajuda:</strong> Persones que són propenses a tocar accidentalment el botó <span class="notranslate" translate="no">SOS</span>.</p>
-            <p>De manera predeterminada, el botó <span class="notranslate" translate="no">SOS</span> només requereix un sol toc. Si les pressions accidentals són una preocupació, podeu canviar al mode <strong>Mantenir premut per enviar</strong>:</p>
+            <p><strong>A qui ajuda:</strong> Persones que són propenses a tocar accidentalment el botó <span
+                    class="notranslate" translate="no">SOS</span>.</p>
+            <p>De manera predeterminada, el botó <span class="notranslate" translate="no">SOS</span> només requereix un
+                sol toc. Si les pressions accidentals són una preocupació, podeu canviar al mode <strong>Mantenir premut
+                    per enviar</strong>:</p>
             <p>Aneu a <strong>Configuració → Mètode d'activació → Mantén premut per enviar</strong>.</p>
-            <p>En aquest mode, heu de mantenir premut el botó durant tota la durada de la retenció abans que s'activi l'alerta, evitant enviaments accidentals.</p>
+            <p>En aquest mode, heu de mantenir premut el botó durant tota la durada de la retenció abans que s'activi
+                l'alerta, evitant enviaments accidentals.</p>
         </section>
 
         <section class="guide-section" id="step-9">
             <h2>9. Giny de pantalla d'inici (Android)</h2>
-            <p><strong>A qui ajuda:</strong> Qualsevol persona que tingui dificultats per desbloquejar el seu telèfon i obrir l'aplicació en cas d'emergència.</p>
-            <p>A Android, podeu afegir un widget <span class="notranslate" translate="no">TapAlert</span> a la pantalla d'inici perquè el botó <span class="notranslate" translate="no">SOS</span> estigui sempre a un sol toc, sense obrir l'aplicació en absolut.</p>
+            <p><strong>A qui ajuda:</strong> Qualsevol persona que tingui dificultats per desbloquejar el seu telèfon i
+                obrir l'aplicació en cas d'emergència.</p>
+            <p>A Android, podeu afegir un widget <span class="notranslate" translate="no">TapAlert</span> a la pantalla
+                d'inici perquè el botó <span class="notranslate" translate="no">SOS</span> estigui sempre a un sol toc,
+                sense obrir l'aplicació en absolut.</p>
             <p>Per afegir el giny: <strong>Configuració → Giny de la pantalla d'inici → Afegeix un giny</strong>.</p>
         </section>
 
         <div class="next-steps">
             <h3>Necessites més ajuda?</h3>
             <p>If you have any questions about configuring these característiques or need assistance, check our <a
-                    href="troubleshooting.html">Guia de resolució de problemes</a> or <a href="contact.html">Contacta amb l'assistència</a>.</p>
+                    href="troubleshooting.html">Guia de resolució de problemes</a> or <a href="contact.html">Contacta
+                    amb l'assistència</a>.</p>
         </div>
     </main>
 
@@ -567,7 +705,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només seguretat.</p>
+                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només
+                        seguretat.</p>
                 </div>
 
                 <div class="footer-section">
@@ -592,7 +731,8 @@
                     <h3>Suport</h3>
                     <ul>
                         <li><a href="#">Preguntes freqüents</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies pas a pas</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies
+                                pas a pas</a></li>
                         <li><a href="accessibility_guide.html">Guia d'accessibilitat</a></li>
                         <li><a href="troubleshooting.html">Resolució de problemes</a></li>
                         <li><a href="contact.html">Contacta amb l'assistència</a></li>
@@ -601,7 +741,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet amb ❤️ per la teva seguretat</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet
+                    amb ❤️ per la teva seguretat</p>
             </div>
         </div>
     </footer>

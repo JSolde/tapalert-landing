@@ -490,49 +490,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Terug naar Thuis</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">NL</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/troubleshooting.html" hreflang="ca">CA</a>
-            <a href="../de/troubleshooting.html" hreflang="de">DE</a>
-            <a href="../troubleshooting.html" hreflang="en">EN</a>
-            <a href="../es/troubleshooting.html" hreflang="es">ES</a>
-            <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
-            <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
-            <a href="../gl/troubleshooting.html" hreflang="gl">GL</a>
-            <a href="../it/troubleshooting.html" hreflang="it">IT</a>
-            <a href="../nl/troubleshooting.html" hreflang="nl" class="active">NL</a>
-            <a href="../pt/troubleshooting.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">NL</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/troubleshooting.html" hreflang="ca">CA</a>
+                        <a href="../de/troubleshooting.html" hreflang="de">DE</a>
+                        <a href="../troubleshooting.html" hreflang="en">EN</a>
+                        <a href="../es/troubleshooting.html" hreflang="es">ES</a>
+                        <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
+                        <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
+                        <a href="../gl/troubleshooting.html" hreflang="gl">GL</a>
+                        <a href="../it/troubleshooting.html" hreflang="it">IT</a>
+                        <a href="../nl/troubleshooting.html" hreflang="nl" class="active">NL</a>
+                        <a href="../pt/troubleshooting.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -542,7 +634,8 @@
 
         <h1 class="guide-title">Gids voor probleemoplossing</h1>
 
-        <p>Deze handleiding behandelt veelvoorkomende problemen en oplossingen voor <span class="notranslate" translate="no">TapAlert</span> op zowel Android als iOS.</p>
+        <p>Deze handleiding behandelt veelvoorkomende problemen en oplossingen voor <span class="notranslate"
+                translate="no">TapAlert</span> op zowel Android als iOS.</p>
 
         <nav class="toc">
             <h4>Ga naar sectie:</h4>
@@ -568,34 +661,53 @@
             <h2>1. Problemen met het verzenden van sms-berichten</h2>
 
             <div class="step-card">
-                <h3>1.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Directe sms</span></span> Niet verzenden (Android)</h3>
-                <p><strong>Symptoom:</strong> u tikt op 'Waarschuwing verzenden', maar de sms mislukt. De waarschuwingsgeschiedenis toont een fout voor een of meer ontvangers.</p>
+                <h3>1.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Directe
+                            sms</span></span> Niet verzenden (Android)</h3>
+                <p><strong>Symptoom:</strong> u tikt op 'Waarschuwing verzenden', maar de sms mislukt. De
+                    waarschuwingsgeschiedenis toont een fout voor een of meer ontvangers.</p>
                 <ul>
-                    <li><strong>Geen mobiel signaal:</strong> controleer de statusbalk. De statuspagina in de app toont uw huidige mobiele status.</li>
-                    <li><strong>Geen simkaart:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Directe sms</span></span> vereist een werkende simkaart. Controleer de SIM-status op de statuspagina.</li>
-                    <li><strong>Rechten:</strong> Ervoor zorgen <strong>SMS</strong> toestemming is toegestaan ​​in de telefooninstellingen.</li>
-                    <li><strong>Ongeldig formaat:</strong> gebruik een internationaal formaat met landcode (bijvoorbeeld +34600123456).</li>
+                    <li><strong>Geen mobiel signaal:</strong> controleer de statusbalk. De statuspagina in de app toont
+                        uw huidige mobiele status.</li>
+                    <li><strong>Geen simkaart:</strong> <span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Directe sms</span></span> vereist een werkende
+                        simkaart. Controleer de SIM-status op de statuspagina.</li>
+                    <li><strong>Rechten:</strong> Ervoor zorgen <strong>SMS</strong> toestemming is toegestaan ​​in de
+                        telefooninstellingen.</li>
+                    <li><strong>Ongeldig formaat:</strong> gebruik een internationaal formaat met landcode (bijvoorbeeld
+                        +34600123456).</li>
                 </ul>
             </div>
 
             <div class="step-card">
-                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS wordt niet verzonden</h3>
-                <p><strong>Symptoom:</strong> waarschuwing mislukt met een <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> foutmelding.</p>
+                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate"
+                            translate="no">Twilio</span></span> SMS wordt niet verzonden</h3>
+                <p><strong>Symptoom:</strong> waarschuwing mislukt met een <span class="notranslate"
+                        translate="no"><span class="notranslate" translate="no">Twilio</span></span> foutmelding.</p>
                 <ul>
-                    <li><strong>Internet vereist:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> heeft wifi of mobiele data nodig.</li>
-                    <li><strong>Inloggegevens:</strong> verifieer account-SID, auth-token en <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> telefoonnummer in Instellingen.</li>
-                    <li><strong>Proefbeperkingen:</strong> Proefperiodes van rekening kunnen alleen worden verzonden naar geverifieerd telefoonnummers.</li>
-                    <li><strong>Saldo:</strong> controleer uw <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> rekening saldo.</li>
+                    <li><strong>Internet vereist:</strong> <span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Twilio</span></span> heeft wifi of mobiele data
+                        nodig.</li>
+                    <li><strong>Inloggegevens:</strong> verifieer account-SID, auth-token en <span class="notranslate"
+                            translate="no"><span class="notranslate" translate="no">Twilio</span></span> telefoonnummer
+                        in Instellingen.</li>
+                    <li><strong>Proefbeperkingen:</strong> Proefperiodes van rekening kunnen alleen worden verzonden
+                        naar geverifieerd telefoonnummers.</li>
+                    <li><strong>Saldo:</strong> controleer uw <span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Twilio</span></span> rekening saldo.</li>
                 </ul>
             </div>
 
             <div class="step-card">
                 <h3>1.3 Problemen met iOS SMS Composer</h3>
-                <p><strong>Symptoom:</strong> op de iPhone wordt de SMS-componist geopend, maar het bericht wordt niet afgeleverd.</p>
+                <p><strong>Symptoom:</strong> op de iPhone wordt de SMS-componist geopend, maar het bericht wordt niet
+                    afgeleverd.</p>
                 <ul>
-                    <li><strong>Signaal:</strong> de Berichten-app heeft een mobiel signaal nodig (of bellen via WiFi indien actief).</li>
-                    <li><strong>Annulering:</strong> als u op Annuleren tikt in de componist, wordt de waarschuwing geannuleerd.</li>
-                    <li><strong>Ongeldig nummer:</strong> iOS zal het bericht in de wachtrij plaatsen en stilzwijgend mislukken. Controleer de Berichten-app op rode uitroeptekens.</li>
+                    <li><strong>Signaal:</strong> de Berichten-app heeft een mobiel signaal nodig (of bellen via WiFi
+                        indien actief).</li>
+                    <li><strong>Annulering:</strong> als u op Annuleren tikt in de componist, wordt de waarschuwing
+                        geannuleerd.</li>
+                    <li><strong>Ongeldig nummer:</strong> iOS zal het bericht in de wachtrij plaatsen en stilzwijgend
+                        mislukken. Controleer de Berichten-app op rode uitroeptekens.</li>
                 </ul>
             </div>
         </section>
@@ -606,7 +718,9 @@
                 <h3>2.1 E-mailtest mislukt</h3>
                 <ul>
                     <li><strong>SMTP-instellingen:</strong> Controleer host en poort (Gmail/iCloud gebruiken 587).</li>
-                    <li><strong>App-wachtwoord:</strong> De meeste providers vereisen een <strong>App-wachtwoord</strong> als 2FA is ingeschakeld.</li>
+                    <li><strong>App-wachtwoord:</strong> De meeste providers vereisen een
+                        <strong>App-wachtwoord</strong> als 2FA is ingeschakeld.
+                    </li>
                     <li><strong>Internet:</strong> voor e-mail is een actieve gegevensverbinding vereist.</li>
                 </ul>
             </div>
@@ -617,9 +731,12 @@
             <div class="step-card">
                 <h3>3.1 Locatie Ontbreekt in waarschuwing</h3>
                 <ul>
-                    <li><strong>Rechten:</strong> Ervoor zorgen Locatie de rechten zijn ingesteld op "Tijdens gebruik" of "Altijd".</li>
-                    <li><strong>GPS uitgeschakeld:</strong> controleer of de telefoonlocatieservices zijn ingeschakeld.</li>
-                    <li><strong>Ontvangst:</strong> binnenshuis of in dichte gebieden kan een GPS-time-out optreden.</li>
+                    <li><strong>Rechten:</strong> Ervoor zorgen Locatie de rechten zijn ingesteld op "Tijdens gebruik"
+                        of "Altijd".</li>
+                    <li><strong>GPS uitgeschakeld:</strong> controleer of de telefoonlocatieservices zijn ingeschakeld.
+                    </li>
+                    <li><strong>Ontvangst:</strong> binnenshuis of in dichte gebieden kan een GPS-time-out optreden.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -629,8 +746,11 @@
             <div class="step-card">
                 <h3>4.2 Betekenissen van schildpictogrammen</h3>
                 <ul>
-                    <li><strong>Groen:</strong> klaar voor betrouwbare sms/<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> bezorging.</li>
-                    <li><strong>Oranje:</strong> Onzeker. Alleen WiFi, geen <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. Bellen via WiFi werkt mogelijk.</li>
+                    <li><strong>Groen:</strong> klaar voor betrouwbare sms/<span class="notranslate"
+                            translate="no"><span class="notranslate" translate="no">Twilio</span></span> bezorging.</li>
+                    <li><strong>Oranje:</strong> Onzeker. Alleen WiFi, geen <span class="notranslate"
+                            translate="no"><span class="notranslate" translate="no">Twilio</span></span>. Bellen via
+                        WiFi werkt mogelijk.</li>
                     <li><strong>Rood:</strong> Verbinding verbroken. Zowel mobiel als wifi zijn uitgeschakeld.</li>
                 </ul>
             </div>
@@ -641,8 +761,11 @@
             <div class="step-card">
                 <h3>5.1 Timer werkt niet</h3>
                 <ul>
-                    <li><strong>App gesloten:</strong> Vermijd het geforceerd sluiten van de app. Op iOS moeten tik je op de melding die je wilt activeren.</li>
-                    <li><strong>Batterijoptimalisatie:</strong> stel <span class="notranslate" translate="no">TapAlert</span> in op 'Onbeperkt' in de batterij-instellingen van Android.</li>
+                    <li><strong>App gesloten:</strong> Vermijd het geforceerd sluiten van de app. Op iOS moeten tik je
+                        op de melding die je wilt activeren.</li>
+                    <li><strong>Batterijoptimalisatie:</strong> stel <span class="notranslate"
+                            translate="no">TapAlert</span> in op 'Onbeperkt' in de batterij-instellingen van Android.
+                    </li>
                     <li><strong>Meldingen:</strong> Ervoor zorgen meldingsrechten zijn verleend.</li>
                 </ul>
             </div>
@@ -653,9 +776,13 @@
             <div class="step-card">
                 <h3>6.1 Spraakherkenning werkt niet</h3>
                 <ul>
-                    <li><strong>Rechten:</strong> Ervoor zorgen <strong>Microfoon</strong> en <strong>Spraakherkenning</strong> (iOS) rechten worden verleend.</li>
-                    <li><strong>Internet:</strong> de meeste herkenningsengines hebben een actieve verbinding nodig voor verwerking.</li>
-                    <li><strong>Fout Taal:</strong> De herkenning gebruikt de huidige taalinstelling van de app. Vink **Instellingen > Taal** aan.</li>
+                    <li><strong>Rechten:</strong> Ervoor zorgen <strong>Microfoon</strong> en
+                        <strong>Spraakherkenning</strong> (iOS) rechten worden verleend.
+                    </li>
+                    <li><strong>Internet:</strong> de meeste herkenningsengines hebben een actieve verbinding nodig voor
+                        verwerking.</li>
+                    <li><strong>Fout Taal:</strong> De herkenning gebruikt de huidige taalinstelling van de app. Vink
+                        **Instellingen > Taal** aan.</li>
                 </ul>
             </div>
         </section>
@@ -665,9 +792,13 @@
             <div class="step-card">
                 <h3>7.1 Kan Contacten niet zien</h3>
                 <ul>
-                    <li><strong>iOS beperkte toegang:</strong> als je eerder "Selecteer Contacten..." hebt gekozen, ga dan naar **Instellingen > Privacy & Beveiliging > Contacten > <span class="notranslate" translate="no">TapAlert</span>** en wijzig dit in **"Alles Contacten"**.</li>
-                    <li><strong>Android Machtigingen:</strong> Ervoor zorgen **Contacten** de rechten zijn ingesteld op "Toestaan" in de systeeminstellingen.</li>
-                    <li><strong>Formaat:</strong> Ervoor zorgen getallen bevatten de landcode met een *++** voorvoegsel.</li>
+                    <li><strong>iOS beperkte toegang:</strong> als je eerder "Selecteer Contacten..." hebt gekozen, ga
+                        dan naar **Instellingen > Privacy & Beveiliging > Contacten > <span class="notranslate"
+                            translate="no">TapAlert</span>** en wijzig dit in **"Alles Contacten"**.</li>
+                    <li><strong>Android Machtigingen:</strong> Ervoor zorgen **Contacten** de rechten zijn ingesteld op
+                        "Toestaan" in de systeeminstellingen.</li>
+                    <li><strong>Formaat:</strong> Ervoor zorgen getallen bevatten de landcode met een *++** voorvoegsel.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -677,8 +808,10 @@
             <div class="step-card">
                 <h3>8.2 Gekocht maar toont nog steeds Vrij</h3>
                 <ul>
-                    <li><strong>Aankopen herstellen:</strong> tik in het upgradescherm op **Herstellen**knop om uw aankoop opnieuw te valideren bij de winkel.</li>
-                    <li><strong>Hetzelfde account:</strong> Ervoor zorgen je bent ingelogd bij dezelfde winkel rekening die werd gebruikt voor de oorspronkelijke aankoop.</li>
+                    <li><strong>Aankopen herstellen:</strong> tik in het upgradescherm op **Herstellen**knop om uw
+                        aankoop opnieuw te valideren bij de winkel.</li>
+                    <li><strong>Hetzelfde account:</strong> Ervoor zorgen je bent ingelogd bij dezelfde winkel rekening
+                        die werd gebruikt voor de oorspronkelijke aankoop.</li>
                 </ul>
             </div>
         </section>
@@ -688,8 +821,10 @@
             <div class="step-card">
                 <h3>9.1 Widget verschijnt niet</h3>
                 <ul>
-                    <li><strong>Handmatig toevoegen:</strong> Probeer de widget toe te voegen via **Instellingen > Widget > Toevoegen** in de app als deze niet verschijnt in de systeemwidgetkiezer.</li>
-                    <li><strong>Batterijoptimalisatie:</strong> Agressieve optimalisatie kan ervoor zorgen dat de widget de app niet correct start.</li>
+                    <li><strong>Handmatig toevoegen:</strong> Probeer de widget toe te voegen via **Instellingen >
+                        Widget > Toevoegen** in de app als deze niet verschijnt in de systeemwidgetkiezer.</li>
+                    <li><strong>Batterijoptimalisatie:</strong> Agressieve optimalisatie kan ervoor zorgen dat de widget
+                        de app niet correct start.</li>
                 </ul>
             </div>
         </section>
@@ -700,7 +835,8 @@
                 <h3>10.2 Ontvangers merken geen oproepen/sms op</h3>
                 <ul>
                     <li><strong>iPhone:</strong> laat ontvangers **Noodbypass** inschakelen voor uw contactnummer.</li>
-                    <li><strong>Android:</strong> Laat ontvangers de meldingsprioriteit instellen op **"Hoog"** of **"Dringend"** voor uw berichten.</li>
+                    <li><strong>Android:</strong> Laat ontvangers de meldingsprioriteit instellen op **"Hoog"** of
+                        **"Dringend"** voor uw berichten.</li>
                 </ul>
             </div>
         </section>
@@ -709,17 +845,22 @@
             <h2>11. Problemen met app-gedrag</h2>
             <div class="step-card">
                 <h3>11.1 Alarm gaat onmiddellijk af bij openen</h3>
-                <p>Ga naar **Instellingen** en schakel **"Automatisch starten bij starten"** uit. Deze functie is bedoeld voor fysieke paniekknops.</p>
+                <p>Ga naar **Instellingen** en schakel **"Automatisch starten bij starten"** uit. Deze functie is
+                    bedoeld voor fysieke paniekknops.</p>
             </div>
         </section>
 
         <section id="ios" class="guide-section">
             <h2>12. iOS-specifieke problemen</h2>
             <div class="step-card">
-                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> versus iOS-berichten</h3>
+                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate"
+                            translate="no">Twilio</span></span> versus iOS-berichten</h3>
                 <ul>
-                    <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (automatisch):</strong> Stille verzending op de achtergrond, internet vereist.</li>
-                    <li><strong>iOS-berichten (Handmatig):</strong> vereist dat je op Verzenden tikt in de componist, werkt via mobiel.</li>
+                    <li><strong><span class="notranslate" translate="no"><span class="notranslate"
+                                    translate="no">Twilio</span></span> (automatisch):</strong> Stille verzending op de
+                        achtergrond, internet vereist.</li>
+                    <li><strong>iOS-berichten (Handmatig):</strong> vereist dat je op Verzenden tikt in de componist,
+                        werkt via mobiel.</li>
                 </ul>
             </div>
         </section>
@@ -728,7 +869,9 @@
             <h2>13. Android-Specifieke problemen</h2>
             <div class="step-card">
                 <h3>13.1 Batterijoptimalisatie</h3>
-                <p>Sommige fabrikanten (Xiaomi, Samsung, Huawei) vereisen handmatige stappen om te voorkomen dat de app op de achtergrond wordt afgesloten. Controleer de batterij-instellingen van uw telefoon op **"Geen beperkingen"**.</p>
+                <p>Sommige fabrikanten (Xiaomi, Samsung, Huawei) vereisen handmatige stappen om te voorkomen dat de app
+                    op de achtergrond wordt afgesloten. Controleer de batterij-instellingen van uw telefoon op **"Geen
+                    beperkingen"**.</p>
             </div>
         </section>
 
@@ -752,7 +895,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.</p>
+                    <p>Eenvoudige noodwaarschuwingen voor iedereen. Geen abonnementen, geen tracking, alleen veiligheid.
+                    </p>
                 </div>
 
                 <div class="footer-section">
@@ -777,7 +921,8 @@
                     <h3>Steun</h3>
                     <ul>
                         <li><a href="#">Veelgestelde vragen</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate"
+                                    translate="no">TapAlert</span>Stapsgewijze handleidingen</a></li>
                         <li><a href="accessibility_guide.html">Toegankelijkheidsgids</a></li>
                         <li><a href="troubleshooting.html">Problemen oplossen</a></li>
                         <li><a href="contact.html">Neem contact op met ondersteuning</a></li>
@@ -786,7 +931,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. | Gemaakt met ❤️ voor uw veiligheid</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle rechten voorbehouden. |
+                    Gemaakt met ❤️ voor uw veiligheid</p>
             </div>
         </div>
     </footer>

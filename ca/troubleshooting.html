@@ -490,49 +490,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Tornar a casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">CA</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/troubleshooting.html" hreflang="ca" class="active">CA</a>
-            <a href="../de/troubleshooting.html" hreflang="de">DE</a>
-            <a href="../troubleshooting.html" hreflang="en">EN</a>
-            <a href="../es/troubleshooting.html" hreflang="es">ES</a>
-            <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
-            <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
-            <a href="../gl/troubleshooting.html" hreflang="gl">GL</a>
-            <a href="../it/troubleshooting.html" hreflang="it">IT</a>
-            <a href="../nl/troubleshooting.html" hreflang="nl">NL</a>
-            <a href="../pt/troubleshooting.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">CA</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/troubleshooting.html" hreflang="ca" class="active">CA</a>
+                        <a href="../de/troubleshooting.html" hreflang="de">DE</a>
+                        <a href="../troubleshooting.html" hreflang="en">EN</a>
+                        <a href="../es/troubleshooting.html" hreflang="es">ES</a>
+                        <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
+                        <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
+                        <a href="../gl/troubleshooting.html" hreflang="gl">GL</a>
+                        <a href="../it/troubleshooting.html" hreflang="it">IT</a>
+                        <a href="../nl/troubleshooting.html" hreflang="nl">NL</a>
+                        <a href="../pt/troubleshooting.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -542,7 +634,8 @@
 
         <h1 class="guide-title">Guia de resolució de problemes</h1>
 
-        <p>Aquesta guia cobreix problemes i solucions habituals per a <span class="notranslate" translate="no">TapAlert</span> tant a Android com a iOS.</p>
+        <p>Aquesta guia cobreix problemes i solucions habituals per a <span class="notranslate"
+                translate="no">TapAlert</span> tant a Android com a iOS.</p>
 
         <nav class="toc">
             <h4>Anar a la secció:</h4>
@@ -568,24 +661,39 @@
             <h2>1. Problemes d'enviament de SMS</h2>
 
             <div class="step-card">
-                <h3>1.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> No s'està enviant (Android)</h3>
-                <p><strong>Símptoma:</strong> toqueu "Envia una alerta", però l'SMS falla. L'historial d'alertes mostra un error per a un o més destinataris.</p>
+                <h3>1.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct
+                            SMS</span></span> No s'està enviant (Android)</h3>
+                <p><strong>Símptoma:</strong> toqueu "Envia una alerta", però l'SMS falla. L'historial d'alertes mostra
+                    un error per a un o més destinataris.</p>
                 <ul>
-                    <li><strong>Sense senyal mòbil:</strong> comproveu la barra d'estat. La pàgina Estat de l'aplicació mostra el vostre estat mòbil actual.</li>
-                    <li><strong>Sense targeta SIM:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> requereix una targeta SIM que funcioni. Comproveu l'estat de la SIM a la pàgina Estat.</li>
-                    <li><strong>Permisos:</strong> Assegureu-vos el permís <strong>SMS</strong> es permet a la configuració del telèfon.</li>
-                    <li><strong>Format no vàlid:</strong> utilitzeu el format internacional amb el codi de país (p. ex., +34600123456).</li>
+                    <li><strong>Sense senyal mòbil:</strong> comproveu la barra d'estat. La pàgina Estat de l'aplicació
+                        mostra el vostre estat mòbil actual.</li>
+                    <li><strong>Sense targeta SIM:</strong> <span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Direct SMS</span></span> requereix una targeta SIM
+                        que funcioni. Comproveu l'estat de la SIM a la pàgina Estat.</li>
+                    <li><strong>Permisos:</strong> Assegureu-vos el permís <strong>SMS</strong> es permet a la
+                        configuració del telèfon.</li>
+                    <li><strong>Format no vàlid:</strong> utilitzeu el format internacional amb el codi de país (p. ex.,
+                        +34600123456).</li>
                 </ul>
             </div>
 
             <div class="step-card">
-                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> SMS no enviat</h3>
-                <p><strong>Símptoma:</strong> l'alerta falla amb un missatge d'error <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</p>
+                <h3>1.2 <span class="notranslate" translate="no"><span class="notranslate"
+                            translate="no">Twilio</span></span> SMS no enviat</h3>
+                <p><strong>Símptoma:</strong> l'alerta falla amb un missatge d'error <span class="notranslate"
+                        translate="no"><span class="notranslate" translate="no">Twilio</span></span>.</p>
                 <ul>
-                    <li><strong>Necessita Internet:</strong> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> necessita Wi-Fi o dades mòbils.</li>
-                    <li><strong>Credencials:</strong> verifiqueu el SID del compte, el testimoni d'autenticació i el número de telèfon <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> a Configuració.</li>
-                    <li><strong>Limitacions de la prova:</strong> les proves compte només es poden enviar a verificat números de telèfon.</li>
-                    <li><strong>Saldo:</strong> comproveu el vostre saldo <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> compte.</li>
+                    <li><strong>Necessita Internet:</strong> <span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Twilio</span></span> necessita Wi-Fi o dades mòbils.
+                    </li>
+                    <li><strong>Credencials:</strong> verifiqueu el SID del compte, el testimoni d'autenticació i el
+                        número de telèfon <span class="notranslate" translate="no"><span class="notranslate"
+                                translate="no">Twilio</span></span> a Configuració.</li>
+                    <li><strong>Limitacions de la prova:</strong> les proves compte només es poden enviar a verificat
+                        números de telèfon.</li>
+                    <li><strong>Saldo:</strong> comproveu el vostre saldo <span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Twilio</span></span> compte.</li>
                 </ul>
             </div>
 
@@ -593,9 +701,11 @@
                 <h3>1.3 Problemes amb iOS SMS Composer</h3>
                 <p><strong>Símptoma:</strong> a l'iPhone, el redactor d'SMS s'obre, però el missatge no s'entrega.</p>
                 <ul>
-                    <li><strong>Senyal:</strong> l'aplicació Missatges necessita senyal mòbil (o trucades WiFi si està activa).</li>
+                    <li><strong>Senyal:</strong> l'aplicació Missatges necessita senyal mòbil (o trucades WiFi si està
+                        activa).</li>
                     <li><strong>Cancel·lació:</strong> si toqueu Cancel·la al compositor, l'alerta es cancel·la.</li>
-                    <li><strong>Número no vàlid:</strong> iOS posarà el missatge a la cua i fallarà en silenci. Comproveu l'aplicació Missatges per veure si hi ha signes d'exclamació vermells.</li>
+                    <li><strong>Número no vàlid:</strong> iOS posarà el missatge a la cua i fallarà en silenci.
+                        Comproveu l'aplicació Missatges per veure si hi ha signes d'exclamació vermells.</li>
                 </ul>
             </div>
         </section>
@@ -605,8 +715,11 @@
             <div class="step-card">
                 <h3>2.1 La prova del correu electrònic falla</h3>
                 <ul>
-                    <li><strong>Configuració SMTP:</strong> verifiqueu l'amfitrió i el port (ús de Gmail/iCloud 587).</li>
-                    <li><strong>Contrasenya d'aplicació:</strong> la majoria de proveïdors requereixen una <strong>contrasenya d'aplicació</strong> si s'ha activat 2FA.</li>
+                    <li><strong>Configuració SMTP:</strong> verifiqueu l'amfitrió i el port (ús de Gmail/iCloud 587).
+                    </li>
+                    <li><strong>Contrasenya d'aplicació:</strong> la majoria de proveïdors requereixen una
+                        <strong>contrasenya d'aplicació</strong> si s'ha activat 2FA.
+                    </li>
                     <li><strong>Internet:</strong> el correu electrònic requereix una connexió de dades activa.</li>
                 </ul>
             </div>
@@ -617,9 +730,12 @@
             <div class="step-card">
                 <h3>3.1 Ubicació Falta a l'alerta</h3>
                 <ul>
-                    <li><strong>Permisos:</strong> Assegureu-vos Ubicació el permís està definit a "Mentre s'utilitza" o "Sempre".</li>
-                    <li><strong>GPS desactivat:</strong> comproveu que els serveis d'ubicació del telèfon estiguin activats.</li>
-                    <li><strong>Recepció:</strong> les zones interiors o denses poden provocar un temps d'espera del GPS.</li>
+                    <li><strong>Permisos:</strong> Assegureu-vos Ubicació el permís està definit a "Mentre s'utilitza" o
+                        "Sempre".</li>
+                    <li><strong>GPS desactivat:</strong> comproveu que els serveis d'ubicació del telèfon estiguin
+                        activats.</li>
+                    <li><strong>Recepció:</strong> les zones interiors o denses poden provocar un temps d'espera del
+                        GPS.</li>
                 </ul>
             </div>
         </section>
@@ -629,8 +745,11 @@
             <div class="step-card">
                 <h3>4.2 Significats de les icones d'escut</h3>
                 <ul>
-                    <li><strong>Verd:</strong> llest per enviar SMS/<span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> de manera fiable.</li>
-                    <li><strong>Taronja:</strong> incert. Només WiFi, no <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span>. Les trucades WiFi poden funcionar.</li>
+                    <li><strong>Verd:</strong> llest per enviar SMS/<span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Twilio</span></span> de manera fiable.</li>
+                    <li><strong>Taronja:</strong> incert. Només WiFi, no <span class="notranslate" translate="no"><span
+                                class="notranslate" translate="no">Twilio</span></span>. Les trucades WiFi poden
+                        funcionar.</li>
                     <li><strong>Vermell:</strong> desconnectat. Tant el mòbil com el WiFi estan desactivats.</li>
                 </ul>
             </div>
@@ -641,8 +760,11 @@
             <div class="step-card">
                 <h3>5.1 El temporitzador no dispara</h3>
                 <ul>
-                    <li><strong>Aplicació tancada</strong>: evita tancar força l'aplicació. A iOS, deu toqueu la notificació per activar-la.</li>
-                    <li><strong>Optimització de la bateria:</strong> estableix <span class="notranslate" translate="no">TapAlert</span> a "Sense restriccions" a la configuració de la bateria Android.</li>
+                    <li><strong>Aplicació tancada</strong>: evita tancar força l'aplicació. A iOS, deu toqueu la
+                        notificació per activar-la.</li>
+                    <li><strong>Optimització de la bateria:</strong> estableix <span class="notranslate"
+                            translate="no">TapAlert</span> a "Sense restriccions" a la configuració de la bateria
+                        Android.</li>
                     <li><strong>Notificacions:</strong> s'atorguen permisos de notificació Assegureu-vos.</li>
                 </ul>
             </div>
@@ -653,9 +775,13 @@
             <div class="step-card">
                 <h3>6.1 El reconeixement de veu no funciona</h3>
                 <ul>
-                    <li><strong>Permisos:</strong> Assegureu-vos s'atorguen permisos de <strong>micròfon</strong> i <strong>reconeixement de veu</strong> (iOS).</li>
-                    <li><strong>Internet:</strong> la majoria dels motors de reconeixement requereixen una connexió activa per processar-los.</li>
-                    <li><strong>Incorrecta Llengua:</strong> el reconeixement utilitza la configuració d'idioma actual de l'aplicació. Comproveu **Configuració > Llengua**.</li>
+                    <li><strong>Permisos:</strong> Assegureu-vos s'atorguen permisos de <strong>micròfon</strong> i
+                        <strong>reconeixement de veu</strong> (iOS).
+                    </li>
+                    <li><strong>Internet:</strong> la majoria dels motors de reconeixement requereixen una connexió
+                        activa per processar-los.</li>
+                    <li><strong>Incorrecta Llengua:</strong> el reconeixement utilitza la configuració d'idioma actual
+                        de l'aplicació. Comproveu **Configuració > Llengua**.</li>
                 </ul>
             </div>
         </section>
@@ -665,9 +791,13 @@
             <div class="step-card">
                 <h3>7.1 No es pot veure Contactes</h3>
                 <ul>
-                    <li><strong>Accés limitat a iOS:</strong> si anteriorment heu triat "Seleccioneu Contactes...", aneu a **Configuració > Privadesa i seguretat > Contactes > <span class="notranslate" translate="no">TapAlert</span>** i canvieu a **"Tot Contactes"**.</li>
-                    <li><strong>Android Permisos:</strong> Assegureu-vos **Contactes** el permís està definit a "Permetre" a la configuració del sistema.</li>
-                    <li><strong>Format:</strong> els números Assegureu-vos inclouen el codi del país amb un prefix **+**.</li>
+                    <li><strong>Accés limitat a iOS:</strong> si anteriorment heu triat "Seleccioneu Contactes...", aneu
+                        a **Configuració > Privadesa i seguretat > Contactes > <span class="notranslate"
+                            translate="no">TapAlert</span>** i canvieu a **"Tot Contactes"**.</li>
+                    <li><strong>Android Permisos:</strong> Assegureu-vos **Contactes** el permís està definit a
+                        "Permetre" a la configuració del sistema.</li>
+                    <li><strong>Format:</strong> els números Assegureu-vos inclouen el codi del país amb un prefix
+                        **+**.</li>
                 </ul>
             </div>
         </section>
@@ -677,8 +807,10 @@
             <div class="step-card">
                 <h3>8.2 Comprat però encara mostra Gratuït</h3>
                 <ul>
-                    <li><strong>Restaura les compres:</strong> a la pantalla d'actualització, toca **Restaura**botó per tornar a validar la teva compra a la botiga.</li>
-                    <li><strong>Mateix compte:</strong> Assegureu-vos has iniciat la sessió amb la mateixa botiga compte utilitzada per a la compra original.</li>
+                    <li><strong>Restaura les compres:</strong> a la pantalla d'actualització, toca **Restaura**botó per
+                        tornar a validar la teva compra a la botiga.</li>
+                    <li><strong>Mateix compte:</strong> Assegureu-vos has iniciat la sessió amb la mateixa botiga compte
+                        utilitzada per a la compra original.</li>
                 </ul>
             </div>
         </section>
@@ -688,8 +820,10 @@
             <div class="step-card">
                 <h3>9.1 El widget no apareix</h3>
                 <ul>
-                    <li><strong>Afegir manualment:</strong> proveu d'afegir el giny des de **Configuració > Giny > Afegeix** dins de l'aplicació si no apareix al selector de giny del sistema.</li>
-                    <li><strong>Optimització de la bateria:</strong> una optimització agressiva pot impedir que el giny iniciï l'aplicació correctament.</li>
+                    <li><strong>Afegir manualment:</strong> proveu d'afegir el giny des de **Configuració > Giny >
+                        Afegeix** dins de l'aplicació si no apareix al selector de giny del sistema.</li>
+                    <li><strong>Optimització de la bateria:</strong> una optimització agressiva pot impedir que el giny
+                        iniciï l'aplicació correctament.</li>
                 </ul>
             </div>
         </section>
@@ -699,8 +833,10 @@
             <div class="step-card">
                 <h3>10.2 Els destinataris no s'adonen de les trucades/SMS</h3>
                 <ul>
-                    <li><strong>iPhone:</strong> fes que els destinataris activin **Bypass d'emergència** per al teu número de contacte.</li>
-                    <li><strong>Android:</strong> fes que els destinataris estableixin la prioritat de notificació a **"Alt"** o **"Urgent"** per als teus missatges.</li>
+                    <li><strong>iPhone:</strong> fes que els destinataris activin **Bypass d'emergència** per al teu
+                        número de contacte.</li>
+                    <li><strong>Android:</strong> fes que els destinataris estableixin la prioritat de notificació a
+                        **"Alt"** o **"Urgent"** per als teus missatges.</li>
                 </ul>
             </div>
         </section>
@@ -709,17 +845,22 @@
             <h2>11. Problemes de comportament de l'aplicació</h2>
             <div class="step-card">
                 <h3>11.1 L'alerta es dispara immediatament quan està obert</h3>
-                <p>Aneu a **Configuració** i desactiveu **"Inici automàtic al llançament"**. Aquesta funció està pensada per al pànic físicbotós.</p>
+                <p>Aneu a **Configuració** i desactiveu **"Inici automàtic al llançament"**. Aquesta funció està pensada
+                    per al pànic físicbotós.</p>
             </div>
         </section>
 
         <section id="ios" class="guide-section">
             <h2>12. Problemes específics d'iOS</h2>
             <div class="step-card">
-                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> vs. Missatges iOS</h3>
+                <h3>12.1 <span class="notranslate" translate="no"><span class="notranslate"
+                            translate="no">Twilio</span></span> vs. Missatges iOS</h3>
                 <ul>
-                    <li><strong><span class="notranslate" translate="no"><span class="notranslate" translate="no">Twilio</span></span> (Automàtic):</strong> enviament en segon pla silenciós, requereix Internet.</li>
-                    <li><strong>Missatges iOS (manual):</strong> requereix que toqueu Envia al compositor, funciona a través del mòbil.</li>
+                    <li><strong><span class="notranslate" translate="no"><span class="notranslate"
+                                    translate="no">Twilio</span></span> (Automàtic):</strong> enviament en segon pla
+                        silenciós, requereix Internet.</li>
+                    <li><strong>Missatges iOS (manual):</strong> requereix que toqueu Envia al compositor, funciona a
+                        través del mòbil.</li>
                 </ul>
             </div>
         </section>
@@ -728,7 +869,9 @@
             <h2>13. Android-Problemes específics</h2>
             <div class="step-card">
                 <h3>13.1 Optimització de la bateria</h3>
-                <p>Alguns fabricants (Xiaomi, Samsung, Huawei) requereixen passos manuals per evitar que l'aplicació s'elimini en segon pla. Comproveu la configuració de la bateria del telèfon per **"Sense restriccions"**.</p>
+                <p>Alguns fabricants (Xiaomi, Samsung, Huawei) requereixen passos manuals per evitar que l'aplicació
+                    s'elimini en segon pla. Comproveu la configuració de la bateria del telèfon per **"Sense
+                    restriccions"**.</p>
             </div>
         </section>
 
@@ -752,7 +895,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només seguretat.</p>
+                    <p>Alertes d'emergència senzilles per a tothom. Sense subscripcions, sense seguiment, només
+                        seguretat.</p>
                 </div>
 
                 <div class="footer-section">
@@ -777,7 +921,8 @@
                     <h3>Suport</h3>
                     <ul>
                         <li><a href="#">Preguntes freqüents</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies pas a pas</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guies
+                                pas a pas</a></li>
                         <li><a href="accessibility_guide.html">Guia d'accessibilitat</a></li>
                         <li><a href="troubleshooting.html">Resolució de problemes</a></li>
                         <li><a href="contact.html">Contacta amb l'assistència</a></li>
@@ -786,7 +931,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet amb ❤️ per la teva seguretat</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Tots els drets reservats. | Fet
+                    amb ❤️ per la teva seguretat</p>
             </div>
         </div>
     </footer>

@@ -490,49 +490,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Zurück nach Hause</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">DE</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/troubleshooting.html" hreflang="ca">CA</a>
-            <a href="../de/troubleshooting.html" hreflang="de" class="active">DE</a>
-            <a href="../troubleshooting.html" hreflang="en">EN</a>
-            <a href="../es/troubleshooting.html" hreflang="es">ES</a>
-            <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
-            <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
-            <a href="../gl/troubleshooting.html" hreflang="gl">GL</a>
-            <a href="../it/troubleshooting.html" hreflang="it">IT</a>
-            <a href="../nl/troubleshooting.html" hreflang="nl">NL</a>
-            <a href="../pt/troubleshooting.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">DE</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/troubleshooting.html" hreflang="ca">CA</a>
+                        <a href="../de/troubleshooting.html" hreflang="de" class="active">DE</a>
+                        <a href="../troubleshooting.html" hreflang="en">EN</a>
+                        <a href="../es/troubleshooting.html" hreflang="es">ES</a>
+                        <a href="../eu/troubleshooting.html" hreflang="eu">EU</a>
+                        <a href="../fr/troubleshooting.html" hreflang="fr">FR</a>
+                        <a href="../gl/troubleshooting.html" hreflang="gl">GL</a>
+                        <a href="../it/troubleshooting.html" hreflang="it">IT</a>
+                        <a href="../nl/troubleshooting.html" hreflang="nl">NL</a>
+                        <a href="../pt/troubleshooting.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -542,7 +634,8 @@
 
         <h1 class="guide-title">Leitfaden zur Fehlerbehebung</h1>
 
-        <p>Dieser Leitfaden behandelt häufige Probleme und Lösungen für <span class="notranslate" translator="no">TapAlert</span> sowohl auf Android als auch auf iOS.</p>
+        <p>Dieser Leitfaden behandelt häufige Probleme und Lösungen für <span class="notranslate"
+                translator="no">TapAlert</span> sowohl auf Android als auch auf iOS.</p>
 
         <nav class="toc">
             <h4>Zum Abschnitt springen:</h4>
@@ -568,34 +661,53 @@
             <h2>1. Probleme beim SMS-Versand</h2>
 
             <div class="step-card">
-                <h3>1.1 <span class="notranslate" translator="no"><span class="notranslate" translator="no">Direkte SMS</span></span> Nicht senden (Android)</h3>
-                <p><strong>Symptom:</strong> Sie tippen auf „Benachrichtigung senden“, aber die SMS schlägt fehl. Der Alarmverlauf zeigt einen Fehler für einen oder mehrere Empfänger an.</p>
+                <h3>1.1 <span class="notranslate" translator="no"><span class="notranslate" translator="no">Direkte
+                            SMS</span></span> Nicht senden (Android)</h3>
+                <p><strong>Symptom:</strong> Sie tippen auf „Benachrichtigung senden“, aber die SMS schlägt fehl. Der
+                    Alarmverlauf zeigt einen Fehler für einen oder mehrere Empfänger an.</p>
                 <ul>
-                    <li><strong>Kein Mobilfunksignal:</strong> Überprüfen Sie die Statusleiste. Die Statusseite in der App zeigt Ihren aktuellen Mobilfunkstatus.</li>
-                    <li><strong>Keine SIM-Karte:</strong> <span class="notranslate" translator="no"><span class="notranslate" translator="no">Direkte SMS</span></span> erfordert eine funktionierende SIM-Karte. Überprüfen Sie den SIM-Status auf der Statusseite.</li>
-                    <li><strong>Berechtigungen:</strong> Sicherstellen Die <strong>SMS</strong>-Berechtigung ist in den Telefoneinstellungen zulässig.</li>
-                    <li><strong>Ungültiges Format:</strong> Verwenden Sie das internationale Format mit Ländercode (z. B. +34600123456).</li>
+                    <li><strong>Kein Mobilfunksignal:</strong> Überprüfen Sie die Statusleiste. Die Statusseite in der
+                        App zeigt Ihren aktuellen Mobilfunkstatus.</li>
+                    <li><strong>Keine SIM-Karte:</strong> <span class="notranslate" translator="no"><span
+                                class="notranslate" translator="no">Direkte SMS</span></span> erfordert eine
+                        funktionierende SIM-Karte. Überprüfen Sie den SIM-Status auf der Statusseite.</li>
+                    <li><strong>Berechtigungen:</strong> Sicherstellen Die <strong>SMS</strong>-Berechtigung ist in den
+                        Telefoneinstellungen zulässig.</li>
+                    <li><strong>Ungültiges Format:</strong> Verwenden Sie das internationale Format mit Ländercode (z.
+                        B. +34600123456).</li>
                 </ul>
             </div>
 
             <div class="step-card">
-                <h3>1.2 <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> SMS wird nicht gesendet</h3>
-                <p><strong>Symptom:</strong> Die Warnung schlägt mit der Fehlermeldung <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> fehl.</p>
+                <h3>1.2 <span class="notranslate" translator="no"><span class="notranslate"
+                            translator="no">Twilio</span></span> SMS wird nicht gesendet</h3>
+                <p><strong>Symptom:</strong> Die Warnung schlägt mit der Fehlermeldung <span class="notranslate"
+                        translator="no"><span class="notranslate" translator="no">Twilio</span></span> fehl.</p>
                 <ul>
-                    <li><strong>Internet erforderlich:</strong> <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> benötigt WLAN oder Mobilfunkdaten.</li>
-                    <li><strong>Anmeldeinformationen:</strong> Überprüfen Sie die Konto-SID, das Authentifizierungstoken und die <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> Telefonnummer in den Einstellungen.</li>
-                    <li><strong>Testeinschränkungen:</strong> Testversionen können nur an verifiziert Telefonnummern gesendet werden.</li>
-                    <li><strong>Guthaben:</strong> Überprüfen Sie Ihr <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> Konto Guthaben.</li>
+                    <li><strong>Internet erforderlich:</strong> <span class="notranslate" translator="no"><span
+                                class="notranslate" translator="no">Twilio</span></span> benötigt WLAN oder
+                        Mobilfunkdaten.</li>
+                    <li><strong>Anmeldeinformationen:</strong> Überprüfen Sie die Konto-SID, das Authentifizierungstoken
+                        und die <span class="notranslate" translator="no"><span class="notranslate"
+                                translator="no">Twilio</span></span> Telefonnummer in den Einstellungen.</li>
+                    <li><strong>Testeinschränkungen:</strong> Testversionen können nur an verifiziert Telefonnummern
+                        gesendet werden.</li>
+                    <li><strong>Guthaben:</strong> Überprüfen Sie Ihr <span class="notranslate" translator="no"><span
+                                class="notranslate" translator="no">Twilio</span></span> Konto Guthaben.</li>
                 </ul>
             </div>
 
             <div class="step-card">
                 <h3>1.3 Probleme mit iOS SMS Composer</h3>
-                <p><strong>Symptom:</strong> Auf dem iPhone wird der SMS-Composer geöffnet, aber die Nachricht wird nicht zugestellt.</p>
+                <p><strong>Symptom:</strong> Auf dem iPhone wird der SMS-Composer geöffnet, aber die Nachricht wird
+                    nicht zugestellt.</p>
                 <ul>
-                    <li><strong>Signal:</strong> Die Nachrichten-App benötigt ein Mobilfunksignal (oder WLAN-Anrufe, falls aktiv).</li>
-                    <li><strong>Stornierung:</strong> Wenn Sie im Composer auf „Abbrechen“ tippen, wird die Warnung storniert.</li>
-                    <li><strong>Ungültige Nummer:</strong> iOS stellt die Nachricht in die Warteschlange und schlägt stillschweigend fehl. Überprüfen Sie die Nachrichten-App auf rote Ausrufezeichen.</li>
+                    <li><strong>Signal:</strong> Die Nachrichten-App benötigt ein Mobilfunksignal (oder WLAN-Anrufe,
+                        falls aktiv).</li>
+                    <li><strong>Stornierung:</strong> Wenn Sie im Composer auf „Abbrechen“ tippen, wird die Warnung
+                        storniert.</li>
+                    <li><strong>Ungültige Nummer:</strong> iOS stellt die Nachricht in die Warteschlange und schlägt
+                        stillschweigend fehl. Überprüfen Sie die Nachrichten-App auf rote Ausrufezeichen.</li>
                 </ul>
             </div>
         </section>
@@ -605,8 +717,10 @@
             <div class="step-card">
                 <h3>2.1 E-Mail-Test schlägt fehl</h3>
                 <ul>
-                    <li><strong>SMTP-Einstellungen:</strong> Überprüfen Sie Host und Port (Gmail/iCloud verwenden 587).</li>
-                    <li><strong>App-Passwort:</strong> Die meisten Anbieter verlangen ein <strong>App-Passwort</strong>, wenn 2FA aktiviert ist.</li>
+                    <li><strong>SMTP-Einstellungen:</strong> Überprüfen Sie Host und Port (Gmail/iCloud verwenden 587).
+                    </li>
+                    <li><strong>App-Passwort:</strong> Die meisten Anbieter verlangen ein <strong>App-Passwort</strong>,
+                        wenn 2FA aktiviert ist.</li>
                     <li><strong>Internet:</strong> E-Mail erfordert eine aktive Datenverbindung.</li>
                 </ul>
             </div>
@@ -617,9 +731,12 @@
             <div class="step-card">
                 <h3>3.1 Standort Fehlt in der Warnung</h3>
                 <ul>
-                    <li><strong>Berechtigungen:</strong> Die Berechtigung Sicherstellen Standort ist auf „Während der Verwendung“ oder „Immer“ eingestellt.</li>
-                    <li><strong>GPS deaktiviert:</strong> Stellen Sie sicher, dass die Telefonstandortdienste aktiviert sind.</li>
-                    <li><strong>Empfang:</strong> In Innenräumen oder in dicht besiedelten Gebieten kann es zu einem GPS-Timeout kommen.</li>
+                    <li><strong>Berechtigungen:</strong> Die Berechtigung Sicherstellen Standort ist auf „Während der
+                        Verwendung“ oder „Immer“ eingestellt.</li>
+                    <li><strong>GPS deaktiviert:</strong> Stellen Sie sicher, dass die Telefonstandortdienste aktiviert
+                        sind.</li>
+                    <li><strong>Empfang:</strong> In Innenräumen oder in dicht besiedelten Gebieten kann es zu einem
+                        GPS-Timeout kommen.</li>
                 </ul>
             </div>
         </section>
@@ -629,8 +746,12 @@
             <div class="step-card">
                 <h3>4.2 Bedeutung der Schildsymbole</h3>
                 <ul>
-                    <li><strong>Grün:</strong> Bereit für zuverlässige SMS-/<span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span>-Zustellung.</li>
-                    <li><strong>Orange:</strong> Unsicher. Nur WLAN, kein <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span>. WLAN-Anrufe könnten funktionieren.</li>
+                    <li><strong>Grün:</strong> Bereit für zuverlässige SMS-/<span class="notranslate"
+                            translator="no"><span class="notranslate" translator="no">Twilio</span></span>-Zustellung.
+                    </li>
+                    <li><strong>Orange:</strong> Unsicher. Nur WLAN, kein <span class="notranslate"
+                            translator="no"><span class="notranslate" translator="no">Twilio</span></span>. WLAN-Anrufe
+                        könnten funktionieren.</li>
                     <li><strong>Rot:</strong> Nicht verbunden. Sowohl Mobilfunk als auch WLAN sind ausgeschaltet.</li>
                 </ul>
             </div>
@@ -641,9 +762,13 @@
             <div class="step-card">
                 <h3>5.1 Timer löst nicht aus</h3>
                 <ul>
-                    <li><strong>App geschlossen:</strong> Vermeiden Sie das erzwungene Schließen der App. Unter iOS tippen Sie muss auf die Benachrichtigung, um sie auszulösen.</li>
-                    <li><strong>Batterieoptimierung:</strong> Setzen Sie <span class="notranslate" translator="no">TapAlert</span> in den Android Batterieeinstellungen auf „Uneingeschränkt“.</li>
-                    <li><strong>Benachrichtigungen:</strong> Sicherstellen Benachrichtigungsberechtigungen werden erteilt.</li>
+                    <li><strong>App geschlossen:</strong> Vermeiden Sie das erzwungene Schließen der App. Unter iOS
+                        tippen Sie muss auf die Benachrichtigung, um sie auszulösen.</li>
+                    <li><strong>Batterieoptimierung:</strong> Setzen Sie <span class="notranslate"
+                            translator="no">TapAlert</span> in den Android Batterieeinstellungen auf „Uneingeschränkt“.
+                    </li>
+                    <li><strong>Benachrichtigungen:</strong> Sicherstellen Benachrichtigungsberechtigungen werden
+                        erteilt.</li>
                 </ul>
             </div>
         </section>
@@ -653,9 +778,13 @@
             <div class="step-card">
                 <h3>6.1 Spracherkennung funktioniert nicht</h3>
                 <ul>
-                    <li><strong>Berechtigungen:</strong> Sicherstellen Es werden Berechtigungen für <strong>Mikrofon</strong> und <strong>Spracherkennung</strong> (iOS) erteilt.</li>
-                    <li><strong>Internet:</strong> Die meisten Erkennungs-Engines erfordern eine aktive Verbindung zur Verarbeitung.</li>
-                    <li><strong>Falsch Sprache:</strong> Die Erkennung verwendet die aktuelle Spracheinstellung der App. Überprüfen Sie **Einstellungen > Sprache**.</li>
+                    <li><strong>Berechtigungen:</strong> Sicherstellen Es werden Berechtigungen für
+                        <strong>Mikrofon</strong> und <strong>Spracherkennung</strong> (iOS) erteilt.
+                    </li>
+                    <li><strong>Internet:</strong> Die meisten Erkennungs-Engines erfordern eine aktive Verbindung zur
+                        Verarbeitung.</li>
+                    <li><strong>Falsch Sprache:</strong> Die Erkennung verwendet die aktuelle Spracheinstellung der App.
+                        Überprüfen Sie **Einstellungen > Sprache**.</li>
                 </ul>
             </div>
         </section>
@@ -665,9 +794,14 @@
             <div class="step-card">
                 <h3>7.1 Kontakte kann nicht angezeigt werden</h3>
                 <ul>
-                    <li><strong>Eingeschränkter iOS-Zugriff:</strong> Wenn Sie zuvor „Wählen Kontakte...“ ausgewählt haben, gehen Sie zu **Einstellungen > Privatsphäre & Sicherheit > Kontakte > <span class="notranslate" translator="no">TapAlert</span>** und wechseln Sie zu **"Alle Kontakte"**.</li>
-                    <li><strong>Android Berechtigungen:</strong> Sicherstellen **Kontakte** Die Berechtigung ist in den Systemeinstellungen auf „Zulassen“ gesetzt.</li>
-                    <li><strong>Format:</strong> Sicherstellen Nummern enthalten den Ländercode mit einem **+**-Präfix.</li>
+                    <li><strong>Eingeschränkter iOS-Zugriff:</strong> Wenn Sie zuvor „Wählen Kontakte...“ ausgewählt
+                        haben, gehen Sie zu **Einstellungen > Privatsphäre & Sicherheit > Kontakte > <span
+                            class="notranslate" translator="no">TapAlert</span>** und wechseln Sie zu **"Alle
+                        Kontakte"**.</li>
+                    <li><strong>Android Berechtigungen:</strong> Sicherstellen **Kontakte** Die Berechtigung ist in den
+                        Systemeinstellungen auf „Zulassen“ gesetzt.</li>
+                    <li><strong>Format:</strong> Sicherstellen Nummern enthalten den Ländercode mit einem **+**-Präfix.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -677,8 +811,10 @@
             <div class="step-card">
                 <h3>8.2 Gekauft, aber immer noch angezeigt: Frei</h3>
                 <ul>
-                    <li><strong>Käufe wiederherstellen:</strong> Tippen Sie im Upgrade-Bildschirm auf **Wiederherstellen**Taste, um Ihren Kauf im Shop erneut zu bestätigen.</li>
-                    <li><strong>Gleiches Konto:</strong> Sicherstellen Sie sind mit demselben Shop angemeldet Konto, den Sie für den ursprünglichen Kauf verwendet haben.</li>
+                    <li><strong>Käufe wiederherstellen:</strong> Tippen Sie im Upgrade-Bildschirm auf
+                        **Wiederherstellen**Taste, um Ihren Kauf im Shop erneut zu bestätigen.</li>
+                    <li><strong>Gleiches Konto:</strong> Sicherstellen Sie sind mit demselben Shop angemeldet Konto, den
+                        Sie für den ursprünglichen Kauf verwendet haben.</li>
                 </ul>
             </div>
         </section>
@@ -688,8 +824,11 @@
             <div class="step-card">
                 <h3>9.1 Widget wird nicht angezeigt</h3>
                 <ul>
-                    <li><strong>Manuelles Hinzufügen:</strong> Versuchen Sie, das Widget über **Einstellungen > Widget > Hinzufügen** in der App hinzuzufügen, wenn es nicht in der System-Widget-Auswahl angezeigt wird.</li>
-                    <li><strong>Akkuoptimierung:</strong> Eine aggressive Optimierung kann dazu führen, dass das Widget die App nicht korrekt startet.</li>
+                    <li><strong>Manuelles Hinzufügen:</strong> Versuchen Sie, das Widget über **Einstellungen > Widget >
+                        Hinzufügen** in der App hinzuzufügen, wenn es nicht in der System-Widget-Auswahl angezeigt wird.
+                    </li>
+                    <li><strong>Akkuoptimierung:</strong> Eine aggressive Optimierung kann dazu führen, dass das Widget
+                        die App nicht korrekt startet.</li>
                 </ul>
             </div>
         </section>
@@ -699,8 +838,10 @@
             <div class="step-card">
                 <h3>10.2 Empfänger bemerken Anrufe/SMS nicht</h3>
                 <ul>
-                    <li><strong>iPhone:</strong> Lassen Sie die Empfänger **Notfall-Bypass** für Ihre Kontaktnummer aktivieren.</li>
-                    <li><strong>Android:</strong> Lassen Sie die Empfänger die Benachrichtigungspriorität für Ihre Nachrichten auf **"Hoch"** oder **"Dringend"** festlegen.</li>
+                    <li><strong>iPhone:</strong> Lassen Sie die Empfänger **Notfall-Bypass** für Ihre Kontaktnummer
+                        aktivieren.</li>
+                    <li><strong>Android:</strong> Lassen Sie die Empfänger die Benachrichtigungspriorität für Ihre
+                        Nachrichten auf **"Hoch"** oder **"Dringend"** festlegen.</li>
                 </ul>
             </div>
         </section>
@@ -709,17 +850,22 @@
             <h2>11. Probleme mit dem App-Verhalten</h2>
             <div class="step-card">
                 <h3>11.1 Alarm wird sofort beim Öffnen ausgelöst</h3>
-                <p>Gehen Sie zu **Einstellungen** und deaktivieren Sie **"Auto-Start beim Start"**. Diese Funktion ist für körperliche PanikTastes gedacht.</p>
+                <p>Gehen Sie zu **Einstellungen** und deaktivieren Sie **"Auto-Start beim Start"**. Diese Funktion ist
+                    für körperliche PanikTastes gedacht.</p>
             </div>
         </section>
 
         <section id="ios" class="guide-section">
             <h2>12. iOS-spezifische Probleme</h2>
             <div class="step-card">
-                <h3>12.1 <span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> vs. iOS-Nachrichten</h3>
+                <h3>12.1 <span class="notranslate" translator="no"><span class="notranslate"
+                            translator="no">Twilio</span></span> vs. iOS-Nachrichten</h3>
                 <ul>
-                    <li><strong><span class="notranslate" translator="no"><span class="notranslate" translator="no">Twilio</span></span> (Automatisch):</strong> Stilles Senden im Hintergrund, erfordert Internet.</li>
-                    <li><strong>iOS-Nachrichten (Manuell):</strong> Erfordert, dass Sie im Composer auf „Senden“ tippen, funktioniert über Mobilfunk.</li>
+                    <li><strong><span class="notranslate" translator="no"><span class="notranslate"
+                                    translator="no">Twilio</span></span> (Automatisch):</strong> Stilles Senden im
+                        Hintergrund, erfordert Internet.</li>
+                    <li><strong>iOS-Nachrichten (Manuell):</strong> Erfordert, dass Sie im Composer auf „Senden“ tippen,
+                        funktioniert über Mobilfunk.</li>
                 </ul>
             </div>
         </section>
@@ -728,7 +874,9 @@
             <h2>13. Android-spezifische Probleme</h2>
             <div class="step-card">
                 <h3>13.1 Batterieoptimierung</h3>
-                <p>Einige Hersteller (Xiaomi, Samsung, Huawei) verlangen manuelle Schritte, um zu verhindern, dass die App im Hintergrund beendet wird. Überprüfen Sie die Akkueinstellungen Ihres Telefons auf **„Keine Einschränkungen“**.</p>
+                <p>Einige Hersteller (Xiaomi, Samsung, Huawei) verlangen manuelle Schritte, um zu verhindern, dass die
+                    App im Hintergrund beendet wird. Überprüfen Sie die Akkueinstellungen Ihres Telefons auf **„Keine
+                    Einschränkungen“**.</p>
             </div>
         </section>
 
@@ -777,7 +925,8 @@
                     <h3>Unterstützung</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate"
+                                    translate="no">TapAlert</span>Schritt-für-Schritt-Anleitungen</a></li>
                         <li><a href="accessibility_guide.html">Leitfaden zur Barrierefreiheit</a></li>
                         <li><a href="troubleshooting.html">Fehlerbehebung</a></li>
                         <li><a href="contact.html">Kontaktieren Sie den Support</a></li>
@@ -786,7 +935,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. | Hergestellt mit ❤️ für Ihre Sicherheit</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Alle Rechte vorbehalten. |
+                    Hergestellt mit ❤️ für Ihre Sicherheit</p>
             </div>
         </div>
     </footer>

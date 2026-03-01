@@ -371,49 +371,141 @@
     <header class="guide-header">
         <div class="container guide-nav">
             <a href="index.html" class="brand-logo">
-                <img src="../media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+                <img src="../media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.5em; margin-right: 0.5em;">
                 <span class="notranslate" translate="no">TapAlert</span>
             </a>
             <a href="index.html" class="btn btn-primary">Volver á casa</a>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">GL</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
-            <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
-            <a href="../family_assisted_setup.html" hreflang="en">EN</a>
-            <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
-            <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
-            <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
-            <a href="../gl/family_assisted_setup.html" hreflang="gl" class="active">GL</a>
-            <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
-            <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
-            <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">GL</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="../ca/family_assisted_setup.html" hreflang="ca">CA</a>
+                        <a href="../de/family_assisted_setup.html" hreflang="de">DE</a>
+                        <a href="../family_assisted_setup.html" hreflang="en">EN</a>
+                        <a href="../es/family_assisted_setup.html" hreflang="es">ES</a>
+                        <a href="../eu/family_assisted_setup.html" hreflang="eu">EU</a>
+                        <a href="../fr/family_assisted_setup.html" hreflang="fr">FR</a>
+                        <a href="../gl/family_assisted_setup.html" hreflang="gl" class="active">GL</a>
+                        <a href="../it/family_assisted_setup.html" hreflang="it">IT</a>
+                        <a href="../nl/family_assisted_setup.html" hreflang="nl">NL</a>
+                        <a href="../pt/family_assisted_setup.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -423,12 +515,18 @@
         <h1 class="guide-title">👨‍👩‍👧 Guía de configuración asistida pola familia</h1>
         <p class="guide-subtitle">Configurar TapAlert para unha persoa maior usando Magic Link</p>
 
-        <p>Esta guía é para familiares, coidadores e calquera persoa que axude a unha persoa maior ou con menos experiencia tecnolóxica a configurar TapAlert completamente. Usando a función Magic Link, podes configurar toda a aplicación desde o teu propio dispositivo e entregar unha configuración lista para usar cun único toque.</p>
+        <p>Esta guía é para familiares, coidadores e calquera persoa que axude a unha persoa maior ou con menos
+            experiencia tecnolóxica a configurar TapAlert completamente. Usando a función Magic Link, podes configurar
+            toda a aplicación desde o teu propio dispositivo e entregar unha configuración lista para usar cun único
+            toque.</p>
 
         <!-- Overview -->
         <section class="guide-section" id="overview">
             <h2>Visión xeral: Como funciona Magic Link</h2>
-            <p>A función Magic Link permite que unha persoa con coñecementos técnicos ("o administrador") faga todo o traballo de configuración e o comparta como un enlace especial. Cando a persoa maior toca ese enlace no seu teléfono, TapAlert aplica automaticamente a configuración completa — contactos, mensaxes, axustes e todo — nun único paso.</p>
+            <p>A función Magic Link permite que unha persoa con coñecementos técnicos ("o administrador") faga todo o
+                traballo de configuración e o comparta como un enlace especial. Cando a persoa maior toca ese enlace no
+                seu teléfono, TapAlert aplica automaticamente a configuración completa — contactos, mensaxes, axustes e
+                todo — nun único paso.</p>
             <pre>Admin's phone                         Senior's phone
 ─────────────────────────────────     ─────────────────────────────────
 1. Open Admin Setup screen       →    (senior does nothing yet)
@@ -444,7 +542,8 @@
         <!-- Before You Begin -->
         <section class="guide-section" id="before-you-begin">
             <h2>Antes de comezar: O que necesitarás</h2>
-            <p>Dependendo de como queiras configurar a entrega de alertas, ten preparado o seguinte antes de comezar:</p>
+            <p>Dependendo de como queiras configurar a entrega de alertas, ten preparado o seguinte antes de comezar:
+            </p>
 
             <h3>Sempre necesario</h3>
             <ul class="checklist">
@@ -453,20 +552,26 @@
             </ul>
 
             <h3>Opcional: Para SMS automatizados mediante Twilio</h3>
-            <p>Se queres que as alertas se envíen automaticamente sen necesidade de ter ningunha aplicación aberta no teléfono da persoa maior:</p>
+            <p>Se queres que as alertas se envíen automaticamente sen necesidade de ter ningunha aplicación aberta no
+                teléfono da persoa maior:</p>
             <ul class="checklist">
                 <li>Unha conta de Twilio (proba gratuíta dispoñible en twilio.com)</li>
                 <li>SID de conta de Twilio (do panel da consola de Twilio)</li>
                 <li>Token de autenticación de Twilio (do panel da consola de Twilio)</li>
-                <li>Un número de teléfono de Twilio, OU un nome de remitente alfanumérico (p. ex., "TapAlert") se o teu país o admite</li>
-                <li>O teu propio número de teléfono — a aplicación enviará un SMS de proba para verificar que Twilio funciona</li>
+                <li>Un número de teléfono de Twilio, OU un nome de remitente alfanumérico (p. ex., "TapAlert") se o teu
+                    país o admite</li>
+                <li>O teu propio número de teléfono — a aplicación enviará un SMS de proba para verificar que Twilio
+                    funciona</li>
             </ul>
-            <div class="warn-box">Nota para usuarios de iOS: No iPhone, os SMS automatizados requiren Twilio. Sen el, a aplicación abre a app nativa de Mensaxes e a persoa maior preme Enviar manualmente. Segue sendo fiable pero require un toque adicional.</div>
+            <div class="warn-box">Nota para usuarios de iOS: No iPhone, os SMS automatizados requiren Twilio. Sen el, a
+                aplicación abre a app nativa de Mensaxes e a persoa maior preme Enviar manualmente. Segue sendo fiable
+                pero require un toque adicional.</div>
 
             <h3>Opcional: Para redundancia de correo electrónico</h3>
             <p>Se queres que as alertas tamén se envíen por correo electrónico ademais de por SMS:</p>
             <ul class="checklist">
-                <li>Un enderezo de correo electrónico dedicado para o envío (Gmail, Outlook, iCloud, Yahoo ou personalizado)</li>
+                <li>Un enderezo de correo electrónico dedicado para o envío (Gmail, Outlook, iCloud, Yahoo ou
+                    personalizado)</li>
                 <li>Un contrasinal de aplicación para esa conta (ver o Paso 4 abaixo)</li>
             </ul>
         </section>
@@ -477,10 +582,13 @@
             <ol>
                 <li>Instala TapAlert no teu propio teléfono (necesitas a aplicación para xerar o Magic Link).</li>
                 <li>Abre TapAlert.</li>
-                <li>Se aínda non completaches a configuración inicial, pasa polas pantallas de permisos. Na última pantalla, toca «Configurar para outra persoa».</li>
-                <li>Se TapAlert xa está instalado, vai a Axustes → desprázate ata o final → toca «Configuración de administrador / Magic Link».</li>
+                <li>Se aínda non completaches a configuración inicial, pasa polas pantallas de permisos. Na última
+                    pantalla, toca «Configurar para outra persoa».</li>
+                <li>Se TapAlert xa está instalado, vai a Axustes → desprázate ata o final → toca «Configuración de
+                    administrador / Magic Link».</li>
             </ol>
-            <p>Abrirase a pantalla de configuración de administrador. Desprázate polas seccións: completaraas nos pasos seguintes.</p>
+            <p>Abrirase a pantalla de configuración de administrador. Desprázate polas seccións: completaraas nos pasos
+                seguintes.</p>
         </section>
 
         <!-- Step 2 -->
@@ -488,9 +596,11 @@
             <h2>Paso 2: Introducir o nome da persoa maior</h2>
             <p>Na sección «Información do usuario» na parte superior da pantalla:</p>
             <ul>
-                <li>Nome da persoa maior — Escribe o seu nome de pila (p. ex., «María»). Este nome aparece nas mensaxes de alerta para que os destinatarios saiban quen a enviou.</li>
+                <li>Nome da persoa maior — Escribe o seu nome de pila (p. ex., «María»). Este nome aparece nas mensaxes
+                    de alerta para que os destinatarios saiban quen a enviou.</li>
             </ul>
-            <div class="tip-box">Exemplo: Se escribes «María», os destinatarios recibirán: «ALERTA de María: Necesito axuda. Localización: …»</div>
+            <div class="tip-box">Exemplo: Se escribes «María», os destinatarios recibirán: «ALERTA de María: Necesito
+                axuda. Localización: …»</div>
         </section>
 
         <!-- Step 3 -->
@@ -500,8 +610,10 @@
             <h3>Opción A: Sen Twilio (a máis sinxela)</h3>
             <p>Deixa o interruptor «Activar SMS de Twilio» desactivado.</p>
             <ul>
-                <li>En Android, a aplicación envía SMS directamente usando a SIM do teléfono, sen necesidade de Twilio.</li>
-                <li>No iPhone, a aplicación abre a app Mensaxes xa cuberta e a persoa maior toca Enviar unha vez. Sinxelo pero require un paso adicional.</li>
+                <li>En Android, a aplicación envía SMS directamente usando a SIM do teléfono, sen necesidade de Twilio.
+                </li>
+                <li>No iPhone, a aplicación abre a app Mensaxes xa cuberta e a persoa maior toca Enviar unha vez.
+                    Sinxelo pero require un paso adicional.</li>
             </ul>
 
             <h3>Opción B: Con Twilio (recomendado para a automatización completa)</h3>
@@ -511,28 +623,37 @@
                 <li>Introduce o Auth Token da túa consola de Twilio (toca o icono de ollo para mostrar/ocultar).</li>
                 <li>Escolle como identificar o remitente:
                     <ul>
-                        <li>Número de Twilio — Introduce o número de Twilio (p. ex., +12015551234). Selecciona primeiro a bandeira do país.</li>
-                        <li>Nome do remitente — Activa «Usar nome alfanumérico» e escribe un nome curto (p. ex., «TapAlert»). Nota: non dispoñible en todos os países (p. ex., EE. UU.).</li>
+                        <li>Número de Twilio — Introduce o número de Twilio (p. ex., +12015551234). Selecciona primeiro
+                            a bandeira do país.</li>
+                        <li>Nome do remitente — Activa «Usar nome alfanumérico» e escribe un nome curto (p. ex.,
+                            «TapAlert»). Nota: non dispoñible en todos os países (p. ex., EE. UU.).</li>
                     </ul>
                 </li>
-                <li>O teu número — Introduce o teu propio número. A aplicación envía un SMS de proba para confirmar que Twilio funciona antes de xerar o enlace.</li>
+                <li>O teu número — Introduce o teu propio número. A aplicación envía un SMS de proba para confirmar que
+                    Twilio funciona antes de xerar o enlace.</li>
             </ol>
-            <div class="tip-box">Como atopar as credenciais de Twilio: Inicia sesión en console.twilio.com. O Account SID e o Auth Token aparecen no panel principal. O número está en Números de teléfono → Xestionar → Números activos.</div>
+            <div class="tip-box">Como atopar as credenciais de Twilio: Inicia sesión en console.twilio.com. O Account
+                SID e o Auth Token aparecen no panel principal. O número está en Números de teléfono → Xestionar →
+                Números activos.</div>
         </section>
 
         <!-- Step 4 -->
         <section class="guide-section" id="step-4">
             <h2>Paso 4: Configurar alertas por correo electrónico (opcional)</h2>
-            <p>As alertas por correo envían unha copia de cada alerta aos destinatarios que teñen enderezo de correo. É unha copia de seguridade útil se o SMS falla.</p>
+            <p>As alertas por correo envían unha copia de cada alerta aos destinatarios que teñen enderezo de correo. É
+                unha copia de seguridade útil se o SMS falla.</p>
             <ol>
                 <li>Activa o interruptor «Activar redundancia de correo».</li>
-                <li>Selecciona o teu provedor de correo: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (configuración automática) ou SMTP personalizado.</li>
-                <li>Introduce o enderezo de correo desde o que se enviará, idealmente un enderezo dedicado e non o buzón persoal da persoa maior.</li>
+                <li>Selecciona o teu provedor de correo: Gmail, Outlook, Hotmail, Yahoo Mail, iCloud Mail (configuración
+                    automática) ou SMTP personalizado.</li>
+                <li>Introduce o enderezo de correo desde o que se enviará, idealmente un enderezo dedicado e non o buzón
+                    persoal da persoa maior.</li>
                 <li>Introduce o contrasinal de aplicación para esa conta.</li>
             </ol>
 
             <h3>Como obter un contrasinal de aplicación</h3>
-            <p>Os contrasinais de correo habituais non funcionan. Os provedores de correo requiren contrasinais de aplicación para apps que se conectan por SMTP.</p>
+            <p>Os contrasinais de correo habituais non funcionan. Os provedores de correo requiren contrasinais de
+                aplicación para apps que se conectan por SMTP.</p>
 
             <h3>Gmail</h3>
             <ol>
@@ -567,12 +688,15 @@
             <p>Na sección «Contactos de emerxencia», por cada persoa que debe recibir as alertas da persoa maior:</p>
             <ol>
                 <li>Introduce o seu nome no campo Nome (p. ex., «Carlos» ou «Dr. García»).</li>
-                <li>Introduce o seu número de teléfono: selecciona primeiro a bandeira do país correcto e logo escribe o número.</li>
+                <li>Introduce o seu número de teléfono: selecciona primeiro a bandeira do país correcto e logo escribe o
+                    número.</li>
                 <li>Toca o botón + azul para engadilos á lista.</li>
-                <li>Repite para cada contacto. Podes engadir tantos como necesites (ata 50 con premium; a versión gratuíta admite 1).</li>
+                <li>Repite para cada contacto. Podes engadir tantos como necesites (ata 50 con premium; a versión
+                    gratuíta admite 1).</li>
             </ol>
             <p>Para eliminar un contacto, toca o icono de papeleira vermella xunto ao seu nome.</p>
-            <div class="tip-box">Consello: Engade polo menos 2 contactos para maior redundancia, por se un non está dispoñible.</div>
+            <div class="tip-box">Consello: Engade polo menos 2 contactos para maior redundancia, por se un non está
+                dispoñible.</div>
         </section>
 
         <!-- Step 6 -->
@@ -580,11 +704,14 @@
             <h2>Paso 6: Escribir mensaxes de alerta preconfiguradas</h2>
             <p>Na sección <strong>"Mensaxes de alerta"</strong>, podes escribir ata 3 mensaxes listas para usar:</p>
             <ul>
-                <li><strong>Mensaxe 1</strong> — A mensaxe principal de emerxencia (p. ex., «Necesito axuda, chámame»)</li>
-                <li><strong>Mensaxe 2</strong> — Un mensaxe de «estou ben» ou de comprobación (p. ex., «Estou ben, non vos preocupedes»)</li>
+                <li><strong>Mensaxe 1</strong> — A mensaxe principal de emerxencia (p. ex., «Necesito axuda, chámame»)
+                </li>
+                <li><strong>Mensaxe 2</strong> — Un mensaxe de «estou ben» ou de comprobación (p. ex., «Estou ben, non
+                    vos preocupedes»)</li>
                 <li><strong>Mensaxe 3</strong> — Outra mensaxe personalizada (p. ex., «Caín, ven por favor»)</li>
             </ul>
-            <p>Estes aparecerán como botóns grandes na pantalla principal da persoa maior para que poida enviar unha alerta cun só toque, sen escribir nada.</p>
+            <p>Estes aparecerán como botóns grandes na pantalla principal da persoa maior para que poida enviar unha
+                alerta cun só toque, sen escribir nada.</p>
             <div class="tip-box">
                 <strong>Consellos para boas mensaxes:</strong>
                 <ul style="margin-top: 8px; margin-bottom: 0;">
@@ -598,32 +725,40 @@
         <!-- Step 7 -->
         <section class="guide-section" id="step-7">
             <h2>Paso 7: Escoller a configuración da app</h2>
-            <p>Na sección <strong>«Configuración da app»</strong>, configura como se comporta a app para a persoa maior:</p>
+            <p>Na sección <strong>«Configuración da app»</strong>, configura como se comporta a app para a persoa maior:
+            </p>
 
             <h3>Conta atrás da alerta</h3>
-            <p>Cantos segundos esperar despois de que a persoa maior toque o botón de alerta antes de que se envíe realmente.</p>
+            <p>Cantos segundos esperar despois de que a persoa maior toque o botón de alerta antes de que se envíe
+                realmente.</p>
             <ul>
                 <li><strong>0 segundos</strong> — envía inmediatamente, sen posibilidade de cancelar</li>
-                <li><strong>3–10 segundos</strong> — recomendado para a maioría das persoas maiores; dá tempo para cancelar se se preme por erro</li>
+                <li><strong>3–10 segundos</strong> — recomendado para a maioría das persoas maiores; dá tempo para
+                    cancelar se se preme por erro</li>
                 <li><strong>15–30 segundos</strong> — se a persoa maior tende a tocar accidentalmente</li>
             </ul>
 
             <h3>Modo de activación</h3>
             <ul>
-                <li><strong>Toque único</strong> — toca unha vez para iniciar a conta atrás (máis fácil para persoas maiores con mobilidade limitada)</li>
-                <li><strong>Manter premido</strong> — manten o botón premido para confirmar (evita envíos accidentais)</li>
+                <li><strong>Toque único</strong> — toca unha vez para iniciar a conta atrás (máis fácil para persoas
+                    maiores con mobilidade limitada)</li>
+                <li><strong>Manter premido</strong> — manten o botón premido para confirmar (evita envíos accidentais)
+                </li>
             </ul>
 
             <h3>Aparencia</h3>
             <ul>
-                <li><strong>Predeterminado do sistema</strong> — segue a configuración de modo claro/escuro do teléfono</li>
+                <li><strong>Predeterminado do sistema</strong> — segue a configuración de modo claro/escuro do teléfono
+                </li>
                 <li><strong>Modo claro</strong> — fondo sempre claro</li>
                 <li><strong>Modo escuro</strong> — fondo sempre escuro (máis cómodo para os ollos con pouca luz)</li>
             </ul>
 
             <h3>Idioma</h3>
-            <p>Selecciona o idioma para a interface da app. Dispoñible: English, Español, Català, Français, Deutsch, Italiano, Nederlands, Português, Euskara, Galego.</p>
-            <div class="tip-box">Consello: Establece o idioma para que coincida co que fala a persoa maior, aínda que o esteas configurando nun idioma diferente.</div>
+            <p>Selecciona o idioma para a interface da app. Dispoñible: English, Español, Català, Français, Deutsch,
+                Italiano, Nederlands, Português, Euskara, Galego.</p>
+            <div class="tip-box">Consello: Establece o idioma para que coincida co que fala a persoa maior, aínda que o
+                esteas configurando nun idioma diferente.</div>
         </section>
 
         <!-- Step 8 -->
@@ -638,16 +773,23 @@
             <h3>Que ocorre a continuación:</h3>
             <p><strong>Fase de proba</strong> (tarda uns segundos):</p>
             <ul>
-                <li>Se Twilio está activado: a app envía un SMS de proba real ao <strong>teu número de teléfono</strong> para verificar que funciona. Deberías recibilo en segundos.</li>
-                <li>Se o correo electrónico está activado: a app envía un correo de proba ao enderezo de correo que introduciches. Comproba a túa bandexa de entrada.</li>
-                <li>Se as probas fallan, aparece unha mensaxe de erro. Comproba as túas credenciais e téntao de novo.</li>
+                <li>Se Twilio está activado: a app envía un SMS de proba real ao <strong>teu número de teléfono</strong>
+                    para verificar que funciona. Deberías recibilo en segundos.</li>
+                <li>Se o correo electrónico está activado: a app envía un correo de proba ao enderezo de correo que
+                    introduciches. Comproba a túa bandexa de entrada.</li>
+                <li>Se as probas fallan, aparece unha mensaxe de erro. Comproba as túas credenciais e téntao de novo.
+                </li>
             </ul>
             <p><strong>Fase de compartir:</strong></p>
             <ul>
                 <li>A folla de compartir do sistema ábrese automáticamente.</li>
-                <li>Envía o Magic Link á persoa maior por <strong>WhatsApp</strong>, <strong>iMessage</strong>, <strong>correo electrónico</strong>, <strong>SMS</strong> ou calquera app de mensaxería que uses.</li>
+                <li>Envía o Magic Link á persoa maior por <strong>WhatsApp</strong>, <strong>iMessage</strong>,
+                    <strong>correo electrónico</strong>, <strong>SMS</strong> ou calquera app de mensaxería que uses.
+                </li>
             </ul>
-            <div class="warn-box">O enlace é seguro para compartir — pero trátao como un contrasinal. Contén a configuración da persoa maior, incluindo os contactos e (se están configuradas) as túas credenciais de Twilio/correo. Compárteo só coa persoa maior.</div>
+            <div class="warn-box">O enlace é seguro para compartir — pero trátao como un contrasinal. Contén a
+                configuración da persoa maior, incluindo os contactos e (se están configuradas) as túas credenciais de
+                Twilio/correo. Compárteo só coa persoa maior.</div>
         </section>
 
         <!-- Step 9 -->
@@ -657,12 +799,14 @@
             <ol>
                 <li>A persoa maior recibe a mensaxe que enviaches.</li>
                 <li>Toca o enlace.</li>
-                <li>TapAlert ábrese automáticamente e mostra unha pantalla de confirmación: <em>"¿Listo para configurar TapAlert para [Nome]?"</em> cun resumo do que se configurará.</li>
+                <li>TapAlert ábrese automáticamente e mostra unha pantalla de confirmación: <em>"¿Listo para configurar
+                        TapAlert para [Nome]?"</em> cun resumo do que se configurará.</li>
                 <li>A persoa maior toca <strong>"Si, configuralo"</strong> (ou o botón equivalente).</li>
                 <li>A app aplica toda a configuración ao instante.</li>
                 <li>Aparece unha mensaxe de éxito e a app ábrese na pantalla principal — lista para usar.</li>
             </ol>
-            <p><strong>Iso é todo. A persoa maior non necesita introducir ningunha configuración, escribir ningunha credencial nin tomar ningunha decisión.</strong></p>
+            <p><strong>Iso é todo. A persoa maior non necesita introducir ningunha configuración, escribir ningunha
+                    credencial nin tomar ningunha decisión.</strong></p>
 
             <h3>Se TapAlert non está instalado aínda no teléfono da persoa maior</h3>
             <ol>
@@ -681,20 +825,25 @@
                 <li>Deberías ver o nome da persoa maior na pantalla principal.</li>
                 <li>Toca un dos botóns de alerta.</li>
                 <li>Espera a conta atrás (ou envía inmediatamente se a conta atrás é 0).</li>
-                <li>Confirma que todos os contactos configurados reciben o SMS (e o correo electrónico, se está configurado).</li>
+                <li>Confirma que todos os contactos configurados reciben o SMS (e o correo electrónico, se está
+                    configurado).</li>
                 <li>Comproba que o texto da mensaxe e o enlace de ubicación son correctos.</li>
             </ol>
-            <div class="tip-box">Se algo non está ben, podes rexenerar o Magic Link con correccions e envialo de novo — aplicar un novo enlace sobreescribe a configuración anterior.</div>
+            <div class="tip-box">Se algo non está ben, podes rexenerar o Magic Link con correccions e envialo de novo —
+                aplicar un novo enlace sobreescribe a configuración anterior.</div>
         </section>
 
         <!-- After Setup -->
         <section class="guide-section" id="after-setup">
             <h2>Despois da configuración: O que ve a persoa maior</h2>
-            <p>A app da persoa maior ábrese directamente na pantalla do <strong>Modo Pánico</strong> — un botón de emerxencia sinxelo a pantalla completa. A interface está deseada para usarse sen ler nada:</p>
+            <p>A app da persoa maior ábrese directamente na pantalla do <strong>Modo Pánico</strong> — un botón de
+                emerxencia sinxelo a pantalla completa. A interface está deseada para usarse sen ler nada:</p>
             <ul>
-                <li><strong>Botón vermello SOS grande</strong> no centro — toca para enviar unha alerta de emerxencia</li>
+                <li><strong>Botón vermello SOS grande</strong> no centro — toca para enviar unha alerta de emerxencia
+                </li>
                 <li><strong>Botón verde OK grande</strong> abaixo — toca para enviar un mensaxe de «Estou ben»</li>
-                <li><strong>Desliza cara á esquerda</strong> para ver os botóns de mensaxes preconfiguradas (se se configuraron mensaxes)</li>
+                <li><strong>Desliza cara á esquerda</strong> para ver os botóns de mensaxes preconfiguradas (se se
+                    configuraron mensaxes)</li>
             </ul>
             <p>A persoa maior nunca necesita entrar en Configuración nin entender como funciona nada.</p>
         </section>
@@ -704,8 +853,10 @@
             <h2>Configurar várias persoas maiores</h2>
             <p>Podes configurar TapAlert para várias persoas maiores sen empezar desde cero cada vez:</p>
             <ol>
-                <li>Despois de xerar o primeiro Magic Link, toca <strong>"Configurar outra persoa maior"</strong> no diálogo de finalización.</li>
-                <li>O formulario borra o nome e os contactos da persoa maior, pero <strong>conserva as túas credenciais de Twilio, a configuración de correo e as preferencias da app</strong>.</li>
+                <li>Despois de xerar o primeiro Magic Link, toca <strong>"Configurar outra persoa maior"</strong> no
+                    diálogo de finalización.</li>
+                <li>O formulario borra o nome e os contactos da persoa maior, pero <strong>conserva as túas credenciais
+                        de Twilio, a configuración de correo e as preferencias da app</strong>.</li>
                 <li>Cambia só o que é diferente (nome, contactos, mensaxes) para a seguinte persoa maior.</li>
                 <li>Xera e comparte un novo Magic Link.</li>
             </ol>
@@ -717,36 +868,49 @@
 
             <h3>Erro de "validación fallida" ao xerar o enlace</h3>
             <ul>
-                <li>Comproba que todos os campos obrigatorios estéan completados (marcados cunha mensaxe de erro vermella).</li>
-                <li>Se Twilio está activado, asegúrate de que o Account SID, o Auth Token e o número de teléfono son correctos.</li>
-                <li>Se o correo electrónico está activado, verifica o Contrasinal da App — os contrasinais de conta normais non funcionan.</li>
+                <li>Comproba que todos os campos obrigatorios estéan completados (marcados cunha mensaxe de erro
+                    vermella).</li>
+                <li>Se Twilio está activado, asegúrate de que o Account SID, o Auth Token e o número de teléfono son
+                    correctos.</li>
+                <li>Se o correo electrónico está activado, verifica o Contrasinal da App — os contrasinais de conta
+                    normais non funcionan.</li>
             </ul>
 
             <h3>A persoa maior non recibiu o SMS de proba</h3>
             <ul>
-                <li>Verifica que o número de teléfono de Twilio está activo e non é un número de proba enviando a números non verificados.</li>
-                <li>Na proba gratuita de Twilio, só podes enviar a números de teléfono que haias verificado na Consola de Twilio. Engade os contactos da persoa maior como números verificados, ou actualiza a unha conta de pago.</li>
+                <li>Verifica que o número de teléfono de Twilio está activo e non é un número de proba enviando a
+                    números non verificados.</li>
+                <li>Na proba gratuita de Twilio, só podes enviar a números de teléfono que haias verificado na Consola
+                    de Twilio. Engade os contactos da persoa maior como números verificados, ou actualiza a unha conta
+                    de pago.</li>
                 <li>Comproba que o formato do número de teléfono é correcto (código de país incluído).</li>
             </ul>
 
             <h3>O Magic Link non abre TapAlert</h3>
             <ul>
                 <li>Asegúrate de que TapAlert esté instalado no teléfono da persoa maior.</li>
-                <li>Nalguns teléfonos Android, mantén premido o enlace e escolle "Abrir con TapAlert" en lugar dun navegador.</li>
-                <li>Se en cambio se abre un navegador, copia o URL completo e pégao de novo no navegador — no segundo intento, o sistema soe ofrecer TapAlert como opción.</li>
+                <li>Nalguns teléfonos Android, mantén premido o enlace e escolle "Abrir con TapAlert" en lugar dun
+                    navegador.</li>
+                <li>Se en cambio se abre un navegador, copia o URL completo e pégao de novo no navegador — no segundo
+                    intento, o sistema soe ofrecer TapAlert como opción.</li>
             </ul>
 
             <h3>A persoa maior toca accidentalmente o botón equivocado</h3>
             <ul>
-                <li>Aumenta a <strong>Conta atrás da alerta</strong> a 10–15 segundos — isto dá tempo para cancelar antes de enviar.</li>
-                <li>Ou cambia ao <strong>Modo manter premido</strong> (modo de activación = manter) para que o botón requira unha pulsación deliberada.</li>
-                <li>Podes actualizar estas configuracións xerando un novo Magic Link coas configuracións corrixidas e enviándoo ao teléfono da persoa maior.</li>
+                <li>Aumenta a <strong>Conta atrás da alerta</strong> a 10–15 segundos — isto dá tempo para cancelar
+                    antes de enviar.</li>
+                <li>Ou cambia ao <strong>Modo manter premido</strong> (modo de activación = manter) para que o botón
+                    requira unha pulsación deliberada.</li>
+                <li>Podes actualizar estas configuracións xerando un novo Magic Link coas configuracións corrixidas e
+                    enviándoo ao teléfono da persoa maior.</li>
             </ul>
 
             <h3>O SMS de Twilio funciona pero o correo electrónico non</h3>
             <ul>
-                <li>Causa máis común: os destinatarios non teñen enderezo de correo electrónico gardado. Comproba os destinatarios na pantalla de Destinatarios da app.</li>
-                <li>Asegúrate de que o Contrasinal da App é correcto e non caducou. Os Contrasinais de App de Gmail e Outlook poden ser revogados — xera un novo se é necesario.</li>
+                <li>Causa máis común: os destinatarios non teñen enderezo de correo electrónico gardado. Comproba os
+                    destinatarios na pantalla de Destinatarios da app.</li>
+                <li>Asegúrate de que o Contrasinal da App é correcto e non caducou. Os Contrasinais de App de Gmail e
+                    Outlook poden ser revogados — xera un novo se é necesario.</li>
             </ul>
         </section>
 
@@ -754,10 +918,15 @@
         <section class="guide-section" id="security">
             <h2>Notas de seguridade e privacidade</h2>
             <ul>
-                <li><strong>O payload do Magic Link</strong> está codificado pero non cifrado. Calquera que o intercepte pode ler a configuración, incluíndo as credenciais de Twilio. Compárteo só directamente coa persoa maior.</li>
-                <li><strong>TapAlert non ten servidores</strong> — o Magic Link procesa integramente no dispositivo da persoa maior. Non se envían datos ao servizo TapAlert.</li>
-                <li><strong>As credenciais Twilio no enlace</strong> almécense localmente no dispositivo da persoa maior en almacenamento seguro (cifrado) unha vez aplicadas.</li>
-                <li>Se cres que un Magic Link foi interceptado, <strong>rota o teu Auth Token de Twilio</strong> na Consola de Twilio inmediatamente e xera un novo Magic Link.</li>
+                <li><strong>O payload do Magic Link</strong> está codificado pero non cifrado. Calquera que o intercepte
+                    pode ler a configuración, incluíndo as credenciais de Twilio. Compárteo só directamente coa persoa
+                    maior.</li>
+                <li><strong>TapAlert non ten servidores</strong> — o Magic Link procesa integramente no dispositivo da
+                    persoa maior. Non se envían datos ao servizo TapAlert.</li>
+                <li><strong>As credenciais Twilio no enlace</strong> almécense localmente no dispositivo da persoa maior
+                    en almacenamento seguro (cifrado) unha vez aplicadas.</li>
+                <li>Se cres que un Magic Link foi interceptado, <strong>rota o teu Auth Token de Twilio</strong> na
+                    Consola de Twilio inmediatamente e xera un novo Magic Link.</li>
             </ul>
         </section>
 
@@ -791,7 +960,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><span class="notranslate" translate="no">TapAlert</span></h3>
-                    <p>Alertas de emerxencia sinxelas para todos. Sen subscricións, sen seguimento, só con seguridade.</p>
+                    <p>Alertas de emerxencia sinxelas para todos. Sen subscricións, sen seguimento, só con seguridade.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Produto</h3>
@@ -812,14 +982,16 @@
                 <div class="footer-section">
                     <h3>Apoio</h3>
                     <ul>
-                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías paso a paso</a></li>
+                        <li><a href="index.html#guides"><span class="notranslate" translate="no">TapAlert</span>Guías
+                                paso a paso</a></li>
                         <li><a href="troubleshooting.html">Resolución de problemas</a></li>
                         <li><a href="contact.html">Contacte con Soporte</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os dereitos reservados. | Feito con ❤️ para a túa seguridade</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. Todos os dereitos reservados. |
+                    Feito con ❤️ para a túa seguridade</p>
             </div>
         </div>
     </footer>

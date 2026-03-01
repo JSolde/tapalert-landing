@@ -956,9 +956,11 @@
 
         .car-track {
             display: flex;
-            align-items: center;   /* vertically centres scaled-down neighbours */
+            align-items: center;
+            /* vertically centres scaled-down neighbours */
             gap: 24px;
-            padding: 48px 0;       /* vertical room so scaled-up centre isn't clipped */
+            padding: 48px 0;
+            /* vertical room so scaled-up centre isn't clipped */
             will-change: transform;
             transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
@@ -1023,8 +1025,13 @@
             background: rgba(255, 255, 255, 0.32);
         }
 
-        .car-btn--prev { left: 16px; }
-        .car-btn--next { right: 16px; }
+        .car-btn--prev {
+            left: 16px;
+        }
+
+        .car-btn--next {
+            right: 16px;
+        }
 
         /* Progress bar */
         .car-progress-wrap {
@@ -1079,23 +1086,56 @@
         }
 
         @keyframes carPop {
-            from { transform: scale(0.93); opacity: 0; }
-            to   { transform: scale(1);    opacity: 1; }
+            from {
+                transform: scale(0.93);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         /* Responsive */
         @media (max-width: 900px) {
-            .car-slide { width: 68%; }
+            .car-slide {
+                width: 68%;
+            }
         }
 
         @media (max-width: 600px) {
-            .car-section { padding: 44px 0; }
-            .car-heading { font-size: 1.5rem; margin-bottom: 16px; }
-            .car-slide { width: 84%; }
-            .car-track { gap: 16px; padding: 36px 0; }
-            .car-btn { width: 38px; height: 38px; font-size: 1.3rem; }
-            .car-btn--prev { left: 8px; }
-            .car-btn--next { right: 8px; }
+            .car-section {
+                padding: 44px 0;
+            }
+
+            .car-heading {
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+
+            .car-slide {
+                width: 84%;
+            }
+
+            .car-track {
+                gap: 16px;
+                padding: 36px 0;
+            }
+
+            .car-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 1.3rem;
+            }
+
+            .car-btn--prev {
+                left: 8px;
+            }
+
+            .car-btn--next {
+                right: 8px;
+            }
         }
 
         /* Animations */
@@ -1261,7 +1301,7 @@
     <!-- Top Navigation -->
     <header>
         <a href="#download" class="nav-logo">
-            <img src="media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"> <span class="notranslate"
+            <img src="media/tapalert-new-app-icon-inside2.png" alt="TapAlert"> <span class="notranslate"
                 translate="no">TapAlert</span>
         </a>
         <nav style="display: flex; align-items: center;">
@@ -1274,44 +1314,136 @@
                 <li><a href="#pricing" class="nav-link" data-section="pricing">Pricing</a></li>
                 <li><a href="#guides" class="nav-link" data-section="guides">Guides</a></li>
             </ul>
-            
-<style>
-.lang-dropdown { position: relative; display: inline-block; margin-left: 20px; }
-.lang-dropbtn { background: rgba(255, 255, 255, 0.8); color: #2c3e50; padding: 8px 16px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; text-transform: uppercase; }
-.lang-dropbtn:hover { background: white; border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-.lang-dropbtn::after { content: '▾'; font-size: 0.7rem; opacity: 0.5; }
-.lang-dropdown-content { visibility: hidden; opacity: 0; position: absolute; right: 0; top: 100%; width: 120px; z-index: 1001; transition: all 0.2s ease, visibility 0s linear 0.15s; }
-.lang-dropdown-inner { background-color: white; margin-top: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); transform: translateY(-10px); transition: transform 0.2s ease; }
-.lang-dropdown:hover .lang-dropdown-content { visibility: visible; opacity: 1; transition-delay: 0s; }
-.lang-dropdown:hover .lang-dropdown-inner { transform: translateY(0); }
-.lang-dropdown-content a { color: #4a5568; padding: 10px 16px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; text-transform: uppercase; }
-.lang-dropdown-content a:hover { background-color: #f7fafc; color: #667eea; }
-.lang-dropdown-content a.active { color: #667eea; background-color: #edf2f7; }
-.lang-dropdown-content a.active::after { content: '✓'; color: #667eea; font-size: 0.8rem; }
-@media (max-width: 768px) {
-    .lang-dropdown { margin-left: 10px; }
-    .lang-dropbtn { padding: 6px 12px; font-size: 0.8rem; }
-    .lang-dropdown-content { right: -10px; }
-}
-</style>
 
-<div class="lang-dropdown">
-    <button class="lang-dropbtn">EN</button>
-    <div class="lang-dropdown-content">
-        <div class="lang-dropdown-inner">
-            <a href="ca/index.html" hreflang="ca">CA</a>
-            <a href="de/index.html" hreflang="de">DE</a>
-            <a href="index.html" hreflang="en" class="active">EN</a>
-            <a href="es/index.html" hreflang="es">ES</a>
-            <a href="eu/index.html" hreflang="eu">EU</a>
-            <a href="fr/index.html" hreflang="fr">FR</a>
-            <a href="gl/index.html" hreflang="gl">GL</a>
-            <a href="it/index.html" hreflang="it">IT</a>
-            <a href="nl/index.html" hreflang="nl">NL</a>
-            <a href="pt/index.html" hreflang="pt">PT</a>
-        </div>
-    </div>
-</div>
+            <style>
+                .lang-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .lang-dropbtn {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #2c3e50;
+                    padding: 8px 16px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    border: 1px solid rgba(102, 126, 234, 0.2);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropbtn:hover {
+                    background: white;
+                    border-color: #667eea;
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+                }
+
+                .lang-dropbtn::after {
+                    content: '▾';
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+
+                .lang-dropdown-content {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                    width: 120px;
+                    z-index: 1001;
+                    transition: all 0.2s ease, visibility 0s linear 0.15s;
+                }
+
+                .lang-dropdown-inner {
+                    background-color: white;
+                    margin-top: 10px;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    transform: translateY(-10px);
+                    transition: transform 0.2s ease;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition-delay: 0s;
+                }
+
+                .lang-dropdown:hover .lang-dropdown-inner {
+                    transform: translateY(0);
+                }
+
+                .lang-dropdown-content a {
+                    color: #4a5568;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    transition: background 0.2s;
+                    text-transform: uppercase;
+                }
+
+                .lang-dropdown-content a:hover {
+                    background-color: #f7fafc;
+                    color: #667eea;
+                }
+
+                .lang-dropdown-content a.active {
+                    color: #667eea;
+                    background-color: #edf2f7;
+                }
+
+                .lang-dropdown-content a.active::after {
+                    content: '✓';
+                    color: #667eea;
+                    font-size: 0.8rem;
+                }
+
+                @media (max-width: 768px) {
+                    .lang-dropdown {
+                        margin-left: 10px;
+                    }
+
+                    .lang-dropbtn {
+                        padding: 6px 12px;
+                        font-size: 0.8rem;
+                    }
+
+                    .lang-dropdown-content {
+                        right: -10px;
+                    }
+                }
+            </style>
+
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">EN</button>
+                <div class="lang-dropdown-content">
+                    <div class="lang-dropdown-inner">
+                        <a href="ca/index.html" hreflang="ca">CA</a>
+                        <a href="de/index.html" hreflang="de">DE</a>
+                        <a href="index.html" hreflang="en" class="active">EN</a>
+                        <a href="es/index.html" hreflang="es">ES</a>
+                        <a href="eu/index.html" hreflang="eu">EU</a>
+                        <a href="fr/index.html" hreflang="fr">FR</a>
+                        <a href="gl/index.html" hreflang="gl">GL</a>
+                        <a href="it/index.html" hreflang="it">IT</a>
+                        <a href="nl/index.html" hreflang="nl">NL</a>
+                        <a href="pt/index.html" hreflang="pt">PT</a>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="menu-toggle" id="mobile-menu">
             <div class="bar"></div>
@@ -1322,10 +1454,11 @@
     <!-- Hero Section -->
     <section class="hero" id="download">
         <div class="hero-content fade-in-up">
-            <h1><img src="media/tapalert-icon-redborder-transp-large.png" alt="TapAlert"
+            <h1><img src="media/tapalert-new-app-icon-inside2.png" alt="TapAlert"
                     style="height: 1.2em; vertical-align: middle; margin-right: 0.2em;"> <span class="notranslate"
                     translate="no">TapAlert</span></h1>
-            <p class="tagline">Easy, One-tap Alerts. Privacy-first.<br> Designed with seniors in mind: simple, secure, no monthly fees.<br> Friction-less (remotely assisted) initial configuration for seniors.<br></p>
+            <p class="tagline">Easy, One-tap Alerts. Privacy-first.<br> Designed with seniors in mind: simple, secure,
+                no monthly fees.<br> Friction-less (remotely assisted) initial configuration for seniors.<br></p>
             <p class="tagline">For your parents, grandparents, and older adults.</p>
             <p class="tagline">For your peace of mind.</p>
             <div class="car-outer" id="carOuter">
@@ -1359,16 +1492,16 @@
 
             <script>
                 (function () {
-                    var outer      = document.getElementById('carOuter');
-                    var track      = document.getElementById('carTrack');
-                    var btnPrev    = document.getElementById('carPrev');
-                    var btnNext    = document.getElementById('carNext');
-                    var progress   = document.getElementById('carProgress');
-                    var overlay    = document.getElementById('carLightbox');
+                    var outer = document.getElementById('carOuter');
+                    var track = document.getElementById('carTrack');
+                    var btnPrev = document.getElementById('carPrev');
+                    var btnNext = document.getElementById('carNext');
+                    var progress = document.getElementById('carProgress');
+                    var overlay = document.getElementById('carLightbox');
                     var overlayImg = document.getElementById('carLightboxImg');
 
-                    var slides  = Array.from(track.querySelectorAll('.car-slide'));
-                    var n       = slides.length;
+                    var slides = Array.from(track.querySelectorAll('.car-slide'));
+                    var n = slides.length;
                     var current = 0;
                     var autoTimer;
 
@@ -1480,41 +1613,65 @@
                             — the app works entirely locally, no sign-up or login</li>
                         <li><span class="check">✅</span> <strong>No tracking or analytics</strong>
                             — no user behavior data is collected or transmitted</li>
-                        <li><span class="check">✅</span> <strong>No ads</strong> — the app is ad-free, monetized only through a one-time in-app purchase for premium features</li>
-                        <li><span class="check">✅</span> <strong>No subscriptions</strong> — users pay once (or not at all for the free tier), no recurring fees</li>
-                        <li><span class="check">✅</span> <strong>Location is only accessed when sending an alert</strong> — never in the background</li>
+                        <li><span class="check">✅</span> <strong>No ads</strong> — the app is ad-free, monetized only
+                            through a one-time in-app purchase for premium features</li>
+                        <li><span class="check">✅</span> <strong>No subscriptions</strong> — users pay once (or not at
+                            all for the free tier), no recurring fees</li>
+                        <li><span class="check">✅</span> <strong>Location is only accessed when sending an
+                                alert</strong> — never in the background</li>
                     </ul>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">📡</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">SMS-First Architecture</h3>
-                    <p style="font-size: 0.9em; margin-bottom: 15px;">The app prioritizes SMS over data-based messaging (push notifications, WhatsApp, etc.) because:</p>
+                    <p style="font-size: 0.9em; margin-bottom: 15px;">The app prioritizes SMS over data-based messaging
+                        (push notifications, WhatsApp, etc.) because:</p>
                     <ul class="feature-list" style="list-style-type: none; padding: 0; margin-bottom: 15px;">
-                        <li><span class="check">✅</span> SMS works when internet/Wi-Fi is down (cell towers have battery backup)</li>
-                        <li><span class="check">✅</span> Recipients don't need smartphones — feature phones and basic phones receive SMS</li>
+                        <li><span class="check">✅</span> SMS works when internet/Wi-Fi is down (cell towers have battery
+                            backup)</li>
+                        <li><span class="check">✅</span> Recipients don't need smartphones — feature phones and basic
+                            phones receive SMS</li>
                         <li><span class="check">✅</span> No app installation required on the recipient's end</li>
-                        <li><span class="check">✅</span> SMS is carrier-level delivery, not dependent on third-party servers being online</li>
+                        <li><span class="check">✅</span> SMS is carrier-level delivery, not dependent on third-party
+                            servers being online</li>
                     </ul>
                     <p style="font-size: 0.9em;"><strong><span class="notranslate" translate="no">Smart
-                                Redundancy</span>:</strong> When no cellular service is available, the app falls back to sending SMS first via Wi-Fi Calling (if available, phone/provider dependent) or, if not, via <span class="notranslate" translate="no">Twilio</span> (if configured). This provides a secondary delivery path when the primary SMS channel is unavailable. Likewise, in a situation with only cellular service (no Wi-Fi and no internet), if the <span class="notranslate" translate="no">Direct SMS</span> fails for some reason (defective or no SIM,...), <span class="notranslate" translate="no">Twilio</span> (if configured) will act as failback, as it can also use the cellular network (via 4G/5G) to send the message as a last resort.</p>
+                                Redundancy</span>:</strong> When no cellular service is available, the app falls back to
+                        sending SMS first via Wi-Fi Calling (if available, phone/provider dependent) or, if not, via
+                        <span class="notranslate" translate="no">Twilio</span> (if configured). This provides a
+                        secondary delivery path when the primary SMS channel is unavailable. Likewise, in a situation
+                        with only cellular service (no Wi-Fi and no internet), if the <span class="notranslate"
+                            translate="no">Direct SMS</span> fails for some reason (defective or no SIM,...), <span
+                            class="notranslate" translate="no">Twilio</span> (if configured) will act as failback, as it
+                        can also use the cellular network (via 4G/5G) to send the message as a last resort.
+                    </p>
                 </div>
 
                 <div class="feature-card" style="text-align: left;">
                     <div class="feature-icon">👴</div>
                     <h3 style="text-align: center; margin-bottom: 15px;">Senior-Friendly Design</h3>
                     <ul class="feature-list" style="list-style-type: none; padding: 0;">
-                        <li><span class="check">✅</span> Large, high-contrast buttons (Single <span class="notranslate" translate="no">SOS</span> and I'm OK)</li>
+                        <li><span class="check">✅</span> Large, high-contrast buttons (Single <span class="notranslate"
+                                translate="no">SOS</span> and I'm OK)</li>
                         <li><span class="check">✅</span> Minimal navigation and cognitive load</li>
                         <li><span class="check">✅</span> Voice-to-text so users don’t need to type</li>
-                        <li><span class="check">✅</span> Configurable Countdown timer or Hold-to-send confirmation prevents accidental alerts</li>
+                        <li><span class="check">✅</span> Configurable Countdown timer or Hold-to-send confirmation
+                            prevents accidental alerts</li>
                         <li><span class="check">✅</span> Guided onboarding with step-by-step setup</li>
-                        <li><span class="check">✅</span> All UI decisions prioritize clarity and simplicity over feature density</li>
-                        <li><span class="check">✅</span> Zero friction configuration with magic link that can be sent via WhatsApp, SMS, Email, etc. With a single click your senior can configure the app and start using it.</li>
-                        <li><span class="check">✅</span> Screen flash — 3 bright flashes confirm every alert, so users with hearing loss never miss it</li>
-                        <li><span class="check">✅</span> Lower-frequency tones — default alert sounds at 500–600 Hz, easier to hear for age-related hearing loss</li>
-                        <li><span class="check">✅</span> Haptic countdown — phone pulses once per second during the countdown, no need to look at the screen</li>
-                        <li><span class="check">✅</span> Screen reader support — fully compatible with TalkBack (Android) and VoiceOver (iOS); buttons are labelled and outcomes are announced aloud</li>
+                        <li><span class="check">✅</span> All UI decisions prioritize clarity and simplicity over feature
+                            density</li>
+                        <li><span class="check">✅</span> Zero friction configuration with magic link that can be sent
+                            via WhatsApp, SMS, Email, etc. With a single click your senior can configure the app and
+                            start using it.</li>
+                        <li><span class="check">✅</span> Screen flash — 3 bright flashes confirm every alert, so users
+                            with hearing loss never miss it</li>
+                        <li><span class="check">✅</span> Lower-frequency tones — default alert sounds at 500–600 Hz,
+                            easier to hear for age-related hearing loss</li>
+                        <li><span class="check">✅</span> Haptic countdown — phone pulses once per second during the
+                            countdown, no need to look at the screen</li>
+                        <li><span class="check">✅</span> Screen reader support — fully compatible with TalkBack
+                            (Android) and VoiceOver (iOS); buttons are labelled and outcomes are announced aloud</li>
                     </ul>
                 </div>
 
@@ -1526,81 +1683,107 @@
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">Powerful Features for Your Safety</h2>
-            <p class="section-subtitle">Everything you need to stay connected with your emergency contacts, designed for simplicity and reliability.</p>
+            <p class="section-subtitle">Everything you need to stay connected with your emergency contacts, designed for
+                simplicity and reliability.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🆘</div>
                     <h3><span class="notranslate" translate="no">SOS</span> & OK Buttons</h3>
-                    <p>Send predefined <span class="notranslate" translate="no">SOS</span> “I need help!” or “I’m okay” messages instantly with one tap. Messages include your precise GPS location and address.</p>
+                    <p>Send predefined <span class="notranslate" translate="no">SOS</span> “I need help!” or “I’m okay”
+                        messages instantly with one tap. Messages include your precise GPS location and address.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📶</div>
                     <h3>Smart Message Delivery</h3>
-                    <p>Works offline with <span class="notranslate" translate="no">Direct SMS</span>. Automatic <span class="notranslate" translate="no">fallback</span> between cellular and Wi-Fi to ensure your message gets through.</p>
+                    <p>Works offline with <span class="notranslate" translate="no">Direct SMS</span>. Automatic <span
+                            class="notranslate" translate="no">fallback</span> between cellular and Wi-Fi to ensure your
+                        message gets through.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
                     <h3>Check-In Timer</h3>
-                    <p>Set a countdown timer. If you don’t check in on time, an automatic alert is sent to your contacts. Perfect for solo activities.</p>
+                    <p>Set a countdown timer. If you don’t check in on time, an automatic alert is sent to your
+                        contacts. Perfect for solo activities.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
                     <h3>Voice-to-Text Alerts</h3>
-                    <p>Create messages hands-free using voice input. Helpful in stressful or limited-mobility situations when typing isn’t possible.</p>
+                    <p>Create messages hands-free using voice input. Helpful in stressful or limited-mobility situations
+                        when typing isn’t possible.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">👴</div>
                     <h3>Seniors-Friendly Design</h3>
-                    <p>Large text, high contrast, tunable sound pitch for hearing impaired, and a clear, distraction-free interface. Easy for seniors and non-technical users.</p>
+                    <p>Large text, high contrast, tunable sound pitch for hearing impaired, and a clear,
+                        distraction-free interface. Easy for seniors and non-technical users.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
                     <h3>Family assisted setup</h3>
-                    <p>Family members can help seniors set up the app and contacts remotely using a configuration link. Configure the app on your own device and send them the link to install and configure the app with just one click.</p>
+                    <p>Family members can help seniors set up the app and contacts remotely using a configuration link.
+                        Configure the app on your own device and send them the link to install and configure the app
+                        with just one click.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
                     <h3>Multiple Languages</h3>
-                    <p>Supports multiple languages for broader accessibility. Use <span class="notranslate" translate="no">TapAlert</span> in your preferred language.
+                    <p>Supports multiple languages for broader accessibility. Use <span class="notranslate"
+                            translate="no">TapAlert</span> in your preferred language.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📍</div>
                     <h3>Smart Location Context</h3>
-                    <p>Includes both precise GPS coordinates and human-readable street address. Works even if recipients are offline or using basic phones.</p>
+                    <p>Includes both precise GPS coordinates and human-readable street address. Works even if recipients
+                        are offline or using basic phones.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">✉️</div>
                     <h3>E-mail redundancy</h3>
-                    <p>Can send E-mail alerts as a reinforcement messaging method or to provide alerts redundancy if <span class="notranslate" translate="no">Twilio</span> is not available.</p>
+                    <p>Can send E-mail alerts as a reinforcement messaging method or to provide alerts redundancy if
+                        <span class="notranslate" translate="no">Twilio</span> is not available.
+                    </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon"><img src="media/twilio.png" alt="Twilio"
                             style="height: 1em; vertical-align: bottom;"></div>
                     <h3><span class="notranslate" translate="no">Twilio</span> as SMS failback</h3>
-                    <p><strong>Android:</strong> the app sends SMS directly from your phone, no <span class="notranslate" translate="no">Twilio</span> needed but is recommended. <span class="notranslate" translate="no">Twilio</span> is optional, used as Wi-Fi backup when cellular is unavailable or broken — but it can also be used as failback in cellular-only situations if your <span class="notranslate" translate="no">Direct SMS</span> does not work or is not available.</p>
-                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple blocks apps from sending SMS directly. This is an Apple restriction, not a <span class="notranslate" translate="no">TapAlert</span> limitation. <span class="notranslate" translate="no">Twilio</span> is the bridge that lets the app send SMS automatically on your behalf. Without it, the only option is manually tapping "Send" again in the Messages app — not ideal in an emergency.
+                    <p><strong>Android:</strong> the app sends SMS directly from your phone, no <span
+                            class="notranslate" translate="no">Twilio</span> needed but is recommended. <span
+                            class="notranslate" translate="no">Twilio</span> is optional, used as Wi-Fi backup when
+                        cellular is unavailable or broken — but it can also be used as failback in cellular-only
+                        situations if your <span class="notranslate" translate="no">Direct SMS</span> does not work or
+                        is not available.</p>
+                    <p style="margin-top: 10px;"><strong>iOS:</strong> Apple blocks apps from sending SMS directly. This
+                        is an Apple restriction, not a <span class="notranslate" translate="no">TapAlert</span>
+                        limitation. <span class="notranslate" translate="no">Twilio</span> is the bridge that lets the
+                        app send SMS automatically on your behalf. Without it, the only option is manually tapping
+                        "Send" again in the Messages app — not ideal in an emergency.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🆘📋</div>
                     <h3>Panic Mode & Situation Alerts</h3>
-                    <p>Panic Mode delivers instant SOS and “I’m OK” alerts with a single tap. Swipe left to Situation Alerts — 3 customizable message buttons for any non-emergency situation, with optional voice recording per alert.</p>
+                    <p>Panic Mode delivers instant SOS and “I’m OK” alerts with a single tap. Swipe left to Situation
+                        Alerts — 3 customizable message buttons for any non-emergency situation, with optional voice
+                        recording per alert.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>Home Screen Widget</h3>
-                    <p><strong>Android only:</strong> Add a one-tap emergency widget to your home screen for instant access without opening the app. Instructions for using it with a physical button or gesture are also provided in the app.</p>
+                    <p><strong>Android only:</strong> Add a one-tap emergency widget to your home screen for instant
+                        access without opening the app. Instructions for using it with a physical button or gesture are
+                        also provided in the app.</p>
                 </div>
             </div>
         </div>
@@ -1666,7 +1849,8 @@
         <div class="container">
             <div class="android-content">
                 <h2 class="section-title">🤖 Android First</h2>
-                <p class="section-subtitle">While we support iOS for cross-platform families, our flagship features leverage Android capabilities for sending automated native SMS alerts.</p>
+                <p class="section-subtitle">While we support iOS for cross-platform families, our flagship features
+                    leverage Android capabilities for sending automated native SMS alerts.</p>
                 <div class="comparison-table-wrapper">
                     <h3 style="margin-bottom: 20px; color: #2c3e50;">Summary: What Each Platform Can Do</h3>
                     <table class="comparison-table">
@@ -1680,31 +1864,37 @@
                         <tbody>
                             <tr>
                                 <td><strong>Send SMS for free</strong></td>
-                                <td><span class="check">✅</span> Yes (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>, always)</td>
+                                <td><span class="check">✅</span> Yes (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Direct SMS</span></span>, always)</td>
                                 <td><span class="check">✅</span> Yes (iOS Messages, requires user interaction)</td>
                             </tr>
                             <tr>
                                 <td><strong>Send SMS automatically</strong></td>
-                                <td><span class="check">✅</span> Yes (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span>, always)</td>
-                                <td><span class="cross">❌</span> Only with <span class="notranslate" translate="no">Twilio</span> (paid)</td>
+                                <td><span class="check">✅</span> Yes (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Direct SMS</span></span>, always)</td>
+                                <td><span class="cross">❌</span> Only with <span class="notranslate"
+                                        translate="no">Twilio</span> (paid)</td>
                             </tr>
                             <tr>
                                 <td><strong>Works without internet</strong></td>
-                                <td><span class="check">✅</span> Yes (<span class="notranslate"
-                                        translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> uses cell network)</td>
+                                <td><span class="check">✅</span> Yes (<span class="notranslate" translate="no"><span
+                                            class="notranslate" translate="no">Direct SMS</span></span> uses cell
+                                    network)</td>
                                 <td><span class="check">✅</span> Yes (iOS Messages uses cell network)</td>
                             </tr>
                             <tr>
                                 <td><strong>Fully automatic Dead Man Timer</strong></td>
                                 <td><span class="check">✅</span> Yes</td>
-                                <td><span class="cross">❌</span> Only with <span class="notranslate" translate="no">Twilio</span> (paid). Without <span class="notranslate" translate="no">Twilio</span>, the Messages app opens and the user must tap Send</td>
+                                <td><span class="cross">❌</span> Only with <span class="notranslate"
+                                        translate="no">Twilio</span> (paid). Without <span class="notranslate"
+                                        translate="no">Twilio</span>, the Messages app opens and the user must tap Send
+                                </td>
                             </tr>
                             <tr>
                                 <td><strong>No user interaction needed</strong></td>
                                 <td><span class="check">✅</span> Yes</td>
-                                <td><span class="cross">❌</span> Only with <span class="notranslate" translate="no">Twilio</span>. iOS Messages always requires tapping Send</td>
+                                <td><span class="cross">❌</span> Only with <span class="notranslate"
+                                        translate="no">Twilio</span>. iOS Messages always requires tapping Send</td>
                             </tr>
                             <tr>
                                 <td><strong>Email <span class="notranslate" translate="no">fallback</span></strong></td>
@@ -1720,9 +1910,12 @@
                         <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">(compared to Android)</p>
                         <ul class="feature-list">
                             <li><span class="cross">❌</span> Cannot send SMS programmatically (Apple restriction)</li>
-                            <li><span class="cross">❌</span> Fully automatic SMS requires <span class="notranslate" translate="no">Twilio</span></li>
-                            <li><span class="cross">❌</span> Dead Man Timer cannot send SMS silently without <span class="notranslate" translate="no">Twilio</span></li>
-                            <li><span class="cross">⚠️</span> iOS Messages preference requires the user to physically tap Send
+                            <li><span class="cross">❌</span> Fully automatic SMS requires <span class="notranslate"
+                                    translate="no">Twilio</span></li>
+                            <li><span class="cross">❌</span> Dead Man Timer cannot send SMS silently without <span
+                                    class="notranslate" translate="no">Twilio</span></li>
+                            <li><span class="cross">⚠️</span> iOS Messages preference requires the user to physically
+                                tap Send
                             </li>
                         </ul>
                     </div>
@@ -1730,18 +1923,24 @@
                     <div class="platform-card android">
                         <h3>Android Advantages</h3>
                         <ul class="feature-list">
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span class="notranslate" translate="no">Direct SMS</span></span> is always free and automatic</li>
-                            <li><span class="check">✅</span> No <span class="notranslate"
-                                    translate="no">Twilio</span> needed for basic functionality</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no"><span
+                                        class="notranslate" translate="no">Direct SMS</span></span> is always free and
+                                automatic</li>
+                            <li><span class="check">✅</span> No <span class="notranslate" translate="no">Twilio</span>
+                                needed for basic functionality</li>
                             <li><span class="check">✅</span> Dead Man Timer is always fully automatic</li>
-                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> adds redundancy (second method), not a requirement (as long as your phone/carrier allows Wifi calls)</li>
+                            <li><span class="check">✅</span> <span class="notranslate" translate="no">Twilio</span> adds
+                                redundancy (second method), not a requirement (as long as your phone/carrier allows Wifi
+                                calls)</li>
                         </ul>
                     </div>
 
                     <div class="platform-card" style="border-top: 4px solid #667eea;">
                         <h3>When Both Platforms Behave the Same</h3>
                         <ul class="feature-list">
-                            <li><span class="check">ℹ️</span> WiFi only (no cell): Both use Wifi Call if available, <span class="notranslate" translate="no">Twilio</span> or email — identical behavior</li>
+                            <li><span class="check">ℹ️</span> WiFi only (no cell): Both use Wifi Call if available,
+                                <span class="notranslate" translate="no">Twilio</span> or email — identical behavior
+                            </li>
                             <li><span class="check">✅</span> Email redundancy: Works the same on both platforms</li>
                         </ul>
                     </div>
@@ -1783,21 +1982,27 @@
                         <li>✅ Check-in timer</li>
                         <li>✅ Still no monthly fees!</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Unlock <span class="notranslate" translate="no">Premium</span></a>
+                    <a href="#" class="btn btn-primary">Unlock <span class="notranslate"
+                            translate="no">Premium</span></a>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS have a price, but your peace of mind doesn't</h3>
+                <h3 style="font-size: 2rem; color: #667eea; margin-bottom: 20px;">💬 SMS have a price, but your peace of
+                    mind doesn't</h3>
                 <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
-                    <span class="notranslate" translate="no">TapAlert</span> does not charge for the messages sent. The only costs you may incur are those applied by your own mobile carrier for standard SMS — just like any regular text message — and, if you choose to configure
+                    <span class="notranslate" translate="no">TapAlert</span> does not charge for the messages sent. The
+                    only costs you may incur are those applied by your own mobile carrier for standard SMS — just like
+                    any regular text message — and, if you choose to configure
                     <span class="notranslate" translate="no">Twilio</span> as failback or alternative service,
                     <a href="https://www.twilio.com/sms/pricing" target="_blank" rel="noopener noreferrer"
                         style="color: #667eea; text-decoration: underline;">the per-message fees set by <span
                             class="notranslate" translate="no">Twilio</span></a>
                     (Note: there's a
                     <a href="https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account"
-                        target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: underline;">free <span class="notranslate" translate="no">Twilio</span> trial account</a>
+                        target="_blank" rel="noopener noreferrer"
+                        style="color: #667eea; text-decoration: underline;">free <span class="notranslate"
+                            translate="no">Twilio</span> trial account</a>
                     but we do not recommend using it). The app itself adds zero extra cost on top.
                 </p>
             </div>
@@ -1808,7 +2013,8 @@
     <section class="privacy">
         <div class="container">
             <h2 class="section-title" style="color: white;">🔒 Privacy by Design</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Your safety data stays yours. No accounts, no tracking, no surveillance.</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Your safety data stays yours. No accounts,
+                no tracking, no surveillance.</p>
 
             <div class="privacy-grid">
                 <div class="privacy-item">
@@ -1842,13 +2048,15 @@
             <div class="use-case-highlight" style="max-width: 600px; margin: 0 auto 40px auto; transform: scale(1.05);">
                 <div class="use-case" style="border: 2px solid #667eea; background: white;">
                     <h3 style="font-size: 1.4rem;">👴 Older Adults & Caregivers</h3>
-                    <p style="font-size: 1.1rem;">A panic button for seniors living alone or traveling independently. One tap notifies all family members with exact location.</p>
+                    <p style="font-size: 1.1rem;">A panic button for seniors living alone or traveling independently.
+                        One tap notifies all family members with exact location.</p>
                 </div>
             </div>
 
             <div class="section-divider" style="text-align: center; margin-bottom: 40px; position: relative;">
                 <span
-                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">but also for...</span>
+                    style="background: #f8f9fa; padding: 0 20px; color: #667eea; font-weight: 600; font-size: 1.1rem; position: relative; z-index: 1;">but
+                    also for...</span>
                 <div
                     style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #e2e8f0; z-index: 0;">
                 </div>
@@ -1858,27 +2066,32 @@
 
                 <div class="use-case">
                     <h3>🥾 Solo Adventurers</h3>
-                    <p>Hikers or cyclists who want a reliable way to send their location to family at the start/end of a trail or in case of emergency.</p>
+                    <p>Hikers or cyclists who want a reliable way to send their location to family at the start/end of a
+                        trail or in case of emergency.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>🌙 Personal Safety</h3>
-                    <p>Walking home late at night or using ride-shares? Send a discreet "Watch my back" alert to friends and family.</p>
+                    <p>Walking home late at night or using ride-shares? Send a discreet "Watch my back" alert to friends
+                        and family.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>💼 Small Businesses</h3>
-                    <p>Field workers or lone employees (real estate agents, delivery drivers) who need a simple check-in or distress signal.</p>
+                    <p>Field workers or lone employees (real estate agents, delivery drivers) who need a simple check-in
+                        or distress signal.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>✈️ International Travelers</h3>
-                    <p>Using Wi-Fi messaging to bypass expensive roaming SMS fees while keeping family updated on your whereabouts.</p>
+                    <p>Using Wi-Fi messaging to bypass expensive roaming SMS fees while keeping family updated on your
+                        whereabouts.</p>
                 </div>
 
                 <div class="use-case">
                     <h3>👨‍👩‍👧‍👦 Families Staying Connected</h3>
-                    <p>Keep tabs on family members with quick "I'm OK" check-ins without the need for constant phone calls or texts.</p>
+                    <p>Keep tabs on family members with quick "I'm OK" check-ins without the need for constant phone
+                        calls or texts.</p>
                 </div>
             </div>
         </div>
@@ -1888,14 +2101,16 @@
     <section class="guides" id="guides" style="padding: 80px 20px; background: white;">
         <div class="container">
             <h2 class="section-title">Step by Step Guides</h2>
-            <p class="section-subtitle">Master <span class="notranslate" translate="no">TapAlert</span> with our easy-to-follow guides</p>
+            <p class="section-subtitle">Master <span class="notranslate" translate="no">TapAlert</span> with our
+                easy-to-follow guides</p>
 
             <div class="features-grid">
                 <a href="user_guide.html" style="text-decoration: none; color: inherit;">
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📖</div>
                         <h3>TapAlert User Guide</h3>
-                        <p>Complete reference for all app features — permissions, modes, settings, recipients, alerts, and more.</p>
+                        <p>Complete reference for all app features — permissions, modes, settings, recipients, alerts,
+                            and more.</p>
                     </div>
                 </a>
 
@@ -1940,7 +2155,8 @@
                     <div class="feature-card" style="height: 100%;">
                         <div class="feature-icon">📧</div>
                         <h3>Configuring e-mail redundancy</h3>
-                        <p>Configure e-mail as <span class="notranslate" translate="no">fallback</span> or redundancy alert messaging.</p>
+                        <p>Configure e-mail as <span class="notranslate" translate="no">fallback</span> or redundancy
+                            alert messaging.</p>
                     </div>
                 </a>
                 <a href="accessibility_guide.html" style="text-decoration: none; color: inherit;">
@@ -1959,8 +2175,11 @@
         <div class="notice-content">
             <div class="notice-icon">⚠️</div>
             <h2>Important Safety Notice</h2>
-            <p><strong><span class="notranslate" translate="no">TapAlert</span> is NOT a replacement for emergency services like 911 or 112.</strong></p>
-            <p style="margin-top: 15px;">Message delivery depends on network availability and recipient action. This app does not provide monitoring, emergency response, or guaranteed delivery. In real emergencies, always contact emergency services directly.</p>
+            <p><strong><span class="notranslate" translate="no">TapAlert</span> is NOT a replacement for emergency
+                    services like 911 or 112.</strong></p>
+            <p style="margin-top: 15px;">Message delivery depends on network availability and recipient action. This app
+                does not provide monitoring, emergency response, or guaranteed delivery. In real emergencies, always
+                contact emergency services directly.</p>
         </div>
     </section>
 
@@ -1995,7 +2214,8 @@
                     <h3>Support</h3>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Step by Step Guides</a></li>
+                        <li><a href="#guides"><span class="notranslate" translate="no">TapAlert</span> Step by Step
+                                Guides</a></li>
                         <li><a href="accessibility_guide.html">Accessibility Guide</a></li>
                         <li><a href="troubleshooting.html">Troubleshooting</a></li>
                         <li><a href="contact.html">Contact Support</a></li>
@@ -2004,7 +2224,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made with ❤️ for your safety</p>
+                <p>&copy; 2026 <span class="notranslate" translate="no">TapAlert</span>. All rights reserved. | Made
+                    with ❤️ for your safety</p>
             </div>
         </div>
     </footer>
